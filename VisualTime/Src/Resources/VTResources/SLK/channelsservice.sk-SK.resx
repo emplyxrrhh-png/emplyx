@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_channel.channeltitle.complaint.rotext" xml:space="preserve">
+    <value>Sťažnosti</value>
+  </data>
+  <data name="RES_channel.conversation.message.anonymous.rotext" xml:space="preserve">
+    <value>Anonymný</value>
+  </data>
+  <data name="RES_channel.conversation.message.unknown.rotext" xml:space="preserve">
+    <value>Neznáme</value>
+  </data>
+  <data name="RES_channel.status.draft.rotext" xml:space="preserve">
+    <value>Obmedzené</value>
+  </data>
+  <data name="RES_channel.status.published.rotext" xml:space="preserve">
+    <value>Spoločná stránka</value>
+  </data>
+  <data name="RES_channelresultenum.connectionerror.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_channelresultenum.errorcreatingorupdatingchannel.rotext" xml:space="preserve">
+    <value>Pri vytváraní alebo aktualizácii kanála došlo k chybe</value>
+  </data>
+  <data name="RES_channelresultenum.errordeletingchannel.rotext" xml:space="preserve">
+    <value>Pri odstraňovaní kanála došlo k chybe</value>
+  </data>
+  <data name="RES_channelresultenum.errorrecoveringallchannels.rotext" xml:space="preserve">
+    <value>Pri načítaní zoznamu dostupných kanálov došlo k chybe</value>
+  </data>
+  <data name="RES_channelresultenum.errorrecoveringchannel.rotext" xml:space="preserve">
+    <value>Pri načítavaní informácií o kanáli došlo k chybe</value>
+  </data>
+  <data name="RES_channelresultenum.errorrecoveringnewmessagesinchannel.rotext" xml:space="preserve">
+    <value>Pri určovaní nových správ kanálov došlo k chybe</value>
+  </data>
+  <data name="RES_channelresultenum.errorsettingchannelemployees.rotext" xml:space="preserve">
+    <value>Pri nastavovaní zamestnancov, ktorí majú prístup ku kanálu, došlo k chybe</value>
+  </data>
+  <data name="RES_channelresultenum.errorsettingchannelgroups.rotext" xml:space="preserve">
+    <value>Pri nastavovaní skupín, ktoré majú prístup ku kanálu, došlo k chybe</value>
+  </data>
+  <data name="RES_channelresultenum.errorsettingchannelsupervisors.rotext" xml:space="preserve">
+    <value>Pri nastavovaní nadriadených, ktorí majú prístup ku kanálu, došlo k chybe</value>
+  </data>
+  <data name="RES_channelresultenum.exception.rotext" xml:space="preserve">
+    <value>Pri vykonávaní akcie došlo k neočakávanej chybe</value>
+  </data>
+  <data name="RES_channelresultenum.invalidname.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_channelresultenum.nopermission.rotext" xml:space="preserve">
+    <value>Povolenie na vykonanie tejto akcie bolo zamietnuté</value>
+  </data>
+  <data name="RES_conversation.complaintfirstmessage.system.rotext" xml:space="preserve">
+    <value>Systém</value>
+  </data>
+  <data name="RES_conversation.complexity.high.rotext" xml:space="preserve">
+    <value>Vysoká</value>
+  </data>
+  <data name="RES_conversation.complexity.normal.rotext" xml:space="preserve">
+    <value>Normálne</value>
+  </data>
+  <data name="RES_conversation.extradata.customer.rotext" xml:space="preserve">
+    <value>Zákazník</value>
+  </data>
+  <data name="RES_conversation.extradata.email.rotext" xml:space="preserve">
+    <value>E-mailová adresa</value>
+  </data>
+  <data name="RES_conversation.extradata.fullname.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_conversation.extradata.phone.rotext" xml:space="preserve">
+    <value>Telefón</value>
+  </data>
+  <data name="RES_conversation.lastmessage.youanswered.rotext" xml:space="preserve">
+    <value>Vy</value>
+  </data>
+  <data name="RES_conversation.status.closed.rotext" xml:space="preserve">
+    <value>zatvorené</value>
+  </data>
+  <data name="RES_conversation.status.dismissed.rotext" xml:space="preserve">
+    <value>prepustený</value>
+  </data>
+  <data name="RES_conversation.status.ongoing.rotext" xml:space="preserve">
+    <value>prebieha</value>
+  </data>
+  <data name="RES_conversation.status.pending.rotext" xml:space="preserve">
+    <value>čaká sa na</value>
+  </data>
+  <data name="RES_conversation.subject.rotext" xml:space="preserve">
+    <value>Predmet</value>
+  </data>
+  <data name="RES_conversation.type.complaint.rotext" xml:space="preserve">
+    <value>Sťažnosť</value>
+  </data>
+  <data name="RES_conversation.type.conversation.rotext" xml:space="preserve">
+    <value>Konverzácia</value>
+  </data>
+  <data name="RES_conversationresultenum.channelshouldbepublishedtocreateconversations.rotext" xml:space="preserve">
+    <value>Kanál musí byť zverejnený, aby bolo možné vytvárať konverzácie</value>
+  </data>
+  <data name="RES_conversationresultenum.conversationshouldbecreatedbyanemployee.rotext" xml:space="preserve">
+    <value>Musíte uviesť zamestnanca, ktorý konverzáciu iniciuje</value>
+  </data>
+  <data name="RES_conversationresultenum.conversationshouldbelongtoachannel.rotext" xml:space="preserve">
+    <value>Musíte uviesť kanál, ku ktorému konverzácia patrí</value>
+  </data>
+  <data name="RES_conversationresultenum.errorconversationalreadyexists.rotext" xml:space="preserve">
+    <value>Konverzácia už existuje a nemožno ju zmeniť</value>
+  </data>
+  <data name="RES_conversationresultenum.errorcreatingconversation.rotext" xml:space="preserve">
+    <value>Pri vytváraní konverzácie došlo k chybe</value>
+  </data>
+  <data name="RES_conversationresultenum.errornewconversationshouldhavefirstmessage.rotext" xml:space="preserve">
+    <value>Ak chcete začať konverzáciu, musíte uviesť správu</value>
+  </data>
+  <data name="RES_conversationresultenum.errorrecoveringallconversations.rotext" xml:space="preserve">
+    <value>Pri načítaní zoznamu dostupných konverzácií došlo k chybe</value>
+  </data>
+  <data name="RES_conversationresultenum.errorrecoveringconversation.rotext" xml:space="preserve">
+    <value>Pri načítavaní informácií z konverzácie došlo k chybe</value>
+  </data>
+  <data name="RES_conversationresultenum.errorrecoveringnewmessagesinconversation.rotext" xml:space="preserve">
+    <value>Pri načítaní nových správ z konverzácie došlo k chybe</value>
+  </data>
+  <data name="RES_conversationresultenum.errorupdatingconversationstate.rotext" xml:space="preserve">
+    <value>Pri zmene stavu konverzácie došlo k chybe</value>
+  </data>
+  <data name="RES_conversationresultenum.initialmessagecannotbeempty.rotext" xml:space="preserve">
+    <value>Správa nemôže byť prázdna</value>
+  </data>
+  <data name="RES_conversationresultenum.messagerequiredtocreateconversation.rotext" xml:space="preserve">
+    <value>Ak chcete začať konverzáciu, musíte vytvoriť správu</value>
+  </data>
+  <data name="RES_conversationresultenum.nopermission.rotext" xml:space="preserve">
+    <value>Nemáte povolenie na vykonanie tejto akcie</value>
+  </data>
+  <data name="RES_logbook.conversation.complexitychanged.high.rotext" xml:space="preserve">
+    <value>Zložitosť sťažnosti zmenená na vysokú</value>
+  </data>
+  <data name="RES_logbook.conversation.complexitychanged.normal.rotext" xml:space="preserve">
+    <value>Zložitosť sťažnosti zmenená na Normálna</value>
+  </data>
+  <data name="RES_logbook.conversation.statuschanged.closed.rotext" xml:space="preserve">
+    <value>Stav sťažnosti zmenený na Uzavretá</value>
+  </data>
+  <data name="RES_logbook.conversation.statuschanged.dismissed.rotext" xml:space="preserve">
+    <value>Stav sťažnosti zmenený na zamietnutý</value>
+  </data>
+  <data name="RES_logbook.conversation.statuschanged.ongoing.rotext" xml:space="preserve">
+    <value>Stav sťažnosti zmenený na prebiehajúci</value>
+  </data>
+  <data name="RES_logbook.conversation.statuschanged.pending.rotext" xml:space="preserve">
+    <value>Stav sťažnosti zmenený na čakajúci</value>
+  </data>
+  <data name="RES_logbookresultenum.errorrecoveringallmessages.rotext" xml:space="preserve">
+    <value>Chyba pri načítaní správ z denníka</value>
+  </data>
+  <data name="RES_logbookresultenum.errorrecoveringlogbook.rotext" xml:space="preserve">
+    <value>Chyba pri načítaní denníka</value>
+  </data>
+  <data name="RES_logbookresultenum.errorrecoveringmessage.rotext" xml:space="preserve">
+    <value>Chybné načítanie správy</value>
+  </data>
+  <data name="RES_logbookresultenum.errorsavinglogbook.rotext" xml:space="preserve">
+    <value>Chyba pri ukladaní denníka</value>
+  </data>
+  <data name="RES_messageresultenum.conversationclosedordismissed.rotex.rotext" xml:space="preserve">
+    <value>Konverzácia je uzavretá alebo bola ukončená</value>
+  </data>
+  <data name="RES_messageresultenum.conversationclosedordismissed.rotext" xml:space="preserve">
+    <value>Konverzácia je uzavretá alebo bola ukončená</value>
+  </data>
+  <data name="RES_messageresultenum.errorcreatingmessage.rotext" xml:space="preserve">
+    <value>Pri vytváraní správy došlo k chybe</value>
+  </data>
+  <data name="RES_messageresultenum.errormessagealreadyexists.rotext" xml:space="preserve">
+    <value>Správa už existuje a nie je možné ju upraviť</value>
+  </data>
+  <data name="RES_messageresultenum.errorrecoveringallmessages.rotext" xml:space="preserve">
+    <value>Pri načítavaní správ z konverzácie došlo k chybe</value>
+  </data>
+  <data name="RES_messageresultenum.errorrecoveringmessage.rotext" xml:space="preserve">
+    <value>Pri načítaní správy došlo k chybe</value>
+  </data>
+  <data name="RES_messageresultenum.exception.rotext" xml:space="preserve">
+    <value>Pri vykonávaní akcie došlo k neočakávanej chybe</value>
+  </data>
+  <data name="RES_messageresultenum.messagecannotberegisteredonlogbook.rotext" xml:space="preserve">
+    <value>Pri ukladaní správy došlo k chybe</value>
+  </data>
+  <data name="RES_messageresultenum.nopermission.rotext" xml:space="preserve">
+    <value>Nemáte povolenie na vykonanie tejto akcie</value>
+  </data>
+  <data name="RES_resultenum.invalidname.rotext" xml:space="preserve">
+    <value>Názov kanála nemôže byť prázdny alebo už existuje</value>
+  </data>
+  <data name="RES_logbookresultenum.errormessagealreadyexists.rotext" xml:space="preserve">
+    <value>Správa už existuje a nie je možné ju upraviť</value>
+  </data>
+  <data name="RES_resultenum.xssvalidationerror.rotext" xml:space="preserve">
+    <value>Vo vlastnosti objektu bol zistený škodlivý skript</value>
+  </data>
+  <data name="RES_channelresultenum.xssvalidationerror.rotext" xml:space="preserve">
+    <value />
+  </data>
+</root>

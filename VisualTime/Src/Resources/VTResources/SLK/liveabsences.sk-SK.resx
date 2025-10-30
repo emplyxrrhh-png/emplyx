@@ -1,0 +1,1887 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_absencesstatus.absencesstatustitle.rotext" xml:space="preserve">
+    <value>Stav absencie</value>
+  </data>
+  <data name="RES_absencesstatus.absencestatus.approved.rotext" xml:space="preserve">
+    <value>Schválené</value>
+  </data>
+  <data name="RES_absencesstatus.absencestatus.inprocess.rotext" xml:space="preserve">
+    <value>prebieha</value>
+  </data>
+  <data name="RES_absencesstatus.absencestatus.past.rotext" xml:space="preserve">
+    <value>Dokončené</value>
+  </data>
+  <data name="RES_absencesstatus.absencestatus.requested.rotext" xml:space="preserve">
+    <value>Čaká sa na schválenie</value>
+  </data>
+  <data name="RES_absencesstatus.absencestatus.requestinprocess.rotext" xml:space="preserve">
+    <value>Schvaľovanie prebieha</value>
+  </data>
+  <data name="RES_absencesstatus.absencetype.programmedabsence.rotext" xml:space="preserve">
+    <value>Neprítomnosť počas niekoľkých dní</value>
+  </data>
+  <data name="RES_absencesstatus.absencetype.programmedcause.rotext" xml:space="preserve">
+    <value>Hodinová absencia</value>
+  </data>
+  <data name="RES_absencesstatus.absencetype.requestabsence.rotext" xml:space="preserve">
+    <value>Žiadosť o neprítomnosť na dni</value>
+  </data>
+  <data name="RES_absencesstatus.absencetype.requestcause.rotext" xml:space="preserve">
+    <value>Žiadosť o hodinovú absenciu</value>
+  </data>
+  <data name="RES_absencesstatus.absencetypes.departmentsupervision.rotext" xml:space="preserve">
+    <value>Nadriadení</value>
+  </data>
+  <data name="RES_absencesstatus.absencetypes.showdetails.rotext" xml:space="preserve">
+    <value>Zobraziť podrobnosti</value>
+  </data>
+  <data name="RES_absencesstatus.absencetypes.showemployee.rotext" xml:space="preserve">
+    <value>Súbor používateľa</value>
+  </data>
+  <data name="RES_absencesstatus.allcauses.rotext" xml:space="preserve">
+    <value>Všetky odôvodnenia</value>
+  </data>
+  <data name="RES_absencesstatus.allemployees.rotext" xml:space="preserve">
+    <value>Všetci používatelia</value>
+  </data>
+  <data name="RES_absencesstatus.aspxpanel1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.aspxpanel2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.aspxpanel3.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.bc.text.rotext" xml:space="preserve">
+    <value>Prázdne stránky</value>
+  </data>
+  <data name="RES_absencesstatus.bc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.bo.text.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_absencesstatus.bo.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.browse0.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.browse0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.browset.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.browset.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.bt.text.rotext" xml:space="preserve">
+    <value>Dnes</value>
+  </data>
+  <data name="RES_absencesstatus.bt.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.btcloserequest.text.rotext" xml:space="preserve">
+    <value>Zatvoriť</value>
+  </data>
+  <data name="RES_absencesstatus.btcloserequest.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.btnexporttoxls.text.rotext" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="RES_absencesstatus.btnexporttoxls.tooltip.rotext" xml:space="preserve">
+    <value>Export do programu Excel</value>
+  </data>
+  <data name="RES_absencesstatus.btnopenpopupselectorcauses.text.rotext" xml:space="preserve">
+    <value>Vyberte</value>
+  </data>
+  <data name="RES_absencesstatus.btnopenpopupselectorcauses.tooltip.rotext" xml:space="preserve">
+    <value>Odôvodnenia...</value>
+  </data>
+  <data name="RES_absencesstatus.btnopenpopupselectoremployees.text.rotext" xml:space="preserve">
+    <value>Vyberte</value>
+  </data>
+  <data name="RES_absencesstatus.btnopenpopupselectoremployees.tooltip.rotext" xml:space="preserve">
+    <value>Používatelia...</value>
+  </data>
+  <data name="RES_absencesstatus.btnopenpopupselectorincidences.text.rotext" xml:space="preserve">
+    <value>Vyberte</value>
+  </data>
+  <data name="RES_absencesstatus.btnopenpopupselectorincidences.tooltip.rotext" xml:space="preserve">
+    <value>Používatelia...</value>
+  </data>
+  <data name="RES_absencesstatus.btnpopupselectorcausesaccept.text.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_absencesstatus.btnpopupselectorcausesaccept.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.btnpopupselectoremployeesaccept.text.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_absencesstatus.btnpopupselectoremployeesaccept.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.btnpopupselectorincidencesaccept.text.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_absencesstatus.btnpopupselectorincidencesaccept.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.btnrefresh.text.rotext" xml:space="preserve">
+    <value>Získajte</value>
+  </data>
+  <data name="RES_absencesstatus.btnrefresh.tooltip.rotext" xml:space="preserve">
+    <value>Získavanie údajov</value>
+  </data>
+  <data name="RES_absencesstatus.c.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.callbackpanelpivot.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.callbacksession.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.cancel.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.cancel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.cerr.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.clearbox0.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.clearbox0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.clearboxt.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.clearboxt.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.cmbcausesfilter.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.cmbcausesfilter.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.cmbstatus.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.cmbstatus.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.csd-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.ddd.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.ddd.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.di.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.dxemptyrow.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.dxheadersrow0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.dxmaintable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.dxpwmb-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.dxstyletable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.dxtitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.emptyheader.text.rotext" xml:space="preserve">
+    <value>Potiahnite stĺpec sem...</value>
+  </data>
+  <data name="RES_absencesstatus.emptyheader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.errr0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.errrrt.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.fnp.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.fnp.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.gridabsences.employeesselected.rotext" xml:space="preserve">
+    <value>používatelia</value>
+  </data>
+  <data name="RES_absencesstatus.gridabsencesstatus.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.gridviews.column.causename.rotext" xml:space="preserve">
+    <value>odôvodnenie</value>
+  </data>
+  <data name="RES_absencesstatus.gridviews.column.docfailed.rotext" xml:space="preserve">
+    <value>Aktuálne dokumenty</value>
+  </data>
+  <data name="RES_absencesstatus.gridviews.column.employeename.rotext" xml:space="preserve">
+    <value>používateľ</value>
+  </data>
+  <data name="RES_absencesstatus.gridviews.column.employeestatus.rotext" xml:space="preserve">
+    <value>Situácia</value>
+  </data>
+  <data name="RES_absencesstatus.gridviews.column.enddate.rotext" xml:space="preserve">
+    <value>Záverečná stránka</value>
+  </data>
+  <data name="RES_absencesstatus.gridviews.column.fullgroupname.rotext" xml:space="preserve">
+    <value>skupina</value>
+  </data>
+  <data name="RES_absencesstatus.gridviews.column.startdate.rotext" xml:space="preserve">
+    <value>domov</value>
+  </data>
+  <data name="RES_absencesstatus.gridviews.column.type.rotext" xml:space="preserve">
+    <value>typ</value>
+  </data>
+  <data name="RES_absencesstatus.i.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.i.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.iadd.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.iadl.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.iadr.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.iadu.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.idhf.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.l.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.label1.text.rotext" xml:space="preserve">
+    <value>Vyberte používateľov, ktorí sa majú zobraziť</value>
+  </data>
+  <data name="RES_absencesstatus.label1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.label2.text.rotext" xml:space="preserve">
+    <value>Vyberte používateľov, ktorí sa majú zobraziť</value>
+  </data>
+  <data name="RES_absencesstatus.label2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.lblcauses.text.rotext" xml:space="preserve">
+    <value>odôvodnenie</value>
+  </data>
+  <data name="RES_absencesstatus.lblcauses.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.lblcausestitlepopup.text.rotext" xml:space="preserve">
+    <value>Vyberte odôvodnenia, ktoré sa majú zobraziť</value>
+  </data>
+  <data name="RES_absencesstatus.lblcausestitlepopup.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.lblconcepts.text.rotext" xml:space="preserve">
+    <value>Výber rovnováhy</value>
+  </data>
+  <data name="RES_absencesstatus.lblconcepts.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.lblemployees.text.rotext" xml:space="preserve">
+    <value>používatelia</value>
+  </data>
+  <data name="RES_absencesstatus.lblemployees.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.lblfechainf.text.rotext" xml:space="preserve">
+    <value>Navštívte stránku</value>
+  </data>
+  <data name="RES_absencesstatus.lblfechainf.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.lblfechasup.text.rotext" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="RES_absencesstatus.lblfechasup.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.lblpopupcauses.text.rotext" xml:space="preserve">
+    <value>odôvodnenia</value>
+  </data>
+  <data name="RES_absencesstatus.lblpopupcauses.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.lblpopupgrupossaldos.text.rotext" xml:space="preserve">
+    <value>odôvodnenia</value>
+  </data>
+  <data name="RES_absencesstatus.lblpopupgrupossaldos.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.lblstatus.text.rotext" xml:space="preserve">
+    <value>Štát</value>
+  </data>
+  <data name="RES_absencesstatus.lblstatus.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.ld.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.listcauses.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.lp.text.rotext" xml:space="preserve">
+    <value>Načítanie&amp;hellip;</value>
+  </data>
+  <data name="RES_absencesstatus.lp.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.m.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.mc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.mc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.mt.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.nmc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.nmc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.nmcimg.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.nyc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.nyc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.nycimg.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.panelcontent1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.panelcontent2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.panelcontent3.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.panelcontent4.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.pmc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.pmc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.pmcimg.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.popupcontrolcontentcontrol1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.popupcontrolcontentcontrol2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.popupcontrolcontentcontrol3.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.popupeditrequest.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.popupeditrequest.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.popupselectorcauses.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.popupselectorcauses.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.popupselectoremployees.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.popupselectoremployees.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.pw-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.pwh-1.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.pwh-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.pyc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.pyc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.pycimg.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.selectedcause.rotext" xml:space="preserve">
+    <value>odôvodnenia</value>
+  </data>
+  <data name="RES_absencesstatus.state.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.status.all.rotext" xml:space="preserve">
+    <value>Všetky</value>
+  </data>
+  <data name="RES_absencesstatus.status.athome.rotext" xml:space="preserve">
+    <value>Doma</value>
+  </data>
+  <data name="RES_absencesstatus.status.betweenenddate.rotext" xml:space="preserve">
+    <value>Končí medzi dátumami</value>
+  </data>
+  <data name="RES_absencesstatus.status.betweenstartdate.rotext" xml:space="preserve">
+    <value>Začína medzi dátumami</value>
+  </data>
+  <data name="RES_absencesstatus.status.comethisweek.rotext" xml:space="preserve">
+    <value>Späť tento týždeň</value>
+  </data>
+  <data name="RES_absencesstatus.stylesheetscontainer.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.t.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.t.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.tc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.tc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.textbox0.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.textbox0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.textbox0_fakeinput.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.textbox0_input.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.textboxt.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.textboxt.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.textboxt_fakeinput.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.textboxt_input.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.title.rotext" xml:space="preserve">
+    <value>Stav absencie</value>
+  </data>
+  <data name="RES_absencesstatus.title_absencesstatus_pathway.rotext" xml:space="preserve">
+    <value>Stav absencie</value>
+  </data>
+  <data name="RES_absencesstatus.tl.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.tl.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.txtcauses.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.txtcauses.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.txtdateinf.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.txtdateinf.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.txtdatesup.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.txtdatesup.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.txtemployees.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.txtemployees.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.ucprogress.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.upldocument.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.uploadiframe.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.vi.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.vic.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.vic.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_absencesstatus.y.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_adddocumentsabsencestracking.btnpopupupload.text.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_adddocumentsabsencestracking.btnpopupupload.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_adddocumentsabsencestracking.btnpopupuploadcancel.text.rotext" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="RES_adddocumentsabsencestracking.btnpopupuploadcancel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_adddocumentsabsencestracking.fuploader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_adddocumentsabsencestracking.lblpopupuploadtitle.text.rotext" xml:space="preserve">
+    <value>Pripojiť súbor k dokumentu</value>
+  </data>
+  <data name="RES_adddocumentsabsencestracking.lblpopupuploadtitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_adddocumentsabsencestracking.lblselectfile.text.rotext" xml:space="preserve">
+    <value>Vyberte súbor:</value>
+  </data>
+  <data name="RES_adddocumentsabsencestracking.lblselectfile.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_adddocumentsabsencestracking.paneluploadcontent.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_adddocumentsabsencestracking.popupuploadpanelcontent.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_adddocumentsabsencestracking.title.rotext" xml:space="preserve">
+    <value>Sledovanie dokumentov</value>
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.btnaccept.text.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.btnaccept.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.btncancel.text.rotext" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.btncancel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.c1.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.c1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.c2.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.c2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.c3.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.c3.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.c4.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.c4.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.captchatrackingvalidationerror.rotext" xml:space="preserve">
+    <value>Zadaný kód nie je správny</value>
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.lbldescription1.text.rotext" xml:space="preserve">
+    <value>Chystáte sa odstrániť sledovanie</value>
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.lbldescription1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.lbldescription2.text.rotext" xml:space="preserve">
+    <value>Ak to naozaj chcete urobiť, zadajte nižšie uvedené čísla a stlačte tlačidlo akceptovať.</value>
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.lbldescription2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.lblerror.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.lblerror.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.lblnameemployee.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.lblnameemployee.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.lbltitle.text.rotext" xml:space="preserve">
+    <value>Odstránenie sledovania neprítomnosti</value>
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.lbltitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.paneluploadcontent.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.popupuploadpanelcontent.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deleteabsencetrackingcaptcha.title.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.btnaccept.text.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.btnaccept.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.btncancel.text.rotext" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.btncancel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.c1.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.c1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.c2.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.c2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.c3.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.c3.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.c4.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.c4.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.captchavalidationerror.rotext" xml:space="preserve">
+    <value>Zadaný kód nie je správny</value>
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.lbldescription1.text.rotext" xml:space="preserve">
+    <value>Chystáte sa vymazať dokument z následnej kontroly</value>
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.lbldescription1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.lbldescription2.text.rotext" xml:space="preserve">
+    <value>Ak to naozaj chcete urobiť, zadajte nižšie uvedené čísla a stlačte tlačidlo akceptovať.</value>
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.lbldescription2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.lblerror.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.lblerror.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.lblnameemployee.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.lblnameemployee.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.lbltitle.text.rotext" xml:space="preserve">
+    <value>Odstrániť dokument</value>
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.lbltitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.paneluploadcontent.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.popupuploadpanelcontent.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_deletedocumentabsencetrackingcaptcha.title.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.advisevalue.rotext" xml:space="preserve">
+    <value>Oznámenie &amp;quot;${1}&amp;quot; sa posiela manuálne na žiadosť manažéra neprítomnosti</value>
+  </data>
+  <data name="RES_documentsabsences.advisevaluegrid.rotext" xml:space="preserve">
+    <value>Príkaz REPLACE sa posiela ručne na žiadosť spracovateľa neprítomnosti</value>
+  </data>
+  <data name="RES_documentsabsences.aspxcallbackpanelcontenido.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.checkpermission.denied.description.rotext" xml:space="preserve">
+    <value>zamietnuté povolenie</value>
+  </data>
+  <data name="RES_documentsabsences.cif-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.cifd-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.csd-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.dxpwmb-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.ec.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.ec.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.ei.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.et.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.etc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.etc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.gridheaderadvice.rotext" xml:space="preserve">
+    <value>Správa</value>
+  </data>
+  <data name="RES_documentsabsences.gridheadername.rotext" xml:space="preserve">
+    <value>Komuniké</value>
+  </data>
+  <data name="RES_documentsabsences.i.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.i.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.label1.text.rotext" xml:space="preserve">
+    <value>Oznámenia</value>
+  </data>
+  <data name="RES_documentsabsences.label1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.lbladdadvice.text.rotext" xml:space="preserve">
+    <value>Pridať tlačovú správu</value>
+  </data>
+  <data name="RES_documentsabsences.lbladdadvice.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.lbladvices.text.rotext" xml:space="preserve">
+    <value>komunikoval</value>
+  </data>
+  <data name="RES_documentsabsences.lbladvices.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.lbladvicesdesc.text.rotext" xml:space="preserve">
+    <value>V tejto časti môžete spravovať oznámenia, ktoré sa môžu použiť na odoslanie e-mailom používateľom v prípade, že dokument nebol doručený v stanovenom termíne.</value>
+  </data>
+  <data name="RES_documentsabsences.lbladvicesdesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.lblassignmentstitlegeneral.text.rotext" xml:space="preserve">
+    <value>všeobecné</value>
+  </data>
+  <data name="RES_documentsabsences.lblassignmentstitlegeneral.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.lbldescdocument.text.rotext" xml:space="preserve">
+    <value>Popis: V súčasnosti je na trhu viac ako 10 000 zariadení, ktoré sú určené na predaj:</value>
+  </data>
+  <data name="RES_documentsabsences.lbldescdocument.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.lbldescdocumentdescription.text.rotext" xml:space="preserve">
+    <value>Opis dokumentu</value>
+  </data>
+  <data name="RES_documentsabsences.lbldescdocumentdescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.lbldocumentsdesc.text.rotext" xml:space="preserve">
+    <value>Definícia dokumentu, ktorý sa má používať na sledovanie neprítomnosti. Je možné definovať aj upomienku a oznámenia, ktoré sa majú použiť v prípade, že sa majú poslať používateľovi.</value>
+  </data>
+  <data name="RES_documentsabsences.lbldocumentsdesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.lbldocumentsgridtitle.text.rotext" xml:space="preserve">
+    <value>Oznámenia</value>
+  </data>
+  <data name="RES_documentsabsences.lbldocumentsgridtitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.lblname.text.rotext" xml:space="preserve">
+    <value>Názov:</value>
+  </data>
+  <data name="RES_documentsabsences.lblname.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.lblnamedescription.text.rotext" xml:space="preserve">
+    <value>Názov dokumentu</value>
+  </data>
+  <data name="RES_documentsabsences.lblnamedescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.lblremember.text.rotext" xml:space="preserve">
+    <value>Pripomienka</value>
+  </data>
+  <data name="RES_documentsabsences.lblremember.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.lblrememberdesc.text.rotext" xml:space="preserve">
+    <value>Zadajte text, ktorý chcete, aby používateľ dostal v prípade, že sa mu má poslať e-mail s pripomienkou, že sa blíži termín na predloženie dokumentu.</value>
+  </data>
+  <data name="RES_documentsabsences.lblrememberdesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.lblshortname.text.rotext" xml:space="preserve">
+    <value>Skrátený názov:</value>
+  </data>
+  <data name="RES_documentsabsences.lblshortname.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.lblshortnamedescription.text.rotext" xml:space="preserve">
+    <value>Skrátený názov na označenie dokumentu v aplikácii</value>
+  </data>
+  <data name="RES_documentsabsences.lblshortnamedescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.msghaschanges.rotext" xml:space="preserve">
+    <value>V dokumente boli zistené zmeny</value>
+  </data>
+  <data name="RES_documentsabsences.msghaserrors.rotext" xml:space="preserve">
+    <value>V dokumente boli nájdené chyby</value>
+  </data>
+  <data name="RES_documentsabsences.msgsavechangesbar.rotext" xml:space="preserve">
+    <value>Uloženie zmien</value>
+  </data>
+  <data name="RES_documentsabsences.msgundochangesbar.rotext" xml:space="preserve">
+    <value>Zrušenie zmien</value>
+  </data>
+  <data name="RES_documentsabsences.newobjectpopup.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.newobjectpopup.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.panelcontent1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.popupuploadfile.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.popupuploadfile.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.pw-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.remindername.rotext" xml:space="preserve">
+    <value>Pripomienka</value>
+  </data>
+  <data name="RES_documentsabsences.remindervalue.rotext" xml:space="preserve">
+    <value>Pripomienka sa automaticky odošle 2 dni pred požadovaným dátumom</value>
+  </data>
+  <data name="RES_documentsabsences.reports.title.rotext" xml:space="preserve">
+    <value>Správy - dokumenty</value>
+  </data>
+  <data name="RES_documentsabsences.stylesheetscontainer.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.tabadvices.rotext" xml:space="preserve">
+    <value>komunikoval</value>
+  </data>
+  <data name="RES_documentsabsences.tabgeneral.rotext" xml:space="preserve">
+    <value>všeobecné</value>
+  </data>
+  <data name="RES_documentsabsences.tbaddnewdocumentabsence.rotext" xml:space="preserve">
+    <value>Pridať nový dokument</value>
+  </data>
+  <data name="RES_documentsabsences.tbdeldocumentabsence.rotext" xml:space="preserve">
+    <value>Odstrániť dokument</value>
+  </data>
+  <data name="RES_documentsabsences.tbshowreports.rotext" xml:space="preserve">
+    <value>Prehliadač správ</value>
+  </data>
+  <data name="RES_documentsabsences.title.rotext" xml:space="preserve">
+    <value>Dokumenty</value>
+  </data>
+  <data name="RES_documentsabsences.title_documentsabsences_pathway.rotext" xml:space="preserve">
+    <value>Dokumenty</value>
+  </data>
+  <data name="RES_documentsabsences.tl.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.tl.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.treecaptiondocuments.rotext" xml:space="preserve">
+    <value>Dokumenty</value>
+  </data>
+  <data name="RES_documentsabsences.txtdescription.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.txtdescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.txtname.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.txtname.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.txtshortname.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsences.txtshortname.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking._cancel.text.rotext" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="RES_documentsabsencestracking._cancel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking._insert.text.rotext" xml:space="preserve">
+    <value>Odoslanie súboru</value>
+  </data>
+  <data name="RES_documentsabsencestracking._insert.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking._progress.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking._progresstext.text.rotext" xml:space="preserve">
+    <value>Nahrávanie...</value>
+  </data>
+  <data name="RES_documentsabsencestracking._progresstext.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.absencedocument.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.aspxpanel1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.aspxpanel2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.aspxpanel3.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.aspxpanel4.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.aspxuploadcontrol1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.attachmentdeleteconfirmation.rotext" xml:space="preserve">
+    <value>Chystáte sa odstrániť prílohu, ste si istí?</value>
+  </data>
+  <data name="RES_documentsabsencestracking.bc.text.rotext" xml:space="preserve">
+    <value>Prázdne stránky</value>
+  </data>
+  <data name="RES_documentsabsencestracking.bc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.bo.text.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_documentsabsencestracking.bo.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.browse0.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.browse0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.browset.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.browset.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.bt.text.rotext" xml:space="preserve">
+    <value>Dnes</value>
+  </data>
+  <data name="RES_documentsabsencestracking.bt.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.btnaddnewdocumenttext.rotext" xml:space="preserve">
+    <value>pridať</value>
+  </data>
+  <data name="RES_documentsabsencestracking.btnaddnewdocumenttooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.btnaddnewdocumenttracking.text.rotext" xml:space="preserve">
+    <value>pridať</value>
+  </data>
+  <data name="RES_documentsabsencestracking.btnaddnewdocumenttracking.tooltip.rotext" xml:space="preserve">
+    <value>Pridanie nového sledovania</value>
+  </data>
+  <data name="RES_documentsabsencestracking.btnclose.text.rotext" xml:space="preserve">
+    <value>Zatvoriť</value>
+  </data>
+  <data name="RES_documentsabsencestracking.btnclose.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.btnpopupadvices.text.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_documentsabsencestracking.btnpopupadvices.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.btnpopupadvicescancel.text.rotext" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="RES_documentsabsencestracking.btnpopupadvicescancel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.btnpopupdeliverydate.text.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_documentsabsencestracking.btnpopupdeliverydate.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.btnpopupdeliverydatecancel.text.rotext" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="RES_documentsabsencestracking.btnpopupdeliverydatecancel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.btnpopupnotificationhistorycancel.text.rotext" xml:space="preserve">
+    <value>Zatvoriť</value>
+  </data>
+  <data name="RES_documentsabsencestracking.btnpopupnotificationhistorycancel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.btnpopupupload.text.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_documentsabsencestracking.btnpopupupload.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.btnpopupuploadcancel.text.rotext" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="RES_documentsabsencestracking.btnpopupuploadcancel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.btnupload.text.rotext" xml:space="preserve">
+    <value>Nahrať</value>
+  </data>
+  <data name="RES_documentsabsencestracking.btnupload.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.butcancelupload.text.rotext" xml:space="preserve">
+    <value>Zrušiť nahrávanie</value>
+  </data>
+  <data name="RES_documentsabsencestracking.butcancelupload.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.button2.text.rotext" xml:space="preserve">
+    <value>Nahrať</value>
+  </data>
+  <data name="RES_documentsabsencestracking.button2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.butupload.text.rotext" xml:space="preserve">
+    <value>Vyberte</value>
+  </data>
+  <data name="RES_documentsabsencestracking.butupload.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.c.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.callbackpanelpivot.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.callbacksession.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.cancel.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.cancel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.cerr.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.cif-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.cifd-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.clearbox0.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.clearbox0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.clearboxt.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.clearboxt.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.csd-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.ddd.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.ddd.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.di.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.dxheadersrow0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.dxheadertable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.dxmaintable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.dxpwmb-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.dxstyletable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.emptyheader.text.rotext" xml:space="preserve">
+    <value>Potiahnite stĺpec sem...</value>
+  </data>
+  <data name="RES_documentsabsencestracking.emptyheader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.errr0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.errrrt.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.fileorig.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.fileupload1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.fnp.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.fnp.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.fuploader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.grddoctracking.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.gridadvices.column.description.rotext" xml:space="preserve">
+    <value>popis</value>
+  </data>
+  <data name="RES_documentsabsencestracking.gridadvices.column.name.rotext" xml:space="preserve">
+    <value>Komuniké</value>
+  </data>
+  <data name="RES_documentsabsencestracking.gridadvices.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.griddocumentstracking.column.advices.rotext" xml:space="preserve">
+    <value>Činnosti</value>
+  </data>
+  <data name="RES_documentsabsencestracking.griddocumentstracking.column.attachmentdocuments.rotext" xml:space="preserve">
+    <value>Príloha</value>
+  </data>
+  <data name="RES_documentsabsencestracking.griddocumentstracking.column.attachmentdocumentsaction.rotext" xml:space="preserve">
+    <value>Pripojiť</value>
+  </data>
+  <data name="RES_documentsabsencestracking.griddocumentstracking.column.attachmentdocumentsremove.rotext" xml:space="preserve">
+    <value>Odstrániť</value>
+  </data>
+  <data name="RES_documentsabsencestracking.griddocumentstracking.column.attachmentdocumentssee.rotext" xml:space="preserve">
+    <value>Pozri </value>
+  </data>
+  <data name="RES_documentsabsencestracking.griddocumentstracking.column.comments.rotext" xml:space="preserve">
+    <value>Komentár</value>
+  </data>
+  <data name="RES_documentsabsencestracking.griddocumentstracking.column.deleterow.rotext" xml:space="preserve">
+    <value>Odstrániť</value>
+  </data>
+  <data name="RES_documentsabsencestracking.griddocumentstracking.column.deliverydate.rotext" xml:space="preserve">
+    <value>Prijaté</value>
+  </data>
+  <data name="RES_documentsabsencestracking.griddocumentstracking.column.documentname.rotext" xml:space="preserve">
+    <value>dokument</value>
+  </data>
+  <data name="RES_documentsabsencestracking.griddocumentstracking.column.historyadvicesee.rotext" xml:space="preserve">
+    <value>Pozrite si oznámenia</value>
+  </data>
+  <data name="RES_documentsabsencestracking.griddocumentstracking.column.notificationdate.rotext" xml:space="preserve">
+    <value>Oznámené</value>
+  </data>
+  <data name="RES_documentsabsencestracking.griddocumentstracking.column.passportname.rotext" xml:space="preserve">
+    <value>používateľ</value>
+  </data>
+  <data name="RES_documentsabsencestracking.griddocumentstracking.column.receivedocumentbutton.rotext" xml:space="preserve">
+    <value>Štát</value>
+  </data>
+  <data name="RES_documentsabsencestracking.griddocumentstracking.column.sendadvice.rotext" xml:space="preserve">
+    <value>Odoslať oznámenie</value>
+  </data>
+  <data name="RES_documentsabsencestracking.griddocumentstracking.column.trackingdate.rotext" xml:space="preserve">
+    <value>dátum</value>
+  </data>
+  <data name="RES_documentsabsencestracking.griddocumentstracking.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.gridtrackingdocuments.error.emptydateordocument.rotext" xml:space="preserve">
+    <value>Dátum a požadovaný dokument nemôžu byť prázdne</value>
+  </data>
+  <data name="RES_documentsabsencestracking.i.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.i.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.iadd.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.iadu.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.idhf.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.lblcancelrecievedoc.rotext" xml:space="preserve">
+    <value>Označiť ako neprijaté</value>
+  </data>
+  <data name="RES_documentsabsencestracking.lbldeliverydate.text.rotext" xml:space="preserve">
+    <value>Dátum prijatia:</value>
+  </data>
+  <data name="RES_documentsabsencestracking.lbldeliverydate.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.lbldocumentscaption.rotext" xml:space="preserve">
+    <value>Následná dokumentácia</value>
+  </data>
+  <data name="RES_documentsabsencestracking.lbldocumentstrackingcaption.text.rotext" xml:space="preserve">
+    <value>Sledované dokumenty</value>
+  </data>
+  <data name="RES_documentsabsencestracking.lbldocumentstrackingcaption.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.lbldocumentstrackingtitle.text.rotext" xml:space="preserve">
+    <value>Následné úpravy</value>
+  </data>
+  <data name="RES_documentsabsencestracking.lbldocumentstrackingtitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.lblerror.text.rotext" xml:space="preserve">
+    <value>Musíte uviesť dátum</value>
+  </data>
+  <data name="RES_documentsabsencestracking.lblerror.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.lblinfo.text.rotext" xml:space="preserve">
+    <value>Tu môžete počas svojej neprítomnosti konzultovať a upravovať potrebné dokumenty</value>
+  </data>
+  <data name="RES_documentsabsencestracking.lblinfo.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.lblinfo2.text.rotext" xml:space="preserve">
+    <value>Výber komuniké k dokumentu</value>
+  </data>
+  <data name="RES_documentsabsencestracking.lblinfo2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.lblnotificationhistorytitle.text.rotext" xml:space="preserve">
+    <value>História oznámení</value>
+  </data>
+  <data name="RES_documentsabsencestracking.lblnotificationhistorytitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.lblpopupdeliverydatetitle.text.rotext" xml:space="preserve">
+    <value>Zadajte dátum prijatia</value>
+  </data>
+  <data name="RES_documentsabsencestracking.lblpopupdeliverydatetitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.lblpopupuploadtitle.text.rotext" xml:space="preserve">
+    <value>Pripojiť súbor k dokumentu</value>
+  </data>
+  <data name="RES_documentsabsencestracking.lblpopupuploadtitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.lblrecievedoc.rotext" xml:space="preserve">
+    <value>Označiť ako prijaté</value>
+  </data>
+  <data name="RES_documentsabsencestracking.lblselectfile.text.rotext" xml:space="preserve">
+    <value>Vyberte súbor:</value>
+  </data>
+  <data name="RES_documentsabsencestracking.lblselectfile.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.lbltitle.text.rotext" xml:space="preserve">
+    <value>Následné dokumenty</value>
+  </data>
+  <data name="RES_documentsabsencestracking.lbltitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.ld.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.longtimeprocess.rotext" xml:space="preserve">
+    <value>%F%. %SEND% z %SIZE%; chýba %T% sekúnd</value>
+  </data>
+  <data name="RES_documentsabsencestracking.lp.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.lp.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.m.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.mc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.mc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.mt.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.nmc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.nmc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.nmcimg.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.notrackinginfo.rotext" xml:space="preserve">
+    <value>Žiadne záznamy o sledovaní</value>
+  </data>
+  <data name="RES_documentsabsencestracking.nyc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.nyc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.nycimg.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.panelcontent2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.paneluploadcontent.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.pmc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.pmc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.pmcimg.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.popupadvices.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.popupadvices.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.popupadvicescontentcontrol.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.popupadvicespanelcontent.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.popupcaptcha.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.popupcaptcha.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.popupdeliverydate.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.popupdeliverydate.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.popupdeliverydatecontrolcontent.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.popupdeliverydatepanelcontent.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.popupnotificationhistory.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.popupnotificationhistory.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.popupnotificationhistorycontrolcontent.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.popupnotificationhistorypanelcontent.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.popupuploadcontrolcontent.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.popupuploadfile.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.popupuploadfile.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.popupuploadpanelcontent.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.pw-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.pwh-1.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.pwh-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.pyc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.pyc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.pycimg.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.scrollable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.state.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.stylesheetscontainer.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.t.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.t.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.tc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.tc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.textbox0.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.textbox0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.textbox0_fakeinput.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.textbox0_input.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.textboxt.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.textboxt.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.textboxt_fakeinput.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.textboxt_input.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.title.rotext" xml:space="preserve">
+    <value>Sledovanie dokumentov</value>
+  </data>
+  <data name="RES_documentsabsencestracking.tl.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.tl.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.txtdeliverydate.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.txtdeliverydate.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.txtnotificationhistory.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.txtnotificationhistory.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.ucprogress.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.upldocument.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.uplfile.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.uplimage.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.uploadiframe.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.vertscrollable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.vic.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.vic.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documentsabsencestracking.y.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmdocumentadvice.btncancel.text.rotext" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="RES_frmdocumentadvice.btncancel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmdocumentadvice.btnload.text.rotext" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="RES_frmdocumentadvice.btnload.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmdocumentadvice.btnok.text.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_frmdocumentadvice.btnok.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmdocumentadvice.lbladvice.text.rotext" xml:space="preserve">
+    <value>Správa</value>
+  </data>
+  <data name="RES_frmdocumentadvice.lbladvice.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmdocumentadvice.lblcomptit.text.rotext" xml:space="preserve">
+    <value>Komuniké</value>
+  </data>
+  <data name="RES_frmdocumentadvice.lblcomptit.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmdocumentadvice.lblimportfile.text.rotext" xml:space="preserve">
+    <value>Import zo súboru</value>
+  </data>
+  <data name="RES_frmdocumentadvice.lblimportfile.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmdocumentadvice.lblnameadvice.text.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_frmdocumentadvice.lblnameadvice.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_importhtmldocument.btnpopupupload.text.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_importhtmldocument.btnpopupupload.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_importhtmldocument.btnpopupuploadcancel.text.rotext" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="RES_importhtmldocument.btnpopupuploadcancel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_importhtmldocument.fuploader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_importhtmldocument.lblpopupuploadtitle.text.rotext" xml:space="preserve">
+    <value>Pripojiť súbor k dokumentu</value>
+  </data>
+  <data name="RES_importhtmldocument.lblpopupuploadtitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_importhtmldocument.lblselectfile.text.rotext" xml:space="preserve">
+    <value>Vyberte súbor:</value>
+  </data>
+  <data name="RES_importhtmldocument.lblselectfile.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_importhtmldocument.paneluploadcontent.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_importhtmldocument.popupuploadpanelcontent.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_importhtmldocument.title.rotext" xml:space="preserve">
+    <value>Správa dokumentov</value>
+  </data>
+  <data name="RES_srvmsgboxdocumentsabsences.commonerror.option1description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxdocumentsabsences.commonerror.option1text.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_srvmsgboxdocumentsabsences.commonerror.title.rotext" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="RES_srvmsgboxdocumentsabsences.deletedocumentabsence.description.rotext" xml:space="preserve">
+    <value>Odstránenie dokumentu</value>
+  </data>
+  <data name="RES_srvmsgboxdocumentsabsences.deletedocumentabsence.option1description.rotext" xml:space="preserve">
+    <value>Odstránenie dokumentu</value>
+  </data>
+  <data name="RES_srvmsgboxdocumentsabsences.deletedocumentabsence.option1text.rotext" xml:space="preserve">
+    <value>Odstrániť</value>
+  </data>
+  <data name="RES_srvmsgboxdocumentsabsences.deletedocumentabsence.option2description.rotext" xml:space="preserve">
+    <value>Nevymaže dokument</value>
+  </data>
+  <data name="RES_srvmsgboxdocumentsabsences.deletedocumentabsence.option2text.rotext" xml:space="preserve">
+    <value>Nevymazávať</value>
+  </data>
+  <data name="RES_srvmsgboxdocumentsabsences.deletedocumentabsence.title.rotext" xml:space="preserve">
+    <value>Chystáte sa vymazať dokument.&lt;br&gt; Ste si istí?</value>
+  </data>
+  <data name="RES_srvmsgboxdocumentsabsences.error.description.adviceempty.rotext" xml:space="preserve">
+    <value>Musíte zadať výpis</value>
+  </data>
+  <data name="RES_srvmsgboxdocumentsabsences.error.description.duplicatedadvice.rotext" xml:space="preserve">
+    <value>Duplicitný názov vydania</value>
+  </data>
+  <data name="RES_srvmsgboxdocumentsabsences.error.description.invalidfile.rotext" xml:space="preserve">
+    <value>Importovať možno len dokumenty html</value>
+  </data>
+  <data name="RES_srvmsgboxdocumentsabsences.error.description.invalidfilesize.rotext" xml:space="preserve">
+    <value>Maximálna veľkosť importovaného súboru je 256 kb</value>
+  </data>
+  <data name="RES_srvmsgboxdocumentsabsences.error.description.invalidlengthfile.rotext" xml:space="preserve">
+    <value>Dokument prekračuje maximálnu povolenú dĺžku</value>
+  </data>
+  <data name="RES_srvmsgboxdocumentsabsences.error.description.nameempty.rotext" xml:space="preserve">
+    <value>Musíte zadať meno</value>
+  </data>
+  <data name="RES_srvmsgboxdocumentsabsences.error.ok.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_srvmsgboxdocumentsabsences.error.okdesc.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxdocumentsabsences.error.title.rotext" xml:space="preserve">
+    <value>Pozor</value>
+  </data>
+  <data name="RES_srvmsgboxdocumentsabsences.error.validationfieldsfailed.rotext" xml:space="preserve">
+    <value>Nie sú zadané všetky požadované polia</value>
+  </data>
+  <data name="RES_srvmsgboxdocumentsabsences.savename.error.option1description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxdocumentsabsences.savename.error.option1text.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_srvmsgboxdocumentsabsences.savename.error.text.rotext" xml:space="preserve">
+    <value>Nesprávne údaje</value>
+  </data>
+</root>

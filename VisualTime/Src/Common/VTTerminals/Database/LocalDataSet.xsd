@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LocalDataSet" targetNamespace="http://tempuri.org/LocalDataSet.xsd" xmlns:mstns="http://tempuri.org/LocalDataSet.xsd" xmlns="http://tempuri.org/LocalDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LocalDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="LocalDataSet" msprop:Generator_UserDSName="LocalDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Causes" msprop:Generator_TableClassName="CausesDataTable" msprop:Generator_TableVarName="tableCauses" msprop:Generator_RowChangedName="CausesRowChanged" msprop:Generator_TablePropName="Causes" msprop:Generator_RowDeletingName="CausesRowDeleting" msprop:Generator_RowChangingName="CausesRowChanging" msprop:Generator_RowEvHandlerName="CausesRowChangeEventHandler" msprop:Generator_RowDeletedName="CausesRowDeleted" msprop:Generator_RowClassName="CausesRow" msprop:Generator_UserTableName="Causes" msprop:Generator_RowEvArgName="CausesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDCause" msprop:Generator_ColumnVarNameInTable="columnIDCause" msprop:Generator_ColumnPropNameInRow="IDCause" msprop:Generator_ColumnPropNameInTable="IDCauseColumn" msprop:Generator_UserColumnName="IDCause" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="ReaderInputCode" msprop:Generator_ColumnVarNameInTable="columnReaderInputCode" msprop:Generator_ColumnPropNameInRow="ReaderInputCode" msprop:Generator_ColumnPropNameInTable="ReaderInputCodeColumn" msprop:Generator_UserColumnName="ReaderInputCode" type="xs:int" minOccurs="0" />
+              <xs:element name="WorkingType" msprop:Generator_ColumnVarNameInTable="columnWorkingType" msprop:Generator_ColumnPropNameInRow="WorkingType" msprop:Generator_ColumnPropNameInTable="WorkingTypeColumn" msprop:Generator_UserColumnName="WorkingType" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Sirens" msprop:Generator_TableClassName="SirensDataTable" msprop:Generator_TableVarName="tableSirens" msprop:Generator_TablePropName="Sirens" msprop:Generator_RowDeletingName="SirensRowDeleting" msprop:Generator_RowChangingName="SirensRowChanging" msprop:Generator_RowEvHandlerName="SirensRowChangeEventHandler" msprop:Generator_RowDeletedName="SirensRowDeleted" msprop:Generator_UserTableName="Sirens" msprop:Generator_RowChangedName="SirensRowChanged" msprop:Generator_RowEvArgName="SirensRowChangeEvent" msprop:Generator_RowClassName="SirensRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DayOf" msprop:Generator_ColumnVarNameInTable="columnDayOf" msprop:Generator_ColumnPropNameInRow="DayOf" msprop:Generator_ColumnPropNameInTable="DayOfColumn" msprop:Generator_UserColumnName="DayOf" type="xs:string" minOccurs="0" />
+              <xs:element name="StartDate" msprop:Generator_ColumnVarNameInTable="columnStartDate" msprop:Generator_ColumnPropNameInRow="StartDate" msprop:Generator_ColumnPropNameInTable="StartDateColumn" msprop:Generator_UserColumnName="StartDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Relay" msprop:Generator_ColumnVarNameInTable="columnRelay" msprop:Generator_ColumnPropNameInRow="Relay" msprop:Generator_ColumnPropNameInTable="RelayColumn" msprop:Generator_UserColumnName="Relay" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Duration" msprop:Generator_ColumnVarNameInTable="columnDuration" msprop:Generator_ColumnPropNameInRow="Duration" msprop:Generator_ColumnPropNameInTable="DurationColumn" msprop:Generator_UserColumnName="Duration" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TimeZones" msprop:Generator_TableClassName="TimeZonesDataTable" msprop:Generator_TableVarName="tableTimeZones" msprop:Generator_RowChangedName="TimeZonesRowChanged" msprop:Generator_TablePropName="TimeZones" msprop:Generator_RowDeletingName="TimeZonesRowDeleting" msprop:Generator_RowChangingName="TimeZonesRowChanging" msprop:Generator_RowEvHandlerName="TimeZonesRowChangeEventHandler" msprop:Generator_RowDeletedName="TimeZonesRowDeleted" msprop:Generator_RowClassName="TimeZonesRow" msprop:Generator_UserTableName="TimeZones" msprop:Generator_RowEvArgName="TimeZonesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDGroup" msprop:Generator_ColumnVarNameInTable="columnIDGroup" msprop:Generator_ColumnPropNameInRow="IDGroup" msprop:Generator_ColumnPropNameInTable="IDGroupColumn" msprop:Generator_UserColumnName="IDGroup" type="xs:unsignedByte" />
+              <xs:element name="IDReader" msprop:Generator_ColumnVarNameInTable="columnIDReader" msprop:Generator_ColumnPropNameInRow="IDReader" msprop:Generator_ColumnPropNameInTable="IDReaderColumn" msprop:Generator_UserColumnName="IDReader" type="xs:unsignedByte" />
+              <xs:element name="DayOf" msprop:Generator_ColumnVarNameInTable="columnDayOf" msprop:Generator_ColumnPropNameInRow="DayOf" msprop:Generator_ColumnPropNameInTable="DayOfColumn" msprop:Generator_UserColumnName="DayOf" type="xs:string" />
+              <xs:element name="BeginTime" msprop:Generator_ColumnVarNameInTable="columnBeginTime" msprop:Generator_ColumnPropNameInRow="BeginTime" msprop:Generator_ColumnPropNameInTable="BeginTimeColumn" msprop:Generator_UserColumnName="BeginTime" type="xs:dateTime" />
+              <xs:element name="EndTime" msprop:Generator_ColumnVarNameInTable="columnEndTime" msprop:Generator_ColumnPropNameInRow="EndTime" msprop:Generator_ColumnPropNameInTable="EndTimeColumn" msprop:Generator_UserColumnName="EndTime" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TerminalConfig" msprop:Generator_TableClassName="TerminalConfigDataTable" msprop:Generator_TableVarName="tableTerminalConfig" msprop:Generator_TablePropName="TerminalConfig" msprop:Generator_RowDeletingName="TerminalConfigRowDeleting" msprop:Generator_RowChangingName="TerminalConfigRowChanging" msprop:Generator_RowEvHandlerName="TerminalConfigRowChangeEventHandler" msprop:Generator_RowDeletedName="TerminalConfigRowDeleted" msprop:Generator_UserTableName="TerminalConfig" msprop:Generator_RowChangedName="TerminalConfigRowChanged" msprop:Generator_RowEvArgName="TerminalConfigRowChangeEvent" msprop:Generator_RowClassName="TerminalConfigRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Causes" />
+      <xs:field xpath="mstns:IDCause" />
+    </xs:unique>
+    <xs:unique name="TimeZones_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TimeZones" />
+      <xs:field xpath="mstns:IDGroup" />
+      <xs:field xpath="mstns:IDReader" />
+      <xs:field xpath="mstns:BeginTime" />
+      <xs:field xpath="mstns:DayOf" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

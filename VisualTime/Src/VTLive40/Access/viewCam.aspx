@@ -1,0 +1,1 @@
+﻿<%@ Page Language="VB" AutoEventWireup="false" EnableEventValidation="false" Inherits="VTLive40.viewCam" Culture="auto" UICulture="auto" CodeBehind="viewCam.aspx.vb" %>

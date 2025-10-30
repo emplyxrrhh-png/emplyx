@@ -1,0 +1,75 @@
+<div data-options="dxView : { name: 'communiques', title: 'communiques', disableCache: true } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+		<div id="smallUserInfo"></div>
+        <div class="dx-searchbar">
+            <div id="searchCommuniques" data-bind="dxTextBox: searchOptions"></div>
+        </div>
+        <div id="scrollview" style="clear:both" data-bind="dxScrollView: commScroll">
+            <div id="list" class="list-container communiques" data-bind="if: communiqueDS()">
+                <div data-bind="dxList: listcommuniques" >
+                    <div data-options="dxTemplate: {name: 'communiqueItem'}">
+                        <div class="listMenuItem">
+                            <div data-bind="css: $data.cssClass" class="listMenuItemIcon"></div>
+                            <div class="listMenuItemContent">
+                                <div data-bind="text: $data.Subject, css: $data.cssClassText"></div>
+
+                                <div> <span data-bind="text: $data.CreatedBy" class="smallTextDescriptionComm"></span><span style="float:right;margin-top: 6px;" data-bind="text: $data.SentOn" class="smallTextDescriptionComm"></span></div>
+
+                                <div class="smallTextDescriptionComm" data-bind="html: $data.Message"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <div data-bind="if: !communiqueDS()">
+                <div class="noDataCssClass"></div>
+                <!--<div class="noDataText" >Oops! No hay nada aquí...</div>-->
+            </div>
+        </div>
+
+        <div data-bind="dxLoadPanel: loadingPanel"> </div>
+
+		<style>
+			div#fastButtons {
+			display: flex;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			align-items: center;
+			align-content: space-around;
+			padding: 0 18px;
+			padding-bottom: 8px;
+			justify-content: center;
+			padding-top: 10px;
+			background: white;
+			}
+			div#fastButtons > div {
+			background-color: #0046FE !important;
+			width: 100%;
+			text-align: center;
+			margin: 1%;
+			color: white;
+			font-size: 16px;
+			border-radius: 8px !important;
+			max-width: 150px;
+			}
+			div#fastButtons .pressing {
+			background-color: #008624 !important;
+			box-shadow: none !important;
+			}
+		</style>
+		<div id="fastButtons">
+			<div id="btnNotRead" data-bind="dxButton: notRead"></div>
+			<div id="btnAllCom" data-bind="dxButton: allComm"></div>
+			<div id="btnArchived" data-bind="dxButton: archived"></div>
+		</div>
+
+    </div>
+	
+	

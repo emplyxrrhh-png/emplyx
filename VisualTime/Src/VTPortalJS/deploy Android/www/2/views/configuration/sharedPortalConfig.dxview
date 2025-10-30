@@ -1,0 +1,34 @@
+<div data-options="dxView : { name: 'sharedPortalConfig', title: 'sharedPortalConfig' } " >	
+	<div id="sharedPortalConfig">
+		<div class="dx-field">
+			<div class="listMenuItemIcon ro-icon-SharedPortal"></div>
+			<span class="sharedPortal" data-bind="text: lblTimegateTitle"></span>
+			<!-- ko if: isTimegateEnabled() == false -->
+			<div id="sharedPortalconfigurationButton">			
+				<div class="enableSharedPortalconfigurationButton" data-bind="dxButton: btnEnableSharedPortal"></div>
+			</div>
+			<!-- /ko-->
+			<!-- ko if: isTimegateEnabled() == true -->
+			<div id="sharedPortalconfigurationButton">
+				<div class="sharedPortalEnabled" data-bind="dxButton: btnEnabled"></div>			
+			</div>
+			<!-- /ko-->
+		</div>
+		<div>
+			<div id="enableSharedPortal" class="dx-fieldset">
+				<div class="dx-field">
+					<span data-bind="text: lblTerminalName"></span>				
+					<div class="dx-field-value" data-bind="dxTextBox: txtTerminalName"></div>			
+				</div>            
+			</div>
+		</div>
+		<div>
+			<div class="dx-fieldset">
+				<div class="dx-field">
+					<span data-bind="text: lblTimegateActionWarning"></span>
+				</div>
+			</div>
+		</div>
+	</div>      
+	<div data-bind="dxLoadPanel: loadingPanel"> </div>
+</div>

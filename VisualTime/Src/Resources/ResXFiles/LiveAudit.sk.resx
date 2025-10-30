@@ -1,0 +1,3858 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_audit.action.ablock.rotext" xml:space="preserve">
+    <value>Blokovanie</value>
+  </data>
+  <data name="RES_audit.action.aconnect.rotext" xml:space="preserve">
+    <value>Pripojenie</value>
+  </data>
+  <data name="RES_audit.action.aconnectfail.rotext" xml:space="preserve">
+    <value>Pokus o pripojenie</value>
+  </data>
+  <data name="RES_audit.action.adelete.rotext" xml:space="preserve">
+    <value>Odstránené</value>
+  </data>
+  <data name="RES_audit.action.adisconnect.rotext" xml:space="preserve">
+    <value>Odpojenie</value>
+  </data>
+  <data name="RES_audit.action.aexecuted.rotext" xml:space="preserve">
+    <value>Vykonávanie</value>
+  </data>
+  <data name="RES_audit.action.ainsert.rotext" xml:space="preserve">
+    <value>Vysoká</value>
+  </data>
+  <data name="RES_audit.action.amultiselect.rotext" xml:space="preserve">
+    <value>M-konzultácie</value>
+  </data>
+  <data name="RES_audit.action.anone.rotext" xml:space="preserve">
+    <value>(Neznámy)</value>
+  </data>
+  <data name="RES_audit.action.aselect.rotext" xml:space="preserve">
+    <value>Konzultácie</value>
+  </data>
+  <data name="RES_audit.action.aunblock.rotext" xml:space="preserve">
+    <value>Odblokovanie</value>
+  </data>
+  <data name="RES_audit.action.aupdate.rotext" xml:space="preserve">
+    <value>Aktualizácia</value>
+  </data>
+  <data name="RES_audit.aspxloadingpopup.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.aspxloadingpopup.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.bc.text.rotext" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="RES_audit.bc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.bo.text.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_audit.bo.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.bt.text.rotext" xml:space="preserve">
+    <value>Dnes</value>
+  </data>
+  <data name="RES_audit.bt.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btdetailcancel.text.rotext" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="RES_audit.btdetailcancel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btdetailok.text.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_audit.btdetailok.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btnexporttoxls.text.rotext" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="RES_audit.btnexporttoxls.tooltip.rotext" xml:space="preserve">
+    <value>Export do programu Excel</value>
+  </data>
+  <data name="RES_audit.btnfirst.text.rotext" xml:space="preserve">
+    <value>&lt;&lt;</value>
+  </data>
+  <data name="RES_audit.btnfirst.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btnlast.text.rotext" xml:space="preserve">
+    <value>&gt;&gt;</value>
+  </data>
+  <data name="RES_audit.btnlast.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btnnext.text.rotext" xml:space="preserve">
+    <value>&gt;</value>
+  </data>
+  <data name="RES_audit.btnnext.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btnprev.text.rotext" xml:space="preserve">
+    <value>&lt;</value>
+  </data>
+  <data name="RES_audit.btnprev.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btshowauditdetail.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btshowauditdetail.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.c.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.cmbactions.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.cmbactions.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.cmbobjecttypes.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.cmbobjecttypes.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.cmbusers.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.cmbusers.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.col0.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.col0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.column.action.rotext" xml:space="preserve">
+    <value>Akcia</value>
+  </data>
+  <data name="RES_audit.column.date.rotext" xml:space="preserve">
+    <value>dátum</value>
+  </data>
+  <data name="RES_audit.column.objecttype.rotext" xml:space="preserve">
+    <value>Typ objektu</value>
+  </data>
+  <data name="RES_audit.column.time.rotext" xml:space="preserve">
+    <value>čas</value>
+  </data>
+  <data name="RES_audit.column.user.rotext" xml:space="preserve">
+    <value>používateľ</value>
+  </data>
+  <data name="RES_audit.contentframe.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddd.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddd.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddlactions.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddlactions.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddlobjecttypes.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddlobjecttypes.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddlusers.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddlusers.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.dtvauditdetail.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.dxemptyrow.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.dxfilterrow.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.dxheadersrow0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.dxmaintable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.dxstyletable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.emptyheader.text.rotext" xml:space="preserve">
+    <value>Potiahnite stĺpec sem...</value>
+  </data>
+  <data name="RES_audit.emptyheader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.error.couldnotretrievetask.text.rotext" xml:space="preserve">
+    <value>informácie o úlohe sa nepodarilo načítať&amp;quot;</value>
+  </data>
+  <data name="RES_audit.error.incorrectdates.rotext" xml:space="preserve">
+    <value>Dátum začiatku nesmie byť neskorší ako dátum ukončenia.</value>
+  </data>
+  <data name="RES_audit.fnp.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.fnp.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.grdaudit.columns#0.headertext.rotext" xml:space="preserve">
+    <value>Akcia</value>
+  </data>
+  <data name="RES_audit.grdaudit.columns#1.headertext.rotext" xml:space="preserve">
+    <value>Dátum/čas</value>
+  </data>
+  <data name="RES_audit.grdaudit.columns#2.headertext.rotext" xml:space="preserve">
+    <value>používateľ</value>
+  </data>
+  <data name="RES_audit.grdaudit.columns#3.headertext.rotext" xml:space="preserve">
+    <value>Typ objektu</value>
+  </data>
+  <data name="RES_audit.grdaudit.columns#4.headertext.rotext" xml:space="preserve">
+    <value>Názov objektu</value>
+  </data>
+  <data name="RES_audit.grdaudit.columns#5.headertext.rotext" xml:space="preserve">
+    <value>popis</value>
+  </data>
+  <data name="RES_audit.grdaudit.columns#6.headertext.rotext" xml:space="preserve">
+    <value>Zákazník</value>
+  </data>
+  <data name="RES_audit.grdaudit.columns#7.headertext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.grdaudit.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.gridcontracts.column.clientlocation.rotext" xml:space="preserve">
+    <value>Zákazník</value>
+  </data>
+  <data name="RES_audit.gridcontracts.column.description.rotext" xml:space="preserve">
+    <value>popis</value>
+  </data>
+  <data name="RES_audit.gridcontracts.column.objectname.rotext" xml:space="preserve">
+    <value>Názov objektu</value>
+  </data>
+  <data name="RES_audit.grouppanel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.hiddentargetcontrolforloginpopup.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.hiddentargetcontrolforloginpopup.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.i.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.i.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.iadd.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.iadl.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.iadr.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.iadu.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ibtdetailcancel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ibtrefresh.tooltip.rotext" xml:space="preserve">
+    <value>Aktualizácia údajov</value>
+  </data>
+  <data name="RES_audit.idhf.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.imgaudit.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.imgespecialpaste.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.imgloading.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblaction.text.rotext" xml:space="preserve">
+    <value>Akcia:</value>
+  </data>
+  <data name="RES_audit.lblaction.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblauditdetailtitle.text.rotext" xml:space="preserve">
+    <value>Detail auditu</value>
+  </data>
+  <data name="RES_audit.lblauditdetailtitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblbegindate.text.rotext" xml:space="preserve">
+    <value>Dátum od:</value>
+  </data>
+  <data name="RES_audit.lblbegindate.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblclientlocation.text.rotext" xml:space="preserve">
+    <value>Klient:</value>
+  </data>
+  <data name="RES_audit.lblclientlocation.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbldetailaction.text.rotext" xml:space="preserve">
+    <value>Akcia:</value>
+  </data>
+  <data name="RES_audit.lbldetailaction.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbldetailclientlocation.text.rotext" xml:space="preserve">
+    <value>Klient:</value>
+  </data>
+  <data name="RES_audit.lbldetailclientlocation.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbldetaildatetime.text.rotext" xml:space="preserve">
+    <value>Dátum/čas:</value>
+  </data>
+  <data name="RES_audit.lbldetaildatetime.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbldetaildescription.text.rotext" xml:space="preserve">
+    <value>Popis: V súčasnosti je na trhu viac ako 10 000 zariadení, ktoré sú určené na predaj:</value>
+  </data>
+  <data name="RES_audit.lbldetaildescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbldetailobjectname.text.rotext" xml:space="preserve">
+    <value>Názov objektu:</value>
+  </data>
+  <data name="RES_audit.lbldetailobjectname.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbldetailobjecttype.text.rotext" xml:space="preserve">
+    <value>Typ objektu:</value>
+  </data>
+  <data name="RES_audit.lbldetailobjecttype.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbldetailusername.text.rotext" xml:space="preserve">
+    <value>Používateľ:</value>
+  </data>
+  <data name="RES_audit.lbldetailusername.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblenddate.text.rotext" xml:space="preserve">
+    <value>Dátum do:</value>
+  </data>
+  <data name="RES_audit.lblenddate.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblerrordescription.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblerrordescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblerrordescription2.text.rotext" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="RES_audit.lblerrordescription2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblheader.text.rotext" xml:space="preserve">
+    <value>Zdieľanie auditu</value>
+  </data>
+  <data name="RES_audit.lblheader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblinfo.text.rotext" xml:space="preserve">
+    <value>Na obrazovke auditu sa v súlade s nariadením GDPR zaznamenávajú všetky akcie, ktoré boli vykonané v aplikácii, a používatelia, ktorí ich vykonali. Máte možnosť filtrovať dotazy podľa rôznych kritérií, aby ste mohli ľahšie vyhľadať požadované informácie.</value>
+  </data>
+  <data name="RES_audit.lblinfo.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblobjecttype.text.rotext" xml:space="preserve">
+    <value>Typ objektu:</value>
+  </data>
+  <data name="RES_audit.lblobjecttype.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblpager.text.rotext" xml:space="preserve">
+    <value>0 / 6</value>
+  </data>
+  <data name="RES_audit.lblpager.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbluser.text.rotext" xml:space="preserve">
+    <value>Používateľ:</value>
+  </data>
+  <data name="RES_audit.lbluser.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ld.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.loginpanel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lp.text.rotext" xml:space="preserve">
+    <value>Načítanie&amp;hellip;</value>
+  </data>
+  <data name="RES_audit.lp.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.m.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.mc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.mc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tabsencetracking.adelete.rotext" xml:space="preserve">
+    <value>Sledovací dokument bol vymazaný</value>
+  </data>
+  <data name="RES_audit.message.tabsencetracking.aupdate.rotext" xml:space="preserve">
+    <value>Monitorovací dokument bol aktualizovaný</value>
+  </data>
+  <data name="RES_audit.message.taccessauthorization.adelete.rotext" xml:space="preserve">
+    <value>Používateľovi $@EmployeeName@ bol udelený prístup do zóny $@AccessGroup@</value>
+  </data>
+  <data name="RES_audit.message.taccessauthorization.aexecuted.rotext" xml:space="preserve">
+    <value>Používateľovi $@EmployeeName@ bol udelený prístup do nasledujúcich zón: $@AccessGroup@</value>
+  </data>
+  <data name="RES_audit.message.taccessauthorization.ainsert.rotext" xml:space="preserve">
+    <value>Používateľovi $@EmployeeName@ bol zamietnutý prístup do zóny $@AccessGroup@</value>
+  </data>
+  <data name="RES_audit.message.taccessdata.aselect.rotext" xml:space="preserve">
+    <value>Boli vyhľadané prístupové údaje za obdobie od $@DateIni@ do $@DateEnd@ pre týchto používateľov:$CRLF $@EmployeeNames@</value>
+  </data>
+  <data name="RES_audit.message.taccessgroup.adelete.rotext" xml:space="preserve">
+    <value>Prístupová skupina bola odstránená</value>
+  </data>
+  <data name="RES_audit.message.taccessgroup.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová skupina prístupu s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.taccessgroup.aselect.rotext" xml:space="preserve">
+    <value>Konzultácie so skupinou pre prístup</value>
+  </data>
+  <data name="RES_audit.message.taccessgroup.aupdate.rotext" xml:space="preserve">
+    <value>Nasledujúce údaje skupiny prístupu boli upravené:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.taccessgrouppermission.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová skupina prístupu s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.taccessperiod.adelete.rotext" xml:space="preserve">
+    <value>Prístupové obdobie bolo vymazané</value>
+  </data>
+  <data name="RES_audit.message.taccessperiod.ainsert.rotext" xml:space="preserve">
+    <value>Bolo vytvorené nové obdobie prístupu s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.taccessperiod.aselect.rotext" xml:space="preserve">
+    <value>Obdobie prístupu bolo konzultované</value>
+  </data>
+  <data name="RES_audit.message.taccessperiod.aupdate.rotext" xml:space="preserve">
+    <value>Boli upravené nasledujúce údaje o období prístupu:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.taccessperiodholidays.ainsert.rotext" xml:space="preserve">
+    <value>Vytvorilo sa nové obdobie prístupu (obdobie) s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.taccesszone.adelete.rotext" xml:space="preserve">
+    <value>Oblasť bola vymazaná</value>
+  </data>
+  <data name="RES_audit.message.taccesszone.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová oblasť prihlásenia s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.taccesszone.aselect.rotext" xml:space="preserve">
+    <value>Oblasť bola konzultovaná</value>
+  </data>
+  <data name="RES_audit.message.taccesszone.aupdate.rotext" xml:space="preserve">
+    <value>V oblasti prístupu boli upravené tieto údaje:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tactivity.adelete.rotext" xml:space="preserve">
+    <value>Činnosť bola vymazaná</value>
+  </data>
+  <data name="RES_audit.message.tactivity.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová aktivita s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tactivity.aselect.rotext" xml:space="preserve">
+    <value>Bola konzultovaná činnosť</value>
+  </data>
+  <data name="RES_audit.message.tactivity.aupdate.rotext" xml:space="preserve">
+    <value>Boli upravené nasledujúce údaje o činnosti:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tadvancedparameter.ainsert.rotext" xml:space="preserve">
+    <value>Bol vytvorený rozšírený parameter</value>
+  </data>
+  <data name="RES_audit.message.tadvancedparameter.aselect.rotext" xml:space="preserve">
+    <value>Bol skontrolovaný rozšírený parameter</value>
+  </data>
+  <data name="RES_audit.message.tadvancedparameter.aupdate.rotext" xml:space="preserve">
+    <value>Hodnota parametra</value>
+  </data>
+  <data name="RES_audit.message.tassigncause.ainsert.rotext" xml:space="preserve">
+    <value>Hromadné zadanie odôvodnenia používateľa/ov ($@DestinationEmployeeName@) bolo vykonané medzi $@DateIni@ a $@DateEnd@, s odôvodnením $@Cause@, absencia dokončená: $@CompletedDays@</value>
+  </data>
+  <data name="RES_audit.message.tassigncause.aupdate.rotext" xml:space="preserve">
+    <value>Hromadné zadanie odôvodnenia používateľa/ov ($@DestinationEmployeeName@) bolo vykonané medzi $@DateIni@ a $@DateEnd@, s odôvodnením $@Cause@, absencia dokončená: $@CompletedDays@</value>
+  </data>
+  <data name="RES_audit.message.tassigncenters.aupdate.rotext" xml:space="preserve">
+    <value>Bolo vykonané hromadné priradenie nákladových stredísk medzi $@DateIni@ a $@DateEnd@.</value>
+  </data>
+  <data name="RES_audit.message.tassignment.adelete.rotext" xml:space="preserve">
+    <value>Príspevok $@AssignmentName@ bol vymazaný.</value>
+  </data>
+  <data name="RES_audit.message.tassignment.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová položka s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tassignment.aselect.rotext" xml:space="preserve">
+    <value>Konzultácie</value>
+  </data>
+  <data name="RES_audit.message.tassignment.aupdate.rotext" xml:space="preserve">
+    <value>Boli upravené nasledujúce údaje úlohy:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tattendancedata.aselect.rotext" xml:space="preserve">
+    <value>Údaje o časovom rozvrhu ($@CubeView@) za obdobie od $@DateIni@ do $@DateEnd@ boli vyhľadané pre týchto používateľov:$CRLF $@EmployeeNames@</value>
+  </data>
+  <data name="RES_audit.message.tbot.adelete.rotext" xml:space="preserve">
+    <value>Bot bol odstránený</value>
+  </data>
+  <data name="RES_audit.message.tbot.aexecuted.rotext" xml:space="preserve">
+    <value>Bol spustený bot</value>
+  </data>
+  <data name="RES_audit.message.tbot.ainsert.rotext" xml:space="preserve">
+    <value>Bol vytvorený nový bot</value>
+  </data>
+  <data name="RES_audit.message.tbot.aselect.rotext" xml:space="preserve">
+    <value>Bol vybraný bot</value>
+  </data>
+  <data name="RES_audit.message.tbot.aupdate.rotext" xml:space="preserve">
+    <value>Bot bol upravený</value>
+  </data>
+  <data name="RES_audit.message.tbotrule.adelete.rotext" xml:space="preserve">
+    <value>Pravidlo bota bolo odstránené</value>
+  </data>
+  <data name="RES_audit.message.tbotrule.aexecuted.rotext" xml:space="preserve">
+    <value>Bolo vykonané pravidlo bota</value>
+  </data>
+  <data name="RES_audit.message.tbotrule.ainsert.rotext" xml:space="preserve">
+    <value>Bolo vytvorené pravidlo bota</value>
+  </data>
+  <data name="RES_audit.message.tbotrule.aselect.rotext" xml:space="preserve">
+    <value>Bolo vybrané pravidlo bota</value>
+  </data>
+  <data name="RES_audit.message.tbotrule.aupdate.rotext" xml:space="preserve">
+    <value>Pravidlo bota bolo upravené</value>
+  </data>
+  <data name="RES_audit.message.tbudget.aselect.rotext" xml:space="preserve">
+    <value>Konzultácie</value>
+  </data>
+  <data name="RES_audit.message.tbudget.aupdate.rotext" xml:space="preserve">
+    <value>Rozpočet bol aktualizovaný</value>
+  </data>
+  <data name="RES_audit.message.tbudgetrow.aupdate.rotext" xml:space="preserve">
+    <value>Jeden riadok rozpočtu bol aktualizovaný</value>
+  </data>
+  <data name="RES_audit.message.tcalendar.aselect.rotext" xml:space="preserve">
+    <value>Kalendár bol prekonzultovaný</value>
+  </data>
+  <data name="RES_audit.message.tcalendar.aupdate.rotext" xml:space="preserve">
+    <value>Rozvrh bol upravený</value>
+  </data>
+  <data name="RES_audit.message.tcalendarrow.aupdate.rotext" xml:space="preserve">
+    <value>Rozvrh používateľa $@EmployeeName@ dňa $@ShiftDate@ bol upravený s časom $@ShiftName@. Uzamknuté: $@IsLockedBeforeUpdate@ --&gt; $@NowLocked@. Sviatky: $@HasHolidaysBeforeUpdate@ --&gt; $@NowHolidays@</value>
+  </data>
+  <data name="RES_audit.message.tcamera.adelete.rotext" xml:space="preserve">
+    <value>Fotoaparát bol vymazaný</value>
+  </data>
+  <data name="RES_audit.message.tcamera.ainsert.rotext" xml:space="preserve">
+    <value>Bol vytvorený nový fotoaparát s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tcamera.aselect.rotext" xml:space="preserve">
+    <value>Konzultácia s fotoaparátom</value>
+  </data>
+  <data name="RES_audit.message.tcamera.aupdate.rotext" xml:space="preserve">
+    <value>Boli upravené nasledujúce údaje kamery:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tcaptcha.aexecuted.rotext" xml:space="preserve">
+    <value>Bol zadaný overovací kód</value>
+  </data>
+  <data name="RES_audit.message.tcause.adelete.rotext" xml:space="preserve">
+    <value>Odôvodnenie vypustené</value>
+  </data>
+  <data name="RES_audit.message.tcause.ainsert.rotext" xml:space="preserve">
+    <value>Bolo vytvorené nové odôvodnenie s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tcause.aselect.rotext" xml:space="preserve">
+    <value>Odôvodnenie bolo konzultované</value>
+  </data>
+  <data name="RES_audit.message.tcause.aupdate.rotext" xml:space="preserve">
+    <value>Nasledujúce údaje o odôvodnení boli upravené:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tcauselimitvalue.adelete.rotext" xml:space="preserve">
+    <value>Limit odôvodnenia bol zrušený</value>
+  </data>
+  <data name="RES_audit.message.tcauselimitvalue.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová hranica odôvodnenia s údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tcauselimitvalue.aselect.rotext" xml:space="preserve">
+    <value>Limit odôvodnenia bol konzultovaný</value>
+  </data>
+  <data name="RES_audit.message.tcauselimitvalue.aupdate.rotext" xml:space="preserve">
+    <value>Boli upravené nasledujúce údaje limitu odôvodnenia:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tchannel.aconnect.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannel.adelete.rotext" xml:space="preserve">
+    <value>Komunikačný kanál $@ChannelTitle@ bol odstránený</value>
+  </data>
+  <data name="RES_audit.message.tchannel.aexecuted.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannel.ainsert.rotext" xml:space="preserve">
+    <value>Bol vytvorený nový komunikačný kanál $@ChannelTitle@: $CRLF Prihlásený zamestnanec Ids: $@ChannelSubscribedEmployeesId@ $CRLF Prihlásené oddelenie Ids: $@ChannelSubscribedGroupsId@ $CRLF Prihlásený vedúci Ids: $@ChannelSubscribedSupervisorId@ $CRLF Prihlásený vedúci Ids: $@ChannelSubscribedSupervisorId@ $CRLF Prihlásené oddelenie Ids: $@ChannelSubscribedGroupsId@ $CRLF Prihlásený vedúci Ids: $@ChannelSubscribedSupervisorId@</value>
+  </data>
+  <data name="RES_audit.message.tchannel.amultiselect.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannel.aselect.rotext" xml:space="preserve">
+    <value>Komunikačný kanál $@ChannelTitle@ bol vyhľadaný</value>
+  </data>
+  <data name="RES_audit.message.tchannel.aupdate.rotext" xml:space="preserve">
+    <value>Komunikačný kanál bol upravený $@ChannelTitle@: $CRLF Status: $@ChannelStatus@ $CRLF Id prihlásených zamestnancov: $@ChannelSubscribedEmployeesId@ $CRLF Id prihlásených oddelení: $@ChannelSubscribedGroupsId@ $CRLF Id prihlásených vedúcich: $@ChannelSubscribedSupervisorId@ $CRLF Id prihlásených vedúcich: $@ChannelSubscribedSupervisorId@</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversation.aconnect.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannelconversation.adelete.rotext" xml:space="preserve">
+    <value>Konverzácia bola vymazaná</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversation.aexecuted.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannelconversation.ainsert.rotext" xml:space="preserve">
+    <value>Bol vytvorený nový $@ConversationType@. Odkaz $@ConversationReference@</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversation.amultiselect.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannelconversation.aselect.rotext" xml:space="preserve">
+    <value>$@ConversationType@ $@ConversationReference@ bol dotazovaný</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversation.aupdate.rotext" xml:space="preserve">
+    <value>Stav $@ConversationType@ $@ConversationReference@ bol zmenený na $@ConversationStatus@: $@ConversationStatus@</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversationcomplexity.aupdate.rotext" xml:space="preserve">
+    <value>Zmenila sa zložitosť sťažnosti: $@ConversationComplexity@</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversationmessage.aconnect.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannelconversationmessage.adelete.rotext" xml:space="preserve">
+    <value>Správa bola z konverzácie vymazaná.</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversationmessage.aexecuted.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannelconversationmessage.ainsert.rotext" xml:space="preserve">
+    <value>V kategórii $@ConversationType@ bola vytvorená nová správa s odkazom $@ConversationReference@</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversationmessage.amultiselect.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannelconversationmessage.aselect.rotext" xml:space="preserve">
+    <value>Správa bola prečítaná</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversationmessage.aupdate.rotext" xml:space="preserve">
+    <value>Správa bola upravená o tieto údaje:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tcompletetasks.aexecuted.rotext" xml:space="preserve">
+    <value>(Úloha $@iTask@) Boli dokončené nasledujúce projekty:&amp;quot;$@strProjects@&amp;quot; . Boli dokončené tieto úlohy: &amp;quot;$@strTaskNames@&amp;quot;.</value>
+  </data>
+  <data name="RES_audit.message.tconcept.adelete.rotext" xml:space="preserve">
+    <value>Zostatok bol vymazaný</value>
+  </data>
+  <data name="RES_audit.message.tconcept.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová bilancia s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tconcept.aselect.rotext" xml:space="preserve">
+    <value>Zostatok $@Name@ bol vyžiadaný</value>
+  </data>
+  <data name="RES_audit.message.tconcept.aupdate.rotext" xml:space="preserve">
+    <value>Nasledujúce údaje o zostatku boli upravené:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tconceptcomposition.adelete.rotext" xml:space="preserve">
+    <value>Zloženie zostatku bolo vypustené</value>
+  </data>
+  <data name="RES_audit.message.tconceptcomposition.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová zostava bilancie s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tconceptcomposition.aselect.rotext" xml:space="preserve">
+    <value>Zloženie bilancie bolo konzultované</value>
+  </data>
+  <data name="RES_audit.message.tconceptgroup.adelete.rotext" xml:space="preserve">
+    <value>Bilančná skupina bola vymazaná</value>
+  </data>
+  <data name="RES_audit.message.tconceptgroup.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová skupina zostatkov s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tconceptgroup.aselect.rotext" xml:space="preserve">
+    <value>Konzultácie so skupinou pre rovnováhu</value>
+  </data>
+  <data name="RES_audit.message.tconceptgroup.aupdate.rotext" xml:space="preserve">
+    <value>Boli upravené nasledujúce údaje bilančnej skupiny:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tconnection.aconnect.rotext" xml:space="preserve">
+    <value>Používateľ sa prihlásil.</value>
+  </data>
+  <data name="RES_audit.message.tconnection.aconnectfail.rotext" xml:space="preserve">
+    <value>Používateľovi $@Passport@ sa nepodarilo získať prístup k službe Visualtime.dôvod: $@ErrorText@</value>
+  </data>
+  <data name="RES_audit.message.tconnection.adisconnect.rotext" xml:space="preserve">
+    <value>Používateľ sa odhlásil.</value>
+  </data>
+  <data name="RES_audit.message.tcopyplanification.ainsert.rotext" xml:space="preserve">
+    <value>Bola naplánovaná kópia plánu (úloha $@iTask@) z users:$@SourceEmployeeName@ na users:$@DestinationEmployeeName@ medzi dátumami $@DateIni@ - $@DateEnd@. Možnosti kopírovania: hlavné rozvrhy:$@CopyMainShifts@ - alternatívne rozvrhy:$@AlternativeShifts@ - kopírovať sviatky:$@CopyHolidays@ - zachovať aktuálne sviatky:$@KeepBloquedDays@ - zachovať blokované dni:$@KeepHolidays@</value>
+  </data>
+  <data name="RES_audit.message.tcopyplanification.aselect.rotext" xml:space="preserve">
+    <value>Bola vytvorená kópia plánovacieho kalendára</value>
+  </data>
+  <data name="RES_audit.message.tcopyplanification.aupdate.rotext" xml:space="preserve">
+    <value>Kópia plánovania používateľa/ov ($@SourceEmployeeName@) medzi $@DateIni@ a $@DateEnd@ bola vytvorená pre používateľa/ov ($@DestinationEmployeeName@)</value>
+  </data>
+  <data name="RES_audit.message.tcopyplanificationadvanced.aexecuted.rotext" xml:space="preserve">
+    <value>Bol spustený s nasledujúcimi parametrami:$@ParametersValues@</value>
+  </data>
+  <data name="RES_audit.message.tcopyplanificationadvanced.ainsert.rotext" xml:space="preserve">
+    <value>Plánovacia kópia (úloha $@iTask@) bola naplánovaná z users:$@SourceEmployeeName@ na users:$@DestinationEmployeeName@ medzi dátumami $@DateIni@ - $@DateEnd@ na dátumy $@DestinationDateIni@ - $@DestinationDateEnd@. Možnosti kopírovania: hlavné rozvrhy:$@CopyMainShifts@ - alternatívne rozvrhy:$@AlternativeShifts@ - kopírovať sviatky:$@CopyHolidays@ - zachovať aktuálne sviatky:$@KeepBlockedDays@ - zachovať blokované dni:$@KeepHolidays@</value>
+  </data>
+  <data name="RES_audit.message.tcopyplanificationadvanced.aupdate.rotext" xml:space="preserve">
+    <value>Bola vytvorená kópia plánovania od používateľa/ov ($@SourceEmployeeName@) medzi $@DateIni@ a $@DateEnd@ na používateľa/ov ($@DestinationEmployeeName@) medzi $@DestinationDateIni@ a $@DestinationDateEnd@</value>
+  </data>
+  <data name="RES_audit.message.tcopyplanificationtoemployees.aupdate.rotext" xml:space="preserve">
+    <value>Plánovacia kópia bola vytvorená pre používateľa(-ov) ($@DestinationEmployeeName@) medzi $@DateIni@ a $@DateEnd@</value>
+  </data>
+  <data name="RES_audit.message.tdailybudgetposition.adelete.rotext" xml:space="preserve">
+    <value>Rozpočtová položka bola vypustená</value>
+  </data>
+  <data name="RES_audit.message.tdailybudgetposition.ainsert.rotext" xml:space="preserve">
+    <value>Do rozpočtu bola pridaná jedna pozícia</value>
+  </data>
+  <data name="RES_audit.message.tdailycause.ainsert.rotext" xml:space="preserve">
+    <value>Bolo vytvorené nové denné odôvodnenie$@CauseName@ s týmito údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tdailycause.aupdate.rotext" xml:space="preserve">
+    <value>Nasledujúce údaje denného odôvodnenia boli upravené:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tdailycoverage.adelete.rotext" xml:space="preserve">
+    <value>Pridelenie $@AssignmentName@ bolo odstránené.</value>
+  </data>
+  <data name="RES_audit.message.tdailycoverage.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová poštová obálka s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tdailycoverage.aupdate.rotext" xml:space="preserve">
+    <value>Boli upravené nasledujúce údaje úlohy:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tdailypunchesdetail.aselect.rotext" xml:space="preserve">
+    <value>Informácie z $@Info@ používateľa $@EmployeeName@ boli vyhľadané pre deň $@Date@</value>
+  </data>
+  <data name="RES_audit.message.tdatalink.aexecuted.rotext" xml:space="preserve">
+    <value>Export údajov (úloha $@iTask@) typu: &amp;quot;$@ExportName@&amp;quot; bol naplánovaný medzi dátumami: $@originDate@ a $@destinationDate@.</value>
+  </data>
+  <data name="RES_audit.message.tdatalink.aupdate.rotext" xml:space="preserve">
+    <value>Údaje prepojenia boli upravené:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkimportdailycoverage.aselect.rotext" xml:space="preserve">
+    <value>Bol vykonaný import denných krytí</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkimportemployees.aselect.rotext" xml:space="preserve">
+    <value>Bol vykonaný import používateľov vo formáte $@ImportEmployeesType@</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkimportgroups.aselect.rotext" xml:space="preserve">
+    <value>Bol vykonaný import skupín vo formáte $@ImportGroupsType@</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkimportprogrammedabsences.aexecuted.rotext" xml:space="preserve">
+    <value>Bol vykonaný import predĺžených neprítomností z textového súboru</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkimporttask.aexecuted.rotext" xml:space="preserve">
+    <value>Bol naplánovaný import údajov (úloha $@iTask@) typu: &amp;quot;$@ImportName@&amp;quot;</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkimporttask.aselect.rotext" xml:space="preserve">
+    <value>Bol vykonaný import úlohy</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkresult.aexecuted.rotext" xml:space="preserve">
+    <value>$@ImportResult@</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkws.aconnect.rotext" xml:space="preserve">
+    <value>Úspešné prihlásenie $@sUserName@</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkws.aconnectfail.rotext" xml:space="preserve">
+    <value>Chyba pri prihlasovaní od $@sUserName@ podľa: $@sReason@</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkws.aexecuted.rotext" xml:space="preserve">
+    <value>Webová služba: $@sImportType@. Vloženie/aktualizácia objektu: $@sObjectId@. Výsledok: $@sReason@</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkws.adelete.rotext" xml:space="preserve">
+    <value>Webová služba: $@sImportType@. Odstrániť objekt: $@sObjectId@. Výsledok: $@sReason@</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkws.aupdate.rotext" xml:space="preserve">
+    <value>Boli aktualizované prístupové údaje pre webové služby importu</value>
+  </data>
+  <data name="RES_audit.message.tdiningroom.adelete.rotext" xml:space="preserve">
+    <value>Z jedálne bola vymazaná zmena</value>
+  </data>
+  <data name="RES_audit.message.tdiningroom.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená zmena jedálne</value>
+  </data>
+  <data name="RES_audit.message.tdiningroom.aselect.rotext" xml:space="preserve">
+    <value>Bola konzultovaná zmena v jedálni</value>
+  </data>
+  <data name="RES_audit.message.tdiningroom.aupdate.rotext" xml:space="preserve">
+    <value>Jedna zmena v jedálni bola upravená</value>
+  </data>
+  <data name="RES_audit.message.tdocument.adelete.rotext" xml:space="preserve">
+    <value>Dokument bol vymazaný</value>
+  </data>
+  <data name="RES_audit.message.tdocument.aselect.rotext" xml:space="preserve">
+    <value>Bol konzultovaný dokument</value>
+  </data>
+  <data name="RES_audit.message.tdocument.aupdate.rotext" xml:space="preserve">
+    <value>Dokument bol aktualizovaný</value>
+  </data>
+  <data name="RES_audit.message.tdocumentabsence.adelete.rotext" xml:space="preserve">
+    <value>Dokument bol vymazaný</value>
+  </data>
+  <data name="RES_audit.message.tdocumentabsence.aselect.rotext" xml:space="preserve">
+    <value>Konzultácie</value>
+  </data>
+  <data name="RES_audit.message.tdocumentabsence.aupdate.rotext" xml:space="preserve">
+    <value>Aktualizácia</value>
+  </data>
+  <data name="RES_audit.message.tdownloadfile.aexecuted.rotext" xml:space="preserve">
+    <value>Súbor bol stiahnutý zo servera.</value>
+  </data>
+  <data name="RES_audit.message.temergencyreport.aexecuted.rotext" xml:space="preserve">
+    <value>Nasledujúce núdzové správy boli spustené anonymne:$CRLF '$@Name@' $CRLF '$@Name@' $CRLF '$@Name@' $CRLF '$@Name@' $CRLF '$@Name@'</value>
+  </data>
+  <data name="RES_audit.message.temployee.adelete.rotext" xml:space="preserve">
+    <value>Používateľ $@EmployeeName@ bol vymazaný.</value>
+  </data>
+  <data name="RES_audit.message.temployee.aexecuted.rotext" xml:space="preserve">
+    <value>Hromadné kopírovanie údajov (úloha $@iTask@) z používateľa:$@SourceEmployeeName@ do používateľa:$@DestinationEmployeeName@ bolo naplánované. Tabuľka polí:$@CopyUserFields@($@UserFieldsSelected@). Kopírovanie dohody:$@CopyLabAgree@. Kópia pracovných miest:$@CopyAssignments@($@Assignments@). Kopírovanie rozvrhu: $@CopySchedule@ medzi $@DateIni@ - $@DateEnd@. Možnosti kopírovania: hlavné rozvrhy:$@CopyMainShifts@ - alternatívne rozvrhy:$@AlternativeShifts@ - Kopírovanie sviatkov:$@CopyHolidays@ - Ponechať aktuálne sviatky:$@KeepBloquedDays@ - Ponechať blokované dni:$@KeepHolidays@. Copy of sites:$@@BusinessCenters@ - Ponechať blokované dni:$@KeepHolidays@</value>
+  </data>
+  <data name="RES_audit.message.temployee.ainsert.rotext" xml:space="preserve">
+    <value>Bol vytvorený nový používateľ s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.temployee.amultiselect.rotext" xml:space="preserve">
+    <value>Boli konzultovaní títo používatelia: $@EmployeeNames@.</value>
+  </data>
+  <data name="RES_audit.message.temployee.aselect.rotext" xml:space="preserve">
+    <value>Bol zadaný dotaz na používateľa $@EmployeeName@.</value>
+  </data>
+  <data name="RES_audit.message.temployee.aupdate.rotext" xml:space="preserve">
+    <value>Boli upravené nasledujúce údaje používateľa:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.temployeeassignment.adelete.rotext" xml:space="preserve">
+    <value>Príspevok $@AssignmentName@ bol vymazaný.</value>
+  </data>
+  <data name="RES_audit.message.temployeeassignment.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová položka s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.temployeeassignment.aupdate.rotext" xml:space="preserve">
+    <value>Boli upravené nasledujúce údaje úlohy:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.temployeecenters.adelete.rotext" xml:space="preserve">
+    <value>Používateľovi $@EmployeeName@ boli odobraté nákladové strediská $@Centers@</value>
+  </data>
+  <data name="RES_audit.message.temployeecenters.aexecuted.rotext" xml:space="preserve">
+    <value>Používateľovi $@EmployeeName@ boli pridelené nákladové strediská $@Centers@</value>
+  </data>
+  <data name="RES_audit.message.temployeecenters.ainsert.rotext" xml:space="preserve">
+    <value>Nákladové strediská $@@Centers@ boli pridané k užívateľovi $@EmployeeName@</value>
+  </data>
+  <data name="RES_audit.message.temployeecontract.adelete.rotext" xml:space="preserve">
+    <value>Zmluva $@IDContract@ používateľa $@EmployeeName@ bola vymazaná.</value>
+  </data>
+  <data name="RES_audit.message.temployeecontract.ainsert.rotext" xml:space="preserve">
+    <value>Pre používateľa $@EmployeeName@ bola vytvorená nová zmluva s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.temployeecontract.amultiselect.rotext" xml:space="preserve">
+    <value>Boli vyhľadané nasledujúce zmluvy používateľa $@EmployeeName@:$CRLF $@IDContracts@</value>
+  </data>
+  <data name="RES_audit.message.temployeecontract.aselect.rotext" xml:space="preserve">
+    <value>Bola vyhľadaná zmluva $@IDContract@ používateľa $@EmployeeName@</value>
+  </data>
+  <data name="RES_audit.message.temployeecontract.aupdate.rotext" xml:space="preserve">
+    <value>Nasledujúce údaje zmluvy používateľa $@EmployeeName@:$CRLF $@FieldsValues@ boli upravené</value>
+  </data>
+  <data name="RES_audit.message.temployeegroup.ainsert.rotext" xml:space="preserve">
+    <value>Mobilita bola vložená pre používateľa $@EmployeeName@:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.temployeegroup.aupdate.rotext" xml:space="preserve">
+    <value>Mobilita bola aktualizovaná pre používateľa $@EmployeeName@:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.temployeeonterminal.ainsert.rotext" xml:space="preserve">
+    <value>Na termináli bol vytvorený nový používateľ (nemal by byť)</value>
+  </data>
+  <data name="RES_audit.message.tentry.adelete.rotext" xml:space="preserve">
+    <value>Podpisovanie bolo odstránené</value>
+  </data>
+  <data name="RES_audit.message.tentry.ainsert.rotext" xml:space="preserve">
+    <value>Bol vytvorený nový súbor s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tentry.aupdate.rotext" xml:space="preserve">
+    <value>V rezervácii boli upravené tieto údaje:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.teventscheduler.adelete.rotext" xml:space="preserve">
+    <value>Odstránené</value>
+  </data>
+  <data name="RES_audit.message.teventscheduler.ainsert.rotext" xml:space="preserve">
+    <value>Vysoká</value>
+  </data>
+  <data name="RES_audit.message.teventscheduler.aselect.rotext" xml:space="preserve">
+    <value>Konzultácie</value>
+  </data>
+  <data name="RES_audit.message.teventscheduler.aupdate.rotext" xml:space="preserve">
+    <value>Aktualizácia</value>
+  </data>
+  <data name="RES_audit.message.tgenius.aconnect.rotext" xml:space="preserve">
+    <value>Konzultovali sa údaje z pohľadu génia</value>
+  </data>
+  <data name="RES_audit.message.tgenius.adelete.rotext" xml:space="preserve">
+    <value>Zobrazenie génia bolo odstránené</value>
+  </data>
+  <data name="RES_audit.message.tgenius.aexecuted.rotext" xml:space="preserve">
+    <value>Zobrazenie génia bolo spustené</value>
+  </data>
+  <data name="RES_audit.message.tgenius.ainsert.rotext" xml:space="preserve">
+    <value>Bol vytvorený nový pohľad génia</value>
+  </data>
+  <data name="RES_audit.message.tgenius.aselect.rotext" xml:space="preserve">
+    <value>Konzultoval sa názor génia</value>
+  </data>
+  <data name="RES_audit.message.tgenius.aupdate.rotext" xml:space="preserve">
+    <value>Parametre zobrazenia génia boli upravené</value>
+  </data>
+  <data name="RES_audit.message.tgeniusscheduler.adelete.rotext" xml:space="preserve">
+    <value>Plánovanie štúdie bolo odstránené: $@ReportSchedulerName@</value>
+  </data>
+  <data name="RES_audit.message.tgeniusscheduler.ainsert.rotext" xml:space="preserve">
+    <value>Bol vytvorený nový študijný plán s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tgeniusscheduler.amultiselect.rotext" xml:space="preserve">
+    <value>Boli konzultované tieto študijné plány: $@GeniusSchedulerNames@.</value>
+  </data>
+  <data name="RES_audit.message.tgeniusscheduler.aselect.rotext" xml:space="preserve">
+    <value>Plánovanie štúdie bolo konzultované: $@GeniusSchedulerName@.</value>
+  </data>
+  <data name="RES_audit.message.tgeniusscheduler.aupdate.rotext" xml:space="preserve">
+    <value>Nasledujúce údaje o plánovaní štúdie boli upravené:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tgroup.adelete.rotext" xml:space="preserve">
+    <value>Skupina $@GroupName@ bola odstránená.</value>
+  </data>
+  <data name="RES_audit.message.tgroup.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová skupina s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tgroup.amultiselect.rotext" xml:space="preserve">
+    <value>Boli konzultované tieto skupiny: $@GroupNames@.</value>
+  </data>
+  <data name="RES_audit.message.tgroup.aselect.rotext" xml:space="preserve">
+    <value>Bola vyhľadaná skupina $@GroupName@.</value>
+  </data>
+  <data name="RES_audit.message.tgroup.aupdate.rotext" xml:space="preserve">
+    <value>Boli upravené nasledujúce údaje skupiny:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tgroupfeature.adelete.rotext" xml:space="preserve">
+    <value>Funkcia bola odstránená</value>
+  </data>
+  <data name="RES_audit.message.tgroupfeature.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená funkcia</value>
+  </data>
+  <data name="RES_audit.message.tgroupfeature.aselect.rotext" xml:space="preserve">
+    <value>Bola dotazovaná funkcia</value>
+  </data>
+  <data name="RES_audit.message.tgroupfeature.aupdate.rotext" xml:space="preserve">
+    <value>Bola aktualizovaná funkcia</value>
+  </data>
+  <data name="RES_audit.message.tgroupfeaturepermissionoverfeature.aexecuted.rotext" xml:space="preserve">
+    <value>Oprávnenie $@sFeature@ bolo nastavené na úrovni: $@sPermission@</value>
+  </data>
+  <data name="RES_audit.message.tgroupfeaturepermissionoverfeature.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená funkcia</value>
+  </data>
+  <data name="RES_audit.message.tgroupuserfield.ainsert.rotext" xml:space="preserve">
+    <value>Bolo vytvorené nové používateľské pole</value>
+  </data>
+  <data name="RES_audit.message.tindicator.adelete.rotext" xml:space="preserve">
+    <value>Indikátor $@IndicatorName@ bol odstránený.</value>
+  </data>
+  <data name="RES_audit.message.tindicator.ainsert.rotext" xml:space="preserve">
+    <value>Bol vytvorený nový indikátor s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tindicator.aselect.rotext" xml:space="preserve">
+    <value>Konzultácie</value>
+  </data>
+  <data name="RES_audit.message.tindicator.aupdate.rotext" xml:space="preserve">
+    <value>Nasledujúce údaje indikátora boli zmenené:$CRLF $@FieldsValues@ bol zmenený</value>
+  </data>
+  <data name="RES_audit.message.tjustifiedincidences.aupdate.rotext" xml:space="preserve">
+    <value>Bolo vykonané rozsiahle zdôvodnenie problému medzi $@DateIni@ a $@DateEnd@.</value>
+  </data>
+  <data name="RES_audit.message.tlabagree.adelete.rotext" xml:space="preserve">
+    <value>Dohoda bola vymazaná</value>
+  </data>
+  <data name="RES_audit.message.tlabagree.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová skupina dohôd s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tlabagree.aselect.rotext" xml:space="preserve">
+    <value>Dohoda bola konzultovaná</value>
+  </data>
+  <data name="RES_audit.message.tlabagree.aupdate.rotext" xml:space="preserve">
+    <value>Boli upravené nasledujúce konvenčné údaje:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tlabagreeaccrualrule.adelete.rotext" xml:space="preserve">
+    <value>Pravidlo dohovoru bolo vypustené</value>
+  </data>
+  <data name="RES_audit.message.tlabagreeaccrualrule.ainsert.rotext" xml:space="preserve">
+    <value>Bolo vytvorené nové pravidlo konvencie s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tlabagreeaccrualrule.aselect.rotext" xml:space="preserve">
+    <value>Bola konzultovaná rovnováha pravidiel dohovoru</value>
+  </data>
+  <data name="RES_audit.message.tlabagreerule.adelete.rotext" xml:space="preserve">
+    <value>Pravidlo dohovoru bolo vypustené</value>
+  </data>
+  <data name="RES_audit.message.tlabagreerule.ainsert.rotext" xml:space="preserve">
+    <value>Bolo vytvorené nové pravidlo konvencie s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tlabagreerule.aselect.rotext" xml:space="preserve">
+    <value>Pravidlo dohovoru bolo konzultované</value>
+  </data>
+  <data name="RES_audit.message.tlabagreerule.aupdate.rotext" xml:space="preserve">
+    <value>Nasledujúce údaje pravidla konvencie boli upravené:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tlivetask.aexecuted.rotext" xml:space="preserve">
+    <value>Vykonávanie úlohy $@LiveTaskParameters@ (Konfigurácia: $@LiveTaskConfiguration@) je ukončené</value>
+  </data>
+  <data name="RES_audit.message.tlivetask.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená úloha na pozadí</value>
+  </data>
+  <data name="RES_audit.message.tlockdate.aexecuted.rotext" xml:space="preserve">
+    <value>Priradenie dátumu hromadného uzamknutia (úloha $@iTask@) bolo naplánované pre používateľov:$@DestinationEmployeeName@. S týmito možnosťami: Apply global date (Použiť globálny dátum): $@ApplyLockDateGlobal@ (Použiť globálny dátum uzamknutia), Date applied (Použitý dátum): $@LockDate@ (Dátum uzamknutia), Date applied (Použitý dátum): $@LockDate@ (Dátum uzamknutia)</value>
+  </data>
+  <data name="RES_audit.message.tlockdate.aselect.rotext" xml:space="preserve">
+    <value>Bol zistený dátum uzávierky používateľa</value>
+  </data>
+  <data name="RES_audit.message.tlockdate.aupdate.rotext" xml:space="preserve">
+    <value>Aktualizácia</value>
+  </data>
+  <data name="RES_audit.message.tlogbook.aselect.rotext" xml:space="preserve">
+    <value>Prehľadal sa denník sťažností $@ComplaintRef@</value>
+  </data>
+  <data name="RES_audit.message.tmassmarkconsents.ainsert.rotext" xml:space="preserve">
+    <value>Bolo vykonané hromadné zadanie súhlasov ($@ListEmployeeName@), typ: $@ConsentType@, platné: $@IsDelivered@, dátum schválenia: $@ApprovalDate@</value>
+  </data>
+  <data name="RES_audit.message.tmassmobilityemployees.anone.rotext" xml:space="preserve">
+    <value>Pokus o hromadnú mobilitu do skupiny $@Group@ sa nepodaril používateľom $@Employees@.</value>
+  </data>
+  <data name="RES_audit.message.tmassmobilityemployees.aupdate.rotext" xml:space="preserve">
+    <value>Uskutočnila sa hromadná mobilita používateľov $@Employees@ do skupiny $@Group@.</value>
+  </data>
+  <data name="RES_audit.message.tmessageemployees.aexecuted.rotext" xml:space="preserve">
+    <value>Nasledujúca správa (úloha $@iTask@) bola odoslaná: &amp;quot;$@message@&amp;quot; používateľom: $@DestinationEmployeeName@</value>
+  </data>
+  <data name="RES_audit.message.tmove.adelete.rotext" xml:space="preserve">
+    <value>Položka $@MoveName@ bola vymazaná.</value>
+  </data>
+  <data name="RES_audit.message.tmove.ainsert.rotext" xml:space="preserve">
+    <value>Pre deň $@Date@ bol vytvorený nový úder typu $@PunchType@ v čase $@Time@$@CauseName@. Detail pre podporu:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tmove.aselect.rotext" xml:space="preserve">
+    <value>Konzultovalo sa podpísanie</value>
+  </data>
+  <data name="RES_audit.message.tmove.aupdate.rotext" xml:space="preserve">
+    <value>Bola vykonaná zmena úderu z $@PunchType@ pre $@Date@ na $@Time@$@CauseName@. Detail pre podporu:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tnotification.adelete.rotext" xml:space="preserve">
+    <value>Oznámenie $@NotificationName@ bolo odstránené.</value>
+  </data>
+  <data name="RES_audit.message.tnotification.aexecuted.rotext" xml:space="preserve">
+    <value>Bolo vykonané oznámenie</value>
+  </data>
+  <data name="RES_audit.message.tnotification.ainsert.rotext" xml:space="preserve">
+    <value>Bolo vytvorené oznámenie s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tnotification.amultiselect.rotext" xml:space="preserve">
+    <value>Boli vyhľadané tieto polia: $@NotificationNames@.</value>
+  </data>
+  <data name="RES_audit.message.tnotification.aselect.rotext" xml:space="preserve">
+    <value>Oznámenie bolo konzultované</value>
+  </data>
+  <data name="RES_audit.message.tnotification.aupdate.rotext" xml:space="preserve">
+    <value>Nasledujúce údaje oznámenia boli upravené:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tparameters.aupdate.rotext" xml:space="preserve">
+    <value>Parametre boli upravené</value>
+  </data>
+  <data name="RES_audit.message.tpassport.ablock.rotext" xml:space="preserve">
+    <value>Nasledujúcim používateľom boli zablokované účty:$CRLF $@EmployeesNames@</value>
+  </data>
+  <data name="RES_audit.message.tpassport.adelete.rotext" xml:space="preserve">
+    <value>Používateľ bol odstránený</value>
+  </data>
+  <data name="RES_audit.message.tpassport.aexecuted.rotext" xml:space="preserve">
+    <value>Boli aktualizované nastavenia aplikácie týchto používateľov:$CRLF $@EmployeesNames@</value>
+  </data>
+  <data name="RES_audit.message.tpassport.ainsert.rotext" xml:space="preserve">
+    <value>Bol vytvorený nový používateľ</value>
+  </data>
+  <data name="RES_audit.message.tpassport.aunblock.rotext" xml:space="preserve">
+    <value>Účty týchto používateľov boli odblokované:$CRLF $@EmployeesNames@</value>
+  </data>
+  <data name="RES_audit.message.tpassport.aupdate.rotext" xml:space="preserve">
+    <value>Údaje používateľa boli upravené</value>
+  </data>
+  <data name="RES_audit.message.tpassportconsent.ainsert.rotext" xml:space="preserve">
+    <value>Bol vytvorený nový súhlas</value>
+  </data>
+  <data name="RES_audit.message.tpassportconsent.aupdate.rotext" xml:space="preserve">
+    <value>Súhlas bol aktualizovaný</value>
+  </data>
+  <data name="RES_audit.message.tpassportpassword.aupdate.rotext" xml:space="preserve">
+    <value>Heslo nasledujúcich používateľov bolo obnovené:$CRLF $@EmployeesNames@</value>
+  </data>
+  <data name="RES_audit.message.tpassportpermissionsoveremployees.aupdate.rotext" xml:space="preserve">
+    <value>Oprávnenia používateľov používateľa alebo skupiny používateľov $@PassportName@ boli zmenené</value>
+  </data>
+  <data name="RES_audit.message.tpassportpermissionsoverfeatures.aexecuted.rotext" xml:space="preserve">
+    <value>Oprávnenia uzlov boli aktualizované.</value>
+  </data>
+  <data name="RES_audit.message.tpassportpermissionsoverfeatures.aupdate.rotext" xml:space="preserve">
+    <value>Oprávnenia na funkcie používateľa alebo skupiny používateľov $@PassportName@ boli zmenené</value>
+  </data>
+  <data name="RES_audit.message.tpassportpermissionsovergroups.aupdate.rotext" xml:space="preserve">
+    <value>Oprávnenia na skupiny používateľa alebo skupiny používateľov $@PassportName@ boli zmenené</value>
+  </data>
+  <data name="RES_audit.message.tproductivdata.aselect.rotext" xml:space="preserve">
+    <value>Údaje o úlohách za obdobie od $@DateIni@ do $@DateEnd@ boli vyhľadané pre týchto používateľov:$CRLF $@EmployeeNames@</value>
+  </data>
+  <data name="RES_audit.message.tproductiveunit.aselect.rotext" xml:space="preserve">
+    <value>Konzultácie</value>
+  </data>
+  <data name="RES_audit.message.tproductiveunit.aupdate.rotext" xml:space="preserve">
+    <value>Aktualizácia</value>
+  </data>
+  <data name="RES_audit.message.tproductiveunitmode.adelete.rotext" xml:space="preserve">
+    <value>Režim výrobnej jednotky bol vymazaný</value>
+  </data>
+  <data name="RES_audit.message.tproductiveunitmode.ainsert.rotext" xml:space="preserve">
+    <value>Bol vytvorený nový spôsob výroby</value>
+  </data>
+  <data name="RES_audit.message.tproductiveunitmode.aupdate.rotext" xml:space="preserve">
+    <value>Aktualizácia</value>
+  </data>
+  <data name="RES_audit.message.tproductiveunitmodeposition.adelete.rotext" xml:space="preserve">
+    <value>Pozícia bola zrušená</value>
+  </data>
+  <data name="RES_audit.message.tproductiveunitmodeposition.aupdate.rotext" xml:space="preserve">
+    <value>Aktualizácia</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedabsence.adelete.rotext" xml:space="preserve">
+    <value>Predpokladané dni neprítomnosti boli vymazané</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedabsence.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová predpoveď dní neprítomnosti s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedabsence.aselect.rotext" xml:space="preserve">
+    <value>Konzultovala sa predpoveď počtu dní neprítomnosti</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedabsence.aupdate.rotext" xml:space="preserve">
+    <value>Nasledujúce údaje pre predpokladané dni neprítomnosti boli upravené:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedcause.adelete.rotext" xml:space="preserve">
+    <value>Predpoveď počtu hodín neprítomnosti bola odstránená</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedcause.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová predpoveď hodín neprítomnosti s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedcause.aselect.rotext" xml:space="preserve">
+    <value>Konzultovala sa predpoveď počtu hodín neprítomnosti</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedcause.aupdate.rotext" xml:space="preserve">
+    <value>Nasledujúce údaje pre prognózu hodín neprítomnosti boli upravené:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedholiday.adelete.rotext" xml:space="preserve">
+    <value>Ustanovenie o hodinovej dovolenke/odpočinku bolo zrušené</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedholiday.ainsert.rotext" xml:space="preserve">
+    <value>Bol vytvorený hodinový rozvrh dovoleniek/odchodov</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedholiday.aupdate.rotext" xml:space="preserve">
+    <value>Bol aktualizovaný hodinový rozvrh dovoleniek/odchodov</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedovertime.adelete.rotext" xml:space="preserve">
+    <value>Predpoveď nadbytočných hodín bola odstránená</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedovertime.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová prognóza nadbytočných hodín</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedovertime.aupdate.rotext" xml:space="preserve">
+    <value>Bola aktualizovaná predpoveď nadbytočných hodín</value>
+  </data>
+  <data name="RES_audit.message.tprojecttemplate.adelete.rotext" xml:space="preserve">
+    <value>Odstránené</value>
+  </data>
+  <data name="RES_audit.message.tprojecttemplate.ainsert.rotext" xml:space="preserve">
+    <value>Vysoká</value>
+  </data>
+  <data name="RES_audit.message.tprojecttemplate.aselect.rotext" xml:space="preserve">
+    <value>Konzultácie</value>
+  </data>
+  <data name="RES_audit.message.tprojecttemplate.aupdate.rotext" xml:space="preserve">
+    <value>Aktualizácia</value>
+  </data>
+  <data name="RES_audit.message.tpunchimage.aselect.rotext" xml:space="preserve">
+    <value>Používateľ si prezrel mugshot($@IdPunch@) používateľa $@EmployeeName@</value>
+  </data>
+  <data name="RES_audit.message.tremark.ainsert.rotext" xml:space="preserve">
+    <value>Poznámka bola vložená do hodín dňa $@Date@ pre používateľa $@EmployeeName@</value>
+  </data>
+  <data name="RES_audit.message.tremark.aupdate.rotext" xml:space="preserve">
+    <value>Poznámky o hodinách dňa $@Date@ boli aktualizované pre používateľa $@EmployeeName@</value>
+  </data>
+  <data name="RES_audit.message.treport.aexecuted.rotext" xml:space="preserve">
+    <value>Bola vykonaná správa</value>
+  </data>
+  <data name="RES_audit.message.treportprofile.aselect.rotext" xml:space="preserve">
+    <value>Bol prekonzultovaný profil správy</value>
+  </data>
+  <data name="RES_audit.message.treportscheduler.adelete.rotext" xml:space="preserve">
+    <value>Programovanie $@ReportSchedulerName@ bolo odstránené.</value>
+  </data>
+  <data name="RES_audit.message.treportscheduler.aexecuted.rotext" xml:space="preserve">
+    <value>Plánovanie správy bolo vykonané</value>
+  </data>
+  <data name="RES_audit.message.treportscheduler.ainsert.rotext" xml:space="preserve">
+    <value>Bolo vytvorené nové plánovanie s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.treportscheduler.amultiselect.rotext" xml:space="preserve">
+    <value>Boli vyhľadané tieto polia: $@ReportSchedulerNames@.</value>
+  </data>
+  <data name="RES_audit.message.treportscheduler.aselect.rotext" xml:space="preserve">
+    <value>Plánovanie $@ReportSchedulerName@ bolo konzultované.</value>
+  </data>
+  <data name="RES_audit.message.treportscheduler.aupdate.rotext" xml:space="preserve">
+    <value>Nasledujúce plánovacie údaje boli upravené:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.trequest.adelete.rotext" xml:space="preserve">
+    <value>Bola odstránená požiadavka s nasledujúcimi údajmi::$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.trequest.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená požiadavka s nasledujúcimi údajmi::$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.trequest.amultiselect.rotext" xml:space="preserve">
+    <value>Konzultovalo sa niekoľko aplikácií</value>
+  </data>
+  <data name="RES_audit.message.trequest.aselect.rotext" xml:space="preserve">
+    <value>Bola zadaná požiadavka s nasledujúcimi údajmi::$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.trequest.aupdate.rotext" xml:space="preserve">
+    <value>$@Status@ - Požiadavka bola aktualizovaná nasledujúcimi údajmi::$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.trequestapproval.ainsert.rotext" xml:space="preserve">
+    <value>$@Status@ - Používateľ: $@EmployeeName@ - Typ požiadavky: '$@RequestTypeName@' ($@Comments@)</value>
+  </data>
+  <data name="RES_audit.message.trequestapproval.aselect.rotext" xml:space="preserve">
+    <value>$@Status@ - Používateľ: $@EmployeeName@ - Typ požiadavky: '$@RequestTypeName@' ($@Comments@)</value>
+  </data>
+  <data name="RES_audit.message.trequestapproval.aupdate.rotext" xml:space="preserve">
+    <value>$@Status@ - Používateľ: $@EmployeeName@ - Typ požiadavky: '$@RequestTypeName@' ($@Comments@)</value>
+  </data>
+  <data name="RES_audit.message.trequestrule.aupdate.rotext" xml:space="preserve">
+    <value>Aktualizácia</value>
+  </data>
+  <data name="RES_audit.message.tsaasservice.aexecuted.rotext" xml:space="preserve">
+    <value>Vykonávanie</value>
+  </data>
+  <data name="RES_audit.message.tschedulerdaily.aselect.rotext" xml:space="preserve">
+    <value>V období od $@DateStart@ do $@DateEnd@ boli vyhľadaní nasledujúci používatelia: $CRLF $@EmployeesNames@</value>
+  </data>
+  <data name="RES_audit.message.tschedulerholidays.ainsert.rotext" xml:space="preserve">
+    <value>Pre skupinu používateľov $@Group@ bol naplánovaný plán dovoleniek (úloha $@iTask@) na rok $@Year@ s použitím šablóny $@Template@ a rozvrhu $@Shift@. Možnosti kopírovania: Ponechať aktuálne dovolenky:$@KeepBloquedDays@ - Ponechať blokované dni:$@KeepHolidays@ - Ponechať blokované dni:$@KeepHolidays@ - Ponechať blokované dni:$@KeepHolidays@ - Ponechať blokované dni:$@KeepHolidays@ - Ponechať blokované dni:$@KeepHolidays@ - Ponechať blokované dni:$@KeepHolidays@ - Ponechať blokované dni:$@KeepHolidays@</value>
+  </data>
+  <data name="RES_audit.message.tschedulerholidays.aupdate.rotext" xml:space="preserve">
+    <value>Plánovanie dovolenky skupiny používateľov $@Group@ na rok $@Year@ bolo upravené pomocou šablóny $@Template@ a rozvrhu $@Shift@</value>
+  </data>
+  <data name="RES_audit.message.tschedulerplanification.aselect.rotext" xml:space="preserve">
+    <value>V období od $@DateStart@ do $@DateEnd@ boli vyhľadaní nasledujúci používatelia: $CRLF $@EmployeesNames@</value>
+  </data>
+  <data name="RES_audit.message.tschedulerplanification.aupdate.rotext" xml:space="preserve">
+    <value>Rozvrh používateľa $@EmployeeName@ dňa $@ShiftDate@ bol upravený s časom $@ShiftName@ a pozíciou $@AssignmentName@</value>
+  </data>
+  <data name="RES_audit.message.tschedulertemplate.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová šablóna štátneho sviatku s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tschedulertemplate.aselect.rotext" xml:space="preserve">
+    <value>Bola konzultovaná šablóna štátneho sviatku</value>
+  </data>
+  <data name="RES_audit.message.tschedulertemplate.aupdate.rotext" xml:space="preserve">
+    <value>V šablóne dovolenky boli upravené tieto údaje:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tschedulerweekly.ainsert.rotext" xml:space="preserve">
+    <value>Plánovanie (úloha $@iTask@) používateľov $@EmployeeNames@ bolo naplánované medzi dátumami $@DateIni@ a $@DateEnd@, s použitím rozvrhov $@Shifts@ od dilluns do diumenge respectivament.Opciones de copia: Mantener vacaciones actuales:$@KeepBloquedDays@ - Mantener días bloqueados:$@KeepHolidays@ - Mantener días bloqueados:$@KeepHolidays@</value>
+  </data>
+  <data name="RES_audit.message.tschedulerweekly.aupdate.rotext" xml:space="preserve">
+    <value>Plánovanie používateľov $@EmployeeNames@ medzi $@DateIni@ a $@DateEnd@ bolo upravené pomocou $@Shifts@ od pondelka do nedele</value>
+  </data>
+  <data name="RES_audit.message.tsecuritynode.ainsert.rotext" xml:space="preserve">
+    <value>Bol vytvorený uzol</value>
+  </data>
+  <data name="RES_audit.message.tsecuritynode.aselect.rotext" xml:space="preserve">
+    <value>Uzol bol konzultovaný</value>
+  </data>
+  <data name="RES_audit.message.tsecuritynode.aupdate.rotext" xml:space="preserve">
+    <value>Jeden uzol bol aktualizovaný</value>
+  </data>
+  <data name="RES_audit.message.tsecuritynodegroup.ainsert.rotext" xml:space="preserve">
+    <value>Skupina bola priradená</value>
+  </data>
+  <data name="RES_audit.message.tsecuritynodepassport.ainsert.rotext" xml:space="preserve">
+    <value>Bol pridelený nadriadený</value>
+  </data>
+  <data name="RES_audit.message.tsecurityoptions.adelete.rotext" xml:space="preserve">
+    <value>Možnosti zabezpečenia boli odstránené</value>
+  </data>
+  <data name="RES_audit.message.tsecurityoptions.ainsert.rotext" xml:space="preserve">
+    <value>Boli vytvorené nové možnosti zabezpečenia s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tsecurityoptions.aselect.rotext" xml:space="preserve">
+    <value>Konzultovali sa možnosti zabezpečenia</value>
+  </data>
+  <data name="RES_audit.message.tsecurityoptions.aupdate.rotext" xml:space="preserve">
+    <value>V nastaveniach zabezpečenia boli upravené tieto údaje:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshift.adelete.rotext" xml:space="preserve">
+    <value>Rozvrh $@ShiftName@ bol vymazaný</value>
+  </data>
+  <data name="RES_audit.message.tshift.ainsert.rotext" xml:space="preserve">
+    <value>Bol vytvorený nový rozvrh s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshift.amultiselect.rotext" xml:space="preserve">
+    <value>Konzultované boli tieto cestovné poriadky:$CRLF $@ShiftNames@</value>
+  </data>
+  <data name="RES_audit.message.tshift.aselect.rotext" xml:space="preserve">
+    <value>Bol vyhľadaný plán $@ShiftName@</value>
+  </data>
+  <data name="RES_audit.message.tshift.aupdate.rotext" xml:space="preserve">
+    <value>Boli upravené tieto údaje rozvrhu:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshiftassignment.adelete.rotext" xml:space="preserve">
+    <value>Príspevok $@AssignmentName@ bol vymazaný.</value>
+  </data>
+  <data name="RES_audit.message.tshiftassignment.ainsert.rotext" xml:space="preserve">
+    <value>Bolo vytvorené nové zadanie úlohy s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshiftassignment.aupdate.rotext" xml:space="preserve">
+    <value>Boli upravené nasledujúce údaje úlohy:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshiftgroup.adelete.rotext" xml:space="preserve">
+    <value>Časová skupina bola vymazaná</value>
+  </data>
+  <data name="RES_audit.message.tshiftgroup.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová časová skupina s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshiftgroup.aselect.rotext" xml:space="preserve">
+    <value>Konzultácie s časovou skupinou</value>
+  </data>
+  <data name="RES_audit.message.tshiftgroup.aupdate.rotext" xml:space="preserve">
+    <value>Nasledujúce údaje skupiny rozvrhov boli upravené:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshiftlayer.adelete.rotext" xml:space="preserve">
+    <value>Vrstva $@ShiftLayerType@ bola vymazaná z plánu $@ShiftName@</value>
+  </data>
+  <data name="RES_audit.message.tshiftlayer.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová vrstva pre rozvrh $@ShiftName@ s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshiftlayer.amultiselect.rotext" xml:space="preserve">
+    <value>Boli vyhľadané nasledujúce vrstvy rozvrhu $@ShiftName@:$CRLF $@ShiftLayerTypes@</value>
+  </data>
+  <data name="RES_audit.message.tshiftlayer.aselect.rotext" xml:space="preserve">
+    <value>Bola vyhľadaná vrstva $@ShiftLayerType@ plánu $@ShiftName@</value>
+  </data>
+  <data name="RES_audit.message.tshiftlayer.aupdate.rotext" xml:space="preserve">
+    <value>Nasledujúce údaje vo vrstve $@ShiftLayerType@ plánu $@ShiftName@:$CRLF $@FieldsValues@ boli upravené</value>
+  </data>
+  <data name="RES_audit.message.tshiftrule.adelete.rotext" xml:space="preserve">
+    <value>Pravidlo rozvrhu bolo zrušené</value>
+  </data>
+  <data name="RES_audit.message.tshiftrule.aupdate.rotext" xml:space="preserve">
+    <value>Nasledujúce údaje rozvrhového pravidla boli upravené:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshifttimezone.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová časová zóna s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tssoconfig.adelete.rotext" xml:space="preserve">
+    <value>Integrovaná konfigurácia prihlásenia bola odstránená</value>
+  </data>
+  <data name="RES_audit.message.tssoconfig.ainsert.rotext" xml:space="preserve">
+    <value>Konfigurácia integrovaného prihlásenia bola uložená</value>
+  </data>
+  <data name="RES_audit.message.tssoconfig.aselect.rotext" xml:space="preserve">
+    <value>Konfigurácia integrovaného prihlásenia bola skontrolovaná</value>
+  </data>
+  <data name="RES_audit.message.tssoconfig.aupdate.rotext" xml:space="preserve">
+    <value>Integrované nastavenia prihlásenia boli aktualizované</value>
+  </data>
+  <data name="RES_audit.message.tstartupvalues.adelete.rotext" xml:space="preserve">
+    <value>Počiatočná hodnota bola vymazaná</value>
+  </data>
+  <data name="RES_audit.message.tstartupvalues.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová počiatočná hodnota s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tstartupvalues.aselect.rotext" xml:space="preserve">
+    <value>Počiatočná hodnota bola skontrolovaná</value>
+  </data>
+  <data name="RES_audit.message.tstartupvalues.aupdate.rotext" xml:space="preserve">
+    <value>Nasledujúce údaje boli upravené z pôvodných hodnôt:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tsupervisedemployeedata.aselect.rotext" xml:space="preserve">
+    <value>Používateľ $@EmployeesName@ bol dotazovaný.</value>
+  </data>
+  <data name="RES_audit.message.ttask.adelete.rotext" xml:space="preserve">
+    <value>Odstránené</value>
+  </data>
+  <data name="RES_audit.message.ttask.ainsert.rotext" xml:space="preserve">
+    <value>Vysoká</value>
+  </data>
+  <data name="RES_audit.message.ttask.aselect.rotext" xml:space="preserve">
+    <value>Konzultácie</value>
+  </data>
+  <data name="RES_audit.message.ttask.aupdate.rotext" xml:space="preserve">
+    <value>Aktualizácia</value>
+  </data>
+  <data name="RES_audit.message.ttaskfielddefinition.aupdate.rotext" xml:space="preserve">
+    <value>Aktualizácia</value>
+  </data>
+  <data name="RES_audit.message.ttasktemplate.adelete.rotext" xml:space="preserve">
+    <value>Odstránené</value>
+  </data>
+  <data name="RES_audit.message.ttasktemplate.ainsert.rotext" xml:space="preserve">
+    <value>Vysoká</value>
+  </data>
+  <data name="RES_audit.message.ttasktemplate.aupdate.rotext" xml:space="preserve">
+    <value>Aktualizácia</value>
+  </data>
+  <data name="RES_audit.message.tterminal.adelete.rotext" xml:space="preserve">
+    <value>Terminál bol vymazaný</value>
+  </data>
+  <data name="RES_audit.message.tterminal.ainsert.rotext" xml:space="preserve">
+    <value>Bol vytvorený nový terminál s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tterminal.aselect.rotext" xml:space="preserve">
+    <value>Konzultácia s terminálom</value>
+  </data>
+  <data name="RES_audit.message.tterminal.aupdate.rotext" xml:space="preserve">
+    <value>Nasledujúce údaje terminálu boli upravené:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tterminalreader.aupdate.rotext" xml:space="preserve">
+    <value>Nasledujúce údaje terminálovej čítačky boli upravené:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tterminalsiren.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová siréna s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tterminalsiren.aupdate.rotext" xml:space="preserve">
+    <value>Nasledujúce údaje koncovej sirény boli upravené:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tuploadfile.aexecuted.rotext" xml:space="preserve">
+    <value>Na server bol nahraný súbor.</value>
+  </data>
+  <data name="RES_audit.message.tuserfield.adelete.rotext" xml:space="preserve">
+    <value>Pole $@UserFieldName@ bolo odstránené.</value>
+  </data>
+  <data name="RES_audit.message.tuserfield.ainsert.rotext" xml:space="preserve">
+    <value>Bolo vytvorené nové pole</value>
+  </data>
+  <data name="RES_audit.message.tuserfield.amultiselect.rotext" xml:space="preserve">
+    <value>Boli vyhľadané nasledujúce polia: $@UserFieldNames@.</value>
+  </data>
+  <data name="RES_audit.message.tuserfield.aselect.rotext" xml:space="preserve">
+    <value>Pole $@UserFieldName@ bolo vyhľadané.</value>
+  </data>
+  <data name="RES_audit.message.tuserfield.aupdate.rotext" xml:space="preserve">
+    <value>Údaje v poli boli zmenené</value>
+  </data>
+  <data name="RES_audit.message.tusertask.adelete.rotext" xml:space="preserve">
+    <value>Úloha používateľa bola odstránená</value>
+  </data>
+  <data name="RES_audit.message.tusertask.ainsert.rotext" xml:space="preserve">
+    <value>Bola vložená úloha používateľa</value>
+  </data>
+  <data name="RES_audit.message.tusertask.aselect.rotext" xml:space="preserve">
+    <value>Úloha používateľa bola dopytovaná</value>
+  </data>
+  <data name="RES_audit.message.tvisit.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená návšteva</value>
+  </data>
+  <data name="RES_audit.message.tvisit.aupdate.rotext" xml:space="preserve">
+    <value>Aktualizovaná návšteva</value>
+  </data>
+  <data name="RES_audit.message.tvisitor.ainsert.rotext" xml:space="preserve">
+    <value>Bol vytvorený návštevník</value>
+  </data>
+  <data name="RES_audit.message.tvisitor.aupdate.rotext" xml:space="preserve">
+    <value>Aktualizovaný návštevník</value>
+  </data>
+  <data name="RES_audit.message.tzoneinactivity.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená nová neaktívna zóna s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tzoneinactivity.aupdate.rotext" xml:space="preserve">
+    <value>V oblasti prístupu boli upravené tieto údaje:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tzoneplane.adelete.rotext" xml:space="preserve">
+    <value>Plán zóny bol vypustený</value>
+  </data>
+  <data name="RES_audit.message.tzoneplane.ainsert.rotext" xml:space="preserve">
+    <value>Bol vytvorený nový plán zóny s nasledujúcimi údajmi:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tzoneplane.aselect.rotext" xml:space="preserve">
+    <value>Plán oblasti bol konzultovaný</value>
+  </data>
+  <data name="RES_audit.message.tzoneplane.aupdate.rotext" xml:space="preserve">
+    <value>Boli upravené nasledujúce údaje mapy zón:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.mt.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.myhidebutton.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.myhidebutton.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.mypopupframeimage.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.mypopupframeimagetool.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.nmc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.nmc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.nmcimg.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.nyc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.nyc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.nycimg.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.objecttype.tabsencetracking.rotext" xml:space="preserve">
+    <value>Sledovanie neprítomnosti</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessauthorization.rotext" xml:space="preserve">
+    <value>Prístupové oprávnenia</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessdata.rotext" xml:space="preserve">
+    <value>Analýza prístupu</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessgroup.rotext" xml:space="preserve">
+    <value>Prístupové skupiny</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessgrouppermission.rotext" xml:space="preserve">
+    <value>Prístupové skupiny</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessmode.rotext" xml:space="preserve">
+    <value>Režim prístupu</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessmove.rotext" xml:space="preserve">
+    <value>Protokolovanie prístupu</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessperiod.rotext" xml:space="preserve">
+    <value>Prístupové obdobia</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessperioddaily.rotext" xml:space="preserve">
+    <value>Obdobia prístupu (otvorené dvere)</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessperiodholidays.rotext" xml:space="preserve">
+    <value>Obdobia prístupu (výnimky)</value>
+  </data>
+  <data name="RES_audit.objecttype.taccesszone.rotext" xml:space="preserve">
+    <value>Prístupové zóny</value>
+  </data>
+  <data name="RES_audit.objecttype.taccrualsrule.rotext" xml:space="preserve">
+    <value>Pravidlo rovnováhy</value>
+  </data>
+  <data name="RES_audit.objecttype.tactivity.rotext" xml:space="preserve">
+    <value>Aktivity</value>
+  </data>
+  <data name="RES_audit.objecttype.tactivitycompany.rotext" xml:space="preserve">
+    <value>Činnosti (spoločnosť)</value>
+  </data>
+  <data name="RES_audit.objecttype.tadvancedparameter.rotext" xml:space="preserve">
+    <value>Pokročilý parameter</value>
+  </data>
+  <data name="RES_audit.objecttype.tassigncause.rotext" xml:space="preserve">
+    <value>Masívne zavedenie odôvodnení</value>
+  </data>
+  <data name="RES_audit.objecttype.tassigncenters.rotext" xml:space="preserve">
+    <value>Hromadné priradenie nákladových stredísk</value>
+  </data>
+  <data name="RES_audit.objecttype.tassignment.rotext" xml:space="preserve">
+    <value>pošta</value>
+  </data>
+  <data name="RES_audit.objecttype.tattendancedata.rotext" xml:space="preserve">
+    <value>Analýza času a dochádzky</value>
+  </data>
+  <data name="RES_audit.objecttype.tattendanceoptions.rotext" xml:space="preserve">
+    <value>Možnosti prítomnosti</value>
+  </data>
+  <data name="RES_audit.objecttype.tbot.rotext" xml:space="preserve">
+    <value>Boty</value>
+  </data>
+  <data name="RES_audit.objecttype.tbotrule.rotext" xml:space="preserve">
+    <value>Pravidlá pre botov</value>
+  </data>
+  <data name="RES_audit.objecttype.tbudget.rotext" xml:space="preserve">
+    <value>Rozpočet</value>
+  </data>
+  <data name="RES_audit.objecttype.tbudgetrow.rotext" xml:space="preserve">
+    <value>Rozpočtový register</value>
+  </data>
+  <data name="RES_audit.objecttype.tcalendar.rotext" xml:space="preserve">
+    <value>Kalendár</value>
+  </data>
+  <data name="RES_audit.objecttype.tcalendarrow.rotext" xml:space="preserve">
+    <value>Registrácia do kalendára</value>
+  </data>
+  <data name="RES_audit.objecttype.tcalendarrowsummarydata.rotext" xml:space="preserve">
+    <value>Zhrnutie riadku</value>
+  </data>
+  <data name="RES_audit.objecttype.tcamera.rotext" xml:space="preserve">
+    <value>Kamery</value>
+  </data>
+  <data name="RES_audit.objecttype.tcaptcha.rotext" xml:space="preserve">
+    <value>Kód overovania</value>
+  </data>
+  <data name="RES_audit.objecttype.tcapture.rotext" xml:space="preserve">
+    <value>Fotografovanie</value>
+  </data>
+  <data name="RES_audit.objecttype.tcategorytype.rotext" xml:space="preserve">
+    <value>Kategórie</value>
+  </data>
+  <data name="RES_audit.objecttype.tcause.rotext" xml:space="preserve">
+    <value>odôvodnenie</value>
+  </data>
+  <data name="RES_audit.objecttype.tcauselimitvalue.rotext" xml:space="preserve">
+    <value>Limit odôvodnenia</value>
+  </data>
+  <data name="RES_audit.objecttype.tchannel.rotext" xml:space="preserve">
+    <value>Kanály</value>
+  </data>
+  <data name="RES_audit.objecttype.tchannelconversation.rotext" xml:space="preserve">
+    <value>Konverzácia</value>
+  </data>
+  <data name="RES_audit.objecttype.tchannelconversationcomplexity.rotext" xml:space="preserve">
+    <value>Zložitosť konverzácie</value>
+  </data>
+  <data name="RES_audit.objecttype.tchannelconversationmessage.rotext" xml:space="preserve">
+    <value>Správa</value>
+  </data>
+  <data name="RES_audit.objecttype.tcommunique.rotext" xml:space="preserve">
+    <value>komunikoval</value>
+  </data>
+  <data name="RES_audit.objecttype.tcompletetasks.rotext" xml:space="preserve">
+    <value>Hromadné dokončovanie úloh</value>
+  </data>
+  <data name="RES_audit.objecttype.tconcept.rotext" xml:space="preserve">
+    <value>zostatky</value>
+  </data>
+  <data name="RES_audit.objecttype.tconceptcomposition.rotext" xml:space="preserve">
+    <value>Zloženie rovnováhy</value>
+  </data>
+  <data name="RES_audit.objecttype.tconceptgroup.rotext" xml:space="preserve">
+    <value>Skupina zostatkov</value>
+  </data>
+  <data name="RES_audit.objecttype.tconnection.rotext" xml:space="preserve">
+    <value>Pripojenie</value>
+  </data>
+  <data name="RES_audit.objecttype.tcopybudgetplanificationadvanced.rotext" xml:space="preserve">
+    <value>Kópia rozpočtov</value>
+  </data>
+  <data name="RES_audit.objecttype.tcopyplanification.rotext" xml:space="preserve">
+    <value>Plánovacia kópia</value>
+  </data>
+  <data name="RES_audit.objecttype.tcopyplanificationadvanced.rotext" xml:space="preserve">
+    <value>Kópia pokročilého plánovania</value>
+  </data>
+  <data name="RES_audit.objecttype.tcopyplanificationtoemployees.rotext" xml:space="preserve">
+    <value>Kopírovanie plánovania medzi zamestnancami</value>
+  </data>
+  <data name="RES_audit.objecttype.tdailybudgetposition.rotext" xml:space="preserve">
+    <value>Plánovaný deň výrobnej jednotky</value>
+  </data>
+  <data name="RES_audit.objecttype.tdailycause.rotext" xml:space="preserve">
+    <value>Denné odôvodnenia</value>
+  </data>
+  <data name="RES_audit.objecttype.tdailycoverage.rotext" xml:space="preserve">
+    <value>Dotácie</value>
+  </data>
+  <data name="RES_audit.objecttype.tdailypunchesdetail.rotext" xml:space="preserve">
+    <value>Denný detail</value>
+  </data>
+  <data name="RES_audit.objecttype.tdailyrecord.rotext" xml:space="preserve">
+    <value>Vyhlásenie dňa</value>
+  </data>
+  <data name="RES_audit.objecttype.tdailyschedule.rotext" xml:space="preserve">
+    <value>plánovanie</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalink.rotext" xml:space="preserve">
+    <value>Dátové spojenie</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkimportdailycoverage.rotext" xml:space="preserve">
+    <value>Importovanie denných krytí</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkimportemployees.rotext" xml:space="preserve">
+    <value>Importovanie používateľov</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkimportgroups.rotext" xml:space="preserve">
+    <value>Import skupín</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkimportprogrammedabsences.rotext" xml:space="preserve">
+    <value>Importovanie dlhodobej neprítomnosti</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkimportscheduler.rotext" xml:space="preserve">
+    <value>Plánovanie dovozu</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkimporttask.rotext" xml:space="preserve">
+    <value>Importovanie úloh</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkresult.rotext" xml:space="preserve">
+    <value>Výsledok importu</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkws.rotext" xml:space="preserve">
+    <value>Webová služba</value>
+  </data>
+  <data name="RES_audit.objecttype.tdiningroom.rotext" xml:space="preserve">
+    <value>Jedáleň</value>
+  </data>
+  <data name="RES_audit.objecttype.tdocument.rotext" xml:space="preserve">
+    <value>dokument</value>
+  </data>
+  <data name="RES_audit.objecttype.tdocumentabsence.rotext" xml:space="preserve">
+    <value>Dokument o neprítomnosti</value>
+  </data>
+  <data name="RES_audit.objecttype.tdocumenttemplate.rotext" xml:space="preserve">
+    <value>Šablóna dokumentu</value>
+  </data>
+  <data name="RES_audit.objecttype.tdownloadfile.rotext" xml:space="preserve">
+    <value>Stiahnuť súbor</value>
+  </data>
+  <data name="RES_audit.objecttype.temergencyreport.rotext" xml:space="preserve">
+    <value>Núdzová správa</value>
+  </data>
+  <data name="RES_audit.objecttype.temployee.rotext" xml:space="preserve">
+    <value>používateľ</value>
+  </data>
+  <data name="RES_audit.objecttype.temployeeassignment.rotext" xml:space="preserve">
+    <value>Pozícia používateľa</value>
+  </data>
+  <data name="RES_audit.objecttype.temployeecenters.rotext" xml:space="preserve">
+    <value>Schválené nákladové strediská</value>
+  </data>
+  <data name="RES_audit.objecttype.temployeecontract.rotext" xml:space="preserve">
+    <value>Zmluva</value>
+  </data>
+  <data name="RES_audit.objecttype.temployeegroup.rotext" xml:space="preserve">
+    <value>Mobilita používateľov</value>
+  </data>
+  <data name="RES_audit.objecttype.temployeeonterminal.rotext" xml:space="preserve">
+    <value>Používateľ vytvorený v termináli</value>
+  </data>
+  <data name="RES_audit.objecttype.temployeeuserfield.rotext" xml:space="preserve">
+    <value>Používateľ (pole v zázname)</value>
+  </data>
+  <data name="RES_audit.objecttype.tentry.rotext" xml:space="preserve">
+    <value>Podpisovanie</value>
+  </data>
+  <data name="RES_audit.objecttype.teventscheduler.rotext" xml:space="preserve">
+    <value>Plánované podujatie</value>
+  </data>
+  <data name="RES_audit.objecttype.tgeneraloptions.rotext" xml:space="preserve">
+    <value>Všeobecné možnosti</value>
+  </data>
+  <data name="RES_audit.objecttype.tgenius.rotext" xml:space="preserve">
+    <value>Geniálna analytika</value>
+  </data>
+  <data name="RES_audit.objecttype.tgeniusscheduler.rotext" xml:space="preserve">
+    <value>Plánovanie štúdia</value>
+  </data>
+  <data name="RES_audit.objecttype.tgroup.rotext" xml:space="preserve">
+    <value>skupina</value>
+  </data>
+  <data name="RES_audit.objecttype.tgroupfeature.rotext" xml:space="preserve">
+    <value>Funkcia</value>
+  </data>
+  <data name="RES_audit.objecttype.tgroupfeaturepermissionoverfeature.rotext" xml:space="preserve">
+    <value>Funkcie</value>
+  </data>
+  <data name="RES_audit.objecttype.tgroupuserfield.rotext" xml:space="preserve">
+    <value>Používateľ (skupina polí s kartou)</value>
+  </data>
+  <data name="RES_audit.objecttype.tindicator.rotext" xml:space="preserve">
+    <value>Indikátor</value>
+  </data>
+  <data name="RES_audit.objecttype.tjustifiedincidences.rotext" xml:space="preserve">
+    <value>Hromadné zdôvodnenie incidentov</value>
+  </data>
+  <data name="RES_audit.objecttype.tlabagree.rotext" xml:space="preserve">
+    <value>Dohody</value>
+  </data>
+  <data name="RES_audit.objecttype.tlabagreeaccrualrule.rotext" xml:space="preserve">
+    <value>Pravidlá dohody</value>
+  </data>
+  <data name="RES_audit.objecttype.tlabagreecauselimitvalue.rotext" xml:space="preserve">
+    <value>Limit odôvodnenia dohody</value>
+  </data>
+  <data name="RES_audit.objecttype.tlabagreerule.rotext" xml:space="preserve">
+    <value>Pravidlo dohody</value>
+  </data>
+  <data name="RES_audit.objecttype.tlivetask.rotext" xml:space="preserve">
+    <value>Živá úloha</value>
+  </data>
+  <data name="RES_audit.objecttype.tlockdate.rotext" xml:space="preserve">
+    <value>Dátum uzávierky</value>
+  </data>
+  <data name="RES_audit.objecttype.tlogbook.rotext" xml:space="preserve">
+    <value>Registračná kniha</value>
+  </data>
+  <data name="RES_audit.objecttype.tmassmarkconsents.rotext" xml:space="preserve">
+    <value>Asistentské súhlasy</value>
+  </data>
+  <data name="RES_audit.objecttype.tmassmobilityemployees.rotext" xml:space="preserve">
+    <value>Hromadná mobilita</value>
+  </data>
+  <data name="RES_audit.objecttype.tmessageemployees.rotext" xml:space="preserve">
+    <value>Správy používateľov</value>
+  </data>
+  <data name="RES_audit.objecttype.tmove.rotext" xml:space="preserve">
+    <value>Podpisovanie</value>
+  </data>
+  <data name="RES_audit.objecttype.tnone.rotext" xml:space="preserve">
+    <value>(Neznámy)</value>
+  </data>
+  <data name="RES_audit.objecttype.tnotification.rotext" xml:space="preserve">
+    <value>Oznámenia</value>
+  </data>
+  <data name="RES_audit.objecttype.tparameters.rotext" xml:space="preserve">
+    <value>Parametre (možnosti)</value>
+  </data>
+  <data name="RES_audit.objecttype.tpassport.rotext" xml:space="preserve">
+    <value>používateľ</value>
+  </data>
+  <data name="RES_audit.objecttype.tpassportconsent.rotext" xml:space="preserve">
+    <value>Súhlasy</value>
+  </data>
+  <data name="RES_audit.objecttype.tpassportpassword.rotext" xml:space="preserve">
+    <value>Heslo</value>
+  </data>
+  <data name="RES_audit.objecttype.tpassportpermissionsoveremployees.rotext" xml:space="preserve">
+    <value>Oprávnenia používateľov</value>
+  </data>
+  <data name="RES_audit.objecttype.tpassportpermissionsoverfeatures.rotext" xml:space="preserve">
+    <value>Oprávnenia na funkcie</value>
+  </data>
+  <data name="RES_audit.objecttype.tpassportpermissionsovergroups.rotext" xml:space="preserve">
+    <value>Oprávnenia pre skupiny</value>
+  </data>
+  <data name="RES_audit.objecttype.tproductivdata.rotext" xml:space="preserve">
+    <value>Analýza úloh</value>
+  </data>
+  <data name="RES_audit.objecttype.tproductiveunit.rotext" xml:space="preserve">
+    <value>výrobná jednotka</value>
+  </data>
+  <data name="RES_audit.objecttype.tproductiveunitmode.rotext" xml:space="preserve">
+    <value>Spôsob výroby jednotky</value>
+  </data>
+  <data name="RES_audit.objecttype.tproductiveunitmodeposition.rotext" xml:space="preserve">
+    <value>Poloha režimu</value>
+  </data>
+  <data name="RES_audit.objecttype.tprogrammedabsence.rotext" xml:space="preserve">
+    <value>Predpokladané dni neprítomnosti</value>
+  </data>
+  <data name="RES_audit.objecttype.tprogrammedcause.rotext" xml:space="preserve">
+    <value>Predpokladané hodiny neprítomnosti</value>
+  </data>
+  <data name="RES_audit.objecttype.tprogrammedholiday.rotext" xml:space="preserve">
+    <value>Dovolenka/hodinová dovolenka</value>
+  </data>
+  <data name="RES_audit.objecttype.tprogrammedovertime.rotext" xml:space="preserve">
+    <value>Predpokladaný počet nadčasových hodín</value>
+  </data>
+  <data name="RES_audit.objecttype.tprojecttemplate.rotext" xml:space="preserve">
+    <value>Šablóna projektu</value>
+  </data>
+  <data name="RES_audit.objecttype.tpunchimage.rotext" xml:space="preserve">
+    <value>Podpisová fotografia</value>
+  </data>
+  <data name="RES_audit.objecttype.tremark.rotext" xml:space="preserve">
+    <value>Zvýraznenie</value>
+  </data>
+  <data name="RES_audit.objecttype.treport.rotext" xml:space="preserve">
+    <value>Správy</value>
+  </data>
+  <data name="RES_audit.objecttype.treportprofile.rotext" xml:space="preserve">
+    <value>Profil hlásenia</value>
+  </data>
+  <data name="RES_audit.objecttype.treportscheduler.rotext" xml:space="preserve">
+    <value>Plánované správy</value>
+  </data>
+  <data name="RES_audit.objecttype.trequest.rotext" xml:space="preserve">
+    <value>žiadosti</value>
+  </data>
+  <data name="RES_audit.objecttype.trequestapproval.rotext" xml:space="preserve">
+    <value>Schválenie/zamietnutie žiadosti</value>
+  </data>
+  <data name="RES_audit.objecttype.trequestrule.rotext" xml:space="preserve">
+    <value>Pravidlá uplatňovania</value>
+  </data>
+  <data name="RES_audit.objecttype.trequesttype.rotext" xml:space="preserve">
+    <value>Typ aplikácií</value>
+  </data>
+  <data name="RES_audit.objecttype.tsaasservice.rotext" xml:space="preserve">
+    <value>Služba SaaS</value>
+  </data>
+  <data name="RES_audit.objecttype.tschedulerdaily.rotext" xml:space="preserve">
+    <value>Harmonogram príletov a odletov</value>
+  </data>
+  <data name="RES_audit.objecttype.tschedulerholidays.rotext" xml:space="preserve">
+    <value>Plánovanie štátnych sviatkov</value>
+  </data>
+  <data name="RES_audit.objecttype.tschedulerplanification.rotext" xml:space="preserve">
+    <value>Plánovací kalendár</value>
+  </data>
+  <data name="RES_audit.objecttype.tschedulerremarks.rotext" xml:space="preserve">
+    <value>Najdôležitejšie udalosti v kalendári</value>
+  </data>
+  <data name="RES_audit.objecttype.tschedulertemplate.rotext" xml:space="preserve">
+    <value>Personálne obsadenie štátnych sviatkov</value>
+  </data>
+  <data name="RES_audit.objecttype.tschedulerweekly.rotext" xml:space="preserve">
+    <value>Týždenné plánovanie</value>
+  </data>
+  <data name="RES_audit.objecttype.tsecuritynode.rotext" xml:space="preserve">
+    <value>Organizačná schéma</value>
+  </data>
+  <data name="RES_audit.objecttype.tsecuritynodegroup.rotext" xml:space="preserve">
+    <value>Pridelená skupina</value>
+  </data>
+  <data name="RES_audit.objecttype.tsecuritynodepassport.rotext" xml:space="preserve">
+    <value>Pridelený vedúci</value>
+  </data>
+  <data name="RES_audit.objecttype.tsecuritynodepassportexception.rotext" xml:space="preserve">
+    <value>Výnimka</value>
+  </data>
+  <data name="RES_audit.objecttype.tsecurityoptions.rotext" xml:space="preserve">
+    <value>Možnosti zabezpečenia</value>
+  </data>
+  <data name="RES_audit.objecttype.tshift.rotext" xml:space="preserve">
+    <value>rozvrh hodín</value>
+  </data>
+  <data name="RES_audit.objecttype.tshiftassignment.rotext" xml:space="preserve">
+    <value>Časová poloha</value>
+  </data>
+  <data name="RES_audit.objecttype.tshiftgroup.rotext" xml:space="preserve">
+    <value>Skupina rozvrhov</value>
+  </data>
+  <data name="RES_audit.objecttype.tshiftlayer.rotext" xml:space="preserve">
+    <value>Časová vrstva</value>
+  </data>
+  <data name="RES_audit.objecttype.tshiftrule.rotext" xml:space="preserve">
+    <value>Pravidlá rozvrhu</value>
+  </data>
+  <data name="RES_audit.objecttype.tshifttimezone.rotext" xml:space="preserve">
+    <value>Časový slot</value>
+  </data>
+  <data name="RES_audit.objecttype.tssoconfig.rotext" xml:space="preserve">
+    <value>Integrované prihlásenie</value>
+  </data>
+  <data name="RES_audit.objecttype.tstartupvalues.rotext" xml:space="preserve">
+    <value>Počiatočné hodnoty (dohoda)</value>
+  </data>
+  <data name="RES_audit.objecttype.tsupervisedemployeedata.rotext" xml:space="preserve">
+    <value>používateľ</value>
+  </data>
+  <data name="RES_audit.objecttype.tsurvey.rotext" xml:space="preserve">
+    <value>Prieskum</value>
+  </data>
+  <data name="RES_audit.objecttype.tsurveyresponse.rotext" xml:space="preserve">
+    <value>Odpovede na prieskum</value>
+  </data>
+  <data name="RES_audit.objecttype.tsurveyresults.rotext" xml:space="preserve">
+    <value>Výsledky prieskumu</value>
+  </data>
+  <data name="RES_audit.objecttype.ttask.rotext" xml:space="preserve">
+    <value>úloha</value>
+  </data>
+  <data name="RES_audit.objecttype.ttaskfield.rotext" xml:space="preserve">
+    <value>Atribúty úlohy</value>
+  </data>
+  <data name="RES_audit.objecttype.ttaskfielddefinition.rotext" xml:space="preserve">
+    <value>Definícia atribútov úlohy</value>
+  </data>
+  <data name="RES_audit.objecttype.ttasktemplate.rotext" xml:space="preserve">
+    <value>Šablóna úlohy</value>
+  </data>
+  <data name="RES_audit.objecttype.ttelecommute.rotext" xml:space="preserve">
+    <value>Telework</value>
+  </data>
+  <data name="RES_audit.objecttype.tterminal.rotext" xml:space="preserve">
+    <value>Terminál</value>
+  </data>
+  <data name="RES_audit.objecttype.tterminalconfigfile.rotext" xml:space="preserve">
+    <value>Konfiguračný súbor terminálu</value>
+  </data>
+  <data name="RES_audit.objecttype.tterminalreader.rotext" xml:space="preserve">
+    <value>Čítačka terminálov</value>
+  </data>
+  <data name="RES_audit.objecttype.tterminalsiren.rotext" xml:space="preserve">
+    <value>Koncová siréna</value>
+  </data>
+  <data name="RES_audit.objecttype.tterminalsyncfile.rotext" xml:space="preserve">
+    <value>Synchronizačný súbor terminálu</value>
+  </data>
+  <data name="RES_audit.objecttype.ttimezone.rotext" xml:space="preserve">
+    <value>Časové pásmo</value>
+  </data>
+  <data name="RES_audit.objecttype.tuploadfile.rotext" xml:space="preserve">
+    <value>Nahrať súbor</value>
+  </data>
+  <data name="RES_audit.objecttype.tuserfield.rotext" xml:space="preserve">
+    <value>Token poľa</value>
+  </data>
+  <data name="RES_audit.objecttype.tusertask.rotext" xml:space="preserve">
+    <value>Úloha používateľa</value>
+  </data>
+  <data name="RES_audit.objecttype.tvisit.rotext" xml:space="preserve">
+    <value>Navštívte stránku</value>
+  </data>
+  <data name="RES_audit.objecttype.tvisitor.rotext" xml:space="preserve">
+    <value>Návštevník</value>
+  </data>
+  <data name="RES_audit.objecttype.tzoneinactivity.rotext" xml:space="preserve">
+    <value>Neaktívna zóna</value>
+  </data>
+  <data name="RES_audit.objecttype.tzoneplane.rotext" xml:space="preserve">
+    <value>Plán oblasti</value>
+  </data>
+  <data name="RES_audit.panaudit.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.pancontent.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.panheader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.panmainmenu.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.panpager.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters..date.rotext" xml:space="preserve">
+    <value>dátum</value>
+  </data>
+  <data name="RES_audit.parameters..fieldname.rotext" xml:space="preserve">
+    <value>Názov poľa</value>
+  </data>
+  <data name="RES_audit.parameters..idemployee.rotext" xml:space="preserve">
+    <value>ID používateľa</value>
+  </data>
+  <data name="RES_audit.parameters..value.rotext" xml:space="preserve">
+    <value>Hodnota</value>
+  </data>
+  <data name="RES_audit.parameters.accessgroups.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.accessgroups.name.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.accessgroupspermissions.idaccessgroup.rotext" xml:space="preserve">
+    <value>ID prístupovej skupiny</value>
+  </data>
+  <data name="RES_audit.parameters.accessgroupspermissions.idaccessperiod.rotext" xml:space="preserve">
+    <value>ID obdobia prístupu</value>
+  </data>
+  <data name="RES_audit.parameters.accessgroupspermissions.idzone.rotext" xml:space="preserve">
+    <value>ID zóny</value>
+  </data>
+  <data name="RES_audit.parameters.accessperioddaily.begintime.rotext" xml:space="preserve">
+    <value>Čas začiatku</value>
+  </data>
+  <data name="RES_audit.parameters.accessperioddaily.dayofweek.rotext" xml:space="preserve">
+    <value>Deň v týždni</value>
+  </data>
+  <data name="RES_audit.parameters.accessperioddaily.endtime.rotext" xml:space="preserve">
+    <value>Koniec času</value>
+  </data>
+  <data name="RES_audit.parameters.accessperioddaily.idaccessperiod.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.accessperiodholidays.begintime.rotext" xml:space="preserve">
+    <value>Čas začiatku</value>
+  </data>
+  <data name="RES_audit.parameters.accessperiodholidays.day.rotext" xml:space="preserve">
+    <value>deň</value>
+  </data>
+  <data name="RES_audit.parameters.accessperiodholidays.endtime.rotext" xml:space="preserve">
+    <value>Posledná hodina</value>
+  </data>
+  <data name="RES_audit.parameters.accessperiodholidays.idaccessperiod.rotext" xml:space="preserve">
+    <value>ID obdobia</value>
+  </data>
+  <data name="RES_audit.parameters.accessperiodholidays.month.rotext" xml:space="preserve">
+    <value>Mesiac</value>
+  </data>
+  <data name="RES_audit.parameters.accessperiods.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.accessperiods.name.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.accrualsrules.definition.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_audit.parameters.accrualsrules.description.rotext" xml:space="preserve">
+    <value>popis</value>
+  </data>
+  <data name="RES_audit.parameters.accrualsrules.idaccrualsrule.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.accrualsrules.name.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.accrualsrules.schedule.rotext" xml:space="preserve">
+    <value>Programovanie</value>
+  </data>
+  <data name="RES_audit.parameters.assignment.color.rotext" xml:space="preserve">
+    <value>Farba príspevku</value>
+  </data>
+  <data name="RES_audit.parameters.assignment.description.rotext" xml:space="preserve">
+    <value>Popis práce</value>
+  </data>
+  <data name="RES_audit.parameters.assignment.id.rotext" xml:space="preserve">
+    <value>ID pracovnej pozície</value>
+  </data>
+  <data name="RES_audit.parameters.assignment.name.rotext" xml:space="preserve">
+    <value>Názov pracovného miesta</value>
+  </data>
+  <data name="RES_audit.parameters.assignment.shortname.rotext" xml:space="preserve">
+    <value>Krátky názov pracovného miesta</value>
+  </data>
+  <data name="RES_audit.parameters.businesscenter.description.rotext" xml:space="preserve">
+    <value>popis</value>
+  </data>
+  <data name="RES_audit.parameters.businesscenter.id.rotext" xml:space="preserve">
+    <value>ID nákladového strediska</value>
+  </data>
+  <data name="RES_audit.parameters.businesscenter.name.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.cameras.description.rotext" xml:space="preserve">
+    <value>popis</value>
+  </data>
+  <data name="RES_audit.parameters.cameras.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.cameras.model.rotext" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="RES_audit.parameters.cameras.name.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.cameras.url.rotext" xml:space="preserve">
+    <value>ADRESA URL</value>
+  </data>
+  <data name="RES_audit.parameters.causelimitvalues.idcause.rotext" xml:space="preserve">
+    <value>odôvodnenie</value>
+  </data>
+  <data name="RES_audit.parameters.causelimitvalues.idexcesscause.rotext" xml:space="preserve">
+    <value>Odôvodnenie prebytku</value>
+  </data>
+  <data name="RES_audit.parameters.causelimitvalues.maximumannualvalue.rotext" xml:space="preserve">
+    <value>Ročná hodnota</value>
+  </data>
+  <data name="RES_audit.parameters.causelimitvalues.maximumannualvaluetype.rotext" xml:space="preserve">
+    <value>Ročný pôvod</value>
+  </data>
+  <data name="RES_audit.parameters.causelimitvalues.maximummonthlytype.rotext" xml:space="preserve">
+    <value>Menálny pôvod</value>
+  </data>
+  <data name="RES_audit.parameters.causelimitvalues.maximummonthlyvalue.rotext" xml:space="preserve">
+    <value>Mesačná hodnota</value>
+  </data>
+  <data name="RES_audit.parameters.causelimitvalues.name.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.causes.allowinputfromreader.rotext" xml:space="preserve">
+    <value>Povolenie z terminálu</value>
+  </data>
+  <data name="RES_audit.parameters.causes.applyabsenceonholidays.rotext" xml:space="preserve">
+    <value>Žiadosť o dovolenku</value>
+  </data>
+  <data name="RES_audit.parameters.causes.applyjustifyperiod.rotext" xml:space="preserve">
+    <value>Aplikovať obdobie</value>
+  </data>
+  <data name="RES_audit.parameters.causes.causetype.rotext" xml:space="preserve">
+    <value>Typ odôvodnenia</value>
+  </data>
+  <data name="RES_audit.parameters.causes.color.rotext" xml:space="preserve">
+    <value>Farba</value>
+  </data>
+  <data name="RES_audit.parameters.causes.costfactor.rotext" xml:space="preserve">
+    <value>Nákladový faktor</value>
+  </data>
+  <data name="RES_audit.parameters.causes.description.rotext" xml:space="preserve">
+    <value>popis</value>
+  </data>
+  <data name="RES_audit.parameters.causes.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.causes.inputpermissions.rotext" xml:space="preserve">
+    <value>Povolenia na vstup</value>
+  </data>
+  <data name="RES_audit.parameters.causes.justifyperiodend.rotext" xml:space="preserve">
+    <value>Dátum ukončenia odôvodniť incident</value>
+  </data>
+  <data name="RES_audit.parameters.causes.justifyperiodstart.rotext" xml:space="preserve">
+    <value>Dátum začiatku odôvodniť incident</value>
+  </data>
+  <data name="RES_audit.parameters.causes.justifyperiodtype.rotext" xml:space="preserve">
+    <value>Typ vplyvu odôvodnenia</value>
+  </data>
+  <data name="RES_audit.parameters.causes.maxprogrammedabsencedays.rotext" xml:space="preserve">
+    <value>Maximálny počet dní predpokladanej neprítomnosti</value>
+  </data>
+  <data name="RES_audit.parameters.causes.name.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.causes.punchcloseprogrammedabsence.rotext" xml:space="preserve">
+    <value>Plánovaná neprítomnosť</value>
+  </data>
+  <data name="RES_audit.parameters.causes.readerinputcode.rotext" xml:space="preserve">
+    <value>Kód terminálu</value>
+  </data>
+  <data name="RES_audit.parameters.causes.roundingby.rotext" xml:space="preserve">
+    <value>Zaokrúhľovanie</value>
+  </data>
+  <data name="RES_audit.parameters.causes.roundingbydailyscope.rotext" xml:space="preserve">
+    <value>Rozsah zaokrúhľovania</value>
+  </data>
+  <data name="RES_audit.parameters.causes.roundingtype.rotext" xml:space="preserve">
+    <value>Typ zaokrúhľovania</value>
+  </data>
+  <data name="RES_audit.parameters.causes.shortname.rotext" xml:space="preserve">
+    <value>Skrátený názov</value>
+  </data>
+  <data name="RES_audit.parameters.causes.startsprogrammedabsence.rotext" xml:space="preserve">
+    <value>Dátum začiatku plánovanej neprítomnosti</value>
+  </data>
+  <data name="RES_audit.parameters.causes.visibilitypermissions.rotext" xml:space="preserve">
+    <value>Viditeľnosť</value>
+  </data>
+  <data name="RES_audit.parameters.causes.workingtype.rotext" xml:space="preserve">
+    <value>Typ operácie</value>
+  </data>
+  <data name="RES_audit.parameters.conceptcauses.composition.rotext" xml:space="preserve">
+    <value>Zloženie</value>
+  </data>
+  <data name="RES_audit.parameters.conceptcauses.hoursfactor.rotext" xml:space="preserve">
+    <value>Hodiny</value>
+  </data>
+  <data name="RES_audit.parameters.conceptcauses.idcause.rotext" xml:space="preserve">
+    <value>Odôvodnenie ID</value>
+  </data>
+  <data name="RES_audit.parameters.conceptcauses.idconcept.rotext" xml:space="preserve">
+    <value>ID zostatku</value>
+  </data>
+  <data name="RES_audit.parameters.conceptcauses.occurrencesfactor.rotext" xml:space="preserve">
+    <value>Porovnanie</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.absentiismrewarded.rotext" xml:space="preserve">
+    <value>Platené absencie</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.applyexpiredhours.rotext" xml:space="preserve">
+    <value>Má dátumy exspirácie</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.applyonholidaysrequest.rotext" xml:space="preserve">
+    <value>Používa sa pri riadení dovolenky</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.automaticaccrualcriteria.rotext" xml:space="preserve">
+    <value>Automatické časové rozlíšenie</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.automaticaccrualidcause.rotext" xml:space="preserve">
+    <value>Odôvodnenie časového rozlíšenia</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.automaticaccrualtype.rotext" xml:space="preserve">
+    <value>Akruálna miera</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.begindate.rotext" xml:space="preserve">
+    <value>Dátum začiatku</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.category.rotext" xml:space="preserve">
+    <value>Kategória</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.color.rotext" xml:space="preserve">
+    <value>Farba</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.customtype.rotext" xml:space="preserve">
+    <value>Personalizovaný typ</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.defaultquery.rotext" xml:space="preserve">
+    <value>Dotaz na základe opomenutia</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.description.rotext" xml:space="preserve">
+    <value>popis</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.employeescriteria.rotext" xml:space="preserve">
+    <value>Kritériá vizualizácie</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.employeespermission.rotext" xml:space="preserve">
+    <value>oprávnenia na zobrazenie</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.expiredhourscriteria.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.concepts.expiredidcause.rotext" xml:space="preserve">
+    <value>Odôvodnenie</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.export.rotext" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.finishdate.rotext" xml:space="preserve">
+    <value>Dátum ukončenia</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.fixedpay.rotext" xml:space="preserve">
+    <value>Pevná platba</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.id.rotext" xml:space="preserve">
+    <value>ID zostatku</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.idtype.rotext" xml:space="preserve">
+    <value>typ</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.isabsentiism.rotext" xml:space="preserve">
+    <value>Správy o absencii</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.isaccrualwork.rotext" xml:space="preserve">
+    <value>Správa o odpracovaných hodinách</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.name.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.payvalue.rotext" xml:space="preserve">
+    <value>Hodnota platby</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.roundconceptby.rotext" xml:space="preserve">
+    <value>Zaokrúhľovanie</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.roundconcepttype.rotext" xml:space="preserve">
+    <value>Typ zaokrúhľovania</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.shortname.rotext" xml:space="preserve">
+    <value>Skrátený názov</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.usedfield.rotext" xml:space="preserve">
+    <value>Použité pole</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.viewinemployees.rotext" xml:space="preserve">
+    <value>Viditeľné pre používateľov</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.viewinpays.rotext" xml:space="preserve">
+    <value>Viditeľné v platbách</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.viewinterminals.rotext" xml:space="preserve">
+    <value>Viditeľné na termináloch</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.accrualsrules.rotext" xml:space="preserve">
+    <value>Pravidlá rovnováhy</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.accruedrule.rotext" xml:space="preserve">
+    <value>Kumulatívne pravidlo</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.causeuser.rotext" xml:space="preserve">
+    <value>Odôvodnenie používateľa</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.causeusertype.rotext" xml:space="preserve">
+    <value>Typ odôvodnenia používateľa</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.dailyrule.rotext" xml:space="preserve">
+    <value>Denné pravidlá</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.date.rotext" xml:space="preserve">
+    <value>dátum</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.defaultcenter.rotext" xml:space="preserve">
+    <value>Predvolené nákladové stredisko</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.idcause.rotext" xml:space="preserve">
+    <value>Odôvodnenie ID</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.idcenter.rotext" xml:space="preserve">
+    <value>Centrum ID</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.idemployee.rotext" xml:space="preserve">
+    <value>ID používateľa</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.idrelatedincidence.rotext" xml:space="preserve">
+    <value>Súvisiace ID udalosti</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.isnotreliable.rotext" xml:space="preserve">
+    <value>IsNotReliable</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.manual.rotext" xml:space="preserve">
+    <value>Manuálne</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.manualcenter.rotext" xml:space="preserve">
+    <value>Manuálne nákladové stredisko</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.value.rotext" xml:space="preserve">
+    <value>Hodnota</value>
+  </data>
+  <data name="RES_audit.parameters.dailycoverage.actualstatus.rotext" xml:space="preserve">
+    <value>Skutočné pridelenie</value>
+  </data>
+  <data name="RES_audit.parameters.dailycoverage.date.rotext" xml:space="preserve">
+    <value>dátum</value>
+  </data>
+  <data name="RES_audit.parameters.dailycoverage.expectedcoverage.rotext" xml:space="preserve">
+    <value>Množstvo</value>
+  </data>
+  <data name="RES_audit.parameters.dailycoverage.forcedcoveraged.rotext" xml:space="preserve">
+    <value>Vymáhanie</value>
+  </data>
+  <data name="RES_audit.parameters.dailycoverage.idassignment.rotext" xml:space="preserve">
+    <value>ID pracovnej pozície</value>
+  </data>
+  <data name="RES_audit.parameters.dailycoverage.idgroup.rotext" xml:space="preserve">
+    <value>ID skupiny</value>
+  </data>
+  <data name="RES_audit.parameters.dailycoverage.plannedstatus.rotext" xml:space="preserve">
+    <value>Plánované pridelenie</value>
+  </data>
+  <data name="RES_audit.parameters.employeeassignments.idassignment.rotext" xml:space="preserve">
+    <value>ID pracovnej pozície</value>
+  </data>
+  <data name="RES_audit.parameters.employeeassignments.idemployee.rotext" xml:space="preserve">
+    <value>ID používateľa</value>
+  </data>
+  <data name="RES_audit.parameters.employeeassignments.suitability.rotext" xml:space="preserve">
+    <value>Vhodnosť</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.begindate.rotext" xml:space="preserve">
+    <value>Dátum začiatku</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.endcontractreason.rotext" xml:space="preserve">
+    <value>Dôvod odchodu</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.enddate.rotext" xml:space="preserve">
+    <value>Dátum Koniec</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.enterprise.rotext" xml:space="preserve">
+    <value>Spoločnosť</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.idcard.rotext" xml:space="preserve">
+    <value>Kód karty</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.idcontract.rotext" xml:space="preserve">
+    <value>Kód zmluvy</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.idemployee.rotext" xml:space="preserve">
+    <value>Kód používateľa</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.idlabagree.rotext" xml:space="preserve">
+    <value>ID dohody</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.begindate.rotext" xml:space="preserve">
+    <value>Dátum začiatku</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.employeename.rotext" xml:space="preserve">
+    <value>používateľ</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.enddate.rotext" xml:space="preserve">
+    <value>Konečný dátum</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.groupname.rotext" xml:space="preserve">
+    <value>skupina</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.idemployee.rotext" xml:space="preserve">
+    <value>Kód používateľa</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.idgroup.rotext" xml:space="preserve">
+    <value>Kód skupiny</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.istransfer.rotext" xml:space="preserve">
+    <value>Prenos</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.path.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.employees.alias.rotext" xml:space="preserve">
+    <value>Alias</value>
+  </data>
+  <data name="RES_audit.parameters.employees.allowbiometric.rotext" xml:space="preserve">
+    <value>AllowBiometric</value>
+  </data>
+  <data name="RES_audit.parameters.employees.allowbiopriority.rotext" xml:space="preserve">
+    <value>AllowBioPriority</value>
+  </data>
+  <data name="RES_audit.parameters.employees.allowcardplusbio.rotext" xml:space="preserve">
+    <value>AllowCardPlusBio</value>
+  </data>
+  <data name="RES_audit.parameters.employees.allowcards.rotext" xml:space="preserve">
+    <value>AllowCards</value>
+  </data>
+  <data name="RES_audit.parameters.employees.id.rotext" xml:space="preserve">
+    <value>Kód</value>
+  </data>
+  <data name="RES_audit.parameters.employees.idaccessgroup.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.employees.image.rotext" xml:space="preserve">
+    <value>Obrázok</value>
+  </data>
+  <data name="RES_audit.parameters.employees.lockdate.rotext" xml:space="preserve">
+    <value>Dátum uzávierky</value>
+  </data>
+  <data name="RES_audit.parameters.employees.name.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.employees.type.rotext" xml:space="preserve">
+    <value>typ</value>
+  </data>
+  <data name="RES_audit.parameters.entries.invalidread.rotext" xml:space="preserve">
+    <value>Neplatná čítačka</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.destination.rotext" xml:space="preserve">
+    <value>destinácia</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.exportfilename.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.exportfiletype.rotext" xml:space="preserve">
+    <value>formát</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.mode.rotext" xml:space="preserve">
+    <value>Režim vykonávania:</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.nextexecution.rotext" xml:space="preserve">
+    <value>ďalší beh</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.profilename.rotext" xml:space="preserve">
+    <value>zamestnanci</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.scheduler.rotext" xml:space="preserve">
+    <value>plánovanie</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.separator.rotext" xml:space="preserve">
+    <value>separátor</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.executetask.rotext" xml:space="preserve">
+    <value>Vykonanie úlohy</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.idgeniusview.rotext" xml:space="preserve">
+    <value>ID génia</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.idpassport.rotext" xml:space="preserve">
+    <value>Identifikačné číslo pasu</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.lastdatetimeupdated.rotext" xml:space="preserve">
+    <value>Posledná poprava</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.name.rotext" xml:space="preserve">
+    <value>Plánovanie štúdie</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.nextdatetimeexecuted.rotext" xml:space="preserve">
+    <value>Posledná aktualizácia</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.periodtype.rotext" xml:space="preserve">
+    <value>Typ obdobia</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.schedulebegindate.rotext" xml:space="preserve">
+    <value>Dátum začiatku</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.scheduleenddate.rotext" xml:space="preserve">
+    <value>Dátum Koniec</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.scheduler.rotext" xml:space="preserve">
+    <value>plánovanie</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.schedulertext.rotext" xml:space="preserve">
+    <value>Konfigurácia</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.state.rotext" xml:space="preserve">
+    <value>Štát</value>
+  </data>
+  <data name="RES_audit.parameters.groups.descriptiongroup.rotext" xml:space="preserve">
+    <value>popis</value>
+  </data>
+  <data name="RES_audit.parameters.groups.id.rotext" xml:space="preserve">
+    <value>Kód</value>
+  </data>
+  <data name="RES_audit.parameters.groups.idcenter.rotext" xml:space="preserve">
+    <value>Stredisko</value>
+  </data>
+  <data name="RES_audit.parameters.groups.name.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.groups.path.rotext" xml:space="preserve">
+    <value>Trasa</value>
+  </data>
+  <data name="RES_audit.parameters.groups.securityflags.rotext" xml:space="preserve">
+    <value>Zabezpečenie</value>
+  </data>
+  <data name="RES_audit.parameters.importguides.formatfilepath.rotext" xml:space="preserve">
+    <value>formát</value>
+  </data>
+  <data name="RES_audit.parameters.importguides.mode.rotext" xml:space="preserve">
+    <value>Režim vykonávania:</value>
+  </data>
+  <data name="RES_audit.parameters.importguides.separator.rotext" xml:space="preserve">
+    <value>separátor</value>
+  </data>
+  <data name="RES_audit.parameters.importguides.sourcefilepath.rotext" xml:space="preserve">
+    <value>zamestnanci</value>
+  </data>
+  <data name="RES_audit.parameters.importguides.type.rotext" xml:space="preserve">
+    <value>typ</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.allownotification.rotext" xml:space="preserve">
+    <value>Prijímanie oznámení</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.condition.rotext" xml:space="preserve">
+    <value>Stav</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.description.rotext" xml:space="preserve">
+    <value>popis</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.desiredvalue.rotext" xml:space="preserve">
+    <value>Požadovaná hodnota</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.idfirstconcept.rotext" xml:space="preserve">
+    <value>Základný zostatok</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.idsecondconcept.rotext" xml:space="preserve">
+    <value>Zostatok v súvislosti s</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.limitvalue.rotext" xml:space="preserve">
+    <value>Limitná hodnota</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.name.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.type.rotext" xml:space="preserve">
+    <value>typ</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.typenotification.rotext" xml:space="preserve">
+    <value>Typ oznámení</value>
+  </data>
+  <data name="RES_audit.parameters.labagree.description.rotext" xml:space="preserve">
+    <value>popis</value>
+  </data>
+  <data name="RES_audit.parameters.labagree.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.labagree.name.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.labagreeaccrualsrules.begindate.rotext" xml:space="preserve">
+    <value>Dátum začiatku</value>
+  </data>
+  <data name="RES_audit.parameters.labagreeaccrualsrules.enddate.rotext" xml:space="preserve">
+    <value>Dátum ukončenia</value>
+  </data>
+  <data name="RES_audit.parameters.labagreeaccrualsrules.idaccrualsrules.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.labagreeaccrualsrules.idlabagree.rotext" xml:space="preserve">
+    <value>ID dohody</value>
+  </data>
+  <data name="RES_audit.parameters.moves.id.rotext" xml:space="preserve">
+    <value>Kód</value>
+  </data>
+  <data name="RES_audit.parameters.moves.idemployee.rotext" xml:space="preserve">
+    <value>Kód používateľa</value>
+  </data>
+  <data name="RES_audit.parameters.moves.indatetime.rotext" xml:space="preserve">
+    <value>Dátum/čas vstupu</value>
+  </data>
+  <data name="RES_audit.parameters.moves.inidcause.rotext" xml:space="preserve">
+    <value>Vstupný kód odôvodnenia</value>
+  </data>
+  <data name="RES_audit.parameters.moves.inidreader.rotext" xml:space="preserve">
+    <value>Vstupný kód terminálu</value>
+  </data>
+  <data name="RES_audit.parameters.moves.inidzone.rotext" xml:space="preserve">
+    <value>Kód vstupnej zóny</value>
+  </data>
+  <data name="RES_audit.parameters.moves.isnotreliablein.rotext" xml:space="preserve">
+    <value>Podozrivý záznam</value>
+  </data>
+  <data name="RES_audit.parameters.moves.isnotreliableout.rotext" xml:space="preserve">
+    <value>Podozrivý odchod</value>
+  </data>
+  <data name="RES_audit.parameters.moves.outdatetime.rotext" xml:space="preserve">
+    <value>Dátum/čas odchodu</value>
+  </data>
+  <data name="RES_audit.parameters.moves.outidcause.rotext" xml:space="preserve">
+    <value>Kód odôvodnenia výstupu</value>
+  </data>
+  <data name="RES_audit.parameters.moves.outidreader.rotext" xml:space="preserve">
+    <value>Kód výstupného terminálu</value>
+  </data>
+  <data name="RES_audit.parameters.moves.outidzone.rotext" xml:space="preserve">
+    <value>Kód zóny výstupu</value>
+  </data>
+  <data name="RES_audit.parameters.moves.shiftdate.rotext" xml:space="preserve">
+    <value>Dátum a čas</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.activated.rotext" xml:space="preserve">
+    <value>Aktivované</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.allowmail.rotext" xml:space="preserve">
+    <value>Povolenie e-mailu</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.allowportal.rotext" xml:space="preserve">
+    <value>Povolenie portálu</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.condition.rotext" xml:space="preserve">
+    <value>Stav</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.destination.rotext" xml:space="preserve">
+    <value>Destinácie</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.id.rotext" xml:space="preserve">
+    <value>ID oznámenia</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.idtype.rotext" xml:space="preserve">
+    <value>Typ oznámenia</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.name.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.schedule.rotext" xml:space="preserve">
+    <value>Programovanie</value>
+  </data>
+  <data name="RES_audit.parameters.parameters.data.rotext" xml:space="preserve">
+    <value>Údaje</value>
+  </data>
+  <data name="RES_audit.parameters.programmedabsences.automaticclosed.rotext" xml:space="preserve">
+    <value>Automatické zatváranie</value>
+  </data>
+  <data name="RES_audit.parameters.programmedabsences.begindate.rotext" xml:space="preserve">
+    <value>Dátum začiatku</value>
+  </data>
+  <data name="RES_audit.parameters.programmedabsences.description.rotext" xml:space="preserve">
+    <value>popis</value>
+  </data>
+  <data name="RES_audit.parameters.programmedabsences.finishdate.rotext" xml:space="preserve">
+    <value>Dátum Koniec</value>
+  </data>
+  <data name="RES_audit.parameters.programmedabsences.idcause.rotext" xml:space="preserve">
+    <value>Odôvodnenie ID</value>
+  </data>
+  <data name="RES_audit.parameters.programmedabsences.idemployee.rotext" xml:space="preserve">
+    <value>ID používateľa</value>
+  </data>
+  <data name="RES_audit.parameters.programmedabsences.maxlastingdays.rotext" xml:space="preserve">
+    <value>Maximálny počet dní</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.begintime.rotext" xml:space="preserve">
+    <value>začiatok obdobia</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.date.rotext" xml:space="preserve">
+    <value>Dátum predpovede hodín neprítomnosti</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.description.rotext" xml:space="preserve">
+    <value>popis</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.duration.rotext" xml:space="preserve">
+    <value>Trvanie</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.endtime.rotext" xml:space="preserve">
+    <value>Koniec obdobia</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.finishdate.rotext" xml:space="preserve">
+    <value>Konečný dátum</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.id.rotext" xml:space="preserve">
+    <value>Identifikátor</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.idcause.rotext" xml:space="preserve">
+    <value>Odôvodnenie ID</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.idemployee.rotext" xml:space="preserve">
+    <value>ID používateľa</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.minduration.rotext" xml:space="preserve">
+    <value>Minimálne trvanie</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.win32.rotext" xml:space="preserve">
+    <value>Win32</value>
+  </data>
+  <data name="RES_audit.parameters.punches.action.rotext" xml:space="preserve">
+    <value>Akcia</value>
+  </data>
+  <data name="RES_audit.parameters.punches.actualtype.rotext" xml:space="preserve">
+    <value>Aktuálny typ</value>
+  </data>
+  <data name="RES_audit.parameters.punches.crc.rotext" xml:space="preserve">
+    <value>Kód overovania</value>
+  </data>
+  <data name="RES_audit.parameters.punches.datetime.rotext" xml:space="preserve">
+    <value>DateTime</value>
+  </data>
+  <data name="RES_audit.parameters.punches.exported.rotext" xml:space="preserve">
+    <value>Exportované</value>
+  </data>
+  <data name="RES_audit.parameters.punches.field1.rotext" xml:space="preserve">
+    <value>Pole 1</value>
+  </data>
+  <data name="RES_audit.parameters.punches.field2.rotext" xml:space="preserve">
+    <value>Pole 2</value>
+  </data>
+  <data name="RES_audit.parameters.punches.field3.rotext" xml:space="preserve">
+    <value>Pole 3</value>
+  </data>
+  <data name="RES_audit.parameters.punches.field4.rotext" xml:space="preserve">
+    <value>Pole 4</value>
+  </data>
+  <data name="RES_audit.parameters.punches.field5.rotext" xml:space="preserve">
+    <value>Pole 5</value>
+  </data>
+  <data name="RES_audit.parameters.punches.field6.rotext" xml:space="preserve">
+    <value>Pole 6</value>
+  </data>
+  <data name="RES_audit.parameters.punches.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idcard.rotext" xml:space="preserve">
+    <value>Identifikátor</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idcause.rotext" xml:space="preserve">
+    <value>Odôvodnenie ID</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idcredential.rotext" xml:space="preserve">
+    <value>Potvrdenie</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idemployee.rotext" xml:space="preserve">
+    <value>ID používateľa</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idpassport.rotext" xml:space="preserve">
+    <value>Identifikačné číslo pasu</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idreader.rotext" xml:space="preserve">
+    <value>ID čitateľa</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idterminal.rotext" xml:space="preserve">
+    <value>ID terminálu</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idzone.rotext" xml:space="preserve">
+    <value>ID zóny</value>
+  </data>
+  <data name="RES_audit.parameters.punches.isnotreliable.rotext" xml:space="preserve">
+    <value>Nespoľahlivé</value>
+  </data>
+  <data name="RES_audit.parameters.punches.location.rotext" xml:space="preserve">
+    <value>Umiestnenie</value>
+  </data>
+  <data name="RES_audit.parameters.punches.locationzone.rotext" xml:space="preserve">
+    <value>oblasť umiestnenia</value>
+  </data>
+  <data name="RES_audit.parameters.punches.shiftdate.rotext" xml:space="preserve">
+    <value>dátum</value>
+  </data>
+  <data name="RES_audit.parameters.punches.timestamp.rotext" xml:space="preserve">
+    <value>Vytvorené</value>
+  </data>
+  <data name="RES_audit.parameters.punches.timezone.rotext" xml:space="preserve">
+    <value>Zóna</value>
+  </data>
+  <data name="RES_audit.parameters.punches.type.rotext" xml:space="preserve">
+    <value>typ</value>
+  </data>
+  <data name="RES_audit.parameters.punches.typedata.rotext" xml:space="preserve">
+    <value>typ</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.destination.rotext" xml:space="preserve">
+    <value>Cieľová destinácia</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.emergencygroup.rotext" xml:space="preserve">
+    <value>Núdzová skupina</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.emergencyreport.rotext" xml:space="preserve">
+    <value>Núdzová správa</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.executetask.rotext" xml:space="preserve">
+    <value>Vykonanie úlohy</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.format.rotext" xml:space="preserve">
+    <value>formát</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.idpassport.rotext" xml:space="preserve">
+    <value>ID používateľa</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.iduser.rotext" xml:space="preserve">
+    <value>Používateľ VT</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.lastdatetimeexecuted.rotext" xml:space="preserve">
+    <value>Posledná poprava</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.lastdatetimeupdated.rotext" xml:space="preserve">
+    <value>Ult. aktualizácia</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.name.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.nextdatetimeexecuted.rotext" xml:space="preserve">
+    <value>Ďalšia implementácia</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.profile.rotext" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.report.rotext" xml:space="preserve">
+    <value>Správa</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.scheduler.rotext" xml:space="preserve">
+    <value>Programovanie</value>
+  </data>
+  <data name="RES_audit.parameters.requests.comments.rotext" xml:space="preserve">
+    <value>Komentár</value>
+  </data>
+  <data name="RES_audit.parameters.requests.commentsuser.rotext" xml:space="preserve">
+    <value>Komentár</value>
+  </data>
+  <data name="RES_audit.parameters.requests.date1.rotext" xml:space="preserve">
+    <value>Dátum1</value>
+  </data>
+  <data name="RES_audit.parameters.requests.date2.rotext" xml:space="preserve">
+    <value>Dátum2</value>
+  </data>
+  <data name="RES_audit.parameters.requests.hours.rotext" xml:space="preserve">
+    <value>Hodiny</value>
+  </data>
+  <data name="RES_audit.parameters.requests.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.requests.idcause.rotext" xml:space="preserve">
+    <value>IDCause</value>
+  </data>
+  <data name="RES_audit.parameters.requests.idemployee.rotext" xml:space="preserve">
+    <value>IDEzamestnanec</value>
+  </data>
+  <data name="RES_audit.parameters.requests.notreaded.rotext" xml:space="preserve">
+    <value>Neprečítané</value>
+  </data>
+  <data name="RES_audit.parameters.requests.requestdate.rotext" xml:space="preserve">
+    <value>dátum</value>
+  </data>
+  <data name="RES_audit.parameters.requests.requesttype.rotext" xml:space="preserve">
+    <value>typ</value>
+  </data>
+  <data name="RES_audit.parameters.requests.status.rotext" xml:space="preserve">
+    <value>Štát</value>
+  </data>
+  <data name="RES_audit.parameters.requests.statuslevel.rotext" xml:space="preserve">
+    <value>Úroveň</value>
+  </data>
+  <data name="RES_audit.parameters.shiftassignments.coverage.rotext" xml:space="preserve">
+    <value>Pokrytie</value>
+  </data>
+  <data name="RES_audit.parameters.shiftassignments.idassignment.rotext" xml:space="preserve">
+    <value>ID pracovnej pozície</value>
+  </data>
+  <data name="RES_audit.parameters.shiftassignments.idshift.rotext" xml:space="preserve">
+    <value>ID rozvrhu</value>
+  </data>
+  <data name="RES_audit.parameters.shiftgroups.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.shiftgroups.name.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.advancedparameters.rotext" xml:space="preserve">
+    <value>Pokročilé parametre</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.allowcomplementary.rotext" xml:space="preserve">
+    <value>Umožňuje doplnkové</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.allowfloatingdata.rotext" xml:space="preserve">
+    <value>Umožňuje plávajúce údaje</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.applycenteronabsence.rotext" xml:space="preserve">
+    <value>Vzťahuje sa na všetky incidenty</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.areworkingdays.rotext" xml:space="preserve">
+    <value>Ide o pracovné dni</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.breakhours.rotext" xml:space="preserve">
+    <value>Odpočinkové hodiny</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.color.rotext" xml:space="preserve">
+    <value>Farba</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.description.rotext" xml:space="preserve">
+    <value>popis</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.endlimit.rotext" xml:space="preserve">
+    <value>EndLimit</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.expectedworkinghours.rotext" xml:space="preserve">
+    <value>odpracované hodiny</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.export.rotext" xml:space="preserve">
+    <value>Export kalendára</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.id.rotext" xml:space="preserve">
+    <value>Kód</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.idcauseholidays.rotext" xml:space="preserve">
+    <value>Odôvodnenie dovolenky</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.idcenter.rotext" xml:space="preserve">
+    <value>Nákladové strediská</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.idconceptbalance.rotext" xml:space="preserve">
+    <value>Kód konceptu</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.idgroup.rotext" xml:space="preserve">
+    <value>Kód skupiny</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.isfloating.rotext" xml:space="preserve">
+    <value>Plávajúce</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.isobsolete.rotext" xml:space="preserve">
+    <value>Zastarané</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.istemplate.rotext" xml:space="preserve">
+    <value>EsPlantilla</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.manuallimit.rotext" xml:space="preserve">
+    <value>Manuálny limit</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.name.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.shifttype.rotext" xml:space="preserve">
+    <value>Typ rozvrhu</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.shortname.rotext" xml:space="preserve">
+    <value>Krátky názov</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.startfloating.rotext" xml:space="preserve">
+    <value>Plávajúci štart</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.startlimit.rotext" xml:space="preserve">
+    <value>Počiatočný limit</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.typeshift.rotext" xml:space="preserve">
+    <value>typ</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.visibilitypermissions.rotext" xml:space="preserve">
+    <value>Viditeľnosť umožňuje</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.weblaboral.rotext" xml:space="preserve">
+    <value>WebLaboral</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.webvisible.rotext" xml:space="preserve">
+    <value>WebVisible</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.idconcept.rotext" xml:space="preserve">
+    <value>ID zostatku</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.maximumvalue.rotext" xml:space="preserve">
+    <value>Maximálna hodnota</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.maximumvaluetype.rotext" xml:space="preserve">
+    <value>Maximálny typ hodnoty</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.minimumvalue.rotext" xml:space="preserve">
+    <value>Minimálna hodnota</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.minimumvaluetype.rotext" xml:space="preserve">
+    <value>Typ minimálnej hodnoty</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.name.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.startvalue.rotext" xml:space="preserve">
+    <value>Počiatočná hodnota</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.startvaluetype.rotext" xml:space="preserve">
+    <value>Typ počiatočnej hodnoty</value>
+  </data>
+  <data name="RES_audit.parameters.sysroreportgroups.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.sysroreportgroups.name.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.sysroscheduletemplates.description.rotext" xml:space="preserve">
+    <value>popis</value>
+  </data>
+  <data name="RES_audit.parameters.sysroscheduletemplates.feasttemplate.rotext" xml:space="preserve">
+    <value>Slávnostné</value>
+  </data>
+  <data name="RES_audit.parameters.sysroscheduletemplates.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.sysroscheduletemplates.mode.rotext" xml:space="preserve">
+    <value>Režim</value>
+  </data>
+  <data name="RES_audit.parameters.sysroscheduletemplates.name.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.accessattempspermanentblock.rotext" xml:space="preserve">
+    <value>Pokusy o časovo neobmedzenú blokádu</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.accessattempstemporaryblock.rotext" xml:space="preserve">
+    <value>Pokusy o dočasné blokovanie</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.blockaccessvtdesktop.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.blockaccessvtportal.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.blockaccessvtsupervisor.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.dayspasswordexpired.rotext" xml:space="preserve">
+    <value>Dni exspirácie</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.differentaccesspointexceeded.rotext" xml:space="preserve">
+    <value>Počet rôznych autorizovaných ip</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.enabledaccesssupportrobotics.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.idpassport.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.onlyallowedadress.rotext" xml:space="preserve">
+    <value>Obmedzenia adresy IP</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.onlysameversionapp.rotext" xml:space="preserve">
+    <value>Používanie rovnakej verzie aplikácie ako server Visualtime</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.passwordsecuritylevel.rotext" xml:space="preserve">
+    <value>Zložitosť hesla</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.previouspasswordsstored.rotext" xml:space="preserve">
+    <value>Uloženie predchádzajúcich hesiel</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.requestvalidationcode.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.saveauthorizedpointdays.rotext" xml:space="preserve">
+    <value>Dni, počas ktorých je uložená autorizovaná ip</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshiftslayers.definition.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshiftslayers.id.rotext" xml:space="preserve">
+    <value>Číslo vrstvy</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshiftslayers.idshift.rotext" xml:space="preserve">
+    <value>Časový kód</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshiftslayers.idtype.rotext" xml:space="preserve">
+    <value>Kód typu vrstvy</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshiftslayers.parentlayerid.rotext" xml:space="preserve">
+    <value>Kód hornej vrstvy</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshifttimezones.begintime.rotext" xml:space="preserve">
+    <value>Čas začiatku</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshifttimezones.endtime.rotext" xml:space="preserve">
+    <value>Posledná hodina</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshifttimezones.idshift.rotext" xml:space="preserve">
+    <value>ID času</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshifttimezones.idzone.rotext" xml:space="preserve">
+    <value>ID zóny</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.accesslevel.rotext" xml:space="preserve">
+    <value>Úroveň prístupu</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.accessvalidation.rotext" xml:space="preserve">
+    <value>Typ validácie</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.category.rotext" xml:space="preserve">
+    <value>Kategória</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.description.rotext" xml:space="preserve">
+    <value>popis</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.fieldname.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.fieldtype.rotext" xml:space="preserve">
+    <value>typ</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.history.rotext" xml:space="preserve">
+    <value>Historické stránky</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.listvalues.rotext" xml:space="preserve">
+    <value>Zoznam hodnôt</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.requestcriteria.rotext" xml:space="preserve">
+    <value>Kritériá pre podávanie žiadostí</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.requestpermissions.rotext" xml:space="preserve">
+    <value>Povolenia na podávanie žiadostí</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.type.rotext" xml:space="preserve">
+    <value>typ</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.used.rotext" xml:space="preserve">
+    <value>Použité</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.duration.rotext" xml:space="preserve">
+    <value>Trvanie</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.idactivity.rotext" xml:space="preserve">
+    <value>ID aktivity</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.idcamera.rotext" xml:space="preserve">
+    <value>ID kamery</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.idzone.rotext" xml:space="preserve">
+    <value>ID zóny</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.interactionaction.rotext" xml:space="preserve">
+    <value>Akcia interakcie</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.interactionmode.rotext" xml:space="preserve">
+    <value>Spôsob interakcie</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.interactiveconfig.rotext" xml:space="preserve">
+    <value>Interaktívna konfigurácia</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.invalidduration.rotext" xml:space="preserve">
+    <value>Trvanie prístupu neplatné</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.invalidoutput.rotext" xml:space="preserve">
+    <value>Neplatné prístupové relé</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.mode.rotext" xml:space="preserve">
+    <value>Režim</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.ohp.rotext" xml:space="preserve">
+    <value>OHP</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.output.rotext" xml:space="preserve">
+    <value>Relé</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.picturex.rotext" xml:space="preserve">
+    <value>Pozícia X</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.picturey.rotext" xml:space="preserve">
+    <value>Pozícia Y</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.usedispkey.rotext" xml:space="preserve">
+    <value>Používanie tlačidiel terminálu</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.validationmode.rotext" xml:space="preserve">
+    <value>Režim overovania</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.allowantipassback.rotext" xml:space="preserve">
+    <value>Povolenie funkcie AntiPassBack</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.allowcustombutton.rotext" xml:space="preserve">
+    <value>Povoliť vlastné tlačidlo</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.allowmovereason.rotext" xml:space="preserve">
+    <value>Umožniť odôvodnenie</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.autodaylight.rotext" xml:space="preserve">
+    <value>Automatická zmena času</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.behavior.rotext" xml:space="preserve">
+    <value>Správanie</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.confdata.rotext" xml:space="preserve">
+    <value>Konfiguračné údaje</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.customduration.rotext" xml:space="preserve">
+    <value>Vynechanie trvania</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.customfield.rotext" xml:space="preserve">
+    <value>Personalizované pole</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.customfieldvalue.rotext" xml:space="preserve">
+    <value>Hodnota vlastného poľa</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.customoutput.rotext" xml:space="preserve">
+    <value>Vypúšťacie relé</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.description.rotext" xml:space="preserve">
+    <value>popis</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.disconnectioncounter.rotext" xml:space="preserve">
+    <value>Počítadlo odpojenia</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.isdifferentzonetime.rotext" xml:space="preserve">
+    <value>Časové pásmo</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.location.rotext" xml:space="preserve">
+    <value>Umiestnenie</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.other.rotext" xml:space="preserve">
+    <value>Ďalšia stránka</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.rigidmode.rotext" xml:space="preserve">
+    <value>Pevný režim</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.sirensoutput.rotext" xml:space="preserve">
+    <value>Siréna</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.skin.rotext" xml:space="preserve">
+    <value>Koža</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.supportedmodes.rotext" xml:space="preserve">
+    <value>Podporované režimy</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.supportedoutputs.rotext" xml:space="preserve">
+    <value>Podporované relé</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.supportedsirens.rotext" xml:space="preserve">
+    <value>Podporované sirény</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.timezonename.rotext" xml:space="preserve">
+    <value>Názov časového pásma</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.type.rotext" xml:space="preserve">
+    <value>typ</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.zonetime.rotext" xml:space="preserve">
+    <value>Časové pásmo</value>
+  </data>
+  <data name="RES_audit.parameters.terminalsirens.duration.rotext" xml:space="preserve">
+    <value>Trvanie</value>
+  </data>
+  <data name="RES_audit.parameters.terminalsirens.hour.rotext" xml:space="preserve">
+    <value>čas</value>
+  </data>
+  <data name="RES_audit.parameters.terminalsirens.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.terminalsirens.idterminal.rotext" xml:space="preserve">
+    <value>ID terminálu</value>
+  </data>
+  <data name="RES_audit.parameters.terminalsirens.weekday.rotext" xml:space="preserve">
+    <value>Deň v týždni</value>
+  </data>
+  <data name="RES_audit.parameters.timezones.description.rotext" xml:space="preserve">
+    <value>popis</value>
+  </data>
+  <data name="RES_audit.parameters.timezones.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.timezones.name.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.zoneplanes.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.zoneplanes.name.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.zoneplanes.planeimage.rotext" xml:space="preserve">
+    <value>Obrázok plánu</value>
+  </data>
+  <data name="RES_audit.parameters.zones.begin.rotext" xml:space="preserve">
+    <value>domov</value>
+  </data>
+  <data name="RES_audit.parameters.zones.color.rotext" xml:space="preserve">
+    <value>Farba</value>
+  </data>
+  <data name="RES_audit.parameters.zones.description.rotext" xml:space="preserve">
+    <value>popis</value>
+  </data>
+  <data name="RES_audit.parameters.zones.end.rotext" xml:space="preserve">
+    <value>Koniec</value>
+  </data>
+  <data name="RES_audit.parameters.zones.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.zones.idcamera.rotext" xml:space="preserve">
+    <value>ID kamery</value>
+  </data>
+  <data name="RES_audit.parameters.zones.idparent.rotext" xml:space="preserve">
+    <value>ID rodičovskej zóny</value>
+  </data>
+  <data name="RES_audit.parameters.zones.idplane.rotext" xml:space="preserve">
+    <value>ID plánu zóny</value>
+  </data>
+  <data name="RES_audit.parameters.zones.idzone.rotext" xml:space="preserve">
+    <value>ID zóny</value>
+  </data>
+  <data name="RES_audit.parameters.zones.isworkingzone.rotext" xml:space="preserve">
+    <value>Typ účtovníctva pre danú oblasť</value>
+  </data>
+  <data name="RES_audit.parameters.zones.name.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_audit.parameters.zones.proportion.rotext" xml:space="preserve">
+    <value>Pomer</value>
+  </data>
+  <data name="RES_audit.parameters.zones.weekday.rotext" xml:space="preserve">
+    <value>Deň v týždni</value>
+  </data>
+  <data name="RES_audit.parameters.zones.x1.rotext" xml:space="preserve">
+    <value>Pozícia X1</value>
+  </data>
+  <data name="RES_audit.parameters.zones.x2.rotext" xml:space="preserve">
+    <value>Pozícia X2</value>
+  </data>
+  <data name="RES_audit.parameters.zones.y1.rotext" xml:space="preserve">
+    <value>Pozícia Y1</value>
+  </data>
+  <data name="RES_audit.parameters.zones.y2.rotext" xml:space="preserve">
+    <value>Pozícia Y2</value>
+  </data>
+  <data name="RES_audit.pmc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.pmc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.pmcimg.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.pw-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.pyc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.pyc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.pycimg.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.rosfheader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.state.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.stylesheetscontainer.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.t.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.t.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.tc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.tc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.title.rotext" xml:space="preserve">
+    <value>Zdieľanie auditu</value>
+  </data>
+  <data name="RES_audit.title_audit_pathway.rotext" xml:space="preserve">
+    <value>Audit</value>
+  </data>
+  <data name="RES_audit.tl.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.tl.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtbegindate.emptyvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;vyžadované pole&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtbegindate.invalidvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;neplatné pole&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtbegindate.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtbegindate.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtbegindate.tooltipmessage.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtbegintime.emptyvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;vyžadované pole&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtbegintime.invalidvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;neplatné pole&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtbegintime.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtbegintime.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtbegintime.tooltipmessage.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtclientlocation.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtclientlocation.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailaction.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailaction.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailclientlocation.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailclientlocation.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetaildatetime.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetaildatetime.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetaildescription.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetaildescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailobjectname.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailobjectname.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailobjecttype.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailobjecttype.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailusername.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailusername.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtenddate.emptyvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;vyžadované pole&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtenddate.invalidvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;neplatné pole&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtenddate.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtenddate.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtenddate.tooltipmessage.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtendtime.emptyvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;vyžadované pole&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtendtime.invalidvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;neplatné pole&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtendtime.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtendtime.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtendtime.tooltipmessage.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.y.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.objecttype.tpassportpin.rotext" xml:space="preserve">
+    <value>PIN</value>
+  </data>
+  <data name="RES_audit.parameters.zones.ipsrestriction.rotext" xml:space="preserve">
+    <value>Pridelené IP adresy</value>
+  </data>
+  <data name="RES_audit.parameters.zones.timezone.rotext" xml:space="preserve">
+    <value>Časové pásmo</value>
+  </data>
+  <data name="RES_audit.parameters.zones.mapinfo.rotext" xml:space="preserve">
+    <value>Mapa</value>
+  </data>
+  <data name="RES_audit.parameters.zones.area.rotext" xml:space="preserve">
+    <value>Oblasť</value>
+  </data>
+  <data name="RES_audit.parameters.zones.capacityvisible.rotext" xml:space="preserve">
+    <value>Kapacita</value>
+  </data>
+  <data name="RES_audit.parameters.zones.isemergencyzone.rotext" xml:space="preserve">
+    <value>Núdzová oblasť</value>
+  </data>
+  <data name="RES_audit.parameters.zones.zonenameaslocation.rotext" xml:space="preserve">
+    <value>Názov ako umiestnenie</value>
+  </data>
+  <data name="RES_audit.parameters.zones.idzonetype.rotext" xml:space="preserve">
+    <value>Zóna prítomnosti</value>
+  </data>
+  <data name="RES_audit.parameters.zones.idzonesupervisor.rotext" xml:space="preserve">
+    <value>Vedúci oblasti</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.autoapproverequestsdr.rotext" xml:space="preserve">
+    <value>Aprobación automática</value>
+  </data>
+  <data name="RES_audit.message.tdocument.ainsert.rotext" xml:space="preserve">
+    <value>Vytvorenie nového dokumentu</value>
+  </data>
+  <data name="RES_audit.message.tdocumenttemplate.adelete.rotext" xml:space="preserve">
+    <value>Se ha borrado la plantilla de documento</value>
+  </data>
+  <data name="RES_audit.message.tdocumenttemplate.ainsert.rotext" xml:space="preserve">
+    <value>Se ha creado la plantilla de documento</value>
+  </data>
+  <data name="RES_audit.message.tdocumenttemplate.aupdate.rotext" xml:space="preserve">
+    <value>Se ha modificado la plantilla de documento</value>
+  </data>
+  <data name="RES_audit.message.ta3payrollimport.aexecuted.rotext" xml:space="preserve">
+    <value>$@message@</value>
+  </data>
+  <data name="RES_audit.objecttype.ta3payrollimport.rotext" xml:space="preserve">
+    <value>Importación nómina A3</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.enabled.rotext" xml:space="preserve">
+    <value>Aktivované</value>
+  </data>
+  <data name="RES_audit.objecttype.tcollective.rotext" xml:space="preserve">
+    <value>Kolektívne</value>
+  </data>
+  <data name="RES_audit.objecttype.tcollectiveemployees.rotext" xml:space="preserve">
+    <value>Usuarios de Colectivo</value>
+  </data>
+  <data name="RES_audit.objecttype.tcollectivedefinition.rotext" xml:space="preserve">
+    <value>Definición de Colectivo</value>
+  </data>
+  <data name="RES_audit.message.tcollectiveemployees.aselect.rotext" xml:space="preserve">
+    <value>Se ha consultado la lista de usuarios inluidos en la definición de colectivo $@CollectiveExpression@. Se han mostrado un total de $@TotalEmployeesShown@.</value>
+  </data>
+  <data name="RES_audit.message.tcollective.aupdate.rotext" xml:space="preserve">
+    <value>Názov alebo popis kolektívu $@CollectiveName@ bol zmenený.</value>
+  </data>
+  <data name="RES_audit.message.tcollective.ainsert.rotext" xml:space="preserve">
+    <value>Kolektív $@CollectiveName@ bol vytvorený</value>
+  </data>
+  <data name="RES_audit.message.tcollective.adelete.rotext" xml:space="preserve">
+    <value>Kolektív $@CollectiveName@ bol odstránený</value>
+  </data>
+  <data name="RES_audit.message.tcollectivedefinition.ainsert.rotext" xml:space="preserve">
+    <value>Se ha creado una nueva definición para el colectivo $@CollectiveName@: $@DefinitionDescription@.</value>
+  </data>
+  <data name="RES_audit.message.tcollectivedefinition.aupdate.rotext" xml:space="preserve">
+    <value>Definícia kolektívu $@CollectiveName@ bola upravená: $@ChangeDetails@</value>
+  </data>
+  <data name="RES_audit.message.tdailyrecord.ainsert.rotext" xml:space="preserve">
+    <value>Bola vytvorená žiadosť o vyhlásenie pracovného dňa</value>
+  </data>
+  <data name="RES_audit.message.tdailyrecord.aselect.rotext" xml:space="preserve">
+    <value>Konzultovalo sa vyhlásenie z daného dňa</value>
+  </data>
+  <data name="RES_audit.message.tcommunique.aselect.rotext" xml:space="preserve">
+    <value>Komuniké bolo prečítané</value>
+  </data>
+  <data name="RES_audit.message.tcommunique.aupdate.rotext" xml:space="preserve">
+    <value>Na oznámenie bolo odpovedané</value>
+  </data>
+  <data name="RES_audit.message.tcollective.aselect.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tcollectivedefinition.adelete.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.treport.aupdate.rotext" xml:space="preserve">
+    <value>Plánovanie bolo aktualizované: $@reportPlannedExecutions@</value>
+  </data>
+  <data name="RES_audit.message.treport.ainsert.rotext" xml:space="preserve">
+    <value>Plánovanie bolo vložené: $@reportPlannedExecutions@</value>
+  </data>
+  <data name="RES_audit.message.treport.adelete.rotext" xml:space="preserve">
+    <value>Plánovanie bolo odstránené: $@reportPlannedExecutions@</value>
+  </data>
+</root>

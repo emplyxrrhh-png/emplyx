@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Font Name="Tahoma" Size="8.25" />
+  <Comment CommentText="UsersAdmin">
+    <Position X="0.5" Y="0.5" Height="0.49" Width="0.971" />
+  </Comment>
+  <Comment CommentText="Namespace: Robotics.UsersAdmin.Business&#xD;&#xA;File: UsersAdminBusiness.dll">
+    <Position X="3.063" Y="0.5" Height="0.427" Width="2.773" />
+  </Comment>
+  <Comment CommentText="Namespace: Robotics.UsersAdmin.DataAccess&#xD;&#xA;File: UsersAdminDataAccess.dll">
+    <Position X="0.5" Y="6.75" Height="0.5" Width="2.773" />
+  </Comment>
+  <Comment CommentText="Namespace: Robotics.UsersAdmin.DataSets&#xD;&#xA;File: UsersAdminDataSets.dll">
+    <Position X="0.5" Y="9" Height="0.5" Width="2.773" />
+  </Comment>
+  <Class Name="Robotics.UsersAdmin.Business.EmployeesBusiness">
+    <Position X="3.5" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>EmployeesBusiness.vb</FileName>
+      <HashCode>EEQCgAAABAAAAAAAAAAAQAEAgAAAIAAAAAAAAgAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_data" Hidden="true" />
+      <Field Name="_idApplication" Hidden="true" />
+      <Field Name="_page" Hidden="true" />
+      <Field Name="_passport" Hidden="true" />
+      <Method Name="CheckEmployeesPermissions" Hidden="true" />
+      <Method Name="Load" Hidden="true" />
+      <Method Name="New" Hidden="true" />
+      <Method Name="SetImages" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Robotics.UsersAdmin.Business.Features">
+    <Position X="0.5" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Features.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Method Name="New" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Robotics.UsersAdmin.Business.FeaturesBusiness">
+    <Position X="0.5" Y="1.25" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>FeaturesBusiness.vb</FileName>
+      <HashCode>AAQCAAAEBARAARIAAAAAQAAFAAAAggAAAAAAAgAAAIA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_data" Hidden="true" />
+      <Field Name="_featureType" Hidden="true" />
+      <Field Name="_idPassport" Hidden="true" />
+      <Field Name="_passport" Hidden="true" />
+      <Method Name="CalculateGroupValues" Hidden="true" />
+      <Method Name="CalculateGroupValuesRecursive" Hidden="true" />
+      <Method Name="CheckFeaturesPermissions" Hidden="true" />
+      <Method Name="New" Hidden="true" />
+      <Method Name="UpdateChildPermissions" Hidden="true" />
+      <Method Name="UpdateRows" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Robotics.UsersAdmin.DataAccess.EmployeesAccess">
+    <Position X="4.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+    <Members>
+      <Method Name="EmployeesAccess" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Robotics.UsersAdmin.DataAccess.FeaturesAccess">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+    <Members>
+      <Method Name="FeaturesAccess" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Robotics.UsersAdmin.DataSets.EmployeeGroupsDataSet" Collapsed="true">
+    <Position X="2.25" Y="9.75" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Robotics.UsersAdmin.DataSets.FeaturesDataSet" Collapsed="true">
+    <Position X="0.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Robotics.UsersAdmin.Business.EmployeeGroupsBusiness">
+    <Position X="3.5" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>EmployeeGroupsBusiness.vb</FileName>
+      <HashCode>EEQCAAEEBAQAAQAAAAAAQgABAAAAgAAAAAgAAgAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_data" Hidden="true" />
+      <Field Name="_idApplication" Hidden="true" />
+      <Field Name="_idPassport" Hidden="true" />
+      <Field Name="_passport" Hidden="true" />
+      <Method Name="CalculateChildPermissions" Hidden="true" />
+      <Method Name="CalculateChildsPermission" Hidden="true" />
+      <Method Name="CascadeChanges" Hidden="true" />
+      <Method Name="CheckEmployeesPermissions" Hidden="true" />
+      <Method Name="New" Hidden="true" />
+      <Method Name="UpdateRows" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Robotics.UsersAdmin.DataAccess.EmployeeGroupsAccess">
+    <Position X="2.25" Y="7.5" Width="2" />
+    <TypeIdentifier />
+    <Members>
+      <Method Name="EmployeeGroupsAccess" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Robotics.UsersAdmin.DataSets.EmployeesDataSet" Collapsed="true">
+    <Position X="4.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+</ClassDiagram>

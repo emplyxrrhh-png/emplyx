@@ -1,0 +1,22 @@
+<div data-options="dxView : { name: 'leaves', title: 'leaves', disableCache: true } ">
+
+	<div id="smallUserInfo"></div>
+    <div data-bind="dxLoadPanel: loadingPanel"> </div>
+    <div data-bind="dxTabs: tabPanelOptions" class="innerTabPanelList">
+        <div data-options="dxTemplate : { name: 'title' } ">
+            <div data-bind="css: $data.cssClass "></div>
+        </div>
+    </div>
+    <div id="panelsContent" style="height:90%">
+        <!-- ko if: selectedView() == 1 -->
+        <!--ko with: myLeavesBlock-->
+        <div data-options="dxViewPlaceholder: { viewName: 'myLeaves' } "></div>
+        <!-- /ko-->
+        <!-- /ko -->
+        <!-- ko if: selectedView() == 2 -->
+        <!--ko with: myLeavesAlertsBlock-->
+        <div data-options="dxViewPlaceholder: { viewName: 'myLeavesAlerts' } "></div>
+        <!-- /ko-->
+        <!-- /ko -->
+    </div>
+</div>

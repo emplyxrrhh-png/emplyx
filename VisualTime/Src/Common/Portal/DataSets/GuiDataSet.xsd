@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GuiDataSet" targetNamespace="http://tempuri.org/GuiDataSet.xsd" xmlns:mstns="http://tempuri.org/GuiDataSet.xsd" xmlns="http://tempuri.org/GuiDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GuiDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="GuiDataSet" msprop:Generator_DataSetName="GuiDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Gui" msprop:Generator_UserTableName="Gui" msprop:Generator_RowDeletedName="GuiRowDeleted" msprop:Generator_TableClassName="GuiDataTable" msprop:Generator_RowChangedName="GuiRowChanged" msprop:Generator_RowClassName="GuiRow" msprop:Generator_RowChangingName="GuiRowChanging" msprop:Generator_RowEvArgName="GuiRowChangeEvent" msprop:Generator_RowEvHandlerName="GuiRowChangeEventHandler" msprop:Generator_TablePropName="Gui" msprop:Generator_TableVarName="tableGui" msprop:Generator_RowDeletingName="GuiRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDPath" msprop:Generator_UserColumnName="IDPath" msprop:Generator_ColumnPropNameInRow="IDPath" msprop:Generator_ColumnVarNameInTable="columnIDPath" msprop:Generator_ColumnPropNameInTable="IDPathColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LanguageReference" msprop:Generator_UserColumnName="LanguageReference" msprop:Generator_ColumnPropNameInRow="LanguageReference" msprop:Generator_ColumnVarNameInTable="columnLanguageReference" msprop:Generator_ColumnPropNameInTable="LanguageReferenceColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="URL" msprop:Generator_UserColumnName="URL" msprop:Generator_ColumnPropNameInRow="URL" msprop:Generator_ColumnVarNameInTable="columnURL" msprop:Generator_ColumnPropNameInTable="URLColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IconURL" msprop:Generator_UserColumnName="IconURL" msprop:Generator_ColumnPropNameInRow="IconURL" msprop:Generator_ColumnVarNameInTable="columnIconURL" msprop:Generator_ColumnPropNameInTable="IconURLColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Parameters" msprop:Generator_UserColumnName="Parameters" msprop:Generator_ColumnPropNameInRow="Parameters" msprop:Generator_ColumnVarNameInTable="columnParameters" msprop:Generator_ColumnPropNameInTable="ParametersColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Priority" msprop:Generator_UserColumnName="Priority" msprop:Generator_ColumnPropNameInRow="Priority" msprop:Generator_ColumnVarNameInTable="columnPriority" msprop:Generator_ColumnPropNameInTable="PriorityColumn" type="xs:int" />
+              <xs:element name="RequiredFeatures" msprop:Generator_UserColumnName="RequiredFeatures" msprop:Generator_ColumnPropNameInRow="RequiredFeatures" msprop:Generator_ColumnVarNameInTable="columnRequiredFeatures" msprop:Generator_ColumnPropNameInTable="RequiredFeaturesColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequiredFunctionalities" msprop:Generator_UserColumnName="RequiredFunctionalities" msprop:Generator_ColumnPropNameInRow="RequiredFunctionalities" msprop:Generator_ColumnVarNameInTable="columnRequiredFunctionalities" msprop:Generator_ColumnPropNameInTable="RequiredFunctionalitiesColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Edition" msprop:Generator_UserColumnName="Edition" msprop:Generator_ColumnPropNameInRow="Edition" msprop:Generator_ColumnVarNameInTable="columnEdition" msprop:Generator_ColumnPropNameInTable="EditionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Gui" />
+      <xs:field xpath="mstns:IDPath" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

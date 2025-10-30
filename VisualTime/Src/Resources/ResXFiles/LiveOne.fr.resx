@@ -1,0 +1,1623 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_accrualsquery.accrualdaily.rotext" xml:space="preserve">
+    <value>Agenda</value>
+  </data>
+  <data name="RES_accrualsquery.accrualsgridheader.rotext" xml:space="preserve">
+    <value>Mes soldes au</value>
+  </data>
+  <data name="RES_accrualsquery.accrualtotal.rotext" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="RES_accrualsquery.accrualtype.monthly.rotext" xml:space="preserve">
+    <value>Mensuel</value>
+  </data>
+  <data name="RES_accrualsquery.accrualtype.year.rotext" xml:space="preserve">
+    <value>Annuel</value>
+  </data>
+  <data name="RES_accrualsquery.btncancel.text.rotext" xml:space="preserve">
+    <value>Revenir</value>
+  </data>
+  <data name="RES_accrualsquery.btnedit.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_accrualsquery.btnoptions.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_accrualsquery.chkaccrualsquery.text.rotext" xml:space="preserve">
+    <value>Consultation des heures travaillées</value>
+  </data>
+  <data name="RES_accrualsquery.gridaccrualsquerys.text.rotext" xml:space="preserve">
+    <value>Mes soldes</value>
+  </data>
+  <data name="RES_accrualsquery.gridbuttonselectdate.rotext" xml:space="preserve">
+    <value>Sélectionner date</value>
+  </data>
+  <data name="RES_accrualsquery.gridbuttonshowpunches.rotext" xml:space="preserve">
+    <value>Mes pointages à ce jour</value>
+  </data>
+  <data name="RES_calendar.absenceinfo.incidencemessage.rotext" xml:space="preserve">
+    <value>Absence pour ${1}</value>
+  </data>
+  <data name="RES_calendar.absenceinfo.message.rotext" xml:space="preserve">
+    <value>En ${1} jusqu´à ${2}</value>
+  </data>
+  <data name="RES_calendar.bnnew.text.rotext" xml:space="preserve">
+    <value>Nouv. dem.</value>
+  </data>
+  <data name="RES_calendar.btnaccept.text.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_calendar.btncancel.text.rotext" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="RES_calendar.calendar.rotext" xml:space="preserve">
+    <value>Mon calendrier</value>
+  </data>
+  <data name="RES_calendar.chkincidencelist.text.rotext" xml:space="preserve">
+    <value>Sélectionnez motif</value>
+  </data>
+  <data name="RES_calendar.gridbuttonshowcalendarinfo.rotext" xml:space="preserve">
+    <value>Informations générales</value>
+  </data>
+  <data name="RES_calendar.gridbuttonshowlegend.rotext" xml:space="preserve">
+    <value>Légende horaires</value>
+  </data>
+  <data name="RES_calendar.gridbuttonshowrequests.rotext" xml:space="preserve">
+    <value>Voir demandes</value>
+  </data>
+  <data name="RES_calendarinfo.btncancel.text.rotext" xml:space="preserve">
+    <value>Revenir</value>
+  </data>
+  <data name="RES_calendarinfo.calendarinfogridheader.rotext" xml:space="preserve">
+    <value>Informations générales calendrier</value>
+  </data>
+  <data name="RES_calendarinfo.gridcalendarinfo.text.rotext" xml:space="preserve">
+    <value>Informations calendrier</value>
+  </data>
+  <data name="RES_calendarinfo.vacationsresumeheader.disponible.rotext" xml:space="preserve">
+    <value>Solde actuel</value>
+  </data>
+  <data name="RES_calendarinfo.vacationsresumeheader.done.rotext" xml:space="preserve">
+    <value>Déjà pris</value>
+  </data>
+  <data name="RES_calendarinfo.vacationsresumeheader.lasting.rotext" xml:space="preserve">
+    <value>Approuvées et en attente d´être utilisées</value>
+  </data>
+  <data name="RES_calendarinfo.vacationsresumeheader.pending.rotext" xml:space="preserve">
+    <value>Traitement en attente</value>
+  </data>
+  <data name="RES_calendarinfo.vacationsresumeheader.prevision.rotext" xml:space="preserve">
+    <value>Solde résultant prévu</value>
+  </data>
+  <data name="RES_calendarinfo.vacationsresumevalue.daysvalue.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${1}&lt;/b&gt; jours</value>
+  </data>
+  <data name="RES_calendarinfo.vacationsresumevalue.onedayvalue.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${1}&lt;/b&gt; jour</value>
+  </data>
+  <data name="RES_correctpunch.btncancel.text.rotext" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="RES_correctpunch.btnok.text.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_correctpunch.chkincidencelist.text.rotext" xml:space="preserve">
+    <value>Motif</value>
+  </data>
+  <data name="RES_correctpunch.cmbincidencelist.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_correctpunch.ddate.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_correctpunch.forbiddenpunchtitle.rotext" xml:space="preserve">
+    <value>Pointage non effectué</value>
+  </data>
+  <data name="RES_correctpunch.headertop.text.rotext" xml:space="preserve">
+    <value>Corriger pointage</value>
+  </data>
+  <data name="RES_correctpunch.lbldate.text.rotext" xml:space="preserve">
+    <value>Date du pointage :</value>
+  </data>
+  <data name="RES_correctpunch.lbldate.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_correctpunch.lblincidencelabel.text.rotext" xml:space="preserve">
+    <value>Incidence</value>
+  </data>
+  <data name="RES_correctpunch.lblincidencelabel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_correctpunch.lblobservations.text.rotext" xml:space="preserve">
+    <value>Remarques</value>
+  </data>
+  <data name="RES_correctpunch.lblobservations.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_correctpunch.lbltime.text.rotext" xml:space="preserve">
+    <value>Heure du pointage :</value>
+  </data>
+  <data name="RES_correctpunch.lbltime.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_correctpunch.txtobservations.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_correctpunch.txttime.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_datepicker.btnaccept.text.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_datepicker.btncancel.text.rotext" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="RES_datepicker.selectdate.rotext" xml:space="preserve">
+    <value>Sélectionnez une date</value>
+  </data>
+  <data name="RES_default.lblclicktoenter.text.rotext" xml:space="preserve">
+    <value>Appuyez pour accéder</value>
+  </data>
+  <data name="RES_default.lblclicktoenter.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_default.title.rotext" xml:space="preserve">
+    <value>Visualtime LivePortal</value>
+  </data>
+  <data name="RES_entrybox.btnaccept.text.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_entrybox.btncancel.text.rotext" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="RES_entrybox.chkincidencelist.text.rotext" xml:space="preserve">
+    <value>Sélectionnez motif</value>
+  </data>
+  <data name="RES_entrybox.gridrequests.text.rotext" xml:space="preserve">
+    <value>Boîte de réception</value>
+  </data>
+  <data name="RES_exchangeshiftrequest.btnaccept.text.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_exchangeshiftrequest.btncancel.text.rotext" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="RES_exchangeshiftrequest.title_exchangeshiftrequest.text.rotext" xml:space="preserve">
+    <value>Demande d´échange d´horaires</value>
+  </data>
+  <data name="RES_exchangeshiftrequest.title_exchangeshiftrequest.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_generic.accept.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_generic.back.rotext" xml:space="preserve">
+    <value>Revenir</value>
+  </data>
+  <data name="RES_generic.cancel.rotext" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="RES_generic.delete.rotext" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="RES_incidencelist.btnaccept.text.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_incidencelist.btncancel.text.rotext" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="RES_incidencelist.chkincidencelist.text.rotext" xml:space="preserve">
+    <value>Sélectionnez motif</value>
+  </data>
+  <data name="RES_incidencerequest.btncancel.text.rotext" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="RES_incidencerequest.btnok.text.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_incidencerequest.chkcause.text.rotext" xml:space="preserve">
+    <value>Justification</value>
+  </data>
+  <data name="RES_incidencerequest.cmbincidencelist.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_incidencerequest.ddate.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_incidencerequest.headertop.text.rotext" xml:space="preserve">
+    <value>Prévision des heures d'absence</value>
+  </data>
+  <data name="RES_incidencerequest.lbldate.text.rotext" xml:space="preserve">
+    <value>Date :</value>
+  </data>
+  <data name="RES_incidencerequest.lbldate.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_incidencerequest.lblfrom.text.rotext" xml:space="preserve">
+    <value>Entre</value>
+  </data>
+  <data name="RES_incidencerequest.lblfrom.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_incidencerequest.lblincidencelabel.text.rotext" xml:space="preserve">
+    <value>Justification</value>
+  </data>
+  <data name="RES_incidencerequest.lblincidencelabel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_incidencerequest.lblobservations.text.rotext" xml:space="preserve">
+    <value>Remarques</value>
+  </data>
+  <data name="RES_incidencerequest.lblobservations.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_incidencerequest.lbltime.text.rotext" xml:space="preserve">
+    <value>Durée maximale :</value>
+  </data>
+  <data name="RES_incidencerequest.lbltime.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_incidencerequest.lblto.text.rotext" xml:space="preserve">
+    <value>et les</value>
+  </data>
+  <data name="RES_incidencerequest.lblto.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_incidencerequest.txtfrom.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_incidencerequest.txtobservations.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_incidencerequest.txttime.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_incidencerequest.txtto.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_login.chkautoconn.text.rotext" xml:space="preserve">
+    <value>Connecter automatiquement</value>
+  </data>
+  <data name="RES_login.chkrempass.text.rotext" xml:space="preserve">
+    <value>Se souvenir du mot de passe</value>
+  </data>
+  <data name="RES_login.chkselector.text.rotext" xml:space="preserve">
+    <value>Sélection mode authentification</value>
+  </data>
+  <data name="RES_login.chkselector.title.rotext" xml:space="preserve">
+    <value>Sélection mode authentification</value>
+  </data>
+  <data name="RES_login.chksellang.text.rotext" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+  <data name="RES_login.chksellang.title.rotext" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+  <data name="RES_login.employeepassportrequired.message.rotext" xml:space="preserve">
+    <value>Utilisateur sans utilisateur associé.</value>
+  </data>
+  <data name="RES_login.invalidlicense.description.rotext" xml:space="preserve">
+    <value>Impossible de démarrer le portail de l’utilisateur</value>
+  </data>
+  <data name="RES_login.invalidlicense.title.rotext" xml:space="preserve">
+    <value>Licence incorrecte</value>
+  </data>
+  <data name="RES_login.langcat.rotext" xml:space="preserve">
+    <value>Catalan</value>
+  </data>
+  <data name="RES_login.langeng.rotext" xml:space="preserve">
+    <value>Anglais</value>
+  </data>
+  <data name="RES_login.langesp.rotext" xml:space="preserve">
+    <value>Espagnol</value>
+  </data>
+  <data name="RES_login.language.cat.rotext" xml:space="preserve">
+    <value>Catalan</value>
+  </data>
+  <data name="RES_login.language.eng.rotext" xml:space="preserve">
+    <value>Anglais</value>
+  </data>
+  <data name="RES_login.language.esp.rotext" xml:space="preserve">
+    <value>Castillan</value>
+  </data>
+  <data name="RES_login.language.installed.rotext" xml:space="preserve">
+    <value>Installé</value>
+  </data>
+  <data name="RES_login.language.notinstalled.rotext" xml:space="preserve">
+    <value>Non installé</value>
+  </data>
+  <data name="RES_login.lblloading.text.rotext" xml:space="preserve">
+    <value>Chargement en cours...</value>
+  </data>
+  <data name="RES_login.lblloading.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_login.lblloginpass.text.rotext" xml:space="preserve">
+    <value>Mot de passe:</value>
+  </data>
+  <data name="RES_login.lblloginpass.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_login.lblloginuser.text.rotext" xml:space="preserve">
+    <value>Utilisateur :</value>
+  </data>
+  <data name="RES_login.lblloginuser.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_login.messagebox.text.rotext" xml:space="preserve">
+    <value>Texte du message</value>
+  </data>
+  <data name="RES_login.msgbtncancel.text.rotext" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="RES_login.msgbtnok.text.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_login.noliveportalterminalassigned.message.rotext" xml:space="preserve">
+    <value>Vous n’avez pas d’autorisations pour utiliser le portail de l’utilisateur.</value>
+  </data>
+  <data name="RES_login.rbtncancel.text.rotext" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="RES_login.rbtnconnect.text.rotext" xml:space="preserve">
+    <value>Connecter</value>
+  </data>
+  <data name="RES_login.rbtnok.text.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_login.rbtnoptions.text.rotext" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="RES_login.title.rotext" xml:space="preserve">
+    <value>VTLive Portal - Connexion</value>
+  </data>
+  <data name="RES_login.txtpassword.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_login.txtusername.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_login.userpassword.rotext" xml:space="preserve">
+    <value>Utilisateur et mot de passe</value>
+  </data>
+  <data name="RES_main.accessdenied.description.rotext" xml:space="preserve">
+    <value>Vous n´avez pas d´autorisations d´accès</value>
+  </data>
+  <data name="RES_main.accessdenied.title.rotext" xml:space="preserve">
+    <value>Accès refusé</value>
+  </data>
+  <data name="RES_main.button.cancel.rotext" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="RES_main.button.ok.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_main.calendarlegendtitle.rotext" xml:space="preserve">
+    <value>Légende</value>
+  </data>
+  <data name="RES_main.changepwd.incorrectpassword.message.rotext" xml:space="preserve">
+    <value>Le nouveau mot de passe n´est pas valide.</value>
+  </data>
+  <data name="RES_main.changepwd.invalidnewpassword.message.rotext" xml:space="preserve">
+    <value>Les mots de passe sont différents</value>
+  </data>
+  <data name="RES_main.changepwd.invalidoldpassword.message.rotext" xml:space="preserve">
+    <value>Le mot de passe précédent ne correspond pas.</value>
+  </data>
+  <data name="RES_main.changeshift.dateendincorrectdesc.rotext" xml:space="preserve">
+    <value>La date de fin présente un format incorrect.</value>
+  </data>
+  <data name="RES_main.changeshift.dateendincorrecttitle.rotext" xml:space="preserve">
+    <value>Date fin incorrecte</value>
+  </data>
+  <data name="RES_main.changeshift.datestartincorrectdesc.rotext" xml:space="preserve">
+    <value>La date présente un format incorrect.</value>
+  </data>
+  <data name="RES_main.changeshift.datestartincorrecttitle.rotext" xml:space="preserve">
+    <value>Date de début incorrecte</value>
+  </data>
+  <data name="RES_main.changeshift.selectshiftdesc.rotext" xml:space="preserve">
+    <value>Vous devez sélectionner un horaire à attribuer.</value>
+  </data>
+  <data name="RES_main.changeshift.selectshifttitle.rotext" xml:space="preserve">
+    <value>Sélectionnez un horaire</value>
+  </data>
+  <data name="RES_main.changeshift.timeincorrectdesc.rotext" xml:space="preserve">
+    <value>Heure de début de l´horaire flottant incorrecte.</value>
+  </data>
+  <data name="RES_main.changeshift.timeincorrecttitle.rotext" xml:space="preserve">
+    <value>Heure incorrecte</value>
+  </data>
+  <data name="RES_main.correctpunch.changestate.error.description.rotext" xml:space="preserve">
+    <value>Il a été impossible de modifier l´état.${1}</value>
+  </data>
+  <data name="RES_main.correctpunch.changestate.error.title.rotext" xml:space="preserve">
+    <value>Erreur lors du changement d´état</value>
+  </data>
+  <data name="RES_main.correctpunch.dateincorrectdesc.rotext" xml:space="preserve">
+    <value>La date présente un format incorrect.</value>
+  </data>
+  <data name="RES_main.correctpunch.dateincorrecttitle.rotext" xml:space="preserve">
+    <value>Date incorrecte</value>
+  </data>
+  <data name="RES_main.correctpunch.incorrecthournonumeric.rotext" xml:space="preserve">
+    <value>L´heure n´est pas valide.</value>
+  </data>
+  <data name="RES_main.correctpunch.incorrecthourunreal.rotext" xml:space="preserve">
+    <value>L´heure ne peut être comprise qu´entre 0 et 23 heures</value>
+  </data>
+  <data name="RES_main.correctpunch.incorrectminuteunreal.rotext" xml:space="preserve">
+    <value>Les minutes affichent l´heure réelle (0 et 59)</value>
+  </data>
+  <data name="RES_main.correctpunch.incorrecttime.rotext" xml:space="preserve">
+    <value>L´heure n´est pas valide.</value>
+  </data>
+  <data name="RES_main.correctpunch.selectcausedesc.rotext" xml:space="preserve">
+    <value>Vous devez sélectionner une justification</value>
+  </data>
+  <data name="RES_main.correctpunch.selectcausetitle.rotext" xml:space="preserve">
+    <value>Sélectionnez justification</value>
+  </data>
+  <data name="RES_main.correctpunch.timebeforelastpunch.rotext" xml:space="preserve">
+    <value>L´heure ne peut pas être antérieure au dernier pointage</value>
+  </data>
+  <data name="RES_main.correctpunch.timeincorrectdesc.rotext" xml:space="preserve">
+    <value>L´heure présente un format incorrect.</value>
+  </data>
+  <data name="RES_main.correctpunch.timeincorrecttitle.rotext" xml:space="preserve">
+    <value>Heure incorrecte</value>
+  </data>
+  <data name="RES_main.day.rotext" xml:space="preserve">
+    <value>jour</value>
+  </data>
+  <data name="RES_main.days.rotext" xml:space="preserve">
+    <value>jours</value>
+  </data>
+  <data name="RES_main.enterfrom.rotext" xml:space="preserve">
+    <value>Est entré il y a</value>
+  </data>
+  <data name="RES_main.enterfromonly.rotext" xml:space="preserve">
+    <value>Présent</value>
+  </data>
+  <data name="RES_main.exitfrom.rotext" xml:space="preserve">
+    <value>Il est sorti il y a</value>
+  </data>
+  <data name="RES_main.exitfromonly.rotext" xml:space="preserve">
+    <value>Absent</value>
+  </data>
+  <data name="RES_main.externalwork.deletedesc.rotext" xml:space="preserve">
+    <value>Êtes-vous sûr(e) de vouloir supprimer la demande ?</value>
+  </data>
+  <data name="RES_main.externalwork.deletetitle.rotext" xml:space="preserve">
+    <value>Supprimer demande</value>
+  </data>
+  <data name="RES_main.externalwork.timeincorrectdesc.rotext" xml:space="preserve">
+    <value>Les heures indiquées sont incorrectes.</value>
+  </data>
+  <data name="RES_main.externalwork.timeincorrecttitle.rotext" xml:space="preserve">
+    <value>Heures incorrectes</value>
+  </data>
+  <data name="RES_main.hour.rotext" xml:space="preserve">
+    <value>heure</value>
+  </data>
+  <data name="RES_main.hours.rotext" xml:space="preserve">
+    <value>Heures</value>
+  </data>
+  <data name="RES_main.incidencelist.noselectedcause.rotext" xml:space="preserve">
+    <value>Vous devez sélectionner un motif</value>
+  </data>
+  <data name="RES_main.incidencelist.noselectedcausetitle.rotext" xml:space="preserve">
+    <value>Sélectionnez un motif</value>
+  </data>
+  <data name="RES_main.incidencerequest.dateincorrectdesc.rotext" xml:space="preserve">
+    <value>Vous devez indiquer une date correcte</value>
+  </data>
+  <data name="RES_main.incidencerequest.dateincorrecttitle.rotext" xml:space="preserve">
+    <value>Date incorrecte</value>
+  </data>
+  <data name="RES_main.incidencerequest.idcauseincorrectdesc.rotext" xml:space="preserve">
+    <value>Vous devez sélectionner une justification</value>
+  </data>
+  <data name="RES_main.incidencerequest.idcauseincorrecttitle.rotext" xml:space="preserve">
+    <value>Justification incorrecte</value>
+  </data>
+  <data name="RES_main.incidencerequest.timeincorrectdesc.rotext" xml:space="preserve">
+    <value>La durée doit avoir un format correct</value>
+  </data>
+  <data name="RES_main.incidencerequest.timeincorrecttitle.rotext" xml:space="preserve">
+    <value>Durée incorrecte</value>
+  </data>
+  <data name="RES_main.lblloading.text.rotext" xml:space="preserve">
+    <value>Chargement en cours...</value>
+  </data>
+  <data name="RES_main.lblloading.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_main.maxseqerr.btninsert.rotext" xml:space="preserve">
+    <value>Insérer</value>
+  </data>
+  <data name="RES_main.maxseqerr.description.rotext" xml:space="preserve">
+    <value>Vous devez insérer le dernier pointage non effectué.&lt;/br&gt;Dernier pointage effectué ${1}.</value>
+  </data>
+  <data name="RES_main.maxseqerr.title.rotext" xml:space="preserve">
+    <value>Pointage non effectué</value>
+  </data>
+  <data name="RES_main.messagebox.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_main.minute.rotext" xml:space="preserve">
+    <value>minute</value>
+  </data>
+  <data name="RES_main.minutes.rotext" xml:space="preserve">
+    <value>minutes</value>
+  </data>
+  <data name="RES_main.month.rotext" xml:space="preserve">
+    <value>mois</value>
+  </data>
+  <data name="RES_main.months.rotext" xml:space="preserve">
+    <value>mois</value>
+  </data>
+  <data name="RES_main.msgbtncancel.text.rotext" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="RES_main.msgbtnok.text.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_main.ok.rotext" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="RES_main.outmissed.rotext" xml:space="preserve">
+    <value>N´a pas effectué la dernière sortie (Dernier pointage ${1})</value>
+  </data>
+  <data name="RES_main.repited_in.action1.rotext" xml:space="preserve">
+    <value>je pars maintenant</value>
+  </data>
+  <data name="RES_main.repited_in.action2.rotext" xml:space="preserve">
+    <value>Ne fais rien</value>
+  </data>
+  <data name="RES_main.repited_in.description.rotext" xml:space="preserve">
+    <value>Est entré il y a un moment,&lt;br/&gt; Que souhaitez-vous faire ?</value>
+  </data>
+  <data name="RES_main.repited_in.title.rotext" xml:space="preserve">
+    <value>Entrée répétée</value>
+  </data>
+  <data name="RES_main.repited_out.action1.rotext" xml:space="preserve">
+    <value>je pars maintenant</value>
+  </data>
+  <data name="RES_main.repited_out.action2.rotext" xml:space="preserve">
+    <value>Est entré à nouveau</value>
+  </data>
+  <data name="RES_main.repited_out.description.rotext" xml:space="preserve">
+    <value>Il est sorti il y a un moment, &lt;br/&gt; Que souhaitez-vous faire ?</value>
+  </data>
+  <data name="RES_main.repited_out.title.rotext" xml:space="preserve">
+    <value>Sortie répétée</value>
+  </data>
+  <data name="RES_main.request.deletedesc.rotext" xml:space="preserve">
+    <value>Êtes-vous sûr(e) de vouloir supprimer la demande ?</value>
+  </data>
+  <data name="RES_main.request.deletetitle.rotext" xml:space="preserve">
+    <value>Supprimer demande</value>
+  </data>
+  <data name="RES_main.requestcausepunch.selectcausedesc.rotext" xml:space="preserve">
+    <value>Vous devez sélectionner un motif</value>
+  </data>
+  <data name="RES_main.requestcausepunch.selectcausetitle.rotext" xml:space="preserve">
+    <value>Sélectionnez motif</value>
+  </data>
+  <data name="RES_main.rndbtn1_1.text.rotext" xml:space="preserve">
+    <value>Entrée</value>
+  </data>
+  <data name="RES_main.rndbtn1_2.text.rotext" xml:space="preserve">
+    <value>Motif</value>
+  </data>
+  <data name="RES_main.rndbtn1_3.text.rotext" xml:space="preserve">
+    <value>Entrée</value>
+  </data>
+  <data name="RES_main.rndbtn1_4.text.rotext" xml:space="preserve">
+    <value>Corriger</value>
+  </data>
+  <data name="RES_main.rndbtn2_1.text.rotext" xml:space="preserve">
+    <value>Entrée</value>
+  </data>
+  <data name="RES_main.rndbtn2_2.text.rotext" xml:space="preserve">
+    <value>Motif</value>
+  </data>
+  <data name="RES_main.rndbtn2_3.text.rotext" xml:space="preserve">
+    <value>Entrée</value>
+  </data>
+  <data name="RES_main.rndbtn2_4.text.rotext" xml:space="preserve">
+    <value>Corriger</value>
+  </data>
+  <data name="RES_main.rndbutton.enterincpunch.rotext" xml:space="preserve">
+    <value>Motif</value>
+  </data>
+  <data name="RES_main.rndbutton.enterpunch.rotext" xml:space="preserve">
+    <value>Entrée</value>
+  </data>
+  <data name="RES_main.rndbutton.exit.rotext" xml:space="preserve">
+    <value>Sortie</value>
+  </data>
+  <data name="RES_main.rndbutton.exitinc.rotext" xml:space="preserve">
+    <value>Motif</value>
+  </data>
+  <data name="RES_main.rndbutton.exitincpunch.rotext" xml:space="preserve">
+    <value>Motif</value>
+  </data>
+  <data name="RES_main.rndbutton.exitpunch.rotext" xml:space="preserve">
+    <value>Sortie</value>
+  </data>
+  <data name="RES_main.rndbutton.revisepunch.rotext" xml:space="preserve">
+    <value>Corriger</value>
+  </data>
+  <data name="RES_main.roundbutton1.text.rotext" xml:space="preserve">
+    <value>Entrée</value>
+  </data>
+  <data name="RES_main.roundbutton2.text.rotext" xml:space="preserve">
+    <value>Motif</value>
+  </data>
+  <data name="RES_main.roundbutton3.text.rotext" xml:space="preserve">
+    <value>Entrée</value>
+  </data>
+  <data name="RES_main.roundbutton4.text.rotext" xml:space="preserve">
+    <value>Corriger</value>
+  </data>
+  <data name="RES_main.roundbutton5.text.rotext" xml:space="preserve">
+    <value>Entrée</value>
+  </data>
+  <data name="RES_main.roundbutton6.text.rotext" xml:space="preserve">
+    <value>Motif</value>
+  </data>
+  <data name="RES_main.roundbutton7.text.rotext" xml:space="preserve">
+    <value>Entrée</value>
+  </data>
+  <data name="RES_main.roundbutton8.text.rotext" xml:space="preserve">
+    <value>Corriger</value>
+  </data>
+  <data name="RES_main.shiftrequests.deletedesc.rotext" xml:space="preserve">
+    <value>Êtes-vous sûr(e) de vouloir supprimer la demande ?</value>
+  </data>
+  <data name="RES_main.shiftrequests.deletetitle.rotext" xml:space="preserve">
+    <value>Supprimer demande</value>
+  </data>
+  <data name="RES_main.title.rotext" xml:space="preserve">
+    <value>Visualtime Live Portal</value>
+  </data>
+  <data name="RES_main.totalregs.rotext" xml:space="preserve">
+    <value>registres</value>
+  </data>
+  <data name="RES_main.userfieldrequest.dateendincorrectdesc.rotext" xml:space="preserve">
+    <value>La date de fin présente un format incorrect.</value>
+  </data>
+  <data name="RES_main.userfieldrequest.dateendincorrecttitle.rotext" xml:space="preserve">
+    <value>Date fin incorrecte</value>
+  </data>
+  <data name="RES_main.userfieldrequest.dateincorrectdesc.rotext" xml:space="preserve">
+    <value>La date présente un format incorrect.</value>
+  </data>
+  <data name="RES_main.userfieldrequest.dateincorrecttitle.rotext" xml:space="preserve">
+    <value>Date incorrecte</value>
+  </data>
+  <data name="RES_main.userfieldrequest.datestartincorrectdesc.rotext" xml:space="preserve">
+    <value>La date de début présente un format incorrect.</value>
+  </data>
+  <data name="RES_main.userfieldrequest.datestartincorrecttitle.rotext" xml:space="preserve">
+    <value>Date de début incorrecte</value>
+  </data>
+  <data name="RES_main.userfieldrequest.historydateincorrectdesc.rotext" xml:space="preserve">
+    <value>La date de l´historique présente un format incorrect.</value>
+  </data>
+  <data name="RES_main.userfieldrequest.historydateincorrecttitle.rotext" xml:space="preserve">
+    <value>Date historique incorrecte</value>
+  </data>
+  <data name="RES_main.userfieldrequest.notdecimaldesc.rotext" xml:space="preserve">
+    <value>La valeur saisie n´est pas un numéro valide.</value>
+  </data>
+  <data name="RES_main.userfieldrequest.notdecimaltitle.rotext" xml:space="preserve">
+    <value>Numéro incorrect</value>
+  </data>
+  <data name="RES_main.userfieldrequest.notnumberdecdesc.rotext" xml:space="preserve">
+    <value>La valeur numérique ne permet pas la saisie de valeurs décimales.</value>
+  </data>
+  <data name="RES_main.userfieldrequest.notnumberdectitle.rotext" xml:space="preserve">
+    <value>Numéro décimal non autorisé</value>
+  </data>
+  <data name="RES_main.userfieldrequest.notnumberdesc.rotext" xml:space="preserve">
+    <value>La valeur saisie n´est pas un numéro valide.</value>
+  </data>
+  <data name="RES_main.userfieldrequest.notnumbertitle.rotext" xml:space="preserve">
+    <value>Numéro incorrect</value>
+  </data>
+  <data name="RES_main.userfieldrequest.timeendincorrectdesc.rotext" xml:space="preserve">
+    <value>L´heure de fin présente un format incorrect.</value>
+  </data>
+  <data name="RES_main.userfieldrequest.timeendincorrecttitle.rotext" xml:space="preserve">
+    <value>Heure fin incorrecte</value>
+  </data>
+  <data name="RES_main.userfieldrequest.timeincorrectdesc.rotext" xml:space="preserve">
+    <value>L´heure présente un format incorrect.</value>
+  </data>
+  <data name="RES_main.userfieldrequest.timeincorrecttitle.rotext" xml:space="preserve">
+    <value>Heure incorrecte</value>
+  </data>
+  <data name="RES_main.userfieldrequest.timestartincorrectdesc.rotext" xml:space="preserve">
+    <value>L´heure de début présente un format incorrect.</value>
+  </data>
+  <data name="RES_main.userfieldrequest.timestartincorrecttitle.rotext" xml:space="preserve">
+    <value>Heure début incorrecte</value>
+  </data>
+  <data name="RES_main.validateabsences.dateendincorrectdesc.rotext" xml:space="preserve">
+    <value>La date de fin présente un format incorrect.</value>
+  </data>
+  <data name="RES_main.validateabsences.dateendincorrecttitle.rotext" xml:space="preserve">
+    <value>Date fin incorrecte</value>
+  </data>
+  <data name="RES_main.validateabsences.datestartincorrectdesc.rotext" xml:space="preserve">
+    <value>La date présente un format incorrect.</value>
+  </data>
+  <data name="RES_main.validateabsences.datestartincorrecttitle.rotext" xml:space="preserve">
+    <value>Date de début incorrecte</value>
+  </data>
+  <data name="RES_main.validateabsences.selectcausedesc.rotext" xml:space="preserve">
+    <value>Vous devez sélectionner une justification</value>
+  </data>
+  <data name="RES_main.validateabsences.selectcausetitle.rotext" xml:space="preserve">
+    <value>Sélectionnez justification</value>
+  </data>
+  <data name="RES_myuserfields.btnaccept.text.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_myuserfields.btncancel.text.rotext" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="RES_myuserfields.chkincidencelist.text.rotext" xml:space="preserve">
+    <value>Sélectionnez motif</value>
+  </data>
+  <data name="RES_newrequests.btnback.text.rotext" xml:space="preserve">
+    <value>Revenir</value>
+  </data>
+  <data name="RES_newrequests.gotonewrequest.rotext" xml:space="preserve">
+    <value>Aller</value>
+  </data>
+  <data name="RES_newrequests.gridnewrequests.text.rotext" xml:space="preserve">
+    <value>Sélectionnez type demande</value>
+  </data>
+  <data name="RES_newrequests.newrequestdesc.1.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_newrequests.newrequestdesc.10.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_newrequests.newrequestdesc.11.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_newrequests.newrequestdesc.12.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_newrequests.newrequestdesc.2.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_newrequests.newrequestdesc.3.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_newrequests.newrequestdesc.4.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_newrequests.newrequestdesc.5.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_newrequests.newrequestdesc.6.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_newrequests.newrequestdesc.7.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_newrequests.newrequestdesc.8.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_newrequests.newrequestdesc.9.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_newrequests.newrequesttext.1.rotext" xml:space="preserve">
+    <value>Modification de la fiche</value>
+  </data>
+  <data name="RES_newrequests.newrequesttext.10.rotext" xml:space="preserve">
+    <value>Pointage de tâches non effectué</value>
+  </data>
+  <data name="RES_newrequests.newrequesttext.11.rotext" xml:space="preserve">
+    <value>Annulation de vacances</value>
+  </data>
+  <data name="RES_newrequests.newrequesttext.12.rotext" xml:space="preserve">
+    <value>Pointage de centre de coût non effectué</value>
+  </data>
+  <data name="RES_newrequests.newrequesttext.2.rotext" xml:space="preserve">
+    <value>Pointage non effectué</value>
+  </data>
+  <data name="RES_newrequests.newrequesttext.3.rotext" xml:space="preserve">
+    <value>Justification pointage existant</value>
+  </data>
+  <data name="RES_newrequests.newrequesttext.4.rotext" xml:space="preserve">
+    <value>Rapport résumé travail externe</value>
+  </data>
+  <data name="RES_newrequests.newrequesttext.5.rotext" xml:space="preserve">
+    <value>Changement d'horaire</value>
+  </data>
+  <data name="RES_newrequests.newrequesttext.6.rotext" xml:space="preserve">
+    <value>Des vacances</value>
+  </data>
+  <data name="RES_newrequests.newrequesttext.7.rotext" xml:space="preserve">
+    <value>Prévision des jours d'absence</value>
+  </data>
+  <data name="RES_newrequests.newrequesttext.8.rotext" xml:space="preserve">
+    <value>Prévision des heures d'absence</value>
+  </data>
+  <data name="RES_newrequests.newrequesttext.9.rotext" xml:space="preserve">
+    <value>Programmer des échanges entre utilisateurs</value>
+  </data>
+  <data name="RES_punches.btnaccept.text.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_punches.btnback.text.rotext" xml:space="preserve">
+    <value>Revenir</value>
+  </data>
+  <data name="RES_punches.btncancel.text.rotext" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="RES_punches.btnnew.text.rotext" xml:space="preserve">
+    <value>Nouveau</value>
+  </data>
+  <data name="RES_punches.chkincidencelist.text.rotext" xml:space="preserve">
+    <value>Sélectionnez motif</value>
+  </data>
+  <data name="RES_punches.costcenter.rotext" xml:space="preserve">
+    <value>Centre de coût</value>
+  </data>
+  <data name="RES_punches.entrancepunch.rotext" xml:space="preserve">
+    <value>Entrée</value>
+  </data>
+  <data name="RES_punches.exitpunch.rotext" xml:space="preserve">
+    <value>Sortie</value>
+  </data>
+  <data name="RES_punches.externalwork.incorrectdatefuture.rotext" xml:space="preserve">
+    <value>La date ne peut pas être une date future.</value>
+  </data>
+  <data name="RES_punches.forbidpunch.incorrectdatebeforepunch.rotext" xml:space="preserve">
+    <value>Le pointage inséré est antérieur au dernier pointage</value>
+  </data>
+  <data name="RES_punches.forbidpunch.incorrectdatefuture.rotext" xml:space="preserve">
+    <value>La date et l'heure de la signature ne peuvent pas être postérieures.</value>
+  </data>
+  <data name="RES_punches.gridbuttonselectdate.rotext" xml:space="preserve">
+    <value>Sélectionnez date</value>
+  </data>
+  <data name="RES_punches.gridbuttonshowaccruals.rotext" xml:space="preserve">
+    <value>Mes soldes à ce jour</value>
+  </data>
+  <data name="RES_punches.gridbuttonshowrequests.rotext" xml:space="preserve">
+    <value>Voir demandes de pointages</value>
+  </data>
+  <data name="RES_punches.gridpunches.text.rotext" xml:space="preserve">
+    <value>Pointages le :</value>
+  </data>
+  <data name="RES_punches.punchesgridheader.rotext" xml:space="preserve">
+    <value>Pointages le :</value>
+  </data>
+  <data name="RES_punches.requestpunchcause.rotext" xml:space="preserve">
+    <value>Justification</value>
+  </data>
+  <data name="RES_punches.taskpunch.rotext" xml:space="preserve">
+    <value>Tâche</value>
+  </data>
+  <data name="RES_punchesnewrequest.btnback.text.rotext" xml:space="preserve">
+    <value>Revenir</value>
+  </data>
+  <data name="RES_punchesnewrequest.gridpunchesnewrequest.text.rotext" xml:space="preserve">
+    <value>Sélectionnez type demande</value>
+  </data>
+  <data name="RES_punchesnewrequest.newforbiddenpunchdesc.rotext" xml:space="preserve">
+    <value>Demande d´insertion d´un pointage non effectué</value>
+  </data>
+  <data name="RES_punchesnewrequest.newforbiddenpunchtext.rotext" xml:space="preserve">
+    <value>Pointage non effectué</value>
+  </data>
+  <data name="RES_punchesnewrequest.newresumeexternalworkdesc.rotext" xml:space="preserve">
+    <value>Demande de rapport de travail externe</value>
+  </data>
+  <data name="RES_punchesnewrequest.newresumeexternalworktext.rotext" xml:space="preserve">
+    <value>Rapport résumé travail externe</value>
+  </data>
+  <data name="RES_punchesnewrequest.punchnewrequest.rotext" xml:space="preserve">
+    <value>continuer</value>
+  </data>
+  <data name="RES_requestcausepunch.btnaccept.text.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_requestcausepunch.btncancel.text.rotext" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="RES_requestcausepunch.chkcause.text.rotext" xml:space="preserve">
+    <value>Justification</value>
+  </data>
+  <data name="RES_requestcausepunch.lblobservations.text.rotext" xml:space="preserve">
+    <value>Remarques</value>
+  </data>
+  <data name="RES_requestcausepunch.lblobservations.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_requestcausepunch.title_requestcausepunch.text.rotext" xml:space="preserve">
+    <value>Justification du pointage</value>
+  </data>
+  <data name="RES_requestcausepunch.title_requestcausepunch.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_requestcausepunch.txtobservations.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_requestfilteroptions.btnback.text.rotext" xml:space="preserve">
+    <value>Revenir</value>
+  </data>
+  <data name="RES_requestfilteroptions.btnok.text.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_requestfilteroptions.chkselectortype.text.rotext" xml:space="preserve">
+    <value>Type de demande</value>
+  </data>
+  <data name="RES_requestfilteroptions.chkshowall.text.rotext" xml:space="preserve">
+    <value>Tout afficher</value>
+  </data>
+  <data name="RES_requestfilteroptions.ddateend.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_requestfilteroptions.ddatestart.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_requestfilteroptions.lbldatestarttoend.text.rotext" xml:space="preserve">
+    <value>Afficher les demandes depuis</value>
+  </data>
+  <data name="RES_requestfilteroptions.lbldatestarttoend.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_requestfilteroptions.lbldateto.text.rotext" xml:space="preserve">
+    <value>jusqu'à</value>
+  </data>
+  <data name="RES_requestfilteroptions.lbldateto.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_requestfilteroptions.lblrequeststatus.text.rotext" xml:space="preserve">
+    <value>État de la demande</value>
+  </data>
+  <data name="RES_requestfilteroptions.lblrequeststatus.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_requestfilteroptions.requesttypes.1.rotext" xml:space="preserve">
+    <value>Modification champs fiche utilisateur</value>
+  </data>
+  <data name="RES_requestfilteroptions.requesttypes.10.rotext" xml:space="preserve">
+    <value>Pointage de tâches non effectué</value>
+  </data>
+  <data name="RES_requestfilteroptions.requesttypes.2.rotext" xml:space="preserve">
+    <value>Pointage non effectué</value>
+  </data>
+  <data name="RES_requestfilteroptions.requesttypes.3.rotext" xml:space="preserve">
+    <value>Justification pointage existant</value>
+  </data>
+  <data name="RES_requestfilteroptions.requesttypes.4.rotext" xml:space="preserve">
+    <value>Rapport résumé travail externe</value>
+  </data>
+  <data name="RES_requestfilteroptions.requesttypes.5.rotext" xml:space="preserve">
+    <value>Changement d'horaire</value>
+  </data>
+  <data name="RES_requestfilteroptions.requesttypes.6.rotext" xml:space="preserve">
+    <value>Des vacances</value>
+  </data>
+  <data name="RES_requestfilteroptions.requesttypes.7.rotext" xml:space="preserve">
+    <value>Prévision des jours d'absence</value>
+  </data>
+  <data name="RES_requestfilteroptions.requesttypes.8.rotext" xml:space="preserve">
+    <value>Programmer des échanges entre utilisateurs</value>
+  </data>
+  <data name="RES_requestfilteroptions.requesttypes.9.rotext" xml:space="preserve">
+    <value>Prévision des heures d'absence</value>
+  </data>
+  <data name="RES_requestfilteroptions.title_requestfilteroptions.text.rotext" xml:space="preserve">
+    <value>Mes demandes - Options</value>
+  </data>
+  <data name="RES_requestfilteroptions.title_requestfilteroptions.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_requestinfo.requests.passportdeleted.rotext" xml:space="preserve">
+    <value>Utilisateur supprimé</value>
+  </data>
+  <data name="RES_requestorderoptions.btnaccept.text.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_requestorderoptions.btncancel.text.rotext" xml:space="preserve">
+    <value>Revenir</value>
+  </data>
+  <data name="RES_requestorderoptions.chkorderlist.text.rotext" xml:space="preserve">
+    <value>Colonnes</value>
+  </data>
+  <data name="RES_requestorderoptions.optasc.text.rotext" xml:space="preserve">
+    <value>Ascendant</value>
+  </data>
+  <data name="RES_requestorderoptions.optdesc.text.rotext" xml:space="preserve">
+    <value>Décroissant</value>
+  </data>
+  <data name="RES_requestorderoptions.orderfield.requestdate.rotext" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="RES_requestorderoptions.orderfield.requesttype.rotext" xml:space="preserve">
+    <value>Type de demande</value>
+  </data>
+  <data name="RES_requestorderoptions.orderfield.status.rotext" xml:space="preserve">
+    <value>État</value>
+  </data>
+  <data name="RES_requestorderoptions.title_requestorderoptions.text.rotext" xml:space="preserve">
+    <value>Mes demandes - Classer</value>
+  </data>
+  <data name="RES_requestorderoptions.title_requestorderoptions.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_requests.approvedby.rotext" xml:space="preserve">
+    <value>Approuvée par :</value>
+  </data>
+  <data name="RES_requests.btnaccept.text.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_requests.btnback.text.rotext" xml:space="preserve">
+    <value>Revenir</value>
+  </data>
+  <data name="RES_requests.btncancel.text.rotext" xml:space="preserve">
+    <value>Revenir</value>
+  </data>
+  <data name="RES_requests.btnnew.text.rotext" xml:space="preserve">
+    <value>Nouvelle</value>
+  </data>
+  <data name="RES_requests.btnnewrequest.text.rotext" xml:space="preserve">
+    <value>Nouveau</value>
+  </data>
+  <data name="RES_requests.chkincidencelist.text.rotext" xml:space="preserve">
+    <value>Sélectionnez motif</value>
+  </data>
+  <data name="RES_requests.createdby.rotext" xml:space="preserve">
+    <value>Créée par :</value>
+  </data>
+  <data name="RES_requests.gridbuttonshowfilter.rotext" xml:space="preserve">
+    <value>Options de filtrage</value>
+  </data>
+  <data name="RES_requests.gridbuttonshoworder.rotext" xml:space="preserve">
+    <value>Options de classement</value>
+  </data>
+  <data name="RES_requests.gridrequests.text.rotext" xml:space="preserve">
+    <value>Mes demandes</value>
+  </data>
+  <data name="RES_requests.refusedby.rotext" xml:space="preserve">
+    <value>Rejetée par :</value>
+  </data>
+  <data name="RES_requests.requestname.cancelholidays.rotext" xml:space="preserve">
+    <value>Annulation de vacances</value>
+  </data>
+  <data name="RES_requests.requestname.changeshift.rotext" xml:space="preserve">
+    <value>Changement d'horaire</value>
+  </data>
+  <data name="RES_requests.requestname.dailyrecord.rotext" xml:space="preserve">
+    <value>Déclaration de journée</value>
+  </data>
+  <data name="RES_requests.requestname.exchangeshiftbetweenemployees.rotext" xml:space="preserve">
+    <value>Échange d’horaires entre utilisateurs le</value>
+  </data>
+  <data name="RES_requests.requestname.externalworkresumepart.rotext" xml:space="preserve">
+    <value>Rapport résumé travail externe</value>
+  </data>
+  <data name="RES_requests.requestname.externalworkweekresume.rotext" xml:space="preserve">
+    <value>Une partie des dédicaces</value>
+  </data>
+  <data name="RES_requests.requestname.forbiddenpunch.rotext" xml:space="preserve">
+    <value>Pointage non effectué</value>
+  </data>
+  <data name="RES_requests.requestname.forbiddentaskpunch.rotext" xml:space="preserve">
+    <value>Pointage de tâches non effectué</value>
+  </data>
+  <data name="RES_requests.requestname.forgottencostcenterpunch.rotext" xml:space="preserve">
+    <value>Pointage de centre de coût non effectué</value>
+  </data>
+  <data name="RES_requests.requestname.justifypunch.rotext" xml:space="preserve">
+    <value>Justification de pointage le</value>
+  </data>
+  <data name="RES_requests.requestname.plannedabsences.rotext" xml:space="preserve">
+    <value>Prévision des jours d'absence</value>
+  </data>
+  <data name="RES_requests.requestname.plannedcauses.rotext" xml:space="preserve">
+    <value>Prévision des heures d'absence</value>
+  </data>
+  <data name="RES_requests.requestname.plannedholidays.rotext" xml:space="preserve">
+    <value>Congés/permissions par heures</value>
+  </data>
+  <data name="RES_requests.requestname.plannedovertimes.rotext" xml:space="preserve">
+    <value>Heures excédentaires</value>
+  </data>
+  <data name="RES_requests.requestname.telecommute.rotext" xml:space="preserve">
+    <value>Télétravail</value>
+  </data>
+  <data name="RES_requests.requestname.userfieldschange.rotext" xml:space="preserve">
+    <value>Modification champ fiche</value>
+  </data>
+  <data name="RES_requests.requestname.vacationsorpermissions.rotext" xml:space="preserve">
+    <value>Des vacances</value>
+  </data>
+  <data name="RES_requests.requestsgridheader.rotext" xml:space="preserve">
+    <value>Mes demandes</value>
+  </data>
+  <data name="RES_requests.requeststatus.accepted.rotext" xml:space="preserve">
+    <value>Acceptée</value>
+  </data>
+  <data name="RES_requests.requeststatus.canceled.rotext" xml:space="preserve">
+    <value>Annulé</value>
+  </data>
+  <data name="RES_requests.requeststatus.denied.rotext" xml:space="preserve">
+    <value>Refusé</value>
+  </data>
+  <data name="RES_requests.requeststatus.ongoing.rotext" xml:space="preserve">
+    <value>En cours</value>
+  </data>
+  <data name="RES_requests.requeststatus.pending.rotext" xml:space="preserve">
+    <value>En attente</value>
+  </data>
+  <data name="RES_requests.showdetail.rotext" xml:space="preserve">
+    <value>Voir détail</value>
+  </data>
+  <data name="RES_requestshelper.shiftexchangeatob.rotext" xml:space="preserve">
+    <value>Horaire ${3} échangé avec ${4} entre ${1} et ${2}</value>
+  </data>
+  <data name="RES_requestshelper.shiftexchangebtoa.rotext" xml:space="preserve">
+    <value>Horaire ${4} échangé avec ${3} entre ${2} et ${1}</value>
+  </data>
+  <data name="RES_resumeexternalwork.btncancel.text.rotext" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="RES_resumeexternalwork.btnok.text.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_resumeexternalwork.chkincidencelist.text.rotext" xml:space="preserve">
+    <value>Incidence</value>
+  </data>
+  <data name="RES_resumeexternalwork.ddate.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_resumeexternalwork.headertop.text.rotext" xml:space="preserve">
+    <value>Rapport résumé travail externe</value>
+  </data>
+  <data name="RES_resumeexternalwork.lbldate.text.rotext" xml:space="preserve">
+    <value>Date du pointage :</value>
+  </data>
+  <data name="RES_resumeexternalwork.lbldate.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_resumeexternalwork.lblobservations.text.rotext" xml:space="preserve">
+    <value>Remarques</value>
+  </data>
+  <data name="RES_resumeexternalwork.lblobservations.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_resumeexternalwork.lbltime.text.rotext" xml:space="preserve">
+    <value>Heures :</value>
+  </data>
+  <data name="RES_resumeexternalwork.lbltime.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_resumeexternalwork.txtobservations.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_resumeexternalwork.txttime.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_shift.startfloating.shiftafter.rotext" xml:space="preserve">
+    <value>du lendemain de l´horaire</value>
+  </data>
+  <data name="RES_shift.startfloating.shiftbefore.rotext" xml:space="preserve">
+    <value>de la veille de l´horaire</value>
+  </data>
+  <data name="RES_shift.startfloating.shiftday.rotext" xml:space="preserve">
+    <value>du jour de l´horaire</value>
+  </data>
+  <data name="RES_shiftrequests.btnaccept.text.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_shiftrequests.btncancel.text.rotext" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="RES_shiftrequests.causelabel.rotext" xml:space="preserve">
+    <value>Justification</value>
+  </data>
+  <data name="RES_shiftrequests.cmbshift.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_shiftrequests.cmbstartshift.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_shiftrequests.ddateend.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_shiftrequests.ddatestart.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_shiftrequests.lbldatestarttoend.text.rotext" xml:space="preserve">
+    <value>Période de dates depuis</value>
+  </data>
+  <data name="RES_shiftrequests.lbldatestarttoend.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_shiftrequests.lbldateto.text.rotext" xml:space="preserve">
+    <value>jusqu'à</value>
+  </data>
+  <data name="RES_shiftrequests.lbldateto.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_shiftrequests.lblobservations.text.rotext" xml:space="preserve">
+    <value>Remarques</value>
+  </data>
+  <data name="RES_shiftrequests.lblobservations.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_shiftrequests.lblshiftlabel.text.rotext" xml:space="preserve">
+    <value>Horaire</value>
+  </data>
+  <data name="RES_shiftrequests.lblshiftlabel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_shiftrequests.lblstartshift.text.rotext" xml:space="preserve">
+    <value>À</value>
+  </data>
+  <data name="RES_shiftrequests.lblstartshift.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_shiftrequests.selshiftfield.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_shiftrequests.title_shiftrequests.text.rotext" xml:space="preserve">
+    <value>Demande d´horaires</value>
+  </data>
+  <data name="RES_shiftrequests.title_shiftrequests.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_shiftrequests.titleabsencesrequests.rotext" xml:space="preserve">
+    <value>Prévision des jours d'absence</value>
+  </data>
+  <data name="RES_shiftrequests.titlechangeshiftsrequests.rotext" xml:space="preserve">
+    <value>Changement d'horaire</value>
+  </data>
+  <data name="RES_shiftrequests.titlelistcauses.rotext" xml:space="preserve">
+    <value>Justifications</value>
+  </data>
+  <data name="RES_shiftrequests.titlelistshifts.rotext" xml:space="preserve">
+    <value>Horaires</value>
+  </data>
+  <data name="RES_shiftrequests.titleliststartshifts.rotext" xml:space="preserve">
+    <value>Début horaire flottant</value>
+  </data>
+  <data name="RES_shiftrequests.titlepermissionsrequests.rotext" xml:space="preserve">
+    <value>Des vacances</value>
+  </data>
+  <data name="RES_shiftrequests.txtobservations.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_shiftrequests.txtstartshift.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_simplelist.btnaccept.text.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_simplelist.btncancel.text.rotext" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="RES_simplelist.chksimplelist.text.rotext" xml:space="preserve">
+    <value>Liste simple</value>
+  </data>
+  <data name="RES_userfieldhistory.btncancel.text.rotext" xml:space="preserve">
+    <value>Revenir</value>
+  </data>
+  <data name="RES_userfieldhistory.griduserfieldhistory.text.rotext" xml:space="preserve">
+    <value>Historique</value>
+  </data>
+  <data name="RES_userfieldhistory.timeperiod.fieldcaption.endonly.rotext" xml:space="preserve">
+    <value>Jusqu´à ${1}</value>
+  </data>
+  <data name="RES_userfields.btnback.text.rotext" xml:space="preserve">
+    <value>Revenir</value>
+  </data>
+  <data name="RES_userfields.btnnewrequest.text.rotext" xml:space="preserve">
+    <value>Nouv. dem.</value>
+  </data>
+  <data name="RES_userfields.chkincidencelist.text.rotext" xml:space="preserve">
+    <value>Sélectionnez motif</value>
+  </data>
+  <data name="RES_userfields.dateperiod.fieldcaption.beginonly.rotext" xml:space="preserve">
+    <value>Depuis le ${1}</value>
+  </data>
+  <data name="RES_userfields.dateperiod.fieldcaption.endonly.rotext" xml:space="preserve">
+    <value>Jusqu´au ${1}</value>
+  </data>
+  <data name="RES_userfields.dateperiod.fieldcaption.rotext" xml:space="preserve">
+    <value>De ${1} jusqu´à ${2}</value>
+  </data>
+  <data name="RES_userfields.fieldvaluedate.info.rotext" xml:space="preserve">
+    <value>à la date</value>
+  </data>
+  <data name="RES_userfields.notfoundfile.rotext" xml:space="preserve">
+    <value>Le fichier n´existe pas ou vous ne disposez pas d´autorisations pour y accéder.</value>
+  </data>
+  <data name="RES_userfields.timeperiod.fieldcaption.beginonly.rotext" xml:space="preserve">
+    <value>De ${1}</value>
+  </data>
+  <data name="RES_userfields.timeperiod.fieldcaption.endonly.rotext" xml:space="preserve">
+    <value>Jusqu´à ${1}</value>
+  </data>
+  <data name="RES_userfields.timeperiod.fieldcaption.rotext" xml:space="preserve">
+    <value>Depuis le ${1} jusqu´au ${2}</value>
+  </data>
+  <data name="RES_userfields.title_userfields.text.rotext" xml:space="preserve">
+    <value>Ma fiche</value>
+  </data>
+  <data name="RES_userfields.title_userfields.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_userfields.userfield.category.none.rotext" xml:space="preserve">
+    <value>Sans catégorie</value>
+  </data>
+  <data name="RES_userfields.userfield.highlevel.hidecaption.rotext" xml:space="preserve">
+    <value>Masquer la valeur</value>
+  </data>
+  <data name="RES_userfields.userfield.highlevel.showcaption.rotext" xml:space="preserve">
+    <value>Afficher la valeur</value>
+  </data>
+  <data name="RES_userfields.userfield.history.showcaption.rotext" xml:space="preserve">
+    <value>Voir valeur</value>
+  </data>
+  <data name="RES_userfields.userfield.history.showtitle.rotext" xml:space="preserve">
+    <value>Voir historique</value>
+  </data>
+  <data name="RES_userfields.userfield.request.showtitle.rotext" xml:space="preserve">
+    <value>Demander changement valeur champ</value>
+  </data>
+  <data name="RES_userfieldsrequest.btnaccept.text.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_userfieldsrequest.btncancel.text.rotext" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="RES_userfieldsrequest.btnnext.text.rotext" xml:space="preserve">
+    <value>Suivant</value>
+  </data>
+  <data name="RES_userfieldsrequest.cmbuserfield.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_userfieldsrequest.dhistory.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_userfieldsrequest.dperiodend.rotext" xml:space="preserve">
+    <value>a</value>
+  </data>
+  <data name="RES_userfieldsrequest.dperiodstart.rotext" xml:space="preserve">
+    <value>De</value>
+  </data>
+  <data name="RES_userfieldsrequest.dtperiodend.rotext" xml:space="preserve">
+    <value>a</value>
+  </data>
+  <data name="RES_userfieldsrequest.dtperiodstart.rotext" xml:space="preserve">
+    <value>De</value>
+  </data>
+  <data name="RES_userfieldsrequest.lblfieldtypelabel.text.rotext" xml:space="preserve">
+    <value>Champ d'onglet</value>
+  </data>
+  <data name="RES_userfieldsrequest.lblfieldtypelabel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_userfieldsrequest.lblhistorydatelabel.text.rotext" xml:space="preserve">
+    <value>Valide depuis :</value>
+  </data>
+  <data name="RES_userfieldsrequest.lblhistorydatelabel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_userfieldsrequest.lblnewvaluelabel.text.rotext" xml:space="preserve">
+    <value>Nouvelle valeur</value>
+  </data>
+  <data name="RES_userfieldsrequest.lblnewvaluelabel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_userfieldsrequest.lblobservations.text.rotext" xml:space="preserve">
+    <value>Remarques</value>
+  </data>
+  <data name="RES_userfieldsrequest.lblobservations.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_userfieldsrequest.selectvalue.rotext" xml:space="preserve">
+    <value>Valeur</value>
+  </data>
+  <data name="RES_userfieldsrequest.seluserfield.rotext" xml:space="preserve">
+    <value>Sélection champ de la fiche</value>
+  </data>
+  <data name="RES_userfieldsrequest.title_userfieldsrequest.text.rotext" xml:space="preserve">
+    <value>Demande de changement de fiche</value>
+  </data>
+  <data name="RES_userfieldsrequest.title_userfieldsrequest.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_userfieldsrequest.txtobservations.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_useroptions.btncancel.text.rotext" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="RES_useroptions.btnok.text.rotext" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="RES_useroptions.headertop.text.rotext" xml:space="preserve">
+    <value>Changer le mot de passe</value>
+  </data>
+  <data name="RES_useroptions.lblad.text.rotext" xml:space="preserve">
+    <value>L´utilisateur est identifié dans Active Directory.</value>
+  </data>
+  <data name="RES_useroptions.lblad.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_useroptions.lblad2.text.rotext" xml:space="preserve">
+    <value>La modification du mot de passe n´est pas autorisée.</value>
+  </data>
+  <data name="RES_useroptions.lblad2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_useroptions.lblloginpass.text.rotext" xml:space="preserve">
+    <value>Nouveau mot de passe :</value>
+  </data>
+  <data name="RES_useroptions.lblloginpass.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_useroptions.lblloginpass2.text.rotext" xml:space="preserve">
+    <value>Répéter mot de passe :</value>
+  </data>
+  <data name="RES_useroptions.lblloginpass2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_useroptions.lblloginuser.text.rotext" xml:space="preserve">
+    <value>Utilisateur :</value>
+  </data>
+  <data name="RES_useroptions.lblloginuser.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_useroptions.lbloldloginpass.text.rotext" xml:space="preserve">
+    <value>Mot de passe précédent :</value>
+  </data>
+  <data name="RES_useroptions.lbloldloginpass.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_useroptions.txtoldpassword.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_useroptions.txtpassword.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_useroptions.txtpassword2.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_useroptions.txtusername.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+</root>

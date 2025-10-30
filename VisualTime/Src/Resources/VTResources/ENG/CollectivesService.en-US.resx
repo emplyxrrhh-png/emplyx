@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_collectiveresultenum.errorcreatingorupdatingcollective.rotext" xml:space="preserve">
+    <value>An error occurred while creating or updating the collective</value>
+  </data>
+  <data name="RES_collectiveresultenum.nopermission.rotext" xml:space="preserve">
+    <value>You do not have permissions to perform this action</value>
+  </data>
+  <data name="RES_collectiveresultenum.errorcecoveringcollective.rotext" xml:space="preserve">
+    <value>The definition of the collective could not be recovered</value>
+  </data>
+  <data name="RES_collectiveresultenum.namealreadyexists.rotext" xml:space="preserve">
+    <value>There is already a collective with this name</value>
+  </data>
+  <data name="RES_collectiveresultenum.xssvalidationerror.rotext" xml:space="preserve">
+    <value>A malicious script has been detected in some property of the object</value>
+  </data>
+  <data name="RES_collectiveresultenum.errordeletingcollective.rotext" xml:space="preserve">
+    <value>An error occurred when deleting the collective</value>
+  </data>
+  <data name="RES_collectiveresultenum.errorrecoveringallcollectives.rotext" xml:space="preserve">
+    <value>An error occurred when retrieving the list of collectives</value>
+  </data>
+  <data name="RES_collectiveresultenum.errorrecoveringemployeeuserfields.rotext" xml:space="preserve">
+    <value>An error occurred when retrieving the list of fields in the file</value>
+  </data>
+  <data name="RES_collectiveresultenum.collectivenamecannotbeempty.rotext" xml:space="preserve">
+    <value>You must indicate a name for the collective</value>
+  </data>
+  <data name="RES_collectiveresultenum.collectivefiltercannotbeempty.rotext" xml:space="preserve">
+    <value>You must set up a criterion on file fields to define the collective</value>
+  </data>
+  <data name="RES_collectiveresultenum.errorfilterexpressioncontainsinvalidfields.rotext" xml:space="preserve">
+    <value>The criterion defined for the collective contains invalid file fields</value>
+  </data>
+  <data name="RES_collectiveresultenum.erorrgeneratinghavingclause.rotext" xml:space="preserve">
+    <value>An error occurred when interpreting the criterion defined for the collective</value>
+  </data>
+  <data name="RES_collectiveresultenum.nonelegibleuserfieldused.rotext" xml:space="preserve">
+    <value>The group definition is using a field that is not assigned to the employee record</value>
+  </data>
+  <data name="RES_collectiveresultenum.collectivedefinitionoverlapped.rotext" xml:space="preserve">
+    <value>The definition of the collective overlaps with an existing one</value>
+  </data>
+  <data name="RES_collectiveresultenum.errorvalidatingcollectivedefinition.rotext" xml:space="preserve">
+    <value>The definition of the collective could not be validated</value>
+  </data>
+  <data name="RES_collectiveresultenum.errorrecoveringcollective.rotext" xml:space="preserve">
+    <value>An error occurred while loading the collective information</value>
+  </data>
+  <data name="RES_collectiveresultenum.errorrecoveringcollectiveemployees.rotext" xml:space="preserve">
+    <value>An error occurred when retrieving the list of users included in the collective</value>
+  </data>
+  <data name="RES_collectiveresultenum.begindefinitioninfreezedate.rotext" xml:space="preserve">
+    <value>The validity start date of the collective definition cannot be earlier than the closing date of Visualtime</value>
+  </data>
+  <data name="RES_collective.logic.and.rotext" xml:space="preserve">
+    <value>AND</value>
+  </data>
+  <data name="RES_collective.logic.or.rotext" xml:space="preserve">
+    <value>or</value>
+  </data>
+  <data name="RES_collective.logic.not.rotext" xml:space="preserve">
+    <value>it does not hold that</value>
+  </data>
+  <data name="RES_collective.comparison.equal.rotext" xml:space="preserve">
+    <value>is equal to</value>
+  </data>
+  <data name="RES_collective.comparison.notequal.rotext" xml:space="preserve">
+    <value>is different from</value>
+  </data>
+  <data name="RES_collective.comparison.greaterthan.rotext" xml:space="preserve">
+    <value>is greater than</value>
+  </data>
+  <data name="RES_collective.comparison.greaterorequal.rotext" xml:space="preserve">
+    <value>is greater than or equal to</value>
+  </data>
+  <data name="RES_collective.comparison.lessthan.rotext" xml:space="preserve">
+    <value>is less than</value>
+  </data>
+  <data name="RES_collective.comparison.lessorequal.rotext" xml:space="preserve">
+    <value>is less than or equal to</value>
+  </data>
+  <data name="RES_collective.comparison.startswith.rotext" xml:space="preserve">
+    <value>begins with</value>
+  </data>
+  <data name="RES_collective.comparison.endswith.rotext" xml:space="preserve">
+    <value>ends in</value>
+  </data>
+  <data name="RES_collective.comparison.contains.rotext" xml:space="preserve">
+    <value>contains</value>
+  </data>
+  <data name="RES_collective.comparison.anyof.rotext" xml:space="preserve">
+    <value>is one of</value>
+  </data>
+  <data name="RES_collective.time.anniversary.rotext" xml:space="preserve">
+    <value>is celebrating their anniversary</value>
+  </data>
+  <data name="RES_collective.time.occurredmorethan.rotext" xml:space="preserve">
+    <value>occurred more than</value>
+  </data>
+  <data name="RES_collective.time.occurredatleast.rotext" xml:space="preserve">
+    <value>occurred at least</value>
+  </data>
+  <data name="RES_collective.time.occurredlessthan.rotext" xml:space="preserve">
+    <value>occurred less than</value>
+  </data>
+  <data name="RES_collective.time.occurredatmost.rotext" xml:space="preserve">
+    <value>occurred at most</value>
+  </data>
+  <data name="RES_collective.parseerror.rotext" xml:space="preserve">
+    <value>Error when analyzing the expression:</value>
+  </data>
+  <data name="RES_collectiveresultenum.collectiveusedinprocess.rotext" xml:space="preserve">
+    <value>The collective cannot be deleted since it is being used in some Visualtime business rule</value>
+  </data>
+</root>

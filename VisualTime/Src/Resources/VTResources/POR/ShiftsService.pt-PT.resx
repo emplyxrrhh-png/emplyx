@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_cruflcom.shifts.add.rotext" xml:space="preserve">
+    <value>adicionar</value>
+  </data>
+  <data name="RES_cruflcom.shifts.advancedrules.rotext" xml:space="preserve">
+    <value>Regras avançadas</value>
+  </data>
+  <data name="RES_cruflcom.shifts.after.rotext" xml:space="preserve">
+    <value>depois da entrada</value>
+  </data>
+  <data name="RES_cruflcom.shifts.afterday.rotext" xml:space="preserve">
+    <value>do dia depois do horário</value>
+  </data>
+  <data name="RES_cruflcom.shifts.all.rotext" xml:space="preserve">
+    <value>qualquer zona</value>
+  </data>
+  <data name="RES_cruflcom.shifts.allthetime.rotext" xml:space="preserve">
+    <value>todo o tempo</value>
+  </data>
+  <data name="RES_cruflcom.shifts.and.rotext" xml:space="preserve">
+    <value>e as</value>
+  </data>
+  <data name="RES_cruflcom.shifts.andonly.rotext" xml:space="preserve">
+    <value>e</value>
+  </data>
+  <data name="RES_cruflcom.shifts.as.rotext" xml:space="preserve">
+    <value>como</value>
+  </data>
+  <data name="RES_cruflcom.shifts.basicrules.rotext" xml:space="preserve">
+    <value>Regras básicas</value>
+  </data>
+  <data name="RES_cruflcom.shifts.beforeday.rotext" xml:space="preserve">
+    <value>do dia anterior do horário</value>
+  </data>
+  <data name="RES_cruflcom.shifts.between.rotext" xml:space="preserve">
+    <value>entre</value>
+  </data>
+  <data name="RES_cruflcom.shifts.breaklayer.rotext" xml:space="preserve">
+    <value>Descanso</value>
+  </data>
+  <data name="RES_cruflcom.shifts.caption.rotext" xml:space="preserve">
+    <value>com o valor</value>
+  </data>
+  <data name="RES_cruflcom.shifts.day.rotext" xml:space="preserve">
+    <value>do dia do horário</value>
+  </data>
+  <data name="RES_cruflcom.shifts.fix.rotext" xml:space="preserve">
+    <value>o valor seguinte</value>
+  </data>
+  <data name="RES_cruflcom.shifts.flexiblelayer.rotext" xml:space="preserve">
+    <value>Flexível</value>
+  </data>
+  <data name="RES_cruflcom.shifts.from.rotext" xml:space="preserve">
+    <value>Desde</value>
+  </data>
+  <data name="RES_cruflcom.shifts.futhermore.rotext" xml:space="preserve">
+    <value>e ainda</value>
+  </data>
+  <data name="RES_cruflcom.shifts.graterorequelthan.rotext" xml:space="preserve">
+    <value>É maior ou igual a</value>
+  </data>
+  <data name="RES_cruflcom.shifts.greater.rotext" xml:space="preserve">
+    <value>Maior</value>
+  </data>
+  <data name="RES_cruflcom.shifts.greatereq.rotext" xml:space="preserve">
+    <value>É maior ou igual a</value>
+  </data>
+  <data name="RES_cruflcom.shifts.hay.rotext" xml:space="preserve">
+    <value>há</value>
+  </data>
+  <data name="RES_cruflcom.shifts.hours.rotext" xml:space="preserve">
+    <value>horas</value>
+  </data>
+  <data name="RES_cruflcom.shifts.if.rotext" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="RES_cruflcom.shifts.ifthereisa.rotext" xml:space="preserve">
+    <value>Se fica</value>
+  </data>
+  <data name="RES_cruflcom.shifts.in.rotext" xml:space="preserve">
+    <value>em</value>
+  </data>
+  <data name="RES_cruflcom.shifts.inanytimezone.rotext" xml:space="preserve">
+    <value>em qualquer zona</value>
+  </data>
+  <data name="RES_cruflcom.shifts.inbetween.rotext" xml:space="preserve">
+    <value>Entrada entre</value>
+  </data>
+  <data name="RES_cruflcom.shifts.inmove.rotext" xml:space="preserve">
+    <value>Entrada às</value>
+  </data>
+  <data name="RES_cruflcom.shifts.justify.rotext" xml:space="preserve">
+    <value>justificar</value>
+  </data>
+  <data name="RES_cruflcom.shifts.less.rotext" xml:space="preserve">
+    <value>Menor</value>
+  </data>
+  <data name="RES_cruflcom.shifts.lesserorequalthan.rotext" xml:space="preserve">
+    <value>Menor ou igual a</value>
+  </data>
+  <data name="RES_cruflcom.shifts.no_hay.rotext" xml:space="preserve">
+    <value>não existe</value>
+  </data>
+  <data name="RES_cruflcom.shifts.ofanyduration.rotext" xml:space="preserve">
+    <value>de qualquer duração</value>
+  </data>
+  <data name="RES_cruflcom.shifts.outbetween.rotext" xml:space="preserve">
+    <value>Saída</value>
+  </data>
+  <data name="RES_cruflcom.shifts.outmove.rotext" xml:space="preserve">
+    <value>Saída às</value>
+  </data>
+  <data name="RES_cruflcom.shifts.plusrules.rotext" xml:space="preserve">
+    <value>Regras avançadas de bónus e/ou prémios</value>
+  </data>
+  <data name="RES_cruflcom.shifts.present.rotext" xml:space="preserve">
+    <value>Pode estar presente entre as</value>
+  </data>
+  <data name="RES_cruflcom.shifts.presentbetween.rotext" xml:space="preserve">
+    <value>Estará presente entre</value>
+  </data>
+  <data name="RES_cruflcom.shifts.rigidlayer.rotext" xml:space="preserve">
+    <value>Fixa</value>
+  </data>
+  <data name="RES_cruflcom.shifts.since.rotext" xml:space="preserve">
+    <value>a</value>
+  </data>
+  <data name="RES_cruflcom.shifts.than.rotext" xml:space="preserve">
+    <value>que</value>
+  </data>
+  <data name="RES_cruflcom.shifts.to.rotext" xml:space="preserve">
+    <value>a</value>
+  </data>
+  <data name="RES_cruflcom.shifts.willbeconsideredas.rotext" xml:space="preserve">
+    <value>considera-se como</value>
+  </data>
+  <data name="RES_docshift.parserule.allthetime.rotext" xml:space="preserve">
+    <value>todo o tempo</value>
+  </data>
+  <data name="RES_docshift.parserule.and.rotext" xml:space="preserve">
+    <value>e</value>
+  </data>
+  <data name="RES_docshift.parserule.between.rotext" xml:space="preserve">
+    <value>entre &lt;b&gt;${1}&lt;/b&gt; e &lt;b&gt;${2}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_docshift.parserule.graterorequelthan.rotext" xml:space="preserve">
+    <value>Maior ou igual a &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_docshift.parserule.iifthereisa.rotext" xml:space="preserve">
+    <value>Se fica</value>
+  </data>
+  <data name="RES_docshift.parserule.in.rotext" xml:space="preserve">
+    <value>em</value>
+  </data>
+  <data name="RES_docshift.parserule.inanytimezone.rotext" xml:space="preserve">
+    <value>em qualquer zona</value>
+  </data>
+  <data name="RES_docshift.parserule.inwillbeconsideredas.rotext" xml:space="preserve">
+    <value>considerar-se-á como</value>
+  </data>
+  <data name="RES_docshift.parserule.lesserorequalthan.rotext" xml:space="preserve">
+    <value>Menor ou igual a &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_docshift.parserule.ofanyduration.rotext" xml:space="preserve">
+    <value>de qualquer duração</value>
+  </data>
+  <data name="RES_docshift.parserule.since.rotext" xml:space="preserve">
+    <value>até &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_docshift.parserule.userfield.between.rotext" xml:space="preserve">
+    <value>entre o intervalo indicado no campo da ficha &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_docshift.parserule.userfield.graterorequelthan.rotext" xml:space="preserve">
+    <value>Maior ou igual ao campo da ficha &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_docshift.parserule.userfield.lesserorequalthan.rotext" xml:space="preserve">
+    <value>Menor ou igual ao campo da ficha &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_docshift.parserule.userfield.since.rotext" xml:space="preserve">
+    <value>até ao valor do campo da ficha &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_resultenum.breaklayer_collision.rotext" xml:space="preserve">
+    <value>Existe um conflito nos horários de descanso</value>
+  </data>
+  <data name="RES_resultenum.breaklayer_invalidbegin.rotext" xml:space="preserve">
+    <value>Hora de início inválida no horário de descanso</value>
+  </data>
+  <data name="RES_resultenum.breaklayer_invalidfinish.rotext" xml:space="preserve">
+    <value>Hora final inválida no horário de descanso</value>
+  </data>
+  <data name="RES_resultenum.breaklayer_invalidmaxbreak.rotext" xml:space="preserve">
+    <value>Valor não permitido no horário de descanso</value>
+  </data>
+  <data name="RES_resultenum.breaklayer_invalidminbreak.rotext" xml:space="preserve">
+    <value>Valor não permitido</value>
+  </data>
+  <data name="RES_resultenum.breaklayer_invalidperiod.rotext" xml:space="preserve">
+    <value>Um período de descanso está incorreto (mais informação: A hora de início e final são inconsistentes).</value>
+  </data>
+  <data name="RES_resultenum.breaklayer_noparentmandatorylayer.rotext" xml:space="preserve">
+    <value>O período de descanso não está englobado numa das horas fixas. Um período de descanso necessita de ser um período de horas fixas, que comece antes ou ao mesmo tempo que o descanso e termine depois ou ao mesmo tempo que o fim do descanso.</value>
+  </data>
+  <data name="RES_resultenum.dailyrecordhasrepeatedpunches.rotext" xml:space="preserve">
+    <value>A sequência de picagens definida para o padrão de declaração de jornada não pode conter registos repetidos.</value>
+  </data>
+  <data name="RES_resultenum.errorgeneratingnewid.rotext" xml:space="preserve">
+    <value>Erro ao gerar novo Id. interno.</value>
+  </data>
+  <data name="RES_resultenum.erroronchangeobsoletename.rotext" xml:space="preserve">
+    <value>Erro na atualização do nome obsoleto</value>
+  </data>
+  <data name="RES_resultenum.errorsavingshiftdata.rotext" xml:space="preserve">
+    <value>Não é possível gravar o horário. Dados incorretos.</value>
+  </data>
+  <data name="RES_resultenum.exportnamealreadyexist.rotext" xml:space="preserve">
+    <value>A equivalência de exportação do horário já existe. Introduza outro nome.</value>
+  </data>
+  <data name="RES_resultenum.filter_invalidaction.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_resultenum.filter_invalidbegin.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_resultenum.filter_invalidfinish.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_resultenum.filter_invalidperiod.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_resultenum.filter_invalidtarget.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_resultenum.filter_invalidvalue.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_resultenum.flexiblelayer_collision.rotext" xml:space="preserve">
+    <value>Existe um conflito nos horários flexíveis</value>
+  </data>
+  <data name="RES_resultenum.flexiblelayer_invalidbegin.rotext" xml:space="preserve">
+    <value>Hora de início inválida</value>
+  </data>
+  <data name="RES_resultenum.flexiblelayer_invalidfinish.rotext" xml:space="preserve">
+    <value>Hora final inválida no horário flexível</value>
+  </data>
+  <data name="RES_resultenum.flexiblelayer_invalidperiod.rotext" xml:space="preserve">
+    <value>O período de horas flexíveis está incorreto (mais informação: A hora de início e final são inconsistentes).</value>
+  </data>
+  <data name="RES_resultenum.flexiblelayer_layerinsidemandatory.rotext" xml:space="preserve">
+    <value>A faixa horária não pode estar dentro dos limites de uma faixa horária rígida</value>
+  </data>
+  <data name="RES_resultenum.holidayconceptsquerynotequal.rotext" xml:space="preserve">
+    <value>Os saldos de férias utilizados devem ser do mesmo tipo.</value>
+  </data>
+  <data name="RES_resultenum.invalidexpectedworkinghours.rotext" xml:space="preserve">
+    <value>O horário deve ter as horas teóricas indicadas.</value>
+  </data>
+  <data name="RES_resultenum.mandatory_invalidfinish.rotext" xml:space="preserve">
+    <value>Hora final inválida no horário fixo</value>
+  </data>
+  <data name="RES_resultenum.mandatorylayer_collision.rotext" xml:space="preserve">
+    <value>Existe um conflito nos horários fixos</value>
+  </data>
+  <data name="RES_resultenum.mandatorylayer_finishdoesnotmatchfloatingfinish.rotext" xml:space="preserve">
+    <value>O intervalo do horário fixo não coincide com o final</value>
+  </data>
+  <data name="RES_resultenum.mandatorylayer_floatingfinish_without_floatingbegin.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_resultenum.mandatorylayer_invalidbegin.rotext" xml:space="preserve">
+    <value>Hora de início inválida no horário fixo</value>
+  </data>
+  <data name="RES_resultenum.mandatorylayer_invalidflexiblelayer.rotext" xml:space="preserve">
+    <value>Não é possível adicionar uma faixa flexível a esta configuração de horário</value>
+  </data>
+  <data name="RES_resultenum.mandatorylayer_invalidfloatingbegin.rotext" xml:space="preserve">
+    <value>O intervalo de entrada permitida para uma faixa de horas obrigatórias não é correto.</value>
+  </data>
+  <data name="RES_resultenum.mandatorylayer_invalidperiod.rotext" xml:space="preserve">
+    <value>O período de horas fixas está incorreto (mais informação: A hora de início e final são inconsistentes).</value>
+  </data>
+  <data name="RES_resultenum.namealreadyexist.rotext" xml:space="preserve">
+    <value>O nome completo ou abreviado do horário já existe. Introduza outro nome.</value>
+  </data>
+  <data name="RES_resultenum.paidlayer_invalidbegin.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_resultenum.paidlayer_invalidfinish.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_resultenum.paidlayer_invalidperiod.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_resultenum.paidlayer_invalidtarget.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_resultenum.paidlayer_invalidvalue.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_resultenum.paidlayer_noparentbreaklayer.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_resultenum.patternpunchesbadsequence.rotext" xml:space="preserve">
+    <value>A sequência de picagens definida para o padrão de declaração de jornada não é válida</value>
+  </data>
+  <data name="RES_resultenum.patternpunchesoverlaped.rotext" xml:space="preserve">
+    <value>A sequência de picagens definida para o padrão de declaração de jornada não pode conter registos sobrepostos.</value>
+  </data>
+  <data name="RES_resultenum.patternpunchesshouldbeeven.rotext" xml:space="preserve">
+    <value>A sequência de picagens do padrão de declaração de jornada deve ser com registos pares.</value>
+  </data>
+  <data name="RES_resultenum.shiftassignmentassigned.rotext" xml:space="preserve">
+    <value>Posto atribuído à planeamento</value>
+  </data>
+  <data name="RES_resultenum.shiftassignmentrepited.rotext" xml:space="preserve">
+    <value>Posto duplicado</value>
+  </data>
+  <data name="RES_resultenum.shiftgroupnamealreadyexist.rotext" xml:space="preserve">
+    <value>O nome de grupo de horários já existe.</value>
+  </data>
+  <data name="RES_resultenum.shiftgroupnotempty.rotext" xml:space="preserve">
+    <value>Não é possível eliminar o grupo pois contém horários</value>
+  </data>
+  <data name="RES_resultenum.shiftlayer_layeridexistent.rotext" xml:space="preserve">
+    <value>Id de zona horária existente</value>
+  </data>
+  <data name="RES_resultenum.shiftlayercount.rotext" xml:space="preserve">
+    <value>Não pode adicionar nem eliminar faixas neste horário</value>
+  </data>
+  <data name="RES_resultenum.shiftlayernumber.rotext" xml:space="preserve">
+    <value>Este tipo de horário não pode ter mais de 2 faixas.</value>
+  </data>
+  <data name="RES_resultenum.shiftplannedinfreezedate.rotext" xml:space="preserve">
+    <value>O horário está em utilização dentro do período de conclusão e, por isso, não pode ser apagado.</value>
+  </data>
+  <data name="RES_resultenum.shiftrule_actionuserfieldrequired.rotext" xml:space="preserve">
+    <value>Requerido campo da ficha para a ação.</value>
+  </data>
+  <data name="RES_resultenum.shiftrule_conditionuserfieldrequired.rotext" xml:space="preserve">
+    <value>Requerido campo da ficha para a condição.</value>
+  </data>
+  <data name="RES_resultenum.shiftrule_invalidactionuserfieldtype.rotext" xml:space="preserve">
+    <value>O tipo de campo da ficha para o valor da ação está incorreto.</value>
+  </data>
+  <data name="RES_resultenum.shiftrule_invalidbetweenuserfieldtype.rotext" xml:space="preserve">
+    <value>O tipo de campo da ficha para o intervalo da condição está incorreto.</value>
+  </data>
+  <data name="RES_resultenum.shiftrule_invalidcause.rotext" xml:space="preserve">
+    <value>Causa na regra de justificação inválida.</value>
+  </data>
+  <data name="RES_resultenum.shiftrule_invalidconditionuserfields.rotext" xml:space="preserve">
+    <value>Configuração ficha para a condição inválida.</value>
+  </data>
+  <data name="RES_resultenum.shiftrule_invaliddata.rotext" xml:space="preserve">
+    <value>Dados incorretos</value>
+  </data>
+  <data name="RES_resultenum.shiftrule_invalidfromuserfieldtype.rotext" xml:space="preserve">
+    <value>O tipo do campo da ficha para o valor desde da condição é incorreto.</value>
+  </data>
+  <data name="RES_resultenum.shiftrule_invalidincidence.rotext" xml:space="preserve">
+    <value>Incidência inválida</value>
+  </data>
+  <data name="RES_resultenum.shiftrule_invalidtouserfieldtype.rotext" xml:space="preserve">
+    <value>O tipo do campo da ficha para o valor até da condição é incorreto.</value>
+  </data>
+  <data name="RES_resultenum.shiftrule_invalidzone.rotext" xml:space="preserve">
+    <value>Zona inválida</value>
+  </data>
+  <data name="RES_resultenum.shifttimezone_timeperiodincorrect.rotext" xml:space="preserve">
+    <value>Período incorreto</value>
+  </data>
+  <data name="RES_resultenum.shifttimezone_timezonenotexist.rotext" xml:space="preserve">
+    <value>Zona horária inexistente</value>
+  </data>
+  <data name="RES_resultenum.shiftwithoutpermission.rotext" xml:space="preserve">
+    <value>Horário sem autorização de alteração</value>
+  </data>
+  <data name="RES_resultenum.timezone_assigninzones.rotext" xml:space="preserve">
+    <value>Erro ao atribuir a zona horária</value>
+  </data>
+  <data name="RES_resultenum.timezone_errornameincorrect.rotext" xml:space="preserve">
+    <value>Nome de zona horária incorreto</value>
+  </data>
+  <data name="RES_resultenum.timezone_overlappedzones.rotext" xml:space="preserve">
+    <value>O período indicado da zona horária não está correto</value>
+  </data>
+  <data name="RES_resultenum.typelockedshiftfloatingdata.rotext" xml:space="preserve">
+    <value>Não se pode modificar os valores das faixas de tempo porque o horário está planeado.</value>
+  </data>
+  <data name="RES_resultenum.typelockedshiftplanned.rotext" xml:space="preserve">
+    <value>Não se pode modificar o tipo porque o horário está planeado.</value>
+  </data>
+  <data name="RES_resultenum.typelockedshiftplannedbreakhours.rotext" xml:space="preserve">
+    <value>Não se pode modificar o valor do descanso porque o horário está planeado.</value>
+  </data>
+  <data name="RES_resultenum.userfieldempty.rotext" xml:space="preserve">
+    <value>É necessário selecionar um campo da ficha e/ou um valor.</value>
+  </data>
+  <data name="RES_resultenum.vacationsshiftnotempty.rotext" xml:space="preserve">
+    <value>Horário de tipo férias ou autorização com dados desnecessários definidos (horas teóricas e/ou faixas horárias e/ou zonas horárias e/ou regras).</value>
+  </data>
+  <data name="RES_shifts.shiftsave.copy.rotext" xml:space="preserve">
+    <value>${1} (Cópia)</value>
+  </data>
+  <data name="RES_shifts.shiftsave.obsolete.rotext" xml:space="preserve">
+    <value>${1} (Antigo)</value>
+  </data>
+  <data name="RES_resultenum.xssvalidationerror.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_resultenum.patternhasrepeatedpunch.rotext" xml:space="preserve">
+    <value>O padrão de comunicação de horas está incorreto.</value>
+  </data>
+  <data name="RES_resultenum.shiftinrule.rotext" xml:space="preserve">
+    <value>O calendário está a ser utilizado nas regras do acordo.</value>
+  </data>
+  <data name="RES_resultenum.shiftindailyrule.rotext" xml:space="preserve">
+    <value>O horário está a ser utilizado nas regras do horário diário.</value>
+  </data>
+  <data name="RES_resultenum.collectivesempty.rotext" xml:space="preserve">
+    <value>É necessário selecionar pelo menos um coletivo</value>
+  </data>
+</root>

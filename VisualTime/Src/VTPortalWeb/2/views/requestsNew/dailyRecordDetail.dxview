@@ -1,0 +1,460 @@
+<div data-options="dxView : { name: 'dailyRecordDetail', title: 'dailyRecordDetail', disableCache: true } " >
+
+	<div id="smallUserInfo"></div>
+
+	<div  style="height:90%">
+		<div style="clear:both;border-radius: 25px;height: calc(100% - 2rem);" class="card card-one" data-bind="dxScrollView: scrollContent">
+			
+			<!-- ko if: requestMainDivVisible() -->
+			<div id="divEmployeeInfo">
+				<header>
+					<div class="avatar">
+						<div style="width:100px; height:100px;background-size: contain !important; " data-bind="style: { backgroundImage: empImage }"></div>
+					</div>
+				</header>
+
+				<h3>
+					<span data-bind="text: lblEmployee"></span>
+					<div class="descGroup">
+						<span data-bind="text: lblGroupName"></span>
+					</div>
+				</h3>
+			<div id="divRequestDates">
+						<div class="desc">
+							<span data-bind="text: lblHasRequestedDR"></span>
+
+							<br/>
+							<div class="dayInfoRequest">
+								<span data-bind="text: lblDayInfo"></span>
+								<div style="margin-left: 5px;display: inline-block;" data-bind="click: detailsVisible">
+									<img style="cursor:pointer" src="Images/Common/calendario.png" width="20px"></img>
+								</div>
+							</div>
+
+							<!-- ko if: notAdjustedVisible() -->
+							<h4>
+								<span data-bind="text: lblNotes"></span>
+							</h4>
+							<div class="h-divider">
+								<div class="shadow"></div>
+							</div>
+							<span style="color:red" data-bind="html: lblNotAdjusted"></span>
+							<br/>
+							<!-- /ko-->
+							<!-- ko if: punchesVisible() -->
+							<span  data-bind="html: lblHasBeenModified"></span>
+							<!-- /ko-->
+						</div>
+			
+			</div>
+			</div>
+			<!-- /ko-->
+			
+			<!-- ko if: loadingDivVisible() -->
+			<div id="divLoadingInfo">
+				<header>
+					<div class="avatar">
+						<div style="width:100px; height:100px;background-size: contain !important; " data-bind="style: { backgroundImage: empImage }"></div>
+					</div>
+				</header>
+				<div class="desc">
+					<div style="margin-top: 100px;"  data-bind="text: lblLoading"></div>
+				</div>
+			</div>
+			<!-- /ko-->
+			
+			<!-- ko if: infoDivVisible() -->
+			<div id="divRequestInfo">
+				<h4>
+					<span data-bind="text: lblRequestInfo"></span>
+				</h4>
+				<div class="h-divider">
+					<div class="shadow"></div>
+				</div>
+				
+			</div>
+			<!-- /ko-->
+
+			<div  id="divCurrentPunches">
+				
+				<!-- ko if: blocksVisible() -->
+				<h4>
+					<span data-bind="text: lblCurrentPunches"></span>
+				</h4>
+				<div class="h-divider">
+					<div class="shadow"></div>
+				</div>
+				<div>
+					<!-- ko if: block1Visible() -->
+					<div id="block1" style="margin-top: 2vw;">
+						<div id="dailyRecordResume" class="dailyRecordResume">
+
+							<div id="info1">
+								<div class="dx-fieldset" style="display: flex;align-items: center;text-align: center; padding-left: 0px;">
+									<div class="dailyRecordTimeBegin">
+										<div class="dRTitle">
+											<img src="Images/Punches/enter.jpg" width="40" height="40"></img>
+										</div>
+									</div>
+									<div class="dailyRecordTimeBegin">
+										<div id="timeBeginDailyRecord1" style=" text-align:center; " data-bind="dxTextBox: dateBegin"></div>
+									</div>
+									<div class="dailyRecordTimeBegin" style="margin-left: 10px;">
+										<div class="dRTitle">
+											<img src="Images/Punches/exit.jpg" width="40" height="40"></img>
+										</div>
+									</div>
+									<div class="dailyRecordTimeBegin">
+										<div id="timeEndDailyRecord1" style=" text-align:center;"  data-bind="dxTextBox: dateEnd"></div>
+									</div>
+								</div>
+							</div>
+							<div id="info2" style="padding-top:10px">
+								<!-- ko if: tcInfo1() -->
+								<div class="dx-fieldset" style="display: flex;align-items: center;text-align: center; padding-left: 0px;">
+									<div class="dailyRecordTimeBegin" >
+										<div class="dRTitle2">
+											<img src="Images/icons8-home-48.png" width="30" height="30"></img>
+										</div>
+									</div>
+									<div class="dailyRecordTimeBegin" style="width:75%">
+										<div id="tcType1" class="dx-field-value" data-bind="dxSelectBox: cmbTCType"></div>
+									</div>
+								</div>
+								<!-- /ko-->
+								<!-- ko if: zInfo1() -->
+								<div class="dx-fieldset" style="display: flex;align-items: center;text-align: center;padding-bottom: 5px;padding-left: 0px;">
+									<div class="dailyRecordTimeBegin" >
+										<div class="dRTitle2">
+											<img src="Images/ZonesStatus.png" width="30" height="30"></img>
+										</div>
+									</div>
+									<div class="dailyRecordTimeBegin" style="width:75%">
+										<div id="tcZone1" class="dx-field-value" data-bind="dxSelectBox: cmbZones"></div>
+									</div>
+								</div>
+								<!-- /ko-->
+							</div>
+						</div>
+						<br/>
+					</div>
+					<!-- /ko-->
+					<!-- ko if: block2Visible() -->
+					<div id="block2">
+						<div id="dailyRecordResume" class="dailyRecordResume">
+							<div id="info1">
+
+								<div class="dx-fieldset" style="display: flex;align-items: center;text-align: center; padding-left: 0px;">
+									<div class="dailyRecordTimeBegin">
+										<div class="dRTitle">
+											<img src="Images/Punches/enter.jpg" width="40" height="40"></img>
+										</div>
+									</div>
+									<div class="dailyRecordTimeBegin">
+										<div id="timeBeginDailyRecord2" style=" text-align:center; " data-bind="dxTextBox: dateBegin2"></div>
+									</div>
+									<div class="dailyRecordTimeBegin" style="margin-left: 10px;">
+										<div class="dRTitle">
+											<img src="Images/Punches/exit.jpg" width="40" height="40"></img>
+										</div>
+									</div>
+									<div class="dailyRecordTimeBegin">
+										<div id="timeEndDailyRecord2" style=" text-align:center;"  data-bind="dxTextBox: dateEnd2"></div>
+									</div>
+								</div>
+							</div>
+							<div id="info2" style="padding-top:10px">
+								<!-- ko if: tcInfo2() -->
+								<div class="dx-fieldset" style="display: flex;align-items: center;text-align: center; padding-left: 0px;">
+									<div class="dailyRecordTimeBegin" >
+										<div class="dRTitle2">
+											<img src="Images/icons8-home-48.png" width="30" height="30"></img>
+										</div>
+									</div>
+									<div class="dailyRecordTimeBegin" style="width:75%">
+										<div id="tcType2" class="dx-field-value" data-bind="dxSelectBox: cmbTCType2"></div>
+									</div>
+								</div>
+								<!-- /ko-->
+								<!-- ko if: zInfo2() -->
+								<div class="dx-fieldset" style="display: flex;align-items: center;text-align: center;padding-bottom: 5px;padding-left: 0px;">
+									<div class="dailyRecordTimeBegin" >
+										<div class="dRTitle2">
+											<img src="Images/ZonesStatus.png" width="30" height="30"></img>
+										</div>
+									</div>
+									<div class="dailyRecordTimeBegin" style="width:75%">
+										<div id="tcZone2" class="dx-field-value" data-bind="dxSelectBox: cmbZones2"></div>
+									</div>
+								</div>
+								<!-- /ko-->
+							</div>
+						</div>
+						<br/>
+					</div>
+					<!-- /ko-->
+					<!-- ko if: block3Visible() -->
+					<div id="block3">
+						<div id="dailyRecordResume" class="dailyRecordResume">
+							<div id="info1">
+
+								<div class="dx-fieldset" style="display: flex;align-items: center;text-align: center; padding-left: 0px;">
+									<div class="dailyRecordTimeBegin">
+										<div class="dRTitle">
+											<img src="Images/Punches/enter.jpg" width="40" height="40"></img>
+										</div>
+									</div>
+									<div class="dailyRecordTimeBegin">
+										<div id="timeBeginDailyRecord3" style=" text-align:center; " data-bind="dxTextBox: dateBegin3"></div>
+									</div>
+									<div class="dailyRecordTimeBegin" style="margin-left: 10px;">
+										<div class="dRTitle">
+											<img src="Images/Punches/exit.jpg" width="40" height="40"></img>
+										</div>
+									</div>
+									<div class="dailyRecordTimeBegin">
+										<div id="timeEndDailyRecord3" style=" text-align:center;"  data-bind="dxTextBox: dateEnd3"></div>
+									</div>
+								</div>
+							</div>
+							<div id="info2" style="padding-top:10px">
+								<!-- ko if: tcInfo3() -->
+								<div class="dx-fieldset" style="display: flex;align-items: center;text-align: center; padding-left: 0px;">
+									<div class="dailyRecordTimeBegin" >
+										<div class="dRTitle2">
+											<img src="Images/icons8-home-48.png" width="30" height="30"></img>
+										</div>
+									</div>
+									<div class="dailyRecordTimeBegin" style="width:75%">
+										<div id="tcType3" class="dx-field-value" data-bind="dxSelectBox: cmbTCType3"></div>
+									</div>
+								</div>
+								<!-- /ko-->
+								<!-- ko if: zInfo3() -->
+								<div class="dx-fieldset" style="display: flex;align-items: center;text-align: center;padding-bottom: 5px;padding-left: 0px;">
+									<div class="dailyRecordTimeBegin" >
+										<div class="dRTitle2">
+											<img src="Images/ZonesStatus.png" width="30" height="30"></img>
+										</div>
+									</div>
+									<div class="dailyRecordTimeBegin" style="width:75%">
+										<div id="tcZone3" class="dx-field-value" data-bind="dxSelectBox: cmbZones3"></div>
+									</div>
+								</div>
+								<!-- /ko-->
+							</div>
+						</div>
+						<br/>
+					</div>
+					<!-- /ko-->
+					<!-- ko if: block4Visible() -->
+					<div id="block4">
+						<div id="dailyRecordResume" class="dailyRecordResume">
+							<div id="info1">
+
+								<div class="dx-fieldset" style="display: flex;align-items: center;text-align: center; padding-left: 0px;">
+									<div class="dailyRecordTimeBegin">
+										<div class="dRTitle">
+											<img src="Images/Punches/enter.jpg" width="40" height="40"></img>
+										</div>
+									</div>
+									<div class="dailyRecordTimeBegin">
+										<div id="timeBeginDailyRecord4" style=" text-align:center; " data-bind="dxTextBox: dateBegin4"></div>
+									</div>
+									<div class="dailyRecordTimeBegin" style="margin-left: 10px;">
+										<div class="dRTitle">
+											<img src="Images/Punches/exit.jpg" width="40" height="40"></img>
+										</div>
+									</div>
+									<div class="dailyRecordTimeBegin">
+										<div id="timeEndDailyRecord4" style=" text-align:center;"  data-bind="dxTextBox: dateEnd4"></div>
+									</div>
+								</div>
+							</div>
+							<div id="info2" style="padding-top:10px">
+								<!-- ko if: tcInfo4() -->
+								<div class="dx-fieldset" style="display: flex;align-items: center;text-align: center; padding-left: 0px;">
+									<div class="dailyRecordTimeBegin" >
+										<div class="dRTitle2">
+											<img src="Images/icons8-home-48.png" width="30" height="30"></img>
+										</div>
+									</div>
+									<div class="dailyRecordTimeBegin" style="width:75%">
+										<div id="tcType4" class="dx-field-value" data-bind="dxSelectBox: cmbTCType4"></div>
+									</div>
+								</div>
+								<!-- /ko-->
+								<!-- ko if: zInfo4() -->
+								<div class="dx-fieldset" style="display: flex;align-items: center;text-align: center;padding-bottom: 5px;padding-left: 0px;">
+									<div class="dailyRecordTimeBegin" >
+										<div class="dRTitle2">
+											<img src="Images/ZonesStatus.png" width="30" height="30"></img>
+										</div>
+									</div>
+									<div class="dailyRecordTimeBegin" style="width:75%">
+										<div id="tcZone4" class="dx-field-value" data-bind="dxSelectBox: cmbZones4"></div>
+									</div>
+								</div>
+								<!-- /ko-->
+							</div>
+						</div>
+						<br/>
+					</div>
+					<!-- /ko-->
+					<!-- ko if: block5Visible() -->
+					<div id="block5">
+						<div id="dailyRecordResume" class="dailyRecordResume">
+							<div id="info1">
+
+								<div class="dx-fieldset" style="display: flex;align-items: center;text-align: center; padding-left: 0px;">
+									<div class="dailyRecordTimeBegin">
+										<div class="dRTitle">
+											<img src="Images/Punches/enter.jpg" width="40" height="40"></img>
+										</div>
+									</div>
+									<div class="dailyRecordTimeBegin">
+										<div id="timeBeginDailyRecord5" style=" text-align:center; " data-bind="dxTextBox: dateBegin5"></div>
+									</div>
+									<div class="dailyRecordTimeBegin" style="margin-left: 10px;">
+										<div class="dRTitle">
+											<img src="Images/Punches/exit.jpg" width="40" height="40"></img>
+										</div>
+									</div>
+									<div class="dailyRecordTimeBegin">
+										<div id="timeEndDailyRecord5" style=" text-align:center;"  data-bind="dxTextBox: dateEnd5"></div>
+									</div>
+								</div>
+							</div>
+							<div id="info2" style="padding-top:10px">
+								<!-- ko if: tcInfo5() -->
+								<div class="dx-fieldset" style="display: flex;align-items: center;text-align: center; padding-left: 0px;">
+									<div class="dailyRecordTimeBegin" >
+										<div class="dRTitle2">
+											<img src="Images/icons8-home-48.png" width="30" height="30"></img>
+										</div>
+									</div>
+									<div class="dailyRecordTimeBegin" style="width:75%">
+										<div id="tcType5" class="dx-field-value" data-bind="dxSelectBox: cmbTCType5"></div>
+									</div>
+								</div>
+								<!-- /ko-->
+								<!-- ko if: zInfo5() -->
+								<div class="dx-fieldset" style="display: flex;align-items: center;text-align: center;padding-bottom: 5px;padding-left: 0px;">
+									<div class="dailyRecordTimeBegin" >
+										<div class="dRTitle2">
+											<img src="Images/ZonesStatus.png" width="30" height="30"></img>
+										</div>
+									</div>
+									<div class="dailyRecordTimeBegin" style="width:75%">
+										<div id="tcZone5" class="dx-field-value" data-bind="dxSelectBox: cmbZones5"></div>
+									</div>
+								</div>
+								<!-- /ko-->
+							</div>
+						</div>
+						<br/>
+					</div>
+					<!-- /ko-->
+				</div>
+				<!-- /ko-->
+				<!-- ko if: punchesVisible() -->
+				<h4>
+					<span data-bind="text: lblCurrentPunches2"></span>
+				</h4>
+				<div class="h-divider">
+					<div class="shadow"></div>
+				</div>
+					<div style="padding-top:5px;margin: auto;width: 80%;">
+						<div id="list" class="list-container">
+							<div id="punchesList" data-bind="dxList: listCurrentPunches" style="font-size:12px !important">
+								<div data-options="dxTemplate: {name: 'item'}" style="padding:0px !important; vertical-align: middle;">
+									<div class="listMenuItem" style="height:auto !important">
+										<div data-bind="css: $data.cssClass" class="listMenuItemIcon" style="height:30px !important; width:30px !important"></div>
+										<div class="listMenuItemContentDailyRecord">
+											<div style="font-size:14px;" data-bind="text: $data.Name"></div>
+											<div class="smallTextDescription" data-bind="text: $data.Value"></div>
+											<div class="smallTextDescription" data-bind="text: $data.Zone"></div>
+											<div class="smallTextDescription" data-bind="text: $data.TC"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+				<!-- /ko-->
+			</div>
+			<br/>
+		</div>
+	</div>
+	<div class="approvalPopup" data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:true, visible: popupVisible, height: 'auto'}">
+		<!--ko with: myApprovalsBlock-->
+		<div data-options="dxViewPlaceholder: { viewName: 'approvalHistory' } "></div>
+		<!-- /ko-->
+	</div>
+
+	<div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:true,closeOnBackButton:false, visible: popupDayInfoVisible, height: '50%'}">
+	
+			<div id="scrollview" style="clear:both" data-bind="dxScrollView: scrollPopup">
+				<div id="headerDayInfo">
+					<div class="dx-list-group-header">
+						<div data-bind="text: lblShift"></div>
+					</div>
+				</div>
+				<div class="dx-fieldset">
+					<div class="dx-field">
+						<div class="dx-field-value" data-bind="dxTextBox: txtDayShift"></div>
+						<div class="dx-field-value" data-bind="dxTextBox: txtPlannedHours"></div>
+					</div>
+				</div>
+				<div id="headerDayInfo2" class="list-container">
+					<div id="listShiftLayer" data-bind="dxList: listShiftLayer">
+						<div data-options="dxTemplate: {name: 'ScheduleItem'}">
+							<div data-bind="text: $data.Name"></div>
+							<div data-bind="dxLinearGauge: $data.Gauge"></div>
+						</div>
+					</div>
+				</div>
+				<div id="headerDayInfo3" class="list-container" data-bind="if: forecastsDS()[0].items.length > 0 ">
+					<div data-bind="dxList: listForecasts">
+						<div data-options="dxTemplate: {name: 'ForecastItem'}">
+							<div class="listMenuItem">
+								<div data-bind="css: $data.cssClass" class="listMenuItemIcon2"></div>
+								<div class="listMenuItemContent">
+									<div style="font-size: 12px;" data-bind="text: $data.Description"></div>
+								</div>
+
+								<div data-bind="if: $data.hasAction == true">
+									<div class="list-item-arrow"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="list" class="list-container" data-bind="if: scheduleDS()[0].items.length > 0">
+					<div id="listSchedule" data-bind="dxList: listSchedule">
+						<div data-options="dxTemplate: {name: 'ScheduleItem'}">
+							<div data-bind="text: $data.Name"></div>
+							<div data-bind="dxLinearGauge: $data.Gauge"></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			
+			
+		
+	</div>
+
+	<div class="fixedMenuButton2">
+		<div class="actionButton mainMenuButton" data-bind="dxButton: btnApprove"></div>
+		<div class="actionButton mainMenuButton" data-bind="dxButton: btnRefuse"></div>
+		<div class="actionButton mainMenuButton" data-bind="dxButton: btnHistory"></div>
+		<div class="actionButton mainMenuButton" data-bind="dxButton: btnDelete"></div>
+
+	</div>
+
+	<div data-bind="dxLoadPanel: loadingPanel"> </div>
+   
+</div>

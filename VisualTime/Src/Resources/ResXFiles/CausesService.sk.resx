@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_resultenum.causeusedinaccrual.rotext" xml:space="preserve">
+    <value>Vybrané zdôvodnenie sa používa na niektorej bilancii a nie je možné ho odstrániť. Používa sa na týchto zostatkoch: ${1}</value>
+  </data>
+  <data name="RES_resultenum.causeusedincauses.rotext" xml:space="preserve">
+    <value>Vybrané odôvodnenie bolo zadané ${1} krát ručne</value>
+  </data>
+  <data name="RES_resultenum.causeusedinequivalencedata.rotext" xml:space="preserve">
+    <value>Vybrané zdôvodnenie sa používa na porovnanie s inými zdôvodneniami</value>
+  </data>
+  <data name="RES_resultenum.causeusedinprogrammedabsence.rotext" xml:space="preserve">
+    <value>Vybrané zdôvodnenie sa používa v predĺženej neprítomnosti a nie je možné ho vymazať. Používa sa v predĺženej neprítomnosti pre týchto používateľov: ${1}</value>
+  </data>
+  <data name="RES_resultenum.causeusedinprogrammedcause.rotext" xml:space="preserve">
+    <value>Vybrané odôvodnenie sa používa v plánovanej udalosti a nie je možné ho vymazať. Používa sa v plánovaných požiadavkách pre týchto používateľov: ${1}</value>
+  </data>
+  <data name="RES_resultenum.causeusedinprogrammedholiday.rotext" xml:space="preserve">
+    <value>Vybrané odôvodnenie sa používa v hodinových predpovediach dovoleniek</value>
+  </data>
+  <data name="RES_resultenum.causeusedinpunchwithincidence.rotext" xml:space="preserve">
+    <value>Vybrané zdôvodnenie bolo použité pri taktovaní s incidentom z terminálu. Odôvodnenie nie je možné odstrániť.</value>
+  </data>
+  <data name="RES_resultenum.causeusedinrequest.rotext" xml:space="preserve">
+    <value>Vybrané odôvodnenie sa používa v jednej alebo viacerých aplikáciách.</value>
+  </data>
+  <data name="RES_resultenum.causeusedinrequestrule.rotext" xml:space="preserve">
+    <value>Vybrané odôvodnenie sa používa v niektorom pravidle požiadavky a nie je možné ho odstrániť. Používa sa v nasledujúcich pravidlách: ${1}</value>
+  </data>
+  <data name="RES_resultenum.causeusedinshift.rotext" xml:space="preserve">
+    <value>Vybrané zdôvodnenie sa používa v niektorom rozvrhu a nie je možné ho odstrániť. Používa sa v nasledujúcich rozvrhoch: ${1}</value>
+  </data>
+  <data name="RES_resultenum.changetypenotallowed.rotext" xml:space="preserve">
+    <value>Typ odôvodnenia nemôžete zmeniť, pretože sa už používa</value>
+  </data>
+  <data name="RES_resultenum.conceptbalanceannualqueryrequired.rotext" xml:space="preserve">
+    <value>Je potrebné vybrať ročný zostatok a zobraziť ho v hodinách</value>
+  </data>
+  <data name="RES_resultenum.invalidjustifyperioddates.rotext" xml:space="preserve">
+    <value>Obdobie výskytu medzi hodinami je nesprávne.</value>
+  </data>
+  <data name="RES_resultenum.invalidname.rotext" xml:space="preserve">
+    <value>Názov nemôže byť prázdny alebo už existuje</value>
+  </data>
+  <data name="RES_resultenum.invalidreaderinputcode.rotext" xml:space="preserve">
+    <value>Kód odôvodnenia je nesprávny.</value>
+  </data>
+  <data name="RES_resultenum.invalidroundingby.rotext" xml:space="preserve">
+    <value>Zaokrúhlenie nemôže byť 0 alebo záporná hodnota.</value>
+  </data>
+  <data name="RES_resultenum.invalidshortname.rotext" xml:space="preserve">
+    <value>Musíte uviesť skrátený názov odôvodnenia</value>
+  </data>
+  <data name="RES_resultenum.namealreadyexist.rotext" xml:space="preserve">
+    <value>Názov odôvodnenia už existuje.</value>
+  </data>
+  <data name="RES_resultenum.numberofcausesexceeded.rotext" xml:space="preserve">
+    <value>Prekročili ste maximálny počet odôvodnení pre licenciu Visualtime eXpress.</value>
+  </data>
+  <data name="RES_resultenum.readerinputcodeexistent.rotext" xml:space="preserve">
+    <value>Kód odôvodnenia sa už používa alebo je nesprávny.</value>
+  </data>
+  <data name="RES_resultenum.shortnamealreadeyexist.rotext" xml:space="preserve">
+    <value>Skrátený názov odôvodnenia už existuje.</value>
+  </data>
+  <data name="RES_resultenum.typedoesnotallowdocumenttracking.rotext" xml:space="preserve">
+    <value>Toto odôvodnenie má sledovacie dokumenty a jeho typ nie je možné zmeniť. Najskôr doklady vymažte alebo vytvorte nové zdôvodnenie</value>
+  </data>
+  <data name="RES_resultenum.userfieldempty.rotext" xml:space="preserve">
+    <value>Musíte vybrať pole karty a/alebo hodnotu.</value>
+  </data>
+  <data name="RES_resultenum.causeusedinlabagree.rotext" xml:space="preserve">
+    <value>Vybrané odôvodnenie sa používa v konvencii a nie je možné ho odstrániť. Používa sa v nasledujúcich konvenciách: ${1}</value>
+  </data>
+  <data name="RES_resultenum.xssvalidationerror.rotext" xml:space="preserve">
+    <value>Vo vlastnosti objektu bol zistený škodlivý skript</value>
+  </data>
+</root>

@@ -1,0 +1,1 @@
+﻿<%@ Page Language="VB" AutoEventWireup="false" Inherits="VTLive40.TaskTemplateSelectorData" CodeBehind="TaskTemplateSelectorData.aspx.vb" %>

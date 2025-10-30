@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_desktopalert.desktopalert.invaliddesktopconsent.detail.rotext" xml:space="preserve">
+    <value>El supervisor ${1} no ha aceptado la licencia de uso de Visualtime Desktop.</value>
+  </data>
+  <data name="RES_desktopalert.desktopalert.invalidportalconsent.detail.rotext" xml:space="preserve">
+    <value>El usuario ${1} no ha aceptado los términos y condiciones del portal del usuario.</value>
+  </data>
+  <data name="RES_desktopalert.desktopalert.invalidterminalconsent.detail.rotext" xml:space="preserve">
+    <value>El usuario ${1} no ha aceptado compartir la huella con el sistema.</value>
+  </data>
+  <data name="RES_desktopalert.desktopalert.invalidvisitsconsent.detail.rotext" xml:space="preserve">
+    <value>El supervisor ${1} no ha aceptado la licencia de uso de Visualtime Visits.</value>
+  </data>
+  <data name="RES_desktopalert.employeepresentwithoutprl.rotext" xml:space="preserve">
+    <value>Hay un usuario presente sin la documentación en regla</value>
+  </data>
+  <data name="RES_desktopalert.employeeshouldbepresent.detail.rotext" xml:space="preserve">
+    <value>El usuario debería estar presente el día ${1} a las ${2}</value>
+  </data>
+  <data name="RES_desktopalert.employeeshouldbepresent.rotext" xml:space="preserve">
+    <value>Un usuario debería haber llegado, y no lo ha hecho</value>
+  </data>
+  <data name="RES_desktopalert.employeespresentwithoutprl.detail.rotext" xml:space="preserve">
+    <value>Presente desde el día ${1} a las ${2}</value>
+  </data>
+  <data name="RES_desktopalert.employeespresentwithoutprl.rotext" xml:space="preserve">
+    <value>Hay ${1} usuario/s presentes sin la documentación en regla</value>
+  </data>
+  <data name="RES_desktopalert.employeesshouldbepresent.detail.rotext" xml:space="preserve">
+    <value>Debería estar presente desde el día ${1} a las ${2}</value>
+  </data>
+  <data name="RES_desktopalert.employeesshouldbepresent.rotext" xml:space="preserve">
+    <value>${1} usuarios deberían haber llegado, y no lo han hecho</value>
+  </data>
+  <data name="RES_desktopalert.employeeswithincompletepunches.detail.rotext" xml:space="preserve">
+    <value>Existen fichajes impares el día ${1}</value>
+  </data>
+  <data name="RES_desktopalert.employeeswithincompletepunches.rotext" xml:space="preserve">
+    <value>Faltan fichajes de ${1} usuario/s para ${2} día/s</value>
+  </data>
+  <data name="RES_desktopalert.employeeswithnonjustifiedpunches.detail.rotext" xml:space="preserve">
+    <value>Existen incidencias sin justificar el día ${1}</value>
+  </data>
+  <data name="RES_desktopalert.employeeswithnonjustifiedpunches.rotext" xml:space="preserve">
+    <value>Hay ${1} día/s sin justificar para ${2} usuario/s</value>
+  </data>
+  <data name="RES_desktopalert.employeeswithnonreliablepunches.detail.rotext" xml:space="preserve">
+    <value>Hay fichajes no fiable el día ${1}</value>
+  </data>
+  <data name="RES_desktopalert.employeeswithtrackingdocumentsnotdelivered.rotext" xml:space="preserve">
+    <value>Hay ${1} documentos de absentismo pendientes de ser entregados</value>
+  </data>
+  <data name="RES_desktopalert.employeeswithunreliablepunches.rotext" xml:space="preserve">
+    <value>Hay ${1} día/s con fichajes no fiables de ${2} usuario/s</value>
+  </data>
+  <data name="RES_desktopalert.employeewithincompletepunches.rotext" xml:space="preserve">
+    <value>Faltan fichajes de un usuario para ${2} día/s</value>
+  </data>
+  <data name="RES_desktopalert.employeewithnonjustifiedpunches.rotext" xml:space="preserve">
+    <value>Hay ${1} día/s sin justificar para un usuario</value>
+  </data>
+  <data name="RES_desktopalert.employeewithtrackingdocumentsnotdelivered.rotext" xml:space="preserve">
+    <value>Hay un documento de absentismo pendiente de ser entregado</value>
+  </data>
+  <data name="RES_desktopalert.employeewithunreliablepunches.detail.rotext" xml:space="preserve">
+    <value>Hay fichajes no fiable el día ${1}</value>
+  </data>
+  <data name="RES_desktopalert.employeewithunreliablepunches.rotext" xml:space="preserve">
+    <value>Hay ${1} día/s con fichajes no fiables de un usuario</value>
+  </data>
+  <data name="RES_desktopalert.invaliddesktopconsent.rotext" xml:space="preserve">
+    <value>Hay un supervisor que no ha aceptado la licencia de uso de Visualtime Desktop</value>
+  </data>
+  <data name="RES_desktopalert.invaliddesktopconsents.rotext" xml:space="preserve">
+    <value>Hay ${1} supervisores que no han aceptado la licencia de uso de Visualtime Desktop</value>
+  </data>
+  <data name="RES_desktopalert.invalidportalconsent.rotext" xml:space="preserve">
+    <value>Hay un usuario que no ha aceptado los términos y condiciones del portal del usuario</value>
+  </data>
+  <data name="RES_desktopalert.invalidportalconsents.rotext" xml:space="preserve">
+    <value>Hay ${1} usuarios que no han aceptado los términos y condiciones del portal del usuario</value>
+  </data>
+  <data name="RES_desktopalert.invalidterminalconsent.rotext" xml:space="preserve">
+    <value>Hay un usuario que no ha aceptado compartir la huella con el sistema</value>
+  </data>
+  <data name="RES_desktopalert.invalidterminalconsents.rotext" xml:space="preserve">
+    <value>Hay ${1} usuarios que no han aceptado compartir la huella con el sistema</value>
+  </data>
+  <data name="RES_desktopalert.invalidvisitsconsent.rotext" xml:space="preserve">
+    <value>Hay un supervisor que no ha aceptado la licencia de uso de Visualtime Visits</value>
+  </data>
+  <data name="RES_desktopalert.invalidvisitsconsents.rotext" xml:space="preserve">
+    <value>Hay ${1} supervisores que no han aceptado la licencia de uso de Visualtime Visits</value>
+  </data>
+  <data name="RES_desktopalert.labagreemaxexceeded.detail.rotext" xml:space="preserve">
+    <value>El usuario ${1} ha superado el valor máximo del saldo ${2} establecido en el convenio. (Contrato:${3})</value>
+  </data>
+  <data name="RES_desktopalert.labagreemaxexceeded.rotext" xml:space="preserve">
+    <value>Hay ${1} usuario que ha superado el valor máximo asignado en el convenio.</value>
+  </data>
+  <data name="RES_desktopalert.labagreemaxexceededs.rotext" xml:space="preserve">
+    <value>Hay ${1} usuarios que han superado el valor máximo asignado en el convenio.</value>
+  </data>
+  <data name="RES_desktopalert.labagreeminexceeded.detail.rotext" xml:space="preserve">
+    <value>El usuario ${1} no ha sobrepasado el valor mínimo del saldo ${2} establecido en el convenio. (Contrato:${3})</value>
+  </data>
+  <data name="RES_desktopalert.labagreeminexceeded.rotext" xml:space="preserve">
+    <value>Hay ${1} usuario que no han sobrepasado el valor mínimo asignado en el convenio.</value>
+  </data>
+  <data name="RES_desktopalert.labagreeminexceededs.rotext" xml:space="preserve">
+    <value>Hay ${1} usuarios que han alcanzado el valor mínimo asignado en el convenio.</value>
+  </data>
+  <data name="RES_desktopalert.nonsupervisedcompany.detail.rotext" xml:space="preserve">
+    <value>Los usuarios de la empresa ${1} no tienen un supervisor asignado.</value>
+  </data>
+  <data name="RES_desktopalert.nonsuperviseddepartment.detail.rotext" xml:space="preserve">
+    <value>Los usuarios del departamento ${1} no tienen un supervisor asignado.</value>
+  </data>
+  <data name="RES_desktopalert.nonsuperviseddepartment.rotext" xml:space="preserve">
+    <value>Hay un departamento sin supervisor asignado.</value>
+  </data>
+  <data name="RES_desktopalert.nonsuperviseddepartments.rotext" xml:space="preserve">
+    <value>Hay departamentos sin supervisor asignado.</value>
+  </data>
+  <data name="RES_desktopalert.pendingrequest.rotext" xml:space="preserve">
+    <value>Hay una solicitud pendiente de revisar</value>
+  </data>
+  <data name="RES_desktopalert.pendingrequests.rotext" xml:space="preserve">
+    <value>Hay ${1} solicitudes pendientes de revisar</value>
+  </data>
+  <data name="RES_desktopalert.productiveunitundercoverage.detail.rotext" xml:space="preserve">
+    <value>Hay cobertura insuficiente en el nodo ${1} para la unidad productiva ${2} el día ${3}</value>
+  </data>
+  <data name="RES_desktopalert.productiveunitundercoverage.rotext" xml:space="preserve">
+    <value>Hay ${1} día/s con cobertura insuficiente para ${2} unidades productivas</value>
+  </data>
+  <data name="RES_desktopalert.productivtaskendstoday.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_desktopalert.productivtaskendtoday.detail.rotext" xml:space="preserve">
+    <value>La tarea ${1} del proyecto ${2} debería terminar hoy.</value>
+  </data>
+  <data name="RES_desktopalert.productivtaskendtoday.rotext" xml:space="preserve">
+    <value>Hay ${1} tarea que debería terminar hoy.</value>
+  </data>
+  <data name="RES_desktopalert.productivtaskexceededenddate.detail.rotext" xml:space="preserve">
+    <value>La tarea ${1} del proyecto ${2} no ha terminado en la fecha prevista.</value>
+  </data>
+  <data name="RES_desktopalert.productivtaskexceededenddate.rotext" xml:space="preserve">
+    <value>Hay ${1} tarea que no ha terminado en la fecha prevista.</value>
+  </data>
+  <data name="RES_desktopalert.productivtaskexceededplannedtime.detail.rotext" xml:space="preserve">
+    <value>La tarea ${1} del proyecto ${2} ha sobrepasado el tiempo previsto.</value>
+  </data>
+  <data name="RES_desktopalert.productivtaskexceededplannedtime.rotext" xml:space="preserve">
+    <value>Hay ${1} tarea que ha sobrepasado el tiempo previsto.</value>
+  </data>
+  <data name="RES_desktopalert.productivtaskexceededstartdate.detail.rotext" xml:space="preserve">
+    <value>La tarea ${1} del proyecto ${2} no ha empezado en la fecha prevista.</value>
+  </data>
+  <data name="RES_desktopalert.productivtaskexceededstartdate.rotext" xml:space="preserve">
+    <value>Hay ${1} tarea que no ha empezado en la fecha prevista.</value>
+  </data>
+  <data name="RES_desktopalert.productivtasksendstoday.rotext" xml:space="preserve">
+    <value>Hay ${1} tareas que deberían terminar hoy.</value>
+  </data>
+  <data name="RES_desktopalert.productivtasksendtoday.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_desktopalert.productivtasksexceededenddate.rotext" xml:space="preserve">
+    <value>Hay ${1} tareas que no han terminado en la fecha prevista.</value>
+  </data>
+  <data name="RES_desktopalert.productivtasksexceededplannedtime.rotext" xml:space="preserve">
+    <value>Hay ${1} tareas que han sobrepasado el tiempo previsto.</value>
+  </data>
+  <data name="RES_desktopalert.productivtasksexceededstartdate.rotext" xml:space="preserve">
+    <value>Hay ${1} tareas que no han empezado en la fecha prevista.</value>
+  </data>
+  <data name="RES_desktopalert.productivtasksstartstoday.rotext" xml:space="preserve">
+    <value>Hay ${1} tareas que deberían empezar hoy.</value>
+  </data>
+  <data name="RES_desktopalert.productivtaskstartstoday.detail.rotext" xml:space="preserve">
+    <value>La tarea ${1} del proyecto ${2} debería empezar hoy.</value>
+  </data>
+  <data name="RES_desktopalert.productivtaskstartstoday.rotext" xml:space="preserve">
+    <value>Hay ${1} tarea que debería empezar hoy.</value>
+  </data>
+  <data name="RES_desktopalert.productivtaskswaitingcomplete.rotext" xml:space="preserve">
+    <value>Hay ${1} tareas que estan pendientes de cierre.</value>
+  </data>
+  <data name="RES_desktopalert.productivtaskswithalerts.rotext" xml:space="preserve">
+    <value>Hay ${1} tareas que tienen alertas no resueltas.</value>
+  </data>
+  <data name="RES_desktopalert.productivtaskwaitingcomplete.detail.rotext" xml:space="preserve">
+    <value>La tarea ${1} del proyecto ${2} está pendiente de cierre.</value>
+  </data>
+  <data name="RES_desktopalert.productivtaskwaitingcomplete.rotext" xml:space="preserve">
+    <value>Hay ${1} tarea que esta pendiente de cierre.</value>
+  </data>
+  <data name="RES_desktopalert.productivtaskwithalerts.detail.rotext" xml:space="preserve">
+    <value>La tarea ${1} del proyecto ${2} tiene alertas que aún no se han resuelto.</value>
+  </data>
+  <data name="RES_desktopalert.productivtaskwithalerts.rotext" xml:space="preserve">
+    <value>Hay ${1} tarea que tiene alertas no resueltas.</value>
+  </data>
+  <data name="RES_desktopalert.puncheinlockdate.rotext" xml:space="preserve">
+    <value>Hay un usuario que tiene fichajes dentro del periodo de cierre</value>
+  </data>
+  <data name="RES_desktopalert.punchesinlockdate.detail.rotext" xml:space="preserve">
+    <value>Existen fichajes en periodo de cierre desde el día ${1}. Debe modificar el periodo de cierre del usuario para que se recalculen lo datos diarios a partir de esa fecha.</value>
+  </data>
+  <data name="RES_desktopalert.punchesinlockdate.rotext" xml:space="preserve">
+    <value>Hay ${1} usuarios que tienen fichajes dentro del periodo de cierre</value>
+  </data>
+  <data name="RES_notifications.lblpunchduringprogrammedabsence.text.rotext" xml:space="preserve">
+    <value>Se produzca un fichaje durante una ausencia prolongada. (1 vez por día)</value>
+  </data>
+  <data name="RES_notifications.lblpunchduringprogrammedabsence.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_notifications.notifytype.advice for punch during programmed absence.rotext" xml:space="preserve">
+    <value>Fichajes durante ausencia prolongada</value>
+  </data>
+  <data name="RES_notificationtype.51.description.rotext" xml:space="preserve">
+    <value>Se ha planificado el horario ${1}(anteriormente ${3}) para el día ${2}</value>
+  </data>
+  <data name="RES_notificationtype.51.name.rotext" xml:space="preserve">
+    <value>Horario planificado</value>
+  </data>
+  <data name="RES_notificationtype.52.invalidated.description.rotext" xml:space="preserve">
+    <value>El documento ${1} ha sido invalidado por el siguiente motivo: ${2}</value>
+  </data>
+  <data name="RES_notificationtype.52.name.rotext" xml:space="preserve">
+    <value>Estado de documentación</value>
+  </data>
+  <data name="RES_notificationtype.52.rejected.description.rotext" xml:space="preserve">
+    <value>El documento ${1} ha sido denegado por el siguiente motivo: ${2}</value>
+  </data>
+  <data name="RES_notificationtype.75.athome.description.rotext" xml:space="preserve">
+    <value>El día ${1} debe realizar su jornada en teletrabajo</value>
+  </data>
+  <data name="RES_notificationtype.75.athome.name.rotext" xml:space="preserve">
+    <value>Cambio a teletrabajo</value>
+  </data>
+  <data name="RES_notificationtype.75.atoffice.description.rotext" xml:space="preserve">
+    <value>El día ${1} debe realizar su jornada en su centro de trabajo</value>
+  </data>
+  <data name="RES_notificationtype.75.atoffice.name.rotext" xml:space="preserve">
+    <value>Cambio a trabajo en centro</value>
+  </data>
+  <data name="RES_notificationtype.75.name.rotext" xml:space="preserve">
+    <value>Cambio en teletrabajo</value>
+  </data>
+  <data name="RES_notifytype.absence_canceled_by_user.name.rotext" xml:space="preserve">
+    <value>Aviso de cancelación de previsión</value>
+  </data>
+  <data name="RES_notifytype.absence_document_pending.name.rotext" xml:space="preserve">
+    <value>Documento no entregado</value>
+  </data>
+  <data name="RES_notifytype.access_dennied_framework_security.name.rotext" xml:space="preserve">
+    <value>Accesos inválidos Visualtime Live</value>
+  </data>
+  <data name="RES_notifytype.advice_for_day with unmatched time record.name.rotext" xml:space="preserve">
+    <value>Aviso de día con fichajes impares</value>
+  </data>
+  <data name="RES_notifytype.advice_for_punch_during_programmed_absence.name.rotext" xml:space="preserve">
+    <value>Aviso por fichaje en ausencia</value>
+  </data>
+  <data name="RES_notifytype.advice_for_punch_during_programmedabsence.name.rotext" xml:space="preserve">
+    <value>Fichajes durante ausencia prolongada</value>
+  </data>
+  <data name="RES_notifytype.advice_for_request_impersonation.name.rotext" xml:space="preserve">
+    <value>Aviso de solicitud realizada por supervisor</value>
+  </data>
+  <data name="RES_notifytype.advice_for_schedule_rule_non-compliance.name.rotext" xml:space="preserve">
+    <value>Aviso de incumplimiento de regla de planificación</value>
+  </data>
+  <data name="RES_notifytype.advice_holiday_during_programmedabsence.name.rotext" xml:space="preserve">
+    <value>Aviso de vacaciones en ausencias prolongadas</value>
+  </data>
+  <data name="RES_notifytype.assign_shift.name.rotext" xml:space="preserve">
+    <value>Horario planificado</value>
+  </data>
+  <data name="RES_notifytype.before_begin_contract.name.rotext" xml:space="preserve">
+    <value>Inicio de contrato</value>
+  </data>
+  <data name="RES_notifytype.before_begin_programmed_absence.name.rotext" xml:space="preserve">
+    <value>Días antes inicio ausencia prolongada</value>
+  </data>
+  <data name="RES_notifytype.before_finish_contract.name.rotext" xml:space="preserve">
+    <value>Finalización de contrato</value>
+  </data>
+  <data name="RES_notifytype.before_finish_programmed_absence.name.rotext" xml:space="preserve">
+    <value>Días antes fin ausencia prolongada</value>
+  </data>
+  <data name="RES_notifytype.begin_programmed_absence.name.rotext" xml:space="preserve">
+    <value>Inicio ausencia prolongada</value>
+  </data>
+  <data name="RES_notifytype.capacityreached.name.rotext" xml:space="preserve">
+    <value>Aforo de zona</value>
+  </data>
+  <data name="RES_notifytype.concept_not_reached.name.rotext" xml:space="preserve">
+    <value>Límite de saldo en día anterior</value>
+  </data>
+  <data name="RES_notifytype.cut_programmed_absence.name.rotext" xml:space="preserve">
+    <value>Corte ausencias prolongadas</value>
+  </data>
+  <data name="RES_notifytype.day_with_unmatched_time_record.name.rotext" xml:space="preserve">
+    <value>Día con fichajes impares</value>
+  </data>
+  <data name="RES_notifytype.day_with_unreliable_time_record.name.rotext" xml:space="preserve">
+    <value>Día con fichajes no fiables</value>
+  </data>
+  <data name="RES_notifytype.document_delivered.name.rotext" xml:space="preserve">
+    <value>Documento entregado</value>
+  </data>
+  <data name="RES_notifytype.document_not_delivered on track day.name.rotext" xml:space="preserve">
+    <value>Documento no entregado en la fecha límite</value>
+  </data>
+  <data name="RES_notifytype.document_not_delivered.name.rotext" xml:space="preserve">
+    <value>Documento no entregado</value>
+  </data>
+  <data name="RES_notifytype.document_pendig.name.rotext" xml:space="preserve">
+    <value>Documento pendiente de entregar</value>
+  </data>
+  <data name="RES_notifytype.document_pendig_for_employee.name.rotext" xml:space="preserve">
+    <value>Documento pendiente de entregar por usuario</value>
+  </data>
+  <data name="RES_notifytype.document_validation_action.name.rotext" xml:space="preserve">
+    <value>Documento pendiente de validación</value>
+  </data>
+  <data name="RES_notifytype.employee with high temperature.rotext" xml:space="preserve">
+    <value>Usuario con temperatura alta</value>
+  </data>
+  <data name="RES_notifytype.employee without mask.rotext" xml:space="preserve">
+    <value>Usuario sin mascarilla</value>
+  </data>
+  <data name="RES_notifytype.employee_not_arrived_or_late.name.rotext" xml:space="preserve">
+    <value>Usuario debería estar o aún no ha llegado</value>
+  </data>
+  <data name="RES_notifytype.employee_present_with_expired_docs.name.rotext" xml:space="preserve">
+    <value>Usuario presente con documentos expirados</value>
+  </data>
+  <data name="RES_notifytype.employee_withhigh_temperature.name.rotext" xml:space="preserve">
+    <value>Empleado con temperatura elevada</value>
+  </data>
+  <data name="RES_notifytype.employee_withoutmask.name.rotext" xml:space="preserve">
+    <value>Empleado sin mascarilla</value>
+  </data>
+  <data name="RES_notifytype.employeenotarrived.name.rotext" xml:space="preserve">
+    <value>Usuario debería estar o aún no ha llegado</value>
+  </data>
+  <data name="RES_notifytype.employeenotarrivedbeforestartlimit.name.rotext" xml:space="preserve">
+    <value>Inicio de jornada no realizado</value>
+  </data>
+  <data name="RES_notifytype.end_period_employee.name.rotext" xml:space="preserve">
+    <value>Fin de Período (Usuario)</value>
+  </data>
+  <data name="RES_notifytype.end_period_enterprise.name.rotext" xml:space="preserve">
+    <value>Fin de Período (Empresa)</value>
+  </data>
+  <data name="RES_notifytype.endperiodemployee.name.rotext" xml:space="preserve">
+    <value>Fin de Período (Usuario)</value>
+  </data>
+  <data name="RES_notifytype.endperiodenterprise.name.rotext" xml:space="preserve">
+    <value>Fin de Período (Empresa)</value>
+  </data>
+  <data name="RES_notifytype.finish_programmed_absence.name.rotext" xml:space="preserve">
+    <value>Ausencias</value>
+  </data>
+  <data name="RES_notifytype.finish_programmed_absence_and_dont_work_later.name.rotext" xml:space="preserve">
+    <value>Ausencias</value>
+  </data>
+  <data name="RES_notifytype.hoursabsencebreach.name.rotext" xml:space="preserve">
+    <value>Incumplimiento de previsión de horas de ausencia</value>
+  </data>
+  <data name="RES_notifytype.labagree_max_exceeded.name.rotext" xml:space="preserve">
+    <value>Valor máximo de convenio sobrepasado</value>
+  </data>
+  <data name="RES_notifytype.labagree_min_reached.name.rotext" xml:space="preserve">
+    <value>Valor mínimo de convenio alcanzado</value>
+  </data>
+  <data name="RES_notifytype.mobility_execution.name.rotext" xml:space="preserve">
+    <value>Nueva movilidad de usuario</value>
+  </data>
+  <data name="RES_notifytype.mobility_update.name.rotext" xml:space="preserve">
+    <value>Modificación de una movilidad de usuario</value>
+  </data>
+  <data name="RES_notifytype.non_justified_incident.name.rotext" xml:space="preserve">
+    <value>Día con incidencias no justificadas</value>
+  </data>
+  <data name="RES_notifytype.overtimebreach.name.rotext" xml:space="preserve">
+    <value>Incumplimiento de previsión de horas de exceso</value>
+  </data>
+  <data name="RES_notifytype.punch_with_any_cause.name.rotext" xml:space="preserve">
+    <value>Fichajes con justificación</value>
+  </data>
+  <data name="RES_notifytype.punch_with_timezone not reliable.name.rotext" xml:space="preserve">
+    <value>Fichaje en zona horaria no fiable</value>
+  </data>
+  <data name="RES_notifytype.punches_with_incidences.name.rotext" xml:space="preserve">
+    <value>Fichajes con justificación</value>
+  </data>
+  <data name="RES_notifytype.request_holidays.name.rotext" xml:space="preserve">
+    <value>Solicitud de vacaciones</value>
+  </data>
+  <data name="RES_notifytype.request_shift change.name.rotext" xml:space="preserve">
+    <value>Solicitud de cambio de horario</value>
+  </data>
+  <data name="RES_notifytype.requests_pending.name.rotext" xml:space="preserve">
+    <value>Aviso de solicitud</value>
+  </data>
+  <data name="RES_notifytype.requests_result.name.rotext" xml:space="preserve">
+    <value>Estado de solicitud</value>
+  </data>
+  <data name="RES_push.requestapproved.rotext" xml:space="preserve">
+    <value>¡Tu solicitud ha sido aprobada!</value>
+  </data>
+  <data name="RES_push.requestdenied.rotext" xml:space="preserve">
+    <value>La solicitud ha sido denegada</value>
+  </data>
+  <data name="RES_push.requestsubject.rotext" xml:space="preserve">
+    <value>Solicitud actualizada</value>
+  </data>
+  <data name="RES_requesttype.cancelholidays.name.rotext" xml:space="preserve">
+    <value>Cancelación de vacaciones</value>
+  </data>
+  <data name="RES_requesttype.changeshift.name.rotext" xml:space="preserve">
+    <value>Cambio de horario</value>
+  </data>
+  <data name="RES_requesttype.dailyrecord.name.rotext" xml:space="preserve">
+    <value>Declaración de jornada</value>
+  </data>
+  <data name="RES_requesttype.exchangeshiftbetweenemployees.name.rotext" xml:space="preserve">
+    <value>Intercambio de horario entre usuarios</value>
+  </data>
+  <data name="RES_requesttype.externalworkresumepart.name.rotext" xml:space="preserve">
+    <value>Parte resumen trabajo externo</value>
+  </data>
+  <data name="RES_requesttype.externalworkweekresume.name.rotext" xml:space="preserve">
+    <value>Parte de fichajes</value>
+  </data>
+  <data name="RES_requesttype.forbiddenpunch.name.rotext" xml:space="preserve">
+    <value>Fichaje no realizado de presencia</value>
+  </data>
+  <data name="RES_requesttype.forbiddentaskpunch.name.rotext" xml:space="preserve">
+    <value>Fichaje no realizado de tareas</value>
+  </data>
+  <data name="RES_requesttype.forgottencostcenterpunch.name.rotext" xml:space="preserve">
+    <value>Fichaje no realizado de centros de coste</value>
+  </data>
+  <data name="RES_requesttype.justifypunch.name.rotext" xml:space="preserve">
+    <value>Justificar fichaje</value>
+  </data>
+  <data name="RES_requesttype.plannedabsences.name.rotext" xml:space="preserve">
+    <value>Previsión días de ausencia</value>
+  </data>
+  <data name="RES_requesttype.plannedcauses.name.rotext" xml:space="preserve">
+    <value>Previsión horas de ausencia</value>
+  </data>
+  <data name="RES_requesttype.plannedholidays.name.rotext" xml:space="preserve">
+    <value>Vacaciones/permisos por horas</value>
+  </data>
+  <data name="RES_requesttype.plannedovertimes.name.rotext" xml:space="preserve">
+    <value>Horas de exceso</value>
+  </data>
+  <data name="RES_requesttype.telecommute.name.rotext" xml:space="preserve">
+    <value>Teletrabajo</value>
+  </data>
+  <data name="RES_requesttype.userfieldschange.name.rotext" xml:space="preserve">
+    <value>Modificación campo de la ficha</value>
+  </data>
+  <data name="RES_requesttype.vacationsorpermissions.name.rotext" xml:space="preserve">
+    <value>Vacaciones</value>
+  </data>
+  <data name="RES_resultenum.conditionsincorrectdaysbefore.rotext" xml:space="preserve">
+    <value>Inserte un número de días válido.</value>
+  </data>
+  <data name="RES_resultenum.conditionsincorrectdaysnoworking.rotext" xml:space="preserve">
+    <value>Inserte un número de días válido.</value>
+  </data>
+  <data name="RES_resultenum.conditionsnocomparetype.rotext" xml:space="preserve">
+    <value>Seleccione una comparación</value>
+  </data>
+  <data name="RES_resultenum.conditionsnoidcause.rotext" xml:space="preserve">
+    <value>Seleccione una justificación</value>
+  </data>
+  <data name="RES_resultenum.conditionsnoidconcept.rotext" xml:space="preserve">
+    <value>Seleccione un saldo</value>
+  </data>
+  <data name="RES_resultenum.conditionsnotargetconcept.rotext" xml:space="preserve">
+    <value>Seleccione un valor o campo de la ficha</value>
+  </data>
+  <data name="RES_resultenum.conditionsnotargettypeconcept.rotext" xml:space="preserve">
+    <value>Seleccione el tipo de comparación</value>
+  </data>
+  <data name="RES_resultenum.incorrectconditions.rotext" xml:space="preserve">
+    <value>Debe seleccionar un campo de la ficha</value>
+  </data>
+  <data name="RES_resultenum.incorrectselectiondestination.rotext" xml:space="preserve">
+    <value>Debe seleccionar el destino de la notificación y su e-mail o campo de la ficha</value>
+  </data>
+  <data name="RES_resultenum.noselectedtype.rotext" xml:space="preserve">
+    <value>No ha seleccionado un tipo</value>
+  </data>
+  <data name="RES_resultenum.notificacionnamealreadyexist.rotext" xml:space="preserve">
+    <value>El nombre de la notificación ya existe</value>
+  </data>
+  <data name="RES_resultenum.withoutname.rotext" xml:space="preserve">
+    <value>Debe indicar un nombre para la notificación</value>
+  </data>
+  <data name="RES_notifytype.pendingcauseemployeeadvice.name.rotext" xml:space="preserve">
+    <value>Justificaciones pendientes</value>
+  </data>
+  <data name="RES_resultenum.xssvalidationerror.rotext" xml:space="preserve">
+    <value>Se ha detectado un script malicioso en alguna propiedad del objeto</value>
+  </data>
+  <data name="RES_notifytype.punchbeforestart.name.rotext" xml:space="preserve">
+    <value>Fichaje antes de inicio de jornada</value>
+  </data>
+</root>

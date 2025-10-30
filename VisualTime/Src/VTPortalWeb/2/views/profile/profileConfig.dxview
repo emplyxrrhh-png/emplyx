@@ -1,0 +1,76 @@
+<div data-options="dxView : { name: 'profileConfig', title: 'profileConfig' } " >
+    <div data-bind="dxList: listOptions">
+        <div data-options="dxTemplate: {name: 'configAction'}">
+            <div class="listMenuItem">
+                <div data-bind="css: $data.CssClass" class="listMenuItemIcon"></div>
+                <div class="listMenuItemContent">
+                    <div class="roConfigActionText" data-bind="text: $data.Name"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false,closeOnBackButton:false, visible: popupChangePwdVisible, height: 'auto'}">
+        <div id="changePwdHome" class="dx-fieldset">
+            <div class="dx-field">
+                <span data-bind="text: lblOldPwd"></span>
+                <div class="dx-field-value pass" data-bind="dxTextBox: txtOldPwd, dxValidator: requieredOldField "></div>
+            </div>
+            <div class="dx-field">
+                <span data-bind="text: lblNewPwd"></span>
+                <div class="dx-field-value pass" data-bind="dxTextBox: txtNewPwd, dxValidator: requieredNewField "></div>
+            </div>
+            <div class="dx-field">
+                <span data-bind="text: lblNewPwdRepeat"></span>
+                <div class="dx-field-value pass" data-bind="dxTextBox: txtNewPwdRepeat, dxValidator: compareField  "></div>
+            </div>
+        </div>
+
+        <div style="padding-top:5px">
+            <div style="float:left;width:50%" class="get-to-work-blue" data-bind="dxButton: btnCancel"></div>
+            <div style="float:left;width:50%" class="get-to-work-orange" data-bind="dxButton: btnChangePwd"></div>
+        </div>
+    </div>
+
+  <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false,closeOnBackButton:false, visible: popupChangeLngVisible, height: 'auto'}">
+    <div id="changeLngHome" class="dx-fieldset">
+      <div class="dx-field">
+        <span data-bind="text: lblLanguage"></span>
+        <div class="dx-field-value lang" data-bind="dxSelectBox: dataSourceLanguages">
+          <div data-options="dxTemplate:{ name:'langItemTemplate' }" class="login-item" data-bind="text: Name"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding-top:5px">
+      <div style="float:left;width:50%" class="get-to-work-blue" data-bind="dxButton: btnCancelLng"></div>
+      <div style="float:left;width:50%" class="get-to-work-orange" data-bind="dxButton: btnChangeLng"></div>
+    </div>
+  </div>
+	<div data-bind="dxPopover: photoPopover" style="border-radius:20px !important">
+		<div class="mainTitleList" style="margin:10px !important; text-align: center;vertical-align: middle;">
+			<span data-bind="text:photoHelp"></span>
+		</div>
+	</div>
+	<div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false, closeOnBackButton:false, visible: changeUserPhotoVisible, height: 'auto'}">
+		<div class="dx-fieldset">
+			<!-- ko if: appMode == true -->
+			<span data-bind="text: lblProfileImage"></span>
+
+			<div class="noImageCssClass" data-bind="event: { dxclick: selectPhotoEvent }">
+				<img width="100%" height="100%" data-bind="attr:{ src:imageSrc}" alt="" />
+			</div>
+			<!-- /ko-->
+			<!-- ko if: appMode == false -->
+			<span data-bind="text: lblProfileImage"></span>
+			<div data-bind="dxFileUploader: uploadOptions"></div>
+			<!-- /ko-->
+		</div>
+		<div style="padding-top:5px">
+			<div style="float:left;width:50%" class="get-to-work-blue" data-bind="dxButton: btnCancelUpload"></div>
+			<div style="float:right;width:50%" class="get-to-work-orange" data-bind="dxButton: btnAcceptUpload"></div>
+		</div>
+
+	</div>
+    <div data-bind="dxLoadPanel: loadingPanel"> </div>
+</div>

@@ -1,0 +1,103 @@
+<div data-options="dxView : { name: 'punches', title: 'punches', disableCache: true} " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+		<div id="smallUserInfo"></div>
+
+        <div id="panelsContent" style="height:92%">
+            <div>
+                <div data-bind="dxTabPanel: tabPanelOptions" class="innerTabPanelList">
+                    <div data-options="dxTemplate : { name: 'title' } ">
+                        <div data-bind="css: $data.cssClass "></div>
+                    </div>
+                    <!--<div data-options="dxTemplate : { name: 'punchType' } ">
+                    <div data-bind="dxToolbar: $data.actions"></div>
+                </div>-->
+
+                </div>
+                <div id="scrollview" style="clear:both" data-bind="dxScrollView: commScroll">
+                    <div id="listActionsPunches" class="list-container" data-bind="if: actionDS()">
+                        <div data-bind="dxList: listactions">
+                            <div data-options="dxTemplate: {name: 'actionItem'}">
+                                <div class="listMenuItem">
+                                    <div data-bind="css: $data.cssClass" class="listMenuItemIcon"></div>
+                                    <div class="listMenuItemContent">
+                                        <div data-bind="text: $data.Action, css: $data.cssClassText"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div data-bind="if: !actionDS()">
+                        <div class="noDataCssClass"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="float:left; position:absolute; left:calc(50% - 25px); bottom:40px; z-index:15001;">
+            <div id="btnNFC" class="actionHome" data-bind="dxButton: btnNFCIos" style=" color:white; background: #66c160 !important;"></div>
+        </div>
+        <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false, closeOnBackButton:false, visible: captchaVisible, height: 'auto'}">
+            <div class="dx-fieldset">
+                <div class="captchaMessageText">
+                    <span data-bind="text: lblCaptchaDescription"></span>
+                </div>
+                <br />
+                <div class="captchaCode">
+                    <span data-bind="text: lblCaptchaValue"></span>
+                </div>
+                <br />
+                <div class="dx-field">
+                    <span data-bind="text: lblCaptcha"></span>
+                    <div class="dx-field-value" data-bind="dxTextBox: txtCaptcha, dxValidator: compareField"></div>
+                </div>
+            </div>
+            <div style="padding-top:5px">
+                <div style="float:left;width:50%" class="get-to-work-blue" data-bind="dxButton: btnCancelCaptcha"></div>
+                <div style="float:right;width:50%" class="get-to-work-orange" data-bind="dxButton: btnAcceptCptcha"></div>
+            </div>
+        </div>
+
+        <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false, closeOnBackButton:false, visible: taskAlertVisible, height: 'auto'}">
+            <div class="taskFieldTitle">
+                <span data-bind="text: lblSaveTaskAlertTitle"></span>
+            </div>
+
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <span data-bind="text: lblTaskAlert"></span>
+                    <div class="dx-field-value" data-bind="dxTextArea: txtTaskAlert"></div>
+                </div>
+            </div>
+
+            <div style="padding-top:5px">
+                <div style="float:left;width:50%" class="get-to-work-blue" data-bind="dxButton: btnCancelTaskAlert"></div>
+                <div style="float:right;width:50%" class="get-to-work-orange" data-bind="dxButton: btnAcceptTaskAlert"></div>
+            </div>
+
+        </div>
+
+        <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false, closeOnBackButton:false, visible: taskFieldsVisible, height: 'auto'}">
+            <!--ko with: taskFieldsBlock-->
+            <div data-options="dxViewPlaceholder: { viewName: 'taskFieldsInput' }"></div>
+            <!-- /ko-->
+
+            <div style="padding-top:5px">
+                <div style="float:left;width:50%" class="get-to-work-blue" data-bind="dxButton: btnCancelTaskFields"></div>
+                <div style="float:right;width:50%" class="get-to-work-orange" data-bind="dxButton: btnAcceptUserFields"></div>
+            </div>
+        </div>
+        <div id="progressBar" data-bind="dxLoadPanel: progressPanel" style="z-index: 2500"> </div>
+
+		<!--ko with: myPunchInfoBlock -->
+		<div data-options="dxViewPlaceholder: { viewName: 'punchInfo' } "></div>
+		<!-- /ko-->
+		
+        <div data-bind="dxLoadPanel: loadingPanel" style="z-index: 2000"> </div>
+    </div>
+   
+</div>

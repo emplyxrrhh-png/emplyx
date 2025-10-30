@@ -1,0 +1,24 @@
+<div data-options="dxView : { name: 'myteam', title: 'myteam', disableCache: true  } ">
+
+    <!--ko with: subscribeBlock-->
+    <div class="bigProfile" data-options="dxViewPlaceholder: { viewName: 'bigUserInfo' }"></div>
+    <!-- /ko-->
+
+    <div id="panelsContent" style="height:76%;">
+        <div data-bind="if: isSupervisorPortalActive() == true">
+            <div id="scrollview" data-bind="dxList: listOptions">
+                <div data-options="dxTemplate: {name: 'item'}">
+                    <div class="menuItem">
+                        <div class="mainTitle" data-bind="text: $data.Name"></div>
+                        <div data-bind="text: $data.Count"></div>
+                        <div class="list-item-arrow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-bind="if: isSupervisorPortalActive() == false">
+            <div style="padding-top:30%;text-align: center;"><h2 style="color:#FF5C35;font-size: 15px;line-height: 30px;" data-bind="text: futureVersions"></h2></div>
+        </div>
+        <div data-bind="dxLoadPanel: loadingPanel" style="border-radius:5px;"> </div>
+    </div>
+</div>

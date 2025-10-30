@@ -1,0 +1,705 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_collector.process.addbadline.task.message.rotext" xml:space="preserve">
+    <value>Boli nájdené záznamy o kartách nepriradené k žiadnemu používateľovi.</value>
+  </data>
+  <data name="RES_commserver.frmcommserver.confirmclose.rotext" xml:space="preserve">
+    <value>Vypnete komunikačný server TCP/IP CommServer</value>
+  </data>
+  <data name="RES_commserver.frmcommserver.description.rotext" xml:space="preserve">
+    <value>Ak zastavíte komunikačný server CommServer TCP/IP, všetky terminály budú odpojené od servera Visualtime.</value>
+  </data>
+  <data name="RES_commserver.frmcommserver.dontclose.description.rotext" xml:space="preserve">
+    <value>Ak necháte CommServer spustený, komunikácia medzi terminálmi a serverom Visualtime sa nepreruší.</value>
+  </data>
+  <data name="RES_commserver.frmcommserver.mnusystray.tip.rotext" xml:space="preserve">
+    <value>Konzola CommServer</value>
+  </data>
+  <data name="RES_commserver.process.punchdetected.task.message.rotext" xml:space="preserve">
+    <value>Upozornenie na podpisovanie. používateľ:</value>
+  </data>
+  <data name="RES_frmcommserver.btnrefresterms.caption.rotext" xml:space="preserve">
+    <value>&amp;Vymazanie príznaku chyby</value>
+  </data>
+  <data name="RES_frmcommserver.caption.rotext" xml:space="preserve">
+    <value>CommServer - RT Terminal Console - Visualtime</value>
+  </data>
+  <data name="RES_frmcommserver.cmdok.caption.rotext" xml:space="preserve">
+    <value>&amp;Accept</value>
+  </data>
+  <data name="RES_frmcommserver.cmdrefreshlog.caption.rotext" xml:space="preserve">
+    <value>Aktualizácia registrácie</value>
+  </data>
+  <data name="RES_frmcommserver.command1.caption.rotext" xml:space="preserve">
+    <value>GETFTP</value>
+  </data>
+  <data name="RES_frmcommserver.command2.caption.rotext" xml:space="preserve">
+    <value>SENDFTP</value>
+  </data>
+  <data name="RES_frmcommserver.command3.caption.rotext" xml:space="preserve">
+    <value>Pridať terminál</value>
+  </data>
+  <data name="RES_frmcommserver.lbllogheader.caption.rotext" xml:space="preserve">
+    <value>Toto je protokol udalostí servera. Tieto informácie sú užitočné len pre pracovníkov technickej podpory spoločnosti Visualtime.</value>
+  </data>
+  <data name="RES_frmcommserver.lblstatusdetails.caption.rotext" xml:space="preserve">
+    <value>Podrobnosti o termináli</value>
+  </data>
+  <data name="RES_frmcommserver.lstatusserver.caption.rotext" xml:space="preserve">
+    <value>Čakanie na pripojenie k serveru Visualtime ...</value>
+  </data>
+  <data name="RES_frmcommserver.mnuseparator.caption.rotext" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="RES_frmcommserver.mnusystray.caption.rotext" xml:space="preserve">
+    <value>SysTrayMenu</value>
+  </data>
+  <data name="RES_frmcommserver.mnusystrayclose.caption.rotext" xml:space="preserve">
+    <value>&amp;Exit (nechať server spustený)</value>
+  </data>
+  <data name="RES_frmcommserver.mnusystrayopen.caption.rotext" xml:space="preserve">
+    <value>Otvoriť &amp;konzola</value>
+  </data>
+  <data name="RES_frmcommserver.mnusystraystopserver.caption.rotext" xml:space="preserve">
+    <value>zastavenie servera a ukončenie</value>
+  </data>
+  <data name="RES_frmcommserver.txtstatus.text.rotext" xml:space="preserve">
+    <value>Čakanie na pripojenie k serveru Visualtime ...</value>
+  </data>
+  <data name="RES_frmconsole.msg.noserverfound.message.rotext" xml:space="preserve">
+    <value>Nenašiel sa žiadny komunikačný server CommServer TCP/IP: Skontrolujte, či je server CommServer spustený a či nie sú problémy so sieťou.</value>
+  </data>
+  <data name="RES_frmconsole.msg.noserverfound.title.rotext" xml:space="preserve">
+    <value>Server nebol nájdený</value>
+  </data>
+  <data name="RES_frmconsole.msg.shutdownerror.message.rotext" xml:space="preserve">
+    <value>Došlo k chybe komunikácie so serverom. Skúste zatvoriť túto konzolu a otvoriť inú konzolu, aby ste získali prístup k možnosti zatvoriť server.</value>
+  </data>
+  <data name="RES_frmconsole.msg.shutdownerror.title.rotext" xml:space="preserve">
+    <value>Chyba komunikácie so serverom</value>
+  </data>
+  <data name="RES_frmconsole.tbmain.tabs.2.caption.rotext" xml:space="preserve">
+    <value>Prehliadač udalostí</value>
+  </data>
+  <data name="RES_frmqueryservicedata.caption.rotext" xml:space="preserve">
+    <value>Inštalácia servera Visualtime CommServer</value>
+  </data>
+  <data name="RES_frmqueryservicedata.cmdfinish.caption.rotext" xml:space="preserve">
+    <value>&amp;End</value>
+  </data>
+  <data name="RES_frmqueryservicedata.cmdnext.caption.rotext" xml:space="preserve">
+    <value>&amp;next &gt;</value>
+  </data>
+  <data name="RES_frmqueryservicedata.cmdprevious.caption.rotext" xml:space="preserve">
+    <value>&lt; &amp;Back</value>
+  </data>
+  <data name="RES_frmqueryservicedata.framain.0.caption.rotext" xml:space="preserve">
+    <value>Konfigurácia spustenia servera:</value>
+  </data>
+  <data name="RES_frmqueryservicedata.framain.1.caption.rotext" xml:space="preserve">
+    <value>Konfigurácia služby Windows:</value>
+  </data>
+  <data name="RES_frmqueryservicedata.lblaccount.caption.rotext" xml:space="preserve">
+    <value>Účet Windows:</value>
+  </data>
+  <data name="RES_frmqueryservicedata.lblaccountdata.caption.rotext" xml:space="preserve">
+    <value>Zadajte účet systému Windows, ktorý sa použije na spustenie servera Visualtime CommServer.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.lblaccountdatadesc.caption.rotext" xml:space="preserve">
+    <value>Upozorňujeme, že zadané konto musí mať dostatočné oprávnenia na prístup ku všetkým prostriedkom, ktoré služba Visualtime vyžaduje. Odporúča sa vytvoriť používateľa Visualtime Administrator alebo použiť správcu počítača alebo adresára.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.lblaccounthelp.caption.rotext" xml:space="preserve">
+    <value>(Uveďte celý názov vrátane domény alebo adresára)</value>
+  </data>
+  <data name="RES_frmqueryservicedata.lblruntype.caption.rotext" xml:space="preserve">
+    <value>Visualtime CommServer možno na tomto počítači spustiť dvoma spôsobmi. Bola zistená nasledujúca konfigurácia servera Visualtime, potvrďte dostupnú možnosť:</value>
+  </data>
+  <data name="RES_frmqueryservicedata.msg.accountdenied.title.rotext" xml:space="preserve">
+    <value>Chyba účtu</value>
+  </data>
+  <data name="RES_frmqueryservicedata.msg.invalidaccount.caption.rotext" xml:space="preserve">
+    <value>Musíte zadať konto a heslo systému Windows.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.msg.invalidaccount.title.rotext" xml:space="preserve">
+    <value>Nesprávne konto alebo heslo</value>
+  </data>
+  <data name="RES_frmqueryservicedata.msg.invalidpassword.caption.rotext" xml:space="preserve">
+    <value>Zadané heslá sa nezhodujú.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.optruntype.0.buttoncaption.rotext" xml:space="preserve">
+    <value>Inštalácia ako štandardný program</value>
+  </data>
+  <data name="RES_frmqueryservicedata.optruntype.0.labelcaption.rotext" xml:space="preserve">
+    <value>Visualtime CommServer sa spustí vždy, keď sa prihlásite do systému Windows alebo keď spustíte program z jeho ikony. Odporúča sa, ak sa Visualtime CommServer spúšťa len z tohto počítača a chcete ho spúšťať len niekoľko hodín denne.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.optruntype.1.buttoncaption.rotext" xml:space="preserve">
+    <value>Inštalácia ako služba systému Windows (pokročilé)</value>
+  </data>
+  <data name="RES_frmqueryservicedata.optruntype.1.labelcaption.rotext" xml:space="preserve">
+    <value>Visualtime CommServer bude spustený, kým je počítač zapnutý, aj keď sa neprihlásite do systému Windows. Nie je potrebné sa prihlasovať ani manuálne načítavať žiadne programy. Odporúča sa, ak je tento počítač serverom Visualtime alebo ak chcete, aby bol Visualtime CommServer spustený neustále.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.setdcomwarning.message.rotext" xml:space="preserve">
+    <value>Nezabudnite, že ak nainštalujete Visualtime CommServer ako službu systému Windows, musíte oprávnenia DCOM nakonfigurovať ručne.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.setdcomwarning.title.rotext" xml:space="preserve">
+    <value>Dôležité upozornenie</value>
+  </data>
+  <data name="RES_frmqueryservicedata.txtaccount.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.txtaccount.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.txtpassword.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.txtpassword.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.txtretypepassword.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.txtretypepassword.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_query.shifts.day.1.rotext" xml:space="preserve">
+    <value>Pondelok</value>
+  </data>
+  <data name="RES_query.shifts.day.2.rotext" xml:space="preserve">
+    <value>Utorok</value>
+  </data>
+  <data name="RES_query.shifts.day.3.rotext" xml:space="preserve">
+    <value>Streda</value>
+  </data>
+  <data name="RES_query.shifts.day.4.rotext" xml:space="preserve">
+    <value>Štvrtok</value>
+  </data>
+  <data name="RES_query.shifts.day.5.rotext" xml:space="preserve">
+    <value>Piatok</value>
+  </data>
+  <data name="RES_query.shifts.day.6.rotext" xml:space="preserve">
+    <value>Sobota</value>
+  </data>
+  <data name="RES_query.shifts.day.7.rotext" xml:space="preserve">
+    <value>Nedeľa</value>
+  </data>
+  <data name="RES_server.close.question.confirmclose.answer.close.caption.rotext" xml:space="preserve">
+    <value>C&amp;Lock</value>
+  </data>
+  <data name="RES_server.close.question.confirmclose.answer.close.description.rotext" xml:space="preserve">
+    <value>Zastavte server. Aktuálni klienti konzoly CommServer budú odpojení.</value>
+  </data>
+  <data name="RES_server.close.question.confirmclose.answer.dontclose.caption.rotext" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="RES_server.close.question.confirmclose.answer.dontclose.description.rotext" xml:space="preserve">
+    <value>Nechajte server spustený (server sa po vypnutí počítača automaticky vypne).</value>
+  </data>
+  <data name="RES_server.close.question.confirmclose.caption.rotext" xml:space="preserve">
+    <value>Zavriete server Visualtime CommServer.</value>
+  </data>
+  <data name="RES_server.servershutdown.title.rotext" xml:space="preserve">
+    <value>Vypnutie servera VT CommServer</value>
+  </data>
+  <data name="RES_server.servershutdownstep.2.description.rotext" xml:space="preserve">
+    <value>Upozorňovanie klientov na ukončenie...</value>
+  </data>
+  <data name="RES_server.servershutdownstep.3.description.rotext" xml:space="preserve">
+    <value>Zastavenie plánovača...</value>
+  </data>
+  <data name="RES_server.servershutdownstep.4.description.rotext" xml:space="preserve">
+    <value>Ukončenie aktívnych zasadnutí...</value>
+  </data>
+  <data name="RES_server.servershutdownstep.5.description.rotext" xml:space="preserve">
+    <value>Zastavenie aktívnych procesov...</value>
+  </data>
+  <data name="RES_server.servershutdownstep.6.description.rotext" xml:space="preserve">
+    <value>Odstránenie odkazov...</value>
+  </data>
+  <data name="RES_server.servershutdownstep.7.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_terminal.modalmsg.accruals.rotext" xml:space="preserve">
+    <value>zostatky</value>
+  </data>
+  <data name="RES_terminal.modalmsg.accrualsby.rotext" xml:space="preserve">
+    <value>Zostatky pre</value>
+  </data>
+  <data name="RES_terminal.modalmsg.accsynchends.rotext" xml:space="preserve">
+    <value>l$2Synchronizácia dokončená.$1$L$L ${1} prístupové prvky$L a ${2} sirény naprogramované.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.accsyncherr.rotext" xml:space="preserve">
+    <value>$L$2Synchronizácia dokončená.$1$L$LATENTION: Táto verzia terminálu nepodporuje$L prístupy, iba sirény.$LAUktualizujte verziu, keď budete môcť.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.adddefaults.rotext" xml:space="preserve">
+    <value>$2$L$3 ~W ~D ~H:~M$1$L----------------------------------------$L$2 Prihlásenie na prevádzku$1$L$L (Pripojenie k serveru)</value>
+  </data>
+  <data name="RES_terminal.modalmsg.adddefaultssaldos.rotext" xml:space="preserve">
+    <value>$2$L$3 ~W ~D ~H:~M$1$L----------------------------------------$L$2 Prihlásenie na prevádzku$1$L (Pripojenie k serveru)</value>
+  </data>
+  <data name="RES_terminal.modalmsg.alertmultitask.rotext" xml:space="preserve">
+    <value>$1$L$LY Spustili ste viacero úloh.$LAl na konci budete požiadaní o údaje $Lz každej z nich.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.assignemployee.rotext" xml:space="preserve">
+    <value>Priradenie používateľa k:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.attendance.rotext" xml:space="preserve">
+    <value>Prítomní.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.back.rotext" xml:space="preserve">
+    <value>Späť</value>
+  </data>
+  <data name="RES_terminal.modalmsg.beginjob.rotext" xml:space="preserve">
+    <value>Začiatok Ostatné</value>
+  </data>
+  <data name="RES_terminal.modalmsg.beginjobin.rotext" xml:space="preserve">
+    <value>Začiatok práce v:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.beginwork.rotext" xml:space="preserve">
+    <value>$L$2 -- Začiatok práce --</value>
+  </data>
+  <data name="RES_terminal.modalmsg.cancel.rotext" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="RES_terminal.modalmsg.cancelledoperation.rotext" xml:space="preserve">
+    <value>1$L$L$L$L$L$2Operácia zrušená.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.card.rotext" xml:space="preserve">
+    <value>$2$L$3 ~W ~D ~H:~M$1$L----------------------------------------$L$2 Identifikujte sa</value>
+  </data>
+  <data name="RES_terminal.modalmsg.cardlost.rotext" xml:space="preserve">
+    <value>$2$L$2Špatné údaje o taktovaní!$1$L----------------------------------------$L$2Znovu sa identifikujte$L$1Ak pretrváva, poraďte sa so správcom.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.change.rotext" xml:space="preserve">
+    <value>Zmena</value>
+  </data>
+  <data name="RES_terminal.modalmsg.changepunch.rotext" xml:space="preserve">
+    <value>Prevod zmeny</value>
+  </data>
+  <data name="RES_terminal.modalmsg.closejob.rotext" xml:space="preserve">
+    <value>Uzavretá fáza</value>
+  </data>
+  <data name="RES_terminal.modalmsg.code.rotext" xml:space="preserve">
+    <value>Kód</value>
+  </data>
+  <data name="RES_terminal.modalmsg.connectionestablished.rotext" xml:space="preserve">
+    <value>Nadviazané spojenie RT</value>
+  </data>
+  <data name="RES_terminal.modalmsg.connectto.rotext" xml:space="preserve">
+    <value>Pripojené k</value>
+  </data>
+  <data name="RES_terminal.modalmsg.consult.rotext" xml:space="preserve">
+    <value>Konzul.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.continuelast.rotext" xml:space="preserve">
+    <value>Posledný</value>
+  </data>
+  <data name="RES_terminal.modalmsg.deletedclockin.rotext" xml:space="preserve">
+    <value>$1$L$L$L$L$L$L$2Zmazaný posledný záznam.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.deletedclockout.rotext" xml:space="preserve">
+    <value>1$L$L$L$L$L$L$2Posledný výstup bol odstránený.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.differenttasks.rotext" xml:space="preserve">
+    <value>Práca v rôznych fázach</value>
+  </data>
+  <data name="RES_terminal.modalmsg.door.rotext" xml:space="preserve">
+    <value>Dvere</value>
+  </data>
+  <data name="RES_terminal.modalmsg.downloadingpunches.rotext" xml:space="preserve">
+    <value>Stiahnutie údajov: Počkajte na to...</value>
+  </data>
+  <data name="RES_terminal.modalmsg.duplicatedjob.rotext" xml:space="preserve">
+    <value>$2$L$3Nesprávne:$1$L----------------------------------------$L$2Fáza už bola zadaná$L$1Vyberte inú.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.elapsedprevtime.rotext" xml:space="preserve">
+    <value>Predchádzajúci čas strávený</value>
+  </data>
+  <data name="RES_terminal.modalmsg.endwork.rotext" xml:space="preserve">
+    <value>Dokončili ste svoju prácu</value>
+  </data>
+  <data name="RES_terminal.modalmsg.ent.rotext" xml:space="preserve">
+    <value>ENT.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.enteragain.rotext" xml:space="preserve">
+    <value>Opäť vstupujem</value>
+  </data>
+  <data name="RES_terminal.modalmsg.enterpunchtype.rotext" xml:space="preserve">
+    <value>Uveďte typ prevodu</value>
+  </data>
+  <data name="RES_terminal.modalmsg.entersince.rotext" xml:space="preserve">
+    <value>Zadané pred ${1}</value>
+  </data>
+  <data name="RES_terminal.modalmsg.entrie.rotext" xml:space="preserve">
+    <value>VSTUP</value>
+  </data>
+  <data name="RES_terminal.modalmsg.errorloadingemployee.rotext" xml:space="preserve">
+    <value>Chyba pri načítaní údajov používateľa</value>
+  </data>
+  <data name="RES_terminal.modalmsg.exit.rotext" xml:space="preserve">
+    <value>EXIT</value>
+  </data>
+  <data name="RES_terminal.modalmsg.exitfor.rotext" xml:space="preserve">
+    <value>Vľavo pred ${1}</value>
+  </data>
+  <data name="RES_terminal.modalmsg.exitnow.rotext" xml:space="preserve">
+    <value>Odchádzam</value>
+  </data>
+  <data name="RES_terminal.modalmsg.exitto.rotext" xml:space="preserve">
+    <value>Ukončenie pre ${1}.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.finalize.rotext" xml:space="preserve">
+    <value>Koniec</value>
+  </data>
+  <data name="RES_terminal.modalmsg.finishedjob.rotext" xml:space="preserve">
+    <value>$2$L$3Nesprávne:$1$L----------------------------------------$L$2Fáza je uzavretá$L$1Podrobnosti konzultujte s manažérom.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.finishedtask.rotext" xml:space="preserve">
+    <value>$2$L$3Nesprávne:$1$L----------------------------------------$L$2Úloha je uzavretá$L$1Podrobnosti získate od správcu.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.firstenter.rotext" xml:space="preserve">
+    <value>Prvý záznam dňa</value>
+  </data>
+  <data name="RES_terminal.modalmsg.freemem.rotext" xml:space="preserve">
+    <value>Mem.free:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.gofrom.rotext" xml:space="preserve">
+    <value>Pochádza z ${1}.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.granted.rotext" xml:space="preserve">
+    <value>Udelené</value>
+  </data>
+  <data name="RES_terminal.modalmsg.incidence.rotext" xml:space="preserve">
+    <value>Inci.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.incidenceabrev.rotext" xml:space="preserve">
+    <value>Inc.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.incidencein.rotext" xml:space="preserve">
+    <value>Vplyv na</value>
+  </data>
+  <data name="RES_terminal.modalmsg.incidencestarted.rotext" xml:space="preserve">
+    <value>Incident bol iniciovaný:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.incidencetime.rotext" xml:space="preserve">
+    <value>Čas výskytu:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.inoutmsgkey.rotext" xml:space="preserve">
+    <value>$1$L$L (Stlačte jedno tlačidlo)</value>
+  </data>
+  <data name="RES_terminal.modalmsg.internalerror.rotext" xml:space="preserve">
+    <value>$2$L$3Interná chyba!$1$L----------------------------------------$L$L$2Kód chyby:${2}-${1}$L$L$1Nahláste túto chybu svojmu distribútorovi.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.intervalyield.rotext" xml:space="preserve">
+    <value>Rendim. Tento interval</value>
+  </data>
+  <data name="RES_terminal.modalmsg.invalidbiometricdata.rotext" xml:space="preserve">
+    <value>$2$L$3Nie je povolené!$1$L----------------------------------------$L$2Neexistujúci odtlačok.$L$1Podrobnosti konzultujte so správcom.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.invalidcard.rotext" xml:space="preserve">
+    <value>$2$L$3Nerozpoznané!$1$L----------------------------------------$L$2Neplatné ID$L$1Podrobnosti si vyžiadajte od správcu.   -</value>
+  </data>
+  <data name="RES_terminal.modalmsg.invalidfirmware.rotext" xml:space="preserve">
+    <value>$2$L$3Chybná verzia!$1$L----------------------------------------$1Firmvér terminálu nie je kompatibilný$Ls aktuálnou verziou Visualtime:$L Verzia terminálu: ${2}$L Kompatibilné: ${3} až ${4} -</value>
+  </data>
+  <data name="RES_terminal.modalmsg.invalidjobincidence.rotext" xml:space="preserve">
+    <value>$2$L$3 Nesprávne:$1$L----------------------------------------$L$2Uvedený kód neexistuje$L$1Prekontrolujte zadaný kód.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.lastaccuyield.rotext" xml:space="preserve">
+    <value>Predchádzajúci Accum. Kumulatívna predchádzajúca</value>
+  </data>
+  <data name="RES_terminal.modalmsg.leftjobopen.rotext" xml:space="preserve">
+    <value>Nezatvárajte</value>
+  </data>
+  <data name="RES_terminal.modalmsg.machines.rotext" xml:space="preserve">
+    <value>Maq.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.machinescontrol.rotext" xml:space="preserve">
+    <value>- Ovládanie stroja -</value>
+  </data>
+  <data name="RES_terminal.modalmsg.misslastenter.rotext" xml:space="preserve">
+    <value>Zabudol som na posledný záznam</value>
+  </data>
+  <data name="RES_terminal.modalmsg.misslastexit.rotext" xml:space="preserve">
+    <value>Zabudol som na posledný výstup</value>
+  </data>
+  <data name="RES_terminal.modalmsg.movabrev.rotext" xml:space="preserve">
+    <value>Pohyb.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.multitask.rotext" xml:space="preserve">
+    <value>$L$2 -- Viacero úloh --</value>
+  </data>
+  <data name="RES_terminal.modalmsg.multitaskabrev.rotext" xml:space="preserve">
+    <value>Viaceré</value>
+  </data>
+  <data name="RES_terminal.modalmsg.newteamname.rotext" xml:space="preserve">
+    <value>Nové vybavenie:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.nextshifts.rotext" xml:space="preserve">
+    <value>Nadchádzajúce rozvrhy</value>
+  </data>
+  <data name="RES_terminal.modalmsg.noaccrualavailable.rotext" xml:space="preserve">
+    <value>Nie sú k dispozícii žiadne zostatky</value>
+  </data>
+  <data name="RES_terminal.modalmsg.nothing.rotext" xml:space="preserve">
+    <value>Nerobiť nič</value>
+  </data>
+  <data name="RES_terminal.modalmsg.notsavenewassign.rotext" xml:space="preserve">
+    <value>$2$L$3Interná chyba!$1$L----------------------------------------$L$1Nemohlo sa uložiť priradenie!$LNahláste túto chybu svojmu distribútorovi.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.ok.rotext" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="RES_terminal.modalmsg.onlyjobemployee.rotext" xml:space="preserve">
+    <value>$L$2Produkční používatelia$L$1Podrobnosti si vyžiadajte od manažéra.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.openeddoor.rotext" xml:space="preserve">
+    <value>Otvorené dvere</value>
+  </data>
+  <data name="RES_terminal.modalmsg.passemployeecard.rotext" xml:space="preserve">
+    <value>$L$L$L$L$2 Potiahnite kartu používateľa</value>
+  </data>
+  <data name="RES_terminal.modalmsg.pendingjob.rotext" xml:space="preserve">
+    <value>Uveďte, či je potrebné vykonať ešte nejaké práce</value>
+  </data>
+  <data name="RES_terminal.modalmsg.piecesleft.rotext" xml:space="preserve">
+    <value>Chýba</value>
+  </data>
+  <data name="RES_terminal.modalmsg.previousteamname.rotext" xml:space="preserve">
+    <value>Predchádzajúci tím:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.punchfewminutes.rotext" xml:space="preserve">
+    <value>Pred chvíľou som si zapísal čas:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.punchofflinedownload.rotext" xml:space="preserve">
+    <value>Stiahnuté podpisy.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.putinc.rotext" xml:space="preserve">
+    <value>Uveďte incident.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.queryerror.rotext" xml:space="preserve">
+    <value>$2$L$3Chybný dotaz!$1$L-.$L$1Podrobnosti získate od správcu.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.replacedclockout.rotext" xml:space="preserve">
+    <value>1$L$L$L$L$L$L$2Nahradzuje posledný výstup.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.resourceinvalid.rotext" xml:space="preserve">
+    <value>$L$2Nie je oprávnenie na fázu!$L$1Podrobnejšie informácie získate od správcu.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.sal.rotext" xml:space="preserve">
+    <value>SAL.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.saldoscard.rotext" xml:space="preserve">
+    <value>$1$L$L$L$2Predložte kartu na konzultáciu:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.sameteamname.rotext" xml:space="preserve">
+    <value>1$L$LA je v súčasnosti už priradený k tímu.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.save.rotext" xml:space="preserve">
+    <value>$2$L$3 ~W ~D ~H:~M$1$L----------------------------------------$L$2 uložené dierovanie</value>
+  </data>
+  <data name="RES_terminal.modalmsg.savejobpuncherror.rotext" xml:space="preserve">
+    <value>$2$L$3Interná chyba!$1$L----------------------------------------$L$1Punč sa nepodarilo uložiť!$LNahláste túto chybu svojmu distribútorovi.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.saveofflinepuncherror.rotext" xml:space="preserve">
+    <value>$2$L$3Interná chyba!$1$L----------------------------------------$L$1Punč sa nepodarilo uložiť!$LNahláste túto chybu svojmu distribútorovi.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.savepunch.rotext" xml:space="preserve">
+    <value>$1$L$L --------------------------------------$L$L$2 uložený prevod$1$L ---------------------------------------</value>
+  </data>
+  <data name="RES_terminal.modalmsg.savepuncherror.rotext" xml:space="preserve">
+    <value>$2$L$3Interná chyba!$1$L----------------------------------------$L$1Punč sa nepodarilo uložiť!$LNahláste túto chybu svojmu distribútorovi.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.selectbarcode.rotext" xml:space="preserve">
+    <value>$L$L$2Vyberte čiarový kód.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.selectedmachine.rotext" xml:space="preserve">
+    <value>Vybrali ste stroj</value>
+  </data>
+  <data name="RES_terminal.modalmsg.selectmachine.rotext" xml:space="preserve">
+    <value>$L$2 -- Vyberte stroj --</value>
+  </data>
+  <data name="RES_terminal.modalmsg.selectonemachine.rotext" xml:space="preserve">
+    <value>Kód stroja:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.selectquery.rotext" xml:space="preserve">
+    <value>Vyberte požadovanú požiadavku:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.shifts.rotext" xml:space="preserve">
+    <value>cestovné poriadky</value>
+  </data>
+  <data name="RES_terminal.modalmsg.synchends.rotext" xml:space="preserve">
+    <value>Synchronizácia dokončená.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.synchprocess.rotext" xml:space="preserve">
+    <value>Synchronizácia so serverom:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.tasks.rotext" xml:space="preserve">
+    <value>úloha</value>
+  </data>
+  <data name="RES_terminal.modalmsg.time.rotext" xml:space="preserve">
+    <value>Počasie</value>
+  </data>
+  <data name="RES_terminal.modalmsg.tochange.rotext" xml:space="preserve">
+    <value>Zmena</value>
+  </data>
+  <data name="RES_terminal.modalmsg.unknownstate.rotext" xml:space="preserve">
+    <value>$2$L$3Interná chyba!$1$L----------------------------------------$L$1Chybný stav:Status not expected (${2}-${1})$LOdošlite túto chybu svojmu distribútorovi.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.updatingcardbio.rotext" xml:space="preserve">
+    <value>Aktualizácia karty(${1}): Počkajte na to...</value>
+  </data>
+  <data name="RES_terminal.modalmsg.updatingcodes.rotext" xml:space="preserve">
+    <value>Aktualizácia kódov(${1}): Počkajte..</value>
+  </data>
+  <data name="RES_terminal.modalmsg.updatingshifts.rotext" xml:space="preserve">
+    <value>Aktualizácia plánov(${1}): Počkajte na to...</value>
+  </data>
+  <data name="RES_terminal.modalmsg.updatingsirens.rotext" xml:space="preserve">
+    <value>Aktualizácia sirén(${1}): Počkajte na to...</value>
+  </data>
+  <data name="RES_terminal.modalmsg.voidteamname.rotext" xml:space="preserve">
+    <value>Žiadne vybavenie</value>
+  </data>
+  <data name="RES_terminal.modalmsg.whatdoyouwanttodo.rotext" xml:space="preserve">
+    <value>Čo chcete robiť?</value>
+  </data>
+  <data name="RES_terminal.modalmsg.withtask.rotext" xml:space="preserve">
+    <value>Práca na ${1}</value>
+  </data>
+  <data name="RES_terminal.modalmsg.wrongcause.rotext" xml:space="preserve">
+    <value>$2$L$3 Nesprávne:$1$L----------------------------------------$L$2Uvedený kód neexistuje$L$1Prekontrolujte zadaný kód.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.wrongcauseq.rotext" xml:space="preserve">
+    <value>$2$L$3 ~W ~D ~H:~M$1$L----------------------------------------$L$L$2FInvalid Invalid Incident Format</value>
+  </data>
+  <data name="RES_terminal.modalmsg.wrongjob.rotext" xml:space="preserve">
+    <value>$2$L$3 Nesprávne:$1$L----------------------------------------$L$2Uvedený kód neexistuje$L$1Prekontrolujte zadaný kód.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.wrongmsg.rotext" xml:space="preserve">
+    <value>$2$L$3Chybný server!$1$L----------------------------------------$1Neočakávaná chyba v triede mx3/ART$Ldriver. Podrobnosti nájdete v logu PC.$L$L Proces ORM Errcode:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.wrongpieces.rotext" xml:space="preserve">
+    <value>$2$L$3 Nesprávne:$1$L----------------------------------------$L$2Časti sú neplatné$L$1Prekontrolujte zadanú hodnotu.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.wrongpunch.rotext" xml:space="preserve">
+    <value>$2$L$3Už ste prihlásení!$1$L----------------------------------------$L$2Nemusíte sa prihlasovať$L nanovo.</value>
+  </data>
+</root>

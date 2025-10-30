@@ -1,0 +1,38 @@
+<div data-options="dxView : { name: 'newLeave', title: 'newLeave', disableCache: true } " >
+
+
+	<div id="smallUserInfo"></div>
+
+        <div style="clear:both" data-bind="dxScrollView: scrollContent">
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <span data-bind="text: lblDocDate"></span>
+                    <div class="dx-field-value" data-bind="dxDateBox: docDate"></div>
+                </div>
+
+                <div class="dx-field">
+                    <span data-bind="text: lblRequestValue1"></span>
+                    <div class="dx-field-value" data-bind="dxSelectBox: cmbRequestValue1"></div>
+                </div>
+
+                <!-- ko if: hasDocuments() == true -->
+                <!--ko with: myDocumentsBlock-->
+                <div data-options="dxViewPlaceholder: { viewName: 'documentInput' } "></div>
+                <!-- /ko-->
+                <!-- /ko-->
+
+                <div class="dx-field">
+                    <span data-bind="text: lblRemarks"></span>
+                    <div class="dx-field-value" data-bind="dxTextArea: remarks"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="fixedMenuButton">
+            <div class="actionButton mainMenuButton" data-bind="dxButton: btnSave"></div>
+        </div>
+
+        <div data-bind="dxLoadPanel: loadingPanel"> </div>
+  
+</div>

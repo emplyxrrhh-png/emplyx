@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_alerts.alert.documents.company.alertabsenteeism.rotext" xml:space="preserve">
+    <value>Sono presenti ${1} documenti di assenze non consegnati o non corretti</value>
+  </data>
+  <data name="RES_alerts.alert.documents.company.alertexpired.rotext" xml:space="preserve">
+    <value>Sono presenti ${1} documenti obbligatori scaduti</value>
+  </data>
+  <data name="RES_alerts.alert.documents.company.alertforecastdocuments.rotext" xml:space="preserve">
+    <value>Mancano ${1} documenti di previsione delle ore di lavoro</value>
+  </data>
+  <data name="RES_alerts.alert.documents.company.alertmandatory.rotext" xml:space="preserve">
+    <value>Mancano ${1} documenti obbligatori dell´azienda</value>
+  </data>
+  <data name="RES_alerts.alert.documents.company.alertvalidation.rotext" xml:space="preserve">
+    <value>Sono presenti ${1} documenti di azienda in attesa di convalida</value>
+  </data>
+  <data name="RES_alerts.alert.documents.company.authorizationaccessdocumentsundelivered.rotext" xml:space="preserve">
+    <value>Sono presenti ${1} documenti di autorizzazione di accesso per azienda non consegnati o non corretti</value>
+  </data>
+  <data name="RES_alerts.alert.documents.company.authorizationaccessdocumentsvalidationpending.rotext" xml:space="preserve">
+    <value>Sono presenti ${1} documenti di autorizzazione di accesso per azienda in attesa di convalida</value>
+  </data>
+  <data name="RES_alerts.alert.documents.employee.alertabsenteeism.rotext" xml:space="preserve">
+    <value>Sono presenti ${1} documenti di assenze non consegnati o non corretti</value>
+  </data>
+  <data name="RES_alerts.alert.documents.employee.alertabsenteeismundelivered.rotext" xml:space="preserve">
+    <value>Sono presenti ${1} documenti di assenze non consegnati o non corretti</value>
+  </data>
+  <data name="RES_alerts.alert.documents.employee.alertabsenteeismvalidationpending.rotext" xml:space="preserve">
+    <value>Sono presenti ${1} documenti di assenze in attesa di convalida</value>
+  </data>
+  <data name="RES_alerts.alert.documents.employee.alertexpired.rotext" xml:space="preserve">
+    <value>Sono presenti ${1} documenti obbligatori scaduti</value>
+  </data>
+  <data name="RES_alerts.alert.documents.employee.alertforecastdocuments.rotext" xml:space="preserve">
+    <value>Mancano ${1} documenti di previsione delle ore di lavoro</value>
+  </data>
+  <data name="RES_alerts.alert.documents.employee.alertforecastdocumentsundelivered.rotext" xml:space="preserve">
+    <value>Sono presenti ${1} documenti di previsione di ore di lavoro non consegnati o non corretti</value>
+  </data>
+  <data name="RES_alerts.alert.documents.employee.alertforecastdocumentsvalidationpending.rotext" xml:space="preserve">
+    <value>Sono presenti ${1} documenti di previsione di ore di lavoro in attesa di convalida</value>
+  </data>
+  <data name="RES_alerts.alert.documents.employee.alertmandatory.rotext" xml:space="preserve">
+    <value>Mancano ${1} documenti utente obbligatori</value>
+  </data>
+  <data name="RES_alerts.alert.documents.employee.alertvalidation.rotext" xml:space="preserve">
+    <value>Sono presenti ${1} documenti in attesa di convalida</value>
+  </data>
+  <data name="RES_alerts.alert.documents.employee.authorizationaccessdocumentsundelivered.rotext" xml:space="preserve">
+    <value>Sono presenti ${1} documenti di autorizzazione di accesso per utenti non consegnati o non corretti</value>
+  </data>
+  <data name="RES_alerts.alert.documents.employee.authorizationaccessdocumentsvalidationpending.rotext" xml:space="preserve">
+    <value>Sono presenti ${1} documenti di autorizzazione di accesso per utenti in attesa di convalida</value>
+  </data>
+  <data name="RES_alerts.alertdetailspopup.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.alertdetailspopup.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.aspxcallbackpanelcontenido.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.dxpwmb-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.everythingok.rotext" xml:space="preserve">
+    <value>Tutto è corretto. Non ci sono avvisi che richiedano di essere gestite.</value>
+  </data>
+  <data name="RES_alerts.ibtrefreshalerts.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.imgaudit.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.lastupdatetext.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.lastupdatetext.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.lblheader.text.rotext" xml:space="preserve">
+    <value>Avvisi</value>
+  </data>
+  <data name="RES_alerts.lblheader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.lblinfo.text.rotext" xml:space="preserve">
+    <value>In questa schermata vengono visualizzati gli avvisi relativi ad anomalie rilevate nel sistema e che impongono un´azione correttiva.</value>
+  </data>
+  <data name="RES_alerts.lblinfo.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.lblpanelsubtitle.text.rotext" xml:space="preserve">
+    <value>Vengono visualizzati gli avvisi relativi agli ultimi 30 giorni. Dopo averle gestite, è possibile che continuino a essere visualizzate, fino a quando il server di Visualtime non verifica che sono state effettivamente risolte. Questo processo può richiedere alcuni minuti, in base al carico del server. Per aggiornare il contenuto, fai clic sull´icona di aggiornamento nell´angolo in alto a destra.</value>
+  </data>
+  <data name="RES_alerts.lblpanelsubtitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.lblpaneltitle.text.rotext" xml:space="preserve">
+    <value>Sono presenti avvisi che richiedono la tua attenzione. Seleziona i dettagli per gestirle</value>
+  </data>
+  <data name="RES_alerts.lblpaneltitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.lblsupporttext.text.rotext" xml:space="preserve">
+    <value>Ultimo aggiornamento:</value>
+  </data>
+  <data name="RES_alerts.lblsupporttext.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.newobjectpopup.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.newobjectpopup.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.panelcontent1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.pw-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.stylesheetscontainer.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.title.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.absencetypes.showcoverages.rotext" xml:space="preserve">
+    <value>Mostra budget</value>
+  </data>
+  <data name="RES_alertsdetail.absencetypes.showdocument.rotext" xml:space="preserve">
+    <value>Dettagli</value>
+  </data>
+  <data name="RES_alertsdetail.absencetypes.showemployee.rotext" xml:space="preserve">
+    <value>Mostra scheda dell´utente</value>
+  </data>
+  <data name="RES_alertsdetail.absencetypes.showtask.rotext" xml:space="preserve">
+    <value>Mostra attività</value>
+  </data>
+  <data name="RES_alertsdetail.btnalertsdetailclose.text.rotext" xml:space="preserve">
+    <value>Vicino</value>
+  </data>
+  <data name="RES_alertsdetail.btnalertsdetailclose.tooltip.rotext" xml:space="preserve">
+    <value>Vicino</value>
+  </data>
+  <data name="RES_alertsdetail.col2.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.col2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.col3.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.col3.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.col4.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.col4.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxeditor0.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxeditor0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxeditor1.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxeditor1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxeditor2.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxeditor2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxeditor3.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxeditor3.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxheadersrow0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxheadertable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxmaintable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxstyletable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.griddetails.column.detail1.rotext" xml:space="preserve">
+    <value>Utente</value>
+  </data>
+  <data name="RES_alertsdetail.griddetails.column.detail1department.rotext" xml:space="preserve">
+    <value>Dipartimento</value>
+  </data>
+  <data name="RES_alertsdetail.griddetails.column.detail1task.rotext" xml:space="preserve">
+    <value>Attività</value>
+  </data>
+  <data name="RES_alertsdetail.griddetails.column.detail2.rotext" xml:space="preserve">
+    <value>Dettagli</value>
+  </data>
+  <data name="RES_alertsdetail.griddetails.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.i.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.i.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.iadd.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.iadu.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.idhf.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.label17.text.rotext" xml:space="preserve">
+    <value>Dettagli</value>
+  </data>
+  <data name="RES_alertsdetail.label17.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.ld.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.lp.text.rotext" xml:space="preserve">
+    <value>Caricamento in corso&amp;hellip;</value>
+  </data>
+  <data name="RES_alertsdetail.lp.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.scrollable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.stylesheetscontainer.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.title.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.tl.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.tl.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.analytic.name.0.1.rotext" xml:space="preserve">
+    <value>Calendario: saldi</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.0.2.rotext" xml:space="preserve">
+    <value>Calendario: Pianificazione</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.0.3.rotext" xml:space="preserve">
+    <value>Calendario: giustificazioni ed eventi</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.0.4.rotext" xml:space="preserve">
+    <value>Calendario: timbrature di presenza</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.0.5.rotext" xml:space="preserve">
+    <value>Calendario: Richieste</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.1.1.rotext" xml:space="preserve">
+    <value>Centri di costo: centri di costo</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.1.2.rotext" xml:space="preserve">
+    <value>Centri di costo: Dettaglio</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.1.3.rotext" xml:space="preserve">
+    <value>Centri di costo: Richieste</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.1.4.rotext" xml:space="preserve">
+    <value>Centri di costo: centri di costo attuale per utente</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.2.1.rotext" xml:space="preserve">
+    <value>Accessi: accessi</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.2.2.rotext" xml:space="preserve">
+    <value>Accessi: autorizzazioni</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.3.1.rotext" xml:space="preserve">
+    <value>Attività: attività</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.3.2.rotext" xml:space="preserve">
+    <value>Attività: Richieste</value>
+  </data>
+  <data name="RES_tasksqueue.btrefresh.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.btrefresh.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.dxemptyrow.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.dxheadersrow0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.dxheadertable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.dxmaintable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.emptyheader.text.rotext" xml:space="preserve">
+    <value>Trascina una colonna qui...</value>
+  </data>
+  <data name="RES_tasksqueue.emptyheader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.exportsagemurano.rotext" xml:space="preserve">
+    <value>Esportazione di Sage Murano (giornaliera)</value>
+  </data>
+  <data name="RES_tasksqueue.exportstandardxml.rotext" xml:space="preserve">
+    <value>Esportazione standard</value>
+  </data>
+  <data name="RES_tasksqueue.gridcompleted.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.gridrunning.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.actiontype.analytic.rotext" xml:space="preserve">
+    <value>Analisi dei dati</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.actiontype.export.rotext" xml:space="preserve">
+    <value>Esportare</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.actiontype.import.rotext" xml:space="preserve">
+    <value>Importare</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.actiontype.report.rotext" xml:space="preserve">
+    <value>Rapporto</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.column.action.rotext" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.column.creationdate.rotext" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.column.delete.rotext" xml:space="preserve">
+    <value>Eliminare</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.column.deletedate.rotext" xml:space="preserve">
+    <value>Data eliminazione</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.column.downloadfile.rotext" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.column.endstatus.rotext" xml:space="preserve">
+    <value>Stato</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.column.endtime.rotext" xml:space="preserve">
+    <value>Ora conclusione</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.column.name.rotext" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.column.starttime.rotext" xml:space="preserve">
+    <value>Ora di inizio</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.column.user.rotext" xml:space="preserve">
+    <value>Utente</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.status.endok.rotext" xml:space="preserve">
+    <value>Concluso correttamente</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.status.endwitherrors.rotext" xml:space="preserve">
+    <value>Concluso con errori</value>
+  </data>
+  <data name="RES_tasksqueue.gridwaiting.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.iadd.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.iadl.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.iadr.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.iadu.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.idhf.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.imgconfigurationoptions.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.label2.text.rotext" xml:space="preserve">
+    <value>Rapporti in attesa</value>
+  </data>
+  <data name="RES_tasksqueue.label2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.label3.text.rotext" xml:space="preserve">
+    <value>Rapporti completati</value>
+  </data>
+  <data name="RES_tasksqueue.label3.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.lblcompleted.text.rotext" xml:space="preserve">
+    <value>Rapporti completati</value>
+  </data>
+  <data name="RES_tasksqueue.lblcompleted.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.lbldatabaseoptionstabbutton.text.rotext" xml:space="preserve">
+    <value>Rapporti richiesti</value>
+  </data>
+  <data name="RES_tasksqueue.lbldatabaseoptionstabbutton.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.lblheader.text.rotext" xml:space="preserve">
+    <value>Rapporti richiesti</value>
+  </data>
+  <data name="RES_tasksqueue.lblheader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.lblinfo.text.rotext" xml:space="preserve">
+    <value>Da questa schermata sarà possibile consultare l´elenco dei rapporti in corso, in sospeso e completati nonché l´ordine in cui verranno eseguiti nel sistema.</value>
+  </data>
+  <data name="RES_tasksqueue.lblinfo.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.lblrunningtitle.text.rotext" xml:space="preserve">
+    <value>Rapporti in corso</value>
+  </data>
+  <data name="RES_tasksqueue.lblrunningtitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.lblsolutionscaption.text.rotext" xml:space="preserve">
+    <value>Rapporti in corso</value>
+  </data>
+  <data name="RES_tasksqueue.lblsolutionscaption.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.lblwaitingtitle.text.rotext" xml:space="preserve">
+    <value>Rapporti in attesa</value>
+  </data>
+  <data name="RES_tasksqueue.lblwaitingtitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.ld.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.lp.text.rotext" xml:space="preserve">
+    <value>Caricamento in corso&amp;hellip;</value>
+  </data>
+  <data name="RES_tasksqueue.lp.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.myhidebutton.text.rotext" xml:space="preserve">
+    <value>Pulsante</value>
+  </data>
+  <data name="RES_tasksqueue.myhidebutton.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.report.target.rotext" xml:space="preserve">
+    <value>Destinatari</value>
+  </data>
+  <data name="RES_tasksqueue.scrollable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.stylesheetscontainer.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.title.rotext" xml:space="preserve">
+    <value>Rapporti richiesti</value>
+  </data>
+  <data name="RES_tasksqueue.tl.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.tl.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+</root>

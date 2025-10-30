@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{77CA426F-9329-49B2-9708-8288B54E36E5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>Robotics.Base.VTBroadcasterCore</RootNamespace>
+    <AssemblyName>VTBroadcasterCore</AssemblyName>
+    <MyType>Windows</MyType>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/roProcBroadcasterNet/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\CommonBin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>BroadcasterCore.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\CommonBin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>BroadcasterCore.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Multitennant|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\CommonBin\</OutputPath>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>BroadcasterCore.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Common\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SQLite, Version=1.0.96.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Common\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\AssemblyVersionInfo.vb">
+      <Link>AssemblyVersionInfo.vb</Link>
+    </Compile>
+    <Compile Include="BDL\BCData.vb" />
+    <Compile Include="BDL\TerminalData.vb" />
+    <Compile Include="BLL\Access.vb" />
+    <Compile Include="BLL\AccessFile.vb" />
+    <Compile Include="BLL\BCGlobal.vb" />
+    <Compile Include="BLL\BiodataBin.vb" />
+    <Compile Include="BLL\BiodataBinFile.vb" />
+    <Compile Include="BLL\Card.vb" />
+    <Compile Include="BLL\CardsFile.vb" />
+    <Compile Include="BLL\Cause.vb" />
+    <Compile Include="BLL\CausesFile.vb" />
+    <Compile Include="BLL\ConfigurationModes.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConfigurationModes.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="BLL\ConfigurationModes.vb">
+      <DependentUpon>ConfigurationModes.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="BLL\Document.vb" />
+    <Compile Include="BLL\DocumentFile.vb" />
+    <Compile Include="BLL\EmployeeAccessLevelMxap.vb" />
+    <Compile Include="BLL\EmployeeAccessLevelMxapFile.vb" />
+    <Compile Include="BLL\EmployeeTimeZonesPush2.vb" />
+    <Compile Include="BLL\EmployeeTimeZonesPush2File.vb" />
+    <Compile Include="BLL\GroupEmployees.vb" />
+    <Compile Include="BLL\GroupEmployeesFile.vb" />
+    <Compile Include="BLL\LocalDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\LocalDataSet.vb">
+      <DependentUpon>LocalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\Siren.vb" />
+    <Compile Include="BLL\SirensFiles.vb" />
+    <Compile Include="BLL\SysDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SysDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\SysDataSet.vb">
+      <DependentUpon>SysDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\TerminalConfigFile.vb" />
+    <Compile Include="BLL\TimeZone.vb" />
+    <Compile Include="BLL\TimeZoneMxap.vb" />
+    <Compile Include="BLL\TimeZoneMxapFile.vb" />
+    <Compile Include="BLL\TimeZonesFile.vb" />
+    <Compile Include="BLL\TimeZoneZKPush2.vb" />
+    <Compile Include="BLL\TimeZoneZKPush2File.vb" />
+    <Compile Include="BroadcasterManager.vb" />
+    <Compile Include="BLL\Employee.vb" />
+    <Compile Include="BLL\EmployeesFile.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Support\BroadcasterHelper.vb" />
+    <Compile Include="Tasks\BroadcasterTaskExecution.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BLL\LocalDataSet.xsc">
+      <DependentUpon>LocalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BLL\LocalDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LocalDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="BLL\LocalDataSet.xss">
+      <DependentUpon>LocalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BroadcasterCore.ruleset" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="BLL\ConfigurationModes.xsc">
+      <DependentUpon>ConfigurationModes.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="BLL\ConfigurationModes.xml" />
+    <Content Include="BLL\ConfigurationModes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConfigurationModes.Designer.vb</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\EmployeePhoto.png" />
+    <None Include="BLL\ConfigurationModes.xss">
+      <DependentUpon>ConfigurationModes.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="BLL\SysDataSet.xsc">
+      <DependentUpon>SysDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BLL\SysDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SysDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BLL\SysDataSet.xss">
+      <DependentUpon>SysDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="Resources\Employee48.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseComms\BaseComms.vbproj">
+      <Project>{b3da6aae-1909-4b24-b5c2-f981f18cf719}</Project>
+      <Name>BaseComms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLayer\DataLayer.vbproj">
+      <Project>{a68015f9-a070-4ab5-941e-c922fbc5ff30}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTOs\DTOs\DTOs.vbproj">
+      <Project>{00be6247-e1ed-4e0a-bd02-8dbb4e00ffe1}</Project>
+      <Name>DTOs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SecurityLayer\SecurityLayer.vbproj">
+      <Project>{e712f6a2-5e54-4731-9b11-af80242a246c}</Project>
+      <Name>SecurityLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTAzure\VTAzure.vbproj">
+      <Project>{c4ad9d15-4368-4343-b1e1-263abf0e8ab0}</Project>
+      <Name>VTAzure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTBase.Extensions\VTBase.Extensions.vbproj">
+      <Project>{d99ce0c2-ad93-4f3d-a35b-c97749de1bde}</Project>
+      <Name>VTBase.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTBase.Security\VTBase.Security.vbproj">
+      <Project>{c1b73385-8dff-40b0-8c3b-d2e0ded2621e}</Project>
+      <Name>VTBase.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTBase\VTBase.vbproj">
+      <Project>{f1d0ec70-d874-4eed-8ab9-f28fcda2b7f0}</Project>
+      <Name>VTBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTBusinessBase\VTBusiness.Common.vbproj">
+      <Project>{97d87ef7-2b41-4216-a6d2-fa9e3c1bc570}</Project>
+      <Name>VTBusiness.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTBusiness\VTBusiness.vbproj">
+      <Project>{19563cd9-657e-48a8-9b7e-c8b7b23af403}</Project>
+      <Name>VTBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTEmployees\VTEmployees.vbproj">
+      <Project>{c0e7da43-d1b9-4427-b147-47a269b8706f}</Project>
+      <Name>VTEmployees</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTTerminals\VTTerminals.vbproj">
+      <Project>{c2c99a9a-f600-45fc-82c5-b0d1454f85e9}</Project>
+      <Name>VTTerminals</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

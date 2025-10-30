@@ -1,0 +1,73 @@
+<div data-options="dxView : { name: 'SelectListObject', disableCache: true } ">
+
+
+	<!--ko with: subscribeBlock-->
+	<div class="bigProfile" data-options="dxViewPlaceholder: { viewName: 'bigUserInfo' }"></div>
+	<!-- /ko-->
+
+	<div class="dx-searchbar">
+		<div data-bind="dxTextBox: searchOptions"></div>
+	</div>
+	<!-- ko if: isTaskL() != "tasks.availabletasks" -->
+	<div data-bind="dxList: listOptions">
+
+		<div data-options="dxTemplate: {name: 'item'}">
+			<div class="listMenuItem">
+				<div class="TextDescription" data-bind="text: $data.FieldName"></div>
+				<div class="list-item-arrow"></div>
+			</div>
+		</div>
+
+	</div>
+	<!-- /ko -->
+	<!-- ko if: isTaskL() == "tasks.availabletasks" -->
+	<div data-bind="dxList: listOptions">
+
+		<div data-options="dxTemplate: {name: 'item'}">
+			<div class="listMenuItem">
+				<div class="TextDescription" data-bind="text: $data.FieldName"></div>
+				<div class="smallTextDescription" data-bind="text: $data.RelatedInfo"></div>
+				<div class="list-item-arrow"></div>
+			</div>
+		</div>
+
+	</div>
+	<!-- /ko -->
+	<div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false,closeOnBackButton:false, visible: taskFieldsVisible, height: 'auto'}">
+		<!--ko with: taskFieldsBlock-->
+		<div data-options="dxViewPlaceholder: { viewName: 'taskFieldsInput' }"></div>
+		<!-- /ko-->
+
+		<div style="padding-top:5px">
+			<div style="float:left;width:50%" class="get-to-work-blue" data-bind="dxButton: btnCancelTaskFields"></div>
+			<div style="float:right;width:50%" class="get-to-work-orange" data-bind="dxButton: btnAcceptUserFields"></div>
+		</div>
+
+	</div>
+	<div data-bind="dxPopup: {showTitle: false, title: '¿En qué zona estás?', closeOnOutsideClick:true,closeOnBackButton:false, visible: ListZonesVisible, height: 'auto'}">
+		<div class="card card-two">
+			<h4>
+				<span data-bind="text: lblWhereAreYou"></span>
+			</h4>
+			<div class="h-divider">
+				<div class="shadow"></div>
+			</div>
+			<div class="dx-searchbar">
+				<div data-bind="dxTextBox: searchOptions2"></div>
+			</div>
+			<div id="listZones" data-bind="dxList: listZones">
+				<div data-options="dxTemplate: {name: 'RequestItem'}">
+					<div class="listMenuItem">
+						<div data-bind="css: $data.cssContainerClass" class="listMenuItemIcon">
+							<div data-bind="css: $data.cssClass" class="listMenuItemIcon"></div>
+						</div>
+						<div class="listMenuItemContent">
+							<div data-bind="text: $data.Name"></div>
+							<div class="smallTextDescription" data-bind="html: $data.Description"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

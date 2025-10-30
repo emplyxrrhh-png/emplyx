@@ -1,0 +1,51 @@
+<div data-options="dxView : { name: 'profileConfig', title: 'profileConfig' } " >
+    <div data-bind="dxList: listOptions">
+        <div data-options="dxTemplate: {name: 'configAction'}">
+            <div class="listMenuItem">
+                <div data-bind="css: $data.CssClass" class="listMenuItemIcon"></div>
+                <div class="listMenuItemContent">
+                    <div class="roConfigActionText" data-bind="text: $data.Name"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false,closeOnBackButton:false, visible: popupChangePwdVisible, height: 'auto'}">
+        <div id="changePwdHome" class="dx-fieldset">
+            <div class="dx-field">
+                <span data-bind="text: lblOldPwd"></span>
+                <div class="dx-field-value pass" data-bind="dxTextBox: txtOldPwd, dxValidator: requieredOldField "></div>
+            </div>
+            <div class="dx-field">
+                <span data-bind="text: lblNewPwd"></span>
+                <div class="dx-field-value pass" data-bind="dxTextBox: txtNewPwd, dxValidator: requieredNewField "></div>
+            </div>
+            <div class="dx-field">
+                <span data-bind="text: lblNewPwdRepeat"></span>
+                <div class="dx-field-value pass" data-bind="dxTextBox: txtNewPwdRepeat, dxValidator: compareField  "></div>
+            </div>
+        </div>
+
+        <div style="padding-top:5px">
+            <div style="float:left;width:50%" class="get-to-work-blue" data-bind="dxButton: btnCancel"></div>
+            <div style="float:left;width:50%" class="get-to-work-orange" data-bind="dxButton: btnChangePwd"></div>
+        </div>
+    </div>
+
+  <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false,closeOnBackButton:false, visible: popupChangeLngVisible, height: 'auto'}">
+    <div id="changeLngHome" class="dx-fieldset">
+      <div class="dx-field">
+        <span data-bind="text: lblLanguage"></span>
+        <div class="dx-field-value lang" data-bind="dxSelectBox: dataSourceLanguages">
+          <div data-options="dxTemplate:{ name:'langItemTemplate' }" class="login-item" data-bind="text: Name"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding-top:5px">
+      <div style="float:left;width:50%" class="get-to-work-blue" data-bind="dxButton: btnCancelLng"></div>
+      <div style="float:left;width:50%" class="get-to-work-orange" data-bind="dxButton: btnChangeLng"></div>
+    </div>
+  </div>
+    <div data-bind="dxLoadPanel: loadingPanel"> </div>
+</div>

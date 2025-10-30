@@ -1,0 +1,244 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+parameters:
+  - name: generateLang
+    type: boolean
+    default: false
+  - name: uploadArtifact
+    type: boolean
+    default: true
+  - name: appservices
+    type: object
+    default: ""
+  - name: functions
+    type: object
+    default: ""
+  - name: copyTemplates
+    type: boolean
+    default: true
+  - name: copyUpdates
+    type: boolean
+    default: true
+  - name: copyReports
+    type: boolean
+    default: true
+  - name: sonarcloudAnalysis
+    type: boolean
+    default: false 
+
+stages:
+  - stage: Build
+    condition: succeeded()
+    jobs:
+    - job: Compile
+      displayName: "Generate all artifacts into pipeline"
+      steps:
+      - task: PowerShell@2
+        name: buildVersion
+        displayName: "Get version & update pipeline"
+        inputs:
+          targetType: 'inline'
+          pwsh: true
+          workingDirectory: './Src/Utils/UtilScripts/Scripts/ProductionScripts/'
+          script: |
+            $BuildVersion = ((Get-Content -Path Version.dat -TotalCount 2)[-1]).Replace('Current=','').Split(' ')[0]
+            Write-Host "VTI version: $BuildVersion"
+            "##vso[task.setvariable variable=BuildVersion;isOutput=true]$BuildVersion"
+
+            $BuildNumber = "$(Build.BuildNumber)"
+            $spBuildNumber = $BuildNumber.split("-")
+            $newBuildNumber = $spBuildNumber[0]+"-"+$BuildVersion+"-"+$spBuildNumber[1]
+            Write-Host "##vso[build.updatebuildnumber]$newBuildNumber"
+            "##vso[task.setvariable variable=BuildNumber;isOutput=true]$newBuildNumber"
+      - powershell: .\cleanupEnvironment.ps1
+        displayName: 'Limpiar ficheros temporales'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/Src/Utils/UtilScripts/Scripts/ProductionScripts/v2022/'
+      - task: NuGetToolInstaller@1
+        displayName: "Setup- Download environment"
+        # inputs:
+        #   versionSpec: 6.12.1
+        enabled: true
+      - task: NuGetCommand@2
+        inputs:
+          restoreSolution: '$(solution)'
+        displayName: "Setup- Prepare environment"
+        enabled: true
+      - powershell: .\roLngToolsV2.exe JSON
+        displayName: 'Prebuild- Generando ficheros de idioma'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/Common/roLngTools/'
+        enabled: ${{ parameters.generateLang }}
+      #Prepare sonarcloud analysis
+      - task: SonarCloudPrepare@1
+        displayName: "SonarCloud - Prepare"
+        enabled: ${{ parameters.sonarcloudAnalysis }}
+        inputs:
+          SonarCloud: 'SonarCloud-VisualTime'
+          organization: 'cegidgroup'
+          scannerMode: 'MSBuild'
+          projectKey: 'cegid_VisualTime'
+          extraProperties: |
+            sonar.projectBaseDir=$(System.DefaultWorkingDirectory)/Src
+            sonar.projectName=Visualtime
+            sonar.projectVersion=1.0
+            sonar.language=cs
+            sonar.exclusions=./AssemblyInfo.cs,./AssemblyInfo.vb,./bin/**,./obj/**,./*.touch,./*.dll
+            sonar.branch.name=$(Build.SourceBranchName)
+            sonar.cs.vstest.reportsPaths=$(Agent.TempDirectory)/TestResults/*.trx
+            sonar.cs.vscoveragexml.reportsPaths=$(Agent.TempDirectory)/TestResults/*/net.worker.xml
+      #Compile Web
+      - ${{ each appservice in parameters.appservices }}:
+        - ${{ if eq(appservice.enabled, true) }} :
+          - task: MSBuild@1
+            condition: succeeded()
+            inputs:
+              solution: ${{ appservice.project }}
+              msbuildArchitecture: 'x64'
+              configuration: '$(buildConfiguration)'
+              msbuildArguments: '/p:PublishProfile="VisualTimeMTDeploy.pubxml" /p:DeployOnBuild=true'
+            displayName: 'CompileWeb- Build ${{ appservice.folder }}'
+            enabled: ${{ appservice.enabled }}
+          - task: ArchiveFiles@2
+            condition: and(succeeded(), ${{ appservice.enabled }}, ${{ parameters.uploadArtifact }})
+            inputs:
+              rootFolderOrFile: 'C:\Work\VisualTimeMTDeploy\${{ appservice.folder }}'
+              includeRootFolder: false
+              archiveType: 'zip'
+              archiveFile: '$(Build.BinariesDirectory)\${{ appservice.folder }}.zip'
+              replaceExistingArchive: true
+            displayName: 'CompileWeb- Zip ${{ appservice.folder }}'
+          - task: PublishPipelineArtifact@1
+            condition: and(succeeded(), ${{ appservice.enabled }}, ${{ parameters.uploadArtifact }})
+            inputs:
+              targetPath: '$(Build.BinariesDirectory)\${{ appservice.folder }}.zip'
+              artifact: '${{ appservice.folder }}'
+              publishLocation: 'pipeline'
+            displayName: 'CompileWeb- Attach pipeline ${{ appservice.folder }}'
+          - powershell: | 
+                rm $(Build.BinariesDirectory)\${{ appservice.folder }}.zip
+            condition: and(succeeded(), ${{ appservice.enabled }}, ${{ parameters.uploadArtifact }})
+            displayName: 'CompileWeb- Clean ${{ appservice.folder }}'
+      #Compile Functions
+      - ${{ each functions in parameters.functions }}:
+        - ${{ if eq(functions.enabled, true) }} :
+          - task: MSBuild@1
+            condition: succeeded()
+            inputs:
+              solution: ${{ functions.project }}
+              msbuildArchitecture: 'win-x64'
+              configuration: '$(buildConfiguration)'
+              msbuildArguments: '/p:DeployOnBuild=true /p:PublishProfile="VisualTimeMTDeploy.pubxml" /p:WebPublishMethod=FileSystem'
+            displayName: 'CompileFunction- Build ${{ functions.folder }}'
+            enabled: ${{ functions.enabled }}
+          - task: ArchiveFiles@2
+            condition: and(succeeded(), ${{ functions.enabled }}, ${{ parameters.uploadArtifact }})
+            inputs:
+              rootFolderOrFile: 'C:\Work\VisualTimeMTDeploy\${{ functions.folder }}'
+              includeRootFolder: false
+              archiveType: 'zip'
+              archiveFile: '$(Build.BinariesDirectory)\${{ functions.folder }}.zip'
+              replaceExistingArchive: true
+            displayName: 'CompileFunction- Zip ${{ functions.folder }}'
+          - task: PublishPipelineArtifact@1
+            condition: and(succeeded(), ${{ functions.enabled }}, ${{ parameters.uploadArtifact }})
+            inputs:
+              targetPath: '$(Build.BinariesDirectory)\${{ functions.folder }}.zip'
+              artifact: ${{ functions.folder }}
+              publishLocation: 'pipeline'
+            displayName: 'CompileFunction- Attach pipeline ${{ functions.folder }}'
+          - powershell: | 
+                rm $(Build.BinariesDirectory)\${{ functions.folder }}.zip
+            condition: and(succeeded(), ${{ functions.enabled }}, ${{ parameters.uploadArtifact }})
+            displayName: 'CompileFunction- Clean ${{ functions.folder }}'
+      - task: VSBuild@1
+        inputs:
+          solution: '$(solution)'
+        displayName: "SonarCloud - Compile solution"
+        enabled: ${{ parameters.sonarcloudAnalysis }}      
+      #Run solution test
+      - task: VSTest@2
+        displayName: "SonarCloud - Run solution test"
+        enabled: ${{ parameters.sonarcloudAnalysis }}
+        inputs:
+          testSelector: 'testAssemblies'
+          testAssemblyVer2: |
+            **\*tests.dll
+            !**\*TestsAdapter.dll
+            !**\obj\**
+            !**\bin\**\ref\**
+            searchFolder: '$(System.DefaultWorkingDirectory)/Src'
+      #Run sonarcloud analysis
+      - task: SonarCloudAnalyze@1
+        displayName: "SonarCloud - Run Code Analysis"
+        enabled: ${{ parameters.sonarcloudAnalysis }}
+      #Publish sonarcloud analysis
+      - task: SonarCloudPublish@1
+        displayName: "SonarCloud - Publish Code Analysis"
+        enabled: ${{ parameters.sonarcloudAnalysis }}
+        inputs:
+          pollingTimeoutSec: "300"
+      #Add xls templates to pipeline
+      - ${{ if eq(parameters.copyTemplates, true) }} :
+          - task: ArchiveFiles@2
+            condition: and(succeeded(), ${{ parameters.uploadArtifact }})
+            inputs:
+              rootFolderOrFile: '.\Src\Utils\UtilScripts\Scripts\ProductionScripts\Templates\'
+              includeRootFolder: false
+              archiveType: 'zip'
+              archiveFile: '$(Build.BinariesDirectory)\templates.zip'
+              replaceExistingArchive: true
+            displayName: 'Package- Zip templates'
+          - task: PublishPipelineArtifact@1
+            condition: and(succeeded(), ${{ parameters.uploadArtifact }})
+            inputs:
+              targetPath: '$(Build.BinariesDirectory)\templates.zip'
+              artifact: 'templates'
+              publishLocation: 'pipeline'
+            displayName: 'Package- Attach pipeline templates'
+          - powershell: | 
+                rm $(Build.BinariesDirectory)\templates.zip
+            displayName: 'Clean templates.zip'
+      #Add sql update to pipeline
+      - ${{ if eq(parameters.copyUpdates, true) }} :
+        - task: ArchiveFiles@2
+          condition: and(succeeded(), ${{ parameters.uploadArtifact }})
+          inputs:
+            rootFolderOrFile: '.\Src\Common\DBScript\SQLUpgradeVersion\Updates\'
+            includeRootFolder: false
+            archiveType: 'zip'
+            archiveFile: '$(Build.BinariesDirectory)\updates.zip'
+            replaceExistingArchive: true
+          displayName: 'Package- Zip sql updates'
+        - task: PublishPipelineArtifact@1
+          condition: and(succeeded(), ${{ parameters.uploadArtifact }})
+          inputs:
+            targetPath: '$(Build.BinariesDirectory)\updates.zip'
+            artifact: 'updates'
+            publishLocation: 'pipeline'
+          displayName: 'Package- Attach pipeline sql updates'
+        - powershell: | 
+            rm $(Build.BinariesDirectory)\updates.zip
+          displayName: 'Clean updates.zip'
+      #Add dx reports to pipeline
+      - ${{ if eq(parameters.copyReports, true) }} :
+        - task: ArchiveFiles@2
+          condition: and(succeeded(), ${{ parameters.uploadArtifact }})
+          inputs:
+            rootFolderOrFile: '.\Src\Common\DBScript\SQLUpgradeVersion\Informes DX\'
+            includeRootFolder: false
+            archiveType: 'zip'
+            archiveFile: '$(Build.BinariesDirectory)\reports.zip'
+            replaceExistingArchive: true
+          displayName: 'Package- Zip sql dxreports'
+        - task: PublishPipelineArtifact@1
+          condition: and(succeeded(), ${{ parameters.uploadArtifact }})
+          inputs:
+            targetPath: '$(Build.BinariesDirectory)\reports.zip'
+            artifact: 'reports'
+            publishLocation: 'pipeline'
+          displayName: 'Package- Attach pipeline sql dxreports'
+        - powershell: | 
+            rm $(Build.BinariesDirectory)\reports.zip
+          displayName: 'Clean reports.zip'

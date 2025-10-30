@@ -1,0 +1,657 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_access.rotext" xml:space="preserve">
+    <value>Prístup</value>
+  </data>
+  <data name="RES_accessgroup.rotext" xml:space="preserve">
+    <value>prístupová skupina</value>
+  </data>
+  <data name="RES_accessgroups.rotext" xml:space="preserve">
+    <value>prístupové skupiny</value>
+  </data>
+  <data name="RES_accessperiod.rotext" xml:space="preserve">
+    <value>obdobie prístupu</value>
+  </data>
+  <data name="RES_accessperiods.rotext" xml:space="preserve">
+    <value>obdobia prístupu</value>
+  </data>
+  <data name="RES_action.copy.rotext" xml:space="preserve">
+    <value>Kopírovať</value>
+  </data>
+  <data name="RES_action.move.rotext" xml:space="preserve">
+    <value>Presun</value>
+  </data>
+  <data name="RES_assignment.rotext" xml:space="preserve">
+    <value>pošta</value>
+  </data>
+  <data name="RES_assignments.rotext" xml:space="preserve">
+    <value>Príspevky</value>
+  </data>
+  <data name="RES_authorization.rotext" xml:space="preserve">
+    <value>autorizácia</value>
+  </data>
+  <data name="RES_authorizations.rotext" xml:space="preserve">
+    <value>povolenia</value>
+  </data>
+  <data name="RES_budget.rotext" xml:space="preserve">
+    <value>rozpočet</value>
+  </data>
+  <data name="RES_budgets.rotext" xml:space="preserve">
+    <value>rozpočty</value>
+  </data>
+  <data name="RES_businesscenter.rotext" xml:space="preserve">
+    <value>nákladové stredisko</value>
+  </data>
+  <data name="RES_businesscenters.rotext" xml:space="preserve">
+    <value>nákladové strediská</value>
+  </data>
+  <data name="RES_businessgroup.rotext" xml:space="preserve">
+    <value>obchodná skupina</value>
+  </data>
+  <data name="RES_businessgroups.rotext" xml:space="preserve">
+    <value>obchodné skupiny</value>
+  </data>
+  <data name="RES_button.accept.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_button.apply.rotext" xml:space="preserve">
+    <value>Aplikovať</value>
+  </data>
+  <data name="RES_button.applychanges.rotext" xml:space="preserve">
+    <value>Vykonávanie zmien</value>
+  </data>
+  <data name="RES_button.cancel.rotext" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="RES_button.clear.rotext" xml:space="preserve">
+    <value>Prázdne stránky</value>
+  </data>
+  <data name="RES_button.close.rotext" xml:space="preserve">
+    <value>Zatvoriť</value>
+  </data>
+  <data name="RES_button.delete.rotext" xml:space="preserve">
+    <value>Odstrániť</value>
+  </data>
+  <data name="RES_button.down.rotext" xml:space="preserve">
+    <value>Stiahnite si</value>
+  </data>
+  <data name="RES_button.edit.rotext" xml:space="preserve">
+    <value>upraviť</value>
+  </data>
+  <data name="RES_button.end.rotext" xml:space="preserve">
+    <value>Koniec</value>
+  </data>
+  <data name="RES_button.next.rotext" xml:space="preserve">
+    <value>Ďalšie &gt;</value>
+  </data>
+  <data name="RES_button.previous.rotext" xml:space="preserve">
+    <value>&lt; Predchádzajúci</value>
+  </data>
+  <data name="RES_button.save.rotext" xml:space="preserve">
+    <value>Aplikovať</value>
+  </data>
+  <data name="RES_button.undochanges.rotext" xml:space="preserve">
+    <value>Zrušenie zmien</value>
+  </data>
+  <data name="RES_button.up.rotext" xml:space="preserve">
+    <value>Nahrať</value>
+  </data>
+  <data name="RES_calendar.rotext" xml:space="preserve">
+    <value>Kalendár</value>
+  </data>
+  <data name="RES_card.rotext" xml:space="preserve">
+    <value>Karta</value>
+  </data>
+  <data name="RES_cards.rotext" xml:space="preserve">
+    <value>karty</value>
+  </data>
+  <data name="RES_cause.rotext" xml:space="preserve">
+    <value>odôvodnenie</value>
+  </data>
+  <data name="RES_causes.rotext" xml:space="preserve">
+    <value>odôvodnenia</value>
+  </data>
+  <data name="RES_comparation.equal.rotext" xml:space="preserve">
+    <value>Rovnaký</value>
+  </data>
+  <data name="RES_comparation.equalless.rotext" xml:space="preserve">
+    <value>Menej alebo rovná sa</value>
+  </data>
+  <data name="RES_comparation.equalmore.rotext" xml:space="preserve">
+    <value>Väčšie alebo rovné</value>
+  </data>
+  <data name="RES_comparation.equals.rotext" xml:space="preserve">
+    <value>Rovnaký</value>
+  </data>
+  <data name="RES_comparation.less.rotext" xml:space="preserve">
+    <value>Menor</value>
+  </data>
+  <data name="RES_comparation.more.rotext" xml:space="preserve">
+    <value>Starosta</value>
+  </data>
+  <data name="RES_concept.rotext" xml:space="preserve">
+    <value>Saldo</value>
+  </data>
+  <data name="RES_concepts.rotext" xml:space="preserve">
+    <value>zostatky</value>
+  </data>
+  <data name="RES_criteria.contains.rotext" xml:space="preserve">
+    <value>obsahuje</value>
+  </data>
+  <data name="RES_criteria.different.rotext" xml:space="preserve">
+    <value>je odlišný</value>
+  </data>
+  <data name="RES_criteria.equals.rotext" xml:space="preserve">
+    <value>je rovnaká</value>
+  </data>
+  <data name="RES_criteria.major.rotext" xml:space="preserve">
+    <value>je väčšia ako</value>
+  </data>
+  <data name="RES_criteria.majororequals.rotext" xml:space="preserve">
+    <value>je väčšia alebo rovná</value>
+  </data>
+  <data name="RES_criteria.minor.rotext" xml:space="preserve">
+    <value>je menšia ako</value>
+  </data>
+  <data name="RES_criteria.minororequals.rotext" xml:space="preserve">
+    <value>je menšia alebo rovná</value>
+  </data>
+  <data name="RES_criteria.nocontains.rotext" xml:space="preserve">
+    <value>neobsahuje</value>
+  </data>
+  <data name="RES_criteria.startwith.rotext" xml:space="preserve">
+    <value>začať s</value>
+  </data>
+  <data name="RES_criteria.thedate.rotext" xml:space="preserve">
+    <value>dátum</value>
+  </data>
+  <data name="RES_criteria.thedateactual.rotext" xml:space="preserve">
+    <value>aktuálny dátum</value>
+  </data>
+  <data name="RES_criteria.thedateofjustification.rotext" xml:space="preserve">
+    <value>dátum odôvodnenia</value>
+  </data>
+  <data name="RES_criteria.theperiod.rotext" xml:space="preserve">
+    <value>obdobie</value>
+  </data>
+  <data name="RES_criteria.thetime.rotext" xml:space="preserve">
+    <value>počasie</value>
+  </data>
+  <data name="RES_criteria.thetimeactual.rotext" xml:space="preserve">
+    <value>aktuálny čas</value>
+  </data>
+  <data name="RES_criteria.thetimeofjustification.rotext" xml:space="preserve">
+    <value>čas ospravedlnenia</value>
+  </data>
+  <data name="RES_criteria.thevalue.rotext" xml:space="preserve">
+    <value>hodnota</value>
+  </data>
+  <data name="RES_criteria.thevalues.rotext" xml:space="preserve">
+    <value>hodnoty (oddelené ;)</value>
+  </data>
+  <data name="RES_dailyrecord.rotext" xml:space="preserve">
+    <value>vyhlásenie o pracovnom čase</value>
+  </data>
+  <data name="RES_dailyrecords.rotext" xml:space="preserve">
+    <value>denné vyhlásenia</value>
+  </data>
+  <data name="RES_dif.all.rotext" xml:space="preserve">
+    <value>hodnota zostatku</value>
+  </data>
+  <data name="RES_dif.diff.rotext" xml:space="preserve">
+    <value>rozdiel</value>
+  </data>
+  <data name="RES_dif.untilvalue.rotext" xml:space="preserve">
+    <value>až do hodnoty</value>
+  </data>
+  <data name="RES_dif.userfielduntilvalue.rotext" xml:space="preserve">
+    <value>na hodnotu profilového poľa</value>
+  </data>
+  <data name="RES_dif.userfieldvalue.rotext" xml:space="preserve">
+    <value>hodnota poľa profilu</value>
+  </data>
+  <data name="RES_dif.value.rotext" xml:space="preserve">
+    <value>hodnota</value>
+  </data>
+  <data name="RES_diningroom.rotext" xml:space="preserve">
+    <value>Jedáleň</value>
+  </data>
+  <data name="RES_diningrooms.rotext" xml:space="preserve">
+    <value>Jedálne</value>
+  </data>
+  <data name="RES_document.rotext" xml:space="preserve">
+    <value>dokument</value>
+  </data>
+  <data name="RES_documentabsences.rotext" xml:space="preserve">
+    <value>dokument</value>
+  </data>
+  <data name="RES_documents.rotext" xml:space="preserve">
+    <value>dokumenty</value>
+  </data>
+  <data name="RES_documentsabsences.rotext" xml:space="preserve">
+    <value>dokumenty</value>
+  </data>
+  <data name="RES_employee.rotext" xml:space="preserve">
+    <value>používateľ</value>
+  </data>
+  <data name="RES_employees.rotext" xml:space="preserve">
+    <value>používatelia</value>
+  </data>
+  <data name="RES_employeeselector.rotext" xml:space="preserve">
+    <value>Select,search,search by:,&amp;name,&amp;contract,&amp;card,&amp;filters:,view unsubscribed users,view future subscriptions,view users with current contract,view users in transit,profile field,view users by profile field,profile field users,value:,filter by profile field,user profile field,apply,filter options,filtering options,možnosti filtrovania</value>
+  </data>
+  <data name="RES_event.rotext" xml:space="preserve">
+    <value>Plánované podujatie</value>
+  </data>
+  <data name="RES_events.rotext" xml:space="preserve">
+    <value>Plánované podujatia</value>
+  </data>
+  <data name="RES_field.invalid.rotext" xml:space="preserve">
+    <value>Neplatné pole.</value>
+  </data>
+  <data name="RES_field.required.rotext" xml:space="preserve">
+    <value>Povinné pole.</value>
+  </data>
+  <data name="RES_group.rotext" xml:space="preserve">
+    <value>skupina</value>
+  </data>
+  <data name="RES_groups.rotext" xml:space="preserve">
+    <value>skupiny</value>
+  </data>
+  <data name="RES_incidence.1001.rotext" xml:space="preserve">
+    <value>odpracované hodiny</value>
+  </data>
+  <data name="RES_incidence.1010.rotext" xml:space="preserve">
+    <value>prebytok</value>
+  </data>
+  <data name="RES_incidence.1011.rotext" xml:space="preserve">
+    <value>absencia</value>
+  </data>
+  <data name="RES_incidence.1020.rotext" xml:space="preserve">
+    <value>oneskorenie</value>
+  </data>
+  <data name="RES_incidence.1021.rotext" xml:space="preserve">
+    <value>prerušenie</value>
+  </data>
+  <data name="RES_incidence.1022.rotext" xml:space="preserve">
+    <value>skorý odchod</value>
+  </data>
+  <data name="RES_incidence.1030.rotext" xml:space="preserve">
+    <value>prebytok flexibilných</value>
+  </data>
+  <data name="RES_incidence.1031.rotext" xml:space="preserve">
+    <value>neprítomnosť v pružnom pracovnom čase</value>
+  </data>
+  <data name="RES_incidence.1040.rotext" xml:space="preserve">
+    <value>zvyšok</value>
+  </data>
+  <data name="RES_incidence.1041.rotext" xml:space="preserve">
+    <value>príliš dlhá prestávka</value>
+  </data>
+  <data name="RES_incidence.1042.rotext" xml:space="preserve">
+    <value>príliš krátka prestávka</value>
+  </data>
+  <data name="RES_incidence.1050.rotext" xml:space="preserve">
+    <value>pozitívny rozdiel</value>
+  </data>
+  <data name="RES_incidence.1051.rotext" xml:space="preserve">
+    <value>záporný rozptyl</value>
+  </data>
+  <data name="RES_incidence.2000.rotext" xml:space="preserve">
+    <value>doplnkové hodiny</value>
+  </data>
+  <data name="RES_incidence.rotext" xml:space="preserve">
+    <value>Obhajoba</value>
+  </data>
+  <data name="RES_incidences.rotext" xml:space="preserve">
+    <value>výskyt</value>
+  </data>
+  <data name="RES_incorrectdates.rotext" xml:space="preserve">
+    <value>Nesprávne dátumy.</value>
+  </data>
+  <data name="RES_incorrectperiod.rotext" xml:space="preserve">
+    <value>Nesprávne obdobie.</value>
+  </data>
+  <data name="RES_indicator.rotext" xml:space="preserve">
+    <value>indikátor</value>
+  </data>
+  <data name="RES_indicators.rotext" xml:space="preserve">
+    <value>ukazovatele</value>
+  </data>
+  <data name="RES_invaliddate.message.rotext" xml:space="preserve">
+    <value>Dátum vstupu nie je platný.</value>
+  </data>
+  <data name="RES_invalidtime.message.rotext" xml:space="preserve">
+    <value>Čas vstupu nie je platný.</value>
+  </data>
+  <data name="RES_job.rotext" xml:space="preserve">
+    <value>Fáza</value>
+  </data>
+  <data name="RES_jobs.rotext" xml:space="preserve">
+    <value>fázy</value>
+  </data>
+  <data name="RES_labagree.rotext" xml:space="preserve">
+    <value>Zjazd</value>
+  </data>
+  <data name="RES_labagrees.rotext" xml:space="preserve">
+    <value>Dohody</value>
+  </data>
+  <data name="RES_last.rotext" xml:space="preserve">
+    <value>Posledný</value>
+  </data>
+  <data name="RES_loading.message.rotext" xml:space="preserve">
+    <value>Načítanie ...</value>
+  </data>
+  <data name="RES_machine.rotext" xml:space="preserve">
+    <value>Stroj</value>
+  </data>
+  <data name="RES_machinegroup.rotext" xml:space="preserve">
+    <value>skupina strojov</value>
+  </data>
+  <data name="RES_machinegroups.rotext" xml:space="preserve">
+    <value>skupiny strojov</value>
+  </data>
+  <data name="RES_machines.rotext" xml:space="preserve">
+    <value>stroje</value>
+  </data>
+  <data name="RES_month.1.rotext" xml:space="preserve">
+    <value>Január</value>
+  </data>
+  <data name="RES_month.10.rotext" xml:space="preserve">
+    <value>Október</value>
+  </data>
+  <data name="RES_month.11.rotext" xml:space="preserve">
+    <value>November</value>
+  </data>
+  <data name="RES_month.12.rotext" xml:space="preserve">
+    <value>December</value>
+  </data>
+  <data name="RES_month.2.rotext" xml:space="preserve">
+    <value>Február</value>
+  </data>
+  <data name="RES_month.3.rotext" xml:space="preserve">
+    <value>Marec</value>
+  </data>
+  <data name="RES_month.4.rotext" xml:space="preserve">
+    <value>Apríl</value>
+  </data>
+  <data name="RES_month.5.rotext" xml:space="preserve">
+    <value>Máj</value>
+  </data>
+  <data name="RES_month.6.rotext" xml:space="preserve">
+    <value>Jún</value>
+  </data>
+  <data name="RES_month.7.rotext" xml:space="preserve">
+    <value>Júl</value>
+  </data>
+  <data name="RES_month.8.rotext" xml:space="preserve">
+    <value>August</value>
+  </data>
+  <data name="RES_month.9.rotext" xml:space="preserve">
+    <value>September</value>
+  </data>
+  <data name="RES_notification.rotext" xml:space="preserve">
+    <value>oznámenie</value>
+  </data>
+  <data name="RES_notifications.rotext" xml:space="preserve">
+    <value>oznámenia</value>
+  </data>
+  <data name="RES_num.1.rotext" xml:space="preserve">
+    <value>1.</value>
+  </data>
+  <data name="RES_num.2.rotext" xml:space="preserve">
+    <value>2o.</value>
+  </data>
+  <data name="RES_num.3.rotext" xml:space="preserve">
+    <value>3o.</value>
+  </data>
+  <data name="RES_num.4.rotext" xml:space="preserve">
+    <value>4o.</value>
+  </data>
+  <data name="RES_num.last.rotext" xml:space="preserve">
+    <value>Posledný</value>
+  </data>
+  <data name="RES_ordertemplate.rotext" xml:space="preserve">
+    <value>teoretické poradie</value>
+  </data>
+  <data name="RES_ordertemplates.rotext" xml:space="preserve">
+    <value>teoretické objednávky</value>
+  </data>
+  <data name="RES_passport.rotext" xml:space="preserve">
+    <value>používateľ</value>
+  </data>
+  <data name="RES_passports.rotext" xml:space="preserve">
+    <value>používatelia</value>
+  </data>
+  <data name="RES_piece.rotext" xml:space="preserve">
+    <value>Časť</value>
+  </data>
+  <data name="RES_pieces.rotext" xml:space="preserve">
+    <value>diely</value>
+  </data>
+  <data name="RES_productiveunit.rotext" xml:space="preserve">
+    <value>výrobná jednotka</value>
+  </data>
+  <data name="RES_productiveunits.rotext" xml:space="preserve">
+    <value>výrobné jednotky</value>
+  </data>
+  <data name="RES_prograbsence.rotext" xml:space="preserve">
+    <value>dlhodobá neprítomnosť</value>
+  </data>
+  <data name="RES_prograbsences.rotext" xml:space="preserve">
+    <value>dlhodobé absencie</value>
+  </data>
+  <data name="RES_project.rotext" xml:space="preserve">
+    <value>projekt</value>
+  </data>
+  <data name="RES_projects.rotext" xml:space="preserve">
+    <value>projekty</value>
+  </data>
+  <data name="RES_punch.rotext" xml:space="preserve">
+    <value>podpisovanie</value>
+  </data>
+  <data name="RES_punches.rotext" xml:space="preserve">
+    <value>transfery</value>
+  </data>
+  <data name="RES_realorder.rotext" xml:space="preserve">
+    <value>kráľovský zatykač</value>
+  </data>
+  <data name="RES_realorders.rotext" xml:space="preserve">
+    <value>kráľovské nariadenia</value>
+  </data>
+  <data name="RES_shift.rotext" xml:space="preserve">
+    <value>rozvrh hodín</value>
+  </data>
+  <data name="RES_shifts.rotext" xml:space="preserve">
+    <value>cestovné poriadky</value>
+  </data>
+  <data name="RES_task.rotext" xml:space="preserve">
+    <value>úloha</value>
+  </data>
+  <data name="RES_tasks.rotext" xml:space="preserve">
+    <value>úlohy</value>
+  </data>
+  <data name="RES_taskstemplate.rotext" xml:space="preserve">
+    <value>šablóna projektu</value>
+  </data>
+  <data name="RES_taskstemplates.rotext" xml:space="preserve">
+    <value>šablóny projektov</value>
+  </data>
+  <data name="RES_tasktemplate.rotext" xml:space="preserve">
+    <value>šablóna úlohy</value>
+  </data>
+  <data name="RES_tasktemplates.rotext" xml:space="preserve">
+    <value>šablóny úloh</value>
+  </data>
+  <data name="RES_tbmaximize.rotext" xml:space="preserve">
+    <value>Zväčšiť</value>
+  </data>
+  <data name="RES_tbminimize.rotext" xml:space="preserve">
+    <value>Obnovenie</value>
+  </data>
+  <data name="RES_team.rotext" xml:space="preserve">
+    <value>tím</value>
+  </data>
+  <data name="RES_teams.rotext" xml:space="preserve">
+    <value>zariadenie</value>
+  </data>
+  <data name="RES_terminal.rotext" xml:space="preserve">
+    <value>Terminál</value>
+  </data>
+  <data name="RES_terminals.rotext" xml:space="preserve">
+    <value>terminály</value>
+  </data>
+  <data name="RES_timezone.rotext" xml:space="preserve">
+    <value>obdobie prístupu</value>
+  </data>
+  <data name="RES_timezones.rotext" xml:space="preserve">
+    <value>obdobia prístupu</value>
+  </data>
+  <data name="RES_visit.rotext" xml:space="preserve">
+    <value>Navštívte stránku</value>
+  </data>
+  <data name="RES_visits.rotext" xml:space="preserve">
+    <value>Navštívte stránku</value>
+  </data>
+  <data name="RES_weekday.1.rotext" xml:space="preserve">
+    <value>Pondelok</value>
+  </data>
+  <data name="RES_weekday.2.rotext" xml:space="preserve">
+    <value>Utorok</value>
+  </data>
+  <data name="RES_weekday.3.rotext" xml:space="preserve">
+    <value>Streda</value>
+  </data>
+  <data name="RES_weekday.4.rotext" xml:space="preserve">
+    <value>Štvrtok</value>
+  </data>
+  <data name="RES_weekday.5.rotext" xml:space="preserve">
+    <value>Piatok</value>
+  </data>
+  <data name="RES_weekday.6.rotext" xml:space="preserve">
+    <value>Sobota</value>
+  </data>
+  <data name="RES_weekday.7.rotext" xml:space="preserve">
+    <value>Nedeľa</value>
+  </data>
+  <data name="RES_incidence..rotext" xml:space="preserve">
+    <value />
+  </data>
+</root>

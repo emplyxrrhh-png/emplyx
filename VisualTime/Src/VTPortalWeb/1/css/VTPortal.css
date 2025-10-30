@@ -1,0 +1,2933 @@
+@font-face {
+    font-family: "Robotics";
+    src: local("Poppins"),local("Poppins-Regular"),url(fonts/Poppins-Regular.ttf) format("truetype");
+    /*src: local("Roboto"),local("Roboto-Regular"),url(fonts/Roboto-Regular.ttf) format("truetype");*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Robotics";
+    src: url(fonts/Poppins-Bold.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: "Robotics";
+    padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
+    padding-top: env(safe-area-inset-top); /* iOS 11.2 */
+}
+
+.dx-icon-rankings {
+    background-image: url(../Images/Common/rankings.png);
+    background-size: contain !important;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.innerTabPanelList .dx-tabs-item-badge {
+    margin-top: -60px;
+    margin-left: -10px;
+}
+
+.innerTabPanelList .dx-tab-selected {
+    background-color: #fafafa;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient( to bottom, rgb(249 167 48), rgb(249 167 48) ) 1 100%;
+    box-shadow: -10px 0 8px -8px rgb(0 0 0 / 35%), 10px 0 8px -8px rgb(0 0 0 / 35%) !important;
+    z-index: 1;
+}
+
+.sv_main {
+    height: 100%;
+}
+
+.sv_body {
+}
+
+.box3d {
+    box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 0px 0 #b9b9b9, 0 5px 0 rgba(125, 125, 125, 0.2), 0 6px 1px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.2), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 4px white, 0 0px 3px white, 1px 1px 5px rgba(255, 155, 0, 0.37), 1px 1px 10px rgba(102, 60, 0, 0.5);
+}
+
+#listActionsPunches .dx-scrollview-content > .dx-item {
+    border: 0px solid #d6d6d6;
+    width: 95%;
+    margin: auto;
+    border-radius: 10px;
+    /* margin: 10px; */
+    margin-top: 10px;
+}
+
+#listTCOptions .dx-scrollview-content > .dx-item {
+    border: 0px solid #d6d6d6;
+    width: 95%;
+    margin: auto;
+    border-radius: 10px;
+    /* margin: 10px; */
+    margin-top: 10px;
+}
+
+.dx-popover-wrapper .dx-overlay-content {
+    border-radius: 5px;
+}
+
+.dx-overlay-content {
+    border-radius: 5px;
+}
+
+#listCalendarOptions .dx-scrollview-content > .dx-item {
+    border: 0px solid #d6d6d6;
+    width: 95%;
+    margin: auto;
+    border-radius: 10px;
+    /* margin: 10px; */
+}
+
+#configRequestTab .dx-tabs-item-badge {
+    margin-top: 0px !important;
+    margin-left: -5px !important;
+}
+
+.dx-icon-Leave {
+    background-image: url(../Images/Leaves/ico_leave.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-selectDate {
+    background-image: url(../Images/Requests/ico_request_selectDays.png);
+    background-size: contain !important;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.dx-icon-configRequest {
+    background-image: url(../Images/Requests/ico_request_params.png);
+    background-size: contain !important;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.dx-icon-Document_Company {
+    background-image: url(../Images/Documents/doc-Company.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Document_EmployeeContract {
+    background-image: url(../Images/Documents/doc-EmployeeContract.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Document_EmployeeField {
+    background-image: url(../Images/Documents/doc-EmployeeField.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Document_LeaveOrPermission {
+    background-image: url(../Images/Documents/doc-LeaveOrPermission.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Document_Punch {
+    background-image: url(../Images/Documents/doc-Punch.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Document_Reason {
+    background-image: url(../Images/Documents/doc-Reason.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Document_Visit {
+    background-image: url(../Images/Documents/doc-Visit.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Document_Sign {
+    background-image: url(../Images/Documents/icons8-sign-document-64.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-requestApprove {
+    background-image: url(../Images/Common/request_approve.png);
+    background-size: contain !important;
+    width: 36px !important;
+    height: 36px !important;
+}
+
+.dx-icon-requestOnGoing {
+    background-image: url(../Images/Common/request_ongoing.png);
+    background-size: contain !important;
+    width: 36px !important;
+    height: 36px !important;
+}
+
+.dx-icon-requestDenied {
+    background-image: url(../Images/Common/request_denied.png);
+    background-size: contain !important;
+    width: 36px !important;
+    height: 36px !important;
+}
+
+.dx-icon-requestPending {
+    background-image: url(../Images/Common/request_pending.png);
+    background-size: contain !important;
+    width: 36px !important;
+    height: 36px !important;
+}
+
+.dx-tab-selected .dx-icon-profileUserFields {
+    background-image: url(../Images/Profile/ico_userfields_gr.png);
+}
+
+.dx-icon-profileUserFields {
+    background-image: url(../Images/Profile/ico_userfields_wh.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.dx-icon-UserFields {
+    background-image: url(../Images/Profile/ico_userFields.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.dx-tab-selected .dx-icon-profileRequests {
+    background-image: url(../Images/Requests/ico_PlannedAbsences.png);
+}
+
+.dx-icon-profileRequests {
+    background-image: url(../Images/Requests/ico_PlannedAbsences.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.dx-tab-selected .dx-icon-profileConfig {
+    background-image: url(../Images/Profile/ico_config_gr.png);
+}
+
+.dx-icon-profileConfig {
+    background-image: url(../Images/Profile/ico_config_wh.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.dx-toolbar-after {
+    /*margin-top: 3px;
+	background-image: url(../Images/logovtl.ico);*/
+    background-size: contain;
+    width: 36px;
+    height: 36px;
+}
+
+.dx-icon-TA_in {
+    background-image: url(../Images/Punches/ico_Entrada.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-TATC_in {
+    background-image: url(../Images/icons8-home-48.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-TA_in_cause {
+    background-image: url(../Images/Punches/ico_Entrada_Justificacion.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-TA_out {
+    background-image: url(../Images/Punches/ico_Salida.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-TA_in_TC {
+    background-image: url(../Images/icons8-home-48.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Cal_TC_Home {
+    background-image: url(../Images/icons8-home-48.png);
+    background-size: contain !important;
+    width: 16px !important;
+    height: 16px !important;
+    position: absolute;
+    float: left;
+}
+
+.dx-icon-Cal_TC_Office {
+    background-image: url(../Images/icons8-office-48.png);
+    background-size: contain !important;
+    width: 12px !important;
+    height: 12px !important;
+    position: absolute;
+    float: left;
+    margin-left: 25px;
+}
+
+.dx-icon-TA_out_cause {
+    background-image: url(../Images/Punches/ico_Salida_Justificacion.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-CostCenter {
+    background-image: url(../Images/Punches/ico_fichar_CC_gr.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Task_change {
+    background-image: url(../Images/Punches/ico_Tarea_Cambio.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Task_complete {
+    background-image: url(../Images/Punches/ico_Tarea_OK.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Task_alert {
+    background-image: url(../Images/Punches/ico_Tarea_Alert.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-tab-selected .dx-icon-home {
+    background-image: url(../Images/toolbar/ico_home_gr.png);
+}
+
+.dx-icon-home {
+    background-image: url(../Images/toolbar/ico_home_wh.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+}
+
+.dx-tab-selected .dx-icon-myteam {
+    background-image: url(../Images/toolbar/ico_MiEquipo_gr.png);
+}
+
+.dx-icon-myteam {
+    background-image: url(../Images/toolbar/ico_MiEquipo_wh.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+}
+
+.dx-tab-selected .dx-icon-alerts {
+    background-image: url(../Images/toolbar/ico_alert_gr.png);
+}
+
+.dx-icon-alerts {
+    background-image: url(../Images/toolbar/ico_alert_wh.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+}
+
+.dx-icon-logout {
+    background-image: url(../Images/toolbar/logout.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+}
+
+.dx-tab-selected .dx-icon-myrequests {
+    background-image: url(../Images/toolbar/ico_myrequests_gr.png);
+}
+
+.dx-icon-myrequests {
+    background-image: url(../Images/toolbar/ico_myrequests_wh.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+}
+
+.dx-tab-selected .dx-icon-punches {
+    background-image: url(../Images/toolbar/ico_fingerprint_gr.png);
+}
+
+.dx-icon-punches {
+    background-image: url(../Images/toolbar/ico_fingerprint_wh.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+}
+
+.dx-tab-selected .dx-icon-profile {
+    background-image: url(../Images/toolbar/ico_profile_gr.png);
+}
+
+.dx-icon-profile {
+    background-image: url(../Images/toolbar/ico_profile_wh.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+}
+
+.dx-tab-selected .dx-icon-productiV {
+    background-image: url(../Images/toolbar/ico_tarea_gr.png);
+}
+
+.dx-icon-productiV {
+    background-image: url(../Images/toolbar/ico_tarea_wh.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.dx-tab-selected .dx-icon-costCenter {
+    background-image: url(../Images/toolbar/ico_CC_gr.png);
+}
+
+.dx-icon-costCenter {
+    background-image: url(../Images/toolbar/ico_CC_wh.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.dx-tab-selected .dx-icon-presence {
+    background-image: url(../Images/toolbar/ico_presencia_gr.png);
+}
+
+.dx-icon-presence {
+    background-image: url(../Images/toolbar/ico_presencia_wh.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.dx-tab-selected .dx-icon-myWork {
+    background-image: url(../Images/Teleworking/ico_myWork_gr.png);
+}
+
+.dx-icon-myWork {
+    background-image: url(../Images/Teleworking/ico_myWork_wh.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.dx-tab-selected .dx-icon-myWorkDaily {
+    background-image: url(../Images/Teleworking/ico_myWorkDaily_gr.png);
+}
+
+.dx-icon-myWorkDaily {
+    background-image: url(../Images/Teleworking/ico_myWorkDaily_wh.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.dx-tab-selected .dx-icon-myWorkRequests {
+    background-image: url(../Images/Teleworking/ico_myWorkRequests_gr.png);
+}
+
+.dx-icon-myWorkRequests {
+    background-image: url(../Images/Teleworking/ico_myWorkRequests_wh.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.dx-tab-selected .dx-icon-myLeaves {
+    background-image: url(../Images/Leaves/ico_myLeaves_gr.png);
+}
+
+.dx-icon-myLeaves {
+    background-image: url(../Images/Leaves/ico_myLeaves_wh.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.dx-tab-selected .dx-icon-myLeavesAlerts {
+    background-image: url(../Images/Leaves/ico_myAlerts_gr.png);
+}
+
+.dx-icon-myLeavesAlerts {
+    background-image: url(../Images/Leaves/ico_myAlerts_wh.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.dx-tab-selected .dx-icon-myCalendar {
+    background-image: url(../Images/toolbar/ico_myCalendar_gr.png);
+}
+
+.dx-icon-myCalendar {
+    background-image: url(../Images/toolbar/ico_myCalendar_gr.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.dx-tab-selected .dx-icon-myAuthorizations {
+    background-image: url(../Images/Requests/ico_PlannedCauses.png);
+}
+
+.dx-icon-myAuthorizations {
+    background-image: url(../Images/Requests/ico_PlannedCauses.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.dx-tab-selected .dx-icon-myAccruals {
+    background-image: url(../Images/toolbar/ico_myAccruals_gr.png);
+}
+
+.dx-icon-myAccruals {
+    background-image: url(../Images/toolbar/ico_myAccruals_gr.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.dx-tab-selected .dx-icon-myPunches {
+    background-image: url(../Images/toolbar/ico_myPunches_gr.png);
+}
+
+.dx-icon-myPunches {
+    background-image: url(../Images/toolbar/ico_myPunches_wh.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.dx-tab-selected .dx-icon-myPuncheRequests {
+    background-image: url(../Images/toolbar/ico_myPuncheRequests_gr.png);
+}
+
+.dx-icon-myPuncheRequests {
+    background-image: url(../Images/toolbar/ico_myPuncheRequests_wh.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.dx-tab-selected .dx-icon-myHolidays {
+    background-image: url(../Images/toolbar/ico_myHolidays_gr.png);
+}
+
+.dx-icon-myHolidays {
+    background-image: url(../Images/toolbar/ico_myHolidays_wh.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.dx-icon-taAccruals_Detail {
+    background-image: url(../Images/Actions/ico_Accruals.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-taPunches_Detail {
+    background-image: url(../Images/Actions/ico_Punches.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-taPunches_DetailCal {
+    background-image: url(../Images/Actions/ico_Punches.png);
+    background-size: contain !important;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.dx-icon-taTelecommuting_Home {
+    background-image: url(../Images/icons8-home-48.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-taTelecommuting_HomeList {
+    background-image: url(../Images/icons8-home-48.png);
+    background-size: contain !important;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.dx-icon-taTelecommuting_HomeCal {
+    background-image: url(../Images/icons8-home-48.png);
+    background-size: contain !important;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.dx-icon-taTelecommuting_Office {
+    background-image: url(../Images/icons8-office-48.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-taTelecommuting_OfficeCal {
+    background-image: url(../Images/icons8-office-48.png);
+    background-size: contain !important;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.dx-icon-taTelecommuting_Capacity {
+    background-image: url(../Images/icons8-queue-48.png);
+    background-size: contain !important;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.dx-icon-taTelecommuting_OfficeFull {
+    background-image: url(../Images/icons8-office-48.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+    opacity: 0.5;
+}
+
+.dx-icon-taTelecommuting_OfficeFullCal {
+    background-image: url(../Images/icons8-office-48.png);
+    background-size: contain !important;
+    width: 40px !important;
+    height: 40px !important;
+    opacity: 0.5;
+}
+
+.dx-icon-taNewRequest_Detail {
+    background-image: url(../Images/Actions/ico_Requests.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-taNewRequest_DetailCal {
+    background-image: url(../Images/Actions/ico_Requests.png);
+    background-size: contain !important;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.dx-icon-taInformation {
+    background-image: url(../Images/Actions/ico_Info.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-taInformationCal {
+    background-image: url(../Images/Actions/ico_Info.png);
+    background-size: contain !important;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.dx-icon-productivDaily {
+    background-image: url(../Images/Accruals/productiv_daily.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-productivWeek {
+    background-image: url(../Images/Accruals/productiv_week.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-productivMonth {
+    background-image: url(../Images/Accruals/productiv_month.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-productivYear {
+    background-image: url(../Images/Accruals/productiv_year.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-productivContract {
+    background-image: url(../Images/Accruals/productiv_contract.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-scheduleDaily {
+    background-image: url(../Images/Accruals/schedule_daily.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-scheduleWeek {
+    background-image: url(../Images/Accruals/schedule_week.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-scheduleMonth {
+    background-image: url(../Images/Accruals/schedule_month.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-scheduleYear {
+    background-image: url(../Images/Accruals/schedule_year.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-scheduleContract {
+    background-image: url(../Images/Accruals/schedule_contract.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-changeShift {
+    background-image: url(../Images/Requests/ico_ChangeShift.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-externalWorkResume {
+    background-image: url(../Images/Requests/ico_ExternalWorkResume.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-externalWorkWeekResume {
+    background-image: url(../Images/Requests/ico_ExternalWorkWeekResume.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-forbiddenCostPunch {
+    background-image: url(../Images/Requests/ico_ForbiddenCostPunch.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-forbiddenPunch {
+    background-image: url(../Images/Requests/ico_ForbiddenPunch.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-forbiddenTaskPunch {
+    background-image: url(../Images/Requests/ico_ForbiddenTaskPunch.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-holidays {
+    background-image: url(../Images/Requests/ico_Holidays.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-holidaysCancel {
+    background-image: url(../Images/Requests/ico_HolidaysCancel.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-justifyPunch {
+    background-image: url(../Images/Requests/ico_JustifyPunch.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-shiftExchange {
+    background-image: url(../Images/Requests/ico_ShiftExchange.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-plannedAbsences {
+    background-image: url(../Images/Requests/ico_PlannedAbsences.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-plannedCauses {
+    background-image: url(../Images/Requests/ico_PlannedCauses.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-plannedOvertime {
+    background-image: url(../Images/Requests/ico_PlannedOvertime.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-telecommute {
+    background-image: url(../Images/Requests/ico_telecommute.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-plannedHoliday {
+    background-image: url(../Images/Requests/ico_PlannedHoliday.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-userFieldChange {
+    background-image: url(../Images/Requests/ico_UserFieldChange.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-communiqueRead {
+    background-image: url(../Images/Communiques/30-Open_Mail-128.png);
+    background-size: contain !important;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.dx-icon-communiqueNotRead {
+    background-image: url(../Images/Communiques/25-NotRead_Mail-128.png);
+    background-size: contain !important;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.dx-icon-communiqueImportant {
+    background-image: url(../Images/Communiques/03-Important-128.png);
+    background-size: contain !important;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.dx-icon-surveyNotRead {
+    background-image: url(../Images/Communiques/icons8-attendance-96.png);
+    background-size: contain !important;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.dx-icon-surveyImportant {
+    background-image: url(../Images/Communiques/icons8-attendance-96Important.png);
+    background-size: contain !important;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.dx-icon-communiqueImportantRead {
+    background-image: url(../Images/Communiques/03-ImportantRead-128.png);
+    background-size: contain !important;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.textCommuniqueNotRead {
+    font-weight: bold;
+}
+
+.textActionPunch {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.textActionCalendar {
+    margin-top: 7px;
+    font-size: 12px;
+}
+
+.textPunchOption {
+    margin-top: 10px;
+    color: #515151;
+    margin-left: 55px;
+    cursor: pointer;
+}
+
+.dx-actionsheet-popup-wrapper .dx-popup-title {
+    height: 36px !important;
+}
+
+.voteButton {
+    border-radius: 15px !important;
+    width: 100%;
+    font-weight: bolder;
+    background: #f8aa32;
+    color: white;
+}
+
+.documentButton {
+    border-radius: 15px !important;
+    width: 100%;
+    font-weight: bolder;
+    background: #3b3b38;
+    color: white;
+}
+
+.voteButtonAnswer {
+    border-radius: 15px !important;
+    width: 100%;
+    font-weight: bolder;
+    background: #f8aa3278;
+    color: white;
+}
+
+.dx-icon-incompletePunch {
+    background-image: url(../Images/Requests/ico_IncompletePunch.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-trackingDocuments {
+    background-image: url(../Images/Requests/ico_TrackingDocuments.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-expiredDocAlert {
+    background-image: url(../Images/Requests/ico_ExpiredDocAlert.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Holiday_done {
+    background-image: url(../Images/Holidays/ico_Holiday_done.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-AbsenteeismDocuments {
+    background-image: url(../Images/Alerts/ico_AbsenteeismDocuments.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-AccessAuthorizationDocuments {
+    background-image: url(../Images/Alerts/ico_AccessAuthorizationDocuments.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Day_With_Unmatched_Time_Record {
+    background-image: url(../Images/Alerts/ico_Day_With_Unmatched_Time_Record.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Day_with_Unreliable_Time_Record {
+    background-image: url(../Images/Alerts/ico_Day_with_Unreliable_Time_Record.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-DocumentsValidation {
+    background-image: url(../Images/Alerts/ico_DocumentsValidation.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Employee_Not_Arrived_or_Late {
+    background-image: url(../Images/Alerts/ico_Employee_Not_Arrived_or_Late.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-employee_present_with_expired_documents {
+    background-image: url(../Images/Alerts/ico_employee_present_with_expired_documents.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-GpaAlerts {
+    background-image: url(../Images/Alerts/ico_GpaAlerts.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-LabAgree_Max_Exceeded {
+    background-image: url(../Images/Alerts/ico_LabAgree_Max_Exceeded.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-LabAgree_Min_Reached {
+    background-image: url(../Images/Alerts/ico_LabAgree_Min_Reached.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-MandatoryDocuments {
+    background-image: url(../Images/Alerts/ico_MandatoryDocuments.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Non_Justified_Incident {
+    background-image: url(../Images/Alerts/ico_Non_Justified_Incident.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Productive_Unit_Under_Coverage {
+    background-image: url(../Images/Alerts/ico_Productive_Unit_Under_Coverage.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-request_pending {
+    background-image: url(../Images/Alerts/ico_request_pending.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Tasks_Request_complete {
+    background-image: url(../Images/Alerts/ico_Tasks_Request_complete.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.eyePwd {
+    background-image: url(../Images/eye.png);
+    width: 24px !important;
+    height: 24px !important;
+    position: absolute;
+    /* margin-right: 0; */
+    margin-left: calc(100vw - 66px);
+    margin-top: 5px;
+}
+}
+
+.dx-icon-Task_Close_to_Finish {
+    background-image: url(../Images/Alerts/ico_Task_Close_to_Finish.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Task_Close_to_Start {
+    background-image: url(../Images/Alerts/ico_Task_Close_to_Start.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Task_Exceeding_Finished_Date {
+    background-image: url(../Images/Alerts/ico_Task_Exceeding_Finished_Date.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Task_Exceeding_Planned_Time {
+    background-image: url(../Images/Alerts/ico_Task_Exceeding_Planned_Time.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Task_exceeding_Started_Date {
+    background-image: url(../Images/Alerts/ico_Task_exceeding_Started_Date.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Task_With_ALerts {
+    background-image: url(../Images/Alerts/ico_Task_With_ALerts.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-WorkForecastDocuments {
+    background-image: url(../Images/Alerts/ico_WorkForecastDocuments.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Holiday_pending {
+    background-image: url(../Images/Holidays/ico_Holiday_pending.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Holiday_lasting {
+    background-image: url(../Images/Holidays/ico_Holiday_lasting.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Holiday_available {
+    background-image: url(../Images/Holidays/ico_Holiday_available.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-icon-Holiday_prevision {
+    background-image: url(../Images/Holidays/ico_Holiday_prevision.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.dx-tab-selected .dx-icon-filterParams {
+    background-image: url(../Images/Common/request_filterParams_gr.png);
+}
+
+.dx-icon-filterParams {
+    background-image: url(../Images/Common/request_filterParams_wh.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.dx-tab-selected .dx-icon-orderParams {
+    background-image: url(../Images/Common/request_orderParams_gr.png);
+}
+
+.dx-icon-orderParams {
+    background-image: url(../Images/Common/request_orderParams_wh.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.ro-icon-success {
+    background-image: url(../Images/Common/exito.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.ro-icon-success2 {
+    background-image: url(../Images/Common/exito.png);
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.ro-icon-error {
+    background-image: url(../Images/Common/error.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.ro-icon-warning {
+    background-image: url(../Images/Common/Info.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.ro-icon-info {
+    background-image: url(../Images/Common/aviso.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.ro-icon-ChangePwd {
+    background-image: url(../Images/Actions/password.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.ro-icon-Logout {
+    background-image: url(../Images/Actions/exit.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.dx-icon-assignedShift {
+    background-image: url(../Images/Notifications/ico_assignShift.png);
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+}
+
+.roConfigActionText {
+    padding-top: 15px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.roPopupIcon {
+    float: left;
+}
+
+.roPopupText {
+    float: left;
+    margin-top: 10px;
+    padding-left: 10px;
+    width: calc(100% - 32px);
+}
+
+.innerTabPanelList {
+    /*padding-top: 3px;*/
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.tabLayout {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.bigProfile {
+    height: 24%;
+}
+
+.tabContentLayout {
+    line-height: 10px !important;
+    color: #fdeee4 !important;
+    font-size: 16px !important;
+    text-transform: lowercase;
+}
+
+.bigProfile div:first-child {
+    height: 100%;
+}
+
+.backgroundOpacity {
+    background: linear-gradient(to right, #FF5C35, #f8aa32);
+    /*background-image: url(../Images/path2994-7-7-6.png);
+    background: linear-gradient(to right, #FF5C35, #f8aa32);*/
+    background-size: contain !important;
+}
+
+.backgroundPhoto {
+    background: url(../Images/path2994-7-7-6.png) no-repeat left center;
+    /*background-image: url(../Images/path2994-7-7-6.png);
+    background: linear-gradient(to right, #FF5C35, #f8aa32);*/
+    background-size: contain !important;
+}
+
+.backgroundCustomPhoto {
+    background: url(../Images/icons8-home-48.png) no-repeat left center;
+    background-size: contain !important;
+    /*	background: url(../Images/icons8-home-48.png) no-repeat center;*/
+    /*background-size: cover !important;*/
+    opacity: 0.5;
+}
+
+.backgroundOpacityImp {
+    background: url(../Images/path2994-7-7-6.png) no-repeat, linear-gradient(to right, #5b757d, #9ac5d2) !important;
+    background-size: contain !important;
+}
+
+.bigProfile .employeeOpacity {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: calc(17%)
+}
+
+.centerEmp {
+    float: left;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+}
+
+.centerCom {
+    display: flex;
+    justify-content: center;
+    float: left;
+    margin-right: 5%;
+    padding-left: 5%;
+}
+
+.bigProfile .employeePhoto {
+    width: 50%;
+}
+
+.communiqueTop {
+    background: linear-gradient(to right, #5b757d1c, #9ac5d2) !important;
+    padding: 3%;
+    margin: 5%;
+    border-radius: 10px;
+}
+
+.employeePhoto {
+    border-radius: 50%;
+    align-self: center;
+    background-size: cover !important;
+    margin-top: 10px;
+    display: inline-block;
+    position: relative;
+    width: 75px !important;
+    height: 75px !important;
+    overflow: hidden;
+}
+
+.textTileview {
+    font-size: 7px;
+    color: #000000;
+    float: left;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: white;
+}
+
+.overlayTop {
+    margin: 5%;
+    border-radius: 10px;
+    transform: perspective(75em) rotateX(0deg);
+    box-shadow: rgb(22 31 39 / 30%) 0px 60px 123px -25px, rgb(19 26 32 / 1%) 0px 35px 75px -35px;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: rgb(213, 220, 226) rgb(213, 220, 226) rgb(184, 194, 204);
+}
+
+.imageTileview {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    border-radius: 50%;
+}
+
+.imageTileviewRequest {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    border-radius: 50%;
+}
+
+.communiquePhoto {
+    border-radius: 50%;
+    align-self: center;
+    background-size: cover !important;
+    margin-top: 10px;
+    display: inline-block;
+    position: relative;
+    width: 60px !important;
+    height: 60px !important;
+    overflow: hidden;
+}
+
+.presenceTime {
+    position: absolute;
+    top: 75%;
+    text-align: center;
+    left: 0;
+    width: 40%;
+    height: 30%;
+    overflow: hidden;
+}
+
+.filteredData {
+    background: url(../Images/Common/filter_staus.png) no-repeat center center;
+    background-size: contain;
+    width: 18px;
+    height: 18px !important;
+    display: inline-block;
+}
+
+.sandClock {
+    background: url(../Images/toolbar/ico_sand_gr.png) no-repeat center center;
+    background-size: contain;
+    width: 18px;
+    height: 18px !important;
+    display: inline-block;
+}
+
+.noConnection {
+    background: url(../Images/toolbar/ico_noConnection.png) no-repeat center center;
+    background-size: contain;
+    width: 18px;
+    height: 18px !important;
+    display: inline-block;
+}
+
+.bigProfile .sandClock {
+    width: 18px;
+    height: 18px !important;
+    margin-top: 5px;
+}
+
+.bigProfile .noConnection {
+    width: 18px;
+    height: 18px !important;
+    margin-top: 5px;
+}
+
+.clockTime {
+    display: inline-block;
+    vertical-align: super !important;
+}
+
+.employeeStatusInfo {
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.employeeInfo {
+    height: 100%;
+    /*float:left;*/
+    display: flex;
+    /*width: 53%;*/
+}
+
+.employeeComm {
+    height: 100%;
+    float: left;
+    /*width: 53%;*/
+}
+
+.employeeClose {
+    position: absolute;
+    right: 0px;
+}
+
+.employeeCenter {
+    /*text-align:center;*/
+    align-self: center;
+    height: initial !important;
+    font-size: 12px !important;
+    line-height: 20px !important;
+    float: left;
+    width: 100%;
+}
+
+.employeeCommCenter {
+    /*text-align:center;*/
+    align-self: center;
+    height: initial !important;
+    font-size: 12px !important;
+}
+
+.employeeLogout {
+    text-align: right;
+    align-self: center;
+    height: initial !important;
+}
+
+.bigProfile .serverTimeText, .bigProfile .userNameText, .bigProfile .serverDateText, .bigProfile .productivTaskText, .bigProfile .costCenterText {
+    color: #424242;
+    font-size: 10px;
+    line-height: 16px;
+}
+
+.productivTaskDescText {
+    font-style: italic;
+    font-size: 10px;
+    margin-left: 15px;
+    margin-top: -5px;
+}
+
+.bigProfile .serverTimeText, .bigProfile .userNameText, .bigProfile .serverDateText {
+    font-weight: bold;
+}
+
+.bigProfile .userNameText, .bigProfile .serverDateText {
+    padding-bottom: 1px;
+}
+
+.bigProfile .serverTimeText {
+    font-size: 20px;
+}
+
+@media only screen and (min-width: 360px) {
+    .bigProfile .serverTimeText, .bigProfile .userNameText, .bigProfile .serverDateText, .bigProfile .productivTaskText, .bigProfile .costCenterText {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .bigProfile .serverTimeText {
+        font-size: 36px;
+    }
+
+    .bigProfile .employeePhoto {
+        width: 70%;
+        /*margin-top: -20px;*/
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .bigProfile .serverTimeText, .bigProfile .userNameText, .bigProfile .serverDateText, .bigProfile .productivTaskText, .bigProfile .costCenterText {
+        font-size: 20px;
+        line-height: 38px;
+    }
+
+    .bigProfile .serverTimeText {
+        font-size: 42px;
+    }
+
+    .bigProfile .employeePhoto {
+        width: 75%;
+        /*margin-top: -20px;*/
+    }
+
+    .bigProfile .presenceTime {
+        top: 80%;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .bigProfile .employeePhoto {
+        width: 70%;
+        /*margin-top: -20px;*/
+    }
+
+    .bigProfile .presenceTime {
+        top: 85%;
+    }
+}
+
+.menuItem {
+    height: 50px;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.marginTop {
+    margin-top: -10px;
+}
+
+    .marginTop .employeeOpacity {
+        top: 45px !important;
+    }
+
+.smallProfile {
+    height: 15%;
+}
+
+    .smallProfile div:first-child {
+        height: 100%;
+    }
+
+    .smallProfile .employeeOpacity {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: calc(15%)
+    }
+
+    .smallProfile .employeePhoto {
+        width: 75%;
+        cursor: pointer;
+    }
+
+    .smallProfile .serverTimeText, .smallProfile .userNameText, .smallProfile .serverDateText, .smallProfile .productivTaskText, .smallProfile .costCenterText {
+        color: #424242;
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .smallProfile .serverTimeText, .smallProfile .userNameText, .smallProfile .serverDateText {
+        font-weight: bold;
+    }
+
+    .smallProfile .userNameText, .smallProfile .serverDateText {
+        padding-bottom: 2px;
+    }
+
+    .smallProfile .serverTimeText {
+        font-size: 20px;
+    }
+
+    .smallProfile .sandClock {
+        width: 9px;
+    }
+
+    .smallProfile .noConnection {
+        width: 12px;
+    }
+
+    .smallProfile .clockTime {
+        font-size: 8px;
+        vertical-align: baseline;
+    }
+
+.fontBig {
+    font-size: 12px !important;
+}
+
+.smallProfile .centerEmp {
+    width: 25%;
+}
+
+.smallProfile .presenceTime {
+    left: 0;
+    width: 25%;
+}
+
+.smallProfile .employeeInfo {
+    width: 75%;
+}
+
+.smallProfile .presenceTime {
+    position: absolute;
+    top: 65%;
+    text-align: center;
+}
+
+@media only screen and (min-width: 360px) {
+    .smallProfile .serverTimeText, .smallProfile .userNameText, .smallProfile .serverDateText, .smallProfile .productivTaskText, .smallProfile .costCenterText {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .smallProfile .serverTimeText {
+        font-size: 30px;
+    }
+
+    .smallProfile .sandClock {
+        width: 12px;
+    }
+
+    .smallProfile .noConnection {
+        width: 12px;
+    }
+
+    .smallProfile .clockTime {
+        font-size: 10px;
+        vertical-align: text-top;
+        vertical-align: super;
+    }
+
+    .fontBig {
+        font-size: 12px !important;
+        font-weight: bold;
+    }
+
+    .smallProfile .presenceTime {
+        position: absolute;
+        top: 75%;
+        text-align: center;
+    }
+}
+
+.mainTitle {
+    font-size: 18px;
+    font-weight: 900;
+    color: #666666;
+    padding-top: 3px;
+}
+
+.mainTitleNoti {
+    font-size: 18px;
+    font-weight: 900;
+    color: white;
+    padding-top: 3px;
+}
+
+.mainTitleList {
+    font-size: 14px;
+    font-weight: 900;
+    color: #666666;
+    padding-top: 3px;
+}
+
+@media only screen and (min-width: 500px) {
+    .smallProfile .serverTimeText, .smallProfile .userNameText, .smallProfile .serverDateText, .smallProfile .productivTaskText, .smallProfile .costCenterText {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .smallProfile .serverTimeText {
+        font-size: 40px;
+    }
+
+    .smallProfile .presenceTime {
+        top: 80%;
+        height: 20%;
+    }
+
+    .smallProfile .clockTime {
+        font-size: 16px;
+        vertical-align: text-top;
+    }
+
+    .fontBig {
+        font-size: 18px !important;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .smallProfile .presenceTime {
+        top: 85%;
+        height: 20%;
+    }
+}
+
+.innerTabPanelList .dx-toolbar-after, .dx-popup-bottom .dx-toolbar-after, .dx-popover-wrapper .dx-popup-content .dx-toolbar-after {
+    background-image: none;
+    margin-top: inherit;
+    width: unset;
+    height: unset;
+}
+
+.dx-calendar-navigator .dx-calendar-navigator-previous-view {
+    left: 0px;
+}
+
+.dx-calendar-navigator .dx-calendar-navigator-next-view {
+    left: 85%;
+}
+
+.dx-calendar-navigator .dx-calendar-navigator-previous-view, .dx-calendar-navigator .dx-calendar-navigator-next-view {
+    color: #5a5a5a;
+    display: initial !important;
+}
+
+.dx-popup-bottom .dx-button-text, .dx-calendar-navigator .dx-calendar-caption-button .dx-button-content .dx-button-text {
+    color: #5a5a5a;
+}
+
+.innerTabPanelList .dx-button-content {
+    padding: 0px 10px 0px !important;
+}
+
+.centerEmpStatus {
+    float: left;
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    height: 100%
+}
+
+    .centerEmpStatus .presenceTime {
+        left: 0;
+        width: 25%;
+    }
+
+.alertsHeader {
+    background: url(../Images/toolbar/ico_alerts_header.png) no-repeat center center;
+    align-self: center;
+    background-size: contain !important;
+    width: 35%;
+    height: 40%;
+}
+
+.requestsHeader {
+    background: url(../Images/toolbar/ico_requests_header.png) no-repeat center center;
+    align-self: center;
+    background-size: contain !important;
+    width: 35%;
+    height: 40%;
+}
+
+.forgottenHeader {
+    background: url(../Images/toolbar/ico_MiPerfil_gr.png) no-repeat center center;
+    align-self: center;
+    background-size: contain !important;
+    height: 40%;
+    left: 85%;
+    position: absolute;
+    width: 10%;
+    cursor: pointer;
+}
+
+.logoutHeader {
+    /* background: url(../Images/Actions/exit.png) no-repeat center center;*/
+    align-self: center;
+    background-size: contain !important;
+    height: 30%;
+    left: 89%;
+    position: absolute;
+    width: 10%;
+    cursor: pointer;
+    margin-top: -50px;
+}
+
+.calendarDayCell {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0);
+}
+
+.roArrow {
+    float: left;
+    width: 10%;
+    color: #5a5a5a;
+}
+
+.listMenuItem {
+    height: 50px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.listMenuItem {
+    height: 32px;
+}
+
+.listMenuItemPosition {
+    float: left;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #FF5C35;
+    color: white;
+    line-height: 32px;
+    text-align: center;
+}
+
+.rankingMyPosition {
+    float: left;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #1d3fd7;
+    color: white;
+    line-height: 32px;
+    text-align: center;
+}
+
+.listMenuItemRanking {
+    float: left;
+    padding-left: 15px;
+    width: 80%;
+    overflow: hidden;
+    line-height: 32px;
+}
+
+.listMenuItemIcon {
+    float: left;
+}
+
+.employeeListPhoto {
+    border-radius: 5px;
+    position: relative;
+}
+
+    .employeeListPhoto::before,
+    .employeeListPhoto::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-color: transparent;
+        border-style: solid;
+    }
+
+    .employeeListPhoto::before {
+        border-right-color: #ccc;
+        border-bottom-color: #ccc;
+    }
+
+    .employeeListPhoto::after {
+        border-width: 0.9em;
+        border-right-color: #0c0;
+        border-bottom-color: #0c0;
+    }
+
+.employeeListPhotoOut {
+    border-radius: 5px;
+    position: relative;
+}
+
+    .employeeListPhotoOut::before,
+    .employeeListPhotoOut::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-color: transparent;
+        border-style: solid;
+    }
+
+    .employeeListPhotoOut::before {
+        border-right-color: #ccc;
+        border-bottom-color: #ccc;
+    }
+
+    .employeeListPhotoOut::after {
+        border-width: 0.9em;
+        border-right-color: #eb0d18;
+        border-bottom-color: #eb0d18;
+    }
+
+.listMenuItemContent {
+    float: left;
+    padding-left: 15px;
+    width: 80%;
+    overflow: hidden;
+}
+
+.listMenuItemContentTeam {
+    float: left;
+    padding-left: 15px;
+    width: 68%;
+    overflow: hidden;
+}
+
+.listMenuItemContentTC {
+    float: left;
+    padding-left: 5px;
+    padding-top: 11px;
+    overflow: hidden;
+}
+
+.listMenuItemContentPunchOptions {
+    float: left;
+    width: 80%;
+    overflow: hidden;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.dx-toolbar-button .dx-button-text {
+    color: #5A5A5A;
+}
+
+.listMenuItemContentOnb {
+    float: left;
+    padding-left: 15px;
+    width: 95%;
+    overflow: hidden;
+    text-transform: capitalize;
+}
+
+.listMenuItemContentAcc {
+    float: left;
+    font-size: 10px;
+    overflow: hidden;
+    text-transform: capitalize;
+}
+
+#panelsContent .dx-scrollable-content {
+    height: 76%;
+}
+
+.TextDescription {
+    word-wrap: break-word;
+    white-space: initial;
+    line-height: 15px;
+}
+
+.smallTextDescription {
+    font-size: 10px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    line-height: 15px;
+    text-transform: none;
+}
+
+.smallTextDescriptionSign {
+    font-size: 10px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    line-height: 15px;
+    font-weight: 600;
+    text-transform: none;
+}
+
+.smallTextDescriptionComm {
+    font-size: 10px;
+    word-wrap: break-word;
+    line-height: 15px;
+    text-transform: initial;
+}
+
+.smallTextDescriptionOnb {
+    font-size: 10px;
+    word-wrap: break-word;
+    line-height: 15px;
+    padding-top: 5px;
+}
+
+.userFieldValue {
+    font-weight: bolder;
+    padding-left: 10px;
+}
+
+.dx-toolbar-button .dx-button-has-icon .dx-button-content {
+    padding: 12px 8px 18px;
+}
+
+.dx-toolbar-label {
+    padding: 10px 16px 18px;
+}
+
+    .dx-toolbar-label > div {
+        font-size: 14px;
+    }
+
+.actionButton {
+    background: #FF5C35 !important;
+    -webkit-border-radius: 28px !important;
+    -moz-border-radius: 28px !important;
+    border-radius: 28px !important;
+    -webkit-box-shadow: 0px 1px 3px #666666 !important;
+    -moz-box-shadow: 0px 1px 3px #666666 !important;
+    box-shadow: 0px 1px 3px #666666 !important;
+    width: 44px;
+    height: 44px;
+}
+
+.content {
+    /*padding-top: 15px;*/
+    margin-top: auto;
+    margin-bottom: auto;
+    /*text-align: center;*/
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+}
+
+.contentButtonsBottom {
+    padding-top: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    /*text-align: center;*/
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+}
+
+.welcomeText {
+    font-size: 24px;
+    color: white;
+}
+
+.subjectText {
+    font-size: 18px;
+    padding-top: 10%;
+    font-weight: bolder;
+    color: #666666;
+}
+
+.commDate {
+    padding-top: 5px;
+    /* padding-left: 10px; */
+    font-size: 13px;
+    line-height: 10px;
+    color: #666666;
+    float: left;
+}
+
+.commDate {
+    padding-top: 5px;
+    /* padding-left: 10px; */
+    font-size: 13px;
+    color: #666666;
+    float: left;
+}
+
+.bigUserDate {
+    padding-top: 5px;
+    font-size: 16px;
+    line-height: 16px;
+    color: white;
+    float: left;
+    font-weight: 900;
+}
+
+.bigUserDate2 {
+    padding-top: 5px;
+    padding-left: 10px;
+    font-size: 16px;
+    line-height: 16px;
+    color: white;
+    float: left;
+}
+
+.bigImpersonatedInfo {
+    padding-top: 5px;
+    font-size: 8px;
+    margin-left: 2px;
+    line-height: 16px;
+    color: white;
+    position: absolute;
+}
+
+.bigLastLogin {
+    padding-top: 12px;
+    font-size: 8px;
+    margin-left: 2px;
+    line-height: 16px;
+    color: white;
+    position: absolute;
+}
+
+.bigImpersonatedInfoName {
+    padding-top: 5px;
+    font-size: 9px;
+    line-height: 16px;
+    color: white;
+    font-weight: 900;
+}
+
+.quickPunchCssIn {
+    color: white;
+    background: #66c160 !important;
+    bottom: 10px;
+}
+
+.quickPunchCssOut {
+    color: white;
+    background: #e14f4f !important;
+    bottom: 10px;
+}
+
+.impersonatedToolbar {
+    font-weight: 900 !important;
+}
+
+.hasNotifications {
+    background: #e14f4f;
+    color: white;
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+
+.hasNotificationsNot {
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+/*.actionHome {
+    background: #FF5C35;
+    -webkit-border-radius: 28px !important;
+    -moz-border-radius: 28px !important;
+    border-radius: 28px !important;
+    -webkit-box-shadow: 0px 1px 3px #666666 !important;
+    -moz-box-shadow: 0px 1px 3px #666666 !important;
+    box-shadow: 0px 1px 3px #666666 !important;
+    min-width: 0px !important;
+}*/
+
+.innerTabPanelList .dx-tab {
+    border-bottom: 3px solid #f8a22e;
+}
+
+.actionHome .dx-button-content {
+    padding: 0px 0px !important;
+}
+
+#listAccruals .dx-list-item-content:before {
+    border-bottom: 0px solid #ececec !important;
+}
+
+#listHolidays .dx-list-item-content:before {
+    border-bottom: 0px solid #ececec !important;
+}
+
+#punchesList .dx-list-item-content:before {
+    border-bottom: 0px solid #ececec !important;
+}
+
+.actionHome .dx-button-text {
+    font-size: 11px;
+}
+
+.actionHome {
+    background: #97c83e;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    min-width: 0px !important;
+    border-radius: 100% !important;
+    display: inline-block;
+    font-size: 5px !important;
+    /* line-height: 2.3; */
+    vertical-align: middle;
+    color: white;
+    min-height: 0px !important;
+    /* font-weight: bold; */
+    text-decoration: none;
+}
+
+.alertHome {
+    background: #ff5252;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    min-width: 0px !important;
+    border-radius: 100% !important;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 5px !important;
+    vertical-align: middle;
+    color: white;
+    min-height: 0px !important;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+.pressing {
+    box-shadow: 0 0 1px 10px #fff, 0 0 10px 15px #4298f2 !important;
+}
+
+#btnActionMenuPopover2 {
+    -webkit-transition: all 0.5s ease !important;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease !important;
+}
+
+.actionButtonSubMenu {
+    margin-left: 2px;
+    margin-bottom: 10px;
+}
+
+    .actionButtonSubMenu .dx-button-content {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+
+.dx-theme-ios, .fixedButton {
+    position: absolute;
+    right: 15px;
+    bottom: 90px;
+}
+
+.dx-theme-android, .fixedButton {
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+}
+
+.actionButton:hover {
+    background: #c7631c !important;
+    text-decoration: none;
+}
+
+.popoverActionMenu .dx-popover-arrow:after {
+    background: rgba(250, 250, 250, 0);
+}
+
+.popoverActionMenu .dx-popover-wrapper, .popoverActionMenu .dx-overlay-content {
+    box-shadow: none !important;
+    background: rgba(250, 250, 250, 0);
+}
+
+.ro_Status_pending {
+    border-bottom: 3px solid #c7c735;
+}
+
+.ro_Status_ongoing {
+    border-bottom: 3px solid blue;
+}
+
+.ro_Status_accepted {
+    border-bottom: 3px solid green;
+}
+
+.ro_Status_denied {
+    border-bottom: 3px solid red;
+}
+
+.ro_Status_canceled {
+    border-bottom: 3px solid black;
+}
+
+.dx-checkbox-text {
+    text-align: left;
+    padding-left: 33px !important;
+}
+
+.boldTitle {
+    font-weight: bold;
+}
+
+.noGpsCssClass {
+    width: 100%;
+    height: 300px;
+    background: url(../Images/Common/NoGPS.png) no-repeat center center;
+}
+
+.noDataCssClass {
+    width: 100%;
+    height: 300px;
+    background: url(../Images/Common/NoData.png) no-repeat center center;
+}
+
+.noImageCssClass {
+    width: 100%;
+    height: 300px;
+    background: url(../Images/Common/camera.png) no-repeat center center;
+}
+
+.noDataText {
+    margin: auto;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+
+.noPermissionCssClass {
+    width: 100%;
+    height: 300px;
+    background: url(../Images/Common/NoPermissions.png) no-repeat center center;
+}
+
+.filterInfoContainer {
+    background-color: #d3d3d3;
+    height: 24px;
+    padding-top: 10px;
+    padding-left: 8px;
+}
+
+    .filterInfoContainer:before {
+        border-bottom: 1px solid black;
+    }
+
+.filteredDataIcon {
+    float: left;
+}
+
+.filteredDataText {
+    float: left;
+    width: calc(100% - 28px);
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+#calendarPopupActions .dx-button-content {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
+
+#calendarPopupActions .dx-icon {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+#calendarSelectorContainer .dx-calendar-cell.dx-calendar-selected-date {
+    background: none !important;
+    background-color: transparent !important;
+}
+
+#calendarSelectorContainer .dx-calendar-other-month > div {
+    display: none;
+}
+
+#calendarSelectorContainer .dx-calendar-body .dx-calendar-today {
+    color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.no-working-day {
+    cursor: default;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAm0lEQVRIx7XVwQnAIAwF0ExSdBF1a6Er9dIRqsVAazWJmh4+iuBT4YMQ4w4pWxk1clt5YlOOFKeAumJZXAgKOKIBb6yBv9AansU/aAsexZtoD5biXZSCOZxEObiHs6gErnERKoURP0uCZM9IpRB2WvDz+eIqzvRUhMNkT1mcQz1xsKfwWZTFV1ASX0W7uAbaxPOCUUBr3MBfn+kF3CNLT2/yky4AAAAASUVORK5CYII=) center center no-repeat;
+    color: #000000;
+}
+
+#configRequestTab .dx-tab-content {
+    padding-top: 5px !important;
+    padding-bottom: 0px !important;
+}
+
+.mainActionMenu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+}
+
+.fixedMenuButton {
+    position: fixed;
+    right: 15px;
+    bottom: 10px;
+}
+
+.fixedMenuButton2 {
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+}
+
+.mainMenuButton {
+    margin-bottom: 10px;
+}
+
+    .mainMenuButton ::after {
+        padding-bottom: 10px;
+    }
+
+.approvalPopup .dx-fieldset {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.approvalPopup .dx-list-item-content {
+    padding-right: 0px !important;
+}
+
+.captchaMessageText {
+    text-align: center;
+}
+
+.captchaCode {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.taskFieldTitle {
+    font-weight: bold;
+    text-align: center;
+}
+
+.completeInfo {
+    border: 1px solid black;
+    border-radius: 10px 10px 10px 10px;
+    moz-border-radius: 10px 10px 10px 10px;
+    webkit-border-radius: 10px 10px 10px 10px;
+    webkit-box-shadow: -5px 5px 8px 1px rgba(205,205,205,1);
+    moz-box-shadow: -5px 5px 8px 1px rgba(205,205,205,1);
+    box-shadow: -5px 5px 8px 1px rgba(205,205,205,1);
+    border: 2px solid #CDCDCD;
+}
+
+#externalWorkWeekResume .dx-toolbar-after {
+    background-image: none;
+    margin-right: 5px;
+}
+
+    #externalWorkWeekResume .dx-toolbar-after .dx-button {
+        -webkit-border-radius: 4px !important;
+        -moz-border-radius: 4px !important;
+        -ms-border-radius: 4px !important;
+        -o-border-radius: 4px !important;
+        border-radius: 4px !important;
+        -webkit-box-shadow: 0 1px 3px transparent !important;
+        -moz-box-shadow: 0 1px 3px transparent !important;
+        box-shadow: 0 1px 3px transparent !important;
+        border-width: 1px !important;
+        border-style: solid !important;
+        background-color: #fff !important;
+        border-color: #ddd !important;
+        color: #333 !important;
+    }
+
+#externalWorkWeekResume .dx-link {
+    color: rgba(0, 0, 0, 0) !important;
+    box-sizing: initial !important;
+}
+
+.icon {
+    font-size: 16px;
+    color: #aaa;
+}
+
+.icon-big {
+    font-size: 32px;
+    color: #aaa;
+}
+
+.licenseTerms {
+    font-size: 15px !important;
+    font-weight: bold;
+    color: #FF5C35;
+    padding-bottom: 5px;
+}
+
+.licenseText {
+    font-size: 13px !important;
+}
+
+.licenseListItem {
+    padding-top: 7px;
+    list-style-position: inside;
+    list-style-type: upper-roman;
+}
+
+.licenseList {
+    font-weight: bold;
+}
+
+    .licenseList li span {
+        font-weight: normal;
+    }
+
+.actualDate {
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.recoverInfoMessage {
+    padding: 0px !important;
+    font-size: 12px;
+    text-align: justify;
+    font-weight: bold;
+}
+
+.EmployeeImagePhoto {
+    background-size: contain !important;
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 5px;
+}
+
+.CalendarCellDailyLayout {
+    width: 11.5vw;
+    height: 11.5vw;
+    max-height: 60px;
+    max-width: 60px;
+    margin: auto;
+}
+
+.CalendarCellDailyLayoutText {
+    vertical-align: middle;
+    line-height: 10.5vw;
+}
+
+/*#homeTileView .dx-tile {
+    width:45% !important;
+}*/
+
+@media only screen and (min-width: 360px) {
+    .CalendarCellDailyLayoutText {
+        vertical-align: middle;
+        line-height: 11.5vw !important;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .CalendarCellDailyLayoutText {
+        vertical-align: middle;
+        line-height: calc((100vw / 7) - 4vw) !important;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .CalendarCellDailyLayoutText {
+        vertical-align: middle;
+        line-height: 60px !important;
+    }
+}
+
+.communiques .listMenuItem img {
+    max-width: 100%;
+    max-height: 150px;
+}
+
+.commMessage img {
+    max-width: 100%;
+}
+
+.communiqueeImageList {
+    float: left;
+}
+
+.headerEllipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 17px !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .communiqueeImageList {
+        width: 100%;
+    }
+}
+
+/*** GENERAL STYLES ***/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clear {
+    clear: both;
+}
+/*** CARD STLES ***/
+
+.card {
+    margin: 1rem;
+}
+
+.card-one {
+    position: relative;
+    background: #fff;
+    box-shadow: 0 10px 7px -5px rgba(0, 0, 0, 0.4);
+}
+
+    .card-one header {
+        position: relative;
+        width: 100%;
+        height: 80px;
+        background-color: #ebb976;
+        border-radius: 25px 25px 0px 0px;
+    }
+
+        /*	.card-one header::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: inherit;
+			-webkit-transform: skewY(8deg);
+			-moz-transform: skewY(8deg);
+			-ms-transform: skewY(8deg);
+			-o-transform: skewY(8deg);
+			transform: skewY(8deg);
+			-webkit-transform-origin: 0 100%;
+			-moz-transform-origin: 0 100%;
+			-ms-transform-origin: 0 100%;
+			-o-transform-origin: 0 100%;
+			transform-origin: 0 100%;
+		}*/
+        .card-one header .avatar {
+            position: absolute;
+            left: 50%;
+            top: 30px;
+            margin-left: -50px;
+            z-index: 5;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: #ccc;
+            border: 4px solid #fff;
+        }
+
+            .card-one header .avatar img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                -o-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                width: 100px;
+                height: auto;
+            }
+
+    .card-one h3 {
+        position: relative;
+        margin: 60px 0 30px;
+        text-align: center;
+    }
+
+    .card-one h4 {
+        position: relative;
+        text-align: center;
+        font-weight: 600;
+        color: #777777;
+    }
+
+    .card-one h3::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        margin-left: -15px;
+        width: 30px;
+        height: 1px;
+        background: #000;
+    }
+
+    .card-one .descGroup {
+        text-align: center;
+        line-height: 1.5;
+        color: #777;
+    }
+
+    .card-one .desc {
+        padding: 0 1rem 2rem;
+        text-align: center;
+        line-height: 1.5;
+        color: #777;
+    }
+
+.card-two {
+    position: relative;
+}
+
+    .card-two h4 {
+        position: relative;
+        text-align: center;
+        font-weight: 600;
+        color: #777777;
+    }
+
+    .card-two h3::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        margin-left: -15px;
+        width: 30px;
+        height: 1px;
+        background: #000;
+    }
+
+    .card-two .descGroup {
+        text-align: center;
+        line-height: 1.5;
+        color: #777;
+    }
+
+    .card-two .desc {
+        padding: 0 1rem 2rem;
+        text-align: center;
+        line-height: 1.5;
+        color: #777;
+    }
+
+footer {
+    position: relative;
+    padding: 1rem;
+    background-color: #ebb976;
+    text-align: center;
+}
+
+    footer a {
+        padding: 0 1rem;
+        color: #e2e2e2;
+        -webkit-transition: color 0.4s;
+        -moz-transition: color 0.4s;
+        -ms-transition: color 0.4s;
+        -o-transition: color 0.4s;
+        transition: color 0.4s;
+    }
+
+        footer a:hover {
+            color: #c8c;
+        }
+
+    footer::before {
+        content: "";
+        position: absolute;
+        top: -27px;
+        left: 50%;
+        margin-left: -15px;
+        border: 15px solid transparent;
+        border-bottom-color: #ebb976;
+    }
+
+.h-divider {
+    margin: auto;
+    width: 80%;
+    position: relative;
+}
+
+    .h-divider .shadow {
+        overflow: hidden;
+        height: 20px;
+    }
+
+        .h-divider .shadow:after {
+            content: '';
+            display: block;
+            margin: -25px auto 0;
+            width: 100%;
+            height: 25px;
+            border-radius: 125px/12px;
+            box-shadow: 0 0 7px #5a5a5a;
+        }
+
+    .h-divider .shadow2 {
+        overflow: hidden;
+        height: 8px;
+        margin-top: 8px;
+    }
+
+        .h-divider .shadow2:after {
+            content: '';
+            display: block;
+            margin: -25px auto 0;
+            width: 100%;
+            height: 25px;
+            border-radius: 125px/12px;
+            box-shadow: 0 0 8px #5a5a5a;
+        }
+
+    .h-divider .text {
+        width: 100px;
+        height: 45px;
+        padding: 10px;
+        position: absolute;
+        bottom: 100%;
+        margin-bottom: -33px;
+        left: 50%;
+        margin-left: -60px;
+        border-radius: 100%;
+        box-shadow: 0 2px 4px #999;
+        background: white;
+    }
+
+        .h-divider .text i {
+            position: absolute;
+            top: 4px;
+            bottom: 4px;
+            left: 4px;
+            right: 4px;
+            border-radius: 100%;
+            border: 1px dashed #aaa;
+            text-align: center;
+            line-height: 50px;
+            font-style: normal;
+            color: #999;
+        }
+
+    .h-divider .text2 {
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        bottom: 100%;
+        margin-bottom: -35px;
+        left: 50%;
+        margin-left: -25px;
+        border-radius: 100%;
+        box-shadow: 0 2px 4px #999;
+        background: white;
+    }
+
+    .h-divider img {
+        position: absolute;
+        margin: 4px;
+        max-width: 60px;
+        border-radius: 100%;
+        border: 1px dashed #aaa;
+    }
+
+.containerAccruals {
+    display: flex; /* establish flex container */
+    flex-direction: row; /* default value; can be omitted */
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    /* margin-left: 50px; */
+    width: 300px;
+    margin: 0 auto;
+}
+
+.circleRequest {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    padding: 10px;
+    background: #fff;
+    border: 3px solid #ebb976;
+    color: #777;
+    text-align: center;
+    font-size: 32px;
+}

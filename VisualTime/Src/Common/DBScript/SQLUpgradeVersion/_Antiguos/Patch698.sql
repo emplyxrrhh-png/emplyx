@@ -1,0 +1,62 @@
+﻿CREATE FUNCTION IsLeapYear (@year INT)
+RETURNS BIT
+AS
+BEGIN
+    DECLARE @isLeapYear BIT
+
+    IF (@year % 4 = 0 AND @year % 100 <> 0) OR (@year % 400 = 0)
+        SET @isLeapYear = 1
+    ELSE
+        SET @isLeapYear = 0
+
+    RETURN @isLeapYear
+END
+GO
+
+
+CREATE FUNCTION Is0229 (@Date smalldatetime)
+RETURNS BIT
+AS
+BEGIN
+    DECLARE @isDay BIT
+
+    IF (month(@Date) = 2 and day(@Date) = 29)
+        SET @isDay = 1
+    ELSE
+        SET @isDay = 0
+
+    RETURN @isDay
+END
+GO
+
+DROP VIEW IF EXISTS [dbo].[sysrovwEmployeesAnnualWorkPeriods]  
+GO
+
+CREATE VIEW [dbo].[sysrovwEmployeesAnnualWorkPeriods]	
+AS
+WITH CTE_Fechas AS (
+        SELECT IDEmployee, Begindate AS BeginPeriod, EndDate, BeginDate FROM EmployeeContracts  WITH (NOLOCK)
+        UNION ALL
+        SELECT IDEmployee, DATEADD(YEAR, 1, BeginPeriod), EndDate, BeginDate
+        FROM CTE_Fechas 
+        WHERE DATEADD(YEAR, 1, BeginPeriod) <= CASE WHEN EndDate = '20790101' THEN  DATEFROMPARTS(year(getdate())+2,12,31) ELSE EndDate END
+    )
+	
+	-- 04. En el caso que la fecha de inicio de contrato sea 29/02, la fecha de fin de tramo siempre sera 28/02 del año siguiente
+	select IDEmployee, BeginPeriod, case when dbo.Is0229(begindate)=1 then DATEFROMPARTS(year(beginperiod)+1,2,28) else EndPeriod end  as EndPeriod  from (
+	-- 03. El fin del tramo siempre sera un año mas que el inicio del tramo menos cuando la fecha de fin de contrato sea anterior
+	select IDEmployee, BeginPeriod, CASE WHEN DATEADD(DAY,-1,DATEADD(YEAR, 1, BeginPeriod)) > EndDate THEN EndDate ELSE DATEADD(DAY,-1,DATEADD(YEAR, 1, BeginPeriod)) END as EndPeriod, BeginDate from (
+    --02. Ademas si el tramo anterior es bisiesto y el inicio de contrato es 29/02, el actual siempre empezara en 01/03
+	select IsLeapYear, idemployee, case when dbo.Is0229(BeginDate) = 1 and dbo.IsLeapYear(year(BeginPeriod)-1) = 1 then DATEFROMPARTS(year(beginperiod),3,1) else BeginPeriod end as BeginPeriod, enddate, BeginDate  from 
+	-- 01. En el caso que la fecha de inicio de contrato sea el 29/02, si es año bisiesto siempre empezara por 29/02 y si no empezará por 01/03, en cualquier otro caso la fecha de inicio sin tratamiento
+	(SELECT dbo.IsLeapYear(year(BeginPeriod)) as IsLeapYear, IDEmployee, case when dbo.IsLeapYear(year(BeginPeriod)) = 1 and dbo.Is0229(BeginDate) =1   then DATEFROMPARTS(year(beginperiod),2,29) else case when dbo.Is0229(BeginDate) =1 then DATEFROMPARTS(year(beginperiod),3,1) else BeginPeriod end end  as beginPeriod, EndDate, BeginDate
+    FROM CTE_Fechas  WITH (NOLOCK) ) z ) w) t 
+GO
+
+
+-- No borréis esta línea
+UPDATE sysroParameters SET Data='0' WHERE ID='DXVersion'
+GO
+
+UPDATE sysroParameters SET Data='698' WHERE ID='DBVersion'
+GO

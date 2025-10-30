@@ -1,0 +1,855 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_employeeexceptionswizard.btclose.text.rotext" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.btclose.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.btend.text.rotext" xml:space="preserve">
+    <value>Finalizar</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.btend.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.btnext.text.rotext" xml:space="preserve">
+    <value>Siguiente &gt;</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.btnext.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.btprev.text.rotext" xml:space="preserve">
+    <value>&lt; anterior</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.btprev.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.end.employeecopywelcome1.text.rotext" xml:space="preserve">
+    <value>Asistente para la asignación de excepciones a usuarios.</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.end.ok.employeecopywelcome2.text.rotext" xml:space="preserve">
+    <value>Asignación de excepciones completada con éxito.</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.hdnsetpinfo.text.rotext" xml:space="preserve">
+    <value>Seleccione los usuarios que desea marcar como excepción para el supervisor</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.hdnsetpinfo.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.hdnsteptitle.text.rotext" xml:space="preserve">
+    <value>Asistente para la asignación de excepciones a usuarios.</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.hdnsteptitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.hdnsteptitle2.text.rotext" xml:space="preserve">
+    <value>Paso {0} de {1}.</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.hdnsteptitle2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.imgnewmultiemployeewizard.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep1error.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep1error.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep1info.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep1info.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep1info2.text.rotext" xml:space="preserve">
+    <value>Ahora seleccione los usuarios que desea que sean excepción</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep1info2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep1title.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep1title.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep2error.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep2error.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep2info.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep2info.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep2info2.text.rotext" xml:space="preserve">
+    <value>El asistente ya dispone de suficientes datos. Pulse finalizar para realizar la asignación.</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep2info2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep2title.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep2title.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblwelcome1.text.rotext" xml:space="preserve">
+    <value>Bienvenido al asistente para determinar las excepciones de este supervisor.</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.lblwelcome1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblwelcome2.text.rotext" xml:space="preserve">
+    <value>Este asistente le ayudará a elegir qué usuarios serán excepción para este supervisor.</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.lblwelcome2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblwelcome3.text.rotext" xml:space="preserve">
+    <value>Para continuar, haga clic en siguiente.</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.lblwelcome3.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.title.rotext" xml:space="preserve">
+    <value>Asistente para la asignación de excepciones a usuarios</value>
+  </data>
+  <data name="RES_frmips.btncancel.text.rotext" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="RES_frmips.btncancel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmips.btnok.text.rotext" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
+  <data name="RES_frmips.btnok.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmips.lblblocksupervisor.text.rotext" xml:space="preserve">
+    <value>Rango de IPs</value>
+  </data>
+  <data name="RES_frmips.lblblocksupervisor.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmips.lblcomptit.text.rotext" xml:space="preserve">
+    <value>Rango de Ip´s</value>
+  </data>
+  <data name="RES_frmips.lblcomptit.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmips.lblipdescription.text.rotext" xml:space="preserve">
+    <value>Indroduzca la ip o rango que desea permitir</value>
+  </data>
+  <data name="RES_frmips.lblipdescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_savename.error.option1description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_savename.error.option1text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.aspxcallbackpanelcontenido.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.cc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.cc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.checkpermission.denied.message.rotext" xml:space="preserve">
+    <value>Permisos insuficientes para realizar esta acción.</value>
+  </data>
+  <data name="RES_securityfunctions.dxpwmb-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.ec.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.ec.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.ei.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.et.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.etc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.etc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.feature.information.button.rotext" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="RES_securityfunctions.functionalties.columns.name.rotext" xml:space="preserve">
+    <value>Funcionalidad</value>
+  </data>
+  <data name="RES_securityfunctions.functionalties.columns.permission.rotext" xml:space="preserve">
+    <value>Permisos</value>
+  </data>
+  <data name="RES_securityfunctions.gridips.namevalue.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.i.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.i.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.label1.text.rotext" xml:space="preserve">
+    <value>Nombre:</value>
+  </data>
+  <data name="RES_securityfunctions.label1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lblbusinesscenterdesc.text.rotext" xml:space="preserve">
+    <value>Este grupo de usuarios tendrá permiso sobre los Centros de Coste especificados.</value>
+  </data>
+  <data name="RES_securityfunctions.lblbusinesscenterdesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lbldeftitle2.text.rotext" xml:space="preserve">
+    <value>Grupos de negocio</value>
+  </data>
+  <data name="RES_securityfunctions.lbldeftitle2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lbldeftitle3.text.rotext" xml:space="preserve">
+    <value>Centros de coste</value>
+  </data>
+  <data name="RES_securityfunctions.lbldeftitle3.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lbldesccamera.text.rotext" xml:space="preserve">
+    <value>Descripción:</value>
+  </data>
+  <data name="RES_securityfunctions.lbldesccamera.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lbldescsecuritydescription.text.rotext" xml:space="preserve">
+    <value>Descripción de función de seguridad</value>
+  </data>
+  <data name="RES_securityfunctions.lbldescsecuritydescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lbldinningroomgeneraldesc.text.rotext" xml:space="preserve">
+    <value>Datos específicos de los roles para asignar a un supervisor.</value>
+  </data>
+  <data name="RES_securityfunctions.lbldinningroomgeneraldesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lblnamedescription.text.rotext" xml:space="preserve">
+    <value>Nombre identificativo de la función</value>
+  </data>
+  <data name="RES_securityfunctions.lblnamedescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lblpermissions.text.rotext" xml:space="preserve">
+    <value>En esta pantalla se pueden modificar los permisos de que dispone cada función</value>
+  </data>
+  <data name="RES_securityfunctions.lblpermissions.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lblpermissionstitle.text.rotext" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+  <data name="RES_securityfunctions.lblpermissionstitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lblsecurityfunctionname.text.rotext" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="RES_securityfunctions.lblsecurityfunctionname.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lblselectbusinessgroup.text.rotext" xml:space="preserve">
+    <value>Seleccione grupos de Negocio</value>
+  </data>
+  <data name="RES_securityfunctions.lblselectbusinessgroup.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lblvisibilityalldesc.text.rotext" xml:space="preserve">
+    <value>Este grupo de usuarios tendrá permiso sobre todos los grupos de negocio.</value>
+  </data>
+  <data name="RES_securityfunctions.lblvisibilityalldesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lblvisibilityalltitle.text.rotext" xml:space="preserve">
+    <value>Todos</value>
+  </data>
+  <data name="RES_securityfunctions.lblvisibilityalltitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lblvisibilitycriteriadesc.text.rotext" xml:space="preserve">
+    <value>Este grupo de usuarios tendrá permiso sólo sobre los grupos de negocio especificados.</value>
+  </data>
+  <data name="RES_securityfunctions.lblvisibilitycriteriadesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lblvisibilitycriteriatitle.text.rotext" xml:space="preserve">
+    <value>Los indicados a continuación</value>
+  </data>
+  <data name="RES_securityfunctions.lblvisibilitycriteriatitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.message.unknowerror.rotext" xml:space="preserve">
+    <value>Error desconocido</value>
+  </data>
+  <data name="RES_securityfunctions.msghaschanges.rotext" xml:space="preserve">
+    <value>Se han encontrado cambios en la funcionalidad</value>
+  </data>
+  <data name="RES_securityfunctions.msghaserrors.rotext" xml:space="preserve">
+    <value>Se han encontrado errores en la funcionalidad</value>
+  </data>
+  <data name="RES_securityfunctions.msgsavechangesbar.rotext" xml:space="preserve">
+    <value>Guardar cambios</value>
+  </data>
+  <data name="RES_securityfunctions.msgundochangesbar.rotext" xml:space="preserve">
+    <value>Deshacer cambios</value>
+  </data>
+  <data name="RES_securityfunctions.myhidebutton.text.rotext" xml:space="preserve">
+    <value>Button</value>
+  </data>
+  <data name="RES_securityfunctions.myhidebutton.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.newobjectpopup.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.newobjectpopup.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.optbglistall.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.optbglistvalue.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.panelcontent1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.permissioncallback.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.permissionlist.tooltip.admin.rotext" xml:space="preserve">
+    <value>Administración</value>
+  </data>
+  <data name="RES_securityfunctions.permissionlist.tooltip.featureforbidden.rotext" xml:space="preserve">
+    <value>Un usuario de cegid no puede modificar el permiso del canal de denuncias.</value>
+  </data>
+  <data name="RES_securityfunctions.permissionlist.tooltip.none.rotext" xml:space="preserve">
+    <value>Prohibido</value>
+  </data>
+  <data name="RES_securityfunctions.permissionlist.tooltip.read.rotext" xml:space="preserve">
+    <value>Lectura</value>
+  </data>
+  <data name="RES_securityfunctions.permissionlist.tooltip.write.rotext" xml:space="preserve">
+    <value>Escritura</value>
+  </data>
+  <data name="RES_securityfunctions.permissionoveremployees.button.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.pw-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.savebeforeedit.info.rotext" xml:space="preserve">
+    <value>No se pueden editar los permisos de la función antes de grabar.</value>
+  </data>
+  <data name="RES_securityfunctions.setdefaultpermission.button.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.stylesheetscontainer.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.tabgeneral.rotext" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="RES_securityfunctions.tabpermissions.rotext" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+  <data name="RES_securityfunctions.tbaddnewfunction.rotext" xml:space="preserve">
+    <value>Nueva función</value>
+  </data>
+  <data name="RES_securityfunctions.tbcopyfunction.rotext" xml:space="preserve">
+    <value>Copiar función</value>
+  </data>
+  <data name="RES_securityfunctions.tbdelfunction.rotext" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="RES_securityfunctions.title.rotext" xml:space="preserve">
+    <value>Página sin título</value>
+  </data>
+  <data name="RES_securityfunctions.treecaptionsecurityfunctions.rotext" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+  <data name="RES_securityfunctions.txtdescription.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.txtdescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.txtname.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.txtname.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deleteitem.info.text.rotext" xml:space="preserve">
+    <value>Borrar grupo</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deleteitem.question.option1description.rotext" xml:space="preserve">
+    <value>El grupo se eliminará definitivamente del organigrama</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deleteitem.question.option1text.rotext" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deleteitem.question.option2description.rotext" xml:space="preserve">
+    <value>No borrar el grupo y seguir editando</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deleteitem.question.option2text.rotext" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deleteitem.question.text.rotext" xml:space="preserve">
+    <value>Está seguro de eliminar el grupo seleccionado</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deletesecurityfunction.description.rotext" xml:space="preserve">
+    <value>Borrará la función de forma definitiva</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deletesecurityfunction.option1description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deletesecurityfunction.option1text.rotext" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deletesecurityfunction.option2description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deletesecurityfunction.option2text.rotext" xml:space="preserve">
+    <value>No borrar</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deletesecurityfunction.title.rotext" xml:space="preserve">
+    <value>Va a borrar una función.&lt;br \&gt;¿Está seguro?</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.error.ok.rotext" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.error.okdesc.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.error.rowinedit.rotext" xml:space="preserve">
+    <value>Hay filas en la tabla de supervisores en edición</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.error.title.rotext" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.error.unknownaction.rotext" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.error.validationcodefailed.rotext" xml:space="preserve">
+    <value>El código de validación no coincide</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.error.validationfieldsfailed.rotext" xml:space="preserve">
+    <value>Falta información del grupo</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.info.cancel.rotext" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.info.canceldesc.rotext" xml:space="preserve">
+    <value>Se continuará con la edición del organigrama.</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.info.discardcontinue.rotext" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.info.discardcontinuedesc.rotext" xml:space="preserve">
+    <value>Se descartarán los cambios realizados en el organigrama.</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.info.savecontinue.rotext" xml:space="preserve">
+    <value>Sí</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.info.savecontinuedesc.rotext" xml:space="preserve">
+    <value>Se grabarán los cambios realizados en el organigrama.</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.info.title.rotext" xml:space="preserve">
+    <value>Se han realizado cambios en el organigrama. &lt;br/&gt; ¿Desea guardar los cambios realizados?</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.savename.error.option1description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.savename.error.option1text.rotext" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.savename.error.text.rotext" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.searchfrm.info.text.rotext" xml:space="preserve">
+    <value>Búsqueda</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.searchfrm.itemnotfound.option1description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.searchfrm.itemnotfound.option1text.rotext" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.searchfrm.itemnotfound.text.rotext" xml:space="preserve">
+    <value>Elemento no encontrado</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.securitychart.client.selectoption.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.title.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.btclose.text.rotext" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="RES_supervisorcopy.btclose.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.btend.text.rotext" xml:space="preserve">
+    <value>Finalizar</value>
+  </data>
+  <data name="RES_supervisorcopy.btend.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.btnext.text.rotext" xml:space="preserve">
+    <value>Siguiente &gt;</value>
+  </data>
+  <data name="RES_supervisorcopy.btnext.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.btprev.text.rotext" xml:space="preserve">
+    <value>&lt; anterior</value>
+  </data>
+  <data name="RES_supervisorcopy.btprev.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.btrefresh.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.btrefresh.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.checkpage.incorrectemployeesselected.rotext" xml:space="preserve">
+    <value>Selección incorrecta</value>
+  </data>
+  <data name="RES_supervisorcopy.ckcopybusinesscenters.text.rotext" xml:space="preserve">
+    <value>Copiar grupos de negocio</value>
+  </data>
+  <data name="RES_supervisorcopy.ckcopybusinesscenters.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.ckcopycategories.text.rotext" xml:space="preserve">
+    <value>Copiar configuración de categorías de solicitud</value>
+  </data>
+  <data name="RES_supervisorcopy.ckcopycategories.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.ckcopycostcenters.text.rotext" xml:space="preserve">
+    <value>Copiar centros de coste</value>
+  </data>
+  <data name="RES_supervisorcopy.ckcopycostcenters.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.ckcopygroups.text.rotext" xml:space="preserve">
+    <value>Copiar grupos y usuarios que gestiona</value>
+  </data>
+  <data name="RES_supervisorcopy.ckcopygroups.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.ckcopyrestrictions.text.rotext" xml:space="preserve">
+    <value>Copiar restricciones de seguridad</value>
+  </data>
+  <data name="RES_supervisorcopy.ckcopyrestrictions.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.ckcopyroles.text.rotext" xml:space="preserve">
+    <value>Copiar roles</value>
+  </data>
+  <data name="RES_supervisorcopy.ckcopyroles.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.dxemptyrow.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.dxheadersrow0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.dxheadertable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.dxmaintable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.dxtitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.emptyheader.text.rotext" xml:space="preserve">
+    <value>Arrastre una columna aquí...</value>
+  </data>
+  <data name="RES_supervisorcopy.emptyheader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.end.ok.supervisorcopywelcome2.text.rotext" xml:space="preserve">
+    <value>Se han copiado los atributos seleccionados con éxito</value>
+  </data>
+  <data name="RES_supervisorcopy.end.supervisorcopywelcome1.text.rotext" xml:space="preserve">
+    <value>Finalizado con éxito</value>
+  </data>
+  <data name="RES_supervisorcopy.grdsupervisors.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.gridcauses.column.name.rotext" xml:space="preserve">
+    <value>Supervisor</value>
+  </data>
+  <data name="RES_supervisorcopy.iadd.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.iadu.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.idhf.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.imgsecurityactionwizard.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblcopytitle.text.rotext" xml:space="preserve">
+    <value>¿Qué desea copiar?</value>
+  </data>
+  <data name="RES_supervisorcopy.lblcopytitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblstep1error.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblstep1error.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblstep1title.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblstep1title.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblstep2error.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblstep2error.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblstep2infoemployees.text.rotext" xml:space="preserve">
+    <value>Seleccione los usuarios que desea tratar.</value>
+  </data>
+  <data name="RES_supervisorcopy.lblstep2infoemployees.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblstep2infousers.text.rotext" xml:space="preserve">
+    <value>Seleccione los usuarios que desea tratar.</value>
+  </data>
+  <data name="RES_supervisorcopy.lblstep2infousers.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblstep2title.text.rotext" xml:space="preserve">
+    <value>Seleccione la acción a realizar sobre la selección anterior.</value>
+  </data>
+  <data name="RES_supervisorcopy.lblstep2title.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblstep4info2.text.rotext" xml:space="preserve">
+    <value>Finalmente seleccione que opciones del supervisor seleccionado desea copiar. Puede copiar restricciones.</value>
+  </data>
+  <data name="RES_supervisorcopy.lblstep4info2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblwelcome2.text.rotext" xml:space="preserve">
+    <value>Este asistente le ayudará a asignar restricciones a partir de un supervisor.</value>
+  </data>
+  <data name="RES_supervisorcopy.lblwelcome2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblwelcome3.text.rotext" xml:space="preserve">
+    <value>Para continuar, haga clic en siguiente.</value>
+  </data>
+  <data name="RES_supervisorcopy.lblwelcome3.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblwelcomeemployees.text.rotext" xml:space="preserve">
+    <value>Bienvenido al asistente para la copia de propiedades de supervisores</value>
+  </data>
+  <data name="RES_supervisorcopy.lblwelcomeemployees.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.ld.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lp.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lp.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.scrollable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.stylesheetscontainer.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.title.rotext" xml:space="preserve">
+    <value>Asistente para modificar parámetros de seguridad</value>
+  </data>
+  <data name="RES_supervisorsv3.savepassport.infopwd.resetdescription.rotext" xml:space="preserve">
+    <value>Se ha restablecido la contraseña del supervisor y se le ha enviado a su dirección de correo.</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.savefunction.error.option1text,savename.error.option1text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.savefunction.error.option1description,savename.error.option1description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lbldescexport.text.rotext" xml:space="preserve">
+    <value>Descripción:</value>
+  </data>
+  <data name="RES_securityfunctions.lbldescexport.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lblexport.text.rotext" xml:space="preserve">
+    <value>Equivalencia.</value>
+  </data>
+  <data name="RES_securityfunctions.lblexport.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lblexportname.text.rotext" xml:space="preserve">
+    <value>Equivalencia</value>
+  </data>
+  <data name="RES_securityfunctions.lblexportname.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+</root>

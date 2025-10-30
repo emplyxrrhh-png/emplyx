@@ -1,0 +1,44 @@
+﻿<div data-options="dxView : { name: 'conversationMessages', title: 'conversationsMessage', disableCache: true, width:'100%' } " >
+
+	<div id="smallUserInfo"></div>
+
+	<div id="scrollview" class="conversationMessages" style="clear:both" data-bind="dxScrollView: messagesContent ">
+		<div id="messagesList" class="list-container" data-bind="if: messagesDS().length > 0">
+			<div data-bind="dxList: listMessages">
+				<div class="itemMessage" data-bind="css: $data.cssClass">
+					<div class="listMenuItem">
+						<div class="listMenuItemContent">
+							<div class="smallTextDescription" style="font-weight: bold;" data-bind="text: $data.CreatedByName"></div>
+							<div class="smallTextDescription" style="padding-bottom: 5px;" data-bind="text: moment($data.CreatedOn).format('DD/MM/YYYY HH:mm')"></div>
+							<div class="TextDescription" style="white-space: pre-wrap;" data-bind="text: $data.Body"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="height: 32px;">&nbsp;</div>
+		</div>
+
+		<div data-bind="if: messagesDS().length= 0">
+			<div class="noDataCssClass"></div>
+		</div>
+	</div>
+
+	<div id="btnActionMenuPopover" class="actionButton fixedButton" data-bind="dxButton: btnAdd"></div>
+
+	<div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false,closeOnBackButton:false, visible: popupAddNewMessageVisible, height: 'auto'}">
+		<div id="addNewMessage" class="dx-fieldset">
+			<div class="dx-field">
+				<span data-bind="text: lblMessage"></span>
+				<div class="dx-field-value" data-bind="dxTextArea: newMessage, dxValidator: requieredMessage "></div>
+			</div>
+		</div>
+
+		<div style="padding-top:5px">
+			<div style="float:left;width:50%" class="get-to-work-blue" data-bind="dxButton: btnCancel"></div>
+			<div style="float:left;width:50%" class="get-to-work-orange" data-bind="dxButton: btnAddNewMessage"></div>
+		</div>
+	</div>
+
+  <div data-bind="dxLoadPanel: loadingPanel"> </div>
+   
+</div>

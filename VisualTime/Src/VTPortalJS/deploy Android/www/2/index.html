@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+<head>
+    <link rel="stylesheet" type="text/css" class="absolutePathCSS" data-path="css/dx.common.css" />
+    <link rel="stylesheet" type="text/css" class="absolutePathCSS" data-path="css/dx.spa.css" />
+    <link rel="stylesheet" type="text/css" class="absolutePathCSS" data-path="css/dx.android5.light.css" />
+    <link rel="dx-theme" data-theme="android5.light" data-active="true" />
+
+    <title>VTPortal</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, height=device-height, viewport-fit=cover" />
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src * gap://ready data:; img-src * 'self' data:; style-src * 'unsafe-inline'; script-src * 'self' 'unsafe-inline' 'unsafe-eval'; ">-->
+
+    <script type="text/javascript" src="../cordova.js"></script>
+
+    <link rel="stylesheet" type="text/css" class="absolutePathCSS" data-path="css/dx.VTPortal.css" />
+    <link rel="stylesheet" type="text/css" class="absolutePathCSS" data-path="css/VTPortal.css" />
+    <link rel="stylesheet" type="text/css" class="absolutePathCSS" data-path="css/survey.min.css" />
+
+    <script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../js/knockout-3.4.2.js"></script>
+    <script type="text/javascript" src="../js/survey.jquery.min.js"></script>
+    <script type="text/javascript" src="../js/emotion-ratings.js"></script>
+    <script type="text/javascript" src="../js/surveyjs-widgets.js"></script>
+
+    <!-- Language JS classes-->
+    <script type="text/javascript" src="../js/cldr.min.js"></script>
+    <script type="text/javascript" src="../js/cldr/event.min.js"></script>
+    <script type="text/javascript" src="../js/cldr/supplemental.min.js"></script>
+
+    <script type="text/javascript" src="../js/globalize.min.js"></script>
+    <script type="text/javascript" src="../js/globalize/message.min.js"></script>
+    <script type="text/javascript" src="../js/globalize/number.min.js"></script>
+    <script type="text/javascript" src="../js/globalize/date.min.js"></script>
+    <script type="text/javascript" src="../js/globalize/currency.min.js"></script>
+
+    <script type="text/javascript" src="../js/dx.all.js"></script>
+
+    <!-- Language JS classes-->
+    <script type="text/javascript" src="../js/plugins/i18next.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/i18next.ko.min.js"></script>
+
+    <!-- Moment JS Libraries -->
+    <script language="javascript" type="text/javascript" src="../js/plugins/moment.min.js"></script>
+    <script language="javascript" type="text/javascript" src="../js/plugins/moment-timezone.min.js"></script>
+    <script language="javascript" type="text/javascript" src="../js/plugins/timezone.detect.js"></script>
+
+    <script language="javascript" type="text/javascript" src="../js/plugins/aes.js"></script>
+
+    <!-- Js ext framework -->
+    <script language="javascript" type="text/javascript" src="../js/plugins/sugar.min.js"></script>
+    <!-- Cookie -->
+    <script language="javascript" type="text/javascript" src="../js/plugins/js.cookie.js"></script>
+
+    <!-- Robotics JS classes-->
+    <script type="text/javascript" src="js/roVTPortal.min.js"></script>
+    <script type="text/javascript" src="js/roVTPortalViews.min.js"></script>
+    <script type="text/javascript" src="../js/ro.validate.url.min.js"></script>
+
+    <!-- Gmaps framework -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5Jcssn8H6tPktYPYwdPP7jwmoDxSkpuE&callback=Function.prototype&loading=async"></script>
+
+    <!-- Application -->
+    <link rel="stylesheet" type="text/css" class="absolutePathCSS" data-path="index.css" />
+    <script type="text/javascript" src="app.config.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+
+    <!-- Layouts -->
+    <script type="text/javascript" src="layouts/Empty/EmptyLayout.js"></script>
+    <link rel="stylesheet" type="text/css" class="absolutePathCSS" data-path="layouts/Empty/EmptyLayout.css" />
+    <link rel="dx-template" type="text/html" href="layouts/Empty/EmptyLayout.html" />
+
+    <link rel="stylesheet" type="text/css" class="absolutePathCSS" data-path="layouts/Navbar/NavbarLayout.css" />
+    <link rel="dx-template" type="text/html" href="layouts/Navbar/NavbarLayout.html" />
+    <script type="text/javascript" src="layouts/Navbar/NavbarLayout.js"></script>
+
+    <link rel="stylesheet" type="text/css" class="absolutePathCSS" data-path="layouts/Pivot/PivotLayout.css" />
+    <link rel="dx-template" type="text/html" href="layouts/Pivot/PivotLayout.html" />
+    <script type="text/javascript" src="layouts/Pivot/PivotLayout.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            //Añadimos los paths absolutos a los ficheros css
+            document.querySelectorAll('.absolutePathCSS').forEach(function (stylesheet) {
+                const basePath = window.location.origin + window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+                stylesheet.href = basePath + stylesheet.getAttribute('data-path');
+            });
+        });
+    </script>
+
+    <!-- Views -->
+    <link rel="dx-template" type="text/html" href="views/Login.dxview" />
+    <link rel="dx-template" type="text/html" href="views/home.dxview" />
+    <link rel="dx-template" type="text/html" href="views/status.dxview" />
+    <link rel="dx-template" type="text/html" href="views/alerts.dxview" />
+    <link rel="dx-template" type="text/html" href="views/punches.dxview" />
+    <link rel="dx-template" type="text/html" href="views/documents.dxview" />
+    <link rel="dx-template" type="text/html" href="views/loading.dxview" />
+    <link rel="dx-template" type="text/html" href="views/TimeGate.dxview" />
+
+    <link rel="dx-template" type="text/html" href="views/partial/documentInput.dxview" />
+    <link rel="dx-template" type="text/html" href="views/partial/bigUserInfo.dxview" />
+    <link rel="dx-template" type="text/html" href="views/partial/statusHeader.dxview" />
+    <link rel="dx-template" type="text/html" href="views/partial/TaskFieldsInput.dxview" />
+    <link rel="dx-template" type="text/html" href="views/partial/noPermissions.dxview" />
+
+    <link rel="dx-template" type="text/html" href="views/actions/SelectListObject.dxview" />
+    <link rel="dx-template" type="text/html" href="views/actions/taskSelector.dxview" />
+    <link rel="dx-template" type="text/html" href="views/actions/RequestFilters.dxview" />
+    <link rel="dx-template" type="text/html" href="views/actions/DocumentFilters.dxview" />
+    <link rel="dx-template" type="text/html" href="views/actions/sendDocument.dxview" />
+    <link rel="dx-template" type="text/html" href="views/actions/punchInfo.dxview" />
+
+    <link rel="dx-template" type="text/html" href="views/leaves/leaves.dxview" />
+    <link rel="dx-template" type="text/html" href="views/leaves/myLeaves.dxview" />
+    <link rel="dx-template" type="text/html" href="views/leaves/myLeavesAlerts.dxview" />
+    <link rel="dx-template" type="text/html" href="views/leaves/sendLeaveDocument.dxview" />
+    <link rel="dx-template" type="text/html" href="views/leaves/newLeave.dxview" />
+
+    <link rel="dx-template" type="text/html" href="views/teleworking/teleworking.dxview" />
+    <link rel="dx-template" type="text/html" href="views/teleworking/myWork.dxview" />
+    <link rel="dx-template" type="text/html" href="views/teleworking/myWorkDaily.dxview" />
+    <link rel="dx-template" type="text/html" href="views/teleworking/myWorkRequests.dxview" />
+
+    <link rel="dx-template" type="text/html" href="views/scheduler/scheduler.dxview" />
+    <link rel="dx-template" type="text/html" href="views/scheduler/myCalendar.dxview" />
+    <link rel="dx-template" type="text/html" href="views/scheduler/myAccruals.dxview" />
+    <link rel="dx-template" type="text/html" href="views/scheduler/myAuthorizations.dxview" />
+    <link rel="dx-template" type="text/html" href="views/scheduler/myRequests.dxview" />
+    <link rel="dx-template" type="text/html" href="views/scheduler/dayInfo.dxview" />
+    <link rel="dx-template" type="text/html" href="views/scheduler/capacityDetail.dxview" />
+
+    <link rel="dx-template" type="text/html" href="views/punches/punchManagement.dxview" />
+    <link rel="dx-template" type="text/html" href="views/punches/myPunches.dxview" />
+    <link rel="dx-template" type="text/html" href="views/punches/myPunchRequests.dxview" />
+
+    <link rel="dx-template" type="text/html" href="views/profile/profile.dxview" />
+    <link rel="dx-template" type="text/html" href="views/profile/profileConfig.dxview" />
+    <link rel="dx-template" type="text/html" href="views/profile/profileUserFields.dxview" />
+
+    <link rel="dx-template" type="text/html" href="views/myteam/myteam.dxview" />
+    <link rel="dx-template" type="text/html" href="views/myteam/myTeamAlerts.dxview" />
+    <link rel="dx-template" type="text/html" href="views/myteam/myTeamEmployees.dxview" />
+    <link rel="dx-template" type="text/html" href="views/myteam/myTeamRequests.dxview" />
+    <link rel="dx-template" type="text/html" href="views/myteam/myTeamDailyRecords.dxview" />
+    <link rel="dx-template" type="text/html" href="views/myteam/myTeamAlertsDetail.dxview" />
+
+    <link rel="dx-template" type="text/html" href="views/requests/requestsList.dxview" />
+    <link rel="dx-template" type="text/html" href="views/requests/approvalHistory.dxview" />
+    <link rel="dx-template" type="text/html" href="views/requests/userFields.dxview" />
+    <link rel="dx-template" type="text/html" href="views/requests/forgottenPunch.dxview" />
+    <link rel="dx-template" type="text/html" href="views/requests/justifyPunch.dxview" />
+    <link rel="dx-template" type="text/html" href="views/requests/externalWork.dxview" />
+    <link rel="dx-template" type="text/html" href="views/requests/externalWorkWeekResume.dxview" />
+    <link rel="dx-template" type="text/html" href="views/requests/telecommute.dxview" />
+    <link rel="dx-template" type="text/html" href="views/requests/changeShift.dxview" />
+    <link rel="dx-template" type="text/html" href="views/requests/shiftExchange.dxview" />
+    <link rel="dx-template" type="text/html" href="views/requests/plannedAbsence.dxview" />
+    <link rel="dx-template" type="text/html" href="views/requests/plannedCause.dxview" />
+    <link rel="dx-template" type="text/html" href="views/requests/plannedHoliday.dxview" />
+    <link rel="dx-template" type="text/html" href="views/requests/cancelHolidays.dxview" />
+    <link rel="dx-template" type="text/html" href="views/requests/plannedOvertime.dxview" />
+
+    <link rel="dx-template" type="text/html" href="views/requestsNew/absence.dxview" />
+    <link rel="dx-template" type="text/html" href="views/requestsNew/forgotten.dxview" />
+    <link rel="dx-template" type="text/html" href="views/requestsNew/telecommuting.dxview" />
+    <link rel="dx-template" type="text/html" href="views/requestsNew/changeShiftNew.dxview" />
+    <link rel="dx-template" type="text/html" href="views/requestsNew/cancelHolidaysNew.dxview" />
+
+    <link rel="dx-template" type="text/html" href="views/dailyRecord/myDailyRecord.dxview" />
+    <link rel="dx-template" type="text/html" href="views/dailyRecord/addDailyRecord.dxview" />
+    <link rel="dx-template" type="text/html" href="views/requestsNew/dailyRecordDetail.dxview" />
+
+    <link rel="dx-template" type="text/html" href="views/home/summaryHome.dxview" />
+    <link rel="dx-template" type="text/html" href="views/home/emptyHome.dxview" />
+    <link rel="dx-template" type="text/html" href="views/home/communiquesHome.dxview" />
+    <link rel="dx-template" type="text/html" href="views/home/channelsHome.dxview" />
+    <link rel="dx-template" type="text/html" href="views/home/surveysHome.dxview" />
+    <link rel="dx-template" type="text/html" href="views/home/telecommutingHome.dxview" />
+    <link rel="dx-template" type="text/html" href="views/home/notificationsHome.dxview" />
+    <link rel="dx-template" type="text/html" href="views/home/dailyRecordHome.dxview" />
+    <link rel="dx-template" type="text/html" href="views/home/accrualsHome.dxview" />
+    <link rel="dx-template" type="text/html" href="views/home/punchesHome.dxview" />
+    <link rel="dx-template" type="text/html" href="views/home/webLinksHome.dxview" />
+
+    <link rel="dx-template" type="text/html" href="views/communiques/communiques.dxview" />
+    <link rel="dx-template" type="text/html" href="views/communiques/communiqueDetail.dxview" />
+
+    <link rel="dx-template" type="text/html" href="views/channels/myChannels.dxview" />
+    <link rel="dx-template" type="text/html" href="views/channels/channelConversations.dxview" />
+    <link rel="dx-template" type="text/html" href="views/channels/conversationMessages.dxview" />
+    <link rel="dx-template" type="text/html" href="views/channels/addMessage.dxview" />
+
+    <link rel="dx-template" type="text/html" href="views/onboarding/onboardings.dxview" />
+    <link rel="dx-template" type="text/html" href="views/onboarding/onboardingDetail.dxview" />
+
+    <link rel="dx-template" type="text/html" href="views/survey/surveys.dxview" />
+    <link rel="dx-template" type="text/html" href="views/survey/surveyDetail.dxview" />
+
+    <link rel="dx-template" type="text/html" href="views/telecommutingSelector.dxview" />
+
+    <link rel="dx-template" type="text/html" href="views/weblinks/myWebLinks.dxview" />
+
+    <link rel="dx-template" type="text/html" href="views/configuration/configuration.dxview" />
+    <link rel="dx-template" type="text/html" href="views/configuration/sharedPortalConfig.dxview" />
+</head>
+<body>
+</body>
+</html>

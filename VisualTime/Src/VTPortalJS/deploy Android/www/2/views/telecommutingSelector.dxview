@@ -1,0 +1,26 @@
+<div data-options="dxView : { name: 'telecommutingSelector', title: 'telecommutingSelector', disableCache: true } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+		<div id="smallUserInfo"></div>
+        <div id="scrollview" style="clear:both" data-bind="dxScrollView: commScroll">
+            <div id="listTCOptions" class="list-container" data-bind="if: telecommutingSelectorDS()">
+                <div data-bind="dxList: listtelecommutingSelector">
+                    <div data-options="dxTemplate: {name: 'actionItem'}">
+                        <div class="listMenuItem">
+                            <div data-bind="css: $data.cssClass" class="listMenuItemIcon"></div>
+                            <div class="listMenuItemContent">
+                                <div data-bind="text: $data.Content, css: $data.cssClassText"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div data-bind="if: !telecommutingSelectorDS()">
+                <div class="noDataCssClass"></div>
+                <!--<div class="noDataText" >Oops! No hay nada aquí...</div>-->
+            </div>
+        </div>
+
+        <div data-bind="dxLoadPanel: loadingPanel"> </div>
+
+    </div>

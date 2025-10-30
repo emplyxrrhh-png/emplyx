@@ -1,0 +1,83 @@
+<div data-options="dxView : { name: 'dayInfo', title: 'scheduler', disableCache: true } " >
+
+
+	<div id="smallUserInfo"></div>
+
+        <div id="panelsContent" style="height:90%">
+            <div class="dateHeaderSelect" data-bind="event: { dxswipeend: myEventHandler, direction: 'horizontal' }">
+                <div class="roArrow" data-bind="dxButton: btnPrevious"></div>
+                <div data-bind="dxDateBox: headerDate"></div>
+                <div class="roArrow" data-bind="dxButton: btnNext"></div>
+            </div>
+
+            <div id="scrollview" style="clear:both" data-bind="dxScrollView: { }">
+                <div class="dx-list-group-header">
+                    <div data-bind="text: lblShift"></div>
+                </div>
+                <div class="dx-fieldset">
+                    <div class="dx-field">
+                        <div class="dx-field-value" data-bind="dxTextBox: txtDayShift"></div>
+                      <div class="dx-field-value" data-bind="dxTextBox: txtPlannedHours"></div>
+
+                    </div>
+                    <div data-bind="if: remarkValue() != 0">
+                        <div class="dx-field">
+                            <span data-bind="text: lblAccrual"></span>
+                            <div class="dx-field-value" data-bind="dxTextBox: txtRemarkValue"></div>
+                        </div>
+                    </div>
+                    <div id="shiftLayerInfo" class="list-container">
+                        <div id="listShiftLayer" data-bind="dxList: listShiftLayer">
+                            <div data-options="dxTemplate: {name: 'ScheduleItem'}">
+                                <div data-bind="text: $data.Name"></div>
+                                <div data-bind="dxLinearGauge: $data.Gauge"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div data-bind="if: forecastsDS()[0].items.length > 0 ">
+                    <div data-bind="dxList: listForecasts">
+                        <div data-options="dxTemplate: {name: 'ForecastItem'}">
+                            <div class="listMenuItem">
+                                <div data-bind="css: $data.cssClass" class="listMenuItemIcon"></div>
+                                <div class="listMenuItemContent">
+                                    <div data-bind="text: $data.Description"></div>
+                                    <div class="smallTextDescription" data-bind="text: $data.AlertDescription"></div>
+                                </div>
+
+                                <div data-bind="if: $data.hasAction == true"><div class="list-item-arrow"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="list" class="list-container" data-bind="if: scheduleDS()[0].items.length > 0">
+                    <div id="listSchedule" data-bind="dxList: listSchedule">
+                        <div data-options="dxTemplate: {name: 'ScheduleItem'}">
+                            <div data-bind="text: $data.Name"></div>
+                            <div data-bind="dxLinearGauge: $data.Gauge"></div>
+                        </div>
+                    </div>
+                </div>
+
+				<div id="list" class="list-container" data-bind="if: productivDS()[0].items.length > 0">
+					<div id="listProductiv" data-bind="dxList: listProductiv">
+						<div data-options="dxTemplate: {name: 'ScheduleItem'}">
+							<div data-bind="text: $data.Name"></div>
+							<div data-bind="dxLinearGauge: $data.Gauge"></div>
+						</div>
+					</div>
+				</div>
+
+
+            </div>
+          <div class="fixedMenuButton">
+            <div  class="actionButton mainMenuButton" data-bind="dxButton: btnDeleteRequest"></div>
+            <div  class="actionButton mainMenuButton" data-bind="dxButton: btnEditRequest"></div>
+          </div>
+        </div>
+
+  
+</div>

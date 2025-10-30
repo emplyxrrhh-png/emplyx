@@ -1,0 +1,12 @@
+<div data-options="dxView : { name: 'loading', title: 'loading', disableCache: true  } ">
+
+    <div id="panelsContent" style="height:100%">
+        <div>
+
+            <div id="notiTitle" class="mainTitle">
+                <!--<span data-bind="text:loadingTitle"></span>-->
+            </div>
+        </div>
+        <div data-bind="dxLoadPanel: loadingPanel"> </div>
+    </div>
+</div>

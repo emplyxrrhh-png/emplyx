@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": "../node_modules",
+    "types": [
+      "cypress", "node"
+    ],
+    "noEmit": true
+  },
+  "types": ["@simonsmith/cypress-image-snapshot/types"],
+  "include": [
+    "**/*.ts"
+, "cypress/e2e/ui/VTLive/RestartIntent.cy.js", "cypress/class/Database.js"  ],
+}

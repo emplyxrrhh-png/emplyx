@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ConfigurationModes" targetNamespace="http://tempuri.org/ConfigurationModes.xsd" xmlns:mstns="http://tempuri.org/ConfigurationModes.xsd" xmlns="http://tempuri.org/ConfigurationModes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ConfigurationModes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ConfigurationModes" msprop:Generator_DataSetName="ConfigurationModes" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Mx6ModesEquivalence" msprop:Generator_UserTableName="Mx6ModesEquivalence" msprop:Generator_RowDeletedName="Mx6ModesEquivalenceRowDeleted" msprop:Generator_RowChangedName="Mx6ModesEquivalenceRowChanged" msprop:Generator_RowClassName="Mx6ModesEquivalenceRow" msprop:Generator_RowChangingName="Mx6ModesEquivalenceRowChanging" msprop:Generator_RowEvArgName="Mx6ModesEquivalenceRowChangeEvent" msprop:Generator_RowEvHandlerName="Mx6ModesEquivalenceRowChangeEventHandler" msprop:Generator_TableClassName="Mx6ModesEquivalenceDataTable" msprop:Generator_TableVarName="tableMx6ModesEquivalence" msprop:Generator_RowDeletingName="Mx6ModesEquivalenceRowDeleting" msprop:Generator_TablePropName="Mx6ModesEquivalence">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Type" msprop:Generator_UserColumnName="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnPropNameInTable="TypeColumn" type="xs:string" />
+              <xs:element name="IDReader" msprop:Generator_UserColumnName="IDReader" msprop:Generator_ColumnVarNameInTable="columnIDReader" msprop:Generator_ColumnPropNameInRow="IDReader" msprop:Generator_ColumnPropNameInTable="IDReaderColumn" type="xs:float" />
+              <xs:element name="VTScopeMode" msprop:Generator_UserColumnName="VTScopeMode" msprop:Generator_ColumnVarNameInTable="columnVTScopeMode" msprop:Generator_ColumnPropNameInRow="VTScopeMode" msprop:Generator_ColumnPropNameInTable="VTScopeModeColumn" type="xs:string" />
+              <xs:element name="VTUseDispKey" msprop:Generator_UserColumnName="VTUseDispKey" msprop:Generator_ColumnVarNameInTable="columnVTUseDispKey" msprop:Generator_ColumnPropNameInRow="VTUseDispKey" msprop:Generator_ColumnPropNameInTable="VTUseDispKeyColumn" type="xs:boolean" />
+              <xs:element name="VTInteractionMode" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="VTInteractionMode" msprop:Generator_ColumnVarNameInTable="columnVTInteractionMode" msprop:Generator_ColumnPropNameInRow="VTInteractionMode" msprop:Generator_ColumnPropNameInTable="VTInteractionModeColumn" type="xs:string" />
+              <xs:element name="VTInteractionAction" msprop:Generator_UserColumnName="VTInteractionAction" msprop:Generator_ColumnPropNameInRow="VTInteractionAction" msprop:Generator_ColumnVarNameInTable="columnVTInteractionAction" msprop:Generator_ColumnPropNameInTable="VTInteractionActionColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VTValidationMode" msprop:Generator_UserColumnName="VTValidationMode" msprop:Generator_ColumnVarNameInTable="columnVTValidationMode" msprop:Generator_ColumnPropNameInRow="VTValidationMode" msprop:Generator_ColumnPropNameInTable="VTValidationModeColumn" type="xs:string" />
+              <xs:element name="ScopeMode" msprop:Generator_UserColumnName="ScopeMode" msprop:Generator_ColumnVarNameInTable="columnScopeMode" msprop:Generator_ColumnPropNameInRow="ScopeMode" msprop:Generator_ColumnPropNameInTable="ScopeModeColumn" type="xs:string" />
+              <xs:element name="InteractionMode" msprop:Generator_UserColumnName="InteractionMode" msprop:Generator_ColumnVarNameInTable="columnInteractionMode" msprop:Generator_ColumnPropNameInRow="InteractionMode" msprop:Generator_ColumnPropNameInTable="InteractionModeColumn" type="xs:string" />
+              <xs:element name="Action" msprop:Generator_UserColumnName="Action" msprop:Generator_ColumnVarNameInTable="columnAction" msprop:Generator_ColumnPropNameInRow="Action" msprop:Generator_ColumnPropNameInTable="ActionColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FunctionKeys" msprop:Generator_UserColumnName="FunctionKeys" msprop:Generator_ColumnVarNameInTable="columnFunctionKeys" msprop:Generator_ColumnPropNameInRow="FunctionKeys" msprop:Generator_ColumnPropNameInTable="FunctionKeysColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AccessValidationMode" msprop:Generator_UserColumnName="AccessValidationMode" msprop:Generator_ColumnVarNameInTable="columnAccessValidationMode" msprop:Generator_ColumnPropNameInRow="AccessValidationMode" msprop:Generator_ColumnPropNameInTable="AccessValidationModeColumn" type="xs:string" />
+              <xs:element name="AttendanceValidationMode" msprop:Generator_UserColumnName="AttendanceValidationMode" msprop:Generator_ColumnVarNameInTable="columnAttendanceValidationMode" msprop:Generator_ColumnPropNameInRow="AttendanceValidationMode" msprop:Generator_ColumnPropNameInTable="AttendanceValidationModeColumn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Mx6ModesEquivalence" />
+      <xs:field xpath="mstns:Type" />
+      <xs:field xpath="mstns:VTValidationMode" />
+      <xs:field xpath="mstns:VTInteractionAction" />
+      <xs:field xpath="mstns:VTInteractionMode" />
+      <xs:field xpath="mstns:VTUseDispKey" />
+      <xs:field xpath="mstns:VTScopeMode" />
+      <xs:field xpath="mstns:IDReader" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

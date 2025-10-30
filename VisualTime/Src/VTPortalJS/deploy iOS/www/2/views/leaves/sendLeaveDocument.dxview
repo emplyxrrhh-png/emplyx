@@ -1,0 +1,51 @@
+<div data-options="dxView : { name: 'sendLeaveDocument', title: 'sendLeaveDocument', disableCache: true} " >
+
+
+	<div id="smallUserInfo"></div>
+
+        <div style="clear:both" data-bind="dxScrollView: scrollContent">
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <span data-bind="text: lblRequestValue1"></span>
+                    <div class="dx-field-value" data-bind="dxSelectBox: cmbRequestValue1"></div>
+                </div>
+
+                <div data-bind="if: dateVisible">
+                    <div class="dx-field">
+                        <span data-bind="text: lblDocDate"></span>
+                        <div class="dx-field-value" data-bind="dxDateBox: docDate"></div>
+                    </div>
+                </div>
+                    
+                <div class="dx-field">
+                    <span data-bind="text: lblRemarks"></span>
+                    <div class="dx-field-value" data-bind="dxTextArea: remarks"></div>
+                </div>
+                <div class="dx-field">
+					<!-- ko if: isTimeGate == false -->
+                        <!-- ko if: appMode == true -->
+                        <span data-bind="text: lblImageCapture"></span>
+
+                        <div class="noImageCssClass" data-bind="event: { dxclick: selectPhotoEvent }">
+                            <img width="100%" height="100%" data-bind="attr:{ src:imageSrc}" alt="" />
+                        </div>
+                        <!-- /ko-->
+                        <!-- ko if: appMode == false -->
+                        <span data-bind="text: lblSelectFile"></span>
+                        <div data-bind="dxFileUploader: uploadOptions"></div>
+                        <!-- /ko-->
+					<!-- /ko-->
+					<!-- ko if: isTimeGate == true -->
+					<span data-bind="text: lblTimegateRestricted"></span>
+					<!-- /ko-->
+                </div>
+            </div>
+        </div>
+
+        <div class="fixedMenuButton">
+            <div class="actionButton mainMenuButton" data-bind="dxButton: btnSave"></div>
+        </div>
+
+        <div data-bind="dxLoadPanel: loadingPanel"> </div>
+   
+</div>

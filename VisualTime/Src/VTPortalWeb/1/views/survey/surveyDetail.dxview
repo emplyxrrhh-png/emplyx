@@ -1,0 +1,16 @@
+<div data-options="dxView : { name: 'surveyDetail', title: 'surveyDetail', disableCache: true } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <!--ko with: subscribeBlock-->
+        <div class="bigProfile" data-options="dxViewPlaceholder: { viewName: 'bigUserInfo' }"></div>
+        <!-- /ko-->
+        
+        <!--<div id="scrollview" style="clear:both" data-bind="dxScrollView: commScroll">-->
+
+            <div id="surveyContainer" style="width: 100%; height: 76%; overflow: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; margin: 0 auto "></div>
+
+        <!--</div>-->
+
+        <div data-bind="dxLoadPanel: loadingPanel"> </div>
+
+    </div>
+</div>

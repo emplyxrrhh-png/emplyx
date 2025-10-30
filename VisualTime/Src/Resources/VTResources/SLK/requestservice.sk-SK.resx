@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_absencedescription.begintime.rotext" xml:space="preserve">
+    <value>Neprítomný od</value>
+  </data>
+  <data name="RES_absencedescription.endtime.rotext" xml:space="preserve">
+    <value>do</value>
+  </data>
+  <data name="RES_list.nocause.rotext" xml:space="preserve">
+    <value>(Bez udania dôvodu)</value>
+  </data>
+  <data name="RES_maxfilesizeexceeded.error.rotext" xml:space="preserve">
+    <value>Veľkosť súboru prekračuje maximálnu povolenú veľkosť.</value>
+  </data>
+  <data name="RES_request.nextapprovalinfo.rotext" xml:space="preserve">
+    <value>Sklon ${1}</value>
+  </data>
+  <data name="RES_requestaction.continueaction.rotext" xml:space="preserve">
+    <value>Čo chcete robiť?</value>
+  </data>
+  <data name="RES_requestaction.deniedaction.rotext" xml:space="preserve">
+    <value>Akcia nie je povolená</value>
+  </data>
+  <data name="RES_requestaction.limitdaterequested.rotext" xml:space="preserve">
+    <value>Požadovaný dátum prekračuje nakonfigurovaný limit</value>
+  </data>
+  <data name="RES_requestaction.maxdaysabsence.rotext" xml:space="preserve">
+    <value>Maximálny počet dní na podanie žiadosti bol prekročený</value>
+  </data>
+  <data name="RES_requestaction.maximumnotscheduled.rotext" xml:space="preserve">
+    <value>Sú neplánované dni</value>
+  </data>
+  <data name="RES_requestaction.minimumcoveragerequiered.rotext" xml:space="preserve">
+    <value>Nedostatočné pokrytie</value>
+  </data>
+  <data name="RES_requestaction.minimumdaysbeforerequesteddate.rotext" xml:space="preserve">
+    <value>Neskorá žiadosť</value>
+  </data>
+  <data name="RES_requestaction.negativeaccrual.rotext" xml:space="preserve">
+    <value>Nie je tu dostatočná rovnováha.</value>
+  </data>
+  <data name="RES_requestaction.periodenjoynment.rotext" xml:space="preserve">
+    <value>Obdobie požadované mimo stanovených pravidiel</value>
+  </data>
+  <data name="RES_requestinfo.andsince.rotext" xml:space="preserve">
+    <value>a z</value>
+  </data>
+  <data name="RES_requestinfo.cancelholidays.onedate.rotext" xml:space="preserve">
+    <value>Zrušiť sviatok dňa &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.cancelholidays.rotext" xml:space="preserve">
+    <value>Zrušte všetky sviatky v nasledujúcom období: &lt;b&gt;${1}&lt;/b&gt; a &lt;b&gt;${2}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.cancelholidaysshiftcause.cancelholidays.onedate.rotext" xml:space="preserve">
+    <value>Zrušiť &lt;b&gt;${3}&lt;/b&gt; v &lt;b&gt;$1}&lt;/b&gt; deň &lt;b&gt;$1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.cancelholidaysshiftcause.cancelholidays.rotext" xml:space="preserve">
+    <value>Zrušenie &lt;b&gt;${3}&lt;/b&gt; v rámci nasledujúceho obdobia: &lt;b&gt;${1}&lt;/b&gt; a &lt;b&gt;${2}&lt;/b&gt; (&lt;b&gt;${4} dní&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.changeallshift.onedate.rotext" xml:space="preserve">
+    <value>Plán &lt;b&gt;${3}&lt;/b&gt;, pričom &lt;b&gt;${1}&lt;/b&gt; nahradí všetky plány.</value>
+  </data>
+  <data name="RES_requestinfo.changeallshift.rotext" xml:space="preserve">
+    <value>Rozvrh &lt;b&gt;${3}&lt;/b&gt;, od &lt;b&gt;${1}&lt;/b&gt; po &lt;b&gt;${2}&lt;/b&gt; nahradením všetkých rozvrhov</value>
+  </data>
+  <data name="RES_requestinfo.changeshift.onedate.rotext" xml:space="preserve">
+    <value>Plán &lt;b&gt;${3}&lt;/b&gt;, &lt;b&gt;${1}&lt;/b&gt; nahrádzajúci plán &lt;b&gt;${4}&lt;/b&gt;.</value>
+  </data>
+  <data name="RES_requestinfo.changeshift.rotext" xml:space="preserve">
+    <value>Plán &lt;b&gt;${3}&lt;/b&gt;, od &lt;b&gt;${1}&lt;/b&gt; po &lt;b&gt;${2}&lt;/b&gt;, ktorý nahrádza plán &lt;b&gt;${4}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.cancelholidays.onedate.rotext" xml:space="preserve">
+    <value>Zrušiť sviatok dňa &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.cancelholidays.rotext" xml:space="preserve">
+    <value>Zrušte všetky sviatky v nasledujúcom období: &lt;b&gt;${1}&lt;/b&gt; a &lt;b&gt;${2}&lt;/b&gt; (&lt;b&gt;${3} dní&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.detail.cancelholidaysshiftcause.cancelholidays.onedate.rotext" xml:space="preserve">
+    <value>Zrušiť &lt;b&gt;${3}&lt;/b&gt; v &lt;b&gt;$1}&lt;/b&gt; deň &lt;b&gt;$1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.cancelholidaysshiftcause.cancelholidays.rotext" xml:space="preserve">
+    <value>Zrušenie &lt;b&gt;${3}&lt;/b&gt; v rámci nasledujúceho obdobia: &lt;b&gt;${1}&lt;/b&gt; a &lt;b&gt;${2}&lt;/b&gt; (&lt;b&gt;${4} dní&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.detail.changeallshift.onedate.rotext" xml:space="preserve">
+    <value>Používateľ požaduje naplánovať rozvrh &lt;b&gt;${3}&lt;/b&gt; na deň &lt;b&gt;${1}&lt;/b&gt; nahradením všetkých rozvrhov</value>
+  </data>
+  <data name="RES_requestinfo.detail.changeallshift.rotext" xml:space="preserve">
+    <value>Používateľ požaduje naplánovať rozvrh &lt;b&gt;${3}&lt;/b&gt; z &lt;b&gt;${1}&lt;/b&gt; na &lt;b&gt;${2}&lt;/b&gt; nahradením všetkých rozvrhov</value>
+  </data>
+  <data name="RES_requestinfo.detail.changeshift.onedate.rotext" xml:space="preserve">
+    <value>Používateľ požaduje naplánovať plán &lt;b&gt;${3}&lt;/b&gt; nahradením plánu &lt;b&gt;${4}&lt;/b&gt; za deň &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.changeshift.rotext" xml:space="preserve">
+    <value>Používateľ požaduje naplánovať plán &lt;b&gt;${3}&lt;/b&gt; nahradením plánu &lt;b&gt;${4}&lt;/b&gt; z &lt;b&gt;${1}&lt;/b&gt; na &lt;b&gt;${2}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.dailyrecord.rotext" xml:space="preserve">
+    <value>Podali ste vyhlásenie dňa pre &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.exchangeshiftbetweenemployees.rotext" xml:space="preserve">
+    <value>Zmena posunu na &lt;b&gt;${1}&lt;/b&gt; medzi &lt;b&gt;'${2}'&lt;/b&gt; a &lt;b&gt;'${3}'&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.exchangeshiftbetweenemployees.withcompensation.rotext" xml:space="preserve">
+    <value>Výmena plánu na &lt;b&gt;${1}&lt;/b&gt; (&lt;b&gt;${4}&lt;/b&gt; za &lt;b&gt;${5}&lt;/b&gt;) medzi &lt;b&gt;'${2}'&lt;/b&gt; a &lt;b&gt;'${3}'&lt;/b&gt;, posun na &lt;b&gt;${6}&lt;/b&gt; (&lt;b&gt;${7}&lt;/b&gt; za &lt;b&gt;${8}&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.detail.externalworkresumepart.rotext" xml:space="preserve">
+    <value>Časť externého pracovného dňa &lt;b&gt;${1}&lt;/b&gt; za &lt;b&gt;${2}&lt;/b&gt; hodín v &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.externalworkweekresume.rotext" xml:space="preserve">
+    <value>Odo dňa &lt;b&gt;${1}&lt;/b&gt; do dňa &lt;b&gt;${2}&lt;/b&gt; (&lt;b&gt;${3} podpísanie/s&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.detail.forbiddenpunch.rotext" xml:space="preserve">
+    <value>Nerealizovaný podpis &lt;b&gt;${1}&lt;/b&gt; na &lt;b&gt;${2}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.forbiddenpunch.withcause.rotext" xml:space="preserve">
+    <value>Nerealizovaný podpis &lt;b&gt;${1}&lt;/b&gt; na &lt;b&gt;${2}&lt;/b&gt; za &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.forbiddentaskpunch.rotext" xml:space="preserve">
+    <value>Nerealizovaný podpis &lt;b&gt;${1}&lt;/b&gt; na &lt;b&gt;${2}&lt;/b&gt; v &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.forbiddentaskpunchwithend.rotext" xml:space="preserve">
+    <value>Bez znamienka od &lt;b&gt;${1}&lt;/b&gt; do &lt;b&gt;${2}&lt;/b&gt; na &lt;b&gt;${3}&lt;/b&gt; až &lt;b&gt;${4}&lt;/b&gt; a pokračujte &lt;b&gt;${5}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.forbiddentaskpunchwithendextendedcompleted.rotext" xml:space="preserve">
+    <value>Nerealizovaný podpis z &lt;b&gt;${1}&lt;/b&gt; na &lt;b&gt;${2}&lt;/b&gt; na &lt;b&gt;${3}&lt;/b&gt; až &lt;b&gt;${4}&lt;/b&gt; a dokončiť ho, pokračovať &lt;b&gt;${5}&lt;/b&gt;.Atribúty: &lt;b&gt;${6}&lt;/b&gt; &lt;b&gt;${7}&lt;/b&gt; &lt;b&gt;${8}&lt;/b&gt; &lt;b&gt;${9}&lt;/b&gt; &lt;b&gt;${10}&lt;/b&gt; &lt;b&gt;${11}&lt;/b&gt; &lt;b&gt;${11}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.forbiddentaskpunchwithendextendednotcompleted.rotext" xml:space="preserve">
+    <value>Bez znamienka od &lt;b&gt;${1}&lt;/b&gt; do &lt;b&gt;${2}&lt;/b&gt; na &lt;b&gt;${3}&lt;/b&gt; až &lt;b&gt;${4}&lt;/b&gt; , pokračujte &lt;b&gt;${5}&lt;/b&gt;. atribúty: &lt;b&gt;${6}&lt;/b&gt; &lt;b&gt;${7}&lt;/b&gt; &lt;b&gt;${8}&lt;/b&gt; &lt;b&gt;${9}&lt;/b&gt; &lt;b&gt;${10}&lt;/b&gt; &lt;b&gt;${11}&lt;/b&gt; &lt;b&gt;${11}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.forgottencostcenterpunch.rotext" xml:space="preserve">
+    <value>Zápis nákladového strediska nebol vykonaný na &lt;b&gt;${1}&lt;/b&gt; na &lt;b&gt;${2}&lt;/b&gt; v stredisku &lt;b&gt;${3}&lt;/b&gt;:&lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.justifypunch.rotext" xml:space="preserve">
+    <value>Zdôvodnite podpis &lt;b&gt;${1}&lt;/b&gt; na &lt;b&gt;${2}&lt;/b&gt; pre &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.plannedabsences.rotext" xml:space="preserve">
+    <value>Predpokladané dni neprítomnosti z &lt;b&gt;${1}&lt;/b&gt; na &lt;b&gt;${2}&lt;/b&gt; pre &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.plannedcauses.rotext" xml:space="preserve">
+    <value>Predpokladané hodiny neprítomnosti od &lt;b&gt;${1}&lt;/b&gt; do dňa &lt;b&gt;${2}&lt;/b&gt; medzi &lt;b&gt;${5}&lt;/b&gt; a &lt;b&gt;${6}&lt;/b&gt; maximálne &lt;b&gt;${4}&lt;/b&gt; za &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.plannedholidays.allday.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${3}&lt;/b&gt;, od &lt;b&gt;${1}&lt;/b&gt; do &lt;b&gt;${2}&lt;/b&gt; po celý čas (&lt;b&gt;${4} dní&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.detail.plannedholidays.onedate.allday.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${3}&lt;/b&gt;, &lt;b&gt;${1}&lt;/b&gt; stále</value>
+  </data>
+  <data name="RES_requestinfo.detail.plannedholidays.onedate.period.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${3}&lt;/b&gt;, &lt;b&gt;${1}&lt;/b&gt; medzi &lt;b&gt;${4}&lt;/b&gt; a &lt;b&gt;${5}&lt;/b&gt; počas &lt;b&gt;${6}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.plannedholidays.period.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${3}&lt;/b&gt;, od &lt;b&gt;${1}&lt;/b&gt; do &lt;b&gt;${2}&lt;/b&gt; medzi &lt;b&gt;${5}&lt;/b&gt; a &lt;b&gt;${6}&lt;/b&gt; za &lt;b&gt;${7}&lt;/b&gt; (&lt;b&gt;${4} dní&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.detail.plannedovertimes.rotext" xml:space="preserve">
+    <value>Predpokladaný prebytok hodín dňa &lt;b&gt;${1}&lt;/b&gt; za deň &lt;b&gt;${2}&lt;/b&gt; medzi &lt;b&gt;${5}&lt;/b&gt; a &lt;b&gt;${6}&lt;/b&gt; počas &lt;b&gt;${4}&lt;/b&gt; pre &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.telecommutehome.rotext" xml:space="preserve">
+    <value>Požiadali ste o prácu na diaľku na &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.telecommuteoffice.rotext" xml:space="preserve">
+    <value>Osobne ste požiadali o prácu na &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.userfieldschange.history.rotext" xml:space="preserve">
+    <value>Aktualizujte pole &lt;b&gt;${1}&lt;/b&gt; s hodnotou&lt;b&gt;${2}&lt;/b&gt; platnou od &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.userfieldschange.rotext" xml:space="preserve">
+    <value>Aktualizujte pole &lt;b&gt;${1}&lt;/b&gt; s hodnotou&lt;b&gt;${2}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.vacationsorpermissions.onedate.rotext" xml:space="preserve">
+    <value>Vyžiadali ste si &lt;b&gt;${2}&lt;/b&gt; na &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.vacationsorpermissions.rotext" xml:space="preserve">
+    <value>Požadovali ste &lt;b&gt;${2}&lt;/b&gt; ${1} času (&lt;b&gt;${3} dní&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.exchangeshiftbetweenemployees.rotext" xml:space="preserve">
+    <value>Výmena plánu na &lt;b&gt;${1}&lt;/b&gt; (&lt;b&gt;${4}&lt;/b&gt; za &lt;b&gt;${5}&lt;/b&gt;) medzi &lt;b&gt;'${2}'&lt;/b&gt; a &lt;b&gt;'${3}'&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.exchangeshiftbetweenemployees.withcompensation.rotext" xml:space="preserve">
+    <value>Výmena plánu na &lt;b&gt;${1}&lt;/b&gt; (&lt;b&gt;${4}&lt;/b&gt; za &lt;b&gt;${5}&lt;/b&gt;) medzi &lt;b&gt;'${2}'&lt;/b&gt; a &lt;b&gt;'${3}'&lt;/b&gt;, posun na &lt;b&gt;${6}&lt;/b&gt; (&lt;b&gt;${7}&lt;/b&gt; za &lt;b&gt;${8}&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.externalworkresumepart.rotext" xml:space="preserve">
+    <value>Časť externého pracovného dňa &lt;b&gt;${1}&lt;/b&gt; za &lt;b&gt;${2}&lt;/b&gt; hodín v &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.externalworkweekresume.rotext" xml:space="preserve">
+    <value>Odo dňa &lt;b&gt;${1}&lt;/b&gt; do dňa &lt;b&gt;${2}&lt;/b&gt; (&lt;b&gt;${3} podpísanie/s&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.forbiddenpunch.rotext" xml:space="preserve">
+    <value>Nerealizovaný podpis &lt;b&gt;${1}&lt;/b&gt; na &lt;b&gt;${2}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.forbiddenpunch.withcause.rotext" xml:space="preserve">
+    <value>Nerealizovaný podpis &lt;b&gt;${1}&lt;/b&gt; na &lt;b&gt;${2}&lt;/b&gt; za &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.forbiddentaskpunch.rotext" xml:space="preserve">
+    <value>Nerealizovaný podpis &lt;b&gt;${1}&lt;/b&gt; na &lt;b&gt;${2}&lt;/b&gt; v &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.forbiddentaskpunchwithend.rotext" xml:space="preserve">
+    <value>Bez znamienka od &lt;b&gt;${1}&lt;/b&gt; do &lt;b&gt;${2}&lt;/b&gt; na &lt;b&gt;${3}&lt;/b&gt; až &lt;b&gt;${4}&lt;/b&gt; a pokračujte &lt;b&gt;${5}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.forbiddentaskpunchwithendextendedcompleted.rotext" xml:space="preserve">
+    <value>Nerealizovaný podpis z &lt;b&gt;${1}&lt;/b&gt; na &lt;b&gt;${2}&lt;/b&gt; na &lt;b&gt;${3}&lt;/b&gt; až &lt;b&gt;${4}&lt;/b&gt; a dokončiť ho, pokračovať &lt;b&gt;${5}&lt;/b&gt;.Atribúty: &lt;b&gt;${6}&lt;/b&gt; &lt;b&gt;${7}&lt;/b&gt; &lt;b&gt;${8}&lt;/b&gt; &lt;b&gt;${9}&lt;/b&gt; &lt;b&gt;${10}&lt;/b&gt; &lt;b&gt;${11}&lt;/b&gt; &lt;b&gt;${11}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.forbiddentaskpunchwithendextendednotcompleted.rotext" xml:space="preserve">
+    <value>Bez znamienka od &lt;b&gt;${1}&lt;/b&gt; do &lt;b&gt;${2}&lt;/b&gt; na &lt;b&gt;${3}&lt;/b&gt; až &lt;b&gt;${4}&lt;/b&gt; , pokračujte &lt;b&gt;${5}&lt;/b&gt;. atribúty: &lt;b&gt;${6}&lt;/b&gt; &lt;b&gt;${7}&lt;/b&gt; &lt;b&gt;${8}&lt;/b&gt; &lt;b&gt;${9}&lt;/b&gt; &lt;b&gt;${10}&lt;/b&gt; &lt;b&gt;${11}&lt;/b&gt; &lt;b&gt;${11}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.forgottencostcenterpunch.rotext" xml:space="preserve">
+    <value>Zápis nákladového strediska nebol vykonaný na &lt;b&gt;${1}&lt;/b&gt; na &lt;b&gt;${2}&lt;/b&gt; v stredisku &lt;b&gt;${3}&lt;/b&gt;:&lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.justifypunch.rotext" xml:space="preserve">
+    <value>Podpis &lt;b&gt;${1}&lt;/b&gt; na &lt;b&gt;${2}&lt;/b&gt; za &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.plannedabsences.rotext" xml:space="preserve">
+    <value>Z &lt;b&gt;${1}&lt;/b&gt; na &lt;b&gt;${2}&lt;/b&gt; pre &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.plannedcauses.rotext" xml:space="preserve">
+    <value>Od dňa &lt;b&gt;${1}&lt;/b&gt; do dňa &lt;b&gt;${2}&lt;/b&gt; medzi &lt;b&gt;${5}&lt;/b&gt; a &lt;b&gt;${6}&lt;/b&gt; maximálne &lt;b&gt;${4}&lt;/b&gt; za &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.plannedholidays.allday.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${3}&lt;/b&gt;, od &lt;b&gt;${1}&lt;/b&gt; do &lt;b&gt;${2}&lt;/b&gt; po celý čas (&lt;b&gt;${4} dní&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.plannedholidays.onedate.allday.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${3}&lt;/b&gt;, &lt;b&gt;${1}&lt;/b&gt; stále</value>
+  </data>
+  <data name="RES_requestinfo.plannedholidays.onedate.period.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${3}&lt;/b&gt;, &lt;b&gt;${1}&lt;/b&gt; medzi &lt;b&gt;${4}&lt;/b&gt; a &lt;b&gt;${5}&lt;/b&gt; počas &lt;b&gt;${6}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.plannedholidays.period.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${3}&lt;/b&gt;, od &lt;b&gt;${1}&lt;/b&gt; do &lt;b&gt;${2}&lt;/b&gt; medzi &lt;b&gt;${5}&lt;/b&gt; a &lt;b&gt;${6}&lt;/b&gt; za &lt;b&gt;${7}&lt;/b&gt; (&lt;b&gt;${4} dní&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.plannedovertimes.rotext" xml:space="preserve">
+    <value>Od dňa &lt;b&gt;${1}&lt;/b&gt; do dňa &lt;b&gt;${2}&lt;/b&gt; medzi &lt;b&gt;${5}&lt;/b&gt; a &lt;b&gt;${6}&lt;/b&gt; pre &lt;b&gt;${4}&lt;/b&gt; pre &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.requestaccepted.rotext" xml:space="preserve">
+    <value>Schválená žiadosť</value>
+  </data>
+  <data name="RES_requestinfo.requestchangedtodenied.rotext" xml:space="preserve">
+    <value>Žiadosť zamietnutá:</value>
+  </data>
+  <data name="RES_requestinfo.requestdenied.rotext" xml:space="preserve">
+    <value>Žiadosť zamietnutá</value>
+  </data>
+  <data name="RES_requestinfo.requeststatus.accepted.rotext" xml:space="preserve">
+    <value>Schválené</value>
+  </data>
+  <data name="RES_requestinfo.requeststatus.denied.rotext" xml:space="preserve">
+    <value>Odmietnuté</value>
+  </data>
+  <data name="RES_requestinfo.requeststatus.ongoing.rotext" xml:space="preserve">
+    <value>prebieha</value>
+  </data>
+  <data name="RES_requestinfo.requeststatus.pending.rotext" xml:space="preserve">
+    <value>čaká sa na</value>
+  </data>
+  <data name="RES_requestinfo.requeststatus.rejecteddate.rotext" xml:space="preserve">
+    <value>Jeho platnosť vyprší &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.requeststatus.validationdate.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${1}&lt;/b&gt; sa potvrdí</value>
+  </data>
+  <data name="RES_requestinfo.since.rotext" xml:space="preserve">
+    <value>z</value>
+  </data>
+  <data name="RES_requestinfo.telecommutehome.rotext" xml:space="preserve">
+    <value>Žiadosti o prácu na diaľku v &lt;b&gt;${1}&lt;/b&gt; deň</value>
+  </data>
+  <data name="RES_requestinfo.telecommuteoffice.rotext" xml:space="preserve">
+    <value>Prihláste sa do práce osobne na &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.to.rotext" xml:space="preserve">
+    <value>do</value>
+  </data>
+  <data name="RES_requestinfo.userfieldschange.history.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${1}&lt;/b&gt;, hodnota &lt;b&gt;${2}&lt;/b&gt; platná od &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.userfieldschange.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${1}&lt;/b&gt;, hodnota &lt;b&gt;${2}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.vacationsorpermissions.onedate.rotext" xml:space="preserve">
+    <value>Rozvrh &lt;b&gt;${2}&lt;/b&gt;, ${1}</value>
+  </data>
+  <data name="RES_requestinfo.vacationsorpermissions.rotext" xml:space="preserve">
+    <value>Rozvrh &lt;b&gt;${2}&lt;/b&gt;, ${1} (&lt;b&gt;${3} dní&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requests.approvedby.rotext" xml:space="preserve">
+    <value>Schválil</value>
+  </data>
+  <data name="RES_requests.refusedby.rotext" xml:space="preserve">
+    <value>Odmietnuté</value>
+  </data>
+  <data name="RES_requestshelper.shiftexchangeatob.rotext" xml:space="preserve">
+    <value>Čas ${3} vymenený s ${4} medzi ${1} a ${2}</value>
+  </data>
+  <data name="RES_requestshelper.shiftexchangebtoa.rotext" xml:space="preserve">
+    <value>Čas ${4} vymenený s ${3} medzi ${2} a ${1}</value>
+  </data>
+  <data name="RES_resultenum.anotherabsenceexistindate.rotext" xml:space="preserve">
+    <value>Ďalšia neprítomnosť sa očakáva v ten istý deň</value>
+  </data>
+  <data name="RES_resultenum.anotherholidayexistindate.rotext" xml:space="preserve">
+    <value>V ten istý deň sa predpokladá ďalší sviatok/hodinová dovolenka</value>
+  </data>
+  <data name="RES_resultenum.anotherovertimeexistindate.rotext" xml:space="preserve">
+    <value>Na to isté obdobie existuje ďalšia žiadosť o nadbytočné hodiny</value>
+  </data>
+  <data name="RES_resultenum.applicantcantcoveremployeeonshiftexchange.rotext" xml:space="preserve">
+    <value>Rozvrh sa nedá vymeniť, pretože používateľ nemôže obsadiť miesto, ktoré mu bolo pridelené</value>
+  </data>
+  <data name="RES_resultenum.blockeddayonshiftexchange.rotext" xml:space="preserve">
+    <value>Rozvrh nie je možné vymeniť, pretože jeden deň je zablokovaný</value>
+  </data>
+  <data name="RES_resultenum.calendargenerateindictments.rotext" xml:space="preserve">
+    <value>Kalendár nie je možné aktualizovať, pretože by to viedlo k vzniku incidentov</value>
+  </data>
+  <data name="RES_resultenum.causerequired.rotext" xml:space="preserve">
+    <value>Požadované odôvodnenie</value>
+  </data>
+  <data name="RES_resultenum.changeshifterror.rotext" xml:space="preserve">
+    <value>Plánovanie nebolo možné zmeniť</value>
+  </data>
+  <data name="RES_resultenum.compensationrequired.rotext" xml:space="preserve">
+    <value>Na vykonanie zmeny je potrebná jednodňová náhrada</value>
+  </data>
+  <data name="RES_resultenum.costcenterrequiered.rotext" xml:space="preserve">
+    <value>Povinné obchodné centrum</value>
+  </data>
+  <data name="RES_resultenum.dailyreccordwithoutpunches.rotext" xml:space="preserve">
+    <value>Vyhlásenie o pracovnom čase spojené so žiadosťou neobsahuje časové údaje</value>
+  </data>
+  <data name="RES_resultenum.dateoutofcontract.rotext" xml:space="preserve">
+    <value>Dátum, kedy sa žiada o zrušenie zmluvy</value>
+  </data>
+  <data name="RES_resultenum.daterequired.rotext" xml:space="preserve">
+    <value>Požadovaný dátum</value>
+  </data>
+  <data name="RES_resultenum.employeecantcoverapplicantonshiftexchange.rotext" xml:space="preserve">
+    <value>Rozvrh nie je možné vymeniť, pretože používateľ má na daný deň plánovanú neprítomnosť</value>
+  </data>
+  <data name="RES_resultenum.employeenotsuitableforshiftexchange.rotext" xml:space="preserve">
+    <value>Zvolený používateľ nie je platný pre zmenu</value>
+  </data>
+  <data name="RES_resultenum.existslockeddaysinperiod.rotext" xml:space="preserve">
+    <value>V období sú blokované dni ({0})</value>
+  </data>
+  <data name="RES_resultenum.externalworkresumeparterror.rotext" xml:space="preserve">
+    <value>Chyba pri overovaní požiadavky na externú pracovnú položku</value>
+  </data>
+  <data name="RES_resultenum.externalworkweekresumeerror.rotext" xml:space="preserve">
+    <value>Chyba pri overovaní žiadosti o prenos časti</value>
+  </data>
+  <data name="RES_resultenum.forbiddenpuncherror.rotext" xml:space="preserve">
+    <value>Chyba pri overovaní podpisu</value>
+  </data>
+  <data name="RES_resultenum.forbiddentaskpuncherror.rotext" xml:space="preserve">
+    <value>Chyba pri overovaní podpisu</value>
+  </data>
+  <data name="RES_resultenum.forgottencostcenterpuncherror.rotext" xml:space="preserve">
+    <value>Chyba pri overovaní podpisu</value>
+  </data>
+  <data name="RES_resultenum.freezedateexception.rotext" xml:space="preserve">
+    <value>Žiadosť je v lehote uzávierky</value>
+  </data>
+  <data name="RES_resultenum.hoursrequired.rotext" xml:space="preserve">
+    <value>Požadované hodiny</value>
+  </data>
+  <data name="RES_resultenum.incorrectactualtype.rotext" xml:space="preserve">
+    <value>Nesprávny typ podpisu</value>
+  </data>
+  <data name="RES_resultenum.incorrectdates.rotext" xml:space="preserve">
+    <value>Nesprávne dátumy</value>
+  </data>
+  <data name="RES_resultenum.indictmentonshiftexchange.rotext" xml:space="preserve">
+    <value>Harmonogram nie je možné vymeniť, pretože by sa tým porušili pravidlá plánovania</value>
+  </data>
+  <data name="RES_resultenum.invalidpassport.rotext" xml:space="preserve">
+    <value>Neplatný pas</value>
+  </data>
+  <data name="RES_resultenum.justifypuncherror.rotext" xml:space="preserve">
+    <value>Chyba v odôvodnení podpisu</value>
+  </data>
+  <data name="RES_resultenum.needconfirmation.rotext" xml:space="preserve">
+    <value>Potvrdenie</value>
+  </data>
+  <data name="RES_resultenum.noapprovepermissions.rotext" xml:space="preserve">
+    <value>Nemáte povolenie na schválenie žiadosti</value>
+  </data>
+  <data name="RES_resultenum.noapproverefuselevelofauthorityrequired.rotext" xml:space="preserve">
+    <value>Žiadosť nie je možné schváliť/zamietnuť, pretože vyššia úroveň velenia už žiadosť schválila/zamietla</value>
+  </data>
+  <data name="RES_resultenum.noassignmentonshiftexchange.rotext" xml:space="preserve">
+    <value>Rozvrhy nie je možné zameniť, pretože ak je jednému z rozvrhov priradené pracovné miesto, musia mať oba rozvrhy rovnaké pracovné miesto</value>
+  </data>
+  <data name="RES_resultenum.nodeletebecausenotpending.rotext" xml:space="preserve">
+    <value>Žiadosť nemôžete odstrániť, pretože nie je v štádiu riešenia</value>
+  </data>
+  <data name="RES_resultenum.nopermissiononshiftexchange.rotext" xml:space="preserve">
+    <value>Rozvrh nie je možné vymeniť, pretože používateľ nemá oprávnenie požiadať o rozvrh</value>
+  </data>
+  <data name="RES_resultenum.notenoughconceptbalance.rotext" xml:space="preserve">
+    <value>Prekročenie povoleného zostatku</value>
+  </data>
+  <data name="RES_resultenum.onabsenceonshiftexchange.rotext" xml:space="preserve">
+    <value>Rozvrh nie je možné vymeniť, pretože používateľ má na daný deň plánovanú neprítomnosť</value>
+  </data>
+  <data name="RES_resultenum.onholidaysonshiftexchange.rotext" xml:space="preserve">
+    <value>Rozvrh nie je možné vymeniť, pretože používateľ má na daný deň naplánovanú dovolenku</value>
+  </data>
+  <data name="RES_resultenum.plannedabsenceserror.rotext" xml:space="preserve">
+    <value>Chyba pri overovaní žiadosti o predpokladané dni neprítomnosti</value>
+  </data>
+  <data name="RES_resultenum.plannedabsencesoverlapped.rotext" xml:space="preserve">
+    <value>Existuje žiadosť o dni neprítomnosti, ktorá už zahŕňa uvedený deň</value>
+  </data>
+  <data name="RES_resultenum.plannedcauseserror.rotext" xml:space="preserve">
+    <value>Chyba pri overovaní žiadosti o predpovedané hodiny neprítomnosti</value>
+  </data>
+  <data name="RES_resultenum.plannedcausesoverlapped.rotext" xml:space="preserve">
+    <value>Na uvedený deň už existuje ďalšia žiadosť o hodiny neprítomnosti</value>
+  </data>
+  <data name="RES_resultenum.plannedholidayserror.rotext" xml:space="preserve">
+    <value>Chyba pri overovaní žiadosti o dovolenku/hodinovú dovolenku</value>
+  </data>
+  <data name="RES_resultenum.plannedholidaysoverlapped.rotext" xml:space="preserve">
+    <value>Predpokladá sa ďalší prekrývajúci sa sviatok/hodinová dovolenka</value>
+  </data>
+  <data name="RES_resultenum.plannedovertimeserror.rotext" xml:space="preserve">
+    <value>Chyba pri overovaní požiadavky na predpoveď nadbytočných hodín</value>
+  </data>
+  <data name="RES_resultenum.plannedovertimesoverlapped.rotext" xml:space="preserve">
+    <value>Existujúce nadbytočné hodiny za rovnaké obdobie</value>
+  </data>
+  <data name="RES_resultenum.punchdatetimerequired.rotext" xml:space="preserve">
+    <value>Požadovaný dátum a čas podpisu</value>
+  </data>
+  <data name="RES_resultenum.punchexist.rotext" xml:space="preserve">
+    <value>V rovnaký deň a čas sa už koná podpisová akcia.</value>
+  </data>
+  <data name="RES_resultenum.requestmovenotexist.rotext" xml:space="preserve">
+    <value>Súbor spojený s požiadavkou neexistuje alebo bol zmenený</value>
+  </data>
+  <data name="RES_resultenum.requestmovetoomany.rotext" xml:space="preserve">
+    <value>S požiadavkou je spojený viac ako jeden podpis</value>
+  </data>
+  <data name="RES_resultenum.requestpendingonshiftexchange.rotext" xml:space="preserve">
+    <value>Harmonogram nie je možné vymeniť, pretože v jeden deň prebieha konanie o žiadosti, ktorá má vplyv na plánovanie</value>
+  </data>
+  <data name="RES_resultenum.requestrepited.rotext" xml:space="preserve">
+    <value>Opakovaná aplikácia</value>
+  </data>
+  <data name="RES_resultenum.requestruleerror.rotext" xml:space="preserve">
+    <value>Odmietnuté</value>
+  </data>
+  <data name="RES_resultenum.savecalendarexception.rotext" xml:space="preserve">
+    <value>Pri ukladaní kalendára došlo k chybe</value>
+  </data>
+  <data name="RES_resultenum.shiftrequired.rotext" xml:space="preserve">
+    <value>Požadované hodiny</value>
+  </data>
+  <data name="RES_resultenum.startshiftrequired.rotext" xml:space="preserve">
+    <value>Požadovaný čas začiatku plávajúceho rozvrhu</value>
+  </data>
+  <data name="RES_resultenum.taskrequiered.rotext" xml:space="preserve">
+    <value>Požadovaná úloha</value>
+  </data>
+  <data name="RES_resultenum.userfieldnorequestvisible.rotext" xml:space="preserve">
+    <value>Pole s kartou nie je viditeľné pre aplikácie</value>
+  </data>
+  <data name="RES_resultenum.userfieldrequired.rotext" xml:space="preserve">
+    <value>Povinné pole tokenu</value>
+  </data>
+  <data name="RES_resultenum.userfieldvaluesaveerror.rotext" xml:space="preserve">
+    <value>Nepodarilo sa uložiť hodnotu poľa token</value>
+  </data>
+  <data name="RES_resultenum.vacationsorpermissionserror.rotext" xml:space="preserve">
+    <value>Neplánovanie dovolenky alebo dovolenky</value>
+  </data>
+  <data name="RES_resultenum.vacationsorpermissionsoverlapped.rotext" xml:space="preserve">
+    <value>Existujúce sviatky za rovnaké obdobie</value>
+  </data>
+  <data name="RES_resultenum.wrongassignmentonshiftexchange.rotext" xml:space="preserve">
+    <value>Rozvrh nie je možné vymeniť, pretože požadované rozvrhy majú rôzne pridelené miesta</value>
+  </data>
+  <data name="RES_programmedovertimedescription.begintime.rotext" xml:space="preserve">
+    <value>Desde las</value>
+  </data>
+  <data name="RES_resultenum.xssvalidationerror.rotext" xml:space="preserve">
+    <value>Vo vlastnosti objektu bol zistený škodlivý skript</value>
+  </data>
+  <data name="RES_resultenum.sqlerror.rotext" xml:space="preserve">
+    <value>Pri prístupe k údajom potrebným na spracovanie požiadavky došlo k chybe</value>
+  </data>
+  <data name="RES_requestaction.minimumconsecutivedays.rotext" xml:space="preserve">
+    <value>Nebol dosiahnutý minimálny požadovaný počet po sebe nasledujúcich dní</value>
+  </data>
+  <data name="RES_requestaction.scheduleruletovalidate.rotext" xml:space="preserve">
+    <value>Harmonogram nie je možné zmeniť, pretože by to porušilo pravidlá plánovania.</value>
+  </data>
+</root>

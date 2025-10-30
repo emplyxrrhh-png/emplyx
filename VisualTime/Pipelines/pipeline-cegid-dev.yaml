@@ -1,0 +1,341 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+#name: Cegid VTI-$(VTI.Version)-$(Date:yyyyMMdd)$(Rev:.r)
+name: Cegid VTI-$(Date:yyyyMMdd)$(Rev:.r)
+
+trigger:
+- none
+
+
+pool:
+  name: Private VS2022
+
+# pool:
+#   vmImage: windows-latest
+
+
+parameters:
+
+- name: Slot  
+  displayName: Choose the deployment slot
+  type: string
+  default: ''
+  values:
+  - dev
+  - stage
+
+
+
+- name: templates
+  displayName: Copy - templates ?
+  type: boolean
+  default: true
+- name: updates
+  displayName: Copy - updates ?
+  type: boolean
+  default: true
+- name: reports
+  displayName: Copy - reports ?
+  type: boolean
+  default: true
+- name: VTLive
+  displayName: Build/Deploy - VTLive ?
+  type: boolean
+  default: true
+- name: VTLiveApi
+  displayName: Build/Deploy - VTLiveApi ?
+  type: boolean
+  default: true
+- name: VTPortal
+  displayName: Build/Deploy - VTPortal ?
+  type: boolean
+  default: true
+- name: VTTerminals
+  displayName: Build/Deploy - VTTerminals ?
+  type: boolean
+  default: true
+- name: VTVisits
+  displayName: Build/Deploy - VTVisits ?
+  type: boolean
+  default: true
+- name: fnAnalyticsFunction
+  displayName: Build/Deploy - fnAnalyticsFunction ?
+  type: boolean
+  default: true
+- name: fnBackgroundFunction
+  displayName: Build/Deploy - fnBackgroundFunction ?
+  type: boolean
+  default: true
+- name: fnBroadcasterFunction
+  displayName: Build/Deploy - fnBroadcasterFunction ?
+  type: boolean
+  default: true
+- name: fnDatalinkFunction
+  displayName: Build/Deploy - fnDatalinkFunction ?
+  type: boolean
+  default: true
+- name: fnMailFunction
+  displayName: Build/Deploy - fnMailFunction ?
+  type: boolean
+  default: true
+- name: fnReportFunction
+  displayName: Build/Deploy - fnReportFunction ?
+  type: boolean
+  default: true
+- name: fnScheduleFunction
+  displayName: Build/Deploy - fnScheduleFunction ?
+  type: boolean
+  default: true
+- name: fnPushNotificationsFunction
+  displayName: Build/Deploy - fnPushNotificationsFunction ?
+  type: boolean
+  default: true
+- name: fnNotificationsFunction
+  displayName: Build/Deploy - fnNotificationsFunction ?
+  type: boolean
+  default: true
+- name: fnEngineFunction
+  displayName: Build/Deploy - fnEngineFunction ?
+  type: boolean
+  default: true
+- name: fnPunchConnectorFunction
+  displayName: Build/Deploy - fnPunchConnectorFunction ?
+  type: boolean
+  default: true
+- name: fnPNlinkFunction
+  displayName: Build/Deploy - fnPNlinkFunction ?
+  type: boolean
+  default: true
+- name: fnFTPStorageSyncFunction
+  displayName: Build/Deploy - fnFTPStorageSyncFunction ?
+  type: boolean
+  default: true
+
+variables:
+  - name: solution
+    value: './Src/VisualTime Full MT.sln'
+  - name: testProjects
+    value: './Tests/**/*.csproj'
+  - name: buildConfiguration
+    value: 'Multitennant'
+  - name: attachArtifactsToPipeline
+    value: true
+  - name: forceGenerateLang
+    value: false
+
+
+stages:
+
+  #### Testing
+  # - template: Templates/Testing.yml
+
+  #### Build
+  - template: Templates/Build.yml
+    parameters:
+      appservices: 
+        - project: './Src/VTLive40/VTLive40.vbproj'
+          folder: 'VTLive'
+          enabled: ${{parameters.VTLive}} 
+        - project: './Src/VTLiveApi/VTLiveApi.vbproj'
+          folder: 'VTLiveApi'
+          enabled: ${{parameters.VTLiveApi}} 
+        - project: './Src/VTPortalWeb/VTPortalWeb.vbproj'
+          folder: 'VTPortal'
+          enabled: ${{parameters.VTPortal}} 
+        - project: './Src/VTTerminalsPushServer/TerminalsPushServer.vbproj'
+          folder: 'VTTerminals'
+          enabled: ${{parameters.VTTerminals}} 
+        - project: './Src/LiveVisits/Visits.vbproj'
+          folder: 'VTVisits'
+          enabled: ${{parameters.VTVisits}} 
+      functions: 
+        - project: './Src/Functions/roAnalyticsFunctions/roAnalyticsFunctions.csproj'
+          folder: 'fnAnalyticsFunction'
+          enabled: ${{parameters.fnAnalyticsFunction}} 
+        - project: './Src/Functions/roBackgroundFunctions/roBackgroundFunctions.csproj'
+          folder: 'fnBackgroundFunction'
+          enabled: ${{parameters.fnBackgroundFunction}} 
+        - project: './Src/Functions/roBroadcasterFunction/roBroadcasterFunction.csproj'
+          folder: 'fnBroadcasterFunction'
+          enabled: ${{parameters.fnBroadcasterFunction}} 
+        - project: './Src/Functions/roDatalinkFunctions/roDatalinkFunctions.csproj'
+          folder: 'fnDatalinkFunction'
+          enabled: ${{parameters.fnDatalinkFunction}} 
+        - project: './Src/Functions/roMailFunction/roMailFunction.csproj'
+          folder: 'fnMailFunction'
+          enabled: ${{parameters.fnMailFunction}} 
+        - project: './Src/Functions/roReportFunctions/roReportFunctions.csproj'
+          folder: 'fnReportFunction'
+          enabled: ${{parameters.fnReportFunction}} 
+        - project: './Src/Functions/roScheduleFunctions/roScheduleFunctions.csproj'
+          folder: 'fnScheduleFunction'
+          enabled: ${{parameters.fnScheduleFunction}} 
+        - project: './Src/Functions/roNotificationsFunction/roNotificationsFunction.csproj'
+          folder: 'fnNotificationsFunction'
+          enabled: ${{parameters.fnNotificationsFunction}} 
+        - project: './Src/Functions/roPushNotificationsFunction/roPushNotificationsFunction.csproj'
+          folder: 'fnPushNotificationsFunction'
+          enabled: ${{parameters.fnPushNotificationsFunction}} 
+        - project: './Src/Functions/roEngineFunctions/roEngineFunctions.csproj'
+          folder: 'fnEngineFunction'
+          enabled: ${{parameters.fnEngineFunction}} 
+        - project: './Src/Functions/roPunchConnectorFunctions/roPunchConnectorFunctions.csproj'
+          folder: 'fnPunchConnectorFunction'
+          enabled: ${{parameters.fnPunchConnectorFunction}} 
+        - project: './Src/Functions/roSCFunction/roSCFunction.csproj'
+          folder: 'fnpnlinkfunction'
+          enabled: ${{parameters.fnPNlinkFunction}}
+        - project: './Src/Functions/roFTPStorageSynchronizationFunction/roFTPStorageSynchronizationFunction.csproj'
+          folder: 'fnFTPStorageSyncFunction'
+          enabled: ${{parameters.fnFTPStorageSyncFunction}}
+      generateLang: false
+      uploadArtifact: ${{ variables.attachArtifactsToPipeline }}
+      copyTemplates: ${{parameters.templates}} 
+      copyUpdates: ${{parameters.updates}} 
+      copyReports: ${{parameters.reports}} 
+      sonarcloudAnalysis: false 
+
+  #### Deploy to dev env azure
+  - template: Templates/DeployAzureUnifiedCegidDev.yml
+    parameters:
+      slot: ${{parameters.Slot}}
+      resourceGroup: 'MTDEV'
+      storageAccount: 'idi${{parameters.Slot}}storage'
+      azureService: 3124-Dev-Vti-Deployment
+      environment: development
+      artifacts: 
+        - name: 'VTLive'
+          artifactoryFolderName: 'VT_Live'
+          zip: 'VTLive.zip'
+          destination: 'vtliveidi'
+          enabled: ${{parameters.VTLive}} 
+          type: 'webapp'
+        - name: 'VTLiveApi'
+          artifactoryFolderName: 'VT_LiveApi'
+          zip: 'VTLiveApi.zip'
+          destination: 'vtliveapiidi'
+          enabled: ${{parameters.VTLiveApi}} 
+          type: 'webapp'
+        - name: 'VTPortal'
+          artifactoryFolderName: 'VT_Portal'
+          zip: 'VTPortal.zip'
+          destination: 'vtportalidi'
+          enabled: ${{parameters.VTPortal}}
+          type: 'webapp'
+        - name: 'VTTerminals'
+          artifactoryFolderName: 'VT_Terminals'
+          zip: 'VTTerminals.zip'
+          destination: 'vtterminalsidi'
+          enabled: ${{parameters.VTTerminals}}
+          type: 'webapp'
+        - name: 'VTVisits'
+          artifactoryFolderName: 'VT_Visits'
+          zip: 'VTVisits.zip'
+          destination: 'vtvisitsidi'
+          enabled: ${{parameters.VTVisits}}
+          type: 'webapp'
+        - name: 'fnAnalyticsFunction'
+          artifactoryFolderName: 'FN_AnalyticsFunction'
+          zip: 'fnAnalyticsFunction.zip'
+          destination: 'fnAnalyticsIDI'
+          enabled: ${{parameters.fnAnalyticsFunction}}
+          type: 'funapp'
+        - name: 'fnBackgroundFunction'
+          artifactoryFolderName: 'FN_BackgroundFunction'
+          zip: 'fnBackgroundFunction.zip'
+          destination: 'fnBackgroundIdi'
+          enabled: ${{parameters.fnBackgroundFunction}}
+          type: 'funapp'
+        - name: 'fnBroadcasterFunction'
+          artifactoryFolderName: 'FN_BroadcasterFunction'
+          zip: 'fnBroadcasterFunction.zip'
+          destination: 'fnBroadcasterIdi'
+          enabled: ${{parameters.fnBroadcasterFunction}}
+          type: 'funapp'
+        - name: 'fnDatalinkFunction'
+          artifactoryFolderName: 'FN_DatalinkFunction'
+          zip: 'fnDatalinkFunction.zip'
+          destination: 'fnDatalinkIdi'
+          enabled: ${{parameters.fnDatalinkFunction}}
+          type: 'funapp'
+        - name: 'fnMailFunction'
+          artifactoryFolderName: 'FN_MailFunction'
+          zip: 'fnMailFunction.zip'
+          destination: 'fnMailidi'
+          enabled: ${{parameters.fnMailFunction}}
+          type: 'funapp'
+        - name: 'fnReportFunction'
+          artifactoryFolderName: 'FN_ReportFunction'
+          zip: 'fnReportFunction.zip'
+          destination: 'fnReportIdi'
+          enabled: ${{parameters.fnReportFunction}}
+          type: 'funapp'
+        - name: 'fnScheduleFunction'
+          artifactoryFolderName: 'FN_ScheduleFunction'
+          zip: 'fnScheduleFunction.zip'
+          destination: 'fnScheduleIdi'
+          enabled: ${{parameters.fnScheduleFunction}}
+          type: 'funapp'
+        - name: 'fnPushNotificationsFunction'
+          artifactoryFolderName: 'FN_NotificationsFunction'
+          zip: 'fnPushNotificationsFunction.zip'
+          destination: 'fnPushIdi'
+          enabled: ${{parameters.fnPushNotificationsFunction}}
+          type: 'funapp'
+        - name: 'fnNotificationsFunction'
+          artifactoryFolderName: 'FN_PushNotificationsFunction'
+          zip: 'fnNotificationsFunction.zip'
+          destination: 'fnNotificationsIdi'
+          enabled: ${{parameters.fnNotificationsFunction}}
+          type: 'funapp'
+        - name: 'fnEngineFunction'
+          artifactoryFolderName: 'FN_EngineFunction'
+          zip: 'fnEngineFunction.zip'
+          destination: 'fnEngineIdi'
+          enabled: ${{parameters.fnEngineFunction}}
+          type: 'funapp'
+        - name: 'fnPunchConnectorFunction'
+          artifactoryFolderName: 'FN_PunchConnectorFunction'
+          zip: 'fnPunchConnectorFunction.zip'
+          destination: 'fnConnectorIdi'
+          enabled: ${{parameters.fnPunchConnectorFunction}}
+          type: 'funapp'
+        - name: 'fnPNlinkFunction'
+          artifactoryFolderName: 'FN_PNlinkFunction'
+          zip: 'fnpnlinkfunction.zip'
+          destination: 'fnPNLinkIdi'
+          enabled: ${{parameters.fnPNlinkFunction}}
+          type: 'funapp'
+        - name: 'fnFTPStorageSyncFunction'
+          artifactoryFolderName: 'FN_FTPStorageSyncFunction'
+          zip: 'fnFTPStorageSyncFunction.zip'
+          destination: 'fnFTPsyncIdi'
+          enabled: ${{parameters.fnFTPStorageSyncFunction}}
+          type: 'funapp'
+      resources:
+        - name: 'reports'
+          artifactoryFolderName: 'Common_reports'
+          zip: 'reports.zip'
+          container: 'upgrade'
+          folder: 'reports'
+          pattern: '*.sql;*.vtu'
+          enabled: ${{parameters.reports}}
+        - name: 'updates'
+          artifactoryFolderName: 'Common_updates'
+          zip: 'updates.zip'
+          container: 'upgrade'
+          folder: 'updates'
+          pattern: '*.sql;*.vtu'
+          enabled: ${{parameters.updates}}
+      resourcesDatalink:
+        - name: 'templates'
+          artifactoryFolderName: 'Common_templates'
+          zip: 'templates.zip'
+          container: 'datalink'
+          pattern: '*.xlsx;*.vtu'
+          folder: 'common_templates'
+          enabled: ${{parameters.templates}}
+  

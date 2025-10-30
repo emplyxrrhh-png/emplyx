@@ -1,0 +1,3507 @@
+@font-face
+{
+    font-family: "Roboto Regular";
+    src: local("Roboto Regular"), url('../Fonts/Roboto-Regular.ttf');
+}
+@font-face
+{
+    font-family: "Roboto Medium";
+    src: local("Roboto Medium"), url('../Fonts/Roboto-Medium.ttf');
+}
+.dxeCalendarToday_Material1 .dxe-apt-labels-container,
+.dxeCalendarSelected_Material1 .dxe-apt-labels-container
+{
+    display: none;
+}
+.dxeCalendar_Material1 .dxe-apt-labels-container
+{
+    height: 5px;
+    margin-bottom: -5px;
+    margin-left: -2px;
+    margin-right: -2px;
+}
+.dxeCalendar_Material1 .dxe-apt-labels-container > div
+{
+    width: 5px;
+    height: 5px;
+    margin-top: 2px;
+    border-radius: 50%;
+}
+.dxeCalendar_Material1 .dxe-more-labels-container > .dxe-h-line
+{
+    width: 5px;
+    top: 2px;
+}
+.dxeCalendar_Material1 .dxe-more-labels-container > .dxe-v-line
+{
+    height: 5px;
+    left: 2px;
+}
+.dxeCalendar_Material1 .dxe-more-labels-container > div.dxe-h-line,
+.dxeCalendar_Material1 .dxe-more-labels-container > div.dxe-v-line
+{
+    background-color: #757575;
+}
+/* -- ValidationSummary -- */
+.dxvsValidationSummary_Material1
+{
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: Red;
+}
+.dxvsValidationSummary_Material1 td.dxvsRC_Material1
+{
+    vertical-align: top;
+    padding: 2px 5px 4px 6px;
+}
+.dxvsValidationSummary_Material1 table.dxvsHT_Material1
+{
+    width: 100%;
+}
+.dxvsValidationSummary_Material1 td.dxvsH_Material1
+{
+    padding: 2px 0;
+}
+.dxvsValidationSummary_Material1 a.dxvsHL_Material1,
+.dxvsValidationSummary_Material1 a.dxvsHL_Material1:visited
+{
+    color: red;
+}
+.dxvsValidationSummary_Material1 a.dxvsHL_Material1
+{
+    text-decoration: none;
+    border-bottom: 1px dashed #f70;
+}
+.dxvsValidationSummary_Material1 a.dxvsHL_Material1:hover
+{
+    color: #f70;
+}
+.dxvsValidationSummary_Material1 td.dxvsETC_Material1
+{
+    padding: 2px 0;
+}
+.dxvsValidationSummary_Material1 li.dxvsE_Material1
+{
+    padding: 2px 0;
+}
+/* TrackBar */
+.dxeTrackBar_Material1
+{
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    visibility: hidden;
+}
+.dxEditors_edtTBIncBtn_Material1,
+.dxEditors_edtTBDecBtn_Material1
+{
+    border-radius: 50%;
+}
+.dxeTBIncBtnHover_Material1.dxEditors_edtTBIncBtn_Material1,
+.dxeTBDecBtnHover_Material1.dxEditors_edtTBDecBtn_Material1
+{
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    -webkit-transition: opacity .3s ease-out;
+    -moz-transition: opacity .3s ease-out;
+    -o-transition: opacity .3s ease-out;
+    transition: opacity .3s ease-out;
+    -webkit-tap-highlight-color: transparent;
+}
+.dxeDisabled_Material1 .dxeTBHSys a,
+.dxeDisabled_Material1 .dxeTBVSys a
+{
+    cursor: default;
+}
+.dxeTBBarHighlight_Material1
+{
+    font-size: 0;
+}
+.dxeTBScale_Material1,
+.dxeTBTrack_Material1,
+.dxeTBBarHighlight_Material1
+{
+    cursor: pointer;
+}
+.dxeTBScale_Material1
+{
+    z-index: 1;
+}
+.dxeTBSecondaryDH_Material1, .dxeTBMainDH_Material1
+{
+    z-index: 4;
+}
+.dxeTrackBar_Material1.dxeTBHSys
+{
+    width: 442px;
+    height: 61px;
+}
+.dxeTrackBar_Material1.dxeTBVSys
+{
+    height: 442px;
+    width: 61px;
+}
+.dxeTrackBar_Material1.dxeTBBScaleSys.dxeTBVSys
+{
+    width: 92px;
+}
+.dxeTrackBar_Material1.dxeTBBScaleSys.dxeTBHSys
+{
+    height: 92px;
+}
+.dxeTBTrack_Material1
+{
+    z-index: 2;
+    position: absolute;
+}
+.dxeTBHSys .dxeTBTrack_Material1
+{
+    background-color: #BABABA;
+}
+.dxeTBVSys .dxeTBTrack_Material1
+{
+    background-color: #BABABA;
+}
+.dxeTBHSys .dxeTBTrack_Material1
+{
+    height: 1px;
+}
+.dxeTBHSys .dxeTBBarHighlight_Material1
+{
+    top: 0px;
+    height: 1px;
+}
+.dxeTBVSys .dxeTBTrack_Material1
+{
+    width: 1px;
+}
+.dxeTBVSys .dxeTBBarHighlight_Material1
+{
+    left: 0px;
+    width: 1px;
+}
+.dxeTBHSys .dxeTBMainDH_Material1, .dxeTBHSys .dxeTBSecondaryDH_Material1
+{
+    top: -10px;
+    width: 17px;
+    height: 17px;
+}
+.dxeTBVSys .dxeTBMainDH_Material1, .dxeTBVSys .dxeTBSecondaryDH_Material1
+{
+    left: -10px;
+    width: 17px;
+    height: 17px;
+}
+.dxeTBHSys .dxeTBMainDH_Material1.dxEditors_edtTBMainDHHover_Material1,
+.dxeTBHSys .dxeTBSecondaryDH_Material1.dxEditors_edtTBSecondaryDHHover_Material1,
+.dxeTBVSys .dxeTBMainDH_Material1.dxEditors_edtTBMainDHHover_Material1,
+.dxeTBVSys .dxeTBSecondaryDH_Material1.dxEditors_edtTBSecondaryDHHover_Material1,
+.dxeFocused_Material1 .dxeTBHSys .dxeFocusedMDHSys .dxeTBMainDH_Material1.dxEditors_edtTBMainDHHover_Material1,
+.dxeFocused_Material1 .dxeTBHSys .dxeFocusedSDHSys .dxeTBSecondaryDH_Material1.dxEditors_edtTBSecondaryDHHover_Material1,
+.dxeFocused_Material1 .dxeTBVSys .dxeFocusedMDHSys .dxeTBMainDH_Material1.dxEditors_edtTBMainDHHover_Material1,
+.dxeFocused_Material1 .dxeTBVSys .dxeFocusedSDHSys .dxeTBSecondaryDH_Material1.dxEditors_edtTBSecondaryDHHover_Material1
+{
+    background-color: #FF5C35;
+    border-color: #FF5C35;
+}
+.dxeTBHSys .dxeTBMainDH_Material1.dxEditors_edtTBMainDHPressed_Material1,
+.dxeTBHSys .dxeTBSecondaryDH_Material1.dxEditors_edtTBSecondaryDHPressed_Material1,
+.dxeTBVSys .dxeTBMainDH_Material1.dxEditors_edtTBMainDHPressed_Material1,
+.dxeTBVSys .dxeTBSecondaryDH_Material1.dxEditors_edtTBSecondaryDHPressed_Material1,
+.dxeFocused_Material1 .dxeTBHSys .dxeFocusedMDHSys .dxeTBMainDH_Material1.dxEditors_edtTBMainDHPressed_Material1,
+.dxeFocused_Material1 .dxeTBHSys .dxeFocusedSDHSys .dxeTBSecondaryDH_Material1.dxEditors_edtTBSecondaryDHPressed_Material1,
+.dxeFocused_Material1 .dxeTBVSys .dxeFocusedMDHSys .dxeTBMainDH_Material1.dxEditors_edtTBMainDHPressed_Material1,
+.dxeFocused_Material1 .dxeTBVSys .dxeFocusedSDHSys .dxeTBSecondaryDH_Material1.dxEditors_edtTBSecondaryDHPressed_Material1
+{
+    background-color: #FFFFFF;
+    border-color: #FF5C35;
+}
+.dxeFocused_Material1 .dxeTBHSys .dxeFocusedMDHSys .dxeTBMainDH_Material1,
+.dxeFocused_Material1 .dxeTBHSys .dxeFocusedSDHSys .dxeTBSecondaryDH_Material1,
+.dxeFocused_Material1 .dxeTBVSys .dxeFocusedMDHSys .dxeTBMainDH_Material1,
+.dxeFocused_Material1 .dxeTBVSys .dxeFocusedSDHSys .dxeTBSecondaryDH_Material1
+{
+    border: 2px solid #FF5C35;
+}
+.dxeTBMainDH_Material1, .dxeTBSecondaryDH_Material1
+{
+    border: 2px solid #959595;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    background-color: #FFFFFF;
+    z-index: 9;
+}
+.dxeTBVSys .dxeTBRBScaleSys .dxeTBTrack_Material1, .dxeTBVSys .dxeTBTrack_Material1
+{
+    left: 13px;
+}
+.dxeTBVSys .dxeTBLTScaleSys .dxeTBTrack_Material1
+{
+    right: 13px;
+    left: auto;
+}
+.dxeTBHSys .dxeTBLTScaleSys .dxeTBTrack_Material1
+{
+    margin-top: 1px;
+    bottom: 13px;
+    top: auto;
+}
+.dxeTBHSys .dxeTBRBScaleSys .dxeTBTrack_Material1,
+.dxeTBHSys .dxeTBTrack_Material1
+{
+    top: 14px;
+}
+.dxeTBBarHighlight_Material1
+{
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    z-index: 3;
+}
+.dxeTBHSys .dxeTBBarHighlight_Material1
+{
+    background: #FF5C35;
+}
+.dxeTBVSys .dxeTBBarHighlight_Material1
+{
+    background: #FF5C35;
+}
+.dxeTBRBLabel_Material1, .dxeTBLTLabel_Material1
+{
+    text-align: center;
+    color: #999999;
+    cursor: default;
+}
+.dxeTBSmallTickSys .dxeTBRBLabel_Material1, .dxeTBSmallTickSys .dxeTBLTLabel_Material1,
+.dxeTBLargeTickSys .dxeTBRBLabel_Material1, .dxeTBLargeTickSys .dxeTBLTLabel_Material1
+{
+    position: absolute;
+}
+.dxeTBHSys .dxeTBRBLabel_Material1,
+.dxeTBHSys .dxeTBLTLabel_Material1
+{
+    width: 100%;
+}
+.dxeTrackBar_Material1 .dxeTBIncBtn_Material1,
+.dxeTrackBar_Material1 .dxeTBDecBtn_Material1
+{
+    overflow: visible;
+}
+.dxeTBVSys .dxeTBRBLabel_Material1,
+.dxeTBVSys .dxeTBLTLabel_Material1
+{
+    padding-top: 2px;
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBRBLabel_Material1
+{
+    margin-left: -4px;
+}
+.dxeTBVSys .dxeTBRBScaleSys .dxeTBRBLabel_Material1,
+.dxeTBVSys .dxeTBBScaleSys .dxeTBLTLabel_Material1
+{
+    right: -4px;
+}
+.dxeTBVSys .dxeTBLTScaleSys .dxeTBLTLabel_Material1,
+.dxeTBVSys .dxeTBBScaleSys .dxeTBRBLabel_Material1
+{
+    left: -4px;
+}
+.dxeTBHSys .dxeTBRBScaleSys .dxeTBRBLabel_Material1,
+.dxeTBHSys .dxeTBBScaleSys .dxeTBLTLabel_Material1
+{
+    bottom: -1px;
+}
+.dxeTBHSys .dxeTBLTScaleSys .dxeTBLTLabel_Material1,
+.dxeTBHSys .dxeTBBScaleSys .dxeTBRBLabel_Material1
+{
+    top: 1px;
+}
+.dxeTBItem_Material1
+{
+    color: #8c8c8c;
+}
+.dxeTBHSys .dxeTBItem_Material1 .dxeTBRBLabel_Material1,
+.dxeTBHSys .dxeTBItem_Material1 .dxeTBLTLabel_Material1
+{
+    display: inline-block;
+    margin-left: 0px !important;
+}
+.dxeTBHSys .dxeTBRBScaleSys
+.dxeTBItem_Material1 .dxeTBRBLabel_Material1
+{
+    padding-top: 12px;
+}
+.dxeTBHSys .dxeTBLTScaleSys
+.dxeTBItem_Material1 .dxeTBLTLabel_Material1
+{
+    margin-top: 8px;
+}
+.dxeTBVSys .dxeTBRBScaleSys .dxeTBItem_Material1 .dxeTBRBLabel_Material1
+{
+    margin-left: 5px;
+}
+.dxeTBSelectedItem_Material1 .dxeTBRBLabel_Material1,
+.dxeTBSelectedItem_Material1 .dxeTBLTLabel_Material1,
+.dxeTBSelectedTick_Material1 .dxeTBRBLabel_Material1,
+.dxeTBSelectedTick_Material1 .dxeTBLTLabel_Material1
+{
+    color: #FF5C35;
+}
+.dxeTBVSys .dxeTBLTScaleSys .dxeTBItem_Material1
+{
+    text-align: left;
+}
+.dxeTBVSys .dxeTBRBScaleSys .dxeTBItem_Material1
+{
+    text-align: right;
+}
+.dxeTBVSys .dxeTBBScaleSys .dxeTBItem_Material1
+{
+    text-align: center;
+}
+.dxeTBHSys .dxeTBItem_Material1
+{
+    background-image: url('edtTrackBarLargeTickH.svg');
+    background-size: 1px 20px;
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBItem_Material1
+{
+    background-image: url('edtTrackBarDoubleSmallTickH.svg');
+    background-size: 1px 10px;
+}
+.dxeTBVSys .dxeTBItem_Material1
+{
+    background-image: url('edtTrackBarLargeTickV.svg');
+    background-size: 20px 1px;
+}
+.dxeTBVSys .dxeTBBScaleSys .dxeTBItem_Material1
+{
+    background-image: url('edtTrackBarDoubleSmallTickV.svg');
+    background-size: 28px 1px;
+}
+.dxeTBHSys .dxeTBLargeTick_Material1
+{
+    background-image: url('edtTrackBarLargeTickH.svg');
+    background-size: 1px 20px;
+}
+.dxeTBVSys .dxeTBLargeTick_Material1
+{
+    background-image: url('edtTrackBarLargeTickV.svg');
+    background-size: 20px 1px;
+}
+.dxeTBHSys .dxeTBSmallTick_Material1
+{
+    background-image: url('edtTrackBarSmallTickH.svg');
+    background-size: 1px 10px;
+}
+.dxeTBVSys .dxeTBSmallTick_Material1
+{
+    background-image: url('edtTrackBarSmallTickV.svg');
+    background-size: 10px 1px;
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBLargeTick_Material1
+{
+    background-image: url('edtTrackBarDoubleLargeTickH.svg');
+    background-size: 1px 47px;
+}
+.dxeTBVSys .dxeTBBScaleSys .dxeTBLargeTick_Material1
+{
+    background-image: url('edtTrackBarDoubleLargeTickV.svg');
+    background-size: 47px 1px;
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBSmallTick_Material1
+{
+    background-image: url('edtTrackBarDoubleSmallTickH.svg');
+    background-size: 1px 27px;
+}
+.dxeTBVSys .dxeTBBScaleSys .dxeTBSmallTick_Material1
+{
+    background-image: url('edtTrackBarDoubleSmallTickV.svg');
+    background-size: 27px 1px;
+}
+.dxeTBVSys .dxeTBIncBtn_Material1,
+.dxeTBVSys .dxeReversedDirectionSys .dxeTBDecBtn_Material1
+{
+    margin-top: 17px;
+    bottom: 0;
+    top: auto;
+}
+.dxeTBVSys .dxeTBDecBtn_Material1,
+.dxeTBVSys .dxeReversedDirectionSys .dxeTBIncBtn_Material1
+{
+    margin-bottom: 17px;
+    top: 0;
+    bottom: auto;
+}
+.dxeTBHSys .dxeTBDecBtn_Material1,
+.dxeTBHSys .dxeTBHSys .dxeReversedDirectionSys .dxeTBIncBtn_Material1
+{
+    margin-right: 16px;
+    left: 0;
+    right: auto;
+}
+.dxeTBHSys .dxeTBIncBtn_Material1,
+.dxeTBHSys .dxeReversedDirectionSys .dxeTBDecBtn_Material1
+{
+    margin-left: 16px;
+    right: 0;
+    left: auto;
+}
+.dxeTBVSys .dxeTBBScaleSys .dxeTBDecBtn_Material1,
+.dxeTBVSys .dxeTBBScaleSys .dxeTBIncBtn_Material1
+{
+    margin-left: -14px;
+    left: 50%;
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBDecBtn_Material1,
+.dxeTBHSys .dxeTBBScaleSys .dxeTBIncBtn_Material1
+{
+    margin-top: -14px;
+    top: 50%;
+}
+.dxeTBVSys .dxeTBBScaleSys .dxeTBTrack_Material1
+{
+    margin-left: 0px;
+    left: 50%;
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBTrack_Material1
+{
+    margin-top: 0px;
+    top: 50%;
+}
+.dxeTBVSys .dxeTBLTScaleSys .dxeTBDecBtn_Material1,
+.dxeTBVSys .dxeTBLTScaleSys .dxeTBIncBtn_Material1
+{
+    right: 0px;
+}
+.dxeTBHSys .dxeTBLTScaleSys .dxeTBDecBtn_Material1,
+.dxeTBHSys .dxeTBLTScaleSys .dxeTBIncBtn_Material1
+{
+    bottom: 0px;
+}
+.dxeHelpText_Material1,
+.dxeTBValueToolTip_Material1
+{
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+}
+div.dxeHelpText_Material1,
+.dxeTBValueToolTip_Material1
+{
+    padding: 3px 8px 4px 8px;
+    display: inline;
+    line-height: 18px;
+    position: absolute;
+    background: #FF5C35;
+    color: #FFFFFF;
+    z-index: 41998;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: rgba(0,0,0,0.1) 0 1px 3px;
+    -moz-box-shadow: rgba(0,0,0,0.1) 0 1px 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+td.dxeHelpText_Material1
+{
+    visibility: visible;
+    color: #9F9F9F;
+}
+td.dxeHelpText_Material1 span
+{
+    font-size: 0.85em;
+}
+td.dxeHelpText_Material1.dxeHHelpTextSys
+{
+    padding: 0 6px;
+}
+td.dxeHelpText_Material1.dxeVHelpTextSys
+{
+    padding: 9px 0;
+}
+.dxeTrackBar_Material1 .dxeTBDecBtn_Material1:not(.dx-acc)::before,
+.dxeTrackBar_Material1 .dxeTBIncBtn_Material1:not(.dx-acc)::before
+{
+    content: "dxRippleTargetExternal";
+    display: none;
+}
+.dxeTrackBar_Material1 .dxeTBDecBtn_Material1 .dxRippleContainer,
+.dxeTrackBar_Material1 .dxeTBIncBtn_Material1 .dxRippleContainer
+{
+    width: 50px !important;
+    height: 50px !important;
+    margin-top: -11px;
+    margin-left: -11px;
+}
+.dxeTrackBar_Material1 .dxeTBDecBtn_Material1 .dxRipple,
+.dxeTrackBar_Material1 .dxeTBIncBtn_Material1 .dxRipple
+{
+    background-color: rgba(255,92,53,0.3);
+}
+.dxAndroidMobilePlatform .dxeTrackBar_Material1 .dxeTBDecBtn_Material1 .dxRipple,
+.dxMacOSMobilePlatform .dxeTrackBar_Material1 .dxeTBIncBtn_Material1 .dxRipple,
+.dxAndroidMobilePlatform .dxeTrackBar_Material1 .dxeTBDecBtn_Material1 .dxRipple,
+.dxMacOSMobilePlatform .dxeTrackBar_Material1 .dxeTBIncBtn_Material1 .dxRipple
+{
+    background-color: rgba(255,92,53,0.4);
+}
+/* Loading */
+.dxlpLoadingPanel_Material1,
+.dxlpLoadingPanelWithContent_Material1
+{
+    background-color: white;
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: #484848;
+    -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
+}
+.dxIE .dxlpLoadingPanel_Material1,
+.dxEdge .dxlpLoadingPanel_Material1,
+.dxIE .dxlpLoadingPanelWithContent_Material1,
+.dxEdge .dxlpLoadingPanelWithContent_Material1
+{
+    border-spacing: 0;
+    border-collapse: separate;
+}
+.dxlpLoadingPanel_Material1 td.dx,
+.dxlpLoadingPanelWithContent_Material1 td.dx
+{
+    font-size: 1.17em;
+    white-space: nowrap;
+    text-align: center;
+    padding: 10px 14px;
+}
+html.dxIE.dxBrowserVersion-9 .dxlpLoadingPanel_Material1 .dxlp-loadingImage,
+html.dxIE.dxBrowserVersion-9 .dxlpLoadingPanelWithContent_Material1 .dxlp-loadingImage,
+html.dxIE.dxBrowserVersion-9 .dxcaLoadingPanel_Material1 .dxlp-loadingImage,
+html.dxIE.dxBrowserVersion-9 .dxeImage_Material1.dxe-loadingImage
+{
+    background-image: url('../Web/Loading.gif');
+    height: 32px;
+    width: 32px;
+    animation: none;
+    border: none;
+    border-radius: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.dxcaLoadingPanel_Material1 .dxlp-loadingImage,
+.dxeImage_Material1.dxe-loadingImage
+{
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    border-radius: 50%;
+    animation: dxLoadSpinSys 1s linear infinite;
+    border: 4px solid #FF5C35;
+    border-top: 4px solid #EEE;
+    width: 24px;
+    height: 24px;
+}
+.dxeButtonEditSys .dxic .dxeLoadingDiv_Material1
+{
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
+.dxeButtonEditSys .dxic .dxeLoadingPanel_Material1
+{
+    background-color: transparent !important;
+    font-size: 0;
+}
+.dxeButtonEditSys .dxic .dxeLoadingPanel_Material1 td.dx
+{
+    padding: 0px !important;
+}
+.dxeButtonEditSys .dxic .dxeLoadingPanel_Material1 td.dx > span
+{
+    display: none;
+}
+.dxeButtonEditSys .dxic .dxeLoadingPanel_Material1 td.dx > img
+{
+    height: 15px;
+    width: auto;
+    vertical-align: middle;
+}
+.dxeBase_Material1
+{
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: #484848;
+}
+@keyframes radioFocusAnimation
+{
+    from
+    {
+        width: 0px;
+        height: 0px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    to
+    {
+        margin-left: -8px;
+        margin-top: -8px;
+        width: 36px;
+        height: 36px;
+    }
+}
+.dxtv-ndChk.dxeIRBFocused_Material1::after
+{
+    position: absolute;
+}
+.dxeListBoxItemSelected_Material1 .dxeIRBFocused_Material1::after,
+.dxgvFocusedRow_Material1 .dxeIRBFocused_Material1::after
+{
+    background-color: rgba(255,255,255,0.18);
+}
+.dxEditors_edtRadioButtonUnchecked_Material1.dxeIRBFocused_Material1::after
+{
+    background-color: rgba(0,0,0,0.1);
+}
+.dxeIRBFocused_Material1::after
+{
+    content: "";
+    display: block;
+    margin-left: -8px;
+    margin-top: -8px;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255,92,53,0.3);
+    border-radius: 50%;
+    animation: radioFocusAnimation 0.17s cubic-bezier(0.61, 0.08, 0.46, 0.71);
+}
+[dir='rtl'] .dxeIRBFocused_Material1::after
+{
+    margin-right: -8px;
+}
+.dxeIRadioButton_Material1.dxichSys:not(.dx-acc)::before
+{
+    content: "dxRippleTargetExternal" !important;
+    display: none;
+}
+.dxeIRadioButton_Material1 .dxRippleContainer
+{
+    width: 50px !important;
+    height: 50px !important;
+    margin-top: -15px;
+    margin-left: -15px;
+}
+.dxeIRadioButton_Material1.dxEditors_edtRadioButtonChecked_Material1 .dxRipple
+{
+    background-color: rgba(255,92,53,0.3);
+}
+.dxeIRadioButton_Material1.dxichSys.dxWeb_edtRadioButtonUnchecked_Material1 .dxRipple
+{
+    background-color: rgba(0,0,0,0.1);
+}
+.dxAndroidMobilePlatform .dxeIRadioButton_Material1.dxEditors_edtRadioButtonChecked_Material1 .dxRipple,
+.dxMacOSMobilePlatform .dxeIRadioButton_Material1.dxEditors_edtRadioButtonChecked_Material1 .dxRipple
+{
+    background-color: rgba(255,92,53,0.4);
+}
+.dxAndroidMobilePlatform .dxeIRadioButton_Material1.dxichSys.dxWeb_edtRadioButtonUnchecked_Material1 .dxRipple,
+.dxMacOSMobilePlatform .dxeIRadioButton_Material1.dxichSys.dxWeb_edtRadioButtonUnchecked_Material1 .dxRipple
+{
+    background-color: rgba(0,0,0,0.2);
+}
+.dxeBase_Material1 .dxichCellSys,
+.dxeBase_Material1.dxichCellSys
+{
+    padding: 8px 3px 6px;
+}
+.dxeBase_Material1 .dxichTextCellSys
+{
+    padding: 3px 0 1px;
+}
+.dxeTAR.dxeBase_Material1 .dxichTextCellSys,
+.dxeTAL.dxeBase_Material1[dir='rtl'] .dxichTextCellSys
+{
+    padding: 8px 3px 5px 8px;
+}
+.dxeTAL.dxeBase_Material1 .dxichTextCellSys,
+.dxeTAR.dxeBase_Material1[dir='rtl'] .dxichTextCellSys
+{
+    padding: 8px 8px 5px 3px;
+}
+span.dxeBase_Material1.dxichCellSys.dxeTAR label,
+span[dir='rtl'].dxeBase_Material1.dxichCellSys.dxeTAL label,
+.dx-acc-r span.dxeBase_Material1.dxichCellSys.dxeTAR > span:not([id]),
+.dx-acc-r span[dir='rtl'].dxeBase_Material1.dxichCellSys.dxeTAL > span:not([id])
+{
+    padding: 6px 3px 5px 11px;
+}
+span.dxeBase_Material1.dxichCellSys.dxeTAL label,
+span[dir='rtl'].dxeBase_Material1.dxichCellSys.dxeTAR label,
+.dx-acc-r span.dxeBase_Material1.dxichCellSys.dxeTAL > span:not([id]),
+.dx-acc-r span[dir='rtl'].dxeBase_Material1.dxichCellSys.dxeTAR > span:not([id])
+{
+    padding: 6px 11px 5px 3px;
+}
+/* -- ErrorFrame -- */
+.dxeErrorCell_Material1
+{
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: Red;
+    border-color: black;
+    padding-right: 12px;
+    padding-left: 12px;
+}
+.dxeErrorCell_Material1.dxeNoBorderTop,
+.dxeErrorCell_Material1.dxeNoBorderBottom
+{
+    padding-right: 0;
+    padding-left: 0;
+}
+.dxeErrorCell_Material1.dxeNoBorderBottom td > img
+{
+    margin-top: -2px;
+}
+.dxeErrorCell_Material1.dxeNoBorderBottom
+{
+    padding-bottom: 4px;
+}
+.dxFirefox .dxeErrorCell_Material1.dxeNoBorderTop,
+.dxIE .dxeErrorCell_Material1.dxeNoBorderTop
+{
+    padding-top: 5px;
+}
+.dxeErrorCell_Material1.dxeNoBorderTop
+{
+    padding-top: 6px;
+}
+.dxeErrorCell_Material1 img,
+.dxeErrorCell_Material1 .dx-acc-s
+{
+    margin-right: 8px;
+}
+.dxeErrorFrameWithoutError_Material1
+{
+    border: 1px solid Red;
+}
+.dxeErrorFrameWithoutError_Material1 .dxeControlsCell_Material1,
+.dxeErrorFrameWithoutError_Material1.dxeControlsCell_Material1
+{
+    padding: 2px;
+}
+.dxeEditArea_Material1
+{
+    border: 1px solid #A0A0A0;
+}
+.dxeEditArea_Material1,
+body input.dxeEditArea_Material1
+{
+    color: #484848;
+}
+input[type="text"].dxeEditArea_Material1,
+input[type="password"].dxeEditArea_Material1
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.dxFirefox input[type="text"].dxeEditArea_Material1,
+.dxFirefox input[type="password"].dxeEditArea_Material1
+{
+    margin-top: 0;
+    margin-bottom: -1px;
+}
+noindex:-o-prefocus,
+input[type="text"].dxeEditArea_Material1,
+input[type="password"].dxeEditArea_Material1
+{
+    margin-top: 1px;
+    margin-bottom: 0;
+}
+/* -- Binary Image -- */
+.dxeBinaryImageButtonPanel_Material1
+{
+    height: 36px;
+}
+.dxeBinaryImageButtonPanel_Material1 .dxeBinImgBtnShaderSys
+{
+    background-color: rgba(0,0,0,0.36);
+}
+.dxeBinaryImageButton_Material1
+{
+    margin: 0 6px;
+}
+/* -- Buttons -- */
+.dxFirefox .dxeTextBox_Material1 td.dxic,
+.dxFirefox .dxeButtonEdit_Material1 td.dxic,
+.dxFirefox .dxeButtonEdit_Material1[cellspacing="0"] td.dxic
+{
+    padding: 6px 8px 7px 7px;
+}
+.dxeTextBox_Material1 td.dxic,
+.dxeButtonEdit_Material1 td.dxic,
+.dxeButtonEdit_Material1[cellspacing="0"] td.dxic
+{
+    padding: 7px 8px 6px 7px;
+}
+.dxeButtonEditButton_Material1,
+.dxeCalendarButton_Material1,
+.dxeSpinIncButton_Material1,
+.dxeSpinDecButton_Material1,
+.dxeSpinLargeIncButton_Material1,
+.dxeSpinLargeDecButton_Material1,
+.dxeColorEditButton_Material1
+{
+    background-color: white;
+    background-image: none;
+    vertical-align: middle;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    border: none;
+}
+.dxeButtonEdit_Material1
+{
+    background-color: white;
+    border: 1px solid #DCDCDC;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+    width: 170px;
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.dxeCalendarButton_Material1
+{
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+}
+.dxeButtonEditButton_Material1
+{
+    padding: 7px;
+}
+.dxeSpinIncButton_Material1
+{
+    padding: 5px 12px 1px;
+}
+.dxeSpinDecButton_Material1
+{
+    padding: 1px 12px 5px;
+}
+/* -- Hover -- */
+.dxeButtonEditButtonHover_Material1,
+.dxeSpinIncButtonHover_Material1,
+.dxeSpinDecButtonHover_Material1,
+.dxeSpinLargeIncButtonHover_Material1,
+.dxeSpinLargeDecButtonHover_Material1
+{
+    background-color: #FF5C35;
+    color: white !important;
+}
+.dxeCalendarButtonHover_Material1
+{
+    color: #FF5C35 !important;
+    background: #DDD;
+    border-radius: 2px;
+}
+/* -- Pressed -- */
+.dxeCalendarButtonPressed_Material1,
+.dxeButtonEditButtonPressed_Material1,
+.dxeSpinIncButtonPressed_Material1,
+.dxeSpinDecButtonPressed_Material1,
+.dxeSpinLargeIncButtonPressed_Material1,
+.dxeSpinLargeDecButtonPressed_Material1,
+.dxeColorEditButton_Material1:active
+{
+    background-color: #FF5C35;
+    color: white;
+}
+.dxeColorEditButton_Material1:active,
+.dxeColorEditButton_Material1:hover
+{
+    box-shadow: 0px 8px 16px 1.2px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 8px 16px 1.2px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 8px 16px 1.2px rgba(0,0,0,0.2);
+}
+input.dxeColorEditButton_Material1:hover
+{
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    color: #FF5C35 !important;
+    background: #DDDDDD;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+    border-color: #DDDDDD !important;
+}
+.dxeCalendarButtonPressed_Material1
+{
+    color: #FF5C35 !important;
+    background: #DDD;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+}
+.dxHideContent.dxeButtonEditClearButton_Material1
+{
+    cursor: default;
+}
+.dxeSpinLargeIncButton_Material1
+{
+    padding: 10px 5px 11px 3px;
+}
+.dxeSpinLargeDecButton_Material1
+{
+    padding: 10px 2px 11px 6px;
+}
+.dxeColorEditButton_Material1
+{
+    background-color: #FF5C35;
+    padding: 8px 17px 10px 17px;
+    color: #FFFFFF;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.dxeCalendarButton_Material1,
+input.dxeColorEditButton_Material1
+{
+    background-color: white;
+    box-shadow: none;
+    border: none;
+    padding: 8px 11px 7px;
+    min-width: 37px;
+    text-align: center;
+    white-space: nowrap;
+    color: #484848;
+    text-transform: uppercase;
+    font: 14px 'Roboto Medium', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    font-size: 1em;
+}
+.dxeCalendarButton_Material1.dxeButtonDisabled_Material1,
+.dxeColorEditButton_Material1.dxeButtonDisabled_Material1
+{
+    opacity: 0.73;
+}
+.dxeButtonEditButton_Material1.dxeButtonEditClearButton_Material1,
+.dxeButtonEditButton_Material1.dxeButtonEditClearButton_Material1:hover
+{
+    background: none;
+    border-width: 0;
+    line-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.dxeButtonEditClearButton_Material1 img
+{
+    vertical-align: baseline;
+}
+.dxeButtonEditButton_Material1::before
+{
+    content: "dxRippleTargetExternal";
+    display: none;
+}
+.dxeButtonEditButton_Material1 .dxRippleContainer
+{
+    padding: 15px;
+    margin-left: -15px;
+    margin-top: -15px;
+}
+.dxeButtonEditButton_Material1 .dxRippleContainer .dxRipple
+{
+    background-color: rgba(0,0,0,0.1);
+}
+.dxeButtonEditButton_Material1 .dxEditors_edtDropDown_Material1 + .dxRippleContainer .dxRipple
+{
+    background-color: rgba(255,92,53,0.3);
+}
+.dxAndroidMobilePlatform .dxeButtonEditButton_Material1 .dxRippleContainer .dxRipple,
+.dxMacOSMobilePlatform .dxeButtonEditButton_Material1 .dxRippleContainer .dxRipple
+{
+    background-color: rgba(0,0,0,0.2);
+}
+.dxAndroidMobilePlatform .dxeButtonEditButton_Material1 .dxEditors_edtDropDown_Material1 + .dxRippleContainer .dxRipple,
+.dxMacOSMobilePlatform .dxeButtonEditButton_Material1 .dxEditors_edtDropDown_Material1 + .dxRippleContainer .dxRipple
+{
+    background-color: rgba(255,92,53,0.4);
+}
+.dxeButtonEdit_Material1 .dxeEditArea_Material1
+{
+    background-color: white;
+}
+.dxeButtonEdit_Material1 .dxeEditArea_Material1,
+.dxeButtonEdit_Material1 td.dxic
+{
+    width: 100%;
+}
+.dxeButtonEdit_Material1 .dxeIIC img
+{
+    padding-left: 3px;
+}
+.dxeTextBox_Material1
+{
+    background-color: white;
+    border: 1px solid #DCDCDC;
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+}
+.dxeTextBox_Material1 .dxeEditArea_Material1
+{
+    background-color: white;
+}
+.dxeRadioButtonList_Material1, .dxeCheckBoxList_Material1
+{
+    border: 1px solid #DCDCDC;
+}
+.dxeCheckBoxList_Material1 .dxe > table,
+.dxeRadioButtonList_Material1 .dxe > table
+{
+    width: 100%;
+}
+.dxeRadioButtonList_Material1,
+.dxeCheckBoxList_Material1
+{
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+}
+.dxeRadioButtonList_Material1 td.dxe,
+.dxeCheckBoxList_Material1 td.dxe
+{
+    padding: 8px 17px 9px 11px;
+}
+.dxeRadioButtonList_Material1[dir='rtl'] td.dxe,
+.dxeCheckBoxList_Material1[dir='rtl'] td.dxe
+{
+    padding: 8px 11px 9px 17px;
+}
+/* -- Memo -- */
+.dxeMemo_Material1
+{
+    background-color: white;
+    border: 1px solid #DCDCDC;
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+}
+.dxFirefox .dxeMemo_Material1 .dxeMemoEditArea_Material1,
+.dxeMemo_Material1 .dxeMemoEditArea_Material1
+{
+    padding: 7px 4px 0px 7px;
+    background-color: white;
+    outline: none;
+    color: #484848;
+}
+.dxFirefox .dxeMemo_Material1 .dxeMemoEditArea_Material1.dxeDisabled_Material1,
+.dxeMemo_Material1 .dxeMemoEditArea_Material1.dxeDisabled_Material1
+{
+    color: #bbbbbb;
+}
+/* -- Hyperlink -- */
+.dxeHyperlink_Material1
+{
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: #FF5C35;
+    text-decoration: none;
+}
+.dxeHyperlink_Material1:visited
+{
+    color: #521E11;
+}
+.dxeHyperlink_Material1:hover
+{
+    text-decoration: underline;
+}
+/* -- ListBox -- */
+.dxeListBox_Material1
+{
+    background-color: white;
+    width: 70px;
+    height: 109px;
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: #484848;
+    border: 1px solid #DCDCDC;
+}
+.dxeListBox_Material1 div.dxlbd
+{
+    padding-top: 1px;
+    padding-bottom: 1px;
+    height: 107px;
+}
+.dxeListBoxFilter_Material1
+{
+    padding: 6px;
+    border-bottom: 1px solid #DCDCDC;
+    background-color: #EEEEEE;
+}
+.dxeListBox_Material1 .dxeListBoxFilter_Material1 .dxeLBFEButtonSys,
+.dxeListBox_Material1 .dxeListBoxFilter_Material1 .dxeLBShowFilterBtnSys
+{
+    background: none;
+    border: none;
+}
+.dxeListBox_Material1 .dxeListBoxFilter_Material1 .dxeLBFEButtonSys
+{
+    background-color: transparent;
+}
+.dxeListBox_Material1 .dxeListBoxFilter_Material1 .dxeLBShowFilterBtnSys
+{
+    background-color: white;
+}
+.dxeListBox_Material1 .dxeListBoxFilter_Material1 .dxeButtonEditSys,
+.dxeListBox_Material1 .dxeListBoxFilter_Material1 .dxeButtonEditSys .dxeEditAreaSys
+{
+    background-color: #EEEEEE;
+    border-color: transparent;
+}
+.dxeListBox_Material1 .dxeListBoxFilter_Material1 .dxeLBShowFilterBtnSys
+{
+    width: auto;
+    border-radius: 0;
+    box-shadow: none;
+}
+.dxeListBox_Material1 .dxeListBoxFilter_Material1 .dxeLBShowFilterBtnSys .dxb
+{
+    padding: 0 12px;
+}
+.dxeListBox_Material1 .dxeListBoxFilter_Material1 .dxeLBShowFilterBtnSys.dxbButtonHover_Material1
+{
+    background-color: #EEE;
+}
+.dxeListBox_Material1.dx-acc-r .dxeListBoxFilter_Material1 .dxeLBShowFilterBtnSys .dxbf
+{
+    border-color: #FF5C35;
+}
+.dxeListBox_Material1 .dxeListBoxFilter_Material1 .dxeLBFEButtonSys img
+{
+    margin-bottom: -2px;
+}
+.dxeListBox_Material1 .dxeListBoxFilter_Material1 .dxeLBShowFilterBtnSys img
+{
+    margin-top: 2px;
+}
+.dxeListBox_Material1 > tbody > tr > td > .dxeListBoxSelectAll_Material1
+{
+    padding: 2px 0 4px 9px;
+    border-bottom: 1px solid #DCDCDC;
+    cursor: default;
+    white-space: nowrap;
+}
+.dxeListBox_Material1 > tbody > tr > td > .dxeListBoxSelectAllHover_Material1
+{
+    background-color: #EEE;
+    color: #484848;
+}
+*[dir="rtl"].dxeListBox_Material1 > tbody > tr > td > .dxeListBoxSelectAll_Material1
+{
+    padding: 2px 9px 4px 0;
+}
+.dxeListBox_Material1 > tbody > tr > td > .dxeListBoxSelectAll_Material1 .dxichCellSys
+{
+    padding-left: 3px;
+    padding-right: 4px;
+}
+*[dir="rtl"].dxeListBox_Material1 > tbody > tr > td > .dxeListBoxSelectAll_Material1 .dxichCellSys
+{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.dxeListBox_Material1 .dxeHCC .dxeListBoxSelectAll_Material1 .dxichSys,
+.dxeListBox_Material1 .dxeHCCR .dxeListBoxSelectAll_Material1 .dxichSys
+{
+    margin: 0;
+}
+.dxeListBox_Material1 .dxeHCCR .dxeListBoxSelectAll_Material1 .dxichCellSys
+{
+    padding: 2px 2px 2px 0;
+}
+.dxeListBox_Material1 .dxeHCCR .dxeListBoxSelectAll_Material1 input[type="checkbox"]
+{
+    margin: 3px 2px 3px 5px;
+}
+.dxeListBox_Material1 .dxeC input[type="checkbox"]
+{
+    margin-left: 4px !important;
+    margin-right: 3px !important;
+}
+*[dir="rtl"].dxeListBox_Material1 .dxeCR input[type="checkbox"]
+{
+    margin-left: 3px !important;
+    margin-right: 4px !important;
+}
+.dxeListBox_Material1 > tbody > tr > td > .dxeListBoxSelectAll_Material1 input[type="checkbox"]
+{
+    margin-left: 5px;
+    margin-right: 6px;
+    margin-top: 7px;
+}
+*[dir="rtl"].dxeListBox_Material1 > tbody > tr > td > .dxeListBoxSelectAll_Material1 input[type="checkbox"]
+{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.dxeDisabled_Material1 .dxeListBoxSelectAll_Material1 .dxeBase_Material1
+{
+    color: #bbbbbb;
+}
+.dxeListBoxItemRow_Material1
+{
+    cursor: default;
+}
+.dxeListBoxItem_Material1
+{
+    padding: 8px 10px 7px;
+    white-space: nowrap;
+    text-align: left;
+}
+.dxeListBoxItem_Material1 em
+{
+    background: #CFCFCF none repeat 0 0;
+    color: #484848;
+    font-weight: bold;
+    font-style: normal;
+}
+.dxeListBox_Material1 td.dxeI,
+.dxeListBox_Material1 td.dxeIM,
+.dxeListBox_Material1 .dxeHIC,
+.dxeListBox_Material1 td.dxeFTM,
+.dxeListBox_Material1 td.dxeTM,
+.dxeListBox_Material1 td.dxeC,
+.dxeListBox_Material1 td.dxeCM,
+.dxeListBox_Material1 td.dxeHCC,
+.dxeListBox_Material1 td.dxeMI,
+.dxeListBox_Material1 td.dxeMIM
+{
+    border-right-width: 0 !important;
+}
+.dxeListBox_Material1 td.dxeIR,
+.dxeListBox_Material1 td.dxeIMR,
+.dxeListBox_Material1 .dxeHICR,
+.dxeListBox_Material1 td.dxeFTMR,
+.dxeListBox_Material1 td.dxeTMR,
+.dxeListBox_Material1 td.dxeCR,
+.dxeListBox_Material1 td.dxeCMR,
+.dxeListBox_Material1 td.dxeHCCR,
+.dxeListBox_Material1 td.dxeMIR,
+.dxeListBox_Material1 td.dxeMIMR
+{
+    border-left-width: 0 !important;
+}
+.dxeListBox_Material1 td.dxeCM,
+.dxeListBox_Material1 td.dxeHCC,
+.dxeListBox_Material1 td.dxeCMR,
+.dxeListBox_Material1 td.dxeHCCR
+{
+    width: 43px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.dxeListBox_Material1 .dxeListBoxEllipsisSys td.dxeC,
+.dxeListBox_Material1 .dxeListBoxEllipsisSys td.dxeCR
+{
+    width: 23px;
+}
+.dxeListBox_Material1 td.dxeIM,
+.dxeListBox_Material1 td.dxeIMR
+{
+    width: 0;
+}
+.dxeListBox_Material1 td.dxeC > span,
+.dxeListBox_Material1 td.dxeCM > span
+{
+    margin: 2px 2px 2px 3px;
+}
+.dxeListBox_Material1 td.dxeCR > span,
+.dxeListBox_Material1 td.dxeCMR > span
+{
+    margin: 2px 3px 2px 2px;
+}
+.dxeListBox_Material1 td.dxeC
+{
+    padding-right: 10px !important;
+}
+.dxeListBox_Material1 td.dxeCR
+{
+    padding-left: 10px !important;
+}
+.dxeListBox_Material1 td.dxeT
+{
+    width: 100%;
+    padding-left: 0 !important;
+}
+.dxeListBox_Material1 td.dxeTR
+{
+    width: 100%;
+    padding-right: 0 !important;
+}
+.dxeListBox_Material1 td.dxeT,
+.dxeListBox_Material1 td.dxeMI
+{
+    border-left-width: 0 !important;
+}
+.dxeListBox_Material1 td.dxeTR,
+.dxeListBox_Material1 td.dxeMIR
+{
+    border-right-width: 0 !important;
+}
+.dxeListBox_Material1 td.dxeFTM,
+.dxeListBox_Material1 td.dxeTM,
+.dxeListBox_Material1 td.dxeLTM,
+.dxeListBox_Material1 .dxeHFC,
+.dxeListBox_Material1 .dxeHC,
+.dxeListBox_Material1 .dxeHLC,
+.dxeListBox_Material1 td.dxeFTMR,
+.dxeListBox_Material1 td.dxeTMR,
+.dxeListBox_Material1 td.dxeLTMR,
+.dxeListBox_Material1 .dxeHFCR,
+.dxeListBox_Material1 .dxeHCR,
+.dxeListBox_Material1 .dxeHLCR
+{
+    overflow: hidden;
+}
+.dxeListBox_Material1 td.dxeFTM.dxeLTM
+{
+    border-left-width: 0 !important;
+}
+.dxeListBox_Material1 td.dxeFTM,
+.dxeListBox_Material1 td.dxeTM,
+.dxeListBox_Material1 .dxeHFC,
+.dxeListBox_Material1 .dxeHC
+{
+    padding-right: 6px !important;
+}
+.dxeListBox_Material1 td.dxeFTMR,
+.dxeListBox_Material1 td.dxeTMR,
+.dxeListBox_Material1 .dxeHFCR,
+.dxeListBox_Material1 .dxeHCR
+{
+    padding-left: 6px !important;
+}
+.dxeListBox_Material1 td.dxeLTM,
+.dxeListBox_Material1 td.dxeTM,
+.dxeListBox_Material1 .dxeHC,
+.dxeListBox_Material1 .dxeHLC
+{
+    padding-left: 6px !important;
+}
+.dxeListBox_Material1 td.dxeLTMR,
+.dxeListBox_Material1 td.dxeTMR,
+.dxeListBox_Material1 .dxeHCR,
+.dxeListBox_Material1 .dxeHLCR
+{
+    padding-right: 6px !important;
+}
+/* Ripple */
+.dxeListBox_Material1 .dxlbd .dxeListBoxItemRow_Material1::before,
+.dxeListBox_Material1 .dxeListBoxSelectAll_Material1::before,
+.dxeListBox_Material1 .dxeHCCSA::before
+{
+    content: "dxRippleTarget";
+    display: none;
+}
+.dxeListBox_Material1 .dxlbd .dxeListBoxItemRow_Material1 .dxeListBoxItemSelected_Material1 + .dxRippleContainer .dxRipple
+{
+    background-color: rgba(255,255,255,0.85);
+}
+.dxeListBox_Material1 .dxlbd .dxeListBoxItemRow_Material1 .dxRipple,
+.dxeListBox_Material1 .dxeListBoxSelectAll_Material1 .dxRipple,
+.dxeListBox_Material1 .dxeHCCSA .dxRipple
+{
+    background-color: rgba(255,92,53,0.55);
+}
+.dxeListBoxItemRow_Material1.dx-ar > .dxeListBoxItem_Material1,
+.dxeListBoxItemRow_Material1.dx-al > .dxeListBoxItem_Material1
+{
+    float: inherit;
+}
+/*Grid lines*/
+.dxeListBox_Material1 td.dxeLTM,
+.dxeListBox_Material1 td.dxeTM,
+.dxeListBox_Material1 td.dxeMIM
+{
+    border-left: 1px solid #cfcfcf !important;
+}
+.dxeListBox_Material1 td.dxeLTMR,
+.dxeListBox_Material1 td.dxeTMR,
+.dxeListBox_Material1 td.dxeMIMR
+{
+    border-right: 1px solid #cfcfcf !important;
+}
+.dxeListBox_Material1 td.dxeIM,
+.dxeListBox_Material1 td.dxeFTM,
+.dxeListBox_Material1 td.dxeTM,
+.dxeListBox_Material1 td.dxeLTM,
+.dxeListBox_Material1 td.dxeCM,
+.dxeListBox_Material1 td.dxeMIM,
+.dxeListBox_Material1 td.dxeIMR,
+.dxeListBox_Material1 td.dxeFTMR,
+.dxeListBox_Material1 td.dxeTMR,
+.dxeListBox_Material1 td.dxeLTMR,
+.dxeListBox_Material1 td.dxeCMR,
+.dxeListBox_Material1 td.dxeMIMR
+{
+    border-bottom: 1px solid #cfcfcf;
+}
+.dxeListBoxItemSelected_Material1
+{
+    color: #FFFFFF;
+    background-color: #FF5C35;
+}
+.dxeDisabled_Material1.dxeListBox_Material1 .dxeListBoxItemSelected_Material1
+{
+    background-color: #DDDDDD;
+}
+.dxeListBoxItemHover_Material1.dxeListBoxItemSelected_Material1
+{
+    color: #FFFFFF;
+    background-color: #FF5C35;
+}
+.dxeListBoxItemHover_Material1
+{
+    background-color: #EEE;
+    color: #484848;
+}
+.dxeListBoxWithCustAppearanceSys .dxeListBoxItemSelected_Material1
+{
+    color: #FFFFFF !important;
+    background-color: #FF5C35 !important;
+}
+.dxeListBoxWithCustAppearanceSys.dxeDisabled_Material1.dxeListBox_Material1 .dxeListBoxItemSelected_Material1
+{
+    background-color: #DDDDDD !important;
+    color: #bbbbbb !important;
+}
+.dxeListBoxWithCustAppearanceSys .dxeListBoxItemHover_Material1.dxeListBoxItemSelected_Material1
+{
+    color: #FFFFFF !important;
+    background-color: #FF5C35 !important;
+}
+.dxeListBoxWithCustAppearanceSys .dxeListBoxItemHover_Material1
+{
+    background-color: #EEEEEE !important;
+    color: #484848 !important;
+}
+.dxeListBoxItemHover_Material1 em,
+.dxeListBoxItemSelected_Material1 em
+{
+    background-image: none;
+}
+/*Header*/
+.dxeListBox_Material1 .dxeHD
+{
+    border-bottom: 1px solid #DCDCDC;
+    color: #8d8d8d;
+}
+.dxeListBox_Material1 .dxeHC,
+.dxeListBox_Material1 .dxeHLC,
+.dxeListBox_Material1 td.dxeHMIC
+{
+    border-left: 1px solid #DCDCDC;
+}
+.dxeListBox_Material1 .dxeHCR,
+.dxeListBox_Material1 .dxeHLCR,
+.dxeListBox_Material1 td.dxeHMICR
+{
+    border-right: 1px solid #A0A0A0;
+    text-align: right;
+}
+.dxeListBox_Material1 .dxeHICR,
+.dxeListBox_Material1 .dxeHFCR,
+.dxeListBox_Material1 .dxeHCCR
+{
+    border-right: 1px solid #DCDCDC;
+    text-align: right;
+}
+.dxeListBox_Material1 .dxeHFC,
+.dxeListBox_Material1 .dxeHC,
+.dxeListBox_Material1 .dxeHMIC
+{
+    border-right-width: 0;
+}
+.dxeListBox_Material1 .dxeHFCR,
+.dxeListBox_Material1 .dxeHCR,
+.dxeListBox_Material1 .dxeHMICR
+{
+    border-left-width: 0;
+    text-align: right;
+}
+.dxeListBox_Material1 .dxeHLC
+{
+    border-right: 1px solid #DCDCDC;
+}
+.dxeListBox_Material1 .dxeHLCR
+{
+    border-left: 1px solid #DCDCDC;
+    text-align: right;
+}
+/* -- Calendar -- */
+.dxeCalendar_Material1
+{
+    background-color: White;
+    color: #484848;
+    font-weight: normal;
+    font: 14px 'Roboto Medium', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    cursor: default;
+    border: 1px solid #D9D9D9;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+    border-collapse: separate;
+}
+.dxeCalendarFooter_Material1
+{
+    border-top: 1px solid #EAEAEA;
+}
+.dxeCalendar_Material1 td.dxMonthGridWithWeekNumbers > table > tbody > tr > td:first-child,
+.dxeCalendar_Material1 td.dxMonthGridWithWeekNumbers > div.dxAC > div > table > tbody > tr > td:first-child
+{
+    font-size: 0.75em;
+    text-align: right;
+    padding: 15px 9px 15px 10px;
+    color: #A1A1A1;
+    background-color: #F1F1F1;
+}
+.dxeCalendar_Material1 td.dxMonthGridWithWeekNumbers > table > tbody > tr > td:nth-child(2)
+{
+    border-left: 6px solid transparent;
+    background-clip: padding-box;
+}
+.dxeCalendar_Material1 td.dxMonthGridWithWeekNumbers > table
+{
+    padding-right: 5px;
+}
+.dxeCalendar_Material1 td.dxMonthGrid > table
+{
+    padding-right: 9px;
+    padding-left: 9px;
+}
+.dxeCalendar_Material1 td.dxMonthGrid_Material1
+{
+    padding: 8px 20px;
+}
+.dxeCalendar_Material1 td.dxMonthGridWithWeekNumbers,
+.dxeCalendar_Material1 td.dxMonthGridWithWeekNumbersRtl
+{
+    min-width: 244px;
+}
+.dxeCalendarDayHeader_Material1
+{
+    padding: 20px 4px 10px;
+    font-size: 0.86em;
+    text-transform: uppercase;
+}
+.dxeCalendarWeekNumber_Material1
+{
+    font-size: 0.75em;
+    text-align: right;
+    padding: 15px 9px 15px 10px;
+    color: #A1A1A1;
+    background-color: #F1F1F1;
+}
+.dxeCalendar_Material1 td.dxMonthGridWithWeekNumbers > table > tbody > tr:last-child > td,
+.dxeCalendar_Material1 td.dxMonthGrid > table > tbody > tr:last-child > td
+{
+    padding-bottom: 12px;
+}
+.dxIE.dxBrowserVersion-10 .dxeCalendar_Material1 td.dxMonthGridWithWeekNumbers > table > tbody > tr:last-child > td,
+.dxIE.dxBrowserVersion-10 .dxeCalendar_Material1 td.dxMonthGrid > table > tbody > tr:last-child > td
+{
+    background-repeat: no-repeat;
+    background-position: center -5px;
+    background-size: 40px 58px;
+}
+.dxeCalendar_Material1 td.dxMonthGridWithWeekNumbers > table > tbody > tr:last-child > td:first-child
+{
+    padding-bottom: 12px;
+}
+.dxeCalendarWeekend_Material1
+{
+    color: #FF3300;
+}
+.dxeCalendarOtherMonth_Material1,
+.dxeCalendarFastNavItem_Material1.dxeCalendarFastNavItemOtherPeriod_Material1
+{
+    opacity: 0.3;
+}
+.dxeCalendarOutOfRange_Material1,
+.dxeCalendarFastNavItem_Material1.dxeCalendarOutOfRange_Material1
+{
+    color: #d0d0d0;
+}
+.dxeCalendarDayDisabled_Material1,
+.dxeCalendarFastNavItem_Material1.dxeCalendarDayDisabled_Material1
+{
+    opacity: 1.0;
+    background-color: #fcfcfc;
+    color: #ececec !important;
+}
+.dxeCalendarDay_Material1
+{
+    padding: 12px;
+    text-align: center;
+}
+.dxeCalendarSelected_Material1.dxeDayInRange,
+.dxeCalendarDay_Material1.dxeCalendarHover_Material1:not(.dxeCalendarOutOfRange_Material1):not(.dxeCalendarDayDisabled_Material1):not(.dxeCalendarSelected_Material1)
+{
+    color: #484848;
+}
+.dxeCalendarSelected_Material1
+{
+    color: white;
+}
+.dxeCalendarSelected_Material1,
+.dxeCalendarHover_Material1,
+.dxeCalendarDay_Material1.dxeCalendarToday_Material1
+{
+    background-repeat: no-repeat;
+    background-position: center 3px;
+    background-size: 40px 40px;
+}
+.dxeCalendar_Material1 td.dxMonthGridWithWeekNumbers > table > tbody > tr > td:nth-child(2).dxeCalendarSelected_Material1,
+.dxeCalendar_Material1 td.dxMonthGridWithWeekNumbers > table > tbody > tr > td:nth-child(2).dxeCalendarToday_Material1
+{
+    background-position: center 3px;
+}
+.dxeCalendar_Material1 td.dxMonthGrid > table > tbody > tr > td:nth-child(1).dxeCalendarSelected_Material1,
+.dxeCalendar_Material1 td.dxMonthGrid > table > tbody > tr > td:nth-child(1).dxeCalendarToday_Material1
+{
+    background-position: center 2px !important;
+}
+.dxeCalendar_Material1 td.dxMonthGridWithWeekNumbers > table > tbody > tr:last-child > td.dxeCalendarWeekNumber_Material1 + .dxeCalendarSelected_Material1,
+.dxeCalendar_Material1 td.dxMonthGridWithWeekNumbers > table > tbody > tr:last-child > td.dxeCalendarWeekNumber_Material1 + .dxeCalendarToday_Material1,
+.dxeCalendar_Material1 td.dxMonthGridWithWeekNumbers > table > tbody > tr:last-child > td.dxeCalendarSelected_Material1,
+.dxeCalendar_Material1 td.dxMonthGridWithWeekNumbers > table > tbody > tr:last-child > td.dxeCalendarToday_Material1
+{
+    background-position: center 3px;
+}
+.dxeCalendarFastNavItem_Material1
+{
+    background-color: #ebebeb;
+    outline: 1px white solid;
+}
+.dxChrome .dxeCalendarFastNavItem_Material1
+{
+    outline-style: auto;
+}
+.dxeCalendarFastNavItem_Material1.dxeCalendarFastNavItemHover_Material1:not(.dxeCalendarOutOfRange_Material1):not(.dxeCalendarDayDisabled_Material1):not(.dxeCalendarFastNavItemSelected_Material1),
+.dxeCalendarFastNavMonth_Material1.dxeCalendarFastNavMonthHover_Material1,
+.dxeCalendarFastNavYear_Material1.dxeCalendarFastNavYearHover_Material1
+{
+    background-color: #b8b8b8;
+    color: black;
+}
+.dxeCalendarFastNavItem_Material1.dxeCalendarFastNavItemSelected_Material1,
+.dxeCalendarFastNavMonth_Material1.dxeCalendarFastNavMonthSelected_Material1,
+.dxeCalendarFastNavYear_Material1.dxeCalendarFastNavYearSelected_Material1
+{
+    background-color: #FF5C35;
+    color: white;
+}
+.dxeCalendarFastNavItem_Material1.dxeCalendarFastNavItemSelected_Material1,
+.dxeCalendarFastNavItem_Material1.dxeCalendarFastNavItemOtherPeriod_Material1.dxeCalendarFastNavItemSelected_Material1
+{
+    color: white;
+}
+.dxeCalendarFastNavItem_Material1.dxeCalendarToday_Material1
+{
+    box-shadow: inset 0 0 0 2px #b8b8b8;
+}
+.dxeCalendarFastNavItem_Material1.dxeCalendarFastNavItemSelected_Material1.dxeCalendarToday_Material1
+{
+    box-shadow: inset 0 0 0 2px #521E11;
+}
+.dxeDayInRange.dxeCalendarFastNavItem_Material1.dxeCalendarFastNavItemSelected_Material1
+{
+    background-color: #b8b8b8;
+    color: black;
+}
+.dxeDayInRange.dxeCalendarFastNavItem_Material1.dxeCalendarFastNavItemSelected_Material1.dxeCalendarToday_Material1,
+.dxeCalendarToday_Material1.dxeCalendarFastNavItem_Material1.dxeCalendarFastNavItemHover_Material1:not(.dxeCalendarOutOfRange_Material1):not(.dxeCalendarDayDisabled_Material1):not(.dxeCalendarFastNavItemSelected_Material1)
+{
+    box-shadow: inset 0 0 0 2px #858585;
+}
+.dxeCalendarDay_Material1.dxeCalendarHover_Material1:not(.dxeCalendarOutOfRange_Material1):not(.dxeCalendarDayDisabled_Material1):not(.dxeCalendarSelected_Material1)
+{
+    background-color: #b8b8b8;
+    color: black;
+}
+.dxeCalendarDay_Material1.dxeCalendarSelected_Material1
+{
+    background-color: #FF5C35;
+    color: white;
+}
+.dxeCalendarDay_Material1.dxeCalendarToday_Material1
+{
+    box-shadow: inset 0 0 0 1px #b8b8b8;
+}
+.dxeCalendarDay_Material1.dxeCalendarSelected_Material1.dxeCalendarToday_Material1
+{
+    box-shadow: inset 0 0 0 1px #521E11;
+}
+.dxeDayInRange.dxeCalendarSelected_Material1
+{
+    background-color: #b8b8b8;
+    color: black;
+}
+.dxeDayInRange.dxeCalendarSelected_Material1.dxeCalendarToday_Material1,
+.dxeCalendarToday_Material1.dxeCalendarDay_Material1.dxeCalendarHover_Material1:not(.dxeCalendarOutOfRange_Material1):not(.dxeCalendarDayDisabled_Material1):not(.dxeCalendarSelected_Material1)
+{
+    box-shadow: inset 0 0 0 1px #858585;
+}
+.dxeCalendarDay_Material1.dxeCalendarHover_Material1:not(.dxeCalendarOutOfRange_Material1):not(.dxeCalendarDayDisabled_Material1):not(.dxeCalendarSelected_Material1),
+.dxeCalendarFastNavItem_Material1.dxeCalendarFastNavItemHover_Material1:not(.dxeCalendarOutOfRange_Material1):not(.dxeCalendarDayDisabled_Material1):not(.dxeCalendarFastNavItemSelected_Material1),
+.dxeCalendarSelected_Material1.dxeCalendarOtherMonth_Material1,
+.dxeCalendarFastNavItemSelected_Material1.dxeCalendarFastNavItemOtherPeriod_Material1
+{
+    opacity: 1.0;
+}
+.dxeCalendarSelected_Material1.dxeDisabled_Material1
+{
+    background-color: #ffd5a6;
+}
+.dxeCalendarHeader_Material1
+{
+    background-color: #FF5C35;
+    color: white;
+    font-size: 1.15em;
+    padding: 8px 8px 8px 8px;
+    margin: 10px;
+    text-transform: uppercase;
+}
+.dxeCalendarHeader_Material1 td.dxe
+{
+    text-align: center;
+    cursor: pointer;
+}
+.dxeCalendarHeader_Material1 .dxeCHS
+{
+    min-width: 10px;
+    *width: 10px;
+}
+.dxeCalendarHeader_Material1 span
+{
+    padding: 0 16px;
+    white-space: nowrap !important;
+}
+.dxeCalendarFooter_Material1
+{
+    padding: 8px 0;
+    text-align: right;
+}
+.dxeCalendarFooter_Material1 > button + button
+{
+    margin-left: 8px;
+}
+.dxeCalendar_Material1 .dxeCalendarFooter_Material1.dx-ac > *
+{
+    margin: 0 0 0 auto;
+}
+.dxeCalendar_Material1:not([dir='rtl']) .dxeCalendarFooter_Material1
+{
+    padding-right: 13px;
+}
+.dxeCalendar_Material1[dir='rtl'] .dxeCalendarFooter_Material1
+{
+    padding-left: 13px;
+}
+.dxeCalendar_Material1.dxeFocused_Material1 .dxeCalendarFooter_Material1
+{
+    border-color: #FF5C35;
+}
+.dxeCalendarFastNav_Material1
+{
+    color: Black;
+    background: White none;
+    border-top: 1px solid #c0c0c0;
+    border-right: 1px solid #c0c0c0;
+    border-left: 1px solid #c0c0c0;
+    padding: 12px 8px;
+}
+.dxFastNavGrid .dxeCalendarFastNav_Material1
+{
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+}
+.dxeCalendar_Material1 .dxYCVisibleByDefault
+{
+    width: 260px;
+    height: 200px;
+}
+.dxeCalendarFastNavMonthArea_Material1
+{
+    padding: 0px 9px;
+}
+.dxeCalendarFastNavItemArea_Material1
+{
+    padding: 9px;
+}
+.dxeCalendarFastNavYearArea_Material1
+{
+    padding-top: 8px;
+}
+.dxeCalendarFastNavHeader_Material1
+{
+    color: #666666;
+    background-color: #F1F1F1;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+.dxeCalendarFastNavHeader_Material1 > table > tbody > tr > td:last-child
+{
+    padding: 0 12px 0 0;
+}
+*[dir="rtl"].dxeCalendar .dxeCalendarFastNavHeader_Material1 > table > tbody > tr > td:last-child
+{
+    padding: 0 0 0 12px;
+}
+.dxeCalendarFastNavFooter_Material1
+{
+    color: Black;
+    padding: 8px 0px;
+    border-right: 1px solid #c0c0c0;
+    border-bottom: 1px solid #c0c0c0;
+    border-left: 1px solid #c0c0c0;
+    background-color: white;
+}
+.dxeCalendarFastNavFooter_Material1 .dxeCFNFS
+{
+    min-width: 11px;
+    *width: 11px;
+}
+.dxeCalendarFastNavItem_Material1,
+.dxeCalendarFastNavMonth_Material1,
+.dxeCalendarFastNavYear_Material1
+{
+    color: #484848;
+    padding: 3px 5px;
+    text-align: center;
+}
+.dxeCalendarFastNavMonth_Material1,
+.dxeCalendarFastNavYear_Material1
+{
+    cursor: pointer;
+}
+.dxeCalendarFastNavItem_Material1
+{
+    cursor: default;
+}
+.dxeCalendarFastNavItem_Material1:empty
+{
+    pointer-events: none;
+}
+.dxeCalendarFastNavMonth_Material1
+{
+    padding: 6px;
+}
+.dxeCalendarFastNavItem_Material1:before,
+.dxeCalendarFastNavItem_Material1:after
+{
+    content: "";
+    display: block;
+}
+.dxeCalendarFastNavItem_Material1:before
+{
+    padding-top: 6px;
+}
+.dxeCalendarFastNavItem_Material1:after
+{
+    padding-bottom: 6px;
+}
+.dxeDateEditTimeEditCell_Material1
+{
+    padding: 24px 74px 12px 93px;
+    width: 90px;
+}
+.dxeDateEditClockCell_Material1
+{
+    padding: 32px 48px 0 65px;
+}
+.dxeCalendarFooter_Material1.dxeDETSF
+{
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.dxeCalendarButton_Material1::before
+{
+    content: "dxRippleTarget";
+    display: none;
+}
+.dxeCalendarButton_Material1 .dxRipple
+{
+    background-color: rgba(255,255,255,0.45);
+}
+.dxAndroidMobilePlatform .dxeCalendarButton_Material1 .dxRipple,
+.dxMacOSMobilePlatform .dxeCalendarButton_Material1 .dxRipple
+{
+    background-color: rgba(255,255,255,0.5);
+}
+.dxeCalendarDay_Material1::before
+{
+    content: "dxRippleTargetExternal";
+    display: none;
+}
+.dxeCalendarDay_Material1 .dxRippleContainer
+{
+    padding: 12px;
+    margin-left: -12px;
+    margin-top: -12px;
+}
+.dxAndroidMobilePlatform .dxeCalendarDay_Material1 .dxRipple,
+.dxMacOSMobilePlatform .dxeCalendarDay_Material1 .dxRipple
+{
+    background-color: rgba(0,0,0,0.25);
+}
+.dxeCalendar_Material1 td.dxMonthGridWithWeekNumbers > table > tbody > tr:last-child > td .dxRippleContainer,
+.dxeCalendar_Material1 td.dxMonthGrid > table > tbody > tr:last-child > td .dxRippleContainer
+{
+    margin-top: -12px;
+    margin-left: -5px;
+    width: 47px !important;
+    height: 47px !important;
+}
+.dxeCalendar_Material1 td.dxMonthGridWithWeekNumbers > table > tbody > tr:last-child > td .dxRippleContainer .dxRipple,
+.dxeCalendar_Material1 td.dxMonthGrid > table > tbody > tr:last-child > td .dxRippleContainer .dxRipple
+{
+    margin-bottom: 10px;
+}
+.dxeCalendar_Material1 td.dxMonthGridWithWeekNumbers > table > tbody > tr > td:nth-child(2) .dxRippleContainer
+{
+    margin-left: -12px;
+}
+.dxeCalendar_Material1 td.dxMonthGridWithWeekNumbers > table > tbody > tr:last-child > td:nth-child(2) .dxRippleContainer
+{
+    margin-left: -2px;
+}
+/* Disabled */
+.dxeDisabled_Material1,
+.dxeDisabled_Material1 td.dxe
+{
+    color: #bbbbbb;
+    cursor: default;
+}
+.dxeEditArea_Material1.dxeDisabled_Material1
+{
+    color: #bbbbbb;
+}
+a.dxeDisabled_Material1:hover
+{
+    color: #bbbbbb;
+    text-decoration: none;
+}
+.dxeButtonDisabled_Material1
+{
+    border-color: #bbbbbb;
+    color: #bbbbbb;
+    cursor: default;
+}
+/* -- Button -- */
+.dxbButton_Material1
+{
+    color: white;
+    background-color: #FF5C35;
+    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+    padding: 1px;
+    font: 14px 'Roboto Medium', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    -webkit-transition-property: box-shadow, background-color;
+    -moz-transition-property: box-shadow, background-color;
+    -o-transition-property: box-shadow, background-color;
+    transition-property: box-shadow, background-color;
+    -webkit-transition-duration: .3s;
+    -moz-transition-duration: .3s;
+    -o-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-tap-highlight-color: transparent;
+}
+.dxbButton_Material1.dxbTSys
+{
+    width: 96px;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+}
+.dxbButton_Material1.dxbDisabled_Material1
+{
+    border-color: #DDDDDD;
+    background-color: #DDDDDD;
+    color: #A2A2A2;
+    cursor: default;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.dxbButtonHover_Material1
+{
+    color: white;
+    background-color: #FF5C35;
+    box-shadow: 0px 5px 6px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 5px 6px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 5px 6px rgba(0,0,0,0.2);
+}
+.dxbButtonChecked_Material1
+{
+    color: white;
+    background-color: #9E3921;
+}
+.dxbButtonPressed_Material1
+{
+    color: white;
+    background-color: #FF5C35;
+    box-shadow: 0px 5px 6px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 5px 6px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 5px 6px rgba(0,0,0,0.2);
+}
+.dxbButton_Material1 div.dxb
+{
+    padding: 6px 13px 4px;
+    border: 1px dotted transparent;
+}
+.dxbButton_Material1 div.dxbf
+{
+    border: 1px dotted;
+}
+div.dxbButton_Material1::before
+{
+    content: "dxRippleTarget";
+    display: none;
+}
+div.dxbButton_Material1 .dxRipple
+{
+    background-color: rgba(255,255,255,0.85);
+}
+.dxAndroidMobilePlatform div.dxbButton_Material1 .dxRipple,
+.dxMacOSMobilePlatform div.dxbButton_Material1 .dxRipple
+{
+    background-color: rgba(255,255,255,0.9);
+}
+.dxbButton_Material1 .dxBadge
+{
+    background: white;
+    color: #FF5C35;
+}
+.dxbButton_Material1.dxbButtonHover_Material1 .dxBadge,
+.dxbButton_Material1.dxbButtonPressed_Material1 .dxBadge
+{
+    color: #FF5C35;
+}
+/* Button Link */
+a.dxbButton_Material1
+{
+    color: #FF5C35;
+    text-decoration: none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+a.dxbButton_Material1:hover
+{
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+    text-decoration: underline;
+}
+/*a.dxbButton_Material1:active
+{
+    background-color: #DDDDDD;
+}*/
+a.dxbButton_Material1 .dxBadge
+{
+    background: #FF5C35;
+    text-decoration: none;
+    vertical-align: baseline;
+    color: white;
+}
+a.dxbButton_Material1:hover .dxBadge
+{
+    text-decoration: none;
+}
+/* Disabled */
+.dxbDisabled_Material1,
+a.dxbButton_Material1.dxbDisabled_Material1
+{
+    color: #BBBBBB;
+    cursor: default;
+    text-decoration: none;
+}
+a.dxbButton_Material1.dxbDisabled_Material1
+{
+    background: none !important;
+}
+/* -- FilterControl -- */
+.dxfcControl_Material1
+{
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: Black;
+    padding: 0 1em;
+    padding-top: 14px;
+}
+.dxfcTable_Material1
+{
+    border-collapse: separate !important;
+}
+.dxfcTable_Material1 td.dxfc
+{
+    padding: 0 0 0 3px;
+}
+.dxfcTable_Material1 td.dxfc > table
+{
+    margin: 1px 0 -1px;
+}
+a.dxfcPropertyName_Material1
+{
+    white-space: nowrap !important;
+    color: #FF5C35 !important;
+}
+a.dxfcGroupType_Material1
+{
+    white-space: nowrap !important;
+    padding: 0 3px !important;
+    color: #db3412 !important;
+}
+a.dxfcOperation_Material1
+{
+    white-space: nowrap !important;
+    color: #64B5F6 !important;
+}
+a.dxfcValue_Material1
+{
+    white-space: nowrap !important;
+    color: Gray !important;
+    padding-right: 4px !important;
+}
+.dxeMaskHint_Material1
+{
+    background: #ffffe1 none;
+    border: 1px solid black;
+    padding: 2px 5px 3px;
+    color: Black;
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+}
+.dxfcControl_Material1 ul.dxfc-tree,
+.dxfcControl_Material1 .dxfc-tree ul
+{
+    list-style-type: none;
+    margin: 0;
+    overflow-y: hidden;
+    padding: 0;
+}
+.dxbButton_Material1.dxb-secondary
+{
+    background: #ffffff;
+    border-color: transparent;
+    color: #666666;
+}
+.dxbButton_Material1.dxb-secondary.dxbButtonHover_Material1, .dxbButton_Material1.dxb-secondary.dxbButtonPressed_Material1
+{
+    background: #e6e6e6;
+    border-color: transparent;
+}
+.dxbButton_Material1.dxb-secondary.dxbDisabled_Material1
+{
+    background: rgba(255,255,255,0.5);
+    border-color: transparent;
+    color: rgba(102,102,102,0.5);
+}
+.dxbButton_Material1.dxb-secondary .dxBadge
+{
+    background: #FF5C35;
+    color: #ffffff;
+}
+.dxbButton_Material1.dxb-secondary.dxbButtonHover_Material1 .dxBadge,
+.dxbButton_Material1.dxb-secondary.dxbButtonPressed_Material1 .dxBadge
+{
+    color: #ffffff;
+}
+.dxbButton_Material1.dxb-outline
+{
+    background: #ffffff;
+    border-color: #dbdbdb;
+    color: #666666;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.dxbButton_Material1.dxb-outline.dxbButtonHover_Material1, .dxbButton_Material1.dxb-outline.dxbButtonPressed_Material1
+{
+    background: #FF5C35;
+    color: #ffffff;
+    border-color: transparent;
+}
+.dxbButton_Material1.dxb-outline.dxbDisabled_Material1
+{
+    background: rgba(255,255,255,0.5);
+    border-color: rgba(219,219,219,0.5);
+    color: rgba(102,102,102,0.5);
+}
+.dxbButton_Material1.dxb-outline .dxBadge
+{
+    background: #FF5C35;
+    color: #ffffff;
+}
+.dxbButton_Material1.dxb-outline.dxbButtonHover_Material1 .dxBadge,
+.dxbButton_Material1.dxb-outline.dxbButtonPressed_Material1 .dxBadge
+{
+    background: #ffffff;
+    color: #FF5C35;
+}
+.dxbButton_Material1.dxb-danger
+{
+    background: #e81123;
+    border-color: transparent;
+    color: #ffffff;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.dxbButton_Material1.dxb-danger.dxbButtonHover_Material1, .dxbButton_Material1.dxb-danger.dxbButtonPressed_Material1
+{
+    background: #f13b4b;
+    border-color: transparent;
+}
+.dxbButton_Material1.dxb-danger.dxbDisabled_Material1
+{
+    background: rgba(232,17,35,0.5);
+    border-color: transparent;
+    color: rgba(255,255,255,0.5);
+}
+.dxbButton_Material1.dxb-danger .dxBadge
+{
+    background: #ffffff;
+    color: #e81123;
+}
+.dxbButton_Material1.dxb-outline
+{
+    border-style: solid;
+    border-width: 1px;
+}
+.dxfcControl_Material1 .dxfc-tree
+{
+    width: 100%;
+}
+.dxfcControl_Material1 .dxfc-subnd
+{
+    margin-left: 22px;
+}
+.dxfcControl_Material1.dxfcRtl .dxfc-subnd
+{
+    margin-left: 0;
+    margin-right: 22px;
+}
+.dxfcControl_Material1 .dxfc > li > table
+{
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.dxfcControl_Material1 .dxfc-elb
+{
+    float: left;
+    height: 21px;
+    vertical-align: top;
+    width: 21px;
+}
+.dxfcControl_Material1.dxfcRtl .dxEditors_fcremove_Material1
+{
+    margin-right: 2px;
+}
+.dxfcControl_Material1 .dxfc-clr
+{
+    clear: both;
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+    width: 0;
+}
+.dxfcControl_Material1 .dxfc-nd > tbody > tr > td
+{
+    vertical-align: top;
+}
+.dxfcControl_Material1 .dxfc-nd > tbody > tr > td.dxfc-editorCell
+{
+    vertical-align: middle;
+}
+.dxEditors_fcremove_Material1,
+.dxEditors_fcadd_Material1,
+.dxEditors_fcoptypefield_Material1,
+.dxEditors_fcoptypevalue_Material1
+{
+    margin-top: 8px;
+}
+.dxfcControl_Material1 .dxfc-nd
+{
+    cursor: pointer;
+    display: block;
+    float: left;
+    outline: 0 none;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.dxfcControl_Material1 .dxfc-nd > tbody > tr > td > a,
+.dxfcControl_Material1 .dxfc-nd > tbody > tr > td > span,
+.dxfcControl_Material1 .dxfc-nd > tbody > tr > td > img,
+.dxfcControl_Material1 .dxfc-editor
+{
+    vertical-align: middle;
+}
+.dxfcControl_Material1 .dxfc-nd > tbody > tr > td
+{
+    height: 32px;
+}
+.dxfcControl_Material1 .dxfc-nd > tbody > tr > td > img
+{
+    margin-left: 2px;
+}
+.dxfcControl_Material1 .dxfc-nd > tbody > tr > td > a,
+.dxfcControl_Material1 .dxfc-nd > tbody > tr > td > td,
+.dxfcControl_Material1 .dxfc-nd > tbody > tr > td > span,
+.dxfcControl_Material1 .dxfc-editor
+{
+    padding: 0 0 0 15px;
+}
+.dxfcControl_Material1 .dxfc-nd > tbody > tr > td > a,
+.dxfcControl_Material1 .dxfc-nd > tbody > tr > td > span
+{
+    line-height: 32px;
+}
+.dxfcControl_Material1 .dxfc-ln
+{
+    vertical-align: top;
+}
+.dxfcControl_Material1 .dxfc-memo textarea
+{
+    height: 80px;
+    overflow: auto;
+}
+.dxfcControl_Material1 .dxfc-validationSummary
+{
+    padding: 2px 5px 4px 6px !important;
+    list-style-type: none;
+    margin: 0;
+}
+.dxfcControl_Material1 .dxfc-validationSummary li
+{
+    padding: 2px 0;
+}
+.dxfcControl_Material1 .dxfc-validationSummary li a
+{
+    color: red;
+    text-decoration: none;
+    border-bottom: 1px dashed #f70;
+}
+.dxfcControl_Material1 .dxfc-validationSummary li a:hover
+{
+    color: #f70;
+}
+/* -- ProgressBar -- */
+.dxeProgressBar_Material1
+{
+    background-color: #FFFFFF;
+    color: #484848;
+    font: 12px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    height: 26px;
+    border: 1px solid #DCDCDC;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -o-border-radius: 1px;
+    -khtml-border-radius: 1px;
+    border-radius: 1px;
+}
+.dxeProgressBar_Material1 .dxePBMainCell,
+.dxeProgressBar_Material1 td.dxe
+{
+    padding: 0;
+    text-align: left !important;
+}
+.dxeProgressBar_Material1[dir='rtl'] .dxePBMainCell,
+.dxeProgressBar_Material1[dir='rtl'] td.dxe
+{
+    padding: 0;
+    text-align: right !important;
+}
+.dxeProgressBar_Material1[dir='rtl'] td.dxe
+{
+    padding-right: 9px;
+}
+.dxeProgressBar_Material1 td.dxe
+{
+    padding-left: 9px;
+    padding-top: 1px;
+}
+.dxeProgressBar_Material1.dxeDisabled_Material1 td.dxe
+{
+    color: #484848;
+}
+.dxeProgressBarIndicator_Material1
+{
+    background-color: #FF5C35;
+}
+.dxeProgressBar_Material1.dxeDisabled_Material1 .dxeProgressBarIndicator_Material1
+{
+    background-color: #EBEBEB;
+}
+.dxeProgressBar_Material1
+{
+    border-radius: 100vh;
+    overflow: hidden;
+}
+.dxeProgressBarIndicator_Material1
+{
+    border-bottom-left-radius: 100vh;
+    border-top-left-radius: 100vh;
+}
+.dxeProgressBar_Material1 .dxpbVC
+{
+    border-radius: 100vh;
+    padding-top: 2px;
+    margin-left: -4px;
+}
+/* -- DropDownWindow -- */
+.dxpcDropDown_Material1,
+.dxeDropDownWindow_Material1
+{
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+}
+.dxeDropDownWindow_Material1
+{
+    background-color: #FAFAFA;
+    border: 1px solid #c0c0c0;
+}
+.dxpcDropDown_Material1 > .dxpc-shadow
+{
+    -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
+}
+/*----------------- ColorTable -----------------*/
+.dxeColorIndicator_Material1
+{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.dxeItemPicker_Material1
+{
+    background-color: #ffffff;
+    border: 1px solid #c0c0c0;
+}
+.dxeColorTable_Material1 td.dx
+{
+    padding: 4px;
+}
+.dxeColorTableCell_Material1,
+.dxeItemPickerCell_Material1,
+.dxeACICell_Material1
+{
+    padding: 2px;
+    cursor: pointer;
+}
+.dxeColorTableCellDiv_Material1,
+.dxeACICellDiv_Material1
+{
+    border: 2px solid #FFFFFF;
+    width: 22px;
+    height: 22px;
+    font-size: 0;
+}
+.dxeColorTableCellDiv_Material1[style*="rgb(255, 255, 255)"],
+.dxeColorTableCellDiv_Material1:not([style*="background-color"]),
+.dxeACICellDiv_Material1[style*="#FFF"],
+.dxeACICellDiv_Material1:not([style*="background-color"])
+{
+    border: 1px solid #F0F0F0;
+    width: 20px;
+    height: 20px;
+    margin-left: 2px;
+}
+.dxeColorTableCellDiv_Material1:not([style*="background-color"]),
+.dxeACICellDiv_Material1:not([style*="background-color"])
+{
+    margin-bottom: 2px;
+}
+.dxeColorTableCellSelected_Material1 > .dxeColorTableCellDiv_Material1,
+.dxeACICellSelected_Material1 > .dxeACICellDiv_Material1,
+.dxeColorTableCellHover_Material1.dxeColorTableCellSelected_Material1 > .dxeColorTableCellDiv_Material1,
+.dxeColorTableCellHover_Material1.dxeACICellSelected_Material1 > .dxeACICellDiv_Material1
+{
+    padding: 0px !important;
+    border: 2px solid #FF5C35;
+}
+.dxeColorTableCellHover_Material1 > .dxeColorTableCellDiv_Material1,
+.dxeItemPickerCellHover_Material1,
+.dxeAutomaticColorItemCellHover_Material1 > .dxeACICellDiv_Material1
+{
+    padding: 0px !important;
+    border: 2px solid #E0E0E0;
+}
+.dxeColorTableCellSelected_Material1 > .dxeColorTableCellDiv_Material1[style*="rgb(255, 255, 255)"],
+.dxeColorTableCellSelected_Material1 .dxeACICellDiv_Material1[style*="#FFF"],
+.dxeColorTableCellHover_Material1 .dxeColorTableCellDiv_Material1[style*="rgb(255, 255, 255)"],
+.dxeColorTableCellHover_Material1 .dxeACICellDiv_Material1[style*="#FFF"]
+{
+    width: 22px;
+    height: 22px;
+    margin-left: 0px;
+}
+.dxeColorTableCellHover_Material1 .dxeColorTableCellDiv_Material1:not([style*="background-color"]),
+.dxeColorTableCellHover_Material1 .dxeACICellDiv_Material1:not([style*="background-color"])
+{
+    width: 20px;
+    height: 20px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+/* -- Invalid Style -- */
+/* -- Focused Style -- */
+.dxeFocused_Material1
+{
+    border: 1px solid #FF5C35;
+}
+.dxeFocused_Material1.dxeTrackBar_Material1
+{
+    border: 0px;
+}
+/* -- Null Text Style -- */
+.dxeNullText_Material1 .dxeEditArea_Material1,
+.dxeNullText_Material1 .dxeMemoEditArea_Material1,
+.dxFirefox .dxeNullText_Material1 .dxeEditArea_Material1,
+.dxFirefox .dxeNullText_Material1 .dxeMemoEditArea_Material1
+{
+    color: #bdbdbd;
+}
+.dxeTextBox_Material1 .dxeFNTextSys, .dxeButtonEdit_Material1 .dxeFNTextSys, .dxeMemo_Material1 .dxeFNTextSys
+{
+    color: #bdbdbd;
+}
+.dxeNullText_Material1 input:-webkit-autofill
+{
+    -webkit-text-fill-color: #bdbdbd;
+}
+/* -- Captcha -- */
+.dxcaControl_Material1
+{
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+}
+.dxcaControl_Material1 .dxca-imageDiv
+{
+    color: #FFFFFF;
+}
+.dxEditors_caRefresh_Material1
+{
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 2px 2.82px 0.18px rgba(0,0,0,0.24);
+    -moz-box-shadow: 0px 2px 2.82px 0.18px rgba(0,0,0,0.24);
+    box-shadow: 0px 2px 2.82px 0.18px rgba(0,0,0,0.24);
+}
+.dxcaRefreshButton_Material1
+{
+    text-decoration: none;
+    color: #1e3695;
+}
+.dxcaDisabledRefreshButton_Material1
+{
+    color: #acacac;
+}
+.dxcaRefreshButtonCell_Material1
+{
+    padding-left: 4px;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    vertical-align: middle !important;
+}
+.dxcaRefreshButtonCell_Material1 img
+{
+    margin-right: 8px !important;
+}
+.dxcaTextBoxCellNoIndent_Material1 .dxeErrorCell_Material1
+{
+    padding-left: 0px;
+    padding-top: 4px;
+    color: Red;
+}
+.dxcaTextBoxLabel_Material1
+{
+    padding-bottom: 4px;
+    display: block;
+}
+.dxcaLoadingPanel_Material1
+{
+    background-color: white;
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: #484848;
+}
+.dxcaLoadingPanel_Material1 td.dx
+{
+    font-size: 1.17em;
+    white-space: nowrap;
+    text-align: center;
+    padding: 2px;
+}
+.dxcaLoadingPanel_Material1 .dxlp-loadingImage
+{
+    margin: 0px;
+}
+.dxpcLite_Material1 .dxHFBPS
+{
+    width: 6px;
+}
+.dxeTextBox_Material1,
+.dxeButtonEdit_Material1,
+.dxeIRadioButton_Material1,
+.dxeRadioButtonList_Material1,
+.dxeCheckBoxList_Material1
+{
+    cursor: default;
+}
+/* Removes flicking in Material Safari*/
+.dxeTrackBar_Material1,
+.dxeIRadioButton_Material1,
+.dxeButtonEdit_Material1,
+.dxeTextBox_Material1,
+.dxeRadioButtonList_Material1,
+.dxeCheckBoxList_Material1,
+.dxeMemo_Material1,
+.dxeListBox_Material1,
+.dxeCalendar_Material1,
+.dxeColorTable_Material1
+{
+    -webkit-tap-highlight-color: transparent;
+}
+/* Layout Control */
+.dxeLayoutConrtol_Material1
+{
+    display: table;
+}
+.dxeLyGroupCell_Material1
+{
+    padding: 5px;
+}
+.dxeLyCaptionCell_Material1
+{
+    padding: 6px;
+}
+.dxeLyEditorCell_Material1
+{
+    padding: 5px;
+}
+.dxeLyCaptionCell_Material1
+{
+    color: #004184;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.dxeLyEditorCell_Material1
+{
+    width: 0;
+}
+.dxeLyGroupBox_Material1
+{
+    border: 1px Solid #9F9F9F;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+    padding: 10px;
+}
+.dxeLyGroupBoxCaption_Material1 > span
+{
+    background-color: White;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.dxeLyGroupBoxCaption_Material1
+{
+    position: relative;
+    margin-top: -21px;
+}
+.dxeLyGroup_Material1
+{
+    width: 100%;
+}
+.dxeLayoutConrtol_Material1 .dxeLyVATSys > label
+{
+    margin-top: 4px;
+    margin-bottom: 4px;
+    display: block;
+}
+.dxeLyEditorCell_Material1 > .dxeMemoSys
+{
+    margin-top: 3px;
+}
+.dxeLyEditorCell_Material1 > label.dxeBase_Material1
+{
+    display: block;
+    white-space: nowrap;
+}
+/* ASPxCololrEdit */
+.dxcpParametersCell_Material1 input
+{
+    padding: 2px 0px 1px 5px;
+    color: #484848;
+}
+.dxcpParametersCellSys .dxcpWebColorInput_Material1
+{
+    width: 67px;
+    float: right;
+    margin-top: 40px;
+}
+.dxcpColorParameterMainDiv_Material1 > label
+{
+    color: #484848;
+    padding-right: 14px;
+}
+.dxcpColorParameterMainDiv_Material1 > input
+{
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+    width: 67px;
+}
+.dxcpColorParameterMainDiv_Material1
+{
+    padding: 0px 0px 4px 0px;
+    width: 123px;
+    text-align: right;
+}
+.dxeCustomColorButton_Material1
+{
+    margin: 3px 7px;
+    cursor: pointer;
+}
+.dxeCustomColorButtonHover_Material1
+{
+    box-shadow: 0px 8px 16px 1.2px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 8px 16px 1.2px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 8px 16px 1.2px rgba(0,0,0,0.2);
+}
+.dxeAutomaticColorItem_Material1
+{
+    padding: 4px 4px 0px 4px;
+}
+.dxeAutomaticColorItem_Material1 > span
+{
+    display: inline-block;
+    margin: 5px 5px 0;
+    line-height: 20px;
+}
+.dxeAutomaticColorItem_Material1 .dxeACICellDiv_Material1[style*="#FFF"],
+.dxeAutomaticColorItem_Material1 .dxeACICellDiv_Material1[style*="background-color:White;"],
+.dxeAutomaticColorItem_Material1 .dxeACICellDiv_Material1[style*="rgb(255, 255, 255)"],
+.dxeAutomaticColorItem_Material1 .dxeACICellDiv_Material1:not([style*="background-color"])
+{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #E0E0E0;
+    margin: 1px;
+}
+.dxeAutomaticColorItemCellHover_Material1 .dxeACICellDiv_Material1[style*="#FFF"],
+.dxeAutomaticColorItemCellHover_Material1 .dxeACICellDiv_Material1[style*="background-color:White;"],
+.dxeAutomaticColorItemCellHover_Material1 .dxeACICellDiv_Material1[style*="rgb(255, 255, 255)"],
+.dxeAutomaticColorItemCellHover_Material1 .dxeACICellDiv_Material1:not([style*="background-color"])
+{
+    width: 20px;
+    height: 20px;
+    border: 2px solid #E0E0E0;
+    padding: 0px !important;
+    margin: 0px;
+}
+.dxcpCurrentColor_Material1,
+.dxcpSavedColor_Material1
+{
+    height: 35px;
+}
+.dxcpCurrentAndSaved_Material1
+{
+    width: 72px;
+    margin: 34px 0px 0px 49px;
+    cursor: pointer;
+}
+.dxeColorTablesMainDiv_Material1,
+.dxeColorSelectorMainDiv_Material1
+{
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+}
+.dxeColorSelectorMainDiv_Material1 > table > tbody > tr > td:nth-child(2)
+{
+    padding-left: 1px;
+}
+.dxeColorSelectorMainDiv_Material1 > table
+{
+    padding: 10px 9px 0px 10px;
+}
+.dxeColorSelectorMainDiv_Material1 > div
+{
+    border-top: 1px solid #EAEAEA;
+    padding: 11px 10px 10px 10px;
+}
+.dxcpColorArea_Material1,
+.dxcpHueAreaImage_Material1,
+.dxcpCurrentAndSaved_Material1,
+.dxeColorTablesMainDiv_Material1,
+.dxeColorSelectorMainDiv_Material1,
+.dxcpParametersCell_Material1 input
+{
+    border: 1px solid #DCDCDC;
+}
+.dxeButtonsPanelDiv_Material1
+{
+    margin-top: 20px;
+    text-align: right;
+}
+.dxeButtonsPanelDiv_Material1 input
+{
+    min-width: 60px;
+    margin-left: 1px;
+}
+/* Ripple */
+.dxeColorTablesMainDiv_Material1 .dxeCustomColorButton_Material1::before
+{
+    content: "dxRippleTarget";
+    display: none;
+}
+.dxeColorTablesMainDiv_Material1 .dxeCustomColorButtonHover_Material1 .dxRipple
+{
+    background-color: rgba(255,255,255,0.85);
+}
+.dxAndroidMobilePlatform .dxeColorTablesMainDiv_Material1 .dxeCustomColorButtonHover_Material1 .dxRipple,
+.dxMacOSMobilePlatform .dxeColorTablesMainDiv_Material1 .dxeCustomColorButtonHover_Material1 .dxRipple
+{
+    background-color: rgba(255,255,255,0.9);
+}
+/* -- ASPxTokenBox -- */
+.dxeButtonEdit_Material1.dxeTokenBox
+{
+    padding-top: 0px;
+}
+.dxFirefox .dxeButtonEdit_Material1.dxeTokenBox
+{
+    padding: 0px;
+    padding-top: 0px;
+}
+input.dxeTokenBoxInput_Material1[type="text"]
+{
+    display: inline-block;
+    float: left;
+    width: 30px;
+    outline: none;
+    margin: 2px 0 1px 2px;
+    padding: 5px 2px 5px 3px;
+}
+.dxeToken_Material1
+{
+    display: inline-block;
+    background: #FF5C35;
+    color: white;
+    float: left;
+    min-width: 30px;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 15px;
+}
+.dxeTokenText_Material1, .dxeTokenRemoveButton_Material1
+{
+    display: block;
+    float: left;
+}
+.dxFirefox .dxeTokenText_Material1
+{
+    padding: 4px 6px 4px 7px;
+    margin-left: 1px;
+}
+.dxeTokenText_Material1
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0px 2px 0px 4px;
+    padding-right: 18px;
+    padding: 5px 6px 4px 7px;
+}
+.dxeTokenRemoveButton_Material1
+{
+    cursor: pointer;
+    margin: 3px 3px 0 0;
+    border-radius: 50%;
+    background-color: #BBB;
+}
+*[dir="rtl"] .dxeTokenRemoveButton_Material1
+{
+    margin: 3px 0 0 3px;
+}
+.dxFirefox .dxeButtonEdit_Material1 td.dxictb,
+.dxeButtonEdit_Material1 td.dxictb
+{
+    padding: 0px;
+}
+.dxFirefox input.dxeTokenBoxInput_Material1[type="text"]
+{
+    margin-bottom: 2px;
+    margin-top: 1px;
+}
+.dxFirefox .dxeToken_Material1
+{
+    padding-bottom: 0px;
+}
+.dxeDisabled_Material1 .dxeToken_Material1
+{
+    background: #eee;
+    color: #8F8F8F;
+}
+.dxeTokenBox.dxeDisabled_Material1 .dxictb
+{
+    cursor: default;
+}
+/* ASPxPictureEdit */
+.dxpePreviewContainer_Material1
+{
+    position: relative;
+}
+.dxpeCommandPanel_Material1
+{
+    background-color: #484848;
+    background-color: rgba(0,0,0,0.75);
+    color: white;
+    height: 32px;
+    position: absolute;
+}
+.dxpeBottomCommandPanel_Material1
+{
+    width: 100%;
+    bottom: 0;
+}
+.dxpeTopCommandPanel_Material1
+{
+    width: 100%;
+    top: 0;
+}
+.dxpeCommandPanelDeleteButton_Material1,
+.dxpeCommandPanelOpenDialogButton_Material1
+{
+    cursor: pointer;
+    display: inline-block;
+}
+.dxpeCommandPanelButtonsWrapper_Material1
+{
+    position: absolute;
+}
+.dxpeCommandPanelButtonsWrapperLeft_Material1
+{
+    left: 0;
+}
+.dxpeCommandPanelButtonsWrapperCenter_Material1
+{
+    left: 50%;
+    margin-left: -32px;
+}
+.dxpeCommandPanelButtonsWrapperRight_Material1
+{
+    right: 0;
+}
+.dxpeDropZone_Material1
+{
+    background-color: gray;
+}
+.dxpePlaceHolder_Material1
+{
+    background-color: lightgray;
+    z-index: -1;
+}
+.dxpeTextPanelContainer_Material1
+{
+    height: 100%;
+    font-size: 200%;
+    text-align: center;
+    width: 100%;
+}
+.dxpeTextPanel_Material1
+{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+/* Editor caption */
+.dxeCaptionCell_Material1
+{
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: #333;
+    white-space: nowrap;
+    line-height: 16px;
+    height: 100%;
+}
+.dxeCaptionCell_Material1.dxeCLLSys,
+[dir='rtl'] .dxeCaptionCell_Material1.dxeCLRSys
+{
+    padding-left: 0px;
+    padding-right: 16px;
+}
+[dir='rtl'] .dxeCaptionCell_Material1.dxeCLLSys,
+.dxeCaptionCell_Material1.dxeCLRSys
+{
+    padding-right: 0px;
+    padding-left: 16px;
+}
+.dxeCaptionCell_Material1.dxeCLTSys,
+.dxeCaptionCell_Material1.dxeCLBSys
+{
+    padding: 13px 0;
+}
+.dxFirefox .dxeCaptionCell_Material1.dxeCaptionVATSys.dxeTextEditCTypeSys
+{
+    padding-top: 8px;
+}
+.dxeCaptionCell_Material1.dxeCaptionVATSys.dxeTextEditCTypeSys
+{
+    padding-top: 9px;
+}
+.dxeCaptionCell_Material1.dxeCaptionVATSys.dxeCheckBoxCTypeSys
+{
+    padding-top: 2px;
+}
+.dxeCaptionCell_Material1.dxeCaptionVATSys.dxeRadioButtonCTypeSys
+{
+    padding-top: 3px;
+}
+.dxeCaptionCell_Material1.dxeCaptionVATSys.dxeCheckBoxListCTypeSys
+{
+    padding-top: 19px;
+}
+.dxeCaptionCell_Material1.dxeCaptionVATSys.dxeRadioButtonListCTypeSys
+{
+    padding-top: 20px;
+}
+.dxeCaptionCell_Material1.dxeCaptionVATSys.dxeListBoxCTypeSys
+{
+    padding-top: 5px;
+}
+.dxeCaptionCell_Material1.dxeCaptionVATSys.dxeTrackBarCTypeSys
+{
+    padding-top: 8px;
+}
+.dxeCaptionCell_Material1.dxeCaptionVATSys.dxeProgressBarCTypeSys
+{
+    padding-top: 9px;
+}
+.dxIE .dxeCaptionCell_Material1.dxeCaptionVATSys.dxeMemoCTypeSys
+{
+    padding-top: 8px;
+}
+.dxeCaptionCell_Material1.dxeCaptionVATSys.dxeMemoCTypeSys
+{
+    padding-top: 9px;
+}
+.dxeCaptionCell_Material1.dxeCaptionVATSys.dxeCustomCTypeSys
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+/* Chrome */
+.dxWebKitFamily .dxeCaptionCell_Material1.dxeCaptionVATSys.dxeCheckBoxCTypeSys
+{
+    padding-top: 3px;
+}
+.dxWebKitFamily .dxeCaptionCell_Material1.dxeCaptionVATSys.dxeRadioButtonCTypeSys
+{
+    padding-top: 4px;
+}
+.dxWebKitFamily .dxeCaptionCell_Material1.dxeCaptionVATSys.dxeCheckBoxListCTypeSys
+{
+    padding-top: 19px;
+}
+.dxWebKitFamily .dxeCaptionCell_Material1.dxeCaptionVATSys.dxeRadioButtonListCTypeSys
+{
+    padding-top: 20px;
+}
+/* Opera */
+noindex:-o-prefocus, body:first-of-type .dxeTextEditCTypeSys.dxeCaptionVATSys.dxeCaptionCell_Material1
+{
+    padding-top: 3px;
+}
+noindex:-o-prefocus, body:first-of-type .dxeCaptionCell_Material1.dxeCaptionVATSys.dxeCheckBoxCTypeSys
+{
+    padding-top: 4px;
+}
+noindex:-o-prefocus, body:first-of-type .dxeCaptionCell_Material1.dxeCaptionVATSys.dxeRadioButtonCTypeSys
+{
+    padding-top: 4px;
+}
+noindex:-o-prefocus, body:first-of-type .dxeCaptionCell_Material1.dxeCaptionVATSys.dxeCheckBoxListCTypeSys
+{
+    padding-top: 20px;
+}
+noindex:-o-prefocus, body:first-of-type .dxeCaptionCell_Material1.dxeCaptionVATSys.dxeRadioButtonListCTypeSys
+{
+    padding-top: 21px;
+}
+/* Firefox */
+.dxFirefox .dxeMemoCTypeSys.dxeCaptionVATSys.dxeCaptionCell_Material1
+{
+    padding-top: 9px;
+}
+.dxeRequiredMark_Material1
+{
+    color: green;
+    font-style: normal;
+}
+.dxeOptionalMark_Material1
+{
+    color: gray;
+    font-style: normal;
+}
+/* Out of range warning*/
+.dxeOutOfRWarn_Material1
+{
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    padding: 3px 8px 4px 8px;
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: red;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    z-index: 41998;
+    -webkit-box-shadow: rgba(0,0,0,0.1) 0 1px 3px;
+    -moz-box-shadow: rgba(0,0,0,0.1) 0 1px 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 1px solid #A8A8A8;
+}
+.dxeOutOfRWarnRight_Material1
+{
+    margin-left: 10px;
+    margin-top: -2px;
+}
+.dxeOutOfRWarnBottom_Material1
+{
+    margin-top: 10px;
+}
+/* Adaptive DropDown */
+.dxpcDropDown_Material1 .dxdd-header
+{
+    padding: 16px 0 12px 0;
+    border-bottom: 1px solid #ebebeb;
+    background: white;
+}
+.dxpcDropDown_Material1 .dxdd-header .dxdd-caption
+{
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.67;
+    letter-spacing: normal;
+    color: #444444;
+}
+.dxpcDropDown_Material1 .dxdd-header .dxbButton_Material1
+{
+    padding: 0 14px;
+}
+.dxpcDropDown_Material1 .dxdd-header .dxdd-caption:first-child
+{
+    padding-left: 24px;
+    text-align: left;
+}
+.dxpcDropDown_Material1 .dxdd-header .dxdd-caption:last-child
+{
+    padding-right: 24px;
+}
+.dxpcDropDown_Material1 .dxdd-cal .dxdd-caption:first-child
+{
+    padding-left: 16px;
+}
+.dxpcDropDown_Material1 .dxpc-mainDiv
+{
+    background-color: #ffffff;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 + .dxpcModalBackLite_Material1,
+.dxmodalSys.dxdd-root + .dxpcModalBackLite_Material1
+{
+    background-color: #777777;
+    opacity: 0.7;
+    position: fixed;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1
+{
+    /* ComboBox Styles */
+    /* Calendar Styles */
+    /* ComboBox + Calendar */
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxeDropDownWindow_Material1
+{
+    border: none;
+    background: transparent;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxpc-shadow
+{
+    box-shadow: 0px 4px 16px 0 rgba(0,0,0,0.32);
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxdd-header
+{
+    background: transparent;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxpc-mainDiv
+{
+    border-radius: 8px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxpc-mainDiv:not(.dxdd-cal):not(.dxdd-dde):not(.dxdd-sp) .dxpc-content
+{
+    padding-bottom: 32px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxdd-input
+{
+    margin-top: 20px;
+    margin: 20px 24px 0 24px;
+    border: solid 2px #FF5C35;
+    height: 50px;
+    padding: 0 23px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxdd-input > input
+{
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 0.67;
+    letter-spacing: normal;
+    color: #FF5C35;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxdd-input .dxdd-clearbutton, .dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxdd-input .dxdd-clearbutton:hover
+{
+    right: 17px;
+    height: 20px;
+    background: none;
+    border-width: 0;
+    line-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxdd-input .dxeFNTextSys
+{
+    color: #bdbdbd;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxdd-help
+{
+    color: #999999;
+    padding: 16px 24px 24px 24px;
+    font-size: 0.85em;
+    margin-bottom: -32px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxdd-info
+{
+    margin: 10px 24px 15px 24px;
+    font-size: 14px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxpc-mainDiv.dxdd-list .dxeListBox_Material1
+{
+    margin: 18px 24px 0 24px;
+    width: calc(100% - 48px) !important;
+    border-color: #ebebeb;
+    color: #999999;
+    background-color: #fafafa;
+    min-width: 250px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxpc-mainDiv.dxdd-list .dxeListBox_Material1 .dxeListBoxItemHover_Material1
+{
+    background: rgba(0,0,0,0.08);
+    color: #999999;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxpc-mainDiv.dxdd-list .dxeListBox_Material1 .dxlbd
+{
+    width: 100% !important;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxpc-mainDiv.dxdd-list .dxeListBox_Material1 .dxeListBoxItem_Material1
+{
+    padding: 8px 10px 7px 23px;
+    border: none;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxpc-mainDiv.dxdd-list .dxdd-input:not(.dxdd-readonly) ~ .dxeListBox_Material1
+{
+    margin-top: 0;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Material1
+{
+    border: none;
+    background-color: transparent;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Material1 .dxeCalendarHeader_Material1
+{
+    background-color: transparent;
+    color: #666666;
+    border-bottom: 1px solid #ebebeb;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Material1 .dxeCalendarFooter_Material1
+{
+    text-align: center;
+    padding: 0;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Material1 .dxeCalendarFooter_Material1 button
+{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Material1 .dxeDateEditTimeEditCell_Material1
+{
+    padding: 20px 16px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxpc-mainDiv.dxdd-cal .dxeCalendar_Material1 ~ .dxdd-help
+{
+    padding: 16px 12px 16px 12px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxpc-mainDiv.dxdd-cal .dxeCalendarDETS.dxeCalendar_Material1 .dxeCalendarFooter_Material1
+{
+    border-bottom: 1px solid #ebebeb;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxpc-mainDiv.dxdd-sp .dxScrollPicker_Material1 .dxsp-wgroup
+{
+    padding: 12px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxpc-mainDiv.dxdd-sp .dxScrollPicker_Material1 .dxsp-wheel + .dxsp-wheel
+{
+    margin-left: 4px;
+}
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxpc-mainDiv.dxdd-dde .dxdd-help,
+.dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxpc-mainDiv.dxdd-cal .dxdd-help
+{
+    margin-bottom: 0;
+}
+.dxeNullText_Material1 + .dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxdd-input .dxeEditArea_Material1,
+.dxFirefox .dxeNullText_Material1 + .dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxdd-input .dxeEditArea_Material1
+{
+    color: #bdbdbd;
+}
+.dxeNullText_Material1 + .dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxdd-input input:-webkit-autofill,
+.dxFirefox .dxeNullText_Material1 + .dxmodalSys.dxdd-root .dxpcDropDown_Material1 .dxdd-input input:-webkit-autofill
+{
+    -webkit-text-fill-color: #bdbdbd;
+}
+.dxdd-root .dxdd-header > .dxbButtonSys.dxbDisabled_Material1
+{
+    opacity: 0.4;
+}
+.dxScrollPicker_Material1 .dxsp-wgroup
+{
+    padding: 16px 24px 24px;
+}
+.dxScrollPicker_Material1 .dxsp-wgroup + .dxsp-wgroup
+{
+    border-top: 1px solid #ebebeb;
+}
+.dxScrollPicker_Material1 .dxsp-wheel + .dxsp-wheel
+{
+    margin-left: 16px;
+}
+.dxScrollPicker_Material1 .dxsp-caption
+{
+    text-align: center;
+    font-size: 12px;
+    color: rgba(153,153,153,0.5);
+    margin-bottom: 16px;
+}
+.dxScrollPicker_Material1 .dxsp-wheel-hover .dxsp-frame,
+.dxScrollPicker_Material1 .dxsp-wheel-touch .dxsp-frame
+{
+    border-color: #FF5C35;
+}
+.dxScrollPicker_Material1 .dxsp-item-focused
+{
+    height: 51px;
+    font-size: 18px;
+    padding-top: 17px;
+}
+.dxScrollPicker_Material1 .dxsp-item
+{
+    color: #333;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+.dxScrollPicker_Material1 .dxsp-item-focused
+{
+    height: 51px;
+    font-size: 18px;
+    font-style: normal;
+    padding-top: 17px;
+    color: #FF5C35;
+}
+.dxScrollPicker_Material1 .dxsp-item-prev
+{
+    padding-bottom: 5px;
+    padding-top: 15px;
+}
+.dxScrollPicker_Material1 .dxsp-item-prev + .dxsp-item-prev
+{
+    padding-bottom: 12px;
+    padding-top: 8px;
+}
+.dxScrollPicker_Material1 .dxsp-item-focused + .dxsp-item
+{
+    padding-top: 12px;
+    padding-bottom: 8px;
+}
+.dxScrollPicker_Material1 .dxsp-item-focused + .dxsp-item + .dxsp-item
+{
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+.dxScrollPicker_Material1 .dxsp-item-focused + .dxsp-item + .dxsp-item + .dxsp-item
+{
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+.dxScrollPicker_Material1 .dxsp-list::after,
+.dxScrollPicker_Material1 .dxsp-list::before
+{
+    height: 75px !important;
+    line-height: 75px;
+}

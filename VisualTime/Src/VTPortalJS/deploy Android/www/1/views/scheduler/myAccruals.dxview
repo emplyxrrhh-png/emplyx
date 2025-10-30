@@ -1,0 +1,46 @@
+<div data-options="dxView : { name: 'myAccruals', title: 'myAccruals', disableCache: true } " >
+    <div data-bind="if: hasPermission() == true">
+        
+        <div data-bind="if: scheduleDS().length > 0 || productivDS().length > 0 || holidaysDS().length > 0">
+            <div id="scrollview" style="clear:both" data-bind="dxScrollView: { }">
+                <div id="list" class="list-container" data-bind="if: scheduleDS().length > 0">
+                    <div id="listSchedule" data-bind="dxList: listSchedule">
+                        <div data-options="dxTemplate: {name: 'ScheduleItem'}">
+                            <div data-bind="text: $data.Name"></div>
+                            <div data-bind="dxLinearGauge: $data.Gauge"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="list2" class="list-container" data-bind="if: holidaysDS().length > 0">
+                    <div id="listHolidays" data-bind="dxList: listHolidays">
+                        <div data-options="dxTemplate: {name: 'HolidaysItem'}">
+                            <div data-bind="dxChart: $data.Gauge"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="list3" class="list-container" data-bind="if: productivDS().length > 0">
+                    <div id="listProductiV" data-bind="dxList: listProductiV">
+                        <div data-options="dxTemplate: {name: 'ProductiVItem'}">
+                            <div data-bind="dxChart: $data.Gauge"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div data-bind="if: scheduleDS().length <= 0 && productivDS().length <= 0 && holidaysDS().length <= 0">
+            <div class="noDataCssClass"></div>
+        </div>
+
+        <div id="btnActionMenuPopover" class="actionButton fixedButton" data-bind="dxButton: newRequest"></div>
+    </div>
+
+    <div data-bind="dxLoadPanel: loadingPanel"> </div>
+
+    <div data-bind="if: hasPermission() == false">
+        <div class="noPermissionCssClass"></div>
+    </div>
+
+</div>

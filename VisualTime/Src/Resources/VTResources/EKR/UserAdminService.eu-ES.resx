@@ -1,0 +1,1734 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_features.absences.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileen absentismoaren kudeaketa proaktiboa</value>
+  </data>
+  <data name="RES_features.absences.documentsabsences.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileen absentismoa kontrolatzeko erabilitako dokumentuen zerrenda kudeatzea</value>
+  </data>
+  <data name="RES_features.absences.documentsabsences.name.rotext" xml:space="preserve">
+    <value>Absentismo Agiriak</value>
+  </data>
+  <data name="RES_features.absences.name.rotext" xml:space="preserve">
+    <value>Absentismoa</value>
+  </data>
+  <data name="RES_features.access.analytics.description.rotext" xml:space="preserve">
+    <value>Sarbideei lotutako datuen kontrol analitikoa</value>
+  </data>
+  <data name="RES_features.access.analytics.name.rotext" xml:space="preserve">
+    <value>Analitika</value>
+  </data>
+  <data name="RES_features.access.description.rotext" xml:space="preserve">
+    <value>Sarbideen kudeaketa eta erabiltzaileen konfigurazioa, zeinetan baimendutako sarbide-funtzionalitate bakoitzaren kudeaketa egingo den.</value>
+  </data>
+  <data name="RES_features.access.groups.assign.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileen esleipena</value>
+  </data>
+  <data name="RES_features.access.groups.assign.name.rotext" xml:space="preserve">
+    <value>Esleipena</value>
+  </data>
+  <data name="RES_features.access.groups.definition.description.rotext" xml:space="preserve">
+    <value>Sarbide-taldeek izango dituzten zonalde eta aldi erlazioen konfigurazioa; baita taldeetako bakoitzari dagozkion erabiltzaileak ere</value>
+  </data>
+  <data name="RES_features.access.groups.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.access.groups.description.rotext" xml:space="preserve">
+    <value>Sarbide-taldeen kudeaketa</value>
+  </data>
+  <data name="RES_features.access.groups.name.rotext" xml:space="preserve">
+    <value>Taldeak</value>
+  </data>
+  <data name="RES_features.access.name.rotext" xml:space="preserve">
+    <value>Sarbidea</value>
+  </data>
+  <data name="RES_features.access.periods.definition.description.rotext" xml:space="preserve">
+    <value>Aldi bakoitzeko egunen eta sarbide-tarteen konfigurazioa</value>
+  </data>
+  <data name="RES_features.access.periods.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.access.periods.description.rotext" xml:space="preserve">
+    <value>Sarbide-aldien kudeaketa</value>
+  </data>
+  <data name="RES_features.access.periods.name.rotext" xml:space="preserve">
+    <value>Aldiak</value>
+  </data>
+  <data name="RES_features.access.zones.definition.description.rotext" xml:space="preserve">
+    <value>Sarbide-eremuen konfigurazioa: lan-eremu bat den edo ez zehaztu, plano baten kokapena, kamerarekin integratzea eta irekitze-errelea.</value>
+  </data>
+  <data name="RES_features.access.zones.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.access.zones.description.rotext" xml:space="preserve">
+    <value>Sarbide-eremuen kudeaketa</value>
+  </data>
+  <data name="RES_features.access.zones.name.rotext" xml:space="preserve">
+    <value>Zonak</value>
+  </data>
+  <data name="RES_features.access.zones.supervision.description.rotext" xml:space="preserve">
+    <value>Lehendik dauden zonei lotutako informazioa ikusteko aukera ematen du</value>
+  </data>
+  <data name="RES_features.access.zones.supervision.name.rotext" xml:space="preserve">
+    <value>Gainbegiratzea</value>
+  </data>
+  <data name="RES_features.activities.definition.description.rotext" xml:space="preserve">
+    <value>Enpresan egingo diren jardueren konfigurazioa: jarduera bakoitzean parte hartzen duten enpresa ezberdinen mendekotasun-egituraren antolaketa.</value>
+  </data>
+  <data name="RES_features.activities.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.activities.description.rotext" xml:space="preserve">
+    <value>Enpresan egingo diren jardueren kudeaketa</value>
+  </data>
+  <data name="RES_features.activities.name.rotext" xml:space="preserve">
+    <value>Jarduerak</value>
+  </data>
+  <data name="RES_features.administration.alerts.description.rotext" xml:space="preserve">
+    <value>Visualtime alertak kudeatzeko eta egiaztatzeko aukera ematen du</value>
+  </data>
+  <data name="RES_features.administration.alerts.name.rotext" xml:space="preserve">
+    <value>Alertak</value>
+  </data>
+  <data name="RES_features.administration.audit.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileek aplikazioan egin dituzten ekintzen bistaratzea, informazioa aurkitzeko bilaketa-irizpideen arabera</value>
+  </data>
+  <data name="RES_features.administration.audit.name.rotext" xml:space="preserve">
+    <value>Ikuskaritza</value>
+  </data>
+  <data name="RES_features.administration.businesscenters.description.rotext" xml:space="preserve">
+    <value>Kostu-zentroen kudeaketa, gero ProductiV-en eta kostu-kontrolean erabiltzeko</value>
+  </data>
+  <data name="RES_features.administration.businesscenters.name.rotext" xml:space="preserve">
+    <value>Kostu zentroak</value>
+  </data>
+  <data name="RES_features.administration.cameras.definition.description.rotext" xml:space="preserve">
+    <value>Kameraren konfigurazioa: izena, url eta eredua</value>
+  </data>
+  <data name="RES_features.administration.cameras.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.administration.cameras.description.rotext" xml:space="preserve">
+    <value>Sarbide-kontrola indartuko duten kameren kudeaketa</value>
+  </data>
+  <data name="RES_features.administration.cameras.name.rotext" xml:space="preserve">
+    <value>Kamerak</value>
+  </data>
+  <data name="RES_features.administration.cameras.visualization.description.rotext" xml:space="preserve">
+    <value>Lehendik dauden kamerek ateratako irudiak ikusteko aukera ematen du</value>
+  </data>
+  <data name="RES_features.administration.cameras.visualization.name.rotext" xml:space="preserve">
+    <value>Bistaratzea</value>
+  </data>
+  <data name="RES_features.administration.description.rotext" xml:space="preserve">
+    <value>Administrazioaren funtzionalitateen kudeaketa</value>
+  </data>
+  <data name="RES_features.administration.name.rotext" xml:space="preserve">
+    <value>Administrazioa</value>
+  </data>
+  <data name="RES_features.administration.notifications.definition.description.rotext" xml:space="preserve">
+    <value>Jakinarazpenen konfigurazioa: hartzailea, mota - kontratuaren hasiera eta amaiera, absentzia luzea, aplikaziorako sarbidea ukatua, eremu mugatu batera,...-</value>
+  </data>
+  <data name="RES_features.administration.notifications.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.administration.notifications.description.rotext" xml:space="preserve">
+    <value>Jakinarazpen-eginbideak kudeatzea</value>
+  </data>
+  <data name="RES_features.administration.notifications.name.rotext" xml:space="preserve">
+    <value>Jakinarazpenak</value>
+  </data>
+  <data name="RES_features.administration.options.attendance.description.rotext" xml:space="preserve">
+    <value>Erlojuaren aukeren konfigurazioa: sarrera/irteerak eta erloju errepikatuak hautematea; baita, enpresak enpresan lan egiten duen urteko eta hileko epea ere</value>
+  </data>
+  <data name="RES_features.administration.options.attendance.name.rotext" xml:space="preserve">
+    <value>Presentzia aukerak</value>
+  </data>
+  <data name="RES_features.administration.options.description.rotext" xml:space="preserve">
+    <value>Parametrizatu daitezkeen DB aukeren kudeaketa</value>
+  </data>
+  <data name="RES_features.administration.options.general.description.rotext" xml:space="preserve">
+    <value>Ordu formatua, erabiltzailearen eta enpresaren erregistroa, itxiera data globala eta posta zerbitzariaren aukerak konfiguratzea</value>
+  </data>
+  <data name="RES_features.administration.options.general.name.rotext" xml:space="preserve">
+    <value>Aukera orokorrak</value>
+  </data>
+  <data name="RES_features.administration.options.name.rotext" xml:space="preserve">
+    <value>Aukerak</value>
+  </data>
+  <data name="RES_features.administration.reportscheduler.definition.description.rotext" xml:space="preserve">
+    <value>Aldizkako txostenak automatikoki burutzeko zereginen konfigurazioa: zerrenda eta profila, hartzailea, maiztasuna eta larrialdikoak diren edo ez.</value>
+  </data>
+  <data name="RES_features.administration.reportscheduler.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.administration.reportscheduler.description.rotext" xml:space="preserve">
+    <value>Txostenen planifikatzailearen funtzionaltasuna kudeatzea</value>
+  </data>
+  <data name="RES_features.administration.reportscheduler.emergencyreport.description.rotext" xml:space="preserve">
+    <value>Larrialdi-botoia sakatzea ahalbidetzen dizu larrialdi-txostenak egiteko</value>
+  </data>
+  <data name="RES_features.administration.reportscheduler.emergencyreport.name.rotext" xml:space="preserve">
+    <value>Abiarazi larrialdi-txostenak</value>
+  </data>
+  <data name="RES_features.administration.reportscheduler.name.rotext" xml:space="preserve">
+    <value>Txostenaren planifikatzailea</value>
+  </data>
+  <data name="RES_features.administration.security.description.rotext" xml:space="preserve">
+    <value>Aplikazioaren kudeatzaile, arduradun eta/edo erabiltzaileentzako lan-baimenen kudeaketa</value>
+  </data>
+  <data name="RES_features.administration.security.name.rotext" xml:space="preserve">
+    <value>Segurtasuna</value>
+  </data>
+  <data name="RES_features.administration.securityoptions.description.rotext" xml:space="preserve">
+    <value>Aplikazioaren segurtasun aukera ezberdinen kudeaketa</value>
+  </data>
+  <data name="RES_features.administration.securityoptions.name.rotext" xml:space="preserve">
+    <value>Segurtasun aukerak</value>
+  </data>
+  <data name="RES_features.administration.tasksqueue.description.rotext" xml:space="preserve">
+    <value>Sistemako txostenen egoera kudeatzeko eta egiaztatzeko aukera ematen du</value>
+  </data>
+  <data name="RES_features.administration.tasksqueue.name.rotext" xml:space="preserve">
+    <value>Eskatutako txostenak</value>
+  </data>
+  <data name="RES_features.administration.usertasks.description.rotext" xml:space="preserve">
+    <value>Zain dauden erabiltzaileen zereginen kudeaketa: erabiltzaileei txartelak esleitzea, txartel oker batekin egin diren sinadurak zuzentzea,...</value>
+  </data>
+  <data name="RES_features.administration.usertasks.name.rotext" xml:space="preserve">
+    <value>Erabiltzaileen zereginak</value>
+  </data>
+  <data name="RES_features.assignments.definition.description.rotext" xml:space="preserve">
+    <value>Posizioaren konfigurazioa</value>
+  </data>
+  <data name="RES_features.assignments.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.assignments.description.rotext" xml:space="preserve">
+    <value>Lanpostuen kudeaketa</value>
+  </data>
+  <data name="RES_features.assignments.name.rotext" xml:space="preserve">
+    <value>Postuak</value>
+  </data>
+  <data name="RES_features.bots.definition.description.rotext" xml:space="preserve">
+    <value>Bot-en definizioa</value>
+  </data>
+  <data name="RES_features.bots.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.bots.description.rotext" xml:space="preserve">
+    <value>Bot kudeaketa</value>
+  </data>
+  <data name="RES_features.bots.name.rotext" xml:space="preserve">
+    <value>Botak</value>
+  </data>
+  <data name="RES_features.budgets.definition.description.rotext" xml:space="preserve">
+    <value>Produkzio-unitateen lan-moduak kudeatzea</value>
+  </data>
+  <data name="RES_features.budgets.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.budgets.description.rotext" xml:space="preserve">
+    <value>Nodo bakoitzaren aurrekontu-kudeaketa</value>
+  </data>
+  <data name="RES_features.budgets.name.rotext" xml:space="preserve">
+    <value>Aurrekontuak</value>
+  </data>
+  <data name="RES_features.budgets.schedule.description.rotext" xml:space="preserve">
+    <value>Planifikatu aurrekontuko unitate produktibo bakoitzari esleituko zaizkion erabiltzaileak</value>
+  </data>
+  <data name="RES_features.budgets.schedule.name.rotext" xml:space="preserve">
+    <value>Plangintza</value>
+  </data>
+  <data name="RES_features.businesscenters.analytics.description.rotext" xml:space="preserve">
+    <value>Kostu-zentroei lotutako datuen kontrol analitikoa</value>
+  </data>
+  <data name="RES_features.businesscenters.analytics.name.rotext" xml:space="preserve">
+    <value>Kostuen analitika</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.description.rotext" xml:space="preserve">
+    <value>Datu-loturak eskuragarri daude datu-esteken pantailan</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.exports.advbusinesscenter.description.rotext" xml:space="preserve">
+    <value>Kostu zentro aurreratua esportatzeko baimenak</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.exports.advbusinesscenter.name.rotext" xml:space="preserve">
+    <value>Kostu zentro aurreratua esportatzea</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.exports.description.rotext" xml:space="preserve">
+    <value>Datu-esteken pantailan eskuragarri dauden esportazioak</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.exports.name.rotext" xml:space="preserve">
+    <value>Esportazioak</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.imports.businesscenter.description.rotext" xml:space="preserve">
+    <value>Kostu Zentroak kargatzeko baimenak</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.imports.businesscenter.name.rotext" xml:space="preserve">
+    <value>Kostu Zentroa Kargatzea</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.imports.description.rotext" xml:space="preserve">
+    <value>Datu-esteken pantailan eskuragarri dauden inportazioak</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.imports.name.rotext" xml:space="preserve">
+    <value>Inportazioak</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.name.rotext" xml:space="preserve">
+    <value>datu-lotura</value>
+  </data>
+  <data name="RES_features.businesscenters.definition.description.rotext" xml:space="preserve">
+    <value>Kostu-zentroen definizioa</value>
+  </data>
+  <data name="RES_features.businesscenters.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.businesscenters.description.rotext" xml:space="preserve">
+    <value>Kostu zentroen kudeaketa: konfigurazioa, esleipena, etab.</value>
+  </data>
+  <data name="RES_features.businesscenters.name.rotext" xml:space="preserve">
+    <value>Kostu zentroak</value>
+  </data>
+  <data name="RES_features.businesscenters.punches.description.rotext" xml:space="preserve">
+    <value>Kostu zentroetako transferentziak eta gorabeherak kudeatzea</value>
+  </data>
+  <data name="RES_features.businesscenters.punches.name.rotext" xml:space="preserve">
+    <value>Transferen edizioa</value>
+  </data>
+  <data name="RES_features.calendar.accruals.description.rotext" xml:space="preserve">
+    <value>Presikako saldoak transferentzia editatzeko pantailatik egiaztatzeko aukera ematen du.</value>
+  </data>
+  <data name="RES_features.calendar.accruals.name.rotext" xml:space="preserve">
+    <value>Egiaztatu presentzia-saldoak</value>
+  </data>
+  <data name="RES_features.calendar.analytics.description.rotext" xml:space="preserve">
+    <value>Egutegiarekin lotutako datuen kontrol analitikoa</value>
+  </data>
+  <data name="RES_features.calendar.analytics.name.rotext" xml:space="preserve">
+    <value>Analitika</value>
+  </data>
+  <data name="RES_features.calendar.dailyrecord.description.rotext" xml:space="preserve">
+    <value>Eguneko aitorpenak kudeatzeko aukera ematen du</value>
+  </data>
+  <data name="RES_features.calendar.dailyrecord.name.rotext" xml:space="preserve">
+    <value>Eguneko adierazpena</value>
+  </data>
+  <data name="RES_features.calendar.datalink.description.rotext" xml:space="preserve">
+    <value>Datu-loturak eskuragarri daude datu-esteken pantailan</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.assignments.description.rotext" xml:space="preserve">
+    <value>Posizioak esportatzeko baimenak</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.assignments.name.rotext" xml:space="preserve">
+    <value>Post esportazioa</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.calendar.description.rotext" xml:space="preserve">
+    <value>Egutegia esportatzeko baimenak</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.calendar.name.rotext" xml:space="preserve">
+    <value>Egutegia esportatzea</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.calendarassignments.description.rotext" xml:space="preserve">
+    <value>Egutegia eta posizioak esportatzeko baimenak</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.calendarassignments.name.rotext" xml:space="preserve">
+    <value>Egutegia eta posizioak esportatzea</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.calendarnameassignments.description.rotext" xml:space="preserve">
+    <value>Egutegiaren esportazioa eta posizioak izenaren arabera exekutatzeko baimenak</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.calendarnameassignments.name.rotext" xml:space="preserve">
+    <value>Esportatu egutegia eta posizioak izenaren arabera</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.description.rotext" xml:space="preserve">
+    <value>Datu-esteken pantailan eskuragarri dauden esportazioak</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.holidays.description.rotext" xml:space="preserve">
+    <value>Oporretako esportazioa abiarazteko baimenak</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.holidays.name.rotext" xml:space="preserve">
+    <value>Oporretako esportazioa</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.holidaysshifts.description.rotext" xml:space="preserve">
+    <value>Ordutegien eta jaiegunen esportazioa exekutatzeko baimenak</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.holidaysshifts.name.rotext" xml:space="preserve">
+    <value>Ordutegien eta jaiegunen esportazioa</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.name.rotext" xml:space="preserve">
+    <value>Esportazioak</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.shifts.description.rotext" xml:space="preserve">
+    <value>Ordutegien esportazioa exekutatzeko baimenak</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.shifts.name.rotext" xml:space="preserve">
+    <value>Programatu esportazioa</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.assignments.description.rotext" xml:space="preserve">
+    <value>Esleitutako postuen inportazioa gauzatzeko baimenak</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.assignments.name.rotext" xml:space="preserve">
+    <value>Inportatu esleitutako postuak</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.causes.description.rotext" xml:space="preserve">
+    <value>Justifikazioen inportazioa gauzatzeko baimenak</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.causes.name.rotext" xml:space="preserve">
+    <value>Justifikazioak inportatzea</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.description.rotext" xml:space="preserve">
+    <value>Datu-esteken pantailan eskuragarri dauden inportazioak</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.hrschedule.description.rotext" xml:space="preserve">
+    <value>Ekipo teorikoen inportazioa gauzatzeko baimenak</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.hrschedule.name.rotext" xml:space="preserve">
+    <value>Dotazio teorikoaren inportazioa</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.name.rotext" xml:space="preserve">
+    <value>Inportazioak</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.schedule.description.rotext" xml:space="preserve">
+    <value>Plangintza-inportazioa exekutatzeko baimenak</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.schedule.name.rotext" xml:space="preserve">
+    <value>Plangintza inportazioa</value>
+  </data>
+  <data name="RES_features.calendar.datalink.name.rotext" xml:space="preserve">
+    <value>datu-lotura</value>
+  </data>
+  <data name="RES_features.calendar.description.rotext" xml:space="preserve">
+    <value>Egutegiaren kudeaketa eta erabiltzaileen konfigurazioa, zeinetan baimendutako egutegiko funtzionalitate bakoitzaren kudeaketa egingo den</value>
+  </data>
+  <data name="RES_features.calendar.directcauses.description.rotext" xml:space="preserve">
+    <value>Transferentzia Editatu pantailan justifikazio gehigarriak sartzeko aukera ematen du, eta horrek ez du inolako gorabeherarik kodetuko</value>
+  </data>
+  <data name="RES_features.calendar.directcauses.name.rotext" xml:space="preserve">
+    <value>Justifikazio zuzenak</value>
+  </data>
+  <data name="RES_features.calendar.highlight.description.rotext" xml:space="preserve">
+    <value>Justifikazio aipagarrien konfigurazioa: adibidez, nabarmendu 10 minutu baino gehiagoko atzerapenak, 8 ordu baino gutxiago lan egindako orduak,...</value>
+  </data>
+  <data name="RES_features.calendar.highlight.name.rotext" xml:space="preserve">
+    <value>Nabarmenak</value>
+  </data>
+  <data name="RES_features.calendar.justifyincidences.description.rotext" xml:space="preserve">
+    <value>Gorabeheren eguneroko kudeaketa: gertakari baten arrazoia/justifikazioa eskuz sartzea</value>
+  </data>
+  <data name="RES_features.calendar.justifyincidences.name.rotext" xml:space="preserve">
+    <value>Gertaerak justifikatu</value>
+  </data>
+  <data name="RES_features.calendar.name.rotext" xml:space="preserve">
+    <value>Egutegia</value>
+  </data>
+  <data name="RES_features.calendar.punches.description.rotext" xml:space="preserve">
+    <value>Erlojuen kudeaketa: ahaztutako erlojuak zuzentzea, erabiltzaileak eskuz sartutako erlojuak onartzea,...</value>
+  </data>
+  <data name="RES_features.calendar.punches.name.rotext" xml:space="preserve">
+    <value>Transferentziak</value>
+  </data>
+  <data name="RES_features.calendar.punches.punches.description.rotext" xml:space="preserve">
+    <value>Transferentzia Editatu pantailan jasotako datuak editatzea eta aldatzea</value>
+  </data>
+  <data name="RES_features.calendar.punches.punches.name.rotext" xml:space="preserve">
+    <value>Transferen edizioa</value>
+  </data>
+  <data name="RES_features.calendar.punches.punches.photo.description.rotext" xml:space="preserve">
+    <value>Arduradunak sinatzeei erantsitako argazkiak ikusteko baimena duen adierazten du.</value>
+  </data>
+  <data name="RES_features.calendar.punches.punches.photo.name.rotext" xml:space="preserve">
+    <value>Transferitu argazkiak</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.costcenterforgotten.description.rotext" xml:space="preserve">
+    <value>Kostu zentroetatik ahaztutako transferentzien eskaeren kudeaketa</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.costcenterforgotten.name.rotext" xml:space="preserve">
+    <value>Ahaztutako kostu zentroen sinaketak</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileen sinatzeekin lotutako eskaeren kudeaketa</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.externalparts.description.rotext" xml:space="preserve">
+    <value>Kanpoko Lan Txostenen eskaerak kudeatzea</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.externalparts.name.rotext" xml:space="preserve">
+    <value>Kanpoko lan-zatiak</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.externalworkweekresume.description.rotext" xml:space="preserve">
+    <value>Kanpoko Lanaren Asteko Laburpen eskaerak kudeatzea</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.externalworkweekresume.name.rotext" xml:space="preserve">
+    <value>(NoEntry)</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.forgotten.description.rotext" xml:space="preserve">
+    <value>Ahaztutako transferentzia-eskaeren kudeaketa</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.forgotten.name.rotext" xml:space="preserve">
+    <value>Fitxaketak ahaztuak</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.justify.description.rotext" xml:space="preserve">
+    <value>Transferentzien justifikazio-eskaeren kudeaketa</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.justify.name.rotext" xml:space="preserve">
+    <value>Dauden sinatzeen justifikazioa</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.name.rotext" xml:space="preserve">
+    <value>Eskaerak</value>
+  </data>
+  <data name="RES_features.calendar.remarks.description.rotext" xml:space="preserve">
+    <value>Transferentzien edizioan adierazitako eguneroko behaketen kudeaketa</value>
+  </data>
+  <data name="RES_features.calendar.remarks.name.rotext" xml:space="preserve">
+    <value>Behaketak</value>
+  </data>
+  <data name="RES_features.calendar.requests.cancelholidays.description.rotext" xml:space="preserve">
+    <value>Oporrak bertan behera uzteko eskaerak kudeatzea, adibidez udako oporrak</value>
+  </data>
+  <data name="RES_features.calendar.requests.cancelholidays.name.rotext" xml:space="preserve">
+    <value>Oporrak bertan behera uztea</value>
+  </data>
+  <data name="RES_features.calendar.requests.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileen plangintzarekin lotutako eskaeren kudeaketa</value>
+  </data>
+  <data name="RES_features.calendar.requests.name.rotext" xml:space="preserve">
+    <value>Eskaerak</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedabsence.description.rotext" xml:space="preserve">
+    <value>Aurreikusitako absentzia-eskaeren kudeaketa</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedabsence.name.rotext" xml:space="preserve">
+    <value>Absentzia egunen aurreikuspena</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedcause.description.rotext" xml:space="preserve">
+    <value>Aurreikusitako absentzia-orduen eskaeren kudeaketa</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedcause.name.rotext" xml:space="preserve">
+    <value>Absentzia orduen aurreikuspena</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedhour.description.rotext" xml:space="preserve">
+    <value>Orduko oporretarako eskaerak kudeatzea</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedhour.name.rotext" xml:space="preserve">
+    <value>Aurreikusitako orduak</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedovertime.description.rotext" xml:space="preserve">
+    <value>Ordu gehiegizko eskaerak egin daitezke</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedovertime.name.rotext" xml:space="preserve">
+    <value>Gehiegizko orduen aurreikuspena</value>
+  </data>
+  <data name="RES_features.calendar.requests.shiftchange.description.rotext" xml:space="preserve">
+    <value>Ordu aldaketa eskaeren kudeaketa: adibidez, datorren ostiralean txanda intentsiboaren eskaera</value>
+  </data>
+  <data name="RES_features.calendar.requests.shiftchange.name.rotext" xml:space="preserve">
+    <value>Ordutegi aldaketak</value>
+  </data>
+  <data name="RES_features.calendar.requests.shiftexchange.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileen arteko ordutegiak trukatzeko eskaeren kudeaketa</value>
+  </data>
+  <data name="RES_features.calendar.requests.shiftexchange.name.rotext" xml:space="preserve">
+    <value>Antolatu trukeak</value>
+  </data>
+  <data name="RES_features.calendar.requests.telecommute.description.rotext" xml:space="preserve">
+    <value>Telelanaren eskaerak onartzeko edo ukatzeko aukera ematen dizu</value>
+  </data>
+  <data name="RES_features.calendar.requests.telecommute.name.rotext" xml:space="preserve">
+    <value>Telelanaren eskaeren kudeaketa</value>
+  </data>
+  <data name="RES_features.calendar.requests.vacations.description.rotext" xml:space="preserve">
+    <value>Oporretarako eskaerak kudeatzea: adibidez, oporretako aste baterako eskaera</value>
+  </data>
+  <data name="RES_features.calendar.requests.vacations.name.rotext" xml:space="preserve">
+    <value>Oporrak</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat1.description.rotext" xml:space="preserve">
+    <value>1. kategoriarako baimenak zehaztea</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat1.name.rotext" xml:space="preserve">
+    <value>1. kategoria</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat10.description.rotext" xml:space="preserve">
+    <value>10. kategoriarako baimenen definizioa</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat10.name.rotext" xml:space="preserve">
+    <value>10. kategoria</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat11.description.rotext" xml:space="preserve">
+    <value>11. kategoriarako baimenen definizioa</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat11.name.rotext" xml:space="preserve">
+    <value>11. kategoria</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat12.description.rotext" xml:space="preserve">
+    <value>12. kategoriarako baimenen definizioa</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat12.name.rotext" xml:space="preserve">
+    <value>12. kategoria</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat2.description.rotext" xml:space="preserve">
+    <value>2. kategoriarako baimenak zehaztea</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat2.name.rotext" xml:space="preserve">
+    <value>2. kategoria</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat3.description.rotext" xml:space="preserve">
+    <value>3. kategoriarako baimenen definizioa</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat3.name.rotext" xml:space="preserve">
+    <value>3. kategoria</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat4.description.rotext" xml:space="preserve">
+    <value>4. kategoriarako baimenen definizioa</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat4.name.rotext" xml:space="preserve">
+    <value>4. kategoria</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat5.description.rotext" xml:space="preserve">
+    <value>5. kategoriarako baimenen definizioa</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat5.name.rotext" xml:space="preserve">
+    <value>5. kategoria</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat6.description.rotext" xml:space="preserve">
+    <value>6. kategoriarako baimenen definizioa</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat6.name.rotext" xml:space="preserve">
+    <value>6. kategoria</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat7.description.rotext" xml:space="preserve">
+    <value>7. kategoriarako baimenen definizioa</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat7.name.rotext" xml:space="preserve">
+    <value>7. kategoria</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat8.description.rotext" xml:space="preserve">
+    <value>8. kategoriarako baimenen definizioa</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat8.name.rotext" xml:space="preserve">
+    <value>8. kategoria</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat9.description.rotext" xml:space="preserve">
+    <value>9. kategoriarako baimenen definizioa</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat9.name.rotext" xml:space="preserve">
+    <value>9. kategoria</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileen urteko egutegien konfigurazioa eta plangintzarekin lotutako tresnen kudeaketa: opor txantiloiak, blokeo egunak, plangintzaren kopia,...</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.name.rotext" xml:space="preserve">
+    <value>Plangintza</value>
+  </data>
+  <data name="RES_features.causes.definition.description.rotext" xml:space="preserve">
+    <value>Justifikazio ezarpenak: definizioa, mota, ikusgarritasuna, biribilketa,</value>
+  </data>
+  <data name="RES_features.causes.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.causes.description.rotext" xml:space="preserve">
+    <value>Enpresaren denbora kudeatzeko politikan esku hartzen duten kausa/arrazoien zerrenda kudeatzea</value>
+  </data>
+  <data name="RES_features.causes.name.rotext" xml:space="preserve">
+    <value>Justifikazioak</value>
+  </data>
+  <data name="RES_features.concepts.definition.c1.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.concepts.definition.c1.name.rotext" xml:space="preserve">
+    <value>1. kategoria</value>
+  </data>
+  <data name="RES_features.concepts.definition.c2.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.concepts.definition.c2.name.rotext" xml:space="preserve">
+    <value>2. kategoria</value>
+  </data>
+  <data name="RES_features.concepts.definition.c3.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.concepts.definition.c3.name.rotext" xml:space="preserve">
+    <value>3. kategoria</value>
+  </data>
+  <data name="RES_features.concepts.definition.c4.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.concepts.definition.c4.name.rotext" xml:space="preserve">
+    <value>4. kategoria</value>
+  </data>
+  <data name="RES_features.concepts.definition.c5.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.concepts.definition.c5.name.rotext" xml:space="preserve">
+    <value>5. kategoria</value>
+  </data>
+  <data name="RES_features.concepts.definition.description.rotext" xml:space="preserve">
+    <value>Balantzearen konfigurazioa: definizioa, mota, etab.</value>
+  </data>
+  <data name="RES_features.concepts.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.concepts.description.rotext" xml:space="preserve">
+    <value>Politikan parte hartzen duten saldoen zerrenda kudeatzea eta erabiltzaileen denboraren kudeaketaren azterketa</value>
+  </data>
+  <data name="RES_features.concepts.name.rotext" xml:space="preserve">
+    <value>Balantzeak</value>
+  </data>
+  <data name="RES_features.conventions.definition.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.conventions.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.conventions.description.rotext" xml:space="preserve">
+    <value>Baimendutako hitzarmenaren funtzionaltasun bakoitzaren kudeaketa egingo den erabiltzaileen konfigurazioa</value>
+  </data>
+  <data name="RES_features.conventions.employeeassign.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.conventions.employeeassign.name.rotext" xml:space="preserve">
+    <value>Erabiltzaileei esleitzea</value>
+  </data>
+  <data name="RES_features.conventions.name.rotext" xml:space="preserve">
+    <value>Hitzarmenak</value>
+  </data>
+  <data name="RES_features.diningroom.description.rotext" xml:space="preserve">
+    <value>Jangelako txanden kudeaketa</value>
+  </data>
+  <data name="RES_features.diningroom.name.rotext" xml:space="preserve">
+    <value>Jangela</value>
+  </data>
+  <data name="RES_features.diningroom.punches.description.rotext" xml:space="preserve">
+    <value>Erlojuen kudeaketa: ahaztutako erlojuak zuzentzea, erabiltzaileak eskuz sartutako erlojuak onartzea,...</value>
+  </data>
+  <data name="RES_features.diningroom.punches.name.rotext" xml:space="preserve">
+    <value>Transferentziak</value>
+  </data>
+  <data name="RES_features.diningroom.turns.description.rotext" xml:space="preserve">
+    <value>Jangelarako sarbidea ematen duten txanden konfigurazioa</value>
+  </data>
+  <data name="RES_features.diningroom.turns.name.rotext" xml:space="preserve">
+    <value>Jangelako txandak</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.description.rotext" xml:space="preserve">
+    <value>GDPR segurtasun maila</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.high.description.rotext" xml:space="preserve">
+    <value>Maila altua</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.high.name.rotext" xml:space="preserve">
+    <value>Maila altua</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.low.description.rotext" xml:space="preserve">
+    <value>Oinarrizko maila</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.low.name.rotext" xml:space="preserve">
+    <value>Oinarrizko maila</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.medium.description.rotext" xml:space="preserve">
+    <value>Maila ertaina</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.medium.name.rotext" xml:space="preserve">
+    <value>Maila ertaina</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.name.rotext" xml:space="preserve">
+    <value>GDPR segurtasun maila</value>
+  </data>
+  <data name="RES_features.documents.description.rotext" xml:space="preserve">
+    <value>Dokumentuak</value>
+  </data>
+  <data name="RES_features.documents.documentsdefinition.description.rotext" xml:space="preserve">
+    <value>Dokumentu txantiloiak zehaztea</value>
+  </data>
+  <data name="RES_features.documents.documentsdefinition.name.rotext" xml:space="preserve">
+    <value>Dokumentu txantiloiak zehaztea</value>
+  </data>
+  <data name="RES_features.documents.name.rotext" xml:space="preserve">
+    <value>Dokumentuak</value>
+  </data>
+  <data name="RES_features.documents.permision.description.rotext" xml:space="preserve">
+    <value>Eremua</value>
+  </data>
+  <data name="RES_features.documents.permision.labor.description.rotext" xml:space="preserve">
+    <value>Lana</value>
+  </data>
+  <data name="RES_features.documents.permision.labor.name.rotext" xml:space="preserve">
+    <value>Lana</value>
+  </data>
+  <data name="RES_features.documents.permision.legal.description.rotext" xml:space="preserve">
+    <value>Legezkoa</value>
+  </data>
+  <data name="RES_features.documents.permision.legal.name.rotext" xml:space="preserve">
+    <value>Legezkoa</value>
+  </data>
+  <data name="RES_features.documents.permision.name.rotext" xml:space="preserve">
+    <value>Eremua</value>
+  </data>
+  <data name="RES_features.documents.permision.prevention.description.rotext" xml:space="preserve">
+    <value>Prebentzioa</value>
+  </data>
+  <data name="RES_features.documents.permision.prevention.name.rotext" xml:space="preserve">
+    <value>Prebentzioa</value>
+  </data>
+  <data name="RES_features.documents.permision.quality.description.rotext" xml:space="preserve">
+    <value>Kalitatea</value>
+  </data>
+  <data name="RES_features.documents.permision.quality.name.rotext" xml:space="preserve">
+    <value>Kalitatea</value>
+  </data>
+  <data name="RES_features.documents.permision.security.description.rotext" xml:space="preserve">
+    <value>Segurtasuna</value>
+  </data>
+  <data name="RES_features.documents.permision.security.name.rotext" xml:space="preserve">
+    <value>Segurtasuna</value>
+  </data>
+  <data name="RES_features.documentsabsences.definition.description.rotext" xml:space="preserve">
+    <value>Bajen jarraipena egiteko erabiliko diren dokumentuen definizioa</value>
+  </data>
+  <data name="RES_features.documentsabsences.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.documentsabsences.description.rotext" xml:space="preserve">
+    <value>Bajen jarraipena egiteko erabiliko diren dokumentuen kudeaketa</value>
+  </data>
+  <data name="RES_features.documentsabsences.name.rotext" xml:space="preserve">
+    <value>Dokumentuak</value>
+  </data>
+  <data name="RES_features.e.planification.description.rotext" xml:space="preserve">
+    <value>Erabiltzaile Atariaren barruan, 'Denbora Kontrola\Nire Egutegia' funtzionalitaterako sarbidea ahalbidetzen du</value>
+  </data>
+  <data name="RES_features.e.planification.forecast.description.rotext" xml:space="preserve">
+    <value>Onartutako aurreikusitako absentziak baliogabetzea</value>
+  </data>
+  <data name="RES_features.e.planification.forecast.name.rotext" xml:space="preserve">
+    <value>Onartutako aurreikusitako absentziak baliogabetzea</value>
+  </data>
+  <data name="RES_features.e.planification.name.rotext" xml:space="preserve">
+    <value>Plangintza</value>
+  </data>
+  <data name="RES_features.e.planification.query.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak aurreikusitako ordutegiak kontsulta ditzake</value>
+  </data>
+  <data name="RES_features.e.planification.query.name.rotext" xml:space="preserve">
+    <value>Kontsulta</value>
+  </data>
+  <data name="RES_features.e.planification.requests.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak plangintza teorikoan aldaketak egiteko eskaerak egin ditzake</value>
+  </data>
+  <data name="RES_features.e.planification.requests.name.rotext" xml:space="preserve">
+    <value>Eskaerak</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedabsence .description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.e.planification.requests.plannedabsence .name.rotext" xml:space="preserve">
+    <value>Aurreikusitako absentzia</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedabsence.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak absentzia egunetarako aurreikuspen-eskaerak egin ditzake</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedabsence.name.rotext" xml:space="preserve">
+    <value>Absentzia egunen aurreikuspena</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedcause.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak absentzia-orduen aurreikuspenen eskaerak egin ditzake</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedcause.name.rotext" xml:space="preserve">
+    <value>Absentzia orduen aurreikuspena</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedhour.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak orduro egin ditzake oporrak/eskaerak eskaerak</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedhour.name.rotext" xml:space="preserve">
+    <value>Orduko oporraldi/bajen iragarpena</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedovertime.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak ordu gehiegizko eskaerak egin ditzake</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedovertime.name.rotext" xml:space="preserve">
+    <value>Gehiegizko orduen aurreikuspena</value>
+  </data>
+  <data name="RES_features.e.planification.requests.shiftchange.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak laneko txanda aldatzeko eska dezake: adibidez, arratsaldeko txanda hurrengo ostiralerako goizeko txandara.</value>
+  </data>
+  <data name="RES_features.e.planification.requests.shiftchange.name.rotext" xml:space="preserve">
+    <value>Ordutegi aldaketa</value>
+  </data>
+  <data name="RES_features.e.planification.requests.shiftexchange.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak egun zehatz bateko lan-txanda beste erabiltzaile batekin trukatzeko eska dezake.</value>
+  </data>
+  <data name="RES_features.e.planification.requests.shiftexchange.name.rotext" xml:space="preserve">
+    <value>Ordutegien trukea</value>
+  </data>
+  <data name="RES_features.e.planification.requests.vacations.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak opor egunak edo baja egunak eska ditzake</value>
+  </data>
+  <data name="RES_features.e.planification.requests.vacations.name.rotext" xml:space="preserve">
+    <value>Oporrak</value>
+  </data>
+  <data name="RES_features.e.punches.dailyrecord.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak eguneko adierazpenak egin ditzake. Ez dira sortuko denbora errealeko erlojua eskatzen duten alertak, hala nola, erabiltzailea iritsi behar zela adierazten duena.</value>
+  </data>
+  <data name="RES_features.e.punches.dailyrecord.name.rotext" xml:space="preserve">
+    <value>Eguneko adierazpena</value>
+  </data>
+  <data name="RES_features.e.punches.description.rotext" xml:space="preserve">
+    <value>Erabiltzaile Atariaren barruan, 'Denbora Kontrola\Nire Transferentziak' funtzionalitaterako sarbidea ahalbidetzen du</value>
+  </data>
+  <data name="RES_features.e.punches.name.rotext" xml:space="preserve">
+    <value>Denbora kontrolatzeko fitxaketak</value>
+  </data>
+  <data name="RES_features.e.punches.punches.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak bere sinadurak Erabiltzaile Atariaren bidez egin ditzake</value>
+  </data>
+  <data name="RES_features.e.punches.punches.name.rotext" xml:space="preserve">
+    <value>Egin fitxaketak</value>
+  </data>
+  <data name="RES_features.e.punches.query.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak egun zehatz batean egindako fitxaketak kontsulta ditzake</value>
+  </data>
+  <data name="RES_features.e.punches.query.name.rotext" xml:space="preserve">
+    <value>Kontsulta</value>
+  </data>
+  <data name="RES_features.e.punches.requests.costcenterforgotten.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak ahaztutako kostu-zentroen transferentzia eskaerak egin ditzake</value>
+  </data>
+  <data name="RES_features.e.punches.requests.costcenterforgotten.name.rotext" xml:space="preserve">
+    <value>Ahaztutako kostu zentroen sinaketak</value>
+  </data>
+  <data name="RES_features.e.punches.requests.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak transferentziarekin lotutako eskaerak egin ditzake</value>
+  </data>
+  <data name="RES_features.e.punches.requests.externalparts.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak Kanpoko Lan-Piezen eskaerak egin ditzake</value>
+  </data>
+  <data name="RES_features.e.punches.requests.externalparts.name.rotext" xml:space="preserve">
+    <value>Kanpoko zatiak</value>
+  </data>
+  <data name="RES_features.e.punches.requests.externalworkweekresume.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak kanpoko lanaren astero laburpen eskaerak egin ditzake</value>
+  </data>
+  <data name="RES_features.e.punches.requests.externalworkweekresume.name.rotext" xml:space="preserve">
+    <value>Kanpoko lanaren asteko zatia</value>
+  </data>
+  <data name="RES_features.e.punches.requests.forgotten.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak ahaztutako transferentzien eskaerak egin ditzake</value>
+  </data>
+  <data name="RES_features.e.punches.requests.forgotten.name.rotext" xml:space="preserve">
+    <value>Fitxaketak ahaztuak</value>
+  </data>
+  <data name="RES_features.e.punches.requests.justify.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak lehendik dauden sinadurak justifikatzeko eskaerak egin ditzake</value>
+  </data>
+  <data name="RES_features.e.punches.requests.justify.name.rotext" xml:space="preserve">
+    <value>Justifikatu lehendik dauden sinaketak</value>
+  </data>
+  <data name="RES_features.e.punches.requests.name.rotext" xml:space="preserve">
+    <value>Eskaerak</value>
+  </data>
+  <data name="RES_features.e.taskpunches.complete.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak lan egiten dituen zereginak bete ahal izango ditu.</value>
+  </data>
+  <data name="RES_features.e.taskpunches.complete.name.rotext" xml:space="preserve">
+    <value>Osatzeko</value>
+  </data>
+  <data name="RES_features.e.taskpunches.description.rotext" xml:space="preserve">
+    <value>Erabiltzaile Atariaren barruan, 'Nire zereginak\Nire sinadurak' funtzionalitaterako sarbidea ahalbidetzen du</value>
+  </data>
+  <data name="RES_features.e.taskpunches.name.rotext" xml:space="preserve">
+    <value>Ataza sinatzea</value>
+  </data>
+  <data name="RES_features.e.taskpunches.punches.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak bere sinadurak Erabiltzaile Atariaren bidez egin ditzake</value>
+  </data>
+  <data name="RES_features.e.taskpunches.punches.name.rotext" xml:space="preserve">
+    <value>Egin fitxaketak</value>
+  </data>
+  <data name="RES_features.e.taskpunches.query.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak egun zehatz batean egindako fitxaketak kontsulta ditzake</value>
+  </data>
+  <data name="RES_features.e.taskpunches.query.name.rotext" xml:space="preserve">
+    <value>Kontsulta</value>
+  </data>
+  <data name="RES_features.e.taskpunches.requests.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak transferentziarekin lotutako eskaerak egin ditzake</value>
+  </data>
+  <data name="RES_features.e.taskpunches.requests.forgotten.description.rotext" xml:space="preserve">
+    <value>Ahaztutako transferentzia-eskaeren kudeaketa</value>
+  </data>
+  <data name="RES_features.e.taskpunches.requests.forgotten.name.rotext" xml:space="preserve">
+    <value>Fitxaketak ahaztuak</value>
+  </data>
+  <data name="RES_features.e.taskpunches.requests.name.rotext" xml:space="preserve">
+    <value>Eskaerak</value>
+  </data>
+  <data name="RES_features.e.tasks.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileen baimenak zereginetan</value>
+  </data>
+  <data name="RES_features.e.tasks.name.rotext" xml:space="preserve">
+    <value>Zereginak</value>
+  </data>
+  <data name="RES_features.e.tasktotals.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileen baimenak zereginen balantzeetan</value>
+  </data>
+  <data name="RES_features.e.tasktotals.name.rotext" xml:space="preserve">
+    <value>Zereginen balantzea kontsultatzea</value>
+  </data>
+  <data name="RES_features.e.tasktotals.query.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak balantzeak eta zereginak egiaztatu ditzake</value>
+  </data>
+  <data name="RES_features.e.tasktotals.query.name.rotext" xml:space="preserve">
+    <value>Kontsulta</value>
+  </data>
+  <data name="RES_features.e.totals.description.rotext" xml:space="preserve">
+    <value>Erabiltzaile-baimenak saldoetan</value>
+  </data>
+  <data name="RES_features.e.totals.name.rotext" xml:space="preserve">
+    <value>Balantzeak</value>
+  </data>
+  <data name="RES_features.e.totals.query.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak bere saldoak egiaztatu ditzakeen adierazten du</value>
+  </data>
+  <data name="RES_features.e.totals.query.name.rotext" xml:space="preserve">
+    <value>Kontsulta</value>
+  </data>
+  <data name="RES_features.e.userfields.description.rotext" xml:space="preserve">
+    <value>Erabiltzaile Atariaren barruan, 'Nire Fitxategia' funtzionalitaterako sarbidea ahalbidetzen du</value>
+  </data>
+  <data name="RES_features.e.userfields.name.rotext" xml:space="preserve">
+    <value>Erabiltzailearen fitxategia</value>
+  </data>
+  <data name="RES_features.e.userfields.query.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak fitxategi pertsonalaren balioak kontsulta ditzake</value>
+  </data>
+  <data name="RES_features.e.userfields.query.name.rotext" xml:space="preserve">
+    <value>Kontsulta</value>
+  </data>
+  <data name="RES_features.e.userfields.requests.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak fitxaren balioetan aldaketak eska ditzake</value>
+  </data>
+  <data name="RES_features.e.userfields.requests.name.rotext" xml:space="preserve">
+    <value>Eskaerak</value>
+  </data>
+  <data name="RES_features.e.visits.definition.description.rotext" xml:space="preserve">
+    <value>Bisita motak zehaztu</value>
+  </data>
+  <data name="RES_features.e.visits.definition.name.rotext" xml:space="preserve">
+    <value>Bisita motak zehaztu</value>
+  </data>
+  <data name="RES_features.e.visits.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak bisitak jaso ditzake</value>
+  </data>
+  <data name="RES_features.e.visits.name.rotext" xml:space="preserve">
+    <value>Bisitak</value>
+  </data>
+  <data name="RES_features.e.visits.program.description.rotext" xml:space="preserve">
+    <value>Bisitak programatu</value>
+  </data>
+  <data name="RES_features.e.visits.program.name.rotext" xml:space="preserve">
+    <value>Bisitak programatu</value>
+  </data>
+  <data name="RES_features.e.visits.receive.description.rotext" xml:space="preserve">
+    <value>Bisitak jaso</value>
+  </data>
+  <data name="RES_features.e.visits.receive.name.rotext" xml:space="preserve">
+    <value>Bisitak jaso</value>
+  </data>
+  <data name="RES_features.employees.allowedapplications.description.rotext" xml:space="preserve">
+    <value>Erabiltzaile batek saioa egin dezakeen aplikazioak kudeatzea</value>
+  </data>
+  <data name="RES_features.employees.allowedapplications.name.rotext" xml:space="preserve">
+    <value>Aplikazioak</value>
+  </data>
+  <data name="RES_features.employees.assignments.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileei esleitutako postuen kudeaketa</value>
+  </data>
+  <data name="RES_features.employees.assignments.name.rotext" xml:space="preserve">
+    <value>Postuak</value>
+  </data>
+  <data name="RES_features.employees.businesscenters.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileei eta taldeei esleitutako kostu zentroen kudeaketa</value>
+  </data>
+  <data name="RES_features.employees.businesscenters.name.rotext" xml:space="preserve">
+    <value>Kostu zentroak</value>
+  </data>
+  <data name="RES_features.employees.channels.description.rotext" xml:space="preserve">
+    <value>Enpresaren komunikazio bideak kudeatzeko aukera ematen du</value>
+  </data>
+  <data name="RES_features.employees.channels.name.rotext" xml:space="preserve">
+    <value>Komunikazio bideak</value>
+  </data>
+  <data name="RES_features.employees.communiques.description.rotext" xml:space="preserve">
+    <value>Komunikazio-funtzionalitaterako sarbidea</value>
+  </data>
+  <data name="RES_features.employees.communiques.name.rotext" xml:space="preserve">
+    <value>Iragarkiak</value>
+  </data>
+  <data name="RES_features.employees.complaints.description.rotext" xml:space="preserve">
+    <value>Enpresaren kexak kanala kudeatzeko aukera ematen du</value>
+  </data>
+  <data name="RES_features.employees.complaints.name.rotext" xml:space="preserve">
+    <value>Erreklamazio kanala</value>
+  </data>
+  <data name="RES_features.employees.contract.description.rotext" xml:space="preserve">
+    <value>Kontratuaren kudeaketa eta hitzarmenaren esleipena</value>
+  </data>
+  <data name="RES_features.employees.contract.name.rotext" xml:space="preserve">
+    <value>Kontratua</value>
+  </data>
+  <data name="RES_features.employees.datalink.custom.dailycauses.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.employees.datalink.custom.dailycauses.name.rotext" xml:space="preserve">
+    <value>(Sarrerarik ez)</value>
+  </data>
+  <data name="RES_features.employees.datalink.custom.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.employees.datalink.custom.name.rotext" xml:space="preserve">
+    <value>Pertsonalizatua</value>
+  </data>
+  <data name="RES_features.employees.datalink.custom.prima.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.employees.datalink.custom.prima.name.rotext" xml:space="preserve">
+    <value>Premium kalkulua</value>
+  </data>
+  <data name="RES_features.employees.datalink.custom.primasummary.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.employees.datalink.custom.primasummary.name.rotext" xml:space="preserve">
+    <value>Premium kalkuluaren laburpena erabiltzaile bakoitzeko</value>
+  </data>
+  <data name="RES_features.employees.datalink.custom.punches.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileen sinatzeen zerrenda zehatza</value>
+  </data>
+  <data name="RES_features.employees.datalink.custom.punches.name.rotext" xml:space="preserve">
+    <value>Erabiltzaileen sinadurak</value>
+  </data>
+  <data name="RES_features.employees.datalink.custom.punchespresence.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.employees.datalink.custom.punchespresence.name.rotext" xml:space="preserve">
+    <value>Presentziako sinaketak</value>
+  </data>
+  <data name="RES_features.employees.datalink.description.rotext" xml:space="preserve">
+    <value>Datu-loturak eskuragarri daude datu-esteken pantailan</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.accrualsday.description.rotext" xml:space="preserve">
+    <value>Eguneko saldoa esportatzeko baimenak</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.accrualsday.name.rotext" xml:space="preserve">
+    <value>Eguneko saldoen esportazioa</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.accrualsperiod.description.rotext" xml:space="preserve">
+    <value>Saldoa aldizkako esportazioa egiteko baimenak</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.accrualsperiod.name.rotext" xml:space="preserve">
+    <value>Aldizkako balantzearen esportazioa</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advabsence.description.rotext" xml:space="preserve">
+    <value>Hedatutako absentzia esportazio aurreratua exekutatzeko baimenak</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advabsence.name.rotext" xml:space="preserve">
+    <value>Absentzia luzeen esportazio aurreratua</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advabsences.description.rotext" xml:space="preserve">
+    <value>Absentzia-esportazioa exekutatzeko baimenak</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advabsences.name.rotext" xml:space="preserve">
+    <value>Absentziak esportatzea</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advaccruals.description.rotext" xml:space="preserve">
+    <value>Saldoen esportazio aurreratua exekutatzeko baimenak</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advaccruals.name.rotext" xml:space="preserve">
+    <value>Saldoen esportazio aurreratua</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advcauses.description.rotext" xml:space="preserve">
+    <value>Justifikazioen esportazioa gauzatzeko baimenak</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advcauses.name.rotext" xml:space="preserve">
+    <value>Justifikazioa Esportazioa</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advdinning.description.rotext" xml:space="preserve">
+    <value>Jantokiaren esportazio aurreratua exekutatzeko baimenak</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advdinning.name.rotext" xml:space="preserve">
+    <value>Jantokirako esportazio aurreratua</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advemployees.description.rotext" xml:space="preserve">
+    <value>Erabiltzaile aurreratua esportatzeko baimenak</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advemployees.name.rotext" xml:space="preserve">
+    <value>Erabiltzaile aurreratua esportatzea</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advrequests.description.rotext" xml:space="preserve">
+    <value>Eskaera esportatzeko baimenak</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advrequests.name.rotext" xml:space="preserve">
+    <value>Eskatu esportazioa</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.description.rotext" xml:space="preserve">
+    <value>Datu-esteken pantailan eskuragarri dauden esportazioak</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.iberper.description.rotext" xml:space="preserve">
+    <value>Iberper esportazioa exekutatzeko baimenak</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.iberper.name.rotext" xml:space="preserve">
+    <value>Iberper esportazioa</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.labor.description.rotext" xml:space="preserve">
+    <value>Lanera esportatzeko baimenak</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.labor.name.rotext" xml:space="preserve">
+    <value>Lanera esportatzea</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.loginclass.description.rotext" xml:space="preserve">
+    <value>Esportazioa Logic-Class-era exekutatzeko baimenak</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.loginclass.name.rotext" xml:space="preserve">
+    <value>Esportatu Logic-Classera</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.name.rotext" xml:space="preserve">
+    <value>Esportazioak</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.punches.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileen sinatzei buruzko datuak esportatzen dira</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.punches.name.rotext" xml:space="preserve">
+    <value>Transferentzien esportazio aurreratua</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.sage.description.rotext" xml:space="preserve">
+    <value>SAGE-murano esportatzeko baimenak</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.sage.name.rotext" xml:space="preserve">
+    <value>SAGE-murano esportazioa</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.stdemployees.description.rotext" xml:space="preserve">
+    <value>Esportazio estandarra exekutatzeko baimenak</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.stdemployees.name.rotext" xml:space="preserve">
+    <value>Esportazio estandarra</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.absences.description.rotext" xml:space="preserve">
+    <value>Absentzia luzeen inportazioa gauzatzeko baimenak</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.absences.name.rotext" xml:space="preserve">
+    <value>Absentzia luzeak inportatzea</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.company.description.rotext" xml:space="preserve">
+    <value>Enpresen inportazioa egiteko baimenak</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.company.name.rotext" xml:space="preserve">
+    <value>Enpresen inportazioa</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.description.rotext" xml:space="preserve">
+    <value>Datu-esteken pantailan eskuragarri dauden inportazioak</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.employees.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileen inportazioa exekutatzeko baimenak</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.employees.name.rotext" xml:space="preserve">
+    <value>Erabiltzaileak inportatzea</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.name.rotext" xml:space="preserve">
+    <value>Inportazioak</value>
+  </data>
+  <data name="RES_features.employees.datalink.name.rotext" xml:space="preserve">
+    <value>datu-lotura</value>
+  </data>
+  <data name="RES_features.employees.description.rotext" xml:space="preserve">
+    <value>Baimendutako erabiltzaileen funtzionalitate bakoitzaren kudeaketa egingo den erabiltzaileen kudeaketa eta konfigurazioa</value>
+  </data>
+  <data name="RES_features.employees.groupmobility.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileen talde mugikortasunaren kudeaketa</value>
+  </data>
+  <data name="RES_features.employees.groupmobility.name.rotext" xml:space="preserve">
+    <value>Mugikortasuna</value>
+  </data>
+  <data name="RES_features.employees.groups.description.rotext" xml:space="preserve">
+    <value>Erabiltzaile taldeen kudeaketa: edizioa eta konfigurazioa.</value>
+  </data>
+  <data name="RES_features.employees.groups.name.rotext" xml:space="preserve">
+    <value>Taldeak</value>
+  </data>
+  <data name="RES_features.employees.identifymethods.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak lan egingo duen identifikazio bitartekoen edizioa eta konfigurazioa: txartela, hatz-marka, erabiltzaile-izena eta pasahitza,...</value>
+  </data>
+  <data name="RES_features.employees.identifymethods.name.rotext" xml:space="preserve">
+    <value>Identifikatzeko metodoak</value>
+  </data>
+  <data name="RES_features.employees.name.rotext" xml:space="preserve">
+    <value>Erabiltzaileak</value>
+  </data>
+  <data name="RES_features.employees.namefoto.description.rotext" xml:space="preserve">
+    <value>Erabiltzaile-izena eta argazki-esleipena editatu eta aldatzea</value>
+  </data>
+  <data name="RES_features.employees.namefoto.name.rotext" xml:space="preserve">
+    <value>Izena eta argazkia</value>
+  </data>
+  <data name="RES_features.employees.surveys.description.rotext" xml:space="preserve">
+    <value>Gainbegiratutako langileei inkestak sortzeko eta bidaltzeko aukera ematen dizu</value>
+  </data>
+  <data name="RES_features.employees.surveys.name.rotext" xml:space="preserve">
+    <value>Inkestak</value>
+  </data>
+  <data name="RES_features.employees.type.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak esku hartzen duen prozesuen edizioa eta konfigurazioa: denboraren kudeaketa, Sarbidea, PRL,...</value>
+  </data>
+  <data name="RES_features.employees.type.name.rotext" xml:space="preserve">
+    <value>Erabiltzaile mota</value>
+  </data>
+  <data name="RES_features.employees.userfields.definition.description.rotext" xml:space="preserve">
+    <value>Langileen erregistroen konfigurazioa</value>
+  </data>
+  <data name="RES_features.employees.userfields.definition.name.rotext" xml:space="preserve">
+    <value>Definizio eremuak</value>
+  </data>
+  <data name="RES_features.employees.userfields.description.rotext" xml:space="preserve">
+    <value>Langileen espedientearen kudeaketa.</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.description.rotext" xml:space="preserve">
+    <value>Langileen espedienteen balioak kudeatzea, sentsibilitate-mailaren arabera, RGPD arauak ezarritakoaren arabera</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.high.description.rotext" xml:space="preserve">
+    <value>Ideologia, erlijioa, arraza jatorria, osasuna,... datuak.</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.high.name.rotext" xml:space="preserve">
+    <value>Maila altua</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.low.description.rotext" xml:space="preserve">
+    <value>Datu pertsonalak: PPE, helbidea, ikasketa maila,...</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.low.name.rotext" xml:space="preserve">
+    <value>Oinarrizko maila</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.medium.description.rotext" xml:space="preserve">
+    <value>Kreditu datuak, Ogasun Publikoa, arau-hausteak,...</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.medium.name.rotext" xml:space="preserve">
+    <value>Maila ertaina</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.name.rotext" xml:space="preserve">
+    <value>Informazio eremuak</value>
+  </data>
+  <data name="RES_features.employees.userfields.name.rotext" xml:space="preserve">
+    <value>Fitxategia</value>
+  </data>
+  <data name="RES_features.employees.userfields.requests.description.rotext" xml:space="preserve">
+    <value>Fitxategiak aldatzeko eskaeren kudeaketa</value>
+  </data>
+  <data name="RES_features.employees.userfields.requests.name.rotext" xml:space="preserve">
+    <value>Eskaerak</value>
+  </data>
+  <data name="RES_features.events.definition.description.rotext" xml:space="preserve">
+    <value>Aurreikusitako ekitaldien definizioa</value>
+  </data>
+  <data name="RES_features.events.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.events.description.rotext" xml:space="preserve">
+    <value>Aurreikusitako ekitaldien kudeaketa</value>
+  </data>
+  <data name="RES_features.events.name.rotext" xml:space="preserve">
+    <value>Aurreikusitako ekitaldiak</value>
+  </data>
+  <data name="RES_features.kpi.definition.description.rotext" xml:space="preserve">
+    <value>Errendimendu-adierazleen definizioa</value>
+  </data>
+  <data name="RES_features.kpi.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.kpi.description.rotext" xml:space="preserve">
+    <value>Errendimendu-adierazleen kudeaketa</value>
+  </data>
+  <data name="RES_features.kpi.name.rotext" xml:space="preserve">
+    <value>Errendimendu-adierazleak</value>
+  </data>
+  <data name="RES_features.labagree.accrualrules.definition.description.rotext" xml:space="preserve">
+    <value>Hitzarmenaren arauen konfigurazioa: adibidez, egiteke dauden oporraldien saldoa urte batetik bestera transferitzea, gehiegizko orduen erregularizazioa hiru hilean behin,...</value>
+  </data>
+  <data name="RES_features.labagree.accrualrules.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.labagree.accrualrules.description.rotext" xml:space="preserve">
+    <value>Hitzarmen desberdinak arautzen dituzten arauen kudeaketa</value>
+  </data>
+  <data name="RES_features.labagree.accrualrules.name.rotext" xml:space="preserve">
+    <value>Hitzarmen-arauak</value>
+  </data>
+  <data name="RES_features.labagree.definition.description.rotext" xml:space="preserve">
+    <value>Konbentzioaren konfigurazioa: hasierako balioak, gehienezko balioak eta konbentzio-arauak esleitzea</value>
+  </data>
+  <data name="RES_features.labagree.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.labagree.description.rotext" xml:space="preserve">
+    <value>Lan hitzarmenen kudeaketa</value>
+  </data>
+  <data name="RES_features.labagree.employeeassign.description.rotext" xml:space="preserve">
+    <value>Erabiltzaile bati dagoeneko sortutako hitzarmena esleitzea ahalbidetzen du</value>
+  </data>
+  <data name="RES_features.labagree.employeeassign.name.rotext" xml:space="preserve">
+    <value>Erabiltzaileei esleitzea</value>
+  </data>
+  <data name="RES_features.labagree.name.rotext" xml:space="preserve">
+    <value>Hitzarmenak</value>
+  </data>
+  <data name="RES_features.labagree.startupvalues.definition.description.rotext" xml:space="preserve">
+    <value>Hasierako balioen eta gehienezko balioen konfigurazioa: adibidez, oporretako 22 eguneko hasierako balioa, mediku orokorreko 16:00etako gehienezko balioa,... ***hasierako ***</value>
+  </data>
+  <data name="RES_features.labagree.startupvalues.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.labagree.startupvalues.description.rotext" xml:space="preserve">
+    <value>Hitzarmen desberdinak arautzen dituzten hasierako balioak eta gehienezko balioak kudeatzea</value>
+  </data>
+  <data name="RES_features.labagree.startupvalues.name.rotext" xml:space="preserve">
+    <value>Hasierako inizialak</value>
+  </data>
+  <data name="RES_features.productiveunit.definition.description.rotext" xml:space="preserve">
+    <value>Ekoizpen-unitateen eta haien lan-moduen konfigurazioa</value>
+  </data>
+  <data name="RES_features.productiveunit.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.productiveunit.description.rotext" xml:space="preserve">
+    <value>produkzio-unitateen kudeaketa</value>
+  </data>
+  <data name="RES_features.productiveunit.name.rotext" xml:space="preserve">
+    <value>Unitate produktiboak</value>
+  </data>
+  <data name="RES_features.reports.description.rotext" xml:space="preserve">
+    <value>Txostenen funtzio aurreratuetarako sarbidea</value>
+  </data>
+  <data name="RES_features.reports.name.rotext" xml:space="preserve">
+    <value>Txosten aurreratuak</value>
+  </data>
+  <data name="RES_features.shifts.definition.description.rotext" xml:space="preserve">
+    <value>Ordutegi bat osatzen duten parametroen konfigurazioa: ordu teorikoak, sarrera eta irteera orduak, atsedenaldiak, ordu eremuak, justifikazio arauak,...</value>
+  </data>
+  <data name="RES_features.shifts.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.shifts.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileen denboraren kudeaketan esku hartzen duten ordutegi taldeen eta ordutegien zerrenda kudeatzea</value>
+  </data>
+  <data name="RES_features.shifts.name.rotext" xml:space="preserve">
+    <value>Ordutegiak</value>
+  </data>
+  <data name="RES_features.tasks.analytics.description.rotext" xml:space="preserve">
+    <value>Atazekin lotutako datuen kontrol analitikoa</value>
+  </data>
+  <data name="RES_features.tasks.analytics.name.rotext" xml:space="preserve">
+    <value>Zereginen analitika</value>
+  </data>
+  <data name="RES_features.tasks.businesscenters.description.rotext" xml:space="preserve">
+    <value>Kostu zentroen kudeaketa: konfigurazioa, edizioa, etab.</value>
+  </data>
+  <data name="RES_features.tasks.businesscenters.name.rotext" xml:space="preserve">
+    <value>Kostu zentroak</value>
+  </data>
+  <data name="RES_features.tasks.datalink.description.rotext" xml:space="preserve">
+    <value>Datu-loturak eskuragarri daude datu-esteken pantailan</value>
+  </data>
+  <data name="RES_features.tasks.datalink.exports.advtasks.description.rotext" xml:space="preserve">
+    <value>Ataza-esportazio aurreratua exekutatzeko baimenak</value>
+  </data>
+  <data name="RES_features.tasks.datalink.exports.advtasks.name.rotext" xml:space="preserve">
+    <value>Zereginen esportazio aurreratua</value>
+  </data>
+  <data name="RES_features.tasks.datalink.exports.description.rotext" xml:space="preserve">
+    <value>Datu-esteken pantailan eskuragarri dauden esportazioak</value>
+  </data>
+  <data name="RES_features.tasks.datalink.exports.name.rotext" xml:space="preserve">
+    <value>Esportazioak</value>
+  </data>
+  <data name="RES_features.tasks.datalink.exports.tasks.description.rotext" xml:space="preserve">
+    <value>Ataza esportatzeko baimenak</value>
+  </data>
+  <data name="RES_features.tasks.datalink.exports.tasks.name.rotext" xml:space="preserve">
+    <value>Zereginen esportazioa</value>
+  </data>
+  <data name="RES_features.tasks.datalink.imports.description.rotext" xml:space="preserve">
+    <value>Datu-esteken pantailan eskuragarri dauden inportazioak</value>
+  </data>
+  <data name="RES_features.tasks.datalink.imports.name.rotext" xml:space="preserve">
+    <value>Inportazioak</value>
+  </data>
+  <data name="RES_features.tasks.datalink.imports.tasks.description.rotext" xml:space="preserve">
+    <value>Ataza inportatzeko baimenak</value>
+  </data>
+  <data name="RES_features.tasks.datalink.imports.tasks.name.rotext" xml:space="preserve">
+    <value>Inportatu zereginak</value>
+  </data>
+  <data name="RES_features.tasks.datalink.name.rotext" xml:space="preserve">
+    <value>datu-lotura</value>
+  </data>
+  <data name="RES_features.tasks.definition.description.rotext" xml:space="preserve">
+    <value>Zereginak definitu</value>
+  </data>
+  <data name="RES_features.tasks.definition.name.rotext" xml:space="preserve">
+    <value>Zereginak definitu</value>
+  </data>
+  <data name="RES_features.tasks.description.rotext" xml:space="preserve">
+    <value>Zereginak</value>
+  </data>
+  <data name="RES_features.tasks.fieldsdefinition.description.rotext" xml:space="preserve">
+    <value>Zereginaren atributuak zehaztea</value>
+  </data>
+  <data name="RES_features.tasks.fieldsdefinition.name.rotext" xml:space="preserve">
+    <value>Atributuen definizioa</value>
+  </data>
+  <data name="RES_features.tasks.name.rotext" xml:space="preserve">
+    <value>Zereginak</value>
+  </data>
+  <data name="RES_features.tasks.punches.description.rotext" xml:space="preserve">
+    <value>Erlojuen kudeaketa: ahaztutako erlojuak zuzentzea, erabiltzaileak eskuz sartutako erlojuak onartzea,...</value>
+  </data>
+  <data name="RES_features.tasks.punches.name.rotext" xml:space="preserve">
+    <value>Transferen edizioa</value>
+  </data>
+  <data name="RES_features.tasks.requests.description.rotext" xml:space="preserve">
+    <value>Erabiltzaileak zereginen programazioarekin lotutako eskaerak egin ditzake</value>
+  </data>
+  <data name="RES_features.tasks.requests.forgotten.description.rotext" xml:space="preserve">
+    <value>Ahaztutako transferentzia-eskaeren kudeaketa</value>
+  </data>
+  <data name="RES_features.tasks.requests.forgotten.name.rotext" xml:space="preserve">
+    <value>Fitxaketak ahaztuak</value>
+  </data>
+  <data name="RES_features.tasks.requests.name.rotext" xml:space="preserve">
+    <value>Eskaerak</value>
+  </data>
+  <data name="RES_features.tasks.tasktemplates.definition.description.rotext" xml:space="preserve">
+    <value>Zereginen txantiloiak zehaztea</value>
+  </data>
+  <data name="RES_features.tasks.tasktemplates.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.tasks.tasktemplates.description.rotext" xml:space="preserve">
+    <value>Ataza txantiloiaren kudeaketa</value>
+  </data>
+  <data name="RES_features.tasks.tasktemplates.name.rotext" xml:space="preserve">
+    <value>Zereginen txantiloiak</value>
+  </data>
+  <data name="RES_features.tasks.templatesdefinition.description.rotext" xml:space="preserve">
+    <value>Zereginen txantiloiak zehaztea</value>
+  </data>
+  <data name="RES_features.tasks.templatesdefinition.name.rotext" xml:space="preserve">
+    <value>Txantiloien definizioa</value>
+  </data>
+  <data name="RES_features.terminals.definition.description.rotext" xml:space="preserve">
+    <value>Terminalaren konfigurazioa: IP, ordu-eremua, erlojua sartzean irudi bat atera behar den ala ez, irakurlearen portaera, sirenak,...</value>
+  </data>
+  <data name="RES_features.terminals.definition.name.rotext" xml:space="preserve">
+    <value>Definizioa</value>
+  </data>
+  <data name="RES_features.terminals.description.rotext" xml:space="preserve">
+    <value>Terminalen kudeaketa. GARRANTZITSUA: Terminalen konfigurazioa Cegid-eko teknikariek egingo dute. Inolaz ere ez dira aldatuko erlazionatutako pantailetan agertzen diren datuak Cegideko langileen gainbegiratzepean ez bada.</value>
+  </data>
+  <data name="RES_features.terminals.name.rotext" xml:space="preserve">
+    <value>Terminalak</value>
+  </data>
+  <data name="RES_features.terminals.statusinfo.description.rotext" xml:space="preserve">
+    <value>Enpresan instalatutako terminalak eta haien egoera ikustea</value>
+  </data>
+  <data name="RES_features.terminals.statusinfo.name.rotext" xml:space="preserve">
+    <value>Egoerari buruzko informazioa</value>
+  </data>
+  <data name="RES_features.visits.create.description.rotext" xml:space="preserve">
+    <value>Bisitak sortzea LiveVisits-en</value>
+  </data>
+  <data name="RES_features.visits.create.name.rotext" xml:space="preserve">
+    <value>Bisitatu sorkuntza</value>
+  </data>
+  <data name="RES_features.visits.description.rotext" xml:space="preserve">
+    <value>Bisiten eta bisitarien kudeaketa.</value>
+  </data>
+  <data name="RES_features.visits.manage.description.rotext" xml:space="preserve">
+    <value>Bisitatu kudeaketa LiveVisits-en</value>
+  </data>
+  <data name="RES_features.visits.manage.name.rotext" xml:space="preserve">
+    <value>Bisitaren kudeaketa</value>
+  </data>
+  <data name="RES_features.visits.name.rotext" xml:space="preserve">
+    <value>Bisitak</value>
+  </data>
+  <data name="RES_features.visits.userfields.description.rotext" xml:space="preserve">
+    <value>Bisiten erregistroa LiveVisits-en</value>
+  </data>
+  <data name="RES_features.visits.userfields.name.rotext" xml:space="preserve">
+    <value>Bisiten fitxa</value>
+  </data>
+  <data name="RES_features.administration.alerts.user.name.rotext" xml:space="preserve">
+    <value>Erabiltzailea</value>
+  </data>
+  <data name="RES_features.administration.alerts.user.description.rotext" xml:space="preserve">
+    <value>Sistemaren erabiltzaileei lotutako alertak ikusteko aukera ematen du (fidagarriak ez diren sinaketak, oraingo erabiltzaileak, etab.)</value>
+  </data>
+  <data name="RES_features.administration.alerts.documents.name.rotext" xml:space="preserve">
+    <value>Dokumentazioa</value>
+  </data>
+  <data name="RES_features.administration.alerts.documents.description.rotext" xml:space="preserve">
+    <value>Dokumentazio-kudeatzaileari lotutako alertak ikusteko aukera ematen du (zain dauden dokumentuak, baliozkotu gabeak, etab.)</value>
+  </data>
+  <data name="RES_features.administration.alerts.system.name.rotext" xml:space="preserve">
+    <value>Sistema</value>
+  </data>
+  <data name="RES_features.administration.alerts.system.description.rotext" xml:space="preserve">
+    <value>Sistemarekin lotutako alertak ikusteko aukera ematen du. (deskonektatutako terminalak, esleitu gabeko txartelaren sinadura, etab.)</value>
+  </data>
+  <data name="RES_features.administration.punches.user.name.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.administration.punches.user.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.administration.punches.documents.name.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.administration.punches.documents.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.administration.punches.system.name.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.administration.punches.system.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.supervisors.datalink.imports.supervisor.name.rotext" xml:space="preserve">
+    <value>Begiralearen inportazioa</value>
+  </data>
+  <data name="RES_features.supervisors.datalink.imports.supervisor.description.rotext" xml:space="preserve">
+    <value>LH monitoreak inportatzea</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.sagemurano.name.rotext" xml:space="preserve">
+    <value>SAGE Murano inportazioa</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.sagemurano.description.rotext" xml:space="preserve">
+    <value>SAGE Murano inportazioa</value>
+  </data>
+  <data name="RES_features.administration.exportguidestemplates.name.rotext" xml:space="preserve">
+    <value>Esportatu txantiloiak</value>
+  </data>
+  <data name="RES_features.administration.exportguidestemplates.description.rotext" xml:space="preserve">
+    <value>Esportazio txantiloiak konfiguratzea</value>
+  </data>
+</root>

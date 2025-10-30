@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_resultenum.causeusedinaccrual.rotext" xml:space="preserve">
+    <value>A xustificación seleccionada está sendo utilizada nalgún saldo e non se pode borrar. Utilízase nos seguintes saldos: ${1}</value>
+  </data>
+  <data name="RES_resultenum.causeusedincauses.rotext" xml:space="preserve">
+    <value>A xustificación seleccionada introduciuse ${1} veces manualmente</value>
+  </data>
+  <data name="RES_resultenum.causeusedinequivalencedata.rotext" xml:space="preserve">
+    <value>A xustificación seleccionada utilízase para realizar equivalencias con outras xustificacións</value>
+  </data>
+  <data name="RES_resultenum.causeusedinprogrammedabsence.rotext" xml:space="preserve">
+    <value>A xustificación seleccionada está sendo utilizada nalgunha ausencia prolongada e non se pode borrar. Utilízase en ausencias prolongadas para os seguintes usuarios: ${1}</value>
+  </data>
+  <data name="RES_resultenum.causeusedinprogrammedcause.rotext" xml:space="preserve">
+    <value>A xustificación seleccionada está sendo utilizada nalgunha incidencia prevista e non se pode borrar. Utilízase en incidencias previstas para os seguintes usuarios: ${1}</value>
+  </data>
+  <data name="RES_resultenum.causeusedinprogrammedholiday.rotext" xml:space="preserve">
+    <value>A xustificación seleccionada utilízase en previsións de vacacións por horas</value>
+  </data>
+  <data name="RES_resultenum.causeusedinpunchwithincidence.rotext" xml:space="preserve">
+    <value>A xustificación seleccionada utilizouse nunha fichaxe con incidencia dende un terminal. Non se pode borrar a xustificación.</value>
+  </data>
+  <data name="RES_resultenum.causeusedinrequest.rotext" xml:space="preserve">
+    <value>A xustificación seleccionada está sendo utilizada nunha ou máis solicitudes.</value>
+  </data>
+  <data name="RES_resultenum.causeusedinrequestrule.rotext" xml:space="preserve">
+    <value>A xustificación seleccionada estase a utilizar nalgunha regra de solicitude e non se pode borrar. Utilízase nas seguintes regras: ${1}</value>
+  </data>
+  <data name="RES_resultenum.causeusedinshift.rotext" xml:space="preserve">
+    <value>A xustificación seleccionada está sendo utilizada nalgún horario e non se pode borrar. Utilízase nos seguintes horarios: ${1}</value>
+  </data>
+  <data name="RES_resultenum.changetypenotallowed.rotext" xml:space="preserve">
+    <value>Non se pode cambiar o tipo da xustificación porque xa está sendo utilizada</value>
+  </data>
+  <data name="RES_resultenum.conceptbalanceannualqueryrequired.rotext" xml:space="preserve">
+    <value>Débese seleccionar un saldo anual e que se visualice en horas</value>
+  </data>
+  <data name="RES_resultenum.invalidjustifyperioddates.rotext" xml:space="preserve">
+    <value>O período de incidencia entre horas é incorrecto.</value>
+  </data>
+  <data name="RES_resultenum.invalidname.rotext" xml:space="preserve">
+    <value>O nome non pode estar baleiro ou xa existe</value>
+  </data>
+  <data name="RES_resultenum.invalidreaderinputcode.rotext" xml:space="preserve">
+    <value>O código da xustificación é incorrecto.</value>
+  </data>
+  <data name="RES_resultenum.invalidroundingby.rotext" xml:space="preserve">
+    <value>O arredondamento non pode ser 0 ou un valor negativo.</value>
+  </data>
+  <data name="RES_resultenum.invalidshortname.rotext" xml:space="preserve">
+    <value>Debes indicar o nome curto da xustificación</value>
+  </data>
+  <data name="RES_resultenum.namealreadyexist.rotext" xml:space="preserve">
+    <value>O nome da xustificación xa existe.</value>
+  </data>
+  <data name="RES_resultenum.numberofcausesexceeded.rotext" xml:space="preserve">
+    <value>Excediches o número máximo de xustificacións para a licenza de Visualtime eXpress.</value>
+  </data>
+  <data name="RES_resultenum.readerinputcodeexistent.rotext" xml:space="preserve">
+    <value>O código da xustificación xa se está utilizando ou é incorrecto.</value>
+  </data>
+  <data name="RES_resultenum.shortnamealreadeyexist.rotext" xml:space="preserve">
+    <value>O nome curto da xustificación xa existe.</value>
+  </data>
+  <data name="RES_resultenum.typedoesnotallowdocumenttracking.rotext" xml:space="preserve">
+    <value>Esta xustificación ten documentos de seguimento e non se pode cambiar o seu tipo. Elimina antes os documentos ou crea unha nova xustificación</value>
+  </data>
+  <data name="RES_resultenum.userfieldempty.rotext" xml:space="preserve">
+    <value>Debes seleccionar un campo da ficha e/ou un valor.</value>
+  </data>
+  <data name="RES_resultenum.causeusedinlabagree.rotext" xml:space="preserve">
+    <value>A xustificación seleccionada estase a utilizar nalgún acordo e non se pode eliminar. Utilízase nas seguintes convencións: ${1}</value>
+  </data>
+  <data name="RES_resultenum.xssvalidationerror.rotext" xml:space="preserve">
+    <value>Detectouse un script malicioso nalgunha propiedade do obxecto</value>
+  </data>
+</root>

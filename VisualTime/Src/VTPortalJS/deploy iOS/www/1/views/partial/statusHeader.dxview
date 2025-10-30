@@ -1,0 +1,42 @@
+<div data-options="dxView : { name: 'statusHeader' } " >
+    <div id="headerBackground" class="backgroundOpacity" data-bind="style: { background: bgImage}"></div>
+    <div class="employeeOpacity" data-bind="style: { borderBottom: borderBottom }">
+        <div class="centerEmpStatus">
+            <div class="employeePhoto" data-bind="style: { background: empImage },click: changeUserPhoto"></div>
+        </div>
+        
+        <div class="employeeStatusInfo">
+            <div class="employeeCenter">
+                <div class="userNameText"><span data-bind="text: lblUsername"></span></div>
+                <div class="serverDateText"><span data-bind="text: lblServerDate"></span></div>
+                <span data-bind="dxButton: btnLogout"></span>
+                <div class="productivTaskText"><span data-bind="text: lblProductivTask"></span></div>
+                <div class="costCenterText"><span data-bind="text: lblCostCenter"></span></div>
+            </div>
+        </div>
+
+        <div class="centerEmpStatus">
+            <div class="forgottenHeader" data-bind="click: goToProfile, attr:{title:hintView}"></div>
+        </div>
+    </div>
+
+    <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false, closeOnBackButton:false, visible: changeUserPhotoVisible, height: 'auto'}">
+        <div class="dx-fieldset">
+            <!-- ko if: appMode == true -->
+            <span data-bind="text: lblProfileImage"></span>
+
+            <div class="noImageCssClass" data-bind="event: { dxclick: selectPhotoEvent }">
+                <img width="100%" height="100%" data-bind="attr:{ src:imageSrc}" alt="" />
+            </div>
+            <!-- /ko-->
+            <!-- ko if: appMode == false -->
+            <span data-bind="text: lblProfileImage"></span>
+            <div data-bind="dxFileUploader: uploadOptions"></div>
+            <!-- /ko-->
+        </div>
+        <div style="padding-top:5px">
+            <div style="float:left;width:50%" class="get-to-work-blue" data-bind="dxButton: btnCancelUpload"></div>
+            <div style="float:right;width:50%" class="get-to-work-orange" data-bind="dxButton: btnAcceptUpload"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,1841 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="txtRequest.Text" xml:space="preserve">
+    <value>{
+        "scenarioRequest": {
+            "algorithm": "cegid_VTAI_v0",
+            "id": "id_10",
+            "criteria": {
+                "maxExecutionTime": 5,
+                "startHorizonDate": null,
+                "endHorizonDate": null,
+                "replanificationSoft": false,
+                "replanificationHard": false,
+                "notAssignedSoft": false,
+                "notAssignedHard": false,
+                "replanificationWeight": 1,
+                "notAssignedWeight": 1,
+                "maxConsecutiveDatesWithCategoryWeight": 1,
+                "minConsecutiveDatesWithCategoryWeight": 1,
+                "maxConsecutiveDatesWeight": 1,
+                "maxConsecutiveMinutesWeight": 1,
+                "maxDatesWithCategoryInIntervalWeight": 1,
+                "minDatesWithCategoryInIntervalWeight": 1,
+                "maxFestiveDatesWeight": 1,
+                "maxNonLaborableDatesWeight": 1,
+                "maxDatesWeight": 1,
+                "maxMinutesInIntervalWeight": 1,
+                "minMinutesInIntervalWeight": 1,
+                "maxMinutesPerDateWeight": 1,
+                "minMinutesPerDateWeight": 1,
+                "maxMinutesRestBetweenPositionsInDateWeight": 1,
+                "minMinutesRestBetweenPositionsInDateWeight": 1,
+                "minMinutesRestBetweenDatesWeight": 1,
+                "minConsecutiveFreeDatesWeight": 1
+            },
+            "people": [{
+                    "id": "p1_0",
+                    "roles": ["rol1"],
+                    "typeContract": "FIX",
+                    "calendar": [{
+                            "date": {
+                                "year": 1,
+                                "month": 1,
+                                "day": 1
+                            },
+                            "availabilities": [{
+                                    "start": "0001-01-01T00:00:00.000+01:00",
+                                    "end": "0001-01-01T09:00:00.000+01:00"
+                                }
+                            ],
+                            "type": "LABORABLE",
+                            "preAssignedPositions": [{
+                                    "idPosition": "t1p2",
+                                    "idTeam": "t1_0",
+                                    "isModifiable": false,
+                                    "modifiable": false
+                                }
+                            ]
+                        }
+                    ],
+                    "constraints": {
+                        "minMinutesPerDateConstraint": null,
+                        "maxMinutesPerDateConstraint": {
+                            "isHard": true,
+                            "maximum": 450,
+                            "hard": true
+                        },
+                        "minMinutesInIntervalConstraint": null,
+                        "maxMinutesInIntervalConstraint": null,
+                        "minMinutesRestBetweenDatesConstraint": null,
+                        "maxMinutesRestBetweenPositionsInDateConstraint": null,
+                        "minMinutesRestBetweenPositionsInDateConstraint": null,
+                        "maxWorkingDatesInHorizonConstraint": null,
+                        "maxFestiveWorkingDatesInHorizonConstraint": null,
+                        "maxNonLaborableWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingMinutesConstraint": null,
+                        "minConsecutiveFreeDatesConstraint": null,
+                        "maxDatesWithCategoryInIntervalConstraint": {
+                            "isHard": true,
+                            "maximums": {
+                                "morning": {
+                                    "1-1-1/30-1-1": 0
+                                }
+                            },
+                            "hard": true
+                        },
+                        "maxConsecutiveDatesWithCategoryConstraint": null,
+                        "minDatesWithCategoryInIntervalConstraint": null,
+                        "minConsecutiveDatesWithCategoryConstraint": null
+                    },
+                    "costs": {
+                        "costWorkingDay": 800.0,
+                        "costNonWorkingDay": 1000.0,
+                        "costFestiveDay": 1200.0,
+                        "costExtraHour": 1.0
+                    },
+                    "notAssigned": false
+                }, {
+                    "id": "p1_1",
+                    "roles": ["rol1"],
+                    "typeContract": "FIX",
+                    "calendar": [{
+                            "date": {
+                                "year": 1,
+                                "month": 1,
+                                "day": 1
+                            },
+                            "availabilities": [{
+                                    "start": "0001-01-01T00:00:00.000+01:00",
+                                    "end": "0001-01-01T09:00:00.000+01:00"
+                                }
+                            ],
+                            "type": "LABORABLE",
+                            "preAssignedPositions": [{
+                                    "idPosition": "t1p2",
+                                    "idTeam": "t1_1",
+                                    "isModifiable": false,
+                                    "modifiable": false
+                                }
+                            ]
+                        }
+                    ],
+                    "constraints": {
+                        "minMinutesPerDateConstraint": null,
+                        "maxMinutesPerDateConstraint": {
+                            "isHard": true,
+                            "maximum": 450,
+                            "hard": true
+                        },
+                        "minMinutesInIntervalConstraint": null,
+                        "maxMinutesInIntervalConstraint": null,
+                        "minMinutesRestBetweenDatesConstraint": null,
+                        "maxMinutesRestBetweenPositionsInDateConstraint": null,
+                        "minMinutesRestBetweenPositionsInDateConstraint": null,
+                        "maxWorkingDatesInHorizonConstraint": null,
+                        "maxFestiveWorkingDatesInHorizonConstraint": null,
+                        "maxNonLaborableWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingMinutesConstraint": null,
+                        "minConsecutiveFreeDatesConstraint": null,
+                        "maxDatesWithCategoryInIntervalConstraint": {
+                            "isHard": true,
+                            "maximums": {
+                                "morning": {
+                                    "1-1-1/30-1-1": 0
+                                }
+                            },
+                            "hard": true
+                        },
+                        "maxConsecutiveDatesWithCategoryConstraint": null,
+                        "minDatesWithCategoryInIntervalConstraint": null,
+                        "minConsecutiveDatesWithCategoryConstraint": null
+                    },
+                    "costs": {
+                        "costWorkingDay": 800.0,
+                        "costNonWorkingDay": 1000.0,
+                        "costFestiveDay": 1200.0,
+                        "costExtraHour": 1.0
+                    },
+                    "notAssigned": false
+                }, {
+                    "id": "p1_2",
+                    "roles": ["rol1"],
+                    "typeContract": "FIX",
+                    "calendar": [{
+                            "date": {
+                                "year": 1,
+                                "month": 1,
+                                "day": 1
+                            },
+                            "availabilities": [{
+                                    "start": "0001-01-01T00:00:00.000+01:00",
+                                    "end": "0001-01-01T09:00:00.000+01:00"
+                                }
+                            ],
+                            "type": "LABORABLE",
+                            "preAssignedPositions": [{
+                                    "idPosition": "t1p2",
+                                    "idTeam": "t1_2",
+                                    "isModifiable": false,
+                                    "modifiable": false
+                                }
+                            ]
+                        }
+                    ],
+                    "constraints": {
+                        "minMinutesPerDateConstraint": null,
+                        "maxMinutesPerDateConstraint": {
+                            "isHard": true,
+                            "maximum": 450,
+                            "hard": true
+                        },
+                        "minMinutesInIntervalConstraint": null,
+                        "maxMinutesInIntervalConstraint": null,
+                        "minMinutesRestBetweenDatesConstraint": null,
+                        "maxMinutesRestBetweenPositionsInDateConstraint": null,
+                        "minMinutesRestBetweenPositionsInDateConstraint": null,
+                        "maxWorkingDatesInHorizonConstraint": null,
+                        "maxFestiveWorkingDatesInHorizonConstraint": null,
+                        "maxNonLaborableWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingMinutesConstraint": null,
+                        "minConsecutiveFreeDatesConstraint": null,
+                        "maxDatesWithCategoryInIntervalConstraint": {
+                            "isHard": true,
+                            "maximums": {
+                                "morning": {
+                                    "1-1-1/30-1-1": 0
+                                }
+                            },
+                            "hard": true
+                        },
+                        "maxConsecutiveDatesWithCategoryConstraint": null,
+                        "minDatesWithCategoryInIntervalConstraint": null,
+                        "minConsecutiveDatesWithCategoryConstraint": null
+                    },
+                    "costs": {
+                        "costWorkingDay": 800.0,
+                        "costNonWorkingDay": 1000.0,
+                        "costFestiveDay": 1200.0,
+                        "costExtraHour": 1.0
+                    },
+                    "notAssigned": false
+                }, {
+                    "id": "p1_3",
+                    "roles": ["rol1"],
+                    "typeContract": "FIX",
+                    "calendar": [{
+                            "date": {
+                                "year": 1,
+                                "month": 1,
+                                "day": 1
+                            },
+                            "availabilities": [{
+                                    "start": "0001-01-01T00:00:00.000+01:00",
+                                    "end": "0001-01-01T09:00:00.000+01:00"
+                                }
+                            ],
+                            "type": "LABORABLE",
+                            "preAssignedPositions": [{
+                                    "idPosition": "t1p2",
+                                    "idTeam": "t1_3",
+                                    "isModifiable": false,
+                                    "modifiable": false
+                                }
+                            ]
+                        }
+                    ],
+                    "constraints": {
+                        "minMinutesPerDateConstraint": null,
+                        "maxMinutesPerDateConstraint": {
+                            "isHard": true,
+                            "maximum": 450,
+                            "hard": true
+                        },
+                        "minMinutesInIntervalConstraint": null,
+                        "maxMinutesInIntervalConstraint": null,
+                        "minMinutesRestBetweenDatesConstraint": null,
+                        "maxMinutesRestBetweenPositionsInDateConstraint": null,
+                        "minMinutesRestBetweenPositionsInDateConstraint": null,
+                        "maxWorkingDatesInHorizonConstraint": null,
+                        "maxFestiveWorkingDatesInHorizonConstraint": null,
+                        "maxNonLaborableWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingMinutesConstraint": null,
+                        "minConsecutiveFreeDatesConstraint": null,
+                        "maxDatesWithCategoryInIntervalConstraint": {
+                            "isHard": true,
+                            "maximums": {
+                                "morning": {
+                                    "1-1-1/30-1-1": 0
+                                }
+                            },
+                            "hard": true
+                        },
+                        "maxConsecutiveDatesWithCategoryConstraint": null,
+                        "minDatesWithCategoryInIntervalConstraint": null,
+                        "minConsecutiveDatesWithCategoryConstraint": null
+                    },
+                    "costs": {
+                        "costWorkingDay": 800.0,
+                        "costNonWorkingDay": 1000.0,
+                        "costFestiveDay": 1200.0,
+                        "costExtraHour": 1.0
+                    },
+                    "notAssigned": false
+                }, {
+                    "id": "p1_4",
+                    "roles": ["rol1"],
+                    "typeContract": "FIX",
+                    "calendar": [{
+                            "date": {
+                                "year": 1,
+                                "month": 1,
+                                "day": 1
+                            },
+                            "availabilities": [{
+                                    "start": "0001-01-01T00:00:00.000+01:00",
+                                    "end": "0001-01-01T09:00:00.000+01:00"
+                                }
+                            ],
+                            "type": "LABORABLE",
+                            "preAssignedPositions": [{
+                                    "idPosition": "t1p2",
+                                    "idTeam": "t1_4",
+                                    "isModifiable": false,
+                                    "modifiable": false
+                                }
+                            ]
+                        }
+                    ],
+                    "constraints": {
+                        "minMinutesPerDateConstraint": null,
+                        "maxMinutesPerDateConstraint": {
+                            "isHard": true,
+                            "maximum": 450,
+                            "hard": true
+                        },
+                        "minMinutesInIntervalConstraint": null,
+                        "maxMinutesInIntervalConstraint": null,
+                        "minMinutesRestBetweenDatesConstraint": null,
+                        "maxMinutesRestBetweenPositionsInDateConstraint": null,
+                        "minMinutesRestBetweenPositionsInDateConstraint": null,
+                        "maxWorkingDatesInHorizonConstraint": null,
+                        "maxFestiveWorkingDatesInHorizonConstraint": null,
+                        "maxNonLaborableWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingMinutesConstraint": null,
+                        "minConsecutiveFreeDatesConstraint": null,
+                        "maxDatesWithCategoryInIntervalConstraint": {
+                            "isHard": true,
+                            "maximums": {
+                                "morning": {
+                                    "1-1-1/30-1-1": 0
+                                }
+                            },
+                            "hard": true
+                        },
+                        "maxConsecutiveDatesWithCategoryConstraint": null,
+                        "minDatesWithCategoryInIntervalConstraint": null,
+                        "minConsecutiveDatesWithCategoryConstraint": null
+                    },
+                    "costs": {
+                        "costWorkingDay": 800.0,
+                        "costNonWorkingDay": 1000.0,
+                        "costFestiveDay": 1200.0,
+                        "costExtraHour": 1.0
+                    },
+                    "notAssigned": false
+                }, {
+                    "id": "p1_5",
+                    "roles": ["rol1"],
+                    "typeContract": "FIX",
+                    "calendar": [{
+                            "date": {
+                                "year": 1,
+                                "month": 1,
+                                "day": 1
+                            },
+                            "availabilities": [{
+                                    "start": "0001-01-01T00:00:00.000+01:00",
+                                    "end": "0001-01-01T09:00:00.000+01:00"
+                                }
+                            ],
+                            "type": "LABORABLE",
+                            "preAssignedPositions": [{
+                                    "idPosition": "t1p2",
+                                    "idTeam": "t1_5",
+                                    "isModifiable": false,
+                                    "modifiable": false
+                                }
+                            ]
+                        }
+                    ],
+                    "constraints": {
+                        "minMinutesPerDateConstraint": null,
+                        "maxMinutesPerDateConstraint": {
+                            "isHard": true,
+                            "maximum": 450,
+                            "hard": true
+                        },
+                        "minMinutesInIntervalConstraint": null,
+                        "maxMinutesInIntervalConstraint": null,
+                        "minMinutesRestBetweenDatesConstraint": null,
+                        "maxMinutesRestBetweenPositionsInDateConstraint": null,
+                        "minMinutesRestBetweenPositionsInDateConstraint": null,
+                        "maxWorkingDatesInHorizonConstraint": null,
+                        "maxFestiveWorkingDatesInHorizonConstraint": null,
+                        "maxNonLaborableWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingMinutesConstraint": null,
+                        "minConsecutiveFreeDatesConstraint": null,
+                        "maxDatesWithCategoryInIntervalConstraint": {
+                            "isHard": true,
+                            "maximums": {
+                                "morning": {
+                                    "1-1-1/30-1-1": 0
+                                }
+                            },
+                            "hard": true
+                        },
+                        "maxConsecutiveDatesWithCategoryConstraint": null,
+                        "minDatesWithCategoryInIntervalConstraint": null,
+                        "minConsecutiveDatesWithCategoryConstraint": null
+                    },
+                    "costs": {
+                        "costWorkingDay": 800.0,
+                        "costNonWorkingDay": 1000.0,
+                        "costFestiveDay": 1200.0,
+                        "costExtraHour": 1.0
+                    },
+                    "notAssigned": false
+                }, {
+                    "id": "p1_6",
+                    "roles": ["rol1"],
+                    "typeContract": "FIX",
+                    "calendar": [{
+                            "date": {
+                                "year": 1,
+                                "month": 1,
+                                "day": 1
+                            },
+                            "availabilities": [{
+                                    "start": "0001-01-01T00:00:00.000+01:00",
+                                    "end": "0001-01-01T09:00:00.000+01:00"
+                                }
+                            ],
+                            "type": "LABORABLE",
+                            "preAssignedPositions": [{
+                                    "idPosition": "t1p2",
+                                    "idTeam": "t1_6",
+                                    "isModifiable": false,
+                                    "modifiable": false
+                                }
+                            ]
+                        }
+                    ],
+                    "constraints": {
+                        "minMinutesPerDateConstraint": null,
+                        "maxMinutesPerDateConstraint": {
+                            "isHard": true,
+                            "maximum": 450,
+                            "hard": true
+                        },
+                        "minMinutesInIntervalConstraint": null,
+                        "maxMinutesInIntervalConstraint": null,
+                        "minMinutesRestBetweenDatesConstraint": null,
+                        "maxMinutesRestBetweenPositionsInDateConstraint": null,
+                        "minMinutesRestBetweenPositionsInDateConstraint": null,
+                        "maxWorkingDatesInHorizonConstraint": null,
+                        "maxFestiveWorkingDatesInHorizonConstraint": null,
+                        "maxNonLaborableWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingMinutesConstraint": null,
+                        "minConsecutiveFreeDatesConstraint": null,
+                        "maxDatesWithCategoryInIntervalConstraint": {
+                            "isHard": true,
+                            "maximums": {
+                                "morning": {
+                                    "1-1-1/30-1-1": 0
+                                }
+                            },
+                            "hard": true
+                        },
+                        "maxConsecutiveDatesWithCategoryConstraint": null,
+                        "minDatesWithCategoryInIntervalConstraint": null,
+                        "minConsecutiveDatesWithCategoryConstraint": null
+                    },
+                    "costs": {
+                        "costWorkingDay": 800.0,
+                        "costNonWorkingDay": 1000.0,
+                        "costFestiveDay": 1200.0,
+                        "costExtraHour": 1.0
+                    },
+                    "notAssigned": false
+                }, {
+                    "id": "p1_7",
+                    "roles": ["rol1"],
+                    "typeContract": "FIX",
+                    "calendar": [{
+                            "date": {
+                                "year": 1,
+                                "month": 1,
+                                "day": 1
+                            },
+                            "availabilities": [{
+                                    "start": "0001-01-01T00:00:00.000+01:00",
+                                    "end": "0001-01-01T09:00:00.000+01:00"
+                                }
+                            ],
+                            "type": "LABORABLE",
+                            "preAssignedPositions": [{
+                                    "idPosition": "t1p2",
+                                    "idTeam": "t1_7",
+                                    "isModifiable": false,
+                                    "modifiable": false
+                                }
+                            ]
+                        }
+                    ],
+                    "constraints": {
+                        "minMinutesPerDateConstraint": null,
+                        "maxMinutesPerDateConstraint": {
+                            "isHard": true,
+                            "maximum": 450,
+                            "hard": true
+                        },
+                        "minMinutesInIntervalConstraint": null,
+                        "maxMinutesInIntervalConstraint": null,
+                        "minMinutesRestBetweenDatesConstraint": null,
+                        "maxMinutesRestBetweenPositionsInDateConstraint": null,
+                        "minMinutesRestBetweenPositionsInDateConstraint": null,
+                        "maxWorkingDatesInHorizonConstraint": null,
+                        "maxFestiveWorkingDatesInHorizonConstraint": null,
+                        "maxNonLaborableWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingMinutesConstraint": null,
+                        "minConsecutiveFreeDatesConstraint": null,
+                        "maxDatesWithCategoryInIntervalConstraint": {
+                            "isHard": true,
+                            "maximums": {
+                                "morning": {
+                                    "1-1-1/30-1-1": 0
+                                }
+                            },
+                            "hard": true
+                        },
+                        "maxConsecutiveDatesWithCategoryConstraint": null,
+                        "minDatesWithCategoryInIntervalConstraint": null,
+                        "minConsecutiveDatesWithCategoryConstraint": null
+                    },
+                    "costs": {
+                        "costWorkingDay": 800.0,
+                        "costNonWorkingDay": 1000.0,
+                        "costFestiveDay": 1200.0,
+                        "costExtraHour": 1.0
+                    },
+                    "notAssigned": false
+                }, {
+                    "id": "p1_8",
+                    "roles": ["rol1"],
+                    "typeContract": "FIX",
+                    "calendar": [{
+                            "date": {
+                                "year": 1,
+                                "month": 1,
+                                "day": 1
+                            },
+                            "availabilities": [{
+                                    "start": "0001-01-01T00:00:00.000+01:00",
+                                    "end": "0001-01-01T09:00:00.000+01:00"
+                                }
+                            ],
+                            "type": "LABORABLE",
+                            "preAssignedPositions": [{
+                                    "idPosition": "t1p2",
+                                    "idTeam": "t1_8",
+                                    "isModifiable": false,
+                                    "modifiable": false
+                                }
+                            ]
+                        }
+                    ],
+                    "constraints": {
+                        "minMinutesPerDateConstraint": null,
+                        "maxMinutesPerDateConstraint": {
+                            "isHard": true,
+                            "maximum": 450,
+                            "hard": true
+                        },
+                        "minMinutesInIntervalConstraint": null,
+                        "maxMinutesInIntervalConstraint": null,
+                        "minMinutesRestBetweenDatesConstraint": null,
+                        "maxMinutesRestBetweenPositionsInDateConstraint": null,
+                        "minMinutesRestBetweenPositionsInDateConstraint": null,
+                        "maxWorkingDatesInHorizonConstraint": null,
+                        "maxFestiveWorkingDatesInHorizonConstraint": null,
+                        "maxNonLaborableWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingMinutesConstraint": null,
+                        "minConsecutiveFreeDatesConstraint": null,
+                        "maxDatesWithCategoryInIntervalConstraint": {
+                            "isHard": true,
+                            "maximums": {
+                                "morning": {
+                                    "1-1-1/30-1-1": 0
+                                }
+                            },
+                            "hard": true
+                        },
+                        "maxConsecutiveDatesWithCategoryConstraint": null,
+                        "minDatesWithCategoryInIntervalConstraint": null,
+                        "minConsecutiveDatesWithCategoryConstraint": null
+                    },
+                    "costs": {
+                        "costWorkingDay": 800.0,
+                        "costNonWorkingDay": 1000.0,
+                        "costFestiveDay": 1200.0,
+                        "costExtraHour": 1.0
+                    },
+                    "notAssigned": false
+                }, {
+                    "id": "p1_9",
+                    "roles": ["rol1"],
+                    "typeContract": "FIX",
+                    "calendar": [{
+                            "date": {
+                                "year": 1,
+                                "month": 1,
+                                "day": 1
+                            },
+                            "availabilities": [{
+                                    "start": "0001-01-01T00:00:00.000+01:00",
+                                    "end": "0001-01-01T09:00:00.000+01:00"
+                                }
+                            ],
+                            "type": "LABORABLE",
+                            "preAssignedPositions": [{
+                                    "idPosition": "t1p2",
+                                    "idTeam": "t1_9",
+                                    "isModifiable": false,
+                                    "modifiable": false
+                                }
+                            ]
+                        }
+                    ],
+                    "constraints": {
+                        "minMinutesPerDateConstraint": null,
+                        "maxMinutesPerDateConstraint": {
+                            "isHard": true,
+                            "maximum": 450,
+                            "hard": true
+                        },
+                        "minMinutesInIntervalConstraint": null,
+                        "maxMinutesInIntervalConstraint": null,
+                        "minMinutesRestBetweenDatesConstraint": null,
+                        "maxMinutesRestBetweenPositionsInDateConstraint": null,
+                        "minMinutesRestBetweenPositionsInDateConstraint": null,
+                        "maxWorkingDatesInHorizonConstraint": null,
+                        "maxFestiveWorkingDatesInHorizonConstraint": null,
+                        "maxNonLaborableWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingMinutesConstraint": null,
+                        "minConsecutiveFreeDatesConstraint": null,
+                        "maxDatesWithCategoryInIntervalConstraint": {
+                            "isHard": true,
+                            "maximums": {
+                                "morning": {
+                                    "1-1-1/30-1-1": 0
+                                }
+                            },
+                            "hard": true
+                        },
+                        "maxConsecutiveDatesWithCategoryConstraint": null,
+                        "minDatesWithCategoryInIntervalConstraint": null,
+                        "minConsecutiveDatesWithCategoryConstraint": null
+                    },
+                    "costs": {
+                        "costWorkingDay": 800.0,
+                        "costNonWorkingDay": 1000.0,
+                        "costFestiveDay": 1200.0,
+                        "costExtraHour": 1.0
+                    },
+                    "notAssigned": false
+                }, {
+                    "id": "p2_0",
+                    "roles": ["rol1"],
+                    "typeContract": "DISCONTINUOUS",
+                    "calendar": [{
+                            "date": {
+                                "year": 1,
+                                "month": 1,
+                                "day": 1
+                            },
+                            "availabilities": [{
+                                    "start": "0001-01-01T00:00:00.000+01:00",
+                                    "end": "0001-01-01T09:00:00.000+01:00"
+                                }
+                            ],
+                            "type": "FESTIVE",
+                            "preAssignedPositions": [{
+                                    "idPosition": "t1p1",
+                                    "idTeam": "t1_0",
+                                    "isModifiable": false,
+                                    "modifiable": false
+                                }
+                            ]
+                        }
+                    ],
+                    "constraints": {
+                        "minMinutesPerDateConstraint": null,
+                        "maxMinutesPerDateConstraint": {
+                            "isHard": true,
+                            "maximum": 450,
+                            "hard": true
+                        },
+                        "minMinutesInIntervalConstraint": null,
+                        "maxMinutesInIntervalConstraint": null,
+                        "minMinutesRestBetweenDatesConstraint": null,
+                        "maxMinutesRestBetweenPositionsInDateConstraint": null,
+                        "minMinutesRestBetweenPositionsInDateConstraint": null,
+                        "maxWorkingDatesInHorizonConstraint": null,
+                        "maxFestiveWorkingDatesInHorizonConstraint": null,
+                        "maxNonLaborableWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingMinutesConstraint": null,
+                        "minConsecutiveFreeDatesConstraint": null,
+                        "maxDatesWithCategoryInIntervalConstraint": {
+                            "isHard": true,
+                            "maximums": {
+                                "morning": {
+                                    "1-1-1/30-1-1": 0
+                                }
+                            },
+                            "hard": true
+                        },
+                        "maxConsecutiveDatesWithCategoryConstraint": null,
+                        "minDatesWithCategoryInIntervalConstraint": null,
+                        "minConsecutiveDatesWithCategoryConstraint": null
+                    },
+                    "costs": {
+                        "costWorkingDay": 800.0,
+                        "costNonWorkingDay": 1000.0,
+                        "costFestiveDay": 1200.0,
+                        "costExtraHour": 1.0
+                    },
+                    "notAssigned": false
+                }, {
+                    "id": "p2_1",
+                    "roles": ["rol1"],
+                    "typeContract": "DISCONTINUOUS",
+                    "calendar": [{
+                            "date": {
+                                "year": 1,
+                                "month": 1,
+                                "day": 1
+                            },
+                            "availabilities": [{
+                                    "start": "0001-01-01T00:00:00.000+01:00",
+                                    "end": "0001-01-01T09:00:00.000+01:00"
+                                }
+                            ],
+                            "type": "FESTIVE",
+                            "preAssignedPositions": [{
+                                    "idPosition": "t1p1",
+                                    "idTeam": "t1_1",
+                                    "isModifiable": false,
+                                    "modifiable": false
+                                }
+                            ]
+                        }
+                    ],
+                    "constraints": {
+                        "minMinutesPerDateConstraint": null,
+                        "maxMinutesPerDateConstraint": {
+                            "isHard": true,
+                            "maximum": 450,
+                            "hard": true
+                        },
+                        "minMinutesInIntervalConstraint": null,
+                        "maxMinutesInIntervalConstraint": null,
+                        "minMinutesRestBetweenDatesConstraint": null,
+                        "maxMinutesRestBetweenPositionsInDateConstraint": null,
+                        "minMinutesRestBetweenPositionsInDateConstraint": null,
+                        "maxWorkingDatesInHorizonConstraint": null,
+                        "maxFestiveWorkingDatesInHorizonConstraint": null,
+                        "maxNonLaborableWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingMinutesConstraint": null,
+                        "minConsecutiveFreeDatesConstraint": null,
+                        "maxDatesWithCategoryInIntervalConstraint": {
+                            "isHard": true,
+                            "maximums": {
+                                "morning": {
+                                    "1-1-1/30-1-1": 0
+                                }
+                            },
+                            "hard": true
+                        },
+                        "maxConsecutiveDatesWithCategoryConstraint": null,
+                        "minDatesWithCategoryInIntervalConstraint": null,
+                        "minConsecutiveDatesWithCategoryConstraint": null
+                    },
+                    "costs": {
+                        "costWorkingDay": 800.0,
+                        "costNonWorkingDay": 1000.0,
+                        "costFestiveDay": 1200.0,
+                        "costExtraHour": 1.0
+                    },
+                    "notAssigned": false
+                }, {
+                    "id": "p2_2",
+                    "roles": ["rol1"],
+                    "typeContract": "DISCONTINUOUS",
+                    "calendar": [{
+                            "date": {
+                                "year": 1,
+                                "month": 1,
+                                "day": 1
+                            },
+                            "availabilities": [{
+                                    "start": "0001-01-01T00:00:00.000+01:00",
+                                    "end": "0001-01-01T09:00:00.000+01:00"
+                                }
+                            ],
+                            "type": "FESTIVE",
+                            "preAssignedPositions": [{
+                                    "idPosition": "t1p1",
+                                    "idTeam": "t1_2",
+                                    "isModifiable": false,
+                                    "modifiable": false
+                                }
+                            ]
+                        }
+                    ],
+                    "constraints": {
+                        "minMinutesPerDateConstraint": null,
+                        "maxMinutesPerDateConstraint": {
+                            "isHard": true,
+                            "maximum": 450,
+                            "hard": true
+                        },
+                        "minMinutesInIntervalConstraint": null,
+                        "maxMinutesInIntervalConstraint": null,
+                        "minMinutesRestBetweenDatesConstraint": null,
+                        "maxMinutesRestBetweenPositionsInDateConstraint": null,
+                        "minMinutesRestBetweenPositionsInDateConstraint": null,
+                        "maxWorkingDatesInHorizonConstraint": null,
+                        "maxFestiveWorkingDatesInHorizonConstraint": null,
+                        "maxNonLaborableWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingMinutesConstraint": null,
+                        "minConsecutiveFreeDatesConstraint": null,
+                        "maxDatesWithCategoryInIntervalConstraint": {
+                            "isHard": true,
+                            "maximums": {
+                                "morning": {
+                                    "1-1-1/30-1-1": 0
+                                }
+                            },
+                            "hard": true
+                        },
+                        "maxConsecutiveDatesWithCategoryConstraint": null,
+                        "minDatesWithCategoryInIntervalConstraint": null,
+                        "minConsecutiveDatesWithCategoryConstraint": null
+                    },
+                    "costs": {
+                        "costWorkingDay": 800.0,
+                        "costNonWorkingDay": 1000.0,
+                        "costFestiveDay": 1200.0,
+                        "costExtraHour": 1.0
+                    },
+                    "notAssigned": false
+                }, {
+                    "id": "p2_3",
+                    "roles": ["rol1"],
+                    "typeContract": "DISCONTINUOUS",
+                    "calendar": [{
+                            "date": {
+                                "year": 1,
+                                "month": 1,
+                                "day": 1
+                            },
+                            "availabilities": [{
+                                    "start": "0001-01-01T00:00:00.000+01:00",
+                                    "end": "0001-01-01T09:00:00.000+01:00"
+                                }
+                            ],
+                            "type": "FESTIVE",
+                            "preAssignedPositions": [{
+                                    "idPosition": "t1p1",
+                                    "idTeam": "t1_3",
+                                    "isModifiable": false,
+                                    "modifiable": false
+                                }
+                            ]
+                        }
+                    ],
+                    "constraints": {
+                        "minMinutesPerDateConstraint": null,
+                        "maxMinutesPerDateConstraint": {
+                            "isHard": true,
+                            "maximum": 450,
+                            "hard": true
+                        },
+                        "minMinutesInIntervalConstraint": null,
+                        "maxMinutesInIntervalConstraint": null,
+                        "minMinutesRestBetweenDatesConstraint": null,
+                        "maxMinutesRestBetweenPositionsInDateConstraint": null,
+                        "minMinutesRestBetweenPositionsInDateConstraint": null,
+                        "maxWorkingDatesInHorizonConstraint": null,
+                        "maxFestiveWorkingDatesInHorizonConstraint": null,
+                        "maxNonLaborableWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingMinutesConstraint": null,
+                        "minConsecutiveFreeDatesConstraint": null,
+                        "maxDatesWithCategoryInIntervalConstraint": {
+                            "isHard": true,
+                            "maximums": {
+                                "morning": {
+                                    "1-1-1/30-1-1": 0
+                                }
+                            },
+                            "hard": true
+                        },
+                        "maxConsecutiveDatesWithCategoryConstraint": null,
+                        "minDatesWithCategoryInIntervalConstraint": null,
+                        "minConsecutiveDatesWithCategoryConstraint": null
+                    },
+                    "costs": {
+                        "costWorkingDay": 800.0,
+                        "costNonWorkingDay": 1000.0,
+                        "costFestiveDay": 1200.0,
+                        "costExtraHour": 1.0
+                    },
+                    "notAssigned": false
+                }, {
+                    "id": "p2_4",
+                    "roles": ["rol1"],
+                    "typeContract": "DISCONTINUOUS",
+                    "calendar": [{
+                            "date": {
+                                "year": 1,
+                                "month": 1,
+                                "day": 1
+                            },
+                            "availabilities": [{
+                                    "start": "0001-01-01T00:00:00.000+01:00",
+                                    "end": "0001-01-01T09:00:00.000+01:00"
+                                }
+                            ],
+                            "type": "FESTIVE",
+                            "preAssignedPositions": [{
+                                    "idPosition": "t1p1",
+                                    "idTeam": "t1_4",
+                                    "isModifiable": false,
+                                    "modifiable": false
+                                }
+                            ]
+                        }
+                    ],
+                    "constraints": {
+                        "minMinutesPerDateConstraint": null,
+                        "maxMinutesPerDateConstraint": {
+                            "isHard": true,
+                            "maximum": 450,
+                            "hard": true
+                        },
+                        "minMinutesInIntervalConstraint": null,
+                        "maxMinutesInIntervalConstraint": null,
+                        "minMinutesRestBetweenDatesConstraint": null,
+                        "maxMinutesRestBetweenPositionsInDateConstraint": null,
+                        "minMinutesRestBetweenPositionsInDateConstraint": null,
+                        "maxWorkingDatesInHorizonConstraint": null,
+                        "maxFestiveWorkingDatesInHorizonConstraint": null,
+                        "maxNonLaborableWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingMinutesConstraint": null,
+                        "minConsecutiveFreeDatesConstraint": null,
+                        "maxDatesWithCategoryInIntervalConstraint": {
+                            "isHard": true,
+                            "maximums": {
+                                "morning": {
+                                    "1-1-1/30-1-1": 0
+                                }
+                            },
+                            "hard": true
+                        },
+                        "maxConsecutiveDatesWithCategoryConstraint": null,
+                        "minDatesWithCategoryInIntervalConstraint": null,
+                        "minConsecutiveDatesWithCategoryConstraint": null
+                    },
+                    "costs": {
+                        "costWorkingDay": 800.0,
+                        "costNonWorkingDay": 1000.0,
+                        "costFestiveDay": 1200.0,
+                        "costExtraHour": 1.0
+                    },
+                    "notAssigned": false
+                }, {
+                    "id": "p2_5",
+                    "roles": ["rol1"],
+                    "typeContract": "DISCONTINUOUS",
+                    "calendar": [{
+                            "date": {
+                                "year": 1,
+                                "month": 1,
+                                "day": 1
+                            },
+                            "availabilities": [{
+                                    "start": "0001-01-01T00:00:00.000+01:00",
+                                    "end": "0001-01-01T09:00:00.000+01:00"
+                                }
+                            ],
+                            "type": "FESTIVE",
+                            "preAssignedPositions": [{
+                                    "idPosition": "t1p1",
+                                    "idTeam": "t1_5",
+                                    "isModifiable": false,
+                                    "modifiable": false
+                                }
+                            ]
+                        }
+                    ],
+                    "constraints": {
+                        "minMinutesPerDateConstraint": null,
+                        "maxMinutesPerDateConstraint": {
+                            "isHard": true,
+                            "maximum": 450,
+                            "hard": true
+                        },
+                        "minMinutesInIntervalConstraint": null,
+                        "maxMinutesInIntervalConstraint": null,
+                        "minMinutesRestBetweenDatesConstraint": null,
+                        "maxMinutesRestBetweenPositionsInDateConstraint": null,
+                        "minMinutesRestBetweenPositionsInDateConstraint": null,
+                        "maxWorkingDatesInHorizonConstraint": null,
+                        "maxFestiveWorkingDatesInHorizonConstraint": null,
+                        "maxNonLaborableWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingMinutesConstraint": null,
+                        "minConsecutiveFreeDatesConstraint": null,
+                        "maxDatesWithCategoryInIntervalConstraint": {
+                            "isHard": true,
+                            "maximums": {
+                                "morning": {
+                                    "1-1-1/30-1-1": 0
+                                }
+                            },
+                            "hard": true
+                        },
+                        "maxConsecutiveDatesWithCategoryConstraint": null,
+                        "minDatesWithCategoryInIntervalConstraint": null,
+                        "minConsecutiveDatesWithCategoryConstraint": null
+                    },
+                    "costs": {
+                        "costWorkingDay": 800.0,
+                        "costNonWorkingDay": 1000.0,
+                        "costFestiveDay": 1200.0,
+                        "costExtraHour": 1.0
+                    },
+                    "notAssigned": false
+                }, {
+                    "id": "p2_6",
+                    "roles": ["rol1"],
+                    "typeContract": "DISCONTINUOUS",
+                    "calendar": [{
+                            "date": {
+                                "year": 1,
+                                "month": 1,
+                                "day": 1
+                            },
+                            "availabilities": [{
+                                    "start": "0001-01-01T00:00:00.000+01:00",
+                                    "end": "0001-01-01T09:00:00.000+01:00"
+                                }
+                            ],
+                            "type": "FESTIVE",
+                            "preAssignedPositions": [{
+                                    "idPosition": "t1p1",
+                                    "idTeam": "t1_6",
+                                    "isModifiable": false,
+                                    "modifiable": false
+                                }
+                            ]
+                        }
+                    ],
+                    "constraints": {
+                        "minMinutesPerDateConstraint": null,
+                        "maxMinutesPerDateConstraint": {
+                            "isHard": true,
+                            "maximum": 450,
+                            "hard": true
+                        },
+                        "minMinutesInIntervalConstraint": null,
+                        "maxMinutesInIntervalConstraint": null,
+                        "minMinutesRestBetweenDatesConstraint": null,
+                        "maxMinutesRestBetweenPositionsInDateConstraint": null,
+                        "minMinutesRestBetweenPositionsInDateConstraint": null,
+                        "maxWorkingDatesInHorizonConstraint": null,
+                        "maxFestiveWorkingDatesInHorizonConstraint": null,
+                        "maxNonLaborableWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingMinutesConstraint": null,
+                        "minConsecutiveFreeDatesConstraint": null,
+                        "maxDatesWithCategoryInIntervalConstraint": {
+                            "isHard": true,
+                            "maximums": {
+                                "morning": {
+                                    "1-1-1/30-1-1": 0
+                                }
+                            },
+                            "hard": true
+                        },
+                        "maxConsecutiveDatesWithCategoryConstraint": null,
+                        "minDatesWithCategoryInIntervalConstraint": null,
+                        "minConsecutiveDatesWithCategoryConstraint": null
+                    },
+                    "costs": {
+                        "costWorkingDay": 800.0,
+                        "costNonWorkingDay": 1000.0,
+                        "costFestiveDay": 1200.0,
+                        "costExtraHour": 1.0
+                    },
+                    "notAssigned": false
+                }, {
+                    "id": "p2_7",
+                    "roles": ["rol1"],
+                    "typeContract": "DISCONTINUOUS",
+                    "calendar": [{
+                            "date": {
+                                "year": 1,
+                                "month": 1,
+                                "day": 1
+                            },
+                            "availabilities": [{
+                                    "start": "0001-01-01T00:00:00.000+01:00",
+                                    "end": "0001-01-01T09:00:00.000+01:00"
+                                }
+                            ],
+                            "type": "FESTIVE",
+                            "preAssignedPositions": [{
+                                    "idPosition": "t1p1",
+                                    "idTeam": "t1_7",
+                                    "isModifiable": false,
+                                    "modifiable": false
+                                }
+                            ]
+                        }
+                    ],
+                    "constraints": {
+                        "minMinutesPerDateConstraint": null,
+                        "maxMinutesPerDateConstraint": {
+                            "isHard": true,
+                            "maximum": 450,
+                            "hard": true
+                        },
+                        "minMinutesInIntervalConstraint": null,
+                        "maxMinutesInIntervalConstraint": null,
+                        "minMinutesRestBetweenDatesConstraint": null,
+                        "maxMinutesRestBetweenPositionsInDateConstraint": null,
+                        "minMinutesRestBetweenPositionsInDateConstraint": null,
+                        "maxWorkingDatesInHorizonConstraint": null,
+                        "maxFestiveWorkingDatesInHorizonConstraint": null,
+                        "maxNonLaborableWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingMinutesConstraint": null,
+                        "minConsecutiveFreeDatesConstraint": null,
+                        "maxDatesWithCategoryInIntervalConstraint": {
+                            "isHard": true,
+                            "maximums": {
+                                "morning": {
+                                    "1-1-1/30-1-1": 0
+                                }
+                            },
+                            "hard": true
+                        },
+                        "maxConsecutiveDatesWithCategoryConstraint": null,
+                        "minDatesWithCategoryInIntervalConstraint": null,
+                        "minConsecutiveDatesWithCategoryConstraint": null
+                    },
+                    "costs": {
+                        "costWorkingDay": 800.0,
+                        "costNonWorkingDay": 1000.0,
+                        "costFestiveDay": 1200.0,
+                        "costExtraHour": 1.0
+                    },
+                    "notAssigned": false
+                }, {
+                    "id": "p2_8",
+                    "roles": ["rol1"],
+                    "typeContract": "DISCONTINUOUS",
+                    "calendar": [{
+                            "date": {
+                                "year": 1,
+                                "month": 1,
+                                "day": 1
+                            },
+                            "availabilities": [{
+                                    "start": "0001-01-01T00:00:00.000+01:00",
+                                    "end": "0001-01-01T09:00:00.000+01:00"
+                                }
+                            ],
+                            "type": "FESTIVE",
+                            "preAssignedPositions": [{
+                                    "idPosition": "t1p1",
+                                    "idTeam": "t1_8",
+                                    "isModifiable": false,
+                                    "modifiable": false
+                                }
+                            ]
+                        }
+                    ],
+                    "constraints": {
+                        "minMinutesPerDateConstraint": null,
+                        "maxMinutesPerDateConstraint": {
+                            "isHard": true,
+                            "maximum": 450,
+                            "hard": true
+                        },
+                        "minMinutesInIntervalConstraint": null,
+                        "maxMinutesInIntervalConstraint": null,
+                        "minMinutesRestBetweenDatesConstraint": null,
+                        "maxMinutesRestBetweenPositionsInDateConstraint": null,
+                        "minMinutesRestBetweenPositionsInDateConstraint": null,
+                        "maxWorkingDatesInHorizonConstraint": null,
+                        "maxFestiveWorkingDatesInHorizonConstraint": null,
+                        "maxNonLaborableWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingMinutesConstraint": null,
+                        "minConsecutiveFreeDatesConstraint": null,
+                        "maxDatesWithCategoryInIntervalConstraint": {
+                            "isHard": true,
+                            "maximums": {
+                                "morning": {
+                                    "1-1-1/30-1-1": 0
+                                }
+                            },
+                            "hard": true
+                        },
+                        "maxConsecutiveDatesWithCategoryConstraint": null,
+                        "minDatesWithCategoryInIntervalConstraint": null,
+                        "minConsecutiveDatesWithCategoryConstraint": null
+                    },
+                    "costs": {
+                        "costWorkingDay": 800.0,
+                        "costNonWorkingDay": 1000.0,
+                        "costFestiveDay": 1200.0,
+                        "costExtraHour": 1.0
+                    },
+                    "notAssigned": false
+                }, {
+                    "id": "p2_9",
+                    "roles": ["rol1"],
+                    "typeContract": "DISCONTINUOUS",
+                    "calendar": [{
+                            "date": {
+                                "year": 1,
+                                "month": 1,
+                                "day": 1
+                            },
+                            "availabilities": [{
+                                    "start": "0001-01-01T00:00:00.000+01:00",
+                                    "end": "0001-01-01T09:00:00.000+01:00"
+                                }
+                            ],
+                            "type": "FESTIVE",
+                            "preAssignedPositions": [{
+                                    "idPosition": "t1p1",
+                                    "idTeam": "t1_9",
+                                    "isModifiable": false,
+                                    "modifiable": false
+                                }
+                            ]
+                        }
+                    ],
+                    "constraints": {
+                        "minMinutesPerDateConstraint": null,
+                        "maxMinutesPerDateConstraint": {
+                            "isHard": true,
+                            "maximum": 450,
+                            "hard": true
+                        },
+                        "minMinutesInIntervalConstraint": null,
+                        "maxMinutesInIntervalConstraint": null,
+                        "minMinutesRestBetweenDatesConstraint": null,
+                        "maxMinutesRestBetweenPositionsInDateConstraint": null,
+                        "minMinutesRestBetweenPositionsInDateConstraint": null,
+                        "maxWorkingDatesInHorizonConstraint": null,
+                        "maxFestiveWorkingDatesInHorizonConstraint": null,
+                        "maxNonLaborableWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingDatesConstraint": null,
+                        "maxConsecutiveWorkingMinutesConstraint": null,
+                        "minConsecutiveFreeDatesConstraint": null,
+                        "maxDatesWithCategoryInIntervalConstraint": {
+                            "isHard": true,
+                            "maximums": {
+                                "morning": {
+                                    "1-1-1/30-1-1": 0
+                                }
+                            },
+                            "hard": true
+                        },
+                        "maxConsecutiveDatesWithCategoryConstraint": null,
+                        "minDatesWithCategoryInIntervalConstraint": null,
+                        "minConsecutiveDatesWithCategoryConstraint": null
+                    },
+                    "costs": {
+                        "costWorkingDay": 800.0,
+                        "costNonWorkingDay": 1000.0,
+                        "costFestiveDay": 1200.0,
+                        "costExtraHour": 1.0
+                    },
+                    "notAssigned": false
+                }
+            ],
+            "teams": [{
+                    "id": "t1_0",
+                    "datePositions": {
+                        "1-1-1": [{
+                                "id": "t1p1",
+                                "required": true,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }, {
+                                "id": "t1p2",
+                                "required": true,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }, {
+                                "id": "t1p3",
+                                "required": false,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }
+                        ]
+                    }
+                }, {
+                    "id": "t1_1",
+                    "datePositions": {
+                        "1-1-1": [{
+                                "id": "t1p1",
+                                "required": true,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }, {
+                                "id": "t1p2",
+                                "required": true,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }, {
+                                "id": "t1p3",
+                                "required": false,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }
+                        ]
+                    }
+                }, {
+                    "id": "t1_2",
+                    "datePositions": {
+                        "1-1-1": [{
+                                "id": "t1p1",
+                                "required": true,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }, {
+                                "id": "t1p2",
+                                "required": true,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }, {
+                                "id": "t1p3",
+                                "required": false,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }
+                        ]
+                    }
+                }, {
+                    "id": "t1_3",
+                    "datePositions": {
+                        "1-1-1": [{
+                                "id": "t1p1",
+                                "required": true,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }, {
+                                "id": "t1p2",
+                                "required": true,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }, {
+                                "id": "t1p3",
+                                "required": false,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }
+                        ]
+                    }
+                }, {
+                    "id": "t1_4",
+                    "datePositions": {
+                        "1-1-1": [{
+                                "id": "t1p1",
+                                "required": true,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }, {
+                                "id": "t1p2",
+                                "required": true,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }, {
+                                "id": "t1p3",
+                                "required": false,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }
+                        ]
+                    }
+                }, {
+                    "id": "t1_5",
+                    "datePositions": {
+                        "1-1-1": [{
+                                "id": "t1p1",
+                                "required": true,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }, {
+                                "id": "t1p2",
+                                "required": true,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }, {
+                                "id": "t1p3",
+                                "required": false,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }
+                        ]
+                    }
+                }, {
+                    "id": "t1_6",
+                    "datePositions": {
+                        "1-1-1": [{
+                                "id": "t1p1",
+                                "required": true,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }, {
+                                "id": "t1p2",
+                                "required": true,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }, {
+                                "id": "t1p3",
+                                "required": false,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }
+                        ]
+                    }
+                }, {
+                    "id": "t1_7",
+                    "datePositions": {
+                        "1-1-1": [{
+                                "id": "t1p1",
+                                "required": true,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }, {
+                                "id": "t1p2",
+                                "required": true,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }, {
+                                "id": "t1p3",
+                                "required": false,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }
+                        ]
+                    }
+                }, {
+                    "id": "t1_8",
+                    "datePositions": {
+                        "1-1-1": [{
+                                "id": "t1p1",
+                                "required": true,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }, {
+                                "id": "t1p2",
+                                "required": true,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }, {
+                                "id": "t1p3",
+                                "required": false,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }
+                        ]
+                    }
+                }, {
+                    "id": "t1_9",
+                    "datePositions": {
+                        "1-1-1": [{
+                                "id": "t1p1",
+                                "required": true,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }, {
+                                "id": "t1p2",
+                                "required": true,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }, {
+                                "id": "t1p3",
+                                "required": false,
+                                "rol": "rol1",
+                                "slot": {
+                                    "idShift": "slot1",
+                                    "category": "morning",
+                                    "start": "0001-01-01T00:00:00+01:00",
+                                    "end": "0001-01-01T09:00:00+01:00",
+                                    "totalTime": 480
+                                },
+                                "notCoveredCost": 100.0
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+
+}</value>
+  </data>
+</root>

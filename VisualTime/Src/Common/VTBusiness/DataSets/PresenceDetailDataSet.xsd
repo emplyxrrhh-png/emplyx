@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PresenceDetailDataSet" targetNamespace="http://tempuri.org/PresenceDetailDataSet.xsd" xmlns:mstns="http://tempuri.org/PresenceDetailDataSet.xsd" xmlns="http://tempuri.org/PresenceDetailDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PresenceDetailDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="PresenceDetailDataSet" msprop:Generator_UserDSName="PresenceDetailDataSet" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PresenceDetail" msprop:Generator_UserTableName="PresenceDetail" msprop:Generator_RowDeletedName="PresenceDetailRowDeleted" msprop:Generator_TableClassName="PresenceDetailDataTable" msprop:Generator_RowChangedName="PresenceDetailRowChanged" msprop:Generator_RowClassName="PresenceDetailRow" msprop:Generator_RowChangingName="PresenceDetailRowChanging" msprop:Generator_RowEvArgName="PresenceDetailRowChangeEvent" msprop:Generator_RowEvHandlerName="PresenceDetailRowChangeEventHandler" msprop:Generator_TablePropName="PresenceDetail" msprop:Generator_TableVarName="tablePresenceDetail" msprop:Generator_RowDeletingName="PresenceDetailRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Date" msprop:Generator_UserColumnName="Date" msprop:Generator_ColumnPropNameInRow="_Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInTable="DateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Moves" msprop:Generator_UserColumnName="Moves" msprop:Generator_ColumnPropNameInRow="Moves" msprop:Generator_ColumnVarNameInTable="columnMoves" msprop:Generator_ColumnPropNameInTable="MovesColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PresenceMinutes" msprop:Generator_UserColumnName="PresenceMinutes" msprop:Generator_ColumnPropNameInRow="PresenceMinutes" msprop:Generator_ColumnVarNameInTable="columnPresenceMinutes" msprop:Generator_ColumnPropNameInTable="PresenceMinutesColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="MovesPairs" msprop:Generator_UserColumnName="MovesPairs" msprop:Generator_ColumnPropNameInRow="MovesPairs" msprop:Generator_ColumnVarNameInTable="columnMovesPairs" msprop:Generator_ColumnPropNameInTable="MovesPairsColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

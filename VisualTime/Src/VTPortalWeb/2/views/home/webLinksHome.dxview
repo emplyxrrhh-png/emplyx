@@ -1,0 +1,42 @@
+<div data-options="dxView : { name: 'webLinksHome', title: 'Web Links', disableCache: true }">
+	<div data-bind="foreach: linksDS">
+		<div style="display: flex; align-items: center; margin-bottom: 10px;">
+			<div style="width: 20%; text-align: center;" data-bind="visible: $index() === 0">
+				<div id="remove-button" data-bind="dxButton: { icon: 'Images/newMenu/weblink-home.png' }"></div>
+			</div>
+
+			<div style="width: 20%;" data-bind="visible: $index() !== 0"></div>
+
+			<div style="width: 80%; display: flex; justify-content: space-between;">
+				<div data-bind="click: function() { $parent.openLink($data.url) }">
+					<div class="employeeCenter">
+						<div>
+							<div class="mainTitle">
+								<span data-bind="text: title"></span>
+							</div>
+						</div>
+
+						<div style="padding-top:5px;">
+							<div id="list" class="list-container" data-bind="if: $data.text">
+								<div class="productivTaskText">
+									<span data-bind="text: text"></span>
+								</div>
+							</div>
+							<div data-bind="if: !$data.text">
+								<div class="productivTaskText">
+									<span>No description available.</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div style=" justify-content:flex-end; display:flex;">
+					<div id="spinright-button" data-bind="dxButton: { icon: 'spinright', onClick: function() { $parent.openLink($data.url) } }"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div style="clear:both;"></div>
+</div>

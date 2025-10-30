@@ -1,0 +1,81 @@
+﻿Imports Robotics.Security.Base
+
+Namespace PlanningEngine
+
+    Public Class roPlanningEngineState
+        Inherits roBusinessState
+
+        Public Enum ResultEnum
+            NoError
+            EngineError
+            Exception
+        End Enum
+
+#Region "Declarations - Constructor"
+
+        Private intResult As ResultEnum
+
+        Public Sub New()
+            MyBase.New("Rootics.Business.Planning", "PlanningService")
+            Me.intResult = ResultEnum.NoError
+        End Sub
+        Public Sub New(ByVal _IDPassport As Integer)
+            MyBase.New("Rootics.Business.Planning", "PlanningService", _IDPassport)
+            Me.intResult = ResultEnum.NoError
+        End Sub
+        Public Sub New(ByVal _IDPassport As Integer, ByVal _Context As System.Web.HttpContext)
+            MyBase.New("Rootics.Business.Planning", "PlanningService", _IDPassport, _Context)
+            Me.intResult = ResultEnum.NoError
+        End Sub
+        Public Sub New(ByVal _IDPassport As Integer, ByVal _ClientAddress As String)
+            MyBase.New("Rootics.Business.Planning", "PlanningService", _IDPassport, , _ClientAddress)
+            Me.intResult = ResultEnum.NoError
+        End Sub
+        Public Sub New(ByVal _IDPassport As Integer, ByVal _Context As System.Web.HttpContext, ByVal _ClientAddress As String)
+            MyBase.New("Rootics.Business.Planning", "PlanningService", _IDPassport, _Context, _ClientAddress)
+            Me.intResult = ResultEnum.NoError
+        End Sub
+
+#End Region
+
+#Region "Properties"
+
+        Public Property Result() As ResultEnum
+            Get
+                Return Me.intResult
+            End Get
+            Set(ByVal value As ResultEnum)
+                Me.intResult = value
+                If Me.intResult <> ResultEnum.NoError And Me.intResult <> ResultEnum.Exception Then
+                    Me.ErrorText = Me.Language.Translate("ResultEnum." & Me.intResult.ToString, String.Empty)
+                End If
+            End Set
+        End Property
+
+#End Region
+
+#Region "Methods"
+        'Public Overrides Sub UpdateAccessTime()
+
+        'End Sub
+
+        Public Overrides Sub UpdateStateInfo(Optional ByVal _Context As System.Web.HttpContext = Nothing)
+            MyBase.UpdateStateInfo(_Context)
+            Me.intResult = ResultEnum.NoError
+        End Sub
+
+        Public Overrides Sub UpdateStateInfo(ByVal Ex As Exception, Optional ByVal strUbication As String = "")
+            MyBase.UpdateStateInfo(Ex, strUbication)
+            Me.intResult = ResultEnum.Exception
+        End Sub
+
+        Public Overrides Sub UpdateStateInfo(ByVal Ex As System.Data.Common.DbException, Optional ByVal strUbication As String = "")
+            MyBase.UpdateStateInfo(Ex, strUbication)
+            Me.intResult = ResultEnum.Exception
+        End Sub
+
+#End Region
+
+    End Class
+
+End Namespace

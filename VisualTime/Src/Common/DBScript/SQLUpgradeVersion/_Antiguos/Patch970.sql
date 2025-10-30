@@ -1,0 +1,13 @@
+﻿-- No borréis esta línea
+CREATE NONCLUSTERED INDEX [IX_Terminals_SerialNumber] ON [dbo].[Terminals]
+(
+	[SerialNumber] ASC
+)
+INCLUDE([ID], [ForceConfig]) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+
+UPDATE sysroParameters SET Data='0' WHERE ID='DXVersion'
+GO
+
+UPDATE sysroParameters SET Data='970' WHERE ID='DBVersion'
+GO

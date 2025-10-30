@@ -1,0 +1,29 @@
+<div data-options="dxView : { name: 'alerts', title: 'Alertas'} " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+		<div id="smallUserInfo"></div>
+
+        <div id="scrollview" style="clear:both" data-bind="dxScrollView: { height:'90%' }">
+            <div id="list" class="list-container" data-bind="if: alertDS().length > 0">
+                <div data-bind="dxList: listAlerts">
+                    <div data-options="dxTemplate: {name: 'AlertItem'}">
+                        <div class="listMenuItem">
+                            <div data-bind="css: $data.cssClass" class="listMenuItemIcon"></div>
+                            <div class="listMenuItemContent">
+                                <div data-bind="text: $data.name"></div>
+                                <div class="smallTextDescription" data-bind="html: $data.description"></div>
+                            </div>
+
+                            <div data-bind="if: $data.hasAction == true"><div class="list-item-arrow"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-bind="if: alertDS().length <= 0">
+                <div class="noDataCssClass"></div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

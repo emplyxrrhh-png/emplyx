@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB08225F-94A3-46AE-B1C5-252F6B38B11B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Robotics.Base.VTNotificationsCore</RootNamespace>
+    <AssemblyName>VTNotificationsCore</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\CommonBin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\CommonBin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Multitennant|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\CommonBin\</OutputPath>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Channels" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\AssemblyVersionInfo.vb">
+      <Link>AssemblyVersionInfo.vb</Link>
+    </Compile>
+    <Compile Include="Factory\roNotificationHelper.vb" />
+    <Compile Include="Factory\roNotificationTaskFactory.vb" />
+    <Compile Include="Factory\roNotificationTaskManager.vb" />
+    <Compile Include="Managers\roAbsenceCanceled.vb" />
+    <Compile Include="Managers\roAbsenceDocumentPending.vb" />
+    <Compile Include="Managers\roAdviceForConceptValueExceeded.vb" />
+    <Compile Include="Managers\roAdviceForConceptValueNotReached.vb" />
+    <Compile Include="Managers\roAdviceForDocumentNotDelivered.vb" />
+    <Compile Include="Managers\roAdviceForNewConversation.vb" />
+    <Compile Include="Managers\roAdviceForSendUsername.vb" />
+    <Compile Include="Managers\roAdviceForNewPassword.vb" />
+    <Compile Include="Managers\roAdviceForPasswordRecover.vb" />
+    <Compile Include="Managers\roAdviceForPermanentBlocked.vb" />
+    <Compile Include="Managers\roAdviceForPunchDuringProgrammedAbsence.vb" />
+    <Compile Include="Managers\roAdviceForTemporaryBlocked.vb" />
+    <Compile Include="Managers\roAdviceForValidationCode.vb" />
+    <Compile Include="Managers\roAdviceHolidayDuringProgrammedAbsence.vb" />
+    <Compile Include="Managers\roAdviceScheduleRuleIndictment.vb" />
+    <Compile Include="Managers\roAdviceUnmatchedTimeRecord.vb" />
+    <Compile Include="Managers\roAssignShift.vb" />
+    <Compile Include="Managers\roBeforeBeginContract.vb" />
+    <Compile Include="Managers\roBeforeBeginPA.vb" />
+    <Compile Include="Managers\roBeforeFinishContract.vb" />
+    <Compile Include="Managers\roBeforeFinishPA.vb" />
+    <Compile Include="Managers\roPendingCauseEmployeeAdvice.vb" />
+    <Compile Include="Managers\ScheduledCommuniquee.vb" />
+    <Compile Include="Managers\roBeginPA.vb" />
+    <Compile Include="Managers\roBreach_Absence.vb" />
+    <Compile Include="Managers\roBreach_Overtime.vb" />
+    <Compile Include="Managers\roBreakFinish.vb" />
+    <Compile Include="Managers\roBreakNotTaken.vb" />
+    <Compile Include="Managers\roBreakStart.vb" />
+    <Compile Include="Managers\roCapacityReached.vb" />
+    <Compile Include="Managers\roCardNotAssigned.vb" />
+    <Compile Include="Managers\roConceptNotReached.vb" />
+    <Compile Include="Managers\roCutPA.vb" />
+    <Compile Include="Managers\roDocumentRejected.vb" />
+    <Compile Include="Managers\roDocumentDelivered.vb" />
+    <Compile Include="Managers\roDocumentNotDelivered.vb" />
+    <Compile Include="Managers\roDocumentPending.vb" />
+    <Compile Include="Managers\roDocumentPendingForEmployee.vb" />
+    <Compile Include="Managers\roDocumentValidation.vb" />
+    <Compile Include="Managers\roEmployeeAbsentOnCoverage.vb" />
+    <Compile Include="Managers\roEmployeeLateArrival.vb" />
+    <Compile Include="Managers\roEmployeeNotArrived.vb" />
+    <Compile Include="Managers\roEmployeePresentWithExpiredDocuments.vb" />
+    <Compile Include="Managers\roEmployeeWithHighTemperature.vb" />
+    <Compile Include="Managers\roEmployeeWithoutExit.vb" />
+    <Compile Include="Managers\roEmployeeWithoutMask.vb" />
+    <Compile Include="Managers\roEndPeriodEmployee.vb" />
+    <Compile Include="Managers\roEndPeriodEnterprise.vb" />
+    <Compile Include="Managers\roFinishPA.vb" />
+    <Compile Include="Managers\roGeniusFinished.vb" />
+    <Compile Include="Managers\roInvalidAccess.vb" />
+    <Compile Include="Managers\roInvalidDesktopConsents.vb" />
+    <Compile Include="Managers\roInvalidPortalConsents.vb" />
+    <Compile Include="Managers\roInvalidTerminalConsents.vb" />
+    <Compile Include="Managers\roInvalidVisitsConsents.vb" />
+    <Compile Include="Managers\roKpiLimitOvertaken.vb" />
+    <Compile Include="Managers\roLabAgreeMaxExceeded.vb" />
+    <Compile Include="Managers\roLabAgreeMinReached.vb" />
+    <Compile Include="Managers\roLinkImportExecuted.vb" />
+    <Compile Include="Managers\roMobilityExecution.vb" />
+    <Compile Include="Managers\roMobilityUpdate.vb" />
+    <Compile Include="Managers\roNotJustifiedIncident.vb" />
+    <Compile Include="Managers\roProductiveUnitUnderCoverage.vb" />
+    <Compile Include="Managers\roMessageFromEmployeeInChannel.vb" />
+    <Compile Include="Managers\roPunchBeforeStart.vb" />
+    <Compile Include="Managers\roPunchesInLockDate.vb" />
+    <Compile Include="Managers\roPunchWithCause.vb" />
+    <Compile Include="Managers\roPunchWithTimezoneNotReliable.vb" />
+    <Compile Include="Managers\roRequestHolidays.vb" />
+    <Compile Include="Managers\roRequestImpersonation.vb" />
+    <Compile Include="Managers\roRequestPending.vb" />
+    <Compile Include="Managers\roRequestResult.vb" />
+    <Compile Include="Managers\roRequestShiftChange.vb" />
+    <Compile Include="Managers\roScheduleAnalytic.vb" />
+    <Compile Include="Managers\roTaskCloseToFinish.vb" />
+    <Compile Include="Managers\roTaskCloseToStart.vb" />
+    <Compile Include="Managers\roTaskExceedingFinishDate.vb" />
+    <Compile Include="Managers\roTaskExceedingPlannedTime.vb" />
+    <Compile Include="Managers\roTaskExceedingStartedDate.vb" />
+    <Compile Include="Managers\roTasksRequestComplete.vb" />
+    <Compile Include="Managers\roTaskWithALerts.vb" />
+    <Compile Include="Managers\roTelecommuteAgreement.vb" />
+    <Compile Include="Managers\roTelecommuteChange.vb" />
+    <Compile Include="Managers\roTerminalDisconnected.vb" />
+    <Compile Include="Managers\roUnderCoverage.vb" />
+    <Compile Include="Managers\roUnmatchedTimeRecord.vb" />
+    <Compile Include="Managers\roUnreliableTimeRecord.vb" />
+    <Compile Include="Managers\roVisitUpdate.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="roNotificationCreateManager.vb" />
+    <Compile Include="roNotificationSendManager.vb" />
+    <Compile Include="Tasks\NotificationTaskExecution.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataLayer\DataLayer.vbproj">
+      <Project>{a68015f9-a070-4ab5-941e-c922fbc5ff30}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTOs\DTOs\DTOs.vbproj">
+      <Project>{00be6247-e1ed-4e0a-bd02-8dbb4e00ffe1}</Project>
+      <Name>DTOs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SecurityLayer\SecurityLayer.vbproj">
+      <Project>{e712f6a2-5e54-4731-9b11-af80242a246c}</Project>
+      <Name>SecurityLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTAzure\VTAzure.vbproj">
+      <Project>{c4ad9d15-4368-4343-b1e1-263abf0e8ab0}</Project>
+      <Name>VTAzure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTBase.Extensions\VTBase.Extensions.vbproj">
+      <Project>{d99ce0c2-ad93-4f3d-a35b-c97749de1bde}</Project>
+      <Name>VTBase.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTBase.Security\VTBase.Security.vbproj">
+      <Project>{c1b73385-8dff-40b0-8c3b-d2e0ded2621e}</Project>
+      <Name>VTBase.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTBase\VTBase.vbproj">
+      <Project>{f1d0ec70-d874-4eed-8ab9-f28fcda2b7f0}</Project>
+      <Name>VTBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTBusinessBase\VTBusiness.Common.vbproj">
+      <Project>{97d87ef7-2b41-4216-a6d2-fa9e3c1bc570}</Project>
+      <Name>VTBusiness.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTBusiness\VTBusiness.vbproj">
+      <Project>{19563cd9-657e-48a8-9b7e-c8b7b23af403}</Project>
+      <Name>VTBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTCommuniques\VTCommuniques.vbproj">
+      <Project>{1003317b-2084-42b8-91c0-d78addb1ea1e}</Project>
+      <Name>VTCommuniques</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTDocuments\VTDocuments.vbproj">
+      <Project>{41921bbc-f55b-44f9-b72c-0412b237c49e}</Project>
+      <Name>VTDocuments</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTEmployees\VTEmployees.vbproj">
+      <Project>{c0e7da43-d1b9-4427-b147-47a269b8706f}</Project>
+      <Name>VTEmployees</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTHolidays\VTHolidays.vbproj">
+      <Project>{d5d13f4d-3ceb-417e-bb21-bb9075d18705}</Project>
+      <Name>VTHolidays</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTNotifications\VTNotifications.vbproj">
+      <Project>{fa9a3bba-e4f3-40ad-bde3-84639db5c522}</Project>
+      <Name>VTNotifications</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTRequests\VTRequests.vbproj">
+      <Project>{0b351286-98d3-4974-90d0-8348a40bea7c}</Project>
+      <Name>VTRequests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTScheduler\VTCalendar.vbproj">
+      <Project>{b0555c2c-7794-40d1-bd31-6af0978048cb}</Project>
+      <Name>VTCalendar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTSelector\VTUniversalSelector.vbproj">
+      <Project>{f0abf7a8-2200-49f1-b657-adb9be5b7b77}</Project>
+      <Name>VTUniversalSelector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTUserFields\VTUserFields.vbproj">
+      <Project>{7085e89b-7690-480f-b8d4-e356e1365048}</Project>
+      <Name>VTUserFields</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CreateOrUpdateEmployee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oEmployee" type="tns:roDatalinkStandarEmployee" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="roDatalinkStandarEmployee">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NombreEmpleado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UniqueEmployeeID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NifEmpleado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDContract" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LabAgreeName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartContractDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndContractDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MobilityDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CompositeContractType" type="tns:eCompositeContractType" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SupervisorGroup" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nivel0" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nivel1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nivel2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nivel3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nivel4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nivel5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nivel6" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nivel7" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nivel8" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nivel9" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nivel10" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActiveAuthorizations" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserFields" type="tns:ArrayOfRoDatalinkEmployeeUserFieldValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="Period" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NifCopyPlan" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="eCompositeContractType">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="ContractAndDate" />
+          <s:enumeration value="CompanyContractAndDate" />
+          <s:enumeration value="ContractAndPeriod" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRoDatalinkEmployeeUserFieldValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="roDatalinkEmployeeUserFieldValue" nillable="true" type="tns:roDatalinkEmployeeUserFieldValue" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="roDatalinkEmployeeUserFieldValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserFieldName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserFieldValue" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserFieldValueDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateOrUpdateEmployeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateOrUpdateEmployeeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOrUpdateAbsence">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oAbsence" type="tns:roDatalinkStandarAbsence" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="roDatalinkStandarAbsence">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Action" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UniqueEmployeeID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NifEmpleado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NifLetter" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CauseShortName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartAbsenceDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndAbsenceDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxDays" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BeginHour" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndHour" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Duration" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CauseExportKey" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TimeStamp" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="AbsenceId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateOrUpdateAbsenceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateOrUpdateAbsenceResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOrUpdateHolidays">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oHolidays" type="tns:roDatalinkStandarHolidays" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="roDatalinkStandarHolidays">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Action" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UniqueEmployeeID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NifEmpleado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NifLetter" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShiftKey" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PlanDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateOrUpdateHolidaysResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateOrUpdateHolidaysResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOrUpdateCalendar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oCalendar" type="tns:roDatalinkStandarCalendar" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="roDatalinkStandarCalendar">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UniqueEmployeeID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NifEmpleado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NifLetter" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShiftKey" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PlanDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateOrUpdateCalendarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateOrUpdateCalendarResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAbsences">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oAbsenceCriteria" type="tns:roDatalinkStandarAbsenceCriteria" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="roDatalinkStandarAbsenceCriteria">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UniqueEmployeeID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NifEmpleado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NifLetter" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartAbsencePeriod" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndAbsencePeriod" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="OnlyChanges" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAbsencesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAbsencesResult" type="tns:roDatalinkStandarAbsenceResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="roDatalinkStandarAbsenceResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Absences" type="tns:ArrayOfRoDatalinkStandarAbsence" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRoDatalinkStandarAbsence">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="roDatalinkStandarAbsence" nillable="true" type="tns:roDatalinkStandarAbsence" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPunches">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserPwd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="timestamp" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPunchesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPunchesResult" type="tns:roDatalinkStandardPunchResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="roDatalinkStandardPunchResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Punches" type="tns:ArrayOfRoDatalinkStandardPunch" />
+          <s:element minOccurs="0" maxOccurs="1" name="PunchesListError" type="tns:ArrayOfRoDatalinkStandardPunch" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRoDatalinkStandardPunch">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="roDatalinkStandardPunch" nillable="true" type="tns:roDatalinkStandardPunch" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="roDatalinkStandardPunch">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UniqueEmployeeID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NifEmpleado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NifLetter" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:PunchTypeEnum" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActualType" type="tns:PunchTypeEnum" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDTerminal" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeData" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GPS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Field1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Field2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Field3" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Field4" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Field5" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Field6" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Timestamp" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="PunchTypeEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="_NOTDEFINDED" />
+          <s:enumeration value="_IN" />
+          <s:enumeration value="_OUT" />
+          <s:enumeration value="_AUTO" />
+          <s:enumeration value="_TASK" />
+          <s:enumeration value="_AV" />
+          <s:enumeration value="_AI" />
+          <s:enumeration value="_L" />
+          <s:enumeration value="_INI" />
+          <s:enumeration value="_OUTI" />
+          <s:enumeration value="_DR" />
+          <s:enumeration value="_AEV" />
+          <s:enumeration value="_AEI" />
+          <s:enumeration value="_CENTER" />
+          <s:enumeration value="_RPTIN" />
+          <s:enumeration value="_RPTOUT" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetPunchesBetweenDates">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserPwd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPunchesBetweenDatesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPunchesBetweenDatesResult" type="tns:roDatalinkStandardPunchResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPunches">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oPunchList" type="tns:ArrayOfRoDatalinkStandardPunch" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPunchesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddPunchesResult" type="tns:roDatalinkStandardPunchResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccruals">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oAccrualCriteria" type="tns:roDatalinkStandarAccrualCriteria" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="roDatalinkStandarAccrualCriteria">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UniqueEmployeeID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NifEmpleado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NifLetter" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartAccrualPeriod" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndAccrualPeriod" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAccrualsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccrualsResult" type="tns:roDatalinkStandarAccrualResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="roDatalinkStandarAccrualResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Accruals" type="tns:ArrayOfRoDatalinkStandarAccrual" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRoDatalinkStandarAccrual">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="roDatalinkStandarAccrual" nillable="true" type="tns:roDatalinkStandarAccrual" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="roDatalinkStandarAccrual">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UniqueEmployeeID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NifEmpleado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NifLetter" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccrualExportKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccrualShortName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AccrualDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="AccrualValue" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateOrUpdateDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oDocument" type="tns:roDatalinkStandardDocument" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="roDatalinkStandardDocument">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UniqueEmployeeID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NifEmpleado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentData" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentExtension" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentRemarks" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateOrUpdateDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateOrUpdateDocumentResult" type="tns:roDatalinkStandarDocumentResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="roDatalinkStandarDocumentResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDetails" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateOrUpdateEmployeeSAGE200c">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aContracts" type="tns:roDatalinkEmployeeContractsHistory" />
+            <s:element minOccurs="0" maxOccurs="1" name="oEmployee" type="tns:roDatalinkStandarEmployee" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="roDatalinkEmployeeContractsHistory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Contracts" type="tns:ArrayOfRoDatalinkEmployeeContract" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRoDatalinkEmployeeContract">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="roDatalinkEmployeeContract" nillable="true" type="tns:roDatalinkEmployeeContract" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="roDatalinkEmployeeContract">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="StartContractDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndContractDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDContract" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LabAgreeName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateOrUpdateEmployeeSAGE200cResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateOrUpdateEmployeeSAGE200cResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateOrUpdateEmployeeSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateEmployee" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrUpdateEmployeeSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrUpdateAbsenceSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateAbsence" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrUpdateAbsenceSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateAbsenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrUpdateHolidaysSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateHolidays" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrUpdateHolidaysSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateHolidaysResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrUpdateCalendarSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateCalendar" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrUpdateCalendarSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateCalendarResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAbsencesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAbsences" />
+  </wsdl:message>
+  <wsdl:message name="GetAbsencesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAbsencesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPunchesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPunches" />
+  </wsdl:message>
+  <wsdl:message name="GetPunchesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPunchesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPunchesBetweenDatesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPunchesBetweenDates" />
+  </wsdl:message>
+  <wsdl:message name="GetPunchesBetweenDatesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPunchesBetweenDatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddPunchesSoapIn">
+    <wsdl:part name="parameters" element="tns:AddPunches" />
+  </wsdl:message>
+  <wsdl:message name="AddPunchesSoapOut">
+    <wsdl:part name="parameters" element="tns:AddPunchesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccrualsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccruals" />
+  </wsdl:message>
+  <wsdl:message name="GetAccrualsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccrualsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrUpdateDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateDocument" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrUpdateDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrUpdateEmployeeSAGE200cSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateEmployeeSAGE200c" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrUpdateEmployeeSAGE200cSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateEmployeeSAGE200cResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ExternalApiSoap">
+    <wsdl:operation name="CreateOrUpdateEmployee">
+      <wsdl:input message="tns:CreateOrUpdateEmployeeSoapIn" />
+      <wsdl:output message="tns:CreateOrUpdateEmployeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateAbsence">
+      <wsdl:input message="tns:CreateOrUpdateAbsenceSoapIn" />
+      <wsdl:output message="tns:CreateOrUpdateAbsenceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateHolidays">
+      <wsdl:input message="tns:CreateOrUpdateHolidaysSoapIn" />
+      <wsdl:output message="tns:CreateOrUpdateHolidaysSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateCalendar">
+      <wsdl:input message="tns:CreateOrUpdateCalendarSoapIn" />
+      <wsdl:output message="tns:CreateOrUpdateCalendarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAbsences">
+      <wsdl:input message="tns:GetAbsencesSoapIn" />
+      <wsdl:output message="tns:GetAbsencesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPunches">
+      <wsdl:input message="tns:GetPunchesSoapIn" />
+      <wsdl:output message="tns:GetPunchesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPunchesBetweenDates">
+      <wsdl:input message="tns:GetPunchesBetweenDatesSoapIn" />
+      <wsdl:output message="tns:GetPunchesBetweenDatesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPunches">
+      <wsdl:input message="tns:AddPunchesSoapIn" />
+      <wsdl:output message="tns:AddPunchesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccruals">
+      <wsdl:input message="tns:GetAccrualsSoapIn" />
+      <wsdl:output message="tns:GetAccrualsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateDocument">
+      <wsdl:input message="tns:CreateOrUpdateDocumentSoapIn" />
+      <wsdl:output message="tns:CreateOrUpdateDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateEmployeeSAGE200c">
+      <wsdl:input message="tns:CreateOrUpdateEmployeeSAGE200cSoapIn" />
+      <wsdl:output message="tns:CreateOrUpdateEmployeeSAGE200cSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ExternalApiSoap" type="tns:ExternalApiSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateOrUpdateEmployee">
+      <soap:operation soapAction="http://tempuri.org/CreateOrUpdateEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateAbsence">
+      <soap:operation soapAction="http://tempuri.org/CreateOrUpdateAbsence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateHolidays">
+      <soap:operation soapAction="http://tempuri.org/CreateOrUpdateHolidays" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateCalendar">
+      <soap:operation soapAction="http://tempuri.org/CreateOrUpdateCalendar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAbsences">
+      <soap:operation soapAction="http://tempuri.org/GetAbsences" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPunches">
+      <soap:operation soapAction="http://tempuri.org/GetPunches" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPunchesBetweenDates">
+      <soap:operation soapAction="http://tempuri.org/GetPunchesBetweenDates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPunches">
+      <soap:operation soapAction="http://tempuri.org/AddPunches" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccruals">
+      <soap:operation soapAction="http://tempuri.org/GetAccruals" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateDocument">
+      <soap:operation soapAction="http://tempuri.org/CreateOrUpdateDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateEmployeeSAGE200c">
+      <soap:operation soapAction="http://tempuri.org/CreateOrUpdateEmployeeSAGE200c" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ExternalApiSoap12" type="tns:ExternalApiSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateOrUpdateEmployee">
+      <soap12:operation soapAction="http://tempuri.org/CreateOrUpdateEmployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateAbsence">
+      <soap12:operation soapAction="http://tempuri.org/CreateOrUpdateAbsence" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateHolidays">
+      <soap12:operation soapAction="http://tempuri.org/CreateOrUpdateHolidays" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateCalendar">
+      <soap12:operation soapAction="http://tempuri.org/CreateOrUpdateCalendar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAbsences">
+      <soap12:operation soapAction="http://tempuri.org/GetAbsences" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPunches">
+      <soap12:operation soapAction="http://tempuri.org/GetPunches" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPunchesBetweenDates">
+      <soap12:operation soapAction="http://tempuri.org/GetPunchesBetweenDates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPunches">
+      <soap12:operation soapAction="http://tempuri.org/AddPunches" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccruals">
+      <soap12:operation soapAction="http://tempuri.org/GetAccruals" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateDocument">
+      <soap12:operation soapAction="http://tempuri.org/CreateOrUpdateDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateEmployeeSAGE200c">
+      <soap12:operation soapAction="http://tempuri.org/CreateOrUpdateEmployeeSAGE200c" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExternalApi">
+    <wsdl:port name="ExternalApiSoap" binding="tns:ExternalApiSoap">
+      <soap:address location="http://localhost:8024/Datalink/ExternalApi.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ExternalApiSoap12" binding="tns:ExternalApiSoap12">
+      <soap12:address location="http://localhost:8024/Datalink/ExternalApi.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

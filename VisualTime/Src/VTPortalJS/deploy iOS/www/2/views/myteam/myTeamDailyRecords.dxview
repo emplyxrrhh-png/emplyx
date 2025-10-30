@@ -1,0 +1,53 @@
+<div data-options="dxView : { name: 'myTeamDailyRecords', title: 'myTeamDailyRecords', disableCache: true  } ">
+
+	<div id="smallUserInfo"></div>
+
+	<div id="panelsContent" style="height:90%;">
+		<div class="dx-searchbar">
+			<div data-bind="dxTextBox: searchOptions"></div>
+		</div>
+		<div id="scrollview" data-bind="dxScrollView: {}">
+			<div id="list" class="list-container" data-bind="if: dailyRecordsDS() > 0">
+				<div id="listRequests" data-bind="dxList: listRequests">
+					<div data-options="dxTemplate: {name: 'RequestItem'}">
+						<div class="listMenuItemDR">
+							<div class="EmployeeImagePhotoDR">
+								<div data-bind="style: { background: $data.EmployeeImage }" class="EmployeeImagePhotoDR"></div>
+							</div>
+							<div class="listMenuItemContent">
+								<div data-bind="text: $data.Name"></div>
+								<div class="smallTextDescription" data-bind="html: $data.Description"></div>
+								<div class="smallTextDescription" data-bind="html: $data.GroupName"></div>
+								<div class="smallTextDescriptionDR" data-bind="html: $data.Status"></div>
+								<div class="smallTextDescription" data-bind="html: $data.Adjusted, css: $data.cssClassAdjusted"></div>
+								<div class="smallTextDescription" data-bind="html: $data.AdjustedDetails, css: $data.cssClassAdjusted"></div>
+							</div>
+
+							<div data-bind="if: $data.hasAction == true">
+								<div class="list-item-arrow"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div data-bind="if: dailyRecordsDS() <= 0">
+				<div class="noDataCssClass"></div>
+			</div>
+		</div>
+
+		<div class="fixedMenuButton2">
+			<div class="actionButtonApprove mainMenuButton" data-bind="dxButton: btnApprove"></div>
+			<div class="actionButtonRefuse mainMenuButton" data-bind="dxButton: btnRefuse"></div>
+			<div class="actionButton mainMenuButton" data-bind="dxButton: btnFilterRequests"></div>
+		</div>
+
+		<div data-bind="if: dataFiltered() == true">
+			<div class="filterInfoContainer">
+				<div class="filteredData filteredDataIcon"></div>
+				<div class="filteredDataText" data-bind="text: filterDescription"></div>
+			</div>
+		</div>
+		<div data-bind="dxLoadPanel: loadingPanel"> </div>
+	</div>
+</div>

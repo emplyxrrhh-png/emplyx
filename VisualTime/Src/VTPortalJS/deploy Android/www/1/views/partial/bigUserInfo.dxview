@@ -1,0 +1,84 @@
+<div data-options="dxView : { name: 'bigUserInfo', disableCache: true } ">
+	<!-- ko if: VTPortal.roApp.HasCustomHeader() == false -->
+	<div data-bind="css: cssBackground" id="headerBackground">
+		<div class="backgroundPhoto"></div>
+	</div>
+	<!-- /ko-->
+	<!-- ko if: VTPortal.roApp.HasCustomHeader() == true -->
+	<div id="customBackground" data-bind="attr: { style: customCssBackground} " >
+		<div id="customPhoto" data-bind="attr: { style: customPhotoBackground} "></div>
+	</div>
+	<!-- /ko-->
+
+	<div class="employeeOpacity" data-bind="style: { borderBottom: borderBottom }">
+		<div id="employeePhotoDiv" class="centerEmp">
+			<div class="employeePhoto" style="border: 2px solid #fdeee4;" data-bind="style: { background: empImage },click: changeUserPhoto, visible: photoVisible"></div>
+			<!--<div class="presenceTime" data-bind="if: isSupervisor() == false">
+                <div data-bind="css: statusIcon"></div>
+                <div class="clockTime"><span data-bind="text: myTime, style: {color: textColor}"></span></div>
+            </div>-->
+			<div data-bind="dxPopover: photoPopover" style="border-radius:20px !important">
+				<div class="mainTitleList" style="margin:10px !important; text-align: center;vertical-align: middle;">
+					<span data-bind="text:photoHelp"></span>
+				</div>
+			</div>
+
+		</div>
+		<div class="employeeInfo">
+			<div class="employeeCenter">
+				<div class="welcomeText">
+					<span data-bind="text: lblWelcome"></span>
+				</div>
+				<!--<div class="userNameText"><span data-bind="text: lblUsername"></span></div>-->
+				<div class="bigUserDate">
+					<span data-bind="text: lblServerTime"></span>
+				</div>
+
+				<div class="bigUserDate2">
+					<span data-bind="text: lblServerDate"></span>
+				</div>
+				<br />
+
+				<div class="bigImpersonatedInfo" style="padding-top:1px !important">
+					<span data-bind="text: lblUsername"></span>
+
+				</div>
+				<!-- ko if: VTPortal.roApp.LastLogin() != null -->
+				<div class="bigLastLogin">
+					<span data-bind="text: lblLastLogin"></span>
+
+				</div>
+				<!-- /ko-->
+			</div>
+
+		</div>
+
+
+		<div id="tabMain" data-bind="dxTabs: tabPanelOptionsMain" class="tabLayout">
+			<div data-options="dxTemplate : { name: 'title' } ">
+				<div data-bind="text: $data.Name" class="tabContentLayout headerEllipsis"></div>
+			</div>
+		</div>
+
+		<div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false, closeOnBackButton:false, visible: changeUserPhotoVisible, height: 'auto'}">
+			<div class="dx-fieldset">
+				<!-- ko if: appMode == true -->
+				<span data-bind="text: lblProfileImage"></span>
+
+				<div class="noImageCssClass" data-bind="event: { dxclick: selectPhotoEvent }">
+					<img width="100%" height="100%" data-bind="attr:{ src:imageSrc}" alt="" />
+				</div>
+				<!-- /ko-->
+				<!-- ko if: appMode == false -->
+				<span data-bind="text: lblProfileImage"></span>
+				<div data-bind="dxFileUploader: uploadOptions"></div>
+				<!-- /ko-->
+			</div>
+			<div style="padding-top:5px">
+				<div style="float:left;width:50%" class="get-to-work-blue" data-bind="dxButton: btnCancelUpload"></div>
+				<div style="float:right;width:50%" class="get-to-work-orange" data-bind="dxButton: btnAcceptUpload"></div>
+			</div>
+
+		</div>
+	</div>
+</div>

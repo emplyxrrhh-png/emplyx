@@ -1,0 +1,50 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger: none
+
+pool:
+  vmImage: windows-latest
+
+variables:
+  repoName: 'Visualtime'
+  minor: $[counter(variables['repoName'], 1)]
+  revision: "$(repoName).$(minor)"
+
+jobs:
+- job: BlackDuck
+  displayName: BlackDuck
+  workspace:
+    clean: all
+  steps:
+  - task: SynopsysDetectTask@8
+    displayName: "Synopsys Detect"
+    name: synopsysDetect
+    inputs:
+      BlackDuckService: 'BlackDuck-VisualTime'
+      DetectArguments: |
+        --detect.source.path="$(Build.SourcesDirectory)/Src"
+        --detect.project.name="[cegid_visualtime]$(repoName)"
+        --detect.project.description="cegid_visualtime:$(repoName)"
+        --detect.project.version.name="$(revision)" 
+        --detect.clone.project.version.latest=true
+        --detect.risk.report.pdf=true
+        --detect.notices.report.path=.
+      DetectVersion: 'latest'
+  - task: PowerShell@2
+    displayName: "Generate Report Name" 
+    name: generateReportName
+    inputs:
+      targetType: 'inline'
+      script: |
+        $reportName = "[cegid_visualtime]$(repoName)_$(revision)_BlackDuck_RiskReport"
+        $fileReportName = "{0}{1}" -f $reportName.Replace('[','_').Replace(']','_').Replace('.','_'),".pdf"
+        echo "##vso[task.setvariable variable=fileReportName;isOutput=true]$fileReportName"
+  - task: PublishPipelineArtifact@1
+    displayName: "Publish Pipeline Artifact"
+    inputs:
+      targetPath: '$(Build.SourcesDirectory)/Src/$(generateReportName.fileReportName)'
+      artifact: 'RiskReport'
+      publishLocation: 'pipeline'

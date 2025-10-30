@@ -1,0 +1,1734 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_features.absences.description.rotext" xml:space="preserve">
+    <value>Gestione proattiva delle assenze degli utenti</value>
+  </data>
+  <data name="RES_features.absences.documentsabsences.description.rotext" xml:space="preserve">
+    <value>Gestione dell´elenco di documenti utilizzati nel controllo delle assenze degli utenti</value>
+  </data>
+  <data name="RES_features.absences.documentsabsences.name.rotext" xml:space="preserve">
+    <value>Documenti di assenze</value>
+  </data>
+  <data name="RES_features.absences.name.rotext" xml:space="preserve">
+    <value>Assenze</value>
+  </data>
+  <data name="RES_features.access.analytics.description.rotext" xml:space="preserve">
+    <value>Controllo analitico dei dati correlati agli accessi</value>
+  </data>
+  <data name="RES_features.access.analytics.name.rotext" xml:space="preserve">
+    <value>Analisi</value>
+  </data>
+  <data name="RES_features.access.description.rotext" xml:space="preserve">
+    <value>Gestione di accessi e configurazione di utenti su cui si effettuerà la gestione di ognuna delle funzionalità degli accessi consentite</value>
+  </data>
+  <data name="RES_features.access.groups.assign.description.rotext" xml:space="preserve">
+    <value>Assegnazione di utenti</value>
+  </data>
+  <data name="RES_features.access.groups.assign.name.rotext" xml:space="preserve">
+    <value>Assegnazione</value>
+  </data>
+  <data name="RES_features.access.groups.definition.description.rotext" xml:space="preserve">
+    <value>Configurazione delle relazioni di zona e periodo che avranno i gruppi di accessi, nonché gli utenti appartenenti a ciascuno dei gruppi</value>
+  </data>
+  <data name="RES_features.access.groups.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.access.groups.description.rotext" xml:space="preserve">
+    <value>Gestione dei gruppi di accesso</value>
+  </data>
+  <data name="RES_features.access.groups.name.rotext" xml:space="preserve">
+    <value>Gruppi</value>
+  </data>
+  <data name="RES_features.access.name.rotext" xml:space="preserve">
+    <value>Accessi</value>
+  </data>
+  <data name="RES_features.access.periods.definition.description.rotext" xml:space="preserve">
+    <value>Configurazione dei giorni e intervalli di accessi per ciascun periodo</value>
+  </data>
+  <data name="RES_features.access.periods.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.access.periods.description.rotext" xml:space="preserve">
+    <value>Gestione dei periodi di accesso</value>
+  </data>
+  <data name="RES_features.access.periods.name.rotext" xml:space="preserve">
+    <value>Periodi</value>
+  </data>
+  <data name="RES_features.access.zones.definition.description.rotext" xml:space="preserve">
+    <value>Configurazione delle zone di accesso: stabilire se si tratta o meno di una zona di lavoro, posizione all´interno di una pianta, integrazione con videocamera e relè di apertura</value>
+  </data>
+  <data name="RES_features.access.zones.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.access.zones.description.rotext" xml:space="preserve">
+    <value>Gestione delle zone di accesso</value>
+  </data>
+  <data name="RES_features.access.zones.name.rotext" xml:space="preserve">
+    <value>Zone</value>
+  </data>
+  <data name="RES_features.access.zones.supervision.description.rotext" xml:space="preserve">
+    <value>Consenti di vedere le informazioni collegate alle zone esistenti</value>
+  </data>
+  <data name="RES_features.access.zones.supervision.name.rotext" xml:space="preserve">
+    <value>Supervisione</value>
+  </data>
+  <data name="RES_features.activities.definition.description.rotext" xml:space="preserve">
+    <value>Configurazione delle attività che si svolgeranno nell´azienda: organizzazione della struttura di dipendenze delle diverse aziende che intervengono in ciascuna delle attività</value>
+  </data>
+  <data name="RES_features.activities.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.activities.description.rotext" xml:space="preserve">
+    <value>Gestione delle attività che verranno sviluppate nell´azienda</value>
+  </data>
+  <data name="RES_features.activities.name.rotext" xml:space="preserve">
+    <value>Attività</value>
+  </data>
+  <data name="RES_features.administration.alerts.description.rotext" xml:space="preserve">
+    <value>Consente di gestire e verificare gli avvisi di Visualtime</value>
+  </data>
+  <data name="RES_features.administration.alerts.name.rotext" xml:space="preserve">
+    <value>Avvisi</value>
+  </data>
+  <data name="RES_features.administration.audit.description.rotext" xml:space="preserve">
+    <value>Visualizzazione delle azioni che gli utenti hanno realizzato nell´applicazione, in base ai criteri di ricerca per individuare l´informazione</value>
+  </data>
+  <data name="RES_features.administration.audit.name.rotext" xml:space="preserve">
+    <value>Audit</value>
+  </data>
+  <data name="RES_features.administration.businesscenters.description.rotext" xml:space="preserve">
+    <value>Gestione dei centri di costo, per un successivo uso in ProductiV e controllo di costi</value>
+  </data>
+  <data name="RES_features.administration.businesscenters.name.rotext" xml:space="preserve">
+    <value>Centri di costo</value>
+  </data>
+  <data name="RES_features.administration.cameras.definition.description.rotext" xml:space="preserve">
+    <value>Configurazione delle videocamere: nome, URL e modello</value>
+  </data>
+  <data name="RES_features.administration.cameras.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.administration.cameras.description.rotext" xml:space="preserve">
+    <value>Gestione delle videocamere che rafforzeranno il controllo degli accessi</value>
+  </data>
+  <data name="RES_features.administration.cameras.name.rotext" xml:space="preserve">
+    <value>Videocamere</value>
+  </data>
+  <data name="RES_features.administration.cameras.visualization.description.rotext" xml:space="preserve">
+    <value>Consenti di visualizzare le immagini acquisite dalle videocamere esistenti</value>
+  </data>
+  <data name="RES_features.administration.cameras.visualization.name.rotext" xml:space="preserve">
+    <value>Schermo</value>
+  </data>
+  <data name="RES_features.administration.description.rotext" xml:space="preserve">
+    <value>Gestione delle funzionalità di amministrazione</value>
+  </data>
+  <data name="RES_features.administration.name.rotext" xml:space="preserve">
+    <value>Amministrazione</value>
+  </data>
+  <data name="RES_features.administration.notifications.definition.description.rotext" xml:space="preserve">
+    <value>Configurazione delle notifiche: destinatario, tipo di inizio e fine contratto, assenza prolungata, accessi negati all´applicazione, a un´area limitata...</value>
+  </data>
+  <data name="RES_features.administration.notifications.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.administration.notifications.description.rotext" xml:space="preserve">
+    <value>Gestione delle funzionalità di notifiche</value>
+  </data>
+  <data name="RES_features.administration.notifications.name.rotext" xml:space="preserve">
+    <value>Notifiche</value>
+  </data>
+  <data name="RES_features.administration.options.attendance.description.rotext" xml:space="preserve">
+    <value>Configurazione delle opzioni di timbratura: rilevamento di entrate/uscite e timbrature ripetute, nonché del periodo annuale e mensile con cui si lavora nell´azienda</value>
+  </data>
+  <data name="RES_features.administration.options.attendance.name.rotext" xml:space="preserve">
+    <value>Opzioni di presenza</value>
+  </data>
+  <data name="RES_features.administration.options.description.rotext" xml:space="preserve">
+    <value>Gestione delle opzioni parametrizzabili del database</value>
+  </data>
+  <data name="RES_features.administration.options.general.description.rotext" xml:space="preserve">
+    <value>Configurazione delle opzioni di formato di tempo, scheda utente e azienda, data di chiusura globale e server di posta elettronica</value>
+  </data>
+  <data name="RES_features.administration.options.general.name.rotext" xml:space="preserve">
+    <value>Opzioni generali</value>
+  </data>
+  <data name="RES_features.administration.options.name.rotext" xml:space="preserve">
+    <value>Opzioni</value>
+  </data>
+  <data name="RES_features.administration.reportscheduler.definition.description.rotext" xml:space="preserve">
+    <value>Configurazione delle attività di esecuzione automatica di rapporti periodici: elenco e profilo, destinatario, periodicità e classificazione di emergenza o meno</value>
+  </data>
+  <data name="RES_features.administration.reportscheduler.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.administration.reportscheduler.description.rotext" xml:space="preserve">
+    <value>Gestione delle funzionalità del planner di rapporti</value>
+  </data>
+  <data name="RES_features.administration.reportscheduler.emergencyreport.description.rotext" xml:space="preserve">
+    <value>Consenti di premere il pulsante di emergenza per l´esecuzione dei rapporti di emergenza</value>
+  </data>
+  <data name="RES_features.administration.reportscheduler.emergencyreport.name.rotext" xml:space="preserve">
+    <value>Apri rapporti di emergenza</value>
+  </data>
+  <data name="RES_features.administration.reportscheduler.name.rotext" xml:space="preserve">
+    <value>Planner di rapporti</value>
+  </data>
+  <data name="RES_features.administration.security.description.rotext" xml:space="preserve">
+    <value>Gestione dei permessi di lavoro dei gestori, supervisori e/o utenti dell´applicazione</value>
+  </data>
+  <data name="RES_features.administration.security.name.rotext" xml:space="preserve">
+    <value>Sicurezza</value>
+  </data>
+  <data name="RES_features.administration.securityoptions.description.rotext" xml:space="preserve">
+    <value>Gestione delle varie opzioni di sicurezza dell´applicazione</value>
+  </data>
+  <data name="RES_features.administration.securityoptions.name.rotext" xml:space="preserve">
+    <value>Opzioni di sicurezza</value>
+  </data>
+  <data name="RES_features.administration.tasksqueue.description.rotext" xml:space="preserve">
+    <value>Consente di gestire e verificare lo stato dei rapporti nel sistema</value>
+  </data>
+  <data name="RES_features.administration.tasksqueue.name.rotext" xml:space="preserve">
+    <value>Rapporti richiesti</value>
+  </data>
+  <data name="RES_features.administration.usertasks.description.rotext" xml:space="preserve">
+    <value>Gestione delle attività in sospeso dell´utente: assegnazione di tessere a utenti, correzione di timbrature effettuate con una tessera errata...</value>
+  </data>
+  <data name="RES_features.administration.usertasks.name.rotext" xml:space="preserve">
+    <value>Attività di utente</value>
+  </data>
+  <data name="RES_features.assignments.definition.description.rotext" xml:space="preserve">
+    <value>Configurazione delle posizioni</value>
+  </data>
+  <data name="RES_features.assignments.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.assignments.description.rotext" xml:space="preserve">
+    <value>Gestione delle posizioni</value>
+  </data>
+  <data name="RES_features.assignments.name.rotext" xml:space="preserve">
+    <value>Posizioni</value>
+  </data>
+  <data name="RES_features.bots.definition.description.rotext" xml:space="preserve">
+    <value>Definizione di bot</value>
+  </data>
+  <data name="RES_features.bots.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.bots.description.rotext" xml:space="preserve">
+    <value>Gestione dei bot</value>
+  </data>
+  <data name="RES_features.bots.name.rotext" xml:space="preserve">
+    <value>Bot</value>
+  </data>
+  <data name="RES_features.budgets.definition.description.rotext" xml:space="preserve">
+    <value>Gestisci le modalità di lavoro delle unità di produzione</value>
+  </data>
+  <data name="RES_features.budgets.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.budgets.description.rotext" xml:space="preserve">
+    <value>Gestione dei budget di ogni nodo</value>
+  </data>
+  <data name="RES_features.budgets.name.rotext" xml:space="preserve">
+    <value>Budget</value>
+  </data>
+  <data name="RES_features.budgets.schedule.description.rotext" xml:space="preserve">
+    <value>Pianifica gli utenti che verranno assegnati a ciascuna unità produttiva del budget</value>
+  </data>
+  <data name="RES_features.budgets.schedule.name.rotext" xml:space="preserve">
+    <value>Pianificazione</value>
+  </data>
+  <data name="RES_features.businesscenters.analytics.description.rotext" xml:space="preserve">
+    <value>Controllo analitico dei dati correlati ai centri di costo</value>
+  </data>
+  <data name="RES_features.businesscenters.analytics.name.rotext" xml:space="preserve">
+    <value>Analisi dei costi</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.description.rotext" xml:space="preserve">
+    <value>Link di dati disponibili sulla schermata di link di dati</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.exports.advbusinesscenter.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´esportazione avanzata di centri di costo</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.exports.advbusinesscenter.name.rotext" xml:space="preserve">
+    <value>Esportazione avanzata di centri di costo</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.exports.description.rotext" xml:space="preserve">
+    <value>Esportazioni disponibili sulla schermata di link di dati</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.exports.name.rotext" xml:space="preserve">
+    <value>Esportazioni</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.imports.businesscenter.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare il caricamento di centri di costo</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.imports.businesscenter.name.rotext" xml:space="preserve">
+    <value>Caricamento di centri di costo</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.imports.description.rotext" xml:space="preserve">
+    <value>Importazioni disponibili nella schermata del link di dati</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.imports.name.rotext" xml:space="preserve">
+    <value>Importazioni</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.name.rotext" xml:space="preserve">
+    <value>collegamento dati</value>
+  </data>
+  <data name="RES_features.businesscenters.definition.description.rotext" xml:space="preserve">
+    <value>Definizione dei centro di costo</value>
+  </data>
+  <data name="RES_features.businesscenters.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.businesscenters.description.rotext" xml:space="preserve">
+    <value>Gestione dei centri di costo: configurazione, assegnazione, ecc.</value>
+  </data>
+  <data name="RES_features.businesscenters.name.rotext" xml:space="preserve">
+    <value>Centri di costo</value>
+  </data>
+  <data name="RES_features.businesscenters.punches.description.rotext" xml:space="preserve">
+    <value>Gestione delle timbrature e degli eventi dei centri di costo</value>
+  </data>
+  <data name="RES_features.businesscenters.punches.name.rotext" xml:space="preserve">
+    <value>Modifica di timbrature</value>
+  </data>
+  <data name="RES_features.calendar.accruals.description.rotext" xml:space="preserve">
+    <value>Consente di consultare i saldi di presenza dalla schermata di modifica timbrature.</value>
+  </data>
+  <data name="RES_features.calendar.accruals.name.rotext" xml:space="preserve">
+    <value>Consultazione dei saldi di presenza</value>
+  </data>
+  <data name="RES_features.calendar.analytics.description.rotext" xml:space="preserve">
+    <value>Controllo analitico dei dati correlati al calendario</value>
+  </data>
+  <data name="RES_features.calendar.analytics.name.rotext" xml:space="preserve">
+    <value>Analisi</value>
+  </data>
+  <data name="RES_features.calendar.dailyrecord.description.rotext" xml:space="preserve">
+    <value>Permette la gestione delle dichiarazioni della giornata</value>
+  </data>
+  <data name="RES_features.calendar.dailyrecord.name.rotext" xml:space="preserve">
+    <value>Dichiarazione della giornata</value>
+  </data>
+  <data name="RES_features.calendar.datalink.description.rotext" xml:space="preserve">
+    <value>Link di dati disponibili sulla schermata di link di dati</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.assignments.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´esportazione di posizioni</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.assignments.name.rotext" xml:space="preserve">
+    <value>Esportazione di posizioni</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.calendar.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´esportazione di calendario</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.calendar.name.rotext" xml:space="preserve">
+    <value>Esportazione di calendario</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.calendarassignments.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´esportazione di calendario e posizioni</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.calendarassignments.name.rotext" xml:space="preserve">
+    <value>Esportazione di calendario e posizioni</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.calendarnameassignments.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´esportazione di calendario e posizioni in base al nome</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.calendarnameassignments.name.rotext" xml:space="preserve">
+    <value>Esportazione di calendario e posizioni in base al nome</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.description.rotext" xml:space="preserve">
+    <value>Esportazioni disponibili sulla schermata di link di dati</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.holidays.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´esportazione di ferie</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.holidays.name.rotext" xml:space="preserve">
+    <value>Esportazione di ferie</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.holidaysshifts.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´esportazione di orari e ferie</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.holidaysshifts.name.rotext" xml:space="preserve">
+    <value>Esportazione di orari e ferie</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.name.rotext" xml:space="preserve">
+    <value>Esportazioni</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.shifts.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´esportazione di orari</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.shifts.name.rotext" xml:space="preserve">
+    <value>Esportazione di orari</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.assignments.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´importazione di posizioni assegnate</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.assignments.name.rotext" xml:space="preserve">
+    <value>Importazione di posizioni assegnate</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.causes.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´importazione di giustificazioni</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.causes.name.rotext" xml:space="preserve">
+    <value>Importazione di giustificazioni</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.description.rotext" xml:space="preserve">
+    <value>Importazioni disponibili nella schermata del link di dati</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.hrschedule.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´importazione di dotazione teorica</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.hrschedule.name.rotext" xml:space="preserve">
+    <value>Importazione di dotazione teorica</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.name.rotext" xml:space="preserve">
+    <value>Importazioni</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.schedule.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´importazione di pianificazione</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.schedule.name.rotext" xml:space="preserve">
+    <value>Importazione di pianificazione</value>
+  </data>
+  <data name="RES_features.calendar.datalink.name.rotext" xml:space="preserve">
+    <value>collegamento dati</value>
+  </data>
+  <data name="RES_features.calendar.description.rotext" xml:space="preserve">
+    <value>Gestione del calendario e configurazione di utenti su cui si effettuerà la gestione di ognuna delle funzionalità di calendario consentite</value>
+  </data>
+  <data name="RES_features.calendar.directcauses.description.rotext" xml:space="preserve">
+    <value>Consenti l´immissione di giustificazioni aggiuntive nella schermata di modifica delle timbrature, che non codificheranno alcun evento</value>
+  </data>
+  <data name="RES_features.calendar.directcauses.name.rotext" xml:space="preserve">
+    <value>Giustificazioni dirette</value>
+  </data>
+  <data name="RES_features.calendar.highlight.description.rotext" xml:space="preserve">
+    <value>Configurazione di evidenziazioni di giustificazioni: ad es. mettere in evidenza ritardi superiori a 10 minuti, ore lavorate inferiori a 8...</value>
+  </data>
+  <data name="RES_features.calendar.highlight.name.rotext" xml:space="preserve">
+    <value>Evidenziazioni</value>
+  </data>
+  <data name="RES_features.calendar.justifyincidences.description.rotext" xml:space="preserve">
+    <value>Gestione degli eventi quotidiani: immissione manuale del motivo/della giustificazione di un evento</value>
+  </data>
+  <data name="RES_features.calendar.justifyincidences.name.rotext" xml:space="preserve">
+    <value>Giustifica eventi</value>
+  </data>
+  <data name="RES_features.calendar.name.rotext" xml:space="preserve">
+    <value>Calendario</value>
+  </data>
+  <data name="RES_features.calendar.punches.description.rotext" xml:space="preserve">
+    <value>Gestione di timbrature: correzione, timbrature dimenticate, accettazione timbrature immesse manualmente dall´utente...</value>
+  </data>
+  <data name="RES_features.calendar.punches.name.rotext" xml:space="preserve">
+    <value>Timbrature</value>
+  </data>
+  <data name="RES_features.calendar.punches.punches.description.rotext" xml:space="preserve">
+    <value>Modifica dei dati contenuti nella schermata di modifica di timbrature</value>
+  </data>
+  <data name="RES_features.calendar.punches.punches.name.rotext" xml:space="preserve">
+    <value>Modifica di timbrature</value>
+  </data>
+  <data name="RES_features.calendar.punches.punches.photo.description.rotext" xml:space="preserve">
+    <value>Indica se il supervisore dispone dell´autorizzazione per visualizzare le foto allegate alle timbrature.</value>
+  </data>
+  <data name="RES_features.calendar.punches.punches.photo.name.rotext" xml:space="preserve">
+    <value>Foto di timbrature</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.costcenterforgotten.description.rotext" xml:space="preserve">
+    <value>Gestione delle richieste di timbrature dimenticate di centri di costo</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.costcenterforgotten.name.rotext" xml:space="preserve">
+    <value>Timbrature dimenticate del centro di costo</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.description.rotext" xml:space="preserve">
+    <value>Gestione delle richieste relative a timbrature degli utenti</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.externalparts.description.rotext" xml:space="preserve">
+    <value>Gestione delle richieste di parte del lavoro esterno</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.externalparts.name.rotext" xml:space="preserve">
+    <value>Parti di lavoro esterno</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.externalworkweekresume.description.rotext" xml:space="preserve">
+    <value>Gestione delle richieste di riepilogo del lavoro settimanale esterno</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.externalworkweekresume.name.rotext" xml:space="preserve">
+    <value>(NoEntry)</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.forgotten.description.rotext" xml:space="preserve">
+    <value>Gestione delle richieste di timbratura dimenticata</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.forgotten.name.rotext" xml:space="preserve">
+    <value>Timbrature dimenticate</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.justify.description.rotext" xml:space="preserve">
+    <value>Gestione delle richieste di giustificazione di timbrature</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.justify.name.rotext" xml:space="preserve">
+    <value>Giustificazione di timbrature esistenti</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.name.rotext" xml:space="preserve">
+    <value>Richieste</value>
+  </data>
+  <data name="RES_features.calendar.remarks.description.rotext" xml:space="preserve">
+    <value>Gestione delle osservazioni giornaliere indicate nella modifica delle timbrature</value>
+  </data>
+  <data name="RES_features.calendar.remarks.name.rotext" xml:space="preserve">
+    <value>Osservazioni</value>
+  </data>
+  <data name="RES_features.calendar.requests.cancelholidays.description.rotext" xml:space="preserve">
+    <value>Gestione delle richieste di annullamento di ferie, ad esempio le ferie estive</value>
+  </data>
+  <data name="RES_features.calendar.requests.cancelholidays.name.rotext" xml:space="preserve">
+    <value>Annullamento delle vacanze</value>
+  </data>
+  <data name="RES_features.calendar.requests.description.rotext" xml:space="preserve">
+    <value>Gestione delle richieste relative alla pianificazione degli utenti</value>
+  </data>
+  <data name="RES_features.calendar.requests.name.rotext" xml:space="preserve">
+    <value>Richieste</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedabsence.description.rotext" xml:space="preserve">
+    <value>Gestione delle richieste di assenza prevista</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedabsence.name.rotext" xml:space="preserve">
+    <value>Previsione dei giorni di assenza</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedcause.description.rotext" xml:space="preserve">
+    <value>Gestione delle richieste di previsione di ore di assenza</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedcause.name.rotext" xml:space="preserve">
+    <value>Previsione ore di assenza</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedhour.description.rotext" xml:space="preserve">
+    <value>Gestione delle richieste di congedo orario</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedhour.name.rotext" xml:space="preserve">
+    <value>(NoEntry)</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedovertime.description.rotext" xml:space="preserve">
+    <value>Si possono effettuare richieste di ore di straordinario</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedovertime.name.rotext" xml:space="preserve">
+    <value>Previsione di ore di straordinario</value>
+  </data>
+  <data name="RES_features.calendar.requests.shiftchange.description.rotext" xml:space="preserve">
+    <value>Gestione delle richieste di modifica orario; ad es. richiesta di turno intensivo il prossimo venerdì</value>
+  </data>
+  <data name="RES_features.calendar.requests.shiftchange.name.rotext" xml:space="preserve">
+    <value>Modifiche di orario</value>
+  </data>
+  <data name="RES_features.calendar.requests.shiftexchange.description.rotext" xml:space="preserve">
+    <value>Gestione delle richieste di scambio di orario tra utenti</value>
+  </data>
+  <data name="RES_features.calendar.requests.shiftexchange.name.rotext" xml:space="preserve">
+    <value>Scambi di orario</value>
+  </data>
+  <data name="RES_features.calendar.requests.telecommute.description.rotext" xml:space="preserve">
+    <value>Consente di approvare o rifiutare le richieste di telelavoro</value>
+  </data>
+  <data name="RES_features.calendar.requests.telecommute.name.rotext" xml:space="preserve">
+    <value>Gestione delle richieste di telelavoro</value>
+  </data>
+  <data name="RES_features.calendar.requests.vacations.description.rotext" xml:space="preserve">
+    <value>Gestione delle richieste di ferie: ad es. richiesta di una settimana di ferie</value>
+  </data>
+  <data name="RES_features.calendar.requests.vacations.name.rotext" xml:space="preserve">
+    <value>Vacanza</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat1.description.rotext" xml:space="preserve">
+    <value>Definizione di permessi per la categoria 1</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat1.name.rotext" xml:space="preserve">
+    <value>Categoria 1</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat10.description.rotext" xml:space="preserve">
+    <value>Definizione di permessi per la categoria 10</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat10.name.rotext" xml:space="preserve">
+    <value>Categoria 10</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat11.description.rotext" xml:space="preserve">
+    <value>Definizione di permessi per la categoria 11</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat11.name.rotext" xml:space="preserve">
+    <value>Categoria 11</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat12.description.rotext" xml:space="preserve">
+    <value>Definizione di permessi per la categoria 12</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat12.name.rotext" xml:space="preserve">
+    <value>Categoria 12</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat2.description.rotext" xml:space="preserve">
+    <value>Definizione di permessi per la categoria 2</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat2.name.rotext" xml:space="preserve">
+    <value>Categoria 2</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat3.description.rotext" xml:space="preserve">
+    <value>Definizione di permessi per la categoria 3</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat3.name.rotext" xml:space="preserve">
+    <value>Categoria 3</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat4.description.rotext" xml:space="preserve">
+    <value>Definizione di permessi per la categoria 4</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat4.name.rotext" xml:space="preserve">
+    <value>Categoria 4</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat5.description.rotext" xml:space="preserve">
+    <value>Definizione di permessi per la categoria 5</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat5.name.rotext" xml:space="preserve">
+    <value>Categoria 5</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat6.description.rotext" xml:space="preserve">
+    <value>Definizione di permessi per la categoria 6</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat6.name.rotext" xml:space="preserve">
+    <value>Categoria 6</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat7.description.rotext" xml:space="preserve">
+    <value>Definizione di permessi per la categoria 7</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat7.name.rotext" xml:space="preserve">
+    <value>Categoria 7</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat8.description.rotext" xml:space="preserve">
+    <value>Definizione di permessi per la categoria 8</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat8.name.rotext" xml:space="preserve">
+    <value>Categoria 8</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat9.description.rotext" xml:space="preserve">
+    <value>Definizione di permessi per la categoria 9</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat9.name.rotext" xml:space="preserve">
+    <value>Categoria 9</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.description.rotext" xml:space="preserve">
+    <value>Configurazione dei calendari annuali degli utenti e gestione degli strumenti correlati alla pianificazione; modelli di giorni festivi, blocco giorni, copia pianificazione...</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.name.rotext" xml:space="preserve">
+    <value>Pianificazione</value>
+  </data>
+  <data name="RES_features.causes.definition.description.rotext" xml:space="preserve">
+    <value>Configurazione delle giustificazioni: definizione, tipo, visibilità, arrotondamento,</value>
+  </data>
+  <data name="RES_features.causes.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.causes.description.rotext" xml:space="preserve">
+    <value>Gestione dell´elenco di cause/motivi che partecipano alla politica di gestione oraria dell´azienda</value>
+  </data>
+  <data name="RES_features.causes.name.rotext" xml:space="preserve">
+    <value>Giustificazioni</value>
+  </data>
+  <data name="RES_features.concepts.definition.c1.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.concepts.definition.c1.name.rotext" xml:space="preserve">
+    <value>Categoria 1</value>
+  </data>
+  <data name="RES_features.concepts.definition.c2.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.concepts.definition.c2.name.rotext" xml:space="preserve">
+    <value>Categoria 2</value>
+  </data>
+  <data name="RES_features.concepts.definition.c3.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.concepts.definition.c3.name.rotext" xml:space="preserve">
+    <value>Categoria 3</value>
+  </data>
+  <data name="RES_features.concepts.definition.c4.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.concepts.definition.c4.name.rotext" xml:space="preserve">
+    <value>Categoria 4</value>
+  </data>
+  <data name="RES_features.concepts.definition.c5.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.concepts.definition.c5.name.rotext" xml:space="preserve">
+    <value>Categoria 5</value>
+  </data>
+  <data name="RES_features.concepts.definition.description.rotext" xml:space="preserve">
+    <value>Configurazione dei saldi: definizione, tipo, ecc...</value>
+  </data>
+  <data name="RES_features.concepts.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.concepts.description.rotext" xml:space="preserve">
+    <value>Gestione dell´elenco di saldi che partecipano alla politica e all´analisi della gestione oraria degli utenti</value>
+  </data>
+  <data name="RES_features.concepts.name.rotext" xml:space="preserve">
+    <value>Saldi</value>
+  </data>
+  <data name="RES_features.conventions.definition.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.conventions.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.conventions.description.rotext" xml:space="preserve">
+    <value>Configurazione di utenti su cui si effettuerà la gestione di ognuna delle funzionalità degli accordi consentite</value>
+  </data>
+  <data name="RES_features.conventions.employeeassign.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.conventions.employeeassign.name.rotext" xml:space="preserve">
+    <value>Assegnazione a utenti</value>
+  </data>
+  <data name="RES_features.conventions.name.rotext" xml:space="preserve">
+    <value>Accordi</value>
+  </data>
+  <data name="RES_features.diningroom.description.rotext" xml:space="preserve">
+    <value>Gestione dei turni della mensa</value>
+  </data>
+  <data name="RES_features.diningroom.name.rotext" xml:space="preserve">
+    <value>Sala da pranzo</value>
+  </data>
+  <data name="RES_features.diningroom.punches.description.rotext" xml:space="preserve">
+    <value>Gestione di timbrature: correzione, timbrature dimenticate, accettazione timbrature immesse manualmente dall´utente...</value>
+  </data>
+  <data name="RES_features.diningroom.punches.name.rotext" xml:space="preserve">
+    <value>Timbrature</value>
+  </data>
+  <data name="RES_features.diningroom.turns.description.rotext" xml:space="preserve">
+    <value>Configurazione dei turni per l´accesso alla mensa</value>
+  </data>
+  <data name="RES_features.diningroom.turns.name.rotext" xml:space="preserve">
+    <value>Turni mensa</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.description.rotext" xml:space="preserve">
+    <value>Livello di sicurezza RGPD</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.high.description.rotext" xml:space="preserve">
+    <value>Livello alto</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.high.name.rotext" xml:space="preserve">
+    <value>Livello alto</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.low.description.rotext" xml:space="preserve">
+    <value>Livello base</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.low.name.rotext" xml:space="preserve">
+    <value>Livello base</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.medium.description.rotext" xml:space="preserve">
+    <value>Livello medio</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.medium.name.rotext" xml:space="preserve">
+    <value>Livello medio</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.name.rotext" xml:space="preserve">
+    <value>Livello di sicurezza RGPD</value>
+  </data>
+  <data name="RES_features.documents.description.rotext" xml:space="preserve">
+    <value>Documenti</value>
+  </data>
+  <data name="RES_features.documents.documentsdefinition.description.rotext" xml:space="preserve">
+    <value>Definizione di modelli di documenti</value>
+  </data>
+  <data name="RES_features.documents.documentsdefinition.name.rotext" xml:space="preserve">
+    <value>Definizione di modelli di documenti</value>
+  </data>
+  <data name="RES_features.documents.name.rotext" xml:space="preserve">
+    <value>Documenti</value>
+  </data>
+  <data name="RES_features.documents.permision.description.rotext" xml:space="preserve">
+    <value>Ambito</value>
+  </data>
+  <data name="RES_features.documents.permision.labor.description.rotext" xml:space="preserve">
+    <value>Lavorativo</value>
+  </data>
+  <data name="RES_features.documents.permision.labor.name.rotext" xml:space="preserve">
+    <value>Lavorativo</value>
+  </data>
+  <data name="RES_features.documents.permision.legal.description.rotext" xml:space="preserve">
+    <value>Legale</value>
+  </data>
+  <data name="RES_features.documents.permision.legal.name.rotext" xml:space="preserve">
+    <value>Legale</value>
+  </data>
+  <data name="RES_features.documents.permision.name.rotext" xml:space="preserve">
+    <value>Ambito</value>
+  </data>
+  <data name="RES_features.documents.permision.prevention.description.rotext" xml:space="preserve">
+    <value>Prevenzione</value>
+  </data>
+  <data name="RES_features.documents.permision.prevention.name.rotext" xml:space="preserve">
+    <value>Prevenzione</value>
+  </data>
+  <data name="RES_features.documents.permision.quality.description.rotext" xml:space="preserve">
+    <value>Qualità</value>
+  </data>
+  <data name="RES_features.documents.permision.quality.name.rotext" xml:space="preserve">
+    <value>Qualità</value>
+  </data>
+  <data name="RES_features.documents.permision.security.description.rotext" xml:space="preserve">
+    <value>Sicurezza</value>
+  </data>
+  <data name="RES_features.documents.permision.security.name.rotext" xml:space="preserve">
+    <value>Sicurezza</value>
+  </data>
+  <data name="RES_features.documentsabsences.definition.description.rotext" xml:space="preserve">
+    <value>Definizione dei documenti da utilizzare per effettuare la verifica delle assenze</value>
+  </data>
+  <data name="RES_features.documentsabsences.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.documentsabsences.description.rotext" xml:space="preserve">
+    <value>Gestione dei documenti da utilizzare per effettuare la verifica delle assenze</value>
+  </data>
+  <data name="RES_features.documentsabsences.name.rotext" xml:space="preserve">
+    <value>Documenti</value>
+  </data>
+  <data name="RES_features.e.planification.description.rotext" xml:space="preserve">
+    <value>Consenti, all´interno del Portale dell´utente, l´accesso alla funzionalità &amp;quot;Controllo orario\Calendario personale&amp;quot;</value>
+  </data>
+  <data name="RES_features.e.planification.forecast.description.rotext" xml:space="preserve">
+    <value>Annullamento delle assenze previste approvate</value>
+  </data>
+  <data name="RES_features.e.planification.forecast.name.rotext" xml:space="preserve">
+    <value>Annullamento delle assenze previste approvate</value>
+  </data>
+  <data name="RES_features.e.planification.name.rotext" xml:space="preserve">
+    <value>Pianificazione</value>
+  </data>
+  <data name="RES_features.e.planification.query.description.rotext" xml:space="preserve">
+    <value>L´utente può consultare gli orari pianificati</value>
+  </data>
+  <data name="RES_features.e.planification.query.name.rotext" xml:space="preserve">
+    <value>Consultazione</value>
+  </data>
+  <data name="RES_features.e.planification.requests.description.rotext" xml:space="preserve">
+    <value>L´utente può effettuare richieste di modifiche nella pianificazione teorica</value>
+  </data>
+  <data name="RES_features.e.planification.requests.name.rotext" xml:space="preserve">
+    <value>Richieste</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedabsence .description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.e.planification.requests.plannedabsence .name.rotext" xml:space="preserve">
+    <value>Assenza prevista</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedabsence.description.rotext" xml:space="preserve">
+    <value>L´ utente può effettuare richieste di previsione di giorni di assenza</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedabsence.name.rotext" xml:space="preserve">
+    <value>Previsione dei giorni di assenza</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedcause.description.rotext" xml:space="preserve">
+    <value>L´utente può effettuare richieste di previsione di ore di assenza</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedcause.name.rotext" xml:space="preserve">
+    <value>Previsione ore di assenza</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedhour.description.rotext" xml:space="preserve">
+    <value>L´utente può effettuare richieste di ore di ferie/permessi</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedhour.name.rotext" xml:space="preserve">
+    <value>Previsione di ferie/permessi su base oraria</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedovertime.description.rotext" xml:space="preserve">
+    <value>L´utente può effettuare richieste di ore di straordinario</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedovertime.name.rotext" xml:space="preserve">
+    <value>Previsione di ore di straordinario</value>
+  </data>
+  <data name="RES_features.e.planification.requests.shiftchange.description.rotext" xml:space="preserve">
+    <value>L´utente può richiedere di cambiare il turno di lavoro; ad es. il turno del pomeriggio con quello della mattina per il venerdì successivo</value>
+  </data>
+  <data name="RES_features.e.planification.requests.shiftchange.name.rotext" xml:space="preserve">
+    <value>Cambio di programma</value>
+  </data>
+  <data name="RES_features.e.planification.requests.shiftexchange.description.rotext" xml:space="preserve">
+    <value>L´utente può richiedere di scambiare con un altro utente il suo turno di lavoro in un giorno specifico</value>
+  </data>
+  <data name="RES_features.e.planification.requests.shiftexchange.name.rotext" xml:space="preserve">
+    <value>Scambio di orari</value>
+  </data>
+  <data name="RES_features.e.planification.requests.vacations.description.rotext" xml:space="preserve">
+    <value>L´utente può richiedere giorni di ferie o di permesso</value>
+  </data>
+  <data name="RES_features.e.planification.requests.vacations.name.rotext" xml:space="preserve">
+    <value>Vacanza</value>
+  </data>
+  <data name="RES_features.e.punches.dailyrecord.description.rotext" xml:space="preserve">
+    <value>L´utente può effettuare dichiarazioni della giornata. Non saranno generati avvisi che richiedono timbrature in tempo reale, come quella che indica l´arrivo dell´utente.</value>
+  </data>
+  <data name="RES_features.e.punches.dailyrecord.name.rotext" xml:space="preserve">
+    <value>Dichiarazione della giornata</value>
+  </data>
+  <data name="RES_features.e.punches.description.rotext" xml:space="preserve">
+    <value>Consenti, all´interno del Portale dell´utente, l´accesso alla funzionalità &amp;quot;Controllo orario\Timbrature personali&amp;quot;</value>
+  </data>
+  <data name="RES_features.e.punches.name.rotext" xml:space="preserve">
+    <value>Timbrature di controllo orario</value>
+  </data>
+  <data name="RES_features.e.punches.punches.description.rotext" xml:space="preserve">
+    <value>L´utente può effettuare le sue timbrature tramite il portale dell´utente</value>
+  </data>
+  <data name="RES_features.e.punches.punches.name.rotext" xml:space="preserve">
+    <value>Effettua timbrature</value>
+  </data>
+  <data name="RES_features.e.punches.query.description.rotext" xml:space="preserve">
+    <value>L´utente può consultare le timbrature effettuate in un giorno specifico</value>
+  </data>
+  <data name="RES_features.e.punches.query.name.rotext" xml:space="preserve">
+    <value>Consultazione</value>
+  </data>
+  <data name="RES_features.e.punches.requests.costcenterforgotten.description.rotext" xml:space="preserve">
+    <value>L´utente può effettuare richieste di timbrature dimenticate di centro di costo</value>
+  </data>
+  <data name="RES_features.e.punches.requests.costcenterforgotten.name.rotext" xml:space="preserve">
+    <value>Timbrature dimenticate del centro di costo</value>
+  </data>
+  <data name="RES_features.e.punches.requests.description.rotext" xml:space="preserve">
+    <value>L´utente può effettuare richieste relative a timbrature</value>
+  </data>
+  <data name="RES_features.e.punches.requests.externalparts.description.rotext" xml:space="preserve">
+    <value>L´utente può effettuare richieste di Parti di lavoro esterno</value>
+  </data>
+  <data name="RES_features.e.punches.requests.externalparts.name.rotext" xml:space="preserve">
+    <value>Parti esterni</value>
+  </data>
+  <data name="RES_features.e.punches.requests.externalworkweekresume.description.rotext" xml:space="preserve">
+    <value>L´utente può effettuare richieste di riepilogo settimanale del lavoro esterno</value>
+  </data>
+  <data name="RES_features.e.punches.requests.externalworkweekresume.name.rotext" xml:space="preserve">
+    <value>Parte settimanale di lavoro esterno</value>
+  </data>
+  <data name="RES_features.e.punches.requests.forgotten.description.rotext" xml:space="preserve">
+    <value>L´utente può effettuare richieste di timbrature dimenticate</value>
+  </data>
+  <data name="RES_features.e.punches.requests.forgotten.name.rotext" xml:space="preserve">
+    <value>Timbrature dimenticate</value>
+  </data>
+  <data name="RES_features.e.punches.requests.justify.description.rotext" xml:space="preserve">
+    <value>L´utente può effettuare richieste di giustificare timbrature esistenti</value>
+  </data>
+  <data name="RES_features.e.punches.requests.justify.name.rotext" xml:space="preserve">
+    <value>Giustifica timbrature esistenti</value>
+  </data>
+  <data name="RES_features.e.punches.requests.name.rotext" xml:space="preserve">
+    <value>Richieste</value>
+  </data>
+  <data name="RES_features.e.taskpunches.complete.description.rotext" xml:space="preserve">
+    <value>L´utente potrà completare le attività a cui lavora.</value>
+  </data>
+  <data name="RES_features.e.taskpunches.complete.name.rotext" xml:space="preserve">
+    <value>Completare</value>
+  </data>
+  <data name="RES_features.e.taskpunches.description.rotext" xml:space="preserve">
+    <value>Consenti, all´interno del portale dell´utente, l´accesso alla funzionalità &amp;quot;Attività personali\Timbrature personali&amp;quot;</value>
+  </data>
+  <data name="RES_features.e.taskpunches.name.rotext" xml:space="preserve">
+    <value>Timbrature di attività</value>
+  </data>
+  <data name="RES_features.e.taskpunches.punches.description.rotext" xml:space="preserve">
+    <value>L´utente può effettuare le sue timbrature tramite il portale dell´utente</value>
+  </data>
+  <data name="RES_features.e.taskpunches.punches.name.rotext" xml:space="preserve">
+    <value>Effettua timbrature</value>
+  </data>
+  <data name="RES_features.e.taskpunches.query.description.rotext" xml:space="preserve">
+    <value>L´utente può consultare le timbrature effettuate in un giorno specifico</value>
+  </data>
+  <data name="RES_features.e.taskpunches.query.name.rotext" xml:space="preserve">
+    <value>Consultazione</value>
+  </data>
+  <data name="RES_features.e.taskpunches.requests.description.rotext" xml:space="preserve">
+    <value>L´utente può effettuare richieste relative a timbrature</value>
+  </data>
+  <data name="RES_features.e.taskpunches.requests.forgotten.description.rotext" xml:space="preserve">
+    <value>Gestione delle richieste di timbratura dimenticata</value>
+  </data>
+  <data name="RES_features.e.taskpunches.requests.forgotten.name.rotext" xml:space="preserve">
+    <value>Timbrature dimenticate</value>
+  </data>
+  <data name="RES_features.e.taskpunches.requests.name.rotext" xml:space="preserve">
+    <value>Richieste</value>
+  </data>
+  <data name="RES_features.e.tasks.description.rotext" xml:space="preserve">
+    <value>Permessi di utenti per attività</value>
+  </data>
+  <data name="RES_features.e.tasks.name.rotext" xml:space="preserve">
+    <value>Attività</value>
+  </data>
+  <data name="RES_features.e.tasktotals.description.rotext" xml:space="preserve">
+    <value>Permessi di utenti per saldi di attività</value>
+  </data>
+  <data name="RES_features.e.tasktotals.name.rotext" xml:space="preserve">
+    <value>Consultazione dei saldi di attività</value>
+  </data>
+  <data name="RES_features.e.tasktotals.query.description.rotext" xml:space="preserve">
+    <value>L´utente può consultare saldi e attività</value>
+  </data>
+  <data name="RES_features.e.tasktotals.query.name.rotext" xml:space="preserve">
+    <value>Consultazione</value>
+  </data>
+  <data name="RES_features.e.totals.description.rotext" xml:space="preserve">
+    <value>Permessi di utenti per saldi</value>
+  </data>
+  <data name="RES_features.e.totals.name.rotext" xml:space="preserve">
+    <value>Saldi</value>
+  </data>
+  <data name="RES_features.e.totals.query.description.rotext" xml:space="preserve">
+    <value>Indica se l´utente può consultare i saldi</value>
+  </data>
+  <data name="RES_features.e.totals.query.name.rotext" xml:space="preserve">
+    <value>Consultazione</value>
+  </data>
+  <data name="RES_features.e.userfields.description.rotext" xml:space="preserve">
+    <value>Consenti, all´interno del portale dell´utente, l´accesso alla funzionalità &amp;quot;Scheda personale&amp;quot;</value>
+  </data>
+  <data name="RES_features.e.userfields.name.rotext" xml:space="preserve">
+    <value>Scheda dell´utente</value>
+  </data>
+  <data name="RES_features.e.userfields.query.description.rotext" xml:space="preserve">
+    <value>L´utente può consultare i valori della scheda personale</value>
+  </data>
+  <data name="RES_features.e.userfields.query.name.rotext" xml:space="preserve">
+    <value>Consultazione</value>
+  </data>
+  <data name="RES_features.e.userfields.requests.description.rotext" xml:space="preserve">
+    <value>L´utente può richiedere modifiche ai valori della scheda</value>
+  </data>
+  <data name="RES_features.e.userfields.requests.name.rotext" xml:space="preserve">
+    <value>Richieste</value>
+  </data>
+  <data name="RES_features.e.visits.definition.description.rotext" xml:space="preserve">
+    <value>Definisci tipi di visite</value>
+  </data>
+  <data name="RES_features.e.visits.definition.name.rotext" xml:space="preserve">
+    <value>Definisci tipi di visite</value>
+  </data>
+  <data name="RES_features.e.visits.description.rotext" xml:space="preserve">
+    <value>L´utente può ricevere visite</value>
+  </data>
+  <data name="RES_features.e.visits.name.rotext" xml:space="preserve">
+    <value>Visite</value>
+  </data>
+  <data name="RES_features.e.visits.program.description.rotext" xml:space="preserve">
+    <value>Programma visite</value>
+  </data>
+  <data name="RES_features.e.visits.program.name.rotext" xml:space="preserve">
+    <value>Programma visite</value>
+  </data>
+  <data name="RES_features.e.visits.receive.description.rotext" xml:space="preserve">
+    <value>Ricevi visite</value>
+  </data>
+  <data name="RES_features.e.visits.receive.name.rotext" xml:space="preserve">
+    <value>Ricevi visite</value>
+  </data>
+  <data name="RES_features.employees.allowedapplications.description.rotext" xml:space="preserve">
+    <value>Gestione delle applicazioni in cui un utente può avviare una sessione</value>
+  </data>
+  <data name="RES_features.employees.allowedapplications.name.rotext" xml:space="preserve">
+    <value>Applicazioni</value>
+  </data>
+  <data name="RES_features.employees.assignments.description.rotext" xml:space="preserve">
+    <value>Gestione delle posizioni assegnate agli utenti</value>
+  </data>
+  <data name="RES_features.employees.assignments.name.rotext" xml:space="preserve">
+    <value>Posizioni</value>
+  </data>
+  <data name="RES_features.employees.businesscenters.description.rotext" xml:space="preserve">
+    <value>Gestione dei centri di costo assegnati a utenti e gruppi</value>
+  </data>
+  <data name="RES_features.employees.businesscenters.name.rotext" xml:space="preserve">
+    <value>Centri di costo</value>
+  </data>
+  <data name="RES_features.employees.channels.description.rotext" xml:space="preserve">
+    <value>Permette di gestire i canali di comunicazione dell´azienda</value>
+  </data>
+  <data name="RES_features.employees.channels.name.rotext" xml:space="preserve">
+    <value>Canali di comunicazione</value>
+  </data>
+  <data name="RES_features.employees.communiques.description.rotext" xml:space="preserve">
+    <value>Accesso alla funzionalità delle comunicazioni</value>
+  </data>
+  <data name="RES_features.employees.communiques.name.rotext" xml:space="preserve">
+    <value>Comunicazioni</value>
+  </data>
+  <data name="RES_features.employees.complaints.description.rotext" xml:space="preserve">
+    <value>Permette di gestire il canale reclami dell´azienda</value>
+  </data>
+  <data name="RES_features.employees.complaints.name.rotext" xml:space="preserve">
+    <value>Canale di reclamo</value>
+  </data>
+  <data name="RES_features.employees.contract.description.rotext" xml:space="preserve">
+    <value>Gestione contratti e assegnazione accordo</value>
+  </data>
+  <data name="RES_features.employees.contract.name.rotext" xml:space="preserve">
+    <value>Contratto</value>
+  </data>
+  <data name="RES_features.employees.datalink.custom.dailycauses.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.employees.datalink.custom.dailycauses.name.rotext" xml:space="preserve">
+    <value>(NoEntry)</value>
+  </data>
+  <data name="RES_features.employees.datalink.custom.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.employees.datalink.custom.name.rotext" xml:space="preserve">
+    <value>Costume</value>
+  </data>
+  <data name="RES_features.employees.datalink.custom.prima.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.employees.datalink.custom.prima.name.rotext" xml:space="preserve">
+    <value>Calcolo di premi</value>
+  </data>
+  <data name="RES_features.employees.datalink.custom.primasummary.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.employees.datalink.custom.primasummary.name.rotext" xml:space="preserve">
+    <value>Sintesi calcolo di premi per utente</value>
+  </data>
+  <data name="RES_features.employees.datalink.custom.punches.description.rotext" xml:space="preserve">
+    <value>Elenco dettagliato di timbrature di utenti</value>
+  </data>
+  <data name="RES_features.employees.datalink.custom.punches.name.rotext" xml:space="preserve">
+    <value>Timbrature degli utenti</value>
+  </data>
+  <data name="RES_features.employees.datalink.custom.punchespresence.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.employees.datalink.custom.punchespresence.name.rotext" xml:space="preserve">
+    <value>Timbrature di presenza</value>
+  </data>
+  <data name="RES_features.employees.datalink.description.rotext" xml:space="preserve">
+    <value>Link di dati disponibili sulla schermata di link di dati</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.accrualsday.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´esportazione giornaliera di saldi</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.accrualsday.name.rotext" xml:space="preserve">
+    <value>Esportazione giornaliera di saldi</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.accrualsperiod.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´esportazione periodica di saldi</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.accrualsperiod.name.rotext" xml:space="preserve">
+    <value>Esportazione periodica di saldi</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advabsence.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´esportazione avanzata di assenze prolungate</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advabsence.name.rotext" xml:space="preserve">
+    <value>Esportazione avanzata di assenze prolungate</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advabsences.description.rotext" xml:space="preserve">
+    <value>Autorizzazioni per eseguire l´esportazione delle assenze</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advabsences.name.rotext" xml:space="preserve">
+    <value>Esportazione delle assenze</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advaccruals.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´esportazione avanzata di saldi</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advaccruals.name.rotext" xml:space="preserve">
+    <value>Esportazione avanzata di saldi</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advcauses.description.rotext" xml:space="preserve">
+    <value>Autorizzazioni per eseguire l´esportazione delle giustificazioni</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advcauses.name.rotext" xml:space="preserve">
+    <value>Motivazione Esportazione</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advdinning.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´esportazione avanzata di mensa</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advdinning.name.rotext" xml:space="preserve">
+    <value>Esportazione avanzata di mensa</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advemployees.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´esportazione avanzata di utenti</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advemployees.name.rotext" xml:space="preserve">
+    <value>Esportazione avanzata di utenti</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advrequests.description.rotext" xml:space="preserve">
+    <value>Autorizzazioni per eseguire l´esportazione della richiesta</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advrequests.name.rotext" xml:space="preserve">
+    <value>Richiedi esportazione</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.description.rotext" xml:space="preserve">
+    <value>Esportazioni disponibili sulla schermata di link di dati</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.iberper.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´esportazione di Iberper</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.iberper.name.rotext" xml:space="preserve">
+    <value>Esportazione di Iberper</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.labor.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´esportazione a Labor</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.labor.name.rotext" xml:space="preserve">
+    <value>Esportazione a Labor</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.loginclass.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´esportazione a Logic-Class</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.loginclass.name.rotext" xml:space="preserve">
+    <value>Esportazione a Logic-Class</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.name.rotext" xml:space="preserve">
+    <value>Esportazioni</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.punches.description.rotext" xml:space="preserve">
+    <value>Si esportano i dati relativi alle timbrature degli utenti</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.punches.name.rotext" xml:space="preserve">
+    <value>Esportazione avanzata di timbrature</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.sage.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´esportazione di SAGE-Murano</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.sage.name.rotext" xml:space="preserve">
+    <value>Esportazione di SAGE-murano</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.stdemployees.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´esportazione standard</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.stdemployees.name.rotext" xml:space="preserve">
+    <value>Esportazione standard</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.absences.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´importazione di assenze prolungate</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.absences.name.rotext" xml:space="preserve">
+    <value>Importazione di assenze prolungate</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.company.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´importazione di aziende</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.company.name.rotext" xml:space="preserve">
+    <value>Importazione di aziende</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.description.rotext" xml:space="preserve">
+    <value>Importazioni disponibili nella schermata del link di dati</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.employees.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´importazione di utenti</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.employees.name.rotext" xml:space="preserve">
+    <value>Importazione di utenti</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.name.rotext" xml:space="preserve">
+    <value>Importazioni</value>
+  </data>
+  <data name="RES_features.employees.datalink.name.rotext" xml:space="preserve">
+    <value>collegamento dati</value>
+  </data>
+  <data name="RES_features.employees.description.rotext" xml:space="preserve">
+    <value>Gestione e configurazione di utenti su cui si effettuerà la gestione di ognuna delle funzionalità di utenti consentite</value>
+  </data>
+  <data name="RES_features.employees.groupmobility.description.rotext" xml:space="preserve">
+    <value>Gestione spostamento tra gruppi degli utenti</value>
+  </data>
+  <data name="RES_features.employees.groupmobility.name.rotext" xml:space="preserve">
+    <value>Spostamento</value>
+  </data>
+  <data name="RES_features.employees.groups.description.rotext" xml:space="preserve">
+    <value>Gestione gruppi di utenti: modifica e configurazione.</value>
+  </data>
+  <data name="RES_features.employees.groups.name.rotext" xml:space="preserve">
+    <value>Gruppi</value>
+  </data>
+  <data name="RES_features.employees.identifymethods.description.rotext" xml:space="preserve">
+    <value>Modifica e configurazione dei mezzi di identificazione con cui lavorerà l´utente: tessera, impronta, utente e password...</value>
+  </data>
+  <data name="RES_features.employees.identifymethods.name.rotext" xml:space="preserve">
+    <value>Metodi di identificazione</value>
+  </data>
+  <data name="RES_features.employees.name.rotext" xml:space="preserve">
+    <value>Utenti</value>
+  </data>
+  <data name="RES_features.employees.namefoto.description.rotext" xml:space="preserve">
+    <value>Modifica del nome dell´utente e assegnazione di foto</value>
+  </data>
+  <data name="RES_features.employees.namefoto.name.rotext" xml:space="preserve">
+    <value>Nome e foto</value>
+  </data>
+  <data name="RES_features.employees.surveys.description.rotext" xml:space="preserve">
+    <value>Consente di creare e inviare sondaggi ai dipendenti supervisionati</value>
+  </data>
+  <data name="RES_features.employees.surveys.name.rotext" xml:space="preserve">
+    <value>Sondaggi</value>
+  </data>
+  <data name="RES_features.employees.type.description.rotext" xml:space="preserve">
+    <value>Modifica e configurazione dei processi a cui prende parte l´utente: gestione oraria, accessi, PRL...</value>
+  </data>
+  <data name="RES_features.employees.type.name.rotext" xml:space="preserve">
+    <value>Tipo utente</value>
+  </data>
+  <data name="RES_features.employees.userfields.definition.description.rotext" xml:space="preserve">
+    <value>Configurazione scheda personale</value>
+  </data>
+  <data name="RES_features.employees.userfields.definition.name.rotext" xml:space="preserve">
+    <value>Definizione campi</value>
+  </data>
+  <data name="RES_features.employees.userfields.description.rotext" xml:space="preserve">
+    <value>Gestione della tessera personale.</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.description.rotext" xml:space="preserve">
+    <value>Gestione valori scheda del personale, secondo il grado di sensibilità, come stabilito dal RGPD</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.high.description.rotext" xml:space="preserve">
+    <value>Dati relativi a ideologia, religione, origine etnica, stato di salute...</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.high.name.rotext" xml:space="preserve">
+    <value>Livello alto</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.low.description.rotext" xml:space="preserve">
+    <value>Dati di carattere personale: DPI, indirizzo, livello di studi...</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.low.name.rotext" xml:space="preserve">
+    <value>Livello base</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.medium.description.rotext" xml:space="preserve">
+    <value>Dati su credito, finanze pubbliche, infrazioni...</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.medium.name.rotext" xml:space="preserve">
+    <value>Livello medio</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.name.rotext" xml:space="preserve">
+    <value>Campi informativi</value>
+  </data>
+  <data name="RES_features.employees.userfields.name.rotext" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="RES_features.employees.userfields.requests.description.rotext" xml:space="preserve">
+    <value>Gestione delle richieste di modifica della scheda</value>
+  </data>
+  <data name="RES_features.employees.userfields.requests.name.rotext" xml:space="preserve">
+    <value>Richieste</value>
+  </data>
+  <data name="RES_features.events.definition.description.rotext" xml:space="preserve">
+    <value>Definizione degli eventi pianificati</value>
+  </data>
+  <data name="RES_features.events.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.events.description.rotext" xml:space="preserve">
+    <value>Gestione degli eventi pianificati</value>
+  </data>
+  <data name="RES_features.events.name.rotext" xml:space="preserve">
+    <value>Eventi pianificati</value>
+  </data>
+  <data name="RES_features.kpi.definition.description.rotext" xml:space="preserve">
+    <value>Definizione degli indicatori di prestazioni</value>
+  </data>
+  <data name="RES_features.kpi.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.kpi.description.rotext" xml:space="preserve">
+    <value>Gestione degli indicatori di prestazioni</value>
+  </data>
+  <data name="RES_features.kpi.name.rotext" xml:space="preserve">
+    <value>Indicatori di prestazioni</value>
+  </data>
+  <data name="RES_features.labagree.accrualrules.definition.description.rotext" xml:space="preserve">
+    <value>Configurazione delle regole dell´accordo: ad es. trasferimento del saldo di ferie in sospeso da un anno all´altro, regolarizzazione delle ore di straordinario ogni trimestre...</value>
+  </data>
+  <data name="RES_features.labagree.accrualrules.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.labagree.accrualrules.description.rotext" xml:space="preserve">
+    <value>Gestione delle regole che disciplinano i vari accordi</value>
+  </data>
+  <data name="RES_features.labagree.accrualrules.name.rotext" xml:space="preserve">
+    <value>Regole di accordi</value>
+  </data>
+  <data name="RES_features.labagree.definition.description.rotext" xml:space="preserve">
+    <value>Configurazione degli accordi: assegnazione di valori iniziali, valore massimo e regole dell´accordo</value>
+  </data>
+  <data name="RES_features.labagree.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.labagree.description.rotext" xml:space="preserve">
+    <value>Gestione dei contratti di lavoro</value>
+  </data>
+  <data name="RES_features.labagree.employeeassign.description.rotext" xml:space="preserve">
+    <value>Consenti l´assegnazione a un utente di un accordo già creato</value>
+  </data>
+  <data name="RES_features.labagree.employeeassign.name.rotext" xml:space="preserve">
+    <value>Assegnazione a utenti</value>
+  </data>
+  <data name="RES_features.labagree.name.rotext" xml:space="preserve">
+    <value>Accordi</value>
+  </data>
+  <data name="RES_features.labagree.startupvalues.definition.description.rotext" xml:space="preserve">
+    <value>Configurazione dei valori iniziali e dei valori massimi: ad es. valore iniziale di 22 giorni di ferie, valore massimo di 16:00 ore di medico generale...  ***iniziale***</value>
+  </data>
+  <data name="RES_features.labagree.startupvalues.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.labagree.startupvalues.description.rotext" xml:space="preserve">
+    <value>Gestione dei valori iniziali e dei valori massimi che disciplinano i vari accordi</value>
+  </data>
+  <data name="RES_features.labagree.startupvalues.name.rotext" xml:space="preserve">
+    <value>Valori iniziali</value>
+  </data>
+  <data name="RES_features.productiveunit.definition.description.rotext" xml:space="preserve">
+    <value>Configurazione delle unità di produzione e modalità di lavoro</value>
+  </data>
+  <data name="RES_features.productiveunit.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.productiveunit.description.rotext" xml:space="preserve">
+    <value>gestione delle unità di produzione</value>
+  </data>
+  <data name="RES_features.productiveunit.name.rotext" xml:space="preserve">
+    <value>Unità di produzione</value>
+  </data>
+  <data name="RES_features.reports.description.rotext" xml:space="preserve">
+    <value>Accesso alla funzionalità di rapporti avanzati</value>
+  </data>
+  <data name="RES_features.reports.name.rotext" xml:space="preserve">
+    <value>Rapporti avanzati</value>
+  </data>
+  <data name="RES_features.shifts.definition.description.rotext" xml:space="preserve">
+    <value>Configurazione dei parametri che compongono un orario: ore teoriche, ore di entrata e uscita, pause, zone orarie, regole di giustificazione...</value>
+  </data>
+  <data name="RES_features.shifts.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.shifts.description.rotext" xml:space="preserve">
+    <value>Gestione dell´elenco di gruppi di orari e orari che partecipano alla gestione oraria degli utenti</value>
+  </data>
+  <data name="RES_features.shifts.name.rotext" xml:space="preserve">
+    <value>Orari</value>
+  </data>
+  <data name="RES_features.tasks.analytics.description.rotext" xml:space="preserve">
+    <value>Controllo analitico dei dati correlati alle attività</value>
+  </data>
+  <data name="RES_features.tasks.analytics.name.rotext" xml:space="preserve">
+    <value>Analisi delle attività</value>
+  </data>
+  <data name="RES_features.tasks.businesscenters.description.rotext" xml:space="preserve">
+    <value>Gestione dei centri di costo: configurazione, modifica, ecc.</value>
+  </data>
+  <data name="RES_features.tasks.businesscenters.name.rotext" xml:space="preserve">
+    <value>Centri di costo</value>
+  </data>
+  <data name="RES_features.tasks.datalink.description.rotext" xml:space="preserve">
+    <value>Link di dati disponibili sulla schermata di link di dati</value>
+  </data>
+  <data name="RES_features.tasks.datalink.exports.advtasks.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´esportazione avanzata di attività</value>
+  </data>
+  <data name="RES_features.tasks.datalink.exports.advtasks.name.rotext" xml:space="preserve">
+    <value>Esportazione avanzata di attività</value>
+  </data>
+  <data name="RES_features.tasks.datalink.exports.description.rotext" xml:space="preserve">
+    <value>Esportazioni disponibili sulla schermata di link di dati</value>
+  </data>
+  <data name="RES_features.tasks.datalink.exports.name.rotext" xml:space="preserve">
+    <value>Esportazioni</value>
+  </data>
+  <data name="RES_features.tasks.datalink.exports.tasks.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´esportazione di attività</value>
+  </data>
+  <data name="RES_features.tasks.datalink.exports.tasks.name.rotext" xml:space="preserve">
+    <value>Esportazione di attività</value>
+  </data>
+  <data name="RES_features.tasks.datalink.imports.description.rotext" xml:space="preserve">
+    <value>Importazioni disponibili nella schermata del link di dati</value>
+  </data>
+  <data name="RES_features.tasks.datalink.imports.name.rotext" xml:space="preserve">
+    <value>Importazioni</value>
+  </data>
+  <data name="RES_features.tasks.datalink.imports.tasks.description.rotext" xml:space="preserve">
+    <value>Permessi per effettuare l´importazione di attività</value>
+  </data>
+  <data name="RES_features.tasks.datalink.imports.tasks.name.rotext" xml:space="preserve">
+    <value>Importazione di attività</value>
+  </data>
+  <data name="RES_features.tasks.datalink.name.rotext" xml:space="preserve">
+    <value>collegamento dati</value>
+  </data>
+  <data name="RES_features.tasks.definition.description.rotext" xml:space="preserve">
+    <value>Definisci le attività</value>
+  </data>
+  <data name="RES_features.tasks.definition.name.rotext" xml:space="preserve">
+    <value>Definisci attività</value>
+  </data>
+  <data name="RES_features.tasks.description.rotext" xml:space="preserve">
+    <value>Attività</value>
+  </data>
+  <data name="RES_features.tasks.fieldsdefinition.description.rotext" xml:space="preserve">
+    <value>Definizione di attributi di attività</value>
+  </data>
+  <data name="RES_features.tasks.fieldsdefinition.name.rotext" xml:space="preserve">
+    <value>Definizione di attributi</value>
+  </data>
+  <data name="RES_features.tasks.name.rotext" xml:space="preserve">
+    <value>Attività</value>
+  </data>
+  <data name="RES_features.tasks.punches.description.rotext" xml:space="preserve">
+    <value>Gestione di timbrature: correzione, timbrature dimenticate, accettazione timbrature immesse manualmente dall´utente...</value>
+  </data>
+  <data name="RES_features.tasks.punches.name.rotext" xml:space="preserve">
+    <value>Modifica di timbrature</value>
+  </data>
+  <data name="RES_features.tasks.requests.description.rotext" xml:space="preserve">
+    <value>L´utente può effettuare richieste relative a timbrature di attività</value>
+  </data>
+  <data name="RES_features.tasks.requests.forgotten.description.rotext" xml:space="preserve">
+    <value>Gestione delle richieste di timbratura dimenticata</value>
+  </data>
+  <data name="RES_features.tasks.requests.forgotten.name.rotext" xml:space="preserve">
+    <value>Timbrature dimenticate</value>
+  </data>
+  <data name="RES_features.tasks.requests.name.rotext" xml:space="preserve">
+    <value>Richieste</value>
+  </data>
+  <data name="RES_features.tasks.tasktemplates.definition.description.rotext" xml:space="preserve">
+    <value>Definizione dei modelli di attività</value>
+  </data>
+  <data name="RES_features.tasks.tasktemplates.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.tasks.tasktemplates.description.rotext" xml:space="preserve">
+    <value>Gestione dei modelli di attività</value>
+  </data>
+  <data name="RES_features.tasks.tasktemplates.name.rotext" xml:space="preserve">
+    <value>Modelli di attività</value>
+  </data>
+  <data name="RES_features.tasks.templatesdefinition.description.rotext" xml:space="preserve">
+    <value>Definizione dei modelli di attività</value>
+  </data>
+  <data name="RES_features.tasks.templatesdefinition.name.rotext" xml:space="preserve">
+    <value>Definizione di modelli</value>
+  </data>
+  <data name="RES_features.terminals.definition.description.rotext" xml:space="preserve">
+    <value>Configurazione del terminale: IP, fascia oraria, se acquisisce o meno un´immagine alla timbratura, comportamento lettori, sirene...</value>
+  </data>
+  <data name="RES_features.terminals.definition.name.rotext" xml:space="preserve">
+    <value>Definizione</value>
+  </data>
+  <data name="RES_features.terminals.description.rotext" xml:space="preserve">
+    <value>Gestione dei terminali. IMPORTANTE: la configurazione dei terminali verrà effettuata dai tecnici di Cegid. In nessun caso si dovranno modificare i dati che vengono visualizzati sugli schermi interessati se ciò non avviene dietro la supervisione del personale di Cegid.</value>
+  </data>
+  <data name="RES_features.terminals.name.rotext" xml:space="preserve">
+    <value>Terminali</value>
+  </data>
+  <data name="RES_features.terminals.statusinfo.description.rotext" xml:space="preserve">
+    <value>Visualizzazione dei terminali installati nell´azienda e il loro stato</value>
+  </data>
+  <data name="RES_features.terminals.statusinfo.name.rotext" xml:space="preserve">
+    <value>Informazione sullo stato</value>
+  </data>
+  <data name="RES_features.visits.create.description.rotext" xml:space="preserve">
+    <value>Creazione di visite in LiveVisits</value>
+  </data>
+  <data name="RES_features.visits.create.name.rotext" xml:space="preserve">
+    <value>Creazione di visite</value>
+  </data>
+  <data name="RES_features.visits.description.rotext" xml:space="preserve">
+    <value>Gestione di visite e visitatori.</value>
+  </data>
+  <data name="RES_features.visits.manage.description.rotext" xml:space="preserve">
+    <value>Gestione di visite in LiveVisits</value>
+  </data>
+  <data name="RES_features.visits.manage.name.rotext" xml:space="preserve">
+    <value>Gestione di visite</value>
+  </data>
+  <data name="RES_features.visits.name.rotext" xml:space="preserve">
+    <value>Visite</value>
+  </data>
+  <data name="RES_features.visits.userfields.description.rotext" xml:space="preserve">
+    <value>Scheda di visite in LiveVisits</value>
+  </data>
+  <data name="RES_features.visits.userfields.name.rotext" xml:space="preserve">
+    <value>Scheda di visite</value>
+  </data>
+  <data name="RES_features.administration.alerts.user.name.rotext" xml:space="preserve">
+    <value>Utente</value>
+  </data>
+  <data name="RES_features.administration.alerts.user.description.rotext" xml:space="preserve">
+    <value>Permette di visualizzare gli alert relativi agli utenti del sistema (ingressi non attendibili, utenti non presenti, ecc.)</value>
+  </data>
+  <data name="RES_features.administration.alerts.documents.name.rotext" xml:space="preserve">
+    <value>Documentazione</value>
+  </data>
+  <data name="RES_features.administration.alerts.documents.description.rotext" xml:space="preserve">
+    <value>Permette di visualizzare gli alert relativi al gestore della documentazione (documenti in sospeso, non validati, ecc.)</value>
+  </data>
+  <data name="RES_features.administration.alerts.system.name.rotext" xml:space="preserve">
+    <value>Sistema</value>
+  </data>
+  <data name="RES_features.administration.alerts.system.description.rotext" xml:space="preserve">
+    <value>Consente di visualizzare gli avvisi relativi al sistema. (terminali disconnessi, firma carte non assegnate, ecc.)</value>
+  </data>
+  <data name="RES_features.administration.punches.user.name.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.administration.punches.user.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.administration.punches.documents.name.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.administration.punches.documents.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.administration.punches.system.name.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.administration.punches.system.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.supervisors.datalink.imports.supervisor.name.rotext" xml:space="preserve">
+    <value>Importazione supervisore</value>
+  </data>
+  <data name="RES_features.supervisors.datalink.imports.supervisor.description.rotext" xml:space="preserve">
+    <value>Importazione di monitor VT</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.sagemurano.name.rotext" xml:space="preserve">
+    <value>SAGE Murano Import</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.sagemurano.description.rotext" xml:space="preserve">
+    <value>SAGE Murano Import</value>
+  </data>
+  <data name="RES_features.administration.exportguidestemplates.name.rotext" xml:space="preserve">
+    <value>Modelli di esportazione</value>
+  </data>
+  <data name="RES_features.administration.exportguidestemplates.description.rotext" xml:space="preserve">
+    <value>Configurazione dei modelli di esportazione</value>
+  </data>
+</root>

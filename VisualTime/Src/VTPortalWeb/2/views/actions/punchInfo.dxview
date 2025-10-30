@@ -1,0 +1,61 @@
+<div data-options="dxView : { name: 'punchInfo', title: 'punchInfo', disableCache: true} " >
+
+
+	<div data-bind="dxActionSheet: punchOptions"></div>
+	<div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:true,closeOnBackButton:false, visible: ListZonesVisible, height: 'auto'}">
+		<div class="card card-two">
+			<h4>
+				<span data-bind="text: lblWhereAreYou"></span>
+			</h4>
+			<div class="h-divider">
+				<div class="shadow"></div>
+			</div>
+			<div class="dx-searchbar">
+				<div data-bind="dxTextBox: searchOptions"></div>
+			</div>
+			<div id="listZones" data-bind="dxList: listZones">
+				<div data-options="dxTemplate: {name: 'RequestItem'}">
+					<div class="listMenuItem">
+						<div data-bind="css: $data.cssContainerClass" class="listMenuItemIcon">
+							<div data-bind="css: $data.cssClass" class="listMenuItemIcon"></div>
+						</div>
+						<div class="listMenuItemContent">
+							<div data-bind="text: $data.Name"></div>
+							<div class="smallTextDescription" data-bind="html: $data.Description"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:true,closeOnBackButton:false, visible: ListCausesVisible, height: 'auto'}">
+		<div class="card card-two">
+			<h4>
+				<span data-bind="text: lblCauseInput"></span>
+			</h4>
+			<div class="h-divider">
+				<div class="shadow"></div>
+			</div>
+			<div class="dx-searchbar">
+				<div data-bind="dxTextBox: causeSearchOptions"></div>
+			</div>
+			<div id="listZones" data-bind="dxList: listCauses">
+				<div data-options="dxTemplate: {name: 'RequestItem'}">
+					<div class="listMenuItem">
+						<div data-bind="css: $data.cssContainerClass" class="listMenuItemIcon">
+							<div data-bind="css: $data.cssClass" class="listMenuItemIcon"></div>
+						</div>
+						<div class="listMenuItemContent">
+							<div data-bind="text: $data.Name"></div>
+							<div class="smallTextDescription" data-bind="html: $data.Description"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div data-bind="dxLoadPanel: loadingPanel"> </div>
+
+</div>

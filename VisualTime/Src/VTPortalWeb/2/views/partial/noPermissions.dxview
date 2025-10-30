@@ -1,0 +1,11 @@
+<div data-options="dxView : { name: 'noPermissions', title: 'noPermissions' } ">
+	<div data-bind="if: showPermissionsIcon == false">
+		<div class="noDataText" style="padding-top: 20px;">
+			<span data-bind="text:noDataToShow"></span>
+		</div>
+	</div>
+	<div data-bind="if: showPermissionsIcon == true">
+		<div class="noPermissionCssClass"></div>
+	</div>
+</div>
+

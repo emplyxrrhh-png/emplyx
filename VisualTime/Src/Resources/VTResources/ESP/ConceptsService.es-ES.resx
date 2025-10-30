@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_engineresultenum.employeerequired.rotext" xml:space="preserve">
+    <value>No disponemos de empleado para realizar la operación</value>
+  </data>
+  <data name="RES_resultenum.accrualworkexists.rotext" xml:space="preserve">
+    <value>El saldo de horas trabajadas solo puede existir en un saldo</value>
+  </data>
+  <data name="RES_resultenum.automaticaccrualcriteriadataerror.rotext" xml:space="preserve">
+    <value>Configuración de devengos automáticos incorrecta</value>
+  </data>
+  <data name="RES_resultenum.compositionconditiondirectvalueinvalid.rotext" xml:space="preserve">
+    <value>El valorde la justificación es incorrecto.</value>
+  </data>
+  <data name="RES_resultenum.compositionconditionidcauserequired.rotext" xml:space="preserve">
+    <value>Se requiere insertar una justificación</value>
+  </data>
+  <data name="RES_resultenum.compositionconditionidcausesmustbediferent.rotext" xml:space="preserve">
+    <value>El valorde la justificación debe ser diferente a las justificaciones</value>
+  </data>
+  <data name="RES_resultenum.compositionconditionidcausevalueinvalid.rotext" xml:space="preserve">
+    <value>El valorde la justificación es invalido. Seleccione un valor de la justificación.</value>
+  </data>
+  <data name="RES_resultenum.compositionconditionuserfieldvalueinvaliddatatype.rotext" xml:space="preserve">
+    <value>El valor del tipo de la composición no es válido.</value>
+  </data>
+  <data name="RES_resultenum.compositionconditionuserfieldvaluerequired.rotext" xml:space="preserve">
+    <value>Debe insertar el valor del campo de la ficha en la composición.</value>
+  </data>
+  <data name="RES_resultenum.compositionfactorvalueinvalid.rotext" xml:space="preserve">
+    <value>El valoren el campo factor es invalido.</value>
+  </data>
+  <data name="RES_resultenum.defaultquerymustbeannual.rotext" xml:space="preserve">
+    <value>El tipo saldo no puede ser utilizado en la gestión de solicitudes</value>
+  </data>
+  <data name="RES_resultenum.expiredhoursdataerror.rotext" xml:space="preserve">
+    <value>Los datos de la configuración de caducidades son incorrectos</value>
+  </data>
+  <data name="RES_resultenum.groupnamealreadyexist.rotext" xml:space="preserve">
+    <value>El nombre del grupo ya existe.</value>
+  </data>
+  <data name="RES_resultenum.groupnamecannotbenull.rotext" xml:space="preserve">
+    <value>El nombre del grupo no puede estar en blanco.</value>
+  </data>
+  <data name="RES_resultenum.invaliddateinterval.rotext" xml:space="preserve">
+    <value>El intervalo de fechas es incorrecto.</value>
+  </data>
+  <data name="RES_resultenum.invalidusedfield.rotext" xml:space="preserve">
+    <value>El campo de la ficha de pagos es invalido.</value>
+  </data>
+  <data name="RES_resultenum.namealreadyexist.rotext" xml:space="preserve">
+    <value>Ya existe un saldo con ese nombre.</value>
+  </data>
+  <data name="RES_resultenum.namecannotbenull.rotext" xml:space="preserve">
+    <value>El nombre no puede estar en blanco.</value>
+  </data>
+  <data name="RES_resultenum.notemptyconcepts.rotext" xml:space="preserve">
+    <value>El grupo de saldo contiene saldos. Debe eliminarlos para eliminar el grupo.</value>
+  </data>
+  <data name="RES_resultenum.numberofconceptsexceeded.rotext" xml:space="preserve">
+    <value>Se excede en el número de saldos posibles con licencia Visualtime eXpress.</value>
+  </data>
+  <data name="RES_resultenum.shortnamealreadyexist.rotext" xml:space="preserve">
+    <value>El nombre abreviado ya existe o está en blanco.</value>
+  </data>
+  <data name="RES_resultenum.toomanyterminals.rotext" xml:space="preserve">
+    <value>Se ha excedido el número máximo de saldos visibles en los terminales</value>
+  </data>
+  <data name="RES_resultenum.usedbyaccrualrules.rotext" xml:space="preserve">
+    <value>Se está utilizando en reglas de saldos</value>
+  </data>
+  <data name="RES_resultenum.usedbycausesonprogrammedholidays.rotext" xml:space="preserve">
+    <value>Se está utilizando en las justificaciones</value>
+  </data>
+  <data name="RES_resultenum.usedbyinddicators.rotext" xml:space="preserve">
+    <value>Se está utilizando en los siguientes indicadores: $br${1}</value>
+  </data>
+  <data name="RES_resultenum.usedbyreportsgroups.rotext" xml:space="preserve">
+    <value>Se está utilizando en grupos de informes.</value>
+  </data>
+  <data name="RES_savefromdata.oldnameprefix.rotext" xml:space="preserve">
+    <value>${1} antiguo</value>
+  </data>
+  <data name="RES_engineresultenum.errorapplyingdefaultcenters.rotext" xml:space="preserve">
+    <value>Error aplicando los centros de coste por defecto</value>
+  </data>
+  <data name="RES_engineresultenum.errormarkingaccrualsrulesnextdates.rotext" xml:space="preserve">
+    <value>Error marcando próximas fechas de reglas de acumulados</value>
+  </data>
+  <data name="RES_engineresultenum.errorpreprocessingdaysforaccrualsrules.rotext" xml:space="preserve">
+    <value>Error preprocesando días para reglas de acumulados</value>
+  </data>
+  <data name="RES_engineresultenum.errordoingaccruals.rotext" xml:space="preserve">
+    <value>Error cargando el saldo</value>
+  </data>
+  <data name="RES_roconcepts.holidaymovementtype.startupvalue.rotext" xml:space="preserve">
+    <value>Ganados</value>
+  </data>
+  <data name="RES_roconcepts.holidaymovementtype.expiredorcarryover.rotext" xml:space="preserve">
+    <value>Perdidos</value>
+  </data>
+  <data name="RES_roconcepts.holidaymovementtype.dailyvalue.rotext" xml:space="preserve">
+    <value>Disfrutados</value>
+  </data>
+  <data name="RES_roconcepts.holidaysummarytype.available.rotext" xml:space="preserve">
+    <value>Saldo actual</value>
+  </data>
+  <data name="RES_roconcepts.holidaysummarytype.approvalpending.rotext" xml:space="preserve">
+    <value>Solicitadas</value>
+  </data>
+  <data name="RES_roconcepts.holidaysummarytype.approvednotenjoyed.rotext" xml:space="preserve">
+    <value>Aprobadas</value>
+  </data>
+  <data name="RES_roconcepts.holidaysummarytype.enjoyed.rotext" xml:space="preserve">
+    <value>Disfrutadas</value>
+  </data>
+  <data name="RES_roconcepts.holidaysummarytype.willexpires.rotext" xml:space="preserve">
+    <value>Caducarán</value>
+  </data>
+  <data name="RES_roconcepts.holidaysummarytype.cannotenjoyyet.rotext" xml:space="preserve">
+    <value>No disponibles</value>
+  </data>
+  <data name="RES_roconcepts.holidaysummarytype.expectedaccrual.rotext" xml:space="preserve">
+    <value>Saldo esperado</value>
+  </data>
+  <data name="RES_resultenum.xssvalidationerror.rotext" xml:space="preserve">
+    <value>Se ha detectado un script malicioso en alguna propiedad del objeto</value>
+  </data>
+  <data name="RES_engineresultenum.errorapplyingdailyconceptsrules.rotext" xml:space="preserve">
+    <value>Error aplicando reglas diarias de acumulados</value>
+  </data>
+  <data name="RES_engineresultenum.errordoingshiftdailyrules.rotext" xml:space="preserve">
+    <value>Error aplicando reglas diarias de horarios</value>
+  </data>
+  <data name="RES_engineresultenum.errorsavingdata.rotext" xml:space="preserve">
+    <value>Error guardando datos</value>
+  </data>
+</root>

@@ -1,0 +1,14 @@
+
+<div data-options="dxView : { name: 'configuration', title: 'Configuration', disableCache: true  } " >		
+	<div id="smallUserInfo"></div>
+	<div data-bind="dxTabs: tabPanelOptions" class="innerTabPanelList sharedPortalConfig">
+		<div data-options="dxTemplate : { name: 'title' } ">
+			<div data-bind="css: $data.cssClass "></div>
+		</div>
+	</div>	
+	<div id="panelsContent" style="height:92%">				
+		<!--ko with: sharedPortalConfigBlock-->
+		<div data-options="dxViewPlaceholder: { viewName: 'sharedPortalConfig' } "></div>
+		<!-- /ko-->		
+	</div>	
+</div>

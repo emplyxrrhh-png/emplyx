@@ -1,0 +1,190 @@
+<div data-options="dxView : {name: 'home', disableCache: true} " >
+    <div class="home-view dx-content-background" data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <!--ko with: subscribeBlock-->
+        <div class="bigProfile" data-options="dxViewPlaceholder: { viewName: 'bigUserInfo' }">
+
+        </div>
+        <!-- /ko-->
+        <!--style="padding-bottom:5px;"-->
+        <div style="height:80% !important; ">
+            <div id="panelsContent" style="" data-bind="dxScrollView: homeContent">
+
+                <!--ko with: summaryHome-->
+                <div data-options="dxViewPlaceholder: { viewName: 'summaryHome' } " style="  padding-bottom:4px; padding-top:9px;"></div>
+				<div class="h-divider" >
+					<div class="shadow2"></div>
+				</div>
+                <!-- /ko-->
+                <!-- ko if: ApiVersion() > 15 -->
+                <!-- ko if: TelecommutingEnabled() -->
+                <!--ko with: telecommutingHome-->
+                <div data-options="dxViewPlaceholder: { viewName: 'telecommutingHome' } " style="  padding-bottom:4px; padding-top:4px;"></div>
+				<div class="h-divider" >
+					<div class="shadow2"></div>
+				</div>
+                <!-- /ko-->
+                <!-- /ko-->
+                <!-- /ko-->
+				<!-- ko if: !VTPortal.roApp.isTimeGate() -->
+				<!--ko with: webLinksHome-->
+				<div data-bind="if: linksDS() && linksDS().length > 0">
+					<div data-options="dxViewPlaceholder: { viewName: 'webLinksHome' }" style="padding-bottom: 4px; padding-top: 4px;"></div>
+				    <div class="h-divider">
+					    <div class="shadow2"></div>
+				    </div>
+				</div>
+				<!-- /ko-->
+				<!-- /ko-->
+				<!--ko with: punchesHome-->
+                <div data-options="dxViewPlaceholder: { viewName: 'punchesHome' } " style=" padding-bottom:4px; padding-top:4px;"></div>
+				<div class="h-divider" >
+					<div class="shadow2"></div>
+				</div>
+				<!-- /ko-->
+                <!--ko with: emptyHome-->
+                <div data-options="dxViewPlaceholder: { viewName: 'emptyHome' } "></div>
+                <!-- /ko-->
+            </div>
+        </div>
+
+        <div id="progressBar" data-bind="dxLoadPanel: progressPanel"> </div>
+        <div id="progressBarLoc" data-bind="dxLoadPanel: progressPanelLoc"> </div>
+        <!-- ko if: VTPortal.roApp.ReadMode() == false -->
+		<style>
+			div#fastButtons {
+			display: flex;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			align-items: center;
+			align-content: space-around;
+			padding: 0 18px;
+			padding-bottom: 8px;
+			justify-content: center;
+			padding-top: 10px;
+			background: white;
+			}
+			#target {
+			width: 100%;
+			max-width: 150px;
+			}
+
+			.fast {
+			background-color: #0046FE !important;
+			width: 100%;
+			text-align: center;
+			/*padding: 0.7rem;*/
+			margin: 1%;
+			color: white;
+			font-size: 16px;
+			border-radius: 8px !important;
+			max-width: 150px;
+			}
+			.fast span {
+			text-transform: capitalize !important;
+			}
+			.fast.declarar {
+			background-color: #008624 !important;
+			}
+
+		</style>
+		<div id="fastButtons">
+			<div class="fast fichar" data-bind="dxButton: doPunch"></div>
+			<div class="fast solicitar" data-bind="dxButton: request"></div>
+			<div id="target" style="margin:1%;" data-bind="visible: quickPunch.visible()"><div class="fast" data-bind="dxButton: quickPunch, css: quickPunchCss" id="btnActionMenuPopover2"></div>
+		    </div>
+			<div class="fast declarar" data-bind="dxButton: dailyRecordBtn, visible: dailyRecordPermission()"></div>
+		</div>
+        <!-- /ko-->
+        <div data-bind="dxPopover: actionMenuPopover" style="border-radius:20px !important">
+            <div class="mainTitleList" style="margin:10px !important; text-align: center;vertical-align: middle;"><span data-bind="text:quickPunchHelp"></span></div>
+        </div>
+
+        <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false,closeOnBackButton:false, visible: licenseVisible, height: 'auto'}">
+            <span class="licenseTerms" data-bind="text: lblTermsAndContidions"></span>
+
+            <div class="licenseText" align="justify" data-bind="dxScrollView: licenceViewContent">
+                <span data-bind="text: lbllicenseText"></span>
+                <div data-bind="if: customConsent() == false">
+                    <ul class="licenseList">
+                        <li class="licenseListItem"><span data-bind="text: lbllicenseAdv1"></span></li>
+                        <li class="licenseListItem" data-bind="css: {display: lbllicenseAdv2Visibile}"><span data-bind="text: lbllicenseAdv2"></span></li>
+                        <li class="licenseListItem" data-bind="css: {display: lbllicenseAdv3Visibile}"><span data-bind="text: lbllicenseAdv3"></span></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <div class="dx-field-value" data-bind="dxCheckBox: ckLicenceAccepted"></div>
+                </div>
+            </div>
+
+            <div class="get-to-work-orange" data-bind="dxButton: btnAcceptLicense"></div>
+        </div>
+
+        <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false,closeOnBackButton:false, visible: popupChangePwdVisible, height: 'auto'}">
+            <div id="changePwdHome" class="dx-fieldset">
+                <div class="dx-field">
+                    <span data-bind="text: lblOldPwd"></span>
+                    <div class="dx-field-value pass" data-bind="dxTextBox: txtOldPwd, dxValidator: requieredOldField "></div>
+                </div>
+                <div class="dx-field">
+                    <span data-bind="text: lblNewPwd"></span>
+                    <div class="dx-field-value pass" data-bind="dxTextBox: txtNewPwd, dxValidator: requieredNewField "></div>
+                </div>
+                <div class="dx-field">
+                    <span data-bind="text: lblNewPwdRepeat"></span>
+                    <div class="dx-field-value pass" data-bind="dxTextBox: txtNewPwdRepeat, dxValidator: compareField  "></div>
+                </div>
+            </div>
+
+            <div class="get-to-work-orange" data-bind="dxButton: btnChangePwd"></div>
+        </div>
+
+        <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false,closeOnBackButton:false, visible: popupValidationCodeVisible, height: 'auto'}">
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <span data-bind="text: lblValidationCode"></span>
+                    <div class="dx-field-value pass" data-bind="dxTextBox: txtValidationCode, dxValidator: requieredValidationField "></div>
+                </div>
+            </div>
+
+            <div class="get-to-work-orange" data-bind="dxButton: btnAcceptValidationCode"></div>
+        </div>
+
+        <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false,closeOnBackButton:false, visible: quickPunchDone, height: 'auto'}">
+            <div id="quickPunch" class="dx-fieldset" sstyle="font-weight:900 !important;">
+                <div class="dx-field" style="text-align: center;vertical-align: middle;">
+                    <span data-bind="text: lblPunchDone"></span>
+                </div>
+            </div>
+            <div class="get-to-work-orange" data-bind="dxButton: btnAccept"></div>
+        </div>
+
+        <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false,closeOnBackButton:false, visible: false, height: 'auto'}">
+            <div id="quickPunchFailed" class="dx-fieldset" sstyle="font-weight:900 !important;">
+                <div class="dx-field" style="text-align: center;vertical-align: middle;">
+                    <span data-bind="text: lblPunchDone"></span>
+                </div>
+            </div>
+            <div class="get-to-work-orange" data-bind="dxButton: btnAcceptFailed"></div>
+        </div>
+
+        <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false,closeOnBackButton:false, visible: punchNotAllowedVisible, height: 'auto'}">
+            <div id="punchNotAllowed" class="dx-fieldset" sstyle="font-weight:900 !important;">
+                <div class="dx-field" style="text-align: center;vertical-align: middle;">
+                    <span data-bind="text: lblPunchNotAllowed"></span>
+                </div>
+            </div>
+            <div class="get-to-work-orange" data-bind="dxButton: btnAcceptPunch"></div>
+        </div>
+
+		<!--ko with: myPunchInfoBlock -->
+		<div data-options="dxViewPlaceholder: { viewName: 'punchInfo' } "></div>
+		<!-- /ko-->
+		
+        <div data-bind="dxLoadPanel: loadingPanel"> </div>
+    </div>
+
+</div>

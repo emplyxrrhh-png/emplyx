@@ -1,0 +1,51 @@
+<div data-options="dxView : { name: 'bigUserInfo', disableCache: true } ">
+	<!-- ko if: VTPortal.roApp.HasCustomHeader() == false -->
+	<div data-bind="css: cssBackground" id="headerBackground">
+		<div class="backgroundPhoto"></div>
+	</div>
+	<!-- /ko-->
+	<!-- ko if: VTPortal.roApp.HasCustomHeader() == true -->
+	<div id="customBackground" data-bind="attr: { style: customCssBackground} " >
+		<!--<div id="customPhoto" data-bind="attr: { style: customPhotoBackground} "></div>-->
+	</div>
+	<!-- /ko-->
+
+	<div class="employeeOpacity" data-bind="style: { borderBottom: borderBottom }">
+		<div>
+			<div id="employeePhotoDiv" class="centerEmp">
+				<div class="employeePhoto" style="border: 2px solid #fdeee4;" data-bind="style: { background: empImage }, visible: photoVisible"></div>
+				<!--<div class="presenceTime" data-bind="if: isSupervisor() == false">
+					<div data-bind="css: statusIcon"></div>
+					<div class="clockTime"><span data-bind="text: myTime, style: {color: textColor}"></span></div>
+				</div>-->
+			</div>
+			<div class="employeeInfo">
+				<div class="employeeCenter">
+					<div class="welcomeText">
+						<span data-bind="text: lblWelcome"></span>
+					</div>
+					<!--<div class="userNameText"><span data-bind="text: lblUsername"></span></div>-->
+					<div>
+						<div class="bigUserDate">
+							<span data-bind="text: lblServerTime"></span>
+						</div>
+
+						<div class="bigUserDate2">
+							<span data-bind="text: lblServerDate"></span>
+						</div>
+					</div>
+					<div class="bigImpersonatedInfo" style="padding-top:1px !important">
+						<span data-bind="text: lblUsername"></span>
+					</div>
+					<!-- ko if: VTPortal.roApp.LastLogin() != null -->
+					<div class="bigLastLogin">
+						<span data-bind="text: lblLastLogin"></span>
+					</div>
+					<!-- /ko-->
+				</div>
+
+			</div>
+		</div>
+		<div class="companyLogo" data-bind="style: { background: customCompanyLogo }, visible: companyLogoVisible"></div>
+	</div>
+</div>

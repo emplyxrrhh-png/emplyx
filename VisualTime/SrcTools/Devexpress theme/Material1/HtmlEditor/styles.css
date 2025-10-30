@@ -1,0 +1,682 @@
+/* ----------------- Main ----------------- */
+/* Loading panel */
+.dxheLoadingDiv_Material1
+{
+    background: white;
+    opacity: 0.85;
+    filter: alpha(opacity=85);
+}
+.dxheLoadingPanel_Material1
+{
+    background-color: white;
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: #484848;
+    -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
+}
+.dxheLoadingPanel_Material1 td.dx
+{
+    font-size: 1.17em;
+    white-space: nowrap;
+    text-align: center;
+    padding: 10px 14px;
+}
+.dxheLoadingPanel_Material1 .dxlp-loadingImage
+{
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    border-radius: 50%;
+    animation: dxLoadSpinSys 1s linear infinite;
+    border: 4px solid #FF5C35;
+    border-top: 4px solid #EEE;
+    width: 24px;
+    height: 24px;
+}
+html.dxIE.dxBrowserVersion-9 .dxheLoadingPanel_Material1 .dxlp-loadingImage
+{
+    background-image: url('../Web/Loading.gif');
+    height: 32px;
+    width: 32px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: none;
+    border: none;
+    border-radius: 0;
+}
+.dxheDesignViewArea_Material1 .dx-base64img-wrapper:after
+{
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    border-radius: 50%;
+    animation: dxLoadSpinSys 1s linear infinite;
+    border: 4px solid #FF5C35;
+    border-top: 4px solid #EEE;
+    width: 24px;
+    height: 24px;
+}
+html.dxIE.dxBrowserVersion-9 .dxheDesignViewArea_Material1 .dx-base64img-wrapper:after
+{
+    background-image: url('../Web/Loading.gif');
+    height: 32px;
+    width: 32px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: none;
+    border: none;
+    border-radius: 0;
+}
+.dxheDesignViewArea_Material1 .dx-base64img-wrapper:after
+{
+    margin: -16px 0px 0px -16px;
+}
+.dxheControl_Material1
+{
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    border: 1px solid #E5E5E5;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+}
+/* Area */
+.dxheErrorFrame_Material1
+{
+    font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: #D00707;
+    background-color: #FBC7C7;
+    margin-bottom: 6px;
+}
+.dxheControl_Material1 .dxeMemo_Material1 .dxheErrorFrame_Material1 .dxhe,
+.dxheControl_Material1.dxhe-rtl .dxeMemo_Material1 .dxheErrorFrame_Material1 .dxhe,
+.dxheErrorFrame_Material1 .dxhe
+{
+    padding: 5px;
+}
+.dxheControl_Material1 .dxeMemo_Material1 .dxheErrorFrame_Material1 .dxhe td,
+.dxheControl_Material1.dxhe-rtl .dxeMemo_Material1 .dxheErrorFrame_Material1 .dxhe td,
+.dxheErrorFrame_Material1 .dxhe td
+{
+    padding: 0;
+}
+.dxheErrorFrame_Material1 .dxheErrorFrameCloseButton_Material1
+{
+    cursor: pointer;
+}
+.dxheContentArea_Material1 td.dxheViewArea_Material1
+{
+    line-height: 0;
+}
+.dxheContentArea_Material1 td.dxheViewArea_Material1.dxheHtmlViewArea_Material1
+{
+    line-height: inherit;
+}
+.dxheDesignViewArea_Material1,
+.dxhePreviewArea_Material1
+{
+    background: none #FFFFFF;
+}
+.dxheControl_Material1 .dxheHtmlViewArea_Material1,
+body.dxheDesignViewArea_Material1,
+body.dxhePreviewArea_Material1
+{
+    margin: 0px;
+    background: none #FFFFFF;
+    border: 0;
+    font-size: smaller;
+    font: 12px Arial, Helvetica, sans-serif;
+}
+.dxheControl_Material1 .dxeMemo_Material1.dxheHtmlViewArea_Material1 .dxeMemoEditArea_Material1,
+body.dxheDesignViewArea_Material1,
+body.dxhePreviewArea_Material1
+{
+    padding: 15px 20px 0 20px;
+}
+.dxheControl_Material1 .dxeMemo_Material1.dxheHtmlViewArea_Material1 td
+{
+    padding: 0 40px 0 0;
+}
+.dxheControl_Material1.dxhe-rtl .dxheContentArea_Material1 .dxeMemo_Material1.dxheHtmlViewArea_Material1 td
+{
+    padding: 0 0 0 40px;
+}
+.dxheControl_Material1 .dxeMemo_Material1 textarea
+{
+    resize: none;
+}
+.dxheControl_Material1 td.dxheDesignViewArea_Material1 .dxm-main.dxmtb
+{
+    border: 1px solid #C3C3C3;
+    background: #ffffff;
+}
+.dxheControl_Material1 td.dxheDesignViewArea_Material1
+{
+    position: relative;
+}
+.dxheViewArea_Material1 .dxhe-tiControlsWrapper span.dxhe-tiTagName
+{
+    padding-right: 18px;
+}
+.dxheViewArea_Material1 .dxhe-tiControlsWrapper .dxbButton_Material1
+{
+    min-width: 16px;
+    width: auto !important;
+}
+.dxheViewArea_Material1 .dxhe-tiControlsWrapper .dxbButton_Material1.dxhe-tiDeleteButton
+{
+    margin-right: 1px;
+}
+td.dxheDesignViewArea_Material1 .dxmLite_Material1
+{
+    position: absolute;
+    right: 0;
+    padding-right: 24px;
+}
+td.dxheDesignViewArea_Material1 .dxmLite_Material1.dxm-rtl
+{
+    right: inherit;
+    padding-right: 0px;
+    padding-left: 5px;
+}
+.dxheViewArea_Material1 .dxheAudio
+{
+    background-image: url('dxheAudio.svg');
+}
+.dxheViewArea_Material1 .dxheFlash
+{
+    background-image: url('dxheFlash.svg');
+}
+.dxheViewArea_Material1 .dxheVideo
+{
+    background-image: url('dxheVideo.svg');
+}
+.dxheViewArea_Material1 .dxheYoutube
+{
+    background-image: url('dxheYoutube.svg');
+}
+.dxheViewArea_Material1 img.dxheNotSupported
+{
+    background-image: url('dxheNotSupported.svg');
+}
+.dxheViewArea_Material1 img.dxheAudio,
+.dxheViewArea_Material1 img.dxheFlash,
+.dxheViewArea_Material1 img.dxheVideo,
+.dxheViewArea_Material1 img.dxheYoutube,
+.dxheViewArea_Material1 img.dxheNotSupported
+{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #cfcfcf;
+    border: 1px dotted #FFFFFF;
+    opacity: 0.8;
+}
+.dxheViewArea_Material1 .dxhe-tiControlsWrapper
+{
+    background-color: #FF5C35;
+    padding: 3px 4px 2px 10px;
+    border: none;
+}
+.dxheViewArea_Material1 .dxhePlaceholder
+{
+    cursor: default;
+    white-space: nowrap;
+}
+.dxheViewArea_Material1.dxheDesignViewArea_Material1 .dxheSelected
+{
+    background-color: #E0E0E0;
+}
+.dxhe-insertPlaceholder .dxeListBox_Material1.dxeFocused_Material1
+{
+    border: 1px solid #C0C0C0;
+}
+.dxhe-insertPlaceholder .dxflGroup_Material1,
+.dxpc-contentWrapper .dxflFormLayout_Material1.dxhe-insertPlaceholder .dxflGroup_Material1 .dxflGroupBox_Material1 .dxflListBoxItemSys
+{
+    padding-top: 0;
+}
+.dxhe-insertPlaceholder .dxflGroup_Material1 .dxhe-dialogLI.dxhe-dialogButtonsContainer
+{
+    padding-top: 10px;
+}
+.dxhe-insertPlaceholder .dxeListBox_Material1,
+.dxhe-insertPlaceholder .dxeListBox_Material1 .dxlbd
+{
+    width: 220px;
+    height: 215px;
+}
+/* CodeMirror */
+.dxheHtmlViewArea_Material1 .CodeMirror-activeline-background
+{
+    background: #e0e0e0;
+    opacity: 0.7;
+}
+.dxheHtmlViewArea_Material1 .CodeMirror-foldgutter-open::after
+{
+    content: url('heFoldGutterOpen.svg');
+}
+.dxheHtmlViewArea_Material1 .CodeMirror-foldgutter-folded::after
+{
+    content: url('heFoldGutterFolded.svg');
+}
+.dxheHtmlViewArea_Material1 .CodeMirror-foldmarker::after
+{
+    content: url('dxheFoldMarker.png');
+    background-size: 16px 10px;
+}
+.dxheSourceEditorSys.dxheHtmlViewArea_Material1 .CodeMirror-gutter.CodeMirror-linenumbers,
+.dxheHtmlViewArea_Material1 .CodeMirror-gutter.CodeMirror-linenumbers
+{
+    border-left: 0;
+    border-right: 0;
+}
+/* Element appearance in DesignView */
+body.dxheDesignViewArea_Material1 table.dxEmptyBorderTable,
+body.dxheDesignViewArea_Material1 table.dxEmptyBorderTable td
+{
+    border: 1px dotted gray;
+}
+@media print
+{
+    body.dxheDesignViewArea_Material1 table.dxEmptyBorderTable,
+    body.dxheDesignViewArea_Material1 table.dxEmptyBorderTable td
+    {
+        border: 0px;
+    }
+}
+body.dxheDesignViewArea_Material1
+{
+    word-wrap: inherit;
+}
+body.dxheDesignViewArea_Material1 pre
+{
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+/* Status Bar */
+.dxheStatusBar_Material1
+{
+    background-color: #f1f1f1;
+}
+.dxheControl_Material1 .dxheStatusBar_Material1 .dxheStatusBarTab_Material1 .dxtc-link
+{
+    padding: 10px 24px 11px 24px;
+}
+.dxHtmlEditor_heSizeGrip_Material1
+{
+    cursor: se-resize;
+    margin: 0 4px 4px 0;
+}
+.dxHtmlEditor_heSizeGripRtl_Material1
+{
+    cursor: ne-resize;
+    margin: 0 0 4px 4px;
+}
+.dxheSizeGripContainer_Material1
+{
+    width: 100%;
+    text-align: right;
+    font-size: 0;
+    margin-top: -18px;
+}
+.dxheControl_Material1.dxhe-rtl .dxheSizeGripContainer_Material1
+{
+    text-align: left;
+}
+.dxheStatusBar_Material1 .dxtcLite_Material1.dxtc-bottom > .dxtc-stripContainer .dxtc-activeTab
+{
+    border-top: none;
+    border-left: 1px solid #E6E6E6;
+    border-right: 1px solid #E6E6E6;
+    background-color: #FFFFFF;
+}
+.dxheStatusBar_Material1 .dxtcLite_Material1.dxtc-bottom > .dxtc-stripContainer .dxtc-leftIndent
+{
+    width: 0px !important;
+}
+.dxheStatusBar_Material1 .dxtcLite_Material1.dxtc-bottom > .dxtc-stripContainer
+{
+    padding-bottom: 0px;
+}
+.dxheStatusBar_Material1 .dxtcLite_Material1 > .dxtc-stripContainer .dxtc-activeTab,
+.dxheStatusBar_Material1 .dxtcLite_Material1 > .dxtc-stripContainer .dxtc-activeTab a
+{
+    color: #FF5C35;
+}
+.dxheStatusBar_Material1 .dxtcLite_Material1 > .dxtc-stripContainer .dxtc-tab a
+{
+    color: #484848;
+}
+.dxheStatusBar_Material1 .dxtcLite_Material1
+{
+    margin-left: -1px;
+}
+.dxheControl_Material1.dxhe-rtl .dxheStatusBar_Material1 .dxtcLite_Material1
+{
+    margin-right: -1px;
+}
+.dxheControl_Material1 .dxrControl_Material1 .dxtcLite_Material1.dxtc-top .dxtc-tab
+{
+    background: transparent;
+}
+/* ----------------- Dialog Forms ----------------- */
+.dxpcLite_Material1 .dxheDlgFooter,
+.dxpcLite_Material1 .dxheCustomDialog_Material1 .dxhecd-Buttons
+{
+    background-color: white;
+    border-top: Solid 1px #E0E0E0;
+    padding: 10px 11px;
+    text-align: right;
+}
+.dxpcLite_Material1.dxRtl .dxheDlgFooter,
+.dxpcLite_Material1.dxRtl .dxheCustomDialog_Material1 .dxhecd-Buttons
+{
+    text-align: left;
+}
+.dxpcLite_Material1 .dxheDlgFooterBtn
+{
+    margin-left: 8px;
+}
+.dxpcLite_Material1.dxRtl .dxheDlgFooterBtn
+{
+    margin-right: 8px;
+    margin-left: 0;
+}
+.dxhe-dialogLoadingPanel.dxlpLoadingPanel_Material1
+{
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+/* Insert Image Form */
+.dxpcLite_Material1 .dxheDlgInsertImageForm .dxheDlgImagePreviewCell,
+.dxpcLite_Material1 .dxheDlgSelectImageForm .dxheDlgImagePreviewCell
+{
+    color: #878787;
+    border: dashed 1px #cac8c8;
+}
+.dxpcLite_Material1 .dxheDlgPasteFromWordForm .dxheDlgPasteContainerCell td
+{
+    border: Solid 1px #9F9F9F;
+}
+/*----------------- Toolbars -----------------*/
+.dxtbSpacing_Material1
+{
+    height: 2px;
+}
+.dxtbControl_Material1
+{
+    color: #484848;
+    width: 100%;
+    border-bottom: Solid 1px #E5E5E5;
+    background-color: #f1f1f1;
+    padding-bottom: 7px;
+}
+.dxtbControl_Material1 td.dxmMenu_Material1
+{
+    border-width: 0px;
+}
+.dxtbControl_Material1 .dxmLite_Material1 .dxm-main.dxmtb
+{
+    padding-top: 7px;
+}
+.dxtbControl_Material1 .dxmLite_Material1 .dxm-main
+{
+    background-color: #f1f1f1;
+}
+.dxtbControl_Material1 .dxmLite_Material1 .dxmtb.dxm-horizontal .dxm-separator b
+{
+    background-color: #dfdfdf;
+}
+.dxtbComboBoxMenuItem_Material1
+{
+    padding-top: 2px;
+}
+.dxheControl_Material1 .dxrControl_Material1 .dxr-minBtn
+{
+    padding-right: 8px;
+}
+.dxheControl_Material1 .dxtbControl_Material1.dxtbr_Material1,
+.dxheControl_Material1 .dxrControl_Material1 .dxpc-mainDiv.dxr-minPopup
+{
+    border: 0;
+}
+/* Toolbars Lightweight Mode */
+.dxtbControl_Material1 .dxmLite_Material1 .dxm-main
+{
+    border-width: 0px;
+}
+.dxmLite_Material1 .dxhetipControl_Material1 img
+{
+    vertical-align: top;
+}
+/* ToolbarColorButton */
+.dxtcbControl_Material1
+{
+    position: relative;
+    display: inline-flex;
+}
+.dxtcbColorDiv_Material1
+{
+    position: absolute;
+    margin: 0 !important;
+    left: 0;
+    bottom: 0;
+    transform: translateY(calc(100% + 2px));
+    width: 100%;
+    height: 3px;
+    font-size: 0;
+    background-color: Transparent;
+}
+/*----------------- RoundPanel -----------------*/
+.dxheRP.dxrpControl_Material1 .dxrpcontent_Material1
+{
+    padding: 9px 10px 10px 10px !important;
+}
+/* InsertMediaDialogs */
+.dxflFormLayout_Material1 .dxhe-dialogSettings
+{
+    width: 320px;
+    padding-left: 30px;
+}
+.dxflFormLayout_Material1.dxhe-mediaDialog .dxtcLite_Material1 > .dxtc-stripContainer .dxtc-leftIndent,
+.dxflFormLayout_Material1.dxhe-mediaDialog .dxtcLite_Material1 > .dxtc-stripContainer .dxtc-rightIndent
+{
+    width: 0px;
+}
+.dxflFormLayout_Material1.dxhe-mediaDialog .dxtcLite_Material1.dxtc-top > .dxtc-content
+{
+    border-left: 1px solid #DFDFDF !important;
+    border-right: 1px solid #DFDFDF !important;
+    border-bottom: 1px solid #DFDFDF !important;
+    border-top: 3px solid #DFDFDF !important;
+    border-top-style: solid !important;
+    margin-top: -3px;
+}
+.dxflFormLayout_Material1.dxhe-mediaDialog .dxic-previewPanel.dxrpControl_Material1
+{
+    background: #FFFFFF;
+    border: 1px dashed #A3A3A3;
+}
+.dxflFormLayout_Material1.dxhe-mediaDialog .dxic-previewPanel.dxrpControl_Material1 .dxic-previewText
+{
+    text-transform: uppercase;
+    font-size: 1.65em;
+}
+.dxflFormLayout_Material1.dxhe-mediaDialog .dxic-previewPanel.dxrpControl_Material1 span.dxic-validationTip
+{
+    margin-bottom: 5px;
+}
+.dxflFormLayout_Material1.dxhe-mediaDialog
+{
+    width: 900px;
+}
+.dxpcLite_Material1.dx-dialog.dxhe-dialog-media-popup
+{
+    max-width: 950px;
+}
+.dxflFormLayout_Material1.dxhe-mediaDialog .dxic-control,
+.dxflFormLayout_Material1.dxhe-mediaDialog .dxhe-dialogSettings
+{
+    height: 570px;
+}
+div.dxflFormLayout_Material1.dxhe-dialog table.dxhe-dialogLG
+{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+div.dxhe-insertLinkDialog.dxflFormLayout_Material1 div.dxhe-dialog div.dxhe-dialogLI.dxhe-dialogButtonsContainer
+{
+    margin-left: -4px;
+}
+div.dxhe-insertLinkDialog.dxflFormLayout_Material1.dxhe-dialog .dxflRadioButtonListItemSys td.dxe
+{
+    padding-bottom: 10px;
+}
+div.dxflFormLayout_Material1.dxhe-dialog > table.dxhe-dialogLG.dxflGroupSys,
+div.dxflFormLayout_Material1.dxhe-dialog .dxhe-dialogButtonsContainer
+{
+    padding-bottom: 12px;
+    padding-top: 24px;
+}
+.dxhe-dialog .dxhe-dialogButtonsContainer td:last-child .dxbButton_Material1
+{
+    margin-left: 12px;
+    margin-right: 5px;
+}
+div.dxhe-insertImageDialog.dxflFormLayout_Material1 .dxhe-dialogLI.dxhe-dialogButtonsContainer
+{
+    margin-top: 15px;
+}
+.dxhe-insertImageDialog.dxflFormLayout_Material1.dxhe-dialog > table.dxhe-dialogLG.dxflGroupSys
+{
+    padding: 13px 14px 29px;
+}
+.dxhe-insertLinkDialog.dxflFormLayout_Material1.dxhe-dialog > table.dxhe-dialogLG.dxflGroupSys
+{
+    padding: 13px 18px 12px 18px;
+}
+div.dxhe-insertLinkDialog.dxflFormLayout_Material1.dxhe-dialog table.dxhe-dialogLG
+{
+    padding-right: 0px;
+    padding-left: 5px;
+}
+.dxflFormLayout_Material1.dxhe-dialog a.dxtc-link
+{
+    padding: 4px 10px;
+}
+div.dxflFormLayout_Material1.dxhe-mediaDialogStyleSettings > table.dxhe-dialogLG.dxflGroupSys,
+div.dxflFormLayout_Material1.dxhe-mediaDialogMainSettings > table.dxhe-dialogLG.dxflGroupSys
+{
+    padding: 32px;
+}
+.dxHtmlEditor_heConstrainProportionsMiddleOn_Material1,
+.dxHtmlEditor_heConstrainProportionsMiddleOff_Material1
+{
+    margin-left: 4px;
+}
+/* tag inspector */
+.dxheDesignViewArea_Material1 .dxhe-tiSelection
+{
+    box-sizing: border-box;
+    position: absolute;
+    border: 1px solid #FF5C35;
+    background-color: #FF5C35;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    opacity: 0.3;
+}
+.dxheDesignViewArea_Material1 .dxhe-tiWrapper
+{
+    border-bottom: 1px solid #E5E5E5;
+    background-color: #F1F1F1;
+}
+.dxheDesignViewArea_Material1 .dxhe-tiSeparator,
+.dxheDesignViewArea_Material1 .dxhe-tiTagName
+{
+    color: #757575;
+}
+.dxheDesignViewArea_Material1 .dxheSelectedTag_Material1
+{
+    color: #FFFFFF;
+}
+.dxhe-intelliSenseSysWin .dxeListBox_Material1.dxeFocused_Material1
+{
+    border-color: #c0c0c0;
+}
+div.dxhe-searchQuick div.dxbButton_Material1,
+div.dxhe-searchQuick div.dxbButton_Material1 .dxb
+{
+    background: none !important;
+    border: none !important;
+}
+.dxpcLite_Material1.dxhe-quickSearchSysWin .dxhe-flItem0
+{
+    padding-left: 2px !important;
+}
+div.dxhe-searchQuick .dxbButton_Material1.dxbTSys
+{
+    width: initial !important;
+}
+div.dxhe-searchQuick .dxbButton_Material1
+{
+    background-color: transparent;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.dxheViewArea_Material1
+{
+    border-bottom: 1px solid #DCDCDC;
+}
+td.dxheStatusBar_Material1 div.dxtcLite_Material1.dxtcSys > .dxtc-stripContainer > li
+{
+    border-top: 1px solid #DCDCDC;
+}
+.dxhe-dialogWrapperPanel .dxucBrowseButton_Material1
+{
+    padding: 6px 18px 7px;
+}
+.dxflFormLayout_Material1.dxhe-insertTableDialog
+{
+    width: 511px;
+}
+div.dxflFormLayout_Material1.dxhe-dialog:not(.dxhe-mediaDialogMainSettings):not(.dxhe-mediaDialogStyleSettings) > table.dxflGroup_Material1.dxhe-dialogLG.dxflGroupSys
+{
+    padding-top: 0px;
+}
+.dxhe-dialog .dxflGroupBoxCaption_Material1.dxhe-dialogLGBC
+{
+    left: 12px;
+}
+.dxpcLite_Material1.dx-dialog > .dxhe-dialog-popup > .dxpc-header
+{
+    padding: 12px 10px 12px 16px;
+}
+.dxhe-dialog .dxflGroupBox_Material1.dxhe-dialogLGB
+{
+    margin: 16px 0px;
+}
+.dxhe-dialog.dxhe-insertTableDialog .dxhe-dialogButtonsContainer td:last-child .dxbButton_Material1
+{
+    margin-right: 12px;
+}
+div.dxflFormLayout_Material1.dxhe-dialog.dxhe-insertTableDialog .dxhe-dialogLGB > table.dxhe-dialogLG
+{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.dxpcLite_Material1.dx-dialog.dxhe-dialog-tables-popup
+{
+    max-width: 700px;
+}
+.dxpcLite_Material1.dx-dialog.dxhe-dialog-placeholder-popup,
+.dxpcLite_Material1.dx-dialog.dxhe-dialog-rowproperties-popup,
+.dxpcLite_Material1.dx-dialog.dxhe-dialog-cellproperties-popup,
+.dxpcLite_Material1.dx-dialog.dxhe-dialog-columnproperties-popup
+{
+    max-width: 500px;
+}

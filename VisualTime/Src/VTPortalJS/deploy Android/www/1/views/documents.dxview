@@ -1,0 +1,65 @@
+<div data-options="dxView : { name: 'documents', title: 'documents',  disableCache: true } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <!--ko with: subscribeBlock-->
+        <div class="bigProfile" data-options="dxViewPlaceholder: { viewName: 'bigUserInfo' }"></div>
+        <!-- /ko-->
+
+        <div data-bind="if: hasPermission() == true" style="height:76%">
+
+
+
+            <div id="listRequests" data-bind="dxList: listRequests">
+                <div data-options="dxTemplate: {name: 'RequestItem'}">
+                    <div class="listMenuItem">
+                        <div data-bind="css: $data.cssContainerClass" class="listMenuItemIcon">
+                            <div data-bind="css: $data.cssClass" class="listMenuItemIcon"></div>
+                        </div>
+                        <div class="listMenuItemContent">
+                            <div data-bind="text: $data.Name"></div>
+                            <div class="smallTextDescription" data-bind="html: $data.TypeName"></div>
+                            <div class="smallTextDescription" data-bind="html: $data.Description"></div>
+                            <div class="smallTextDescriptionSign" data-bind="html: $data.SignDesc"></div>
+                        </div>
+
+                        <div data-bind="if: $data.hasAction == true"><div class="list-item-arrow"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popoverActionMenu" data-bind="dxPopover: actionMenuPopover">
+                <div class="actionButton actionButtonSubMenu" data-bind="dxButton: btnFilterRequests"></div>
+                <div class="actionButton actionButtonSubMenu" data-bind="dxButton: btnNewDocument"></div>
+            </div>
+
+            <div id="btnActionMenuPopover" class="actionButton fixedButton" data-bind="dxButton: showOptions"></div>
+
+            <!-- ko if: requieresSign() == true -->
+            <div data-bind="dxActionSheet: signOptions"></div>
+            <!-- /ko-->
+
+        </div>
+
+        <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false,closeOnBackButton:false, visible: showPopupSign, height: 'auto'}">
+            <div id="signInfo" class="dx-fieldset" sstyle="font-weight:900 !important;">
+                <div class="dx-field" style="text-align: center;vertical-align: middle;">
+                    <span data-bind="text: lblSignInfo"></span>
+                </div>
+            </div>
+        </div>
+
+        <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false,closeOnBackButton:false, visible: showPopupSignApp, height: 'auto'}">
+            <div id="signInfoApp" class="dx-fieldset" sstyle="font-weight:900 !important;">
+                <div class="dx-field" style="text-align: center;vertical-align: middle;">
+                    <span data-bind="text: lblSignInfoApp"></span>
+                </div>
+            </div>
+        </div>
+
+        <div data-bind="if: hasPermission() == false">
+            <div class="noPermissionCssClass"></div>
+        </div>
+
+        <div data-bind="dxLoadPanel: loadingPanel"> </div>
+
+    </div>
+</div>

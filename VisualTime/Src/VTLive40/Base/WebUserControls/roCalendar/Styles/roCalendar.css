@@ -1,0 +1,2340 @@
+﻿/* Menu contextual calendario*/
+context-menu-icon context-menu-icon-selectFromTo {
+    background-image: url('../../Images/IntegratedIn.png');
+}
+
+.context-menu-item {
+    min-height: 18px;
+    background-repeat: no-repeat;
+    background-position: 4px 4px;
+    padding: 5px 28px;
+}
+
+.context-menu-separator {
+    min-height: 1px;
+}
+
+.context-menu-item.context-menu-icon-removeEmpMenu {
+    background-image: url('../../../Images/contexticons/removeEmp.gif');
+}
+
+.context-menu-item.context-menu-icon-removeEmp {
+    background-image: url('../../../Images/contexticons/delete.png');
+}
+
+.context-menu-item.context-menu-icon-sort {
+    background-image: url('../../../Images/contexticons/sort.png');
+}
+
+.context-menu-item.context-menu-icon-setCoverage {
+    background-image: url('../../../Images/contexticons/setCoverage.png');
+}
+
+.context-menu-item.context-menu-icon-planifyCoverage {
+    background-image: url('../../../Images/contexticons/planifyCoverage.png');
+}
+
+.context-menu-item.context-menu-icon-advPaste {
+    background-image: url('../../../Images/contexticons/pasteadv.png');
+}
+
+.context-menu-item.context-menu-icon-detail {
+    background-image: url('../../../Images/contexticons/covering.png');
+}
+
+.context-menu-item.context-menu-icon-selectFromTo {
+    background-image: url('../../../Images/contexticons/selectfromto.png');
+}
+
+.context-menu-item.context-menu-icon-asign {
+    background-image: url('../../../Images/contexticons/assignshift.png');
+}
+
+.context-menu-item.context-menu-icon-change {
+    background-image: url('../../../Images/contexticons/interchangeshift.png');
+}
+
+.context-menu-item.context-menu-icon-vacationAsign {
+    background-image: url('../../../Images/contexticons/holiday_16_add.png');
+}
+
+.context-menu-item.context-menu-icon-vacation {
+    background-image: url('../../../Images/contexticons/holiday_16_delete.png');
+}
+
+.context-menu-item.context-menu-icon-setFeast {
+    background-image: url('../../../Images/contexticons/feast.png');
+}
+
+.context-menu-item.context-menu-icon-removeFeast {
+    background-image: url('../../../Images/contexticons/feast_16_delete.png');
+}
+
+.context-menu-item.context-menu-icon-alternative {
+    background-image: url('../../../Images/contexticons/assignsecshift.png');
+}
+
+.context-menu-item.context-menu-icon-copyShift {
+    background-image: url('../../../Images/contexticons/copyshift.png');
+}
+
+.context-menu-item.context-menu-icon-copyHolidays {
+    background-image: url('../../../Images/contexticons/copyHolidays.png');
+}
+
+.context-menu-item.context-menu-icon-copyWorking {
+    background-image: url('../../../Images/contexticons/copyWorking.png');
+}
+
+.context-menu-item.context-menu-icon-pasteShift {
+    background-image: url('../../../Images/contexticons/pasteshift.png');
+}
+
+.context-menu-item.context-menu-icon-block {
+    background-image: url('../../../Images/empStates/daylocked.png');
+}
+
+.context-menu-item.context-menu-icon-removeblock {
+    background-image: url('../../../Images/empStates/dayunlocked.png');
+}
+
+.context-menu-item.context-menu-icon-asingPosition {
+    background-image: url('../../../Images/contexticons/assignassignment.png');
+}
+
+.context-menu-item.context-menu-icon-asignCover {
+    background-image: url('../../../Images/contexticons/covering.png');
+}
+
+.context-menu-item.context-menu-icon-cancelSelection {
+    background-image: url('../../../Images/contexticons/selectfromto.png');
+}
+
+.context-menu-item.context-menu-icon-complementary {
+    background-image: url('../../../Images/contexticons/ShiftIco.png');
+}
+
+.context-menu-item.context-menu-icon-assignment {
+    background-image: url('../../../Images/contexticons/Assignments16.png');
+}
+
+.context-menu-item.context-menu-icon-copyAssignments {
+    background-image: url('../../../Images/contexticons/copyAssignment.png');
+}
+
+.context-menu-item.context-menu-icon-removeUnit {
+    background-image: url('../../../Images/contexticons/deldailycoverage.png');
+}
+
+.context-menu-item.context-menu-icon-removeMode {
+    background-image: url('../../../Images/tbt/delete.png');
+}
+
+.context-menu-item.context-menu-icon-refreshMode {
+    background-image: url('../../../Images/contexticons/interchangeshift.png');
+}
+
+.context-menu-item.context-menu-icon-changeMode {
+    background-image: url('../../../Images/contexticons/changeMode.png');
+}
+
+.context-menu-item.context-menu-icon-removeShift {
+    background-image: url('../../../Images/contexticons/disassignshift.png');
+}
+
+.context-menu-item.context-menu-icon-removeBudget {
+    background-image: url('../../../Images/contexticons/deldailycoverage.png');
+}
+
+.context-menu-item.context-menu-icon-addTelecommuting {
+    background-image: url('../../../Images/contexticons/addTelecommute.png');
+}
+
+.context-menu-item.context-menu-icon-removeTelecommuting {
+    background-image: url('../../../Images/contexticons/removeTelecommute.png');
+}
+
+.context-menu-item.context-menu-icon-tc_office {
+    background-image: url('../../../Images/contexticons/onPresence.png');
+}
+
+.context-menu-item.context-menu-icon-tc_home {
+    background-image: url('../../../Images/contexticons/onTelecommuting.png');
+}
+
+.context-menu-item.context-menu-icon-tc_optional {
+    background-image: url('../../../Images/contexticons/onOptionalTelecommuting.png');
+}
+
+.context-menu-item.context-menu-icon-tc_pasteTelecommute {
+    background-image: url('../../../Images/contexticons/pasteTelecommute.png');
+}
+
+.context-menu-item.context-menu-icon-tc_labagree {
+    background-image: url('../../../Images/contexticons/onTelecommuting-inactive.png');
+}
+
+.sortCalendar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+    .sortCalendar li {
+        margin: 0 3px 3px 3px;
+        padding: 0.4em;
+        padding-left: 1.5em;
+        font-size: 1.4em;
+        height: 18px;
+    }
+
+        .sortCalendar li span {
+            position: absolute;
+            margin-left: -1.3em;
+        }
+
+/***************************** Layout control *********************************/
+.roCalendarRender {
+    overflow: auto !important; /* override Layout default of 'hidden' */
+    background: #dadada;
+    color: #FFF;
+    font-family: "Robotics";
+    font-size: 13px;
+    /*padding:		0 20px !important; /* override Layout default of '0' */
+    margin: 0;
+    min-width: 100%;
+    height: inherit;
+}
+
+    .roCalendarRender > p {
+        margin: 1ex 0;
+    }
+
+.hidden {
+    display: none;
+}
+
+/* Notes in center-pane of Tab1 */
+.roCalendarRender > blockquote {
+    margin-top: 1ex;
+    margin-bottom: 1em;
+}
+
+.roCalendarRender > ul {
+    margin-top: 1ex;
+    margin-bottom: 1em;
+}
+
+.roCalendarRender > li {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+}
+
+.roCalendarRender > h4 {
+    margin: 1em 0 1ex;
+    font-size: 1.1em;
+}
+
+#notes {
+    padding: 1em 1.5em;
+}
+
+    #notes > h4 {
+        margin-top: 0;
+    }
+
+.container { /* override default style */
+    padding: 0px !important;
+    overflow: hidden !important;
+}
+
+.ui-layout-pane {
+    padding: 0px !important;
+    overflow: hidden;
+}
+
+.ui-widget-content { /* used as the ui-layout-content class */
+    padding: 1ex;
+    overflow: auto;
+}
+
+.hidden { /* apply to elements to avoid Flash of Content */
+    display: none;
+}
+
+.allow-overflow {
+    overflow: visible;
+}
+/* HIDE all pane-elements until initialized */
+.ui-layout-north,
+.ui-layout-south,
+.ui-layout-west,
+.ui-layout-east,
+.ui-layout-center {
+    display: none;
+}
+
+.mainLeftCalendar {
+    width: 80%;
+    height: 100%;
+    float: left;
+    display: unset !important;
+}
+
+.topCalendar {
+    width: 100%;
+    height: calc(100% - 180px);
+    display: unset !important;
+}
+
+.bottomCalendar {
+    width: 100%;
+    display: unset !important;
+}
+
+.mainRightCalendar {
+    width: 20%;
+    height: 100%;
+    float: right;
+    display: unset !important;
+}
+
+.topInfo {
+    width: 100%;
+    height: calc(100% - 180px);
+    display: unset !important;
+}
+
+.bottomInfo {
+    width: 100%;
+    display: unset !important;
+}
+
+.ui-layout-center {
+    min-height: 160px !important;
+}
+
+.ui-layout-south {
+    height: 160px !important;
+}
+
+#outer-center { /* #tabbuttonss & #tabpanels container */
+    background: #DDD;
+    padding: 0; /* not sure why need this again? */
+}
+
+#tabbuttonsColumn, #tabbuttonsRow { /* tabsContainerLayout - north-pane */
+    overflow: visible; /* so tabs (LI) can overlap bottom-border */
+}
+
+#tabpanelsColumn, #tabpanelsRow {
+}
+    /* tabsContainerLayout - center-pane */
+    #tabpanelsColumn .tab-panel, #tabpanelsRow .tab-panel { /* tab-layout containers */
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        overflow: hidden;
+    }
+
+/*
+*	Inner-Tabs
+*/
+#roCalendarRenderColumnTotals.ui-layout-center {
+    padding: 0;
+}
+
+#roCalendarRenderColumnTotals > DIV:first-child {
+}
+/* header-title */
+#roCalendarRenderColumnTotals > UL {
+}
+/* tab-buttons - header */
+#roCalendarRenderColumnTotals .ui-widget-content {
+}
+/* tab-panels-wrapper - content-pane */
+#roCalendarRenderColumnTotals > DIV {
+}
+/* tab-content wrappers: #simpleTab1, #simpleTab2, etc. */
+
+#roCalendarRenderRowTotals.ui-layout-center {
+    padding: 0;
+}
+
+#roCalendarRenderRowTotals > DIV:first-child {
+}
+/* header-title */
+#roCalendarRenderRowTotals > UL {
+}
+/* tab-buttons - header */
+#roCalendarRenderRowTotals .ui-widget-content {
+}
+/* tab-panels-wrapper - content-pane */
+#roCalendarRenderRowTotals > DIV {
+}
+
+#roCalendarRenderCenter > .ui-layout-center {
+}
+/* tab-content wrappers: #simpleTab1, #simpleTab2, etc. */
+
+/*
+	*	Outer Layout - Cosmetic
+	*/
+#outer-north {
+    font-weight: bold;
+    padding: 1em 1em;
+}
+
+    #outer-north .buttons {
+        float: right;
+        margin-right: 200px;
+        margin-top: -4px;
+    }
+
+#outer-south {
+    padding: .5em 1em;
+}
+
+/* Tabs Wrapper & Buttons*/
+#outer-center.ui-tabs,
+#outer-center.ui-tabs > ul {
+    border-bottom: 0;
+    padding-bottom: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+/*	Tab Panels & Contents */
+.toolbar {
+    overflow: hidden;
+    /*border-top:		0 !important;*/
+}
+/*
+	*	Can't pad #tabpanels .tab-panel containers because have width/height = 100%
+	*	so must pad outer-edges of inner-panes instead to get nice whitespace
+*/
+.tab-panel .ui-layout-west {
+    padding-left: 10px;
+}
+/* same as west__spacing_closed */
+.tab-panel .ui-layout-east {
+    padding-right: 10px;
+}
+/* same as east__spacing_closed */
+/*
+	*	Every inner-layout is made up of header, content and footer panels
+	*/
+.ui-widget-header {
+    padding: 4px 1em;
+}
+
+.ui-widget-footer {
+    font-size: .85em;
+    font-weight: normal !important;
+}
+
+/*
+	*	Layout Resizers
+	*/
+.ui-layout-resizer-sliding {
+    background-color: #BBB;
+}
+
+.ui-layout-resizer-open-hover,
+.ui-layout-resizer-drag, /* cloned bar */
+.ui-layout-resizer-dragging {
+    background: #BBB !important; /* need higher specificity */
+    opacity: 0.5 !important; /* ditto - not sure why? */
+    filter: Alpha(Opacity=50) !important;
+}
+
+.ui-layout-resizer-dragging-limit {
+    background: #d44848 !important;
+}
+
+.ui-layout-resizer-closed-hover {
+    background: #ebd5aa;
+}
+
+/*
+	*	Layout Togglers
+	*/
+.ui-layout-toggler {
+    background-color: #FF5C35 !important;
+    opacity: .60;
+    filter: Alpha(Opacity=60);
+}
+
+.ui-layout-resizer-open-hover .ui-layout-toggler,
+.ui-layout-toggler-hover {
+    opacity: 1;
+    filter: Alpha(Opacity=100);
+}
+
+.ui-layout-toggler .ui-icon {
+    margin: 0 auto;
+}
+/* default - center horizontally */
+.ui-layout-toggler-north .ui-icon,
+.ui-layout-toggler-south .ui-icon {
+    margin-top: -3px;
+}
+/* tweak arrow vertical-center */
+.ui-layout-toggler-west .ui-icon,
+.ui-layout-toggler-east .ui-icon {
+    margin-left: -3px;
+}
+/* tweak arrow horizontal-center */
+/* assign arrows for each side & state */
+.ui-layout-toggler-north-closed .ui-icon,
+.ui-layout-toggler-south-open .ui-icon {
+    background-position: -64px -192px; /* ui-icon-circle-triangle-s */
+    background-position: -128px -16px; /* ui-icon-triangle-2-n-s */
+    background-position: -64px -16px; /* ui-icon-triangle-1-s */
+}
+
+.ui-layout-toggler-south-closed .ui-icon,
+.ui-layout-toggler-north-open .ui-icon {
+    background-position: -96px -192px; /* ui-icon-circle-triangle-n */
+    background-position: -128px -16px; /* ui-icon-triangle-2-n-s */
+    background-position: 0 -16px; /* ui-icon-triangle-1-n */
+}
+
+.ui-layout-toggler-west-closed .ui-icon,
+.ui-layout-toggler-east-open .ui-icon {
+    background-position: -48px -192px; /* ui-icon-circle-triangle-e */
+    background-position: -144px -16px; /* ui-icon-triangle-2-e-w */
+    background-position: -32px -16px; /* ui-icon-triangle-1-e */
+}
+
+.ui-layout-toggler-east-closed .ui-icon,
+.ui-layout-toggler-west-open .ui-icon {
+    background-position: -80px -192px; /* ui-icon-circle-triangle-w */
+    background-position: -144px -16px; /* ui-icon-triangle-2-e-w */
+    background-position: -96px -16px; /* ui-icon-triangle-1-w */
+}
+
+.ui-tabs .ui-tabs-nav li a {
+    padding: 0.1em 0.08em !important;
+}
+
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    border-bottom-right-radius: 5px !important;
+}
+
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+    border-bottom-left-radius: 5px !important;
+}
+
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+    border-top-right-radius: 5px !important;
+}
+
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+    border-top-left-radius: 5px !important;
+}
+
+.ui-widget-header {
+    border: 1px solid #FF5C35;
+    background: #FF5C35 !important;
+    color: #000000 !important;
+    font-weight: normal !important;
+}
+
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+    color: #000000 !important;
+}
+
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+    color: #FF5C35 !important;
+}
+
+.ui-tabs .ui-tabs-nav {
+    padding: 0 !important;
+}
+
+.ui-tabs-anchor {
+    font-size: 11px;
+    font-style: normal;
+}
+
+.rowTableMain {
+    /*height: 600px;*/
+    /*overflow-x: hidden;*/
+}
+
+.columnTableMain {
+    height: 140px;
+}
+
+div.columnTableMain div.fht-tbody {
+    overflow-x: hidden !important;
+    /*height: 140px !important;*/
+}
+
+div.rowTableMain div.fht-tbody {
+    overflow-y: hidden;
+}
+
+.ui-widget-content {
+    background: none !important;
+}
+
+.NorthCell {
+    height: 25px;
+    vertical-align: middle;
+    display: table-cell;
+    width: 100px;
+}
+
+.NorthCellHeaderEmployee {
+    width: 175px !important;
+}
+
+.NorthCellExpanded {
+    height: 45px;
+    vertical-align: middle;
+    display: table-cell;
+    width: 100px;
+}
+
+.DailyCell {
+    width: 30px !important;
+}
+
+.ProductiveUnitHeaderText {
+    float: left;
+    padding: 12px 0px 0px 2px;
+    font-weight: bolder;
+    width: 100%;
+    text-align: center;
+}
+
+.ProductiveUnitTextNorth {
+    line-height: 45px;
+    font-weight: bolder;
+    padding-left: 15px;
+}
+
+.EmpCellTextNorth {
+    float: left;
+    padding: 2px 0px 0px 10px;
+    font-weight: bolder;
+}
+
+.EmpCellTextSouth {
+    padding: 0px 0px 0px 10px;
+    float: left;
+    font-weight: bolder;
+    font-size: 9px !important;
+}
+
+.EmpCellIconsNorth {
+    float: right;
+    padding: 0px 10px 2px 0px;
+}
+
+.EmpCellIconsSouth {
+    float: right;
+    padding: 0px 10px 2px 0px;
+}
+
+.SouthCell {
+    padding-bottom: 5px;
+    height: 14px;
+}
+
+.dayInfo {
+}
+
+.dayStatus {
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    position: relative;
+    top: -1px;
+}
+
+/* Shifts column tabla*/
+.CalendarShiftsFixed {
+    font-size: 11px !important;
+    width: 250px !important;
+    height: 22px;
+    box-shadow: 0px 0px 0px 1px rgb(242, 242, 242) inset;
+}
+
+.shiftColumnRow {
+    background: white;
+}
+
+    .shiftColumnRow.odd {
+        background: #d8d8d8;
+    }
+
+.CalendarShiftFixedBody {
+    background: white;
+    color: gray;
+    height: 22px;
+}
+
+.CalendarShiftContentFixedBody {
+    padding-top: 3px;
+    padding-left: 5px;
+    overflow: hidden;
+    height: 16px;
+}
+
+.ColumnShiftTableBodyCell {
+    box-shadow: 0px 0px 0px 1px rgb(242, 242, 242) inset;
+    font-size: 9px;
+    text-align: center;
+    height: 22px;
+}
+
+.ContentShiftsColumnCell {
+    font-size: 11px;
+    vertical-align: middle;
+    padding-top: 4px;
+    font-weight: bold;
+    color: gray;
+    height: 22px;
+}
+
+/* Common calendar fixed styles */
+.ProductiveUnitFixed {
+    font-size: 11px !important;
+    width: 120px !important;
+}
+
+.BudgetFixed {
+    font-size: 11px !important;
+    width: 250px !important;
+}
+
+.CalendarFixed {
+    font-size: 11px !important;
+    width: 250px !important;
+}
+
+.DetailScheduleFixed {
+    font-size: 11px !important;
+    width: 320px !important;
+    height: 100%;
+}
+
+.Position_DetailScheduleFixed {
+    width: calc(20%);
+    background: #f2f2f2;
+    float: left;
+    box-shadow: 0px 0px 0px 1px #e8f0f3 inset;
+    height: 100%;
+}
+
+.Quantity_DetailScheduleFixed {
+    width: calc(20%);
+    background: #f2f2f2;
+    float: left;
+    box-shadow: 0px 0px 0px 1px #e8f0f3 inset;
+    height: 100%;
+}
+
+.EmployeeResume_DetailScheduleFixed {
+    width: calc(60%);
+    background: #f2f2f2;
+    float: left;
+    box-shadow: 0px 0px 0px 1px #e8f0f3 inset;
+    height: 100%;
+}
+
+.ProductiveUnitHeaderCellFixed {
+    width: calc(50%);
+    background: rgb(242, 242, 242);
+    float: left;
+    box-shadow: 0px 0px 0px 1px #e8f0f3 inset;
+}
+
+.CalendarBudgetFixed {
+    width: 250px;
+    background: #76859f;
+    float: left;
+    box-shadow: 0px 0px 0px 1px #e8f0f3 inset;
+    overflow: hidden;
+}
+
+.BudgetTitleFixed {
+    width: calc(100% - 31px);
+    background: #76859f;
+    float: left;
+}
+
+.CalendarBudgetFixed .EmployeeName {
+    font-size: 15px;
+    height: 45px !important;
+    line-height: 35px;
+}
+
+.BudgetActionsFixed .expandGroup, .BudgetActionsFixed .filterGroup, .BudgetActionsFixed .filter-activeGroup, .showIndictments-inactive, .showIndictments-active, .showPunches-inactive, .showPunches-active, .interval-15, .interval-30, .interval-60 {
+    margin-right: -1px !important;
+}
+
+.BudgetActionsFixed {
+    width: 30px;
+    background: #76859f;
+    float: right;
+}
+
+.CalendarEmployeeFixed {
+    width: calc(70%);
+    background: #76859f;
+    float: left;
+    box-shadow: 0px 0px 0px 1px #e8f0f3 inset;
+}
+
+.CalendarSummaryFixed {
+    width: calc(30%);
+    background: rgb(242, 242, 242);
+    float: left;
+    text-align: center;
+    box-shadow: 0px 0px 0px 1px #e8f0f3 inset;
+}
+
+.CalendarDayFixed {
+    font-size: 9px;
+    text-align: center;
+    box-shadow: 0px 0px 0px 1px #e8f0f3 inset;
+    width: 100px;
+    background: rgb(242, 242, 242);
+}
+
+.CalendarShiftsDayFixed {
+    font-size: 9px;
+    text-align: center;
+    box-shadow: 0px 0px 0px 1px #e8f0f3 inset;
+    width: 40px;
+    background: rgb(242, 242, 242);
+}
+
+.CalendarShiftRowFixedHeader {
+    width: 35px;
+    height: 23px;
+    font-size: 10px;
+}
+
+.ColumnShiftsTableBodyCell {
+    font-size: 9px;
+    width: 35px;
+    text-align: center;
+}
+
+.ContentShiftsRowCell {
+    width: 35px;
+    height: 60px;
+    box-shadow: 0px 0px 0px 1px rgb(242, 242, 242) inset;
+    font-size: 11px;
+    vertical-align: middle;
+    display: table-cell;
+    font-weight: bold;
+    color: gray;
+}
+
+/* Region fixed Header */
+
+.CalendarEmployeeFixedHeader, .CalendarBudgetFixedHeader, .CalendarSummaryFixedHeader, .CalendarFixedHeader {
+    box-shadow: none !important;
+}
+
+/* Region fixed Body */
+.CalendarFixedBodyHeader {
+}
+
+.CalendarEmployeeSepartaorBody {
+    background: #e8f0f3;
+    width: 1200px;
+    padding-top: 2px;
+    padding-left: 10px;
+    font-size: 10px;
+}
+
+.CalendarBudgetFixedBody {
+    background: white;
+    color: gray;
+    font-size: 9px;
+    min-height: 60px;
+}
+
+.CalendarEmployeeFixedBody {
+    background: white;
+    color: gray;
+    font-size: 9px;
+    min-height: 60px;
+}
+
+.CalendarSummaryFixedBody {
+    background: white;
+    color: gray;
+    font-size: 9px;
+    min-height: 60px;
+}
+
+.CalendarFixedBody {
+    background: white;
+    color: gray;
+}
+
+/* Region fixed Footer */
+.CalendarFixedFooter {
+    height: 18px;
+    background: white;
+}
+
+.CalendarDayFixedFooter {
+    height: 15px;
+}
+
+.CalendarDayFixedHeader {
+    height: 45px;
+}
+
+.ProductiveUnitDetailHeaderCell {
+    height: 60px;
+}
+
+/*Region Calendar Body Cell*/
+
+.calendarDailyBodyCell {
+    width: 100px;
+    height: 60px;
+    z-index: 99;
+    overflow: hidden;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.columnDailyCalendarOdd {
+    background: #d8d8d8;
+}
+
+.reviewDailyBodyCell {
+    width: 100px;
+    height: 60px;
+    z-index: 99;
+    overflow: hidden;
+}
+
+.reviewOuterCell {
+    width: 100px;
+    height: 60px;
+    /*box-shadow: 0px 0px 0px 2px white inset;*/
+    z-index: 99;
+    overflow: hidden;
+}
+
+.reviewOuterCellV2 {
+    width: 100px;
+    height: 60px;
+    box-shadow: 0px 0px 0px 2px #c3c3c3 inset;
+    background-color: #ffffff !important;
+    z-index: 99;
+    overflow: hidden;
+}
+
+.reviewInnerCellV2 {
+    width: 96px;
+    height: 56px;
+    margin-left: 2px;
+    margin-top: 2px;
+}
+
+.bottomReview {
+    clear: both;
+    height: 18px;
+    position: relative;
+    top: -2px;
+}
+
+.calendarRemarks {
+    clear: both;
+    /*height:13px;
+    margin-top:2px;
+    background-color:#dcdcdc;
+    border: 1px solid #a9a9a9;
+    -moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;*/
+}
+
+.calendarRemark1 {
+    /*margin-top:2px;
+    width:14px;
+    height:7px;
+    float:left;
+    -moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+    border: 1px solid red;
+    margin-left: 3px;*/
+}
+
+.calendarRemark2 {
+    /*margin-top:2px;
+    width:14px;
+    height:7px;
+    float:left;
+    -moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+    border: 1px solid orange;
+    margin-left: 3px;*/
+}
+
+.calendarRemark3 {
+    /*margin-top:2px;
+    width:14px;
+    height:7px;
+    float:left;
+    -moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+    border: 1px solid green;
+    margin-left: 3px;*/
+}
+
+.remarkInactive {
+    margin-top: 2px;
+    width: 14px;
+    height: 7px;
+    float: left;
+    margin-left: 3px;
+    background-color: #ffffff;
+}
+
+.remark1Active {
+    margin-top: 2px;
+    width: 14px;
+    height: 7px;
+    float: left;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin-left: 3px;
+}
+
+.remark2Active {
+    margin-top: 2px;
+    width: 14px;
+    height: 7px;
+    float: left;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin-left: 3px;
+}
+
+.remark3Active {
+    margin-top: 2px;
+    width: 14px;
+    height: 7px;
+    float: left;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin-left: 3px;
+}
+
+.calendarReviewShiftName {
+    width: 24px;
+    height: 24px;
+    margin-top: 5px;
+    margin-left: 3px;
+    float: left;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 9px;
+}
+
+.calendarReviewContainter {
+    width: 60px;
+    height: 40px;
+    margin-left: 2px;
+    float: left;
+    overflow: hidden;
+}
+
+.calendarReviewRemarks {
+    width: 60px;
+    height: 19px;
+}
+
+.calendarReviewAlerts {
+    width: 60px;
+    height: 19px;
+}
+
+.bigImage {
+    width: 25px !important;
+    height: 25px !important;
+}
+
+.reviewShift {
+    padding-top: 6px;
+}
+
+.reviewInnerCell {
+    width: 96px;
+    height: 56px;
+    padding-left: 2px;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.reviewColor {
+    float: left;
+    height: 18px;
+}
+
+.calendarDailyInnerBodyCell {
+    width: 100px;
+    height: 30px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.calendarOuterBodyCell {
+    width: 100px;
+    height: 60px;
+    background: #F2F4F2;
+    box-shadow: 0px 0px 0px 2px white inset;
+    z-index: 99;
+    overflow: hidden;
+}
+
+.calendarOuterBodyFixedSeparator {
+    background: #e8f0f3;
+    height: 20px;
+}
+
+.calendarOuterBodyCellSeparator {
+    width: 100px;
+    height: 5px;
+    /*background: #0046fe1a;*/
+    overflow: hidden;
+}
+
+.calendarOuterBodyCellInOtherDepartment {
+    width: 100px;
+    height: 60px;
+    background: white;
+    overflow: hidden;
+}
+
+.calendarOuterBodyCellNoContract {
+    width: 100px;
+    height: 60px;
+    background: grey;
+    overflow: hidden;
+}
+
+.calendarInnerBodyCell {
+    width: 96px;
+    height: 56px;
+    display: inline-block;
+    margin: 2px 2px;
+}
+
+.calendarLockedDay {
+    width: 6px;
+    height: 6px;
+    background: black;
+    float: right;
+    position: relative;
+    top: -60px;
+}
+
+.columnIsFeast {
+    background-image: url(images/feast.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: -20px;
+    left: 80px;
+    float: left;
+}
+
+.dailyColumnIsFeast {
+    background-image: url(images/feast.png);
+    background-repeat: no-repeat;
+    background-position: calc(50% - 90px) center;
+    background-size: contain;
+    margin: auto;
+}
+
+.columnSorted {
+    background-image: url(images/sort.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: -20px;
+    left: 80px;
+    float: left;
+}
+
+.loadingAssignments {
+    background-image: url(images/Processing.gif) !important;
+}
+
+.assignmentExists {
+    background-image: url(images/Assignments16.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    margin-right: 3px;
+    margin-top: 3px;
+    float: right;
+}
+
+.expandGroup {
+    background-image: url(images/plus.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.addEmployeeIcon {
+    background-image: url(images/plus.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    float: left;
+}
+
+.fulfillEmployeesIcon {
+    background-image: url(images/thunder.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    float: left;
+}
+
+.minimizeGroup {
+    background-image: url(images/minus.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.DailyPeriod {
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px !important;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.interval-15 {
+    background-image: url(images/interval15.png);
+}
+
+.interval-30 {
+    background-image: url(images/interval30.png);
+}
+
+.interval-60 {
+    background-image: url(images/interval60.png);
+}
+
+.showCapacities-inactive {
+    background-image: url(images/capacity.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+    margin-top: 2px;
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.showCapacities-active {
+    background-image: url(images/capacity.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.showIndictments-inactive {
+    background-image: url(images/indictments.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.showIndictments-active {
+    background-image: url(images/indictments-active.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.showPunches-inactive {
+    background-image: url(images/punches.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.showPunches-active {
+    background-image: url(images/punches-active.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.filterGroup {
+    background-image: url(images/filter.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.filter-activeGroup {
+    background-image: url(images/filter-active.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.fullCalendarShow {
+    background-image: url(images/fullCalendar.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 17px;
+    height: 16px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.calendarPlannedHoliday {
+    background-image: url(images/plannedHoliday.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+}
+
+.calendarPlannedOvertme {
+    background-image: url(images/plannedOvertime.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+}
+
+.calendarTelecommuting {
+    background-image: url(images/onTelecommuting.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+}
+
+.calendarOptionalTelecommuting {
+    background-image: url(images/onOptionalTelecommuting.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+}
+
+.calendarPresence {
+    background-image: url(images/onPresence.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+}
+
+.calendarPlannedAbsence {
+    background-image: url(images/plannedAbsence.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+}
+
+.calendarPlannedIncidence {
+    background-image: url(images/plannedIncidence.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    padding-bottom: 3px;
+    margin-left: 2px;
+}
+
+.calendarHolidays {
+    background-image: url(images/holidays.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    padding-bottom: 3px;
+    margin-left: 2px;
+}
+
+.calendarNotes {
+    background-image: url(images/note.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    padding-bottom: 3px;
+    margin-left: 2px;
+}
+
+.calendarUnexpectedlyAbsent {
+    background-image: url(images/Alert16.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    padding-bottom: 3px;
+    margin-left: 2px;
+}
+
+.calendarIndictments {
+    background-image: url(images/budgetAlert.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    padding-bottom: 3px;
+    margin-left: 2px;
+}
+
+.calendarIndictmentsResult {
+    background-image: url(images/budgetAlertResult.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    padding-bottom: 3px;
+    margin-left: 2px;
+}
+
+.calendarIndictments-recalc {
+    background-image: url(images/indictmentRecalc.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    padding-bottom: 3px;
+    margin-left: 2px;
+}
+
+.calendarCellContainer {
+    min-width: 20px;
+    float: right;
+    background: #F2F4F2;
+    height: 52px;
+    display: inline-block;
+    margin-right: 1px;
+    margin-top: 2px;
+}
+
+.calendarShiftInfoDailyContainer {
+    position: absolute;
+    font-size: 10px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    margin-top: -14px;
+    width: 360px;
+    /*float: left;
+    padding-left: 10px;
+    width: 90px;*/
+}
+
+.calendarShiftTypeInfoDailyContainer {
+    position: absolute;
+    font-size: 10px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    margin-top: -16px;
+    margin-left: 4px;
+    width: 360px;
+    /*float: right;
+    padding-right: 10px;
+    width: 90px;*/
+}
+
+.calendarReviewShiftInfoContainer {
+    height: 38px;
+    font-size: 10px;
+}
+
+.calendarShiftInfoContainer {
+    max-width: 45px;
+    float: left;
+    height: 52px;
+    margin-top: 2px;
+    margin-left: 4px;
+    font-size: 10px;
+}
+
+.blueBackground {
+    background: #d2d4d2;
+}
+
+.greenBackground {
+    background: #64f14a;
+}
+
+.redBackground {
+    background: #ff5858;
+}
+
+/* Region east table*/
+.CalendarRowFixedHeader {
+    width: 95px;
+    height: 23px;
+    font-size: 10px;
+}
+
+.ContentRowCell {
+    width: 95px;
+    height: 60px;
+    box-shadow: 0px 0px 0px 1px black inset;
+    font-size: 10px;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.NorthRowCell {
+    width: 95px;
+    height: 25px;
+    font-size: 10px;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.SouthRowCell {
+    width: 95px;
+    height: 22px;
+    font-size: 10px;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+/*Region table column Body*/
+.ColumnTableBodyCell {
+    font-size: 9px;
+    width: 95px;
+    text-align: center;
+}
+
+/*Celda cabecera fila*/
+.EmployeeName {
+    display: block;
+    padding-left: 3px;
+    padding-top: 8px;
+    height: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+
+.EmployeeAssignmentContainer {
+    width: 100%;
+    height: 37px;
+    overflow: hidden;
+}
+
+.EmployeeAlertsContainer {
+    height: 24px;
+    margin-top: 6px;
+}
+
+.EmployeeAccrual {
+    padding-left: 3px;
+    padding-top: 8px;
+    height: 22px;
+    font-weight: bold;
+}
+
+.contentHorizontally {
+    float: left;
+    padding-bottom: inherit !important;
+    padding-top: 5px !important;
+    margin-right: 2px;
+    margin-left: 3px !important;
+}
+
+/* Selectable cells */
+.bodySelectable .ui-selecting {
+    box-shadow: 0px 0px 0px 2px orange inset;
+}
+
+.bodySelectable .ui-selected {
+    box-shadow: 0px 0px 0px 2px orange inset;
+}
+
+.bodySelectable {
+}
+
+.HeaderSelectable {
+}
+
+    .HeaderSelectable .ui-selecting {
+        box-shadow: 0px 0px 0px 2px orange inset;
+    }
+
+    .HeaderSelectable .ui-selected {
+        box-shadow: 0px 0px 0px 2px orange inset;
+    }
+
+.singleCellSelected {
+    box-shadow: 0px 0px 0px 2px black inset;
+}
+
+.dailyLock {
+    border-top: 3px black solid;
+}
+
+/* Table accruals*/
+.ColumnAccrualsTableBodyCell {
+    font-size: 9px;
+    width: 95px;
+    text-align: center;
+}
+
+.ContentAccrualsRowCell {
+    width: 95px;
+    height: 60px;
+    box-shadow: 0px 0px 0px 1px rgb(242, 242, 242) inset;
+    font-size: 10px;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.totalAccrual {
+    font-weight: bold;
+    padding-bottom: 5px;
+    font-size: 12px;
+}
+
+.bigLabel {
+    width: 150px !important;
+}
+
+.fontSmall {
+    font-size: 8px !important;
+}
+
+.fontMedium {
+    font-size: 9px !important;
+}
+
+.fontBig {
+    font-size: 11px !important;
+}
+
+.fontBold {
+    font-weight: bold !important;
+}
+
+.context-menu-item.context-menu-disabled {
+    color: #c5c5c5 !important;
+}
+
+.dialogDivRow {
+    margin-bottom: 5px !important;
+}
+
+.totalRowBackground {
+    background: #C0DEFD;
+    width: 100px;
+}
+
+.vertical-text {
+    transform: rotate(90deg);
+    transform-origin: left top 0;
+    float: left;
+}
+
+.AssignmentText {
+    font-size: 10px !important;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.AssignmentCell {
+    font-size: 10px !important;
+    text-align: center;
+    font-weight: bold;
+    width: 20px;
+    height: 18px;
+    float: left;
+    padding-top: 2px;
+}
+
+.cellborderinset {
+    box-shadow: 0px 0px 0px 1px #e8f0f3 inset;
+}
+
+.assignmentsContainerLeft {
+    max-width: 150px;
+    float: left;
+    overflow-y: auto;
+    height: 40px;
+}
+
+.ui-tooltip {
+    padding: 10px 20px;
+    color: black;
+    box-shadow: 0 0 7px black;
+    background: white !important;
+}
+
+.calendarFloatIcon {
+    position: relative;
+    top: -23px;
+    left: 28px;
+}
+
+.calendarLockDate {
+    background-image: url(images/LockDate.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 12px;
+    height: 12px;
+    margin-left: 2px;
+}
+
+.calendarFeast {
+    background-image: url(images/feast.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 12px;
+    height: 12px;
+    margin-left: 2px;
+}
+
+.calendarFeastLeft {
+    float: left;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+.calendarFeastRight {
+    float: right;
+}
+
+.centerVerticallPUnitHeader {
+    position: relative;
+    top: calc(50% - 30px);
+}
+
+.productiveUnit-position {
+    min-height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.fht-tbody {
+    margin-top: 0px !important;
+}
+
+.productiveUnit-quantity {
+    width: 20px;
+}
+
+.productiveUnit-expand {
+    width: 20px;
+    margin-left: 6px;
+}
+
+.qtyPosition {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.lblExpandable {
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.checkExpandable {
+    text-align: center;
+}
+
+.actionsExpandable {
+    text-align: center;
+}
+
+.positionRowSeparator {
+    box-shadow: inset 0 -2px 0 0 #808080;
+}
+
+.pUnitModeWidth {
+    width: 88px !important;
+    overflow: hidden;
+    max-width: inherit;
+}
+
+.pUnitGroups {
+    overflow-y: auto;
+    width: auto;
+    max-width: 100%;
+    text-align: center;
+    height: 70px;
+    float: left;
+    padding-right: 15px;
+}
+
+.pUnitSelector {
+    line-height: 25px;
+    width: 115px;
+    overflow: hidden;
+    margin: 5px;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    cursor: move;
+}
+
+.maxUnitWidth {
+    width: 100% !important;
+}
+
+.employeeTooltipDiv, .tooltipDiv {
+}
+
+.overCoverageState {
+    width: 13px;
+    height: 45px;
+    background-color: #67aa62;
+    margin-top: 5px;
+    float: right;
+    border: 1px #4c4c4c solid;
+}
+
+.coverageState {
+    height: 35px;
+    background-color: #FFF;
+    margin-top: 2px;
+    float: right;
+    border: 1px #4c4c4c solid;
+}
+
+.coverageContainer {
+    width: 20px;
+    height: 35px;
+    margin-top: 2px;
+    float: right;
+}
+
+.coverageOK {
+    position: relative;
+    top: 28px;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    background-image: url('../../../WebUserControls/roCalendar/Styles/images/check.png');
+}
+
+.DailySeparator {
+    box-shadow: 0px 2px 0px 0px #0046fe1a;
+}
+
+.EmployeeResume_DetailScheduleFixed .dx-state-focused {
+    background-color: inherit !important;
+    color: inherit !important;
+}
+
+.dextremeGrid .dx-texteditor-container {
+    height: 20px !important;
+}
+
+.dextremeGrid .dx-datagrid-filter-row .dx-editor-cell .dx-editor-with-menu .dx-texteditor-input {
+    margin-top: -3px !important;
+}
+
+.dextremeGrid .dx-editor-with-menu .dx-filter-menu .dx-menu-item-content .dx-icon.dx-icon-filter-operation-default {
+    margin-top: 0px !important;
+}
+
+.dextremeGrid .dx-datagrid-rowsview .dx-selection.dx-row > td {
+    background-color: #729dc1 !important;
+}
+
+.statusAssignDiv {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.descriptionAssignDiv {
+    width: 95%;
+    height: 10px;
+    margin-top: 20px;
+}
+
+.AddEmployeeAlert {
+    float: left;
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.EmployeeAlertText {
+    line-height: 25px;
+}
+
+.redAlert {
+    background: #f00;
+    color: #fff;
+}
+
+.greenAlert {
+    background: #23d700;
+    color: #fff;
+}
+
+.yellowAlert {
+    background: orange;
+    color: #4c4c4c;
+}
+
+.skinAlert {
+    background: #efe4b0;
+    color: #4c4c4c;
+}
+
+.EmployeeDescText {
+    padding-left: 10px;
+    line-height: 25px;
+}
+
+.alertsContainter {
+    padding-top: 10px;
+    padding-left: 275px;
+}
+
+.alignLeft {
+    float: left;
+}
+
+.alignRight {
+    float: right;
+}
+
+.paddingLeft {
+    padding-left: 25px;
+}
+
+.lineDescriptionHeight {
+    line-height: 25px;
+}
+
+.calendarBudgetResticted {
+    background-image: url(images/budgetlock.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    margin-left: 3px;
+    margin-top: 5px;
+}
+
+.dailyCalendarBudgetResticted {
+    background-image: url(images/budgetlock.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 12px;
+    height: 12px;
+    margin-left: 2px;
+    margin-top: 2px;
+}
+
+.budgetDayDetailChange {
+    border-left: 10px solid #a5a5a5;
+}
+
+.budgetRowDetailChange {
+    border-bottom: 10px solid #a5a5a5;
+}
+
+.budgetDailyDayTitle {
+    position: relative;
+    height: 20px;
+    background-color: #d3d3d3;
+    line-height: 18px;
+}
+
+.calendarBudgetDetailText {
+    position: absolute;
+    font-size: 10px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    margin-top: -16px;
+    margin-left: 4px;
+    width: 500px;
+}
+
+.assignEmployeeDetail {
+    background-image: url(images/plus.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+    margin-top: -1px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.deleteAssignedEmployeeDetail {
+    background-image: url(images/delete.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    margin-top: -1px;
+    cursor: pointer;
+}
+
+.budgetMainDetailOnAbsence {
+    background-image: url(images/budgetAlert.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    margin-top: -1px;
+}
+
+.budgetDetailOnAbsence {
+    background-image: url(images/budgetAlert.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+    float: left;
+    padding-left: 20px;
+}
+
+#oBudgetCalendar .ui-layout-toggler-south-closed {
+    background-image: url(images/employee_display.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.loadingLayoutZone {
+    width: 100%;
+    height: 100%;
+    background-image: url(../../../Images/Loaders/loader_v3.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+}
+
+.scaledObject {
+    transform: scale(1.5); /* Igual que: scaleX(0.7) scaleY(0.7) */
+}
+
+.br-theme-fontawesome-stars .br-widget {
+    height: 20px !important;
+}
+
+.alertCausesContainer {
+    max-width: 44px;
+    overflow: hidden;
+}
+
+.tooltipAccrualsLeftCell {
+    float: left;
+    width: 180px;
+    text-align: left;
+    font-size: 10px;
+}
+
+.tooltipAccrualsRightCell {
+    padding-left: 5px;
+    float: left;
+    width: 70px;
+    text-align: left;
+}
+
+.tooltipHolidaysLeftCell {
+    float: left;
+    width: 125px;
+    text-align: left;
+    font-size: 10px;
+}
+
+.tooltipHolidaysRightCell {
+    padding-left: 5px;
+    float: left;
+    width: 50px;
+    text-align: left;
+}
+
+.btnExpand {
+    height: 35px;
+    background-color: #FF5C35;
+    color: #505050;
+    line-height: 35px;
+    background: linear-gradient(#FF5C35, #ffffff);
+}
+
+.btnExpandVer {
+    color: #505050;
+    writing-mode: vertical-lr;
+    width: 35px;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 35px;
+    height: 255px;
+    background: linear-gradient(to right,#FF5C35, #ffffff);
+}
+
+.imgToUp {
+    background-image: url(images/icon-top.png);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 5px;
+    left: 2px;
+}
+
+.shiftToRight {
+    left: 222px !important;
+}
+
+.imgToLeft {
+    background-image: url(images/icon-left.png);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 2px;
+    left: 5px;
+}
+
+.shiftToBottom {
+    top: 222px !important;
+}
+
+.ui-layout-toggler {
+    opacity: 1 !important;
+}
+
+.divMiddleButtons, .ui-layout-resizer, .ui-layout-resizer-closed-hover {
+    background-color: white !important;
+}
+
+.ui-layout-pane {
+    border: none !important;
+}
+
+#tabResumeWaiting {
+    position: absolute;
+    width: 100%;
+    height: 160px;
+    z-index: 1000;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
+    top: calc(100vh - 310px);
+}
+
+    #tabResumeWaiting::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(245, 245, 245, 0.63);
+    }
+
+#tabColumnWaiting {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
+}
+
+    #tabColumnWaiting::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(245, 245, 245, 0.63);
+    }
+
+#tabRowWaiting {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
+}
+
+    #tabRowWaiting::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(245, 245, 245, 0.63);
+    }
+
+.loadingRelatedImg {
+    background-image: url(images/relatedStatic.png);
+    background-size: 48px 48px;
+    width: 48px;
+    height: 100%;
+    margin: auto;
+    cursor: pointer;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.rowLoadingRelatedImg {
+    background-image: url(images/relatedStatic.png);
+    background-size: 48px 48px;
+    width: 48px;
+    height: 100%;
+    margin: auto;
+    cursor: pointer;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.loadingMove {
+    background-image: url(images/relatedLoading.gif);
+}
+
+#ctl00_contentMainBody_oCalendar_dlgAdvCopy_frm .optionPanelRoboticsV2 {
+    padding: 0 !important;
+}

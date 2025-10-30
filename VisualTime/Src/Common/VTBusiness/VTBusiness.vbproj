@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{19563CD9-657E-48A8-9B7E-C8B7B23AF403}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Robotics.Base.VTBusiness</RootNamespace>
+    <AssemblyName>VTBusiness</AssemblyName>
+    <MyType>Windows</MyType>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/VTBusinessNET/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\CommonBin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\CommonBin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Multitennant|AnyCPU'">
+    <DebugSymbols>false</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\CommonBin\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Common\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Common\ExcelLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Common\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Robotics.Excel9.Interop">
+      <HintPath>..\..\..\Common\Robotics.Excel9.Interop.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SpreadsheetLight, Version=3.4.9.0, Culture=neutral, PublicKeyToken=32fbb46dc1730c57, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Common\SpreadsheetLight.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\AssemblyVersionInfo.vb">
+      <Link>AssemblyVersionInfo.vb</Link>
+    </Compile>
+    <Compile Include="EmployeeSummary\roEmployeeSummaryManager.vb" />
+    <Compile Include="roEngineData.vb" />
+    <Compile Include="roEventScheduler.vb" />
+    <Compile Include="roEventSchedulerState.vb" />
+    <Compile Include="DataSets\PresenceDetailDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PresenceDetailDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\SchedulerEmployeeDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchedulerEmployeeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\SchedulerRemarksDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchedulerRemarksDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="roAssignment.vb" />
+    <Compile Include="roAssignmentState.vb" />
+    <Compile Include="roBusinessCenter.vb" />
+    <Compile Include="roBusinessCenterState.vb" />
+    <Compile Include="roCauseDocument.vb" />
+    <Compile Include="roDailyCoverage.vb" />
+    <Compile Include="roDiningRoom.vb" />
+    <Compile Include="roDiningRoomState.vb" />
+    <Compile Include="roDocumentAbsence.vb" />
+    <Compile Include="roDocumentAbsenceAdvice.vb" />
+    <Compile Include="roDocumentAbsenceState.vb" />
+    <Compile Include="roEmployeeTaskState.vb" />
+    <Compile Include="roGroupIndicator.vb" />
+    <Compile Include="roGroupTaskState.vb" />
+    <Compile Include="roIndicator.vb" />
+    <Compile Include="roIndicatorState.vb" />
+    <Compile Include="roProgrammedCause.vb" />
+    <Compile Include="roProgrammedCauseState.vb" />
+    <Compile Include="roPunch.vb" />
+    <Compile Include="roPunchState.vb" />
+    <Compile Include="roShiftAssignment.vb" />
+    <Compile Include="roSupport.vb" />
+    <Compile Include="roTask.vb" />
+    <Compile Include="roTaskState.vb" />
+    <Compile Include="roTaskTemplate.vb" />
+    <Compile Include="roVisitors.vb" />
+    <Compile Include="roVisitorsState.vb" />
+    <Compile Include="roVisits.vb" />
+    <Compile Include="roVisitsState.vb" />
+    <Compile Include="roZoneWorkCenter.vb" />
+    <Compile Include="roZonePlane.vb" />
+    <Compile Include="roCameraState.vb" />
+    <Compile Include="roCamera.vb" />
+    <Compile Include="roJob.vb" />
+    <Compile Include="roJobMove.vb" />
+    <Compile Include="roJobQualityFields.vb" />
+    <Compile Include="roJobState.vb" />
+    <Compile Include="roPerformance.vb" />
+    <Compile Include="roScheduleTemplate.vb" />
+    <Compile Include="roAccessGroupState.vb" />
+    <Compile Include="roAccessMove.vb" />
+    <Compile Include="roAccessMoveState.vb" />
+    <Compile Include="roAccessPeriodState.vb" />
+    <Compile Include="roCapture.vb" />
+    <Compile Include="roAccessGroupPermission.vb" />
+    <Compile Include="roAccessGroup.vb" />
+    <Compile Include="roAccessPeriodHolidays.vb" />
+    <Compile Include="roAccessPeriodDaily.vb" />
+    <Compile Include="roAccessPeriod.vb" />
+    <Compile Include="roActivity.vb" />
+    <Compile Include="roActivityCompany.vb" />
+    <Compile Include="roActivityState.vb" />
+    <Compile Include="roCaptureState.vb" />
+    <Compile Include="roTerminalTimeZone.vb" />
+    <Compile Include="roZoneInactivity.vb" />
+    <Compile Include="roZoneException.vb" />
+    <Compile Include="roConceptGroup.vb" />
+    <Compile Include="roScheduler.vb" />
+    <Compile Include="roTimeZone.vb" />
+    <Compile Include="roAccessMethods.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="roAccrualsRule.vb" />
+    <Compile Include="roCause.vb" />
+    <Compile Include="roCauseState.vb" />
+    <Compile Include="roConcept.vb" />
+    <Compile Include="roConceptComposition.vb" />
+    <Compile Include="roConceptState.vb" />
+    <Compile Include="roEntry.vb" />
+    <Compile Include="roGroup.vb" />
+    <Compile Include="roGroupState.vb" />
+    <Compile Include="roProgrammedAbsence.vb" />
+    <Compile Include="roProgrammedAbsenceState.vb" />
+    <Compile Include="roReportGroup.vb" />
+    <Compile Include="roCostCenter.vb" />
+    <Compile Include="roCostCenterState.vb" />
+    <Compile Include="roDailyCause.vb" />
+    <Compile Include="roDailySchedule.vb" />
+    <Compile Include="roIncidence.vb" />
+    <Compile Include="roIncidenceState.vb" />
+    <Compile Include="roMove.vb" />
+    <Compile Include="roMoveState.vb" />
+    <Compile Include="roRemark.vb" />
+    <Compile Include="roReportState.vb" />
+    <Compile Include="roSchedulerRemarks.vb" />
+    <Compile Include="roSchedulerState.vb" />
+    <Compile Include="roShift.vb" />
+    <Compile Include="roShiftLayer.vb" />
+    <Compile Include="roShiftRule.vb" />
+    <Compile Include="roShiftState.vb" />
+    <Compile Include="roShiftTimeZone.vb" />
+    <Compile Include="roTerminal.vb" />
+    <Compile Include="roTerminalMessage.vb" />
+    <Compile Include="roTerminalSiren.vb" />
+    <Compile Include="roTerminalState.vb" />
+    <Compile Include="roUserTask.vb" />
+    <Compile Include="roUserTaskState.vb" />
+    <Compile Include="roZone.vb" />
+    <Compile Include="roZoneGroup.vb" />
+    <Compile Include="roZoneState.vb" />
+    <Compile Include="wscAuditState.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DataSets\PresenceDetailDataSet.xsc">
+      <DependentUpon>PresenceDetailDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\PresenceDetailDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PresenceDetailDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSets\PresenceDetailDataSet.xss">
+      <DependentUpon>PresenceDetailDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\SchedulerEmployeeDataSet.xsc">
+      <DependentUpon>SchedulerEmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\SchedulerEmployeeDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchedulerEmployeeDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSets\SchedulerEmployeeDataSet.xss">
+      <DependentUpon>SchedulerEmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\SchedulerRemarksDataSet.xsc">
+      <DependentUpon>SchedulerRemarksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\SchedulerRemarksDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchedulerRemarksDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSets\SchedulerRemarksDataSet.xss">
+      <DependentUpon>SchedulerRemarksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataLayer\DataLayer.vbproj">
+      <Project>{a68015f9-a070-4ab5-941e-c922fbc5ff30}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTOs.VTPortal\DTOs.VTPortal.vbproj">
+      <Project>{38052328-369e-4e56-a112-1a03362207e1}</Project>
+      <Name>DTOs.VTPortal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTOs\DTOs\DTOs.vbproj">
+      <Project>{00be6247-e1ed-4e0a-bd02-8dbb4e00ffe1}</Project>
+      <Name>DTOs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SecurityLayer\SecurityLayer.vbproj">
+      <Project>{e712f6a2-5e54-4731-9b11-af80242a246c}</Project>
+      <Name>SecurityLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTAzure\VTAzure.vbproj">
+      <Project>{c4ad9d15-4368-4343-b1e1-263abf0e8ab0}</Project>
+      <Name>VTAzure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTBase.Extensions\VTBase.Extensions.vbproj">
+      <Project>{d99ce0c2-ad93-4f3d-a35b-c97749de1bde}</Project>
+      <Name>VTBase.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTBase.Security\VTBase.Security.vbproj">
+      <Project>{c1b73385-8dff-40b0-8c3b-d2e0ded2621e}</Project>
+      <Name>VTBase.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTBase\VTBase.vbproj">
+      <Project>{f1d0ec70-d874-4eed-8ab9-f28fcda2b7f0}</Project>
+      <Name>VTBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTBusinessBase\VTBusiness.Common.vbproj">
+      <Project>{97d87ef7-2b41-4216-a6d2-fa9e3c1bc570}</Project>
+      <Name>VTBusiness.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTEmployees\VTEmployees.vbproj">
+      <Project>{c0e7da43-d1b9-4427-b147-47a269b8706f}</Project>
+      <Name>VTEmployees</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTHolidays\VTHolidays.vbproj">
+      <Project>{d5d13f4d-3ceb-417e-bb21-bb9075d18705}</Project>
+      <Name>VTHolidays</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTNotifications\VTNotifications.vbproj">
+      <Project>{fa9a3bba-e4f3-40ad-bde3-84639db5c522}</Project>
+      <Name>VTNotifications</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTSelector\VTUniversalSelector.vbproj">
+      <Project>{F0ABF7A8-2200-49F1-B657-ADB9BE5B7B77}</Project>
+      <Name>VTUniversalSelector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTUserFields\VTUserFields.vbproj">
+      <Project>{7085e89b-7690-480f-b8d4-e356e1365048}</Project>
+      <Name>VTUserFields</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

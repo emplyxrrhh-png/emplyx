@@ -1,0 +1,19 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxMenu runat="server" AutoSeparators="RootOnly" ItemSpacing="0px" ShowSubMenuShadow="True" SpriteCssFilePath="{0}/sprite.css"  CssPostfix="Material1" CssFilePath="{0}/styles.css">
+</dx:ASPxMenu>
+
+<dx:ASPxMenu runat="server" SkinID="MenuButtons" SpriteCssFilePath="{0}/sprite.css"  CssFilePath="{0}/styles.css"
+         AutoSeparators="None" ItemSpacing="5px" ShowPopOutImages="True" CssPostfix="Material1" CssClass="menuButtons menuButtons_Material1" SeparatorHeight="0px">
+    <Border BorderWidth="0px" />
+    <ItemStyle DropDownButtonSpacing="11px"></ItemStyle>
+    <RootItemSubMenuOffset X="-1" LastItemX="-1" FirstItemX="-1"></RootItemSubMenuOffset>
+    <SubMenuItemStyle Wrap="False"></SubMenuItemStyle>
+</dx:ASPxMenu>
+<dx:ASPxMenu runat="server" SkinID="MenuLinks" CssFilePath="{0}/styles.css" ItemSpacing="0px" ShowPopOutImages="True" 
+    CssPostfix="Material1" SpriteCssFilePath="{0}/sprite.css"  SeparatorColor="#AECAF0" 
+    CssClass="menuLinks_Material1">
+</dx:ASPxMenu>
+
+

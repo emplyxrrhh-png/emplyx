@@ -1,0 +1,74 @@
+<div data-options="dxView : { name: 'myAccruals', title: 'myAccruals', disableCache: true } " >
+    <div data-bind="if: hasPermission() == true">
+        
+        <div data-bind="if: scheduleDS().length > 0 || productivDS().length > 0 || holidaysDS().length > 0">
+            <div id="scrollview" style="clear:both" data-bind="dxScrollView: { }">
+                <div id="list" class="list-container" data-bind="if: scheduleDS().length > 0">
+                    <div id="listSchedule" data-bind="dxList: listSchedule">
+                        <div data-options="dxTemplate: {name: 'ScheduleItem'}">
+                            <div data-bind="text: $data.Name"></div>
+                            <div data-bind="dxLinearGauge: $data.Gauge"></div>
+                        </div>
+                    </div>
+                </div>
+
+				<div id="list2" class="list-container" data-bind="if: holidaysDS().length > 0">
+
+					<div id="listHolidays" data-bind="dxList: listHolidays">
+						<div data-options="dxTemplate: {name: 'HolidaysItem'}">
+							<div data-bind="dxChart: $data.Gauge"></div>
+						</div>
+					</div>
+				</div>
+
+                <div id="list3" class="list-container" data-bind="if: productivDS().length > 0">
+                    <div id="listProductiV" data-bind="dxList: listProductiV">
+                        <div data-options="dxTemplate: {name: 'ProductiVItem'}">
+                            <div data-bind="dxChart: $data.Gauge"></div>
+                        </div>
+                    </div>
+                </div>
+
+				<div data-bind="if:cmbSummaryShiftDS().length > 0" style="padding-top: 5px;padding-bottom: 20px;margin: 5px;">
+					<div class="dx-fieldset">
+						<div class="dx-field">
+							<span data-bind="text: lblSummaryShift" style="font-size: 12px;line-height: 32px;font-weight: bold;color: rgba(0, 0, 0, 0.54);"></span>
+							<div class="dx-field-value" data-bind="dxSelectBox: cmbSummaryShift"></div>
+						</div>
+						<div data-bind="dxDataGrid: detailGrid" id="gridHolidaysDetail" style="margin-top:20px;font-size:13px;"></div>
+						<div data-bind="dxDataGrid: summaryGrid" id="gridSummaryHolidays" style="margin-top:20px;font-size:13px;padding-bottom:50px;"></div>						
+						<style>
+							#gridSummaryHolidays .dx-datagrid-headers .dx-datagrid-table .dx-row.dx-header-row > td, #gridHolidaysDetail .dx-datagrid-headers .dx-datagrid-table .dx-row.dx-header-row > td {
+							background-color: #b9d7ff75;
+							}
+							.dx-list-group:last-child .dx-list-group-body > .dx-item:last-child {
+							border-bottom: 2px solid #0046FE;
+							}
+							div#gridHolidaysDetail .dx-datagrid-headers {
+							display: none;
+							}
+							div#gridHolidaysDetail {
+							border-top: 1px solid #CBCBCB;
+							}
+						</style>
+					</div>
+				</div>
+				
+            </div>
+        </div>
+
+        <div data-bind="if: scheduleDS().length <= 0 && productivDS().length <= 0 && holidaysDS().length <= 0">
+            <div class="noDataCssClass"></div>
+        </div>
+
+        <div id="btnActionMenuPopover" class="actionButton fixedButton" data-bind="dxButton: newRequest"></div>
+    </div>
+
+    <div data-bind="dxLoadPanel: loadingPanel"> </div>
+
+	<div data-bind="if: hasPermission() == false">
+		<!--ko with: noPermissions-->
+		<div data-options="dxViewPlaceholder: { viewName: 'noPermissions' } "></div>
+		<!-- /ko-->
+	</div>
+</div>

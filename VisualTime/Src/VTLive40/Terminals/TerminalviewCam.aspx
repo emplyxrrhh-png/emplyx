@@ -1,0 +1,1 @@
+﻿<%@ Page Language="VB" AutoEventWireup="false" EnableEventValidation="false" Inherits="VTLive40.TerminalviewCam" Culture="auto" UICulture="auto" CodeBehind="TerminalviewCam.aspx.vb" %>

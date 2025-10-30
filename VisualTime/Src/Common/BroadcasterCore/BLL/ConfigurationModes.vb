@@ -1,0 +1,2 @@
+﻿Partial Public Class ConfigurationModes
+End Class

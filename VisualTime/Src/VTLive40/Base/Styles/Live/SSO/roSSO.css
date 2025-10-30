@@ -1,0 +1,107 @@
+﻿@font-face {
+    font-family: "Robotics";
+    src: local("Poppins"),local("Poppins-Regular"),url(../../fonts/Poppins-Regular.ttf) format("truetype");
+    /*src: local("Roboto"),local("Roboto-Regular"),url(../../fonts/Roboto-Regular.ttf) format("truetype");*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Robotics";
+    src: url(../../fonts/Poppins-Bold.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    font-family: "Robotics";
+    font-size: 12px;
+}
+
+.dx-list-select-radiobutton-container {
+    vertical-align: top;
+    padding-top: 10px;
+}
+
+.ssoOption {
+    margin-top: 0px;
+    margin-bottom: 0px !important;
+}
+
+.ssoTitle{
+    font-weight:bold;
+    font-size:14px;
+}
+
+.dx-scrollable-content {
+    column-count: 2;
+    -moz-column-count: 2;
+}
+
+.dx-list-item {
+    border-top: none;
+    break-inside: avoid;
+}
+
+    .dx-list-item:last-of-type {
+        border: none;
+    }
+
+
+
+#btSubmitNewConfiguration {
+    background-color: #0046fe;
+    color: white;
+    border-color: #0046fe;
+}
+
+    #btSubmitNewConfiguration.dx-state-hover {
+        background-color: #FF5C35;
+        border-color: #FF5C35;
+        color: white;
+    }
+
+    #btSubmitNewConfiguration.dx-state-active {
+        background-color: #FF5C35;
+        border-color: #FF5C35;
+        color: white;
+    }
+
+
+#btCheckInput {
+    background-color: #7b91ff;
+    color: white;
+    border-color: #7088ff;
+}
+
+    #btCheckInput.dx-state-hover {
+        background-color: #7088ff;
+        color: white;
+    }
+
+    #btCheckInput.dx-state-active {
+        background-color: #7088ff;
+        color: white;
+    }
+
+
+.helpBodyPopup {
+    height: 625px;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+}
+
+.helpIMG {
+    width: 80%;
+    object-fit: contain;
+    margin-left: 10%;
+    margin-top:15px;
+    margin-bottom:30px;
+}
+
+
+#rgSSOptions .dx-list-item {
+    border-top: none;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #0046fe;
+}

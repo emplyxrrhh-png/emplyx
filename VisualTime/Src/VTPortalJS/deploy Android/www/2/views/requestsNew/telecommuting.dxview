@@ -1,0 +1,104 @@
+<div data-options="dxView : { name: 'telecommuting', title: 'telecommuting', disableCache: true } " >
+
+        <div id="smallUserInfo"></div>
+
+	<div  style="height:90%">
+		<div style="clear:both;border-radius: 25px;height: calc(100% - 2rem);" class="card card-one" data-bind="dxScrollView: scrollContent">
+			<!-- ko if: requestMainDivVisible() -->
+			<div id="divEmployeeInfo">
+				<header>
+					<div class="avatar">
+						<div style="width:100px; height:100px;background-size: contain !important; " data-bind="style: { backgroundImage: empImage }"></div>
+					</div>
+				</header>
+
+				<h3>
+					<span data-bind="text: lblEmployee"></span>
+					<div class="descGroup">
+						<span data-bind="text: lblGroupName"></span>
+					</div>
+				</h3>
+
+			</div>
+			<div id="divRequestDates">
+				<div class="desc">
+					<div data-bind="html: lblRequestDates">
+					</div>
+				</div>
+			
+			</div>
+			<!-- /ko-->
+			<!-- ko if: loadingDivVisible() -->
+			<div id="divLoadingInfo">
+				<header>
+					<div class="avatar">
+						<div style="width:100px; height:100px;background-size: contain !important; " data-bind="style: { backgroundImage: empImage }"></div>
+					</div>
+				</header>
+				<div class="desc">
+					<div style="margin-top: 100px;"  data-bind="text: lblLoading"></div>
+				</div>
+			</div>
+			<!-- /ko-->
+			<!-- ko if: infoDivVisible() -->
+			<div id="divRequestInfo">
+				<h4>
+					<span data-bind="text: lblDetails"></span>
+				</h4>
+				<div class="h-divider">
+					<div class="shadow"></div>
+				</div>
+				<div class="desc">
+					<div data-bind="html: tcPeriodStart"></div>
+				</div>
+				<div class="desc">
+					<div data-bind="html: tcCurrentPercentage"></div>
+				</div>
+				
+				
+			</div>
+			<!-- /ko-->
+			<!-- ko if: accrualsDivVisible() -->
+			<div style="margin-bottom: 20px;" id="divAccruals">
+				<h4>
+					<span data-bind="text: lblAccruals"></span>
+				</h4>
+				<div class="h-divider">
+					<div class="shadow"></div>
+				</div>
+				<div class="containerAccruals">
+					<div class="circleRequest">
+						<div data-bind="text: lblApproved"></div>
+						<div style="font-size: 10px;" data-bind="text: lblApprovedText"></div>
+					</div>
+					<div class="circleRequest">
+						<div data-bind="text: lblPending"></div>
+						<div style="font-size: 10px;" data-bind="text: lblPendingText"></div>
+					</div>
+					<div class="circleRequest">
+						<div data-bind="text: lblAvailable"></div>
+						<div style="font-size: 10px;" data-bind="text: lblAvailableText"></div>
+					</div>
+				</div>
+			</div>
+			<!-- /ko-->
+			<div></div>
+			<br></br>
+			
+		</div>
+	</div>
+	<div class="approvalPopup" data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:true, visible: popupVisible, height: 'auto'}">
+		<!--ko with: myApprovalsBlock-->
+		<div data-options="dxViewPlaceholder: { viewName: 'approvalHistory' } "></div>
+		<!-- /ko-->
+	</div>
+
+	<div class="fixedMenuButton2">
+		<div class="actionButton mainMenuButton" data-bind="dxButton: btnApprove"></div>
+		<div class="actionButton mainMenuButton" data-bind="dxButton: btnRefuse"></div>
+		<div class="actionButton mainMenuButton" data-bind="dxButton: btnHistory"></div>
+	</div>
+
+	<div data-bind="dxLoadPanel: loadingPanel"> </div>
+   
+</div>

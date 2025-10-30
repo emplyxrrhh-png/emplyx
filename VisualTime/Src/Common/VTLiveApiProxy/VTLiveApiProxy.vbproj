@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0F60D1E0-DAE9-4A1E-BEC6-E8226FA5BF12}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>VTLiveApi</RootNamespace>
+    <AssemblyName>VTLiveApiProxy</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\..\..\..\..\Common\Dlls2014\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\..\..\Common\Dlls2014\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Multitennant|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Multitennant\</OutputPath>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Common\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Common\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=b32731d11ce58905">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Common\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Channels" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\AssemblyVersionInfo.vb">
+      <Link>AssemblyVersionInfo.vb</Link>
+    </Compile>
+    <Compile Include="AccessGroups\AccessGroupProxy.vb" />
+    <Compile Include="AccessMoves\AccessMoveProxy.vb" />
+    <Compile Include="AccessPeriods\AccessPeriodProxy.vb" />
+    <Compile Include="AIScheduling\AISchedulingProxy.vb" />
+    <Compile Include="Assignment\AssignmentProxy.vb" />
+    <Compile Include="Audit\AuditProxy.vb" />
+    <Compile Include="Calendar\CalendarProxy.vb" />
+    <Compile Include="Cameras\CameraProxy.vb" />
+    <Compile Include="Captures\CaptureProxy.vb" />
+    <Compile Include="Causes\CausesProxy.vb" />
+    <Compile Include="Common\CommonProxy.vb" />
+    <Compile Include="Communique\CommuniqueProxy.vb" />
+    <Compile Include="Concepts\ConceptsProxy.vb" />
+    <Compile Include="Connector\ConnectorProxy.vb" />
+    <Compile Include="Contracts\ContractsProxy.vb" />
+    <Compile Include="CostCenters\CostCenterProxy.vb" />
+    <Compile Include="DataLinkBase\DataLinkBaseProxy.vb" />
+    <Compile Include="Datalink\DatalinkProxy.vb" />
+    <Compile Include="DiningRoom\DiningRoomProxy.vb" />
+    <Compile Include="DocumentsAbsences\DocumentAbsenceProxy.vb" />
+    <Compile Include="Documents\DocumentsProxy.vb" />
+    <Compile Include="EmployeeGroups\EmployeeGroupProxy.vb" />
+    <Compile Include="Employees\EmployeeProxy.vb" />
+    <Compile Include="EventsScheduler\EventsSchedulerProxy.vb" />
+    <Compile Include="Incidences\IncidenceProxy.vb" />
+    <Compile Include="Indicators\IndicatorProxy.vb" />
+    <Compile Include="LabAgree\LabAgreesProxy.vb" />
+    <Compile Include="License\LicenseProxy.vb" />
+    <Compile Include="LiveTasks\LiveTasksProxy.vb" />
+    <Compile Include="Moves\MoveProxy.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Notifications\NotificationProxy.vb" />
+    <Compile Include="PortalBase\PortalBaseProxy.vb" />
+    <Compile Include="ProgrammedAbsences\ProgrammedAbsencesProxy.vb" />
+    <Compile Include="ProgrammedCauses\ProgrammedCausesProxy.vb" />
+    <Compile Include="ProgrammedHolidays\ProgrammedHolidaysProxy.vb" />
+    <Compile Include="ProgrammedOvertimes\ProgrammedOvertimesProxy.vb" />
+    <Compile Include="Punches\PunchProxy.vb" />
+    <Compile Include="Reports\ReportProxy.vb" />
+    <Compile Include="Requests\RequestProxy.vb" />
+    <Compile Include="ScheduleRules\ScheduleRulesProxy.vb" />
+    <Compile Include="Scheduler\SchedulerProxy.vb" />
+    <Compile Include="SDK\SDKProxy.vb" />
+    <Compile Include="SecurityOptions\SecurityOptionProxy.vb" />
+    <Compile Include="Security\SecurityBaseProxy.vb" />
+    <Compile Include="Security\SecurityChartProxy.vb" />
+    <Compile Include="Security\SecurityV3Proxy.vb" />
+    <Compile Include="Security\SecurityProxy.vb" />
+    <Compile Include="Security\UserAdminProxy.vb" />
+    <Compile Include="Shifts\ShiftProxy.vb" />
+    <Compile Include="Tasks\TaskProxy.vb" />
+    <Compile Include="Tasks\TaskTemplateProxy.vb" />
+    <Compile Include="Terminal\TerminalBaseProxy.vb" />
+    <Compile Include="UserFields\UserFieldProxy.vb" />
+    <Compile Include="UserTasks\UserTaskProxy.vb" />
+    <Compile Include="Zones\ZoneProxy.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\VTReports\VTReports.csproj">
+      <Project>{145e797e-3d98-4e9d-9109-9bc7d1b2a18a}</Project>
+      <Name>VTReports</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLayer\DataLayer.vbproj">
+      <Project>{707eea70-7ed9-407a-bd75-99f54405fbe7}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTOs.VTPortal\DTOs.VTPortal.vbproj">
+      <Project>{38052328-369e-4e56-a112-1a03362207e1}</Project>
+      <Name>DTOs.VTPortal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTOs\DTOs\DTOs.vbproj">
+      <Project>{879d6b8d-c989-4e95-9326-65267c4cece9}</Project>
+      <Name>DTOs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExternalSystems\ExternalSystems.vbproj">
+      <Project>{60c4b261-723f-40e8-8fad-4c69ed68dfb0}</Project>
+      <Name>ExternalSystems</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Portal\Business\Portal.Business.vbproj">
+      <Project>{54f1af4c-7357-4680-8b6d-3036f436457b}</Project>
+      <Name>Portal.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SecurityLayer\SecurityLayer.vbproj">
+      <Project>{f8ee5d56-d0cb-4616-bf88-5d34a5ee7be1}</Project>
+      <Name>SecurityLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UsersAdmin\UsersAdmin.vbproj">
+      <Project>{f68196dc-432c-4801-92dd-1dcc0320d84d}</Project>
+      <Name>UsersAdmin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTAzure\VTAzure.vbproj">
+      <Project>{d3aec7eb-9172-4a4c-a830-fed59e463490}</Project>
+      <Name>VTAzure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTBase.Extensions\VTBase.Extensions.vbproj">
+      <Project>{c6a86bda-6728-4050-a9e5-c935a406b3f2}</Project>
+      <Name>VTBase.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTBase\VTBase.vbproj">
+      <Project>{c90eb95e-51bf-4242-b88d-bd60759f7d83}</Project>
+      <Name>VTBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTBudgets\VTBudgets.vbproj">
+      <Project>{807ece65-1cf2-4a95-b44b-f8b1a9c1ac18}</Project>
+      <Name>VTBudgets</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTBusinessBase\VTBusiness.Common.vbproj">
+      <Project>{d5028a71-3d0f-415d-9bd1-e01fc122335a}</Project>
+      <Name>VTBusiness.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTBusiness\VTBusiness.vbproj">
+      <Project>{a3cfc662-7ac4-41f0-98c4-607d48b330de}</Project>
+      <Name>VTBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTCommuniques\VTCommuniques.vbproj">
+      <Project>{671DB1F2-07C6-4D5F-8F3E-08F86BDBF070}</Project>
+      <Name>VTCommuniques</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTDatalink\VTDataLink.vbproj">
+      <Project>{105874b8-71e3-4918-a42f-008f9535d41d}</Project>
+      <Name>VTDataLink</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTDocuments\VTDocuments.vbproj">
+      <Project>{7d4b6839-7c36-4ef4-b722-0f822feb4f99}</Project>
+      <Name>VTDocuments</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTEmployees\VTEmployees.vbproj">
+      <Project>{650a5f13-6978-4e1b-8a39-91f39a269d08}</Project>
+      <Name>VTEmployees</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTHolidays\VTHolidays.vbproj">
+      <Project>{255429c7-901f-448a-9603-2fa1e1d1a950}</Project>
+      <Name>VTHolidays</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTLiveApiBase\VTLiveApiBase.vbproj">
+      <Project>{32d5f911-f63b-433e-aebd-a405997aac8c}</Project>
+      <Name>VTLiveApiBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTNotifications\VTNotifications.vbproj">
+      <Project>{8ef9f238-092f-4009-8a3d-d8eea7159f6d}</Project>
+      <Name>VTNotifications</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTRequests\VTRequests.vbproj">
+      <Project>{9b3a1432-cb74-4b4b-9349-78cb700e185a}</Project>
+      <Name>VTRequests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTScheduler\VTCalendar.vbproj">
+      <Project>{7363a89d-536f-46b6-8fab-89b93f3ef1e6}</Project>
+      <Name>VTCalendar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTSDK\VTSDK.vbproj">
+      <Project>{a6743480-d20b-4e7f-ae50-8449cf3dc916}</Project>
+      <Name>VTSDK</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTSecurity\VTSecurity.vbproj">
+      <Project>{5ba611c2-a631-40d7-a8b4-f5633be9c197}</Project>
+      <Name>VTSecurity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTTerminals\VTTerminals.vbproj">
+      <Project>{81925130-f32c-4f09-9e2b-600416f23dee}</Project>
+      <Name>VTTerminals</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTUserFields\VTUserFields.vbproj">
+      <Project>{60f53391-3b68-4489-8ec2-06e6079727ce}</Project>
+      <Name>VTUserFields</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTVisits\VTVisits.vbproj">
+      <Project>{4eb11d06-dbe6-4d94-8b99-4890081649a8}</Project>
+      <Name>VTVisits</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

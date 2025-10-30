@@ -1,0 +1,21 @@
+<div data-options="dxView : { name: 'requestsList', title: 'requestsList' } ">
+
+
+	<div id="smallUserInfo"></div>
+    
+        <div data-bind="dxList: listOptions" style="">
+            <div data-options="dxTemplate: {name: 'RequestTypeItem'}">
+                <div class="listMenuItem">
+                    <div data-bind="css: $data.cssClass" class="listMenuItemIcon"></div>
+                    <div class="listMenuItemContent">
+                        <div data-bind="text: $data.Name"></div>
+                        <div class="smallTextDescription" data-bind="html: $data.Description"></div>
+                    </div>
+
+                    <div data-bind="if: $data.hasAction == true"><div class="list-item-arrow"></div></div>
+                </div>
+            </div>
+        </div>
+   
+    
+</div>

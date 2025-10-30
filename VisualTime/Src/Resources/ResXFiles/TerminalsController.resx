@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_frmconsole.caption.rotext" xml:space="preserve">
+    <value>Controlador de terminales</value>
+  </data>
+  <data name="RES_frmconsole.cmdok.caption.rotext" xml:space="preserve">
+    <value>&amp;Aceptar</value>
+  </data>
+  <data name="RES_frmconsole.cmdok.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.cmdterminaloptions.caption.rotext" xml:space="preserve">
+    <value>Opciones de terminales</value>
+  </data>
+  <data name="RES_frmconsole.cmdterminaloptions.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.framain.1.caption.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.framain.1.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.framain.2.caption.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.framain.2.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.framain.3.caption.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.framain.3.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.imgalerts.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.imglog.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.imgnoalerts.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.imgterminaloptions.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.lblalerts.caption.rotext" xml:space="preserve">
+    <value>La lista siguiente describe los problemas existentes actualmente con los terminales en este ordenador:</value>
+  </data>
+  <data name="RES_frmconsole.lblalerts.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.lbllogviewdesc.caption.rotext" xml:space="preserve">
+    <value>Esta pantalla muestra información técnica del funcionamiento del controlador. No es necesario que acceda aqui si no es por indicación del servicio técnico.</value>
+  </data>
+  <data name="RES_frmconsole.lbllogviewdesc.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.lbllogviewheader.caption.rotext" xml:space="preserve">
+    <value>Visor de sucesos:</value>
+  </data>
+  <data name="RES_frmconsole.lbllogviewheader.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.lblnoalerts.caption.rotext" xml:space="preserve">
+    <value>Los terminales están funcionando correctamente.</value>
+  </data>
+  <data name="RES_frmconsole.lblnoalerts.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.lblstatustitle.caption.rotext" xml:space="preserve">
+    <value>Estado actual de los Terminales:</value>
+  </data>
+  <data name="RES_frmconsole.lblstatustitle.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.lblterminaloptions.caption.rotext" xml:space="preserve">
+    <value>Puede consultar más detalles y configurar parámetros de los terminales desde la pantalla de opciones de terminales.</value>
+  </data>
+  <data name="RES_frmconsole.lblterminaloptions.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.lblterminaloptionsheader.caption.rotext" xml:space="preserve">
+    <value>Configuración de Terminales:</value>
+  </data>
+  <data name="RES_frmconsole.lblterminaloptionsheader.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.lvlog.headers.message.caption.rotext" xml:space="preserve">
+    <value>Mensaje</value>
+  </data>
+  <data name="RES_frmconsole.lvlog.headers.process.caption.rotext" xml:space="preserve">
+    <value>Proceso</value>
+  </data>
+  <data name="RES_frmconsole.lvlog.headers.station.caption.rotext" xml:space="preserve">
+    <value>Estación</value>
+  </data>
+  <data name="RES_frmconsole.lvlog.headers.time.caption.rotext" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="RES_frmconsole.lvlog.headers.type.caption.rotext" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="RES_frmconsole.lvlog.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.lvusertasks.headers.completed.caption.rotext" xml:space="preserve">
+    <value>Completado</value>
+  </data>
+  <data name="RES_frmconsole.lvusertasks.headers.created.caption.rotext" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="RES_frmconsole.lvusertasks.headers.message.caption.rotext" xml:space="preserve">
+    <value>Mensaje</value>
+  </data>
+  <data name="RES_frmconsole.lvusertasks.headers.origin.caption.rotext" xml:space="preserve">
+    <value>Origen</value>
+  </data>
+  <data name="RES_frmconsole.lvusertasks.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.mnuseparator.caption.rotext" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="RES_frmconsole.mnusystray.caption.rotext" xml:space="preserve">
+    <value>SysTrayMenu</value>
+  </data>
+  <data name="RES_frmconsole.mnusystrayabout.caption.rotext" xml:space="preserve">
+    <value>&amp;Acerca de...</value>
+  </data>
+  <data name="RES_frmconsole.mnusystrayclose.caption.rotext" xml:space="preserve">
+    <value>C&amp;errar</value>
+  </data>
+  <data name="RES_frmconsole.mnusystrayopen.caption.rotext" xml:space="preserve">
+    <value>Abrir &amp;consola</value>
+  </data>
+  <data name="RES_frmconsole.servershutdownwait.begin.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.servershutdownwait.closesessions.description.rotext" xml:space="preserve">
+    <value>Cerrando sesiones activas...</value>
+  </data>
+  <data name="RES_frmconsole.servershutdownwait.disconnectprocesses.description.rotext" xml:space="preserve">
+    <value>Deteniendo procesos...</value>
+  </data>
+  <data name="RES_frmconsole.servershutdownwait.notifyshutdowntoclients.description.rotext" xml:space="preserve">
+    <value>Avisando a clientes para que desconecten...</value>
+  </data>
+  <data name="RES_frmconsole.servershutdownwait.removingobjects.description.rotext" xml:space="preserve">
+    <value>Descargando objetos...</value>
+  </data>
+  <data name="RES_frmconsole.servershutdownwait.savelog.description.rotext" xml:space="preserve">
+    <value>Guardando registro de eventos...</value>
+  </data>
+  <data name="RES_frmconsole.servershutdownwait.schedulerterminate.description.rotext" xml:space="preserve">
+    <value>Apagando scheduler...</value>
+  </data>
+  <data name="RES_frmconsole.servershutdownwait.title.rotext" xml:space="preserve">
+    <value>Cerrando Controlador de terminales</value>
+  </data>
+  <data name="RES_frmconsole.tbmain.tabs.1.caption.rotext" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="RES_frmconsole.tbmain.tabs.2.caption.rotext" xml:space="preserve">
+    <value>Visor de sucesos</value>
+  </data>
+  <data name="RES_frmconsole.tbmain.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_initslavemaster.msg.couldnotloadprocess.message.rotext" xml:space="preserve">
+    <value>El Controlador de terminales no puede iniciarse porque un proceso del mismo ha devuelto un error.$CR$CRDetalles: El proceso ${1} devolvió el error ${2}:´${3}´.</value>
+  </data>
+  <data name="RES_initslavemaster.msg.couldnotloadprocess.title.rotext" xml:space="preserve">
+    <value>Error de inicialización</value>
+  </data>
+  <data name="RES_initslavemaster.msg.serverinterfaceerror.message.rotext" xml:space="preserve">
+    <value>Existe un error de interfície con el servidor. Pruebe a reiniciar el servidor y luego el Controlador de terminales para ver si el problema persiste. Si es asi, seguramente las versiones de ambos programas son incompatibles entre si y debe obtener una actualización.$CRDetalles: Error ${1}:´${2}´</value>
+  </data>
+  <data name="RES_initslavemaster.msg.serverinterfaceerror.title.rotext" xml:space="preserve">
+    <value>Error de interfície</value>
+  </data>
+  <data name="RES_initslavemaster.msg.servernotready.message.rotext" xml:space="preserve">
+    <value>El servidor de Visualtime no está disponible. Para poder iniciar el Controlador de Terminales, el servidor de Visualtime debe estar funcionando.$CRSi cree que está funcionando, revise la conexión de la red.</value>
+  </data>
+  <data name="RES_initslavemaster.msg.servernotready.title.rotext" xml:space="preserve">
+    <value>Servidor no disponible</value>
+  </data>
+  <data name="RES_server.close.question.confirmclose.answer.close.caption.rotext" xml:space="preserve">
+    <value>C&amp;errar</value>
+  </data>
+  <data name="RES_server.close.question.confirmclose.answer.close.description.rotext" xml:space="preserve">
+    <value>Detiene las comunicaciones en este equipo y cierra el Controlador de terminales.</value>
+  </data>
+  <data name="RES_server.close.question.confirmclose.answer.dontclose.caption.rotext" xml:space="preserve">
+    <value>&amp;Cancelar</value>
+  </data>
+  <data name="RES_server.close.question.confirmclose.answer.dontclose.description.rotext" xml:space="preserve">
+    <value>Deja las comunicaciones con los terminales funcionando.</value>
+  </data>
+  <data name="RES_server.close.question.confirmclose.caption.rotext" xml:space="preserve">
+    <value>Detener Controlador de Terminales?</value>
+  </data>
+  <data name="RES_server.close.question.usersconnected.answer.close.caption.rotext" xml:space="preserve">
+    <value>C&amp;errar</value>
+  </data>
+  <data name="RES_server.close.question.usersconnected.answer.close.description.rotext" xml:space="preserve">
+    <value>Los clientes actuales serán desconectados.</value>
+  </data>
+  <data name="RES_server.close.question.usersconnected.answer.dontclose.caption.rotext" xml:space="preserve">
+    <value>&amp;Cancelar</value>
+  </data>
+  <data name="RES_server.close.question.usersconnected.answer.dontclose.description.rotext" xml:space="preserve">
+    <value>El Controlador de terminales seguirá funcionando.</value>
+  </data>
+  <data name="RES_server.close.question.usersconnected.caption.rotext" xml:space="preserve">
+    <value>Hay clientes actualmente conectados al Controlador de terminales. Si cierra el Controlador se desconectarán. Desea continuar?</value>
+  </data>
+  <data name="RES_server.frmconsole.mnusystray.tip.initializing.rotext" xml:space="preserve">
+    <value>El Controlador de terminales está iniciando.</value>
+  </data>
+  <data name="RES_server.frmconsole.mnusystray.tip.problems.rotext" xml:space="preserve">
+    <value>Hay problemas con los terminales</value>
+  </data>
+  <data name="RES_server.frmconsole.mnusystray.tip.running.rotext" xml:space="preserve">
+    <value>Controlador de terminales funcionando sin errores.</value>
+  </data>
+</root>

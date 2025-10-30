@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="parker" Class="TasksDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=HWFPRG02\SQL2016;Initial Catalog=parker;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="parkerConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.sysroCurrentTasksStatus" Member="sysroCurrentTasksStatus">
+    <Type Name="sysroCurrentTasksStatus">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Center" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="IDCenter" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(75) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Color" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Project" Type="System.String" DbType="NVarChar(75)" CanBeNull="true" />
+      <Column Name="Tag" Type="System.String" DbType="NVarChar(75)" CanBeNull="true" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ActivationTask" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ColorTaskPrev" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Duration" Type="System.Decimal" DbType="Decimal(25,4)" CanBeNull="true" />
+      <Column Name="Worked" Type="System.Decimal" DbType="Decimal(25,4)" CanBeNull="true" />
+      <Column Name="Progress" Type="System.Decimal" DbType="Decimal(38,9)" CanBeNull="true" />
+      <Column Name="Exceeded" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDPassport" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ExpectedStartDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ExpectedEndDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NameTaskPrev" Type="System.String" DbType="NVarChar(75)" CanBeNull="true" />
+      <Column Name="ShortName" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="Employees" Type="System.String" DbType="NVarChar(401)" CanBeNull="true" />
+      <Column Name="Alerts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

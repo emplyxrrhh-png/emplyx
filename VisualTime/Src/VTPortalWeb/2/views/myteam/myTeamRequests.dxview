@@ -1,0 +1,43 @@
+<div data-options="dxView : { name: 'myTeamRequests', title: 'myTeamRequests', disableCache: true  } ">
+
+	<div id="smallUserInfo"></div>
+
+    <div id="panelsContent" style="height:90%;">
+        <div class="dx-searchbar">
+            <div data-bind="dxTextBox: searchOptions"></div>
+        </div>
+        <div id="scrollview" data-bind="dxScrollView: {}">
+            <div id="list" class="list-container" data-bind="if: requestsDS() > 0">
+                <div id="listRequests" data-bind="dxList: listRequests">
+                    <div data-options="dxTemplate: {name: 'RequestItem'}">
+                        <div class="listMenuItem">
+                            <div data-bind="css: $data.cssContainerClass" class="listMenuItemIcon">
+                                <div data-bind="css: $data.cssClass" class="listMenuItemIcon"></div>
+                            </div>
+                            <div class="listMenuItemContent">
+                                <div data-bind="text: $data.Name"></div>
+                                <div class="smallTextDescription" data-bind="html: $data.Description"></div>
+                            </div>
+
+                            <div data-bind="if: $data.hasAction == true"><div class="list-item-arrow"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-bind="if: requestsDS() <= 0">
+                <div class="noDataCssClass"></div>
+            </div>
+        </div>
+
+        <div id="btnActionMenuPopover" class="actionButton fixedButton" data-bind="dxButton: btnFilterRequests"></div>
+
+        <div data-bind="if: dataFiltered() == true">
+            <div class="filterInfoContainer">
+                <div class="filteredData filteredDataIcon"></div>
+                <div class="filteredDataText" data-bind="text: filterDescription"></div>
+            </div>
+        </div>
+        <div data-bind="dxLoadPanel: loadingPanel"> </div>
+    </div>
+</div>

@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_channels.complaint1.rotext" xml:space="preserve">
+    <value>Prostredníctvom našej aplikácie sa chystáte aktivovať kanál na oznamovanie nekalých praktík v súlade so zákonom č. 2/2023 o "efektívnej ochrane oznamovateľov". Je dôležité vedieť, že po aktivácii tohto kanála ho už nebudete môcť deaktivovať. Naša platforma je navrhnutá tak, aby všetkým zamestnancom vašej organizácie registrovaným v službe Visualtime prostredníctvom zamestnaneckého portálu umožnila podávať oznámenia v prípade potreby.</value>
+  </data>
+  <data name="RES_channels.complaint2.rotext" xml:space="preserve">
+    <value>Radi by sme zdôraznili, že správy, ktoré vaši zamestnanci posielajú prostredníctvom našej platformy, môžu zostať anonymné, ak si to želajú. Cieľom tohto postupu je podporiť prostredie dôvery, v ktorom sa zamestnanci cítia pohodlne pri zdieľaní svojich obáv.</value>
+  </data>
+  <data name="RES_channels.complaint3.rotext" xml:space="preserve">
+    <value>Upozorňujeme, že všetky správy a hlásenia podané prostredníctvom našej platformy sa zaznamenávajú a nie je možné ich vymazať. Tým sa zabezpečí transparentnosť a integrita nášho procesu nahlasovania a uľahčí sa vyšetrovanie akýchkoľvek nahlásených problémov.</value>
+  </data>
+  <data name="RES_channels.complaint4.rotext" xml:space="preserve">
+    <value>Ak máte akékoľvek ďalšie otázky alebo obavy týkajúce sa aktivácie tohto oznamovacieho kanála, neváhajte sa obrátiť na náš tím podpory. Sme tu, aby sme vás podporili a zabezpečili, že vaša organizácia bude mať k dispozícii účinný nástroj na zachovanie integrity a transparentnosti.</value>
+  </data>
+  <data name="RES_channels.complaint5.rotext" xml:space="preserve">
+    <value>Oceňujeme vašu dôveru v náš softvér a v našu schopnosť pomôcť vašej organizácii efektívne riadiť proces oznamovania nekalých praktík.</value>
+  </data>
+  <data name="RES_channels.rochanneladvanced.rotext" xml:space="preserve">
+    <value>Pokročilé</value>
+  </data>
+  <data name="RES_channels.rochannelanonymous.rotext" xml:space="preserve">
+    <value>umožniť anonymné rozhovory?</value>
+  </data>
+  <data name="RES_channels.rochannelcancel.rotext" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="RES_channels.rochannelcancelpublish.rotext" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="RES_channels.rochannelchart.rotext" xml:space="preserve">
+    <value>Grafika</value>
+  </data>
+  <data name="RES_channels.rochannelcomplete.rotext" xml:space="preserve">
+    <value>Dokončiť teraz</value>
+  </data>
+  <data name="RES_channels.rochannelconfiguration.rotext" xml:space="preserve">
+    <value>Konfigurácia</value>
+  </data>
+  <data name="RES_channels.rochannelconversations.rotext" xml:space="preserve">
+    <value>Rozhovory</value>
+  </data>
+  <data name="RES_channels.rochannelcreatedon.rotext" xml:space="preserve">
+    <value>Vytvorené dňa</value>
+  </data>
+  <data name="RES_channels.rochanneldelete.rotext" xml:space="preserve">
+    <value>chcete vymazať tento kanál a všetky jeho konverzácie?</value>
+  </data>
+  <data name="RES_channels.rochanneldeletetitle.rotext" xml:space="preserve">
+    <value>Odstrániť</value>
+  </data>
+  <data name="RES_channels.rochanneldesign.rotext" xml:space="preserve">
+    <value>Dizajn</value>
+  </data>
+  <data name="RES_channels.rochanneldestination.rotext" xml:space="preserve">
+    <value>ktorí zamestnanci môžu posielať správy?</value>
+  </data>
+  <data name="RES_channels.rochanneldestinationdesc.rotext" xml:space="preserve">
+    <value>Výber príjemcov</value>
+  </data>
+  <data name="RES_channels.rochanneldexaccept.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_channels.rochannelforgroups.rotext" xml:space="preserve">
+    <value>Skupinám</value>
+  </data>
+  <data name="RES_channels.rochannelforusers.rotext" xml:space="preserve">
+    <value>Používateľom</value>
+  </data>
+  <data name="RES_channels.rochannelgeneral.rotext" xml:space="preserve">
+    <value>Definujte svoj kanál</value>
+  </data>
+  <data name="RES_channels.rochannelinfo.rotext" xml:space="preserve">
+    <value>Zvýšte účinnosť svojej internej komunikácie pomocou našich robustných kanálov zapojenia. Zistite, čo si váš tím skutočne myslí o otázkach, ktoré sú pre vás najdôležitejšie, a prijímajte informované rozhodnutia, ktoré budú hnať vaše podnikanie vpred.</value>
+  </data>
+  <data name="RES_channels.rochannelloading.rotext" xml:space="preserve">
+    <value>Načítanie...</value>
+  </data>
+  <data name="RES_channels.rochannelname.rotext" xml:space="preserve">
+    <value>Názov kanála</value>
+  </data>
+  <data name="RES_channels.rochannelnew.rotext" xml:space="preserve">
+    <value>Vytvorenie nového kanála</value>
+  </data>
+  <data name="RES_channels.rochannelnewmessages.rotext" xml:space="preserve">
+    <value>Nové správy</value>
+  </data>
+  <data name="RES_channels.rochannelno.rotext" xml:space="preserve">
+    <value>NIE</value>
+  </data>
+  <data name="RES_channels.rochannelpendingconversations.rotext" xml:space="preserve">
+    <value>Otvorené rozhovory</value>
+  </data>
+  <data name="RES_channels.rochannelpublished.rotext" xml:space="preserve">
+    <value>Zdieľať</value>
+  </data>
+  <data name="RES_channels.rochannelreceiptaknowledgment.rotext" xml:space="preserve">
+    <value>odoslať potvrdenie zamestnancovi?</value>
+  </data>
+  <data name="RES_channels.rochannelsave.rotext" xml:space="preserve">
+    <value>Uložiť</value>
+  </data>
+  <data name="RES_channels.rochannelsend.rotext" xml:space="preserve">
+    <value>Odoslať</value>
+  </data>
+  <data name="RES_channels.rochannelsimple.rotext" xml:space="preserve">
+    <value>Jednoduché</value>
+  </data>
+  <data name="RES_channels.rochannelstatus.rotext" xml:space="preserve">
+    <value>Štát</value>
+  </data>
+  <data name="RES_channels.rochannelstatusresume.rotext" xml:space="preserve">
+    <value>Komunikačné kanály</value>
+  </data>
+  <data name="RES_channels.rochannelstitle.rotext" xml:space="preserve">
+    <value>Moje kanály</value>
+  </data>
+  <data name="RES_channels.rochannelsupervisors.rotext" xml:space="preserve">
+    <value>ktorí nadriadení môžu odpovedať na správy?</value>
+  </data>
+  <data name="RES_channels.rochannelsupervisorsdesc.rotext" xml:space="preserve">
+    <value>Vyberte nadriadených, ktorí budú môcť odpovedať na správy v konverzáciách kanálov</value>
+  </data>
+  <data name="RES_channels.rochanneltable.rotext" xml:space="preserve">
+    <value>Tabuľka</value>
+  </data>
+  <data name="RES_channels.rochanneltitle.rotext" xml:space="preserve">
+    <value>Komunikačné kanály</value>
+  </data>
+  <data name="RES_channels.rochanneltitledesc.rotext" xml:space="preserve">
+    <value>Názov</value>
+  </data>
+  <data name="RES_channels.rochannelyes.rotext" xml:space="preserve">
+    <value>Áno</value>
+  </data>
+  <data name="RES_channels.ronodata.rotext" xml:space="preserve">
+    <value>Žiadne údaje na zobrazenie</value>
+  </data>
+  <data name="RES_channels.rorestrictchannel.rotext" xml:space="preserve">
+    <value>Obmedziť</value>
+  </data>
+  <data name="RES_channels.title.rotext" xml:space="preserve">
+    <value>Komunikačné kanály</value>
+  </data>
+  <data name="RES_channels.title.search.rotext" xml:space="preserve">
+    <value>Komunikačné kanály</value>
+  </data>
+  <data name="RES_channels.titledesc.rotext" xml:space="preserve">
+    <value>Zvýšte účinnosť svojej internej komunikácie pomocou našich robustných kanálov zapojenia. Zistite, čo si váš tím skutočne myslí o otázkach, ktoré sú pre vás najdôležitejšie, a prijímajte informované rozhodnutia, ktoré budú hnať vaše podnikanie vpred.</value>
+  </data>
+  <data name="RES_channels.validatecomplainttitle.rotext" xml:space="preserve">
+    <value>Aktivácia kanála na podávanie sťažností</value>
+  </data>
+  <data name="RES_conversations.emptylist.rotext" xml:space="preserve">
+    <value>Ak chcete zobraziť správy, vyberte konverzáciu z bočnej ponuky</value>
+  </data>
+  <data name="RES_conversations.rocomplaintid.rotext" xml:space="preserve">
+    <value>Identifikátor sťažnosti</value>
+  </data>
+  <data name="RES_conversations.rocomplaintiddesc.rotext" xml:space="preserve">
+    <value>Identifikátor sťažnosti</value>
+  </data>
+  <data name="RES_conversations.rologbookinfo.rotext" xml:space="preserve">
+    <value>Nahliadnite do registra sťažností</value>
+  </data>
+  <data name="RES_conversations.rologbooktitle.rotex.rotext" xml:space="preserve">
+    <value>Registračná kniha</value>
+  </data>
+  <data name="RES_conversations.rologbooktitle.rotext" xml:space="preserve">
+    <value>Registračná kniha</value>
+  </data>
+  <data name="RES_conversations.roprintcomplaint.rotext" xml:space="preserve">
+    <value>Tlač</value>
+  </data>
+  <data name="RES_conversations.roshowcomplaint.rotext" xml:space="preserve">
+    <value>Pozri </value>
+  </data>
+  <data name="RES_conversations.searchtext.rotext" xml:space="preserve">
+    <value>Zadajte text, ktorý chcete vyhľadať...</value>
+  </data>
+  <data name="RES_conversations.title.rotext" xml:space="preserve">
+    <value>Registračná kniha</value>
+  </data>
+  <data name="RES_conversations.treecaption.rotext" xml:space="preserve">
+    <value>Rozhovory</value>
+  </data>
+  <data name="RES_dex.acceptprivacypopup.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_dex.alreadyloggedin.rotext" xml:space="preserve">
+    <value>Ak chcete pokračovať v externom vykazovaní, musíte sa najprv odhlásiť z aplikácie Visualtime.</value>
+  </data>
+  <data name="RES_dex.btnrecovercomplaint.rotext" xml:space="preserve">
+    <value>Obnovenie sťažnosti</value>
+  </data>
+  <data name="RES_dex.closedex.rotext" xml:space="preserve">
+    <value>Zatvoriť</value>
+  </data>
+  <data name="RES_dex.closeprivacypopup.rotext" xml:space="preserve">
+    <value>Zatvoriť</value>
+  </data>
+  <data name="RES_dex.closesessiondex.rotext" xml:space="preserve">
+    <value>Odhlásenie</value>
+  </data>
+  <data name="RES_dex.closesessionerror.rotext" xml:space="preserve">
+    <value>Pri odhlásení došlo k chybe</value>
+  </data>
+  <data name="RES_dex.companylocation.rotext" xml:space="preserve">
+    <value>Spoločnosť</value>
+  </data>
+  <data name="RES_dex.complaintanonymous.rotext" xml:space="preserve">
+    <value>Chcem zostať v anonymite</value>
+  </data>
+  <data name="RES_dex.complaintbody.rotext" xml:space="preserve">
+    <value>Povedzte nám, čo chcete nahlásiť</value>
+  </data>
+  <data name="RES_dex.complaintemailvalidationerror.rotext" xml:space="preserve">
+    <value>Zadaná e-mailová adresa je neplatná.</value>
+  </data>
+  <data name="RES_dex.complaintguidcopied.rotext" xml:space="preserve">
+    <value>Identifikátor bol skopírovaný do schránky</value>
+  </data>
+  <data name="RES_dex.complaintguiddesc.rotext" xml:space="preserve">
+    <value>Uložte tento identifikátor, aby ste mali k správe prístup a mohli ju sledovať</value>
+  </data>
+  <data name="RES_dex.complaintguidnotcopied.rotext" xml:space="preserve">
+    <value>Identifikátor nebolo možné skopírovať. Uistite sa, že ste ho skopírovali ručne, aby ste ho nestratili.</value>
+  </data>
+  <data name="RES_dex.complaintidentified.rotext" xml:space="preserve">
+    <value>Chcem poskytnúť svoje údaje</value>
+  </data>
+  <data name="RES_dex.complaintmsgsaveerror.rotext" xml:space="preserve">
+    <value>Správu nebolo možné vytvoriť. Skúste to prosím neskôr.</value>
+  </data>
+  <data name="RES_dex.complaintphonevalidationerror.rotext" xml:space="preserve">
+    <value>Uvedené telefónne číslo nie je platné.</value>
+  </data>
+  <data name="RES_dex.complaintprivacyrequiered.rotext" xml:space="preserve">
+    <value>Musíte si prečítať a akceptovať zásady ochrany osobných údajov.</value>
+  </data>
+  <data name="RES_dex.complaintpwdrepeaterror.rotext" xml:space="preserve">
+    <value>Zadané heslá sa nezhodujú.</value>
+  </data>
+  <data name="RES_dex.complaintpwdvalidationerror.rotext" xml:space="preserve">
+    <value>Heslo nespĺňa požadovanú zložitosť.</value>
+  </data>
+  <data name="RES_dex.complaintresponse.rotext" xml:space="preserve">
+    <value>Ďakujeme za predloženie sťažnosti</value>
+  </data>
+  <data name="RES_dex.complaintresponsedesc.rotext" xml:space="preserve">
+    <value>Vaša sťažnosť sa analyzuje a čoskoro sa vám ozveme.</value>
+  </data>
+  <data name="RES_dex.complainttitle.rotext" xml:space="preserve">
+    <value>Predmet</value>
+  </data>
+  <data name="RES_dex.complaintvalidationerror.rotext" xml:space="preserve">
+    <value>Musíte uviesť názov a obsah sťažnosti</value>
+  </data>
+  <data name="RES_dex.copyguid.rotext" xml:space="preserve">
+    <value>Identifikátor kópie</value>
+  </data>
+  <data name="RES_dex.dexsessionexpired.rotext" xml:space="preserve">
+    <value>Vaša relácia vypršala. Znovu zadajte údaje o sťažnosti.</value>
+  </data>
+  <data name="RES_dex.gotohome.rotext" xml:space="preserve">
+    <value>Späť na domovskú stránku</value>
+  </data>
+  <data name="RES_dex.identificationbtnnext.rotext" xml:space="preserve">
+    <value>Ďalšie</value>
+  </data>
+  <data name="RES_dex.identificationcompany.rotext" xml:space="preserve">
+    <value>Spoločnosť</value>
+  </data>
+  <data name="RES_dex.identificationmail.rotext" xml:space="preserve">
+    <value>E-mailová adresa</value>
+  </data>
+  <data name="RES_dex.identificationname.rotext" xml:space="preserve">
+    <value>Meno a priezvisko</value>
+  </data>
+  <data name="RES_dex.identificationphone.rotext" xml:space="preserve">
+    <value>Mobilný telefón</value>
+  </data>
+  <data name="RES_dex.identificationpwd.rotext" xml:space="preserve">
+    <value>Heslo</value>
+  </data>
+  <data name="RES_dex.identificationrepeatpwd.rotext" xml:space="preserve">
+    <value>Opakovanie hesla</value>
+  </data>
+  <data name="RES_dex.identificationtitle.rotext" xml:space="preserve">
+    <value>Identifikácia</value>
+  </data>
+  <data name="RES_dex.lostdatawarning.rotext" xml:space="preserve">
+    <value>Upozornenie: Ak toto číslo alebo heslo stratíte, nebudete mať prístup k správe. Heslo alebo identifikátor nie je možné obnoviť.</value>
+  </data>
+  <data name="RES_dex.messagetoolarge.rotext" xml:space="preserve">
+    <value>Správa musí obsahovať menej ako 6000 znakov</value>
+  </data>
+  <data name="RES_dex.missingmandatorydata.rotext" xml:space="preserve">
+    <value>Musíte zadať všetky povinné údaje. Opätovne zadajte údaje o sťažnosti.</value>
+  </data>
+  <data name="RES_dex.nolicense.rotext" xml:space="preserve">
+    <value>Žiadny kanál sťažností alebo licencií.</value>
+  </data>
+  <data name="RES_dex.passwordinfo.rotext" xml:space="preserve">
+    <value>Toto heslo použijete na prístup k svojej správe pomocou identifikátora. Potom budete môcť sledovať svoju správu, pripojiť ďalšie informácie a exportovať súhrn na uloženie alebo tlač.</value>
+  </data>
+  <data name="RES_dex.passwordinfodesc.rotext" xml:space="preserve">
+    <value>Heslo musí obsahovať aspoň 10 znakov, z toho aspoň jedno veľké písmeno, jednu číslicu a jeden symbol.</value>
+  </data>
+  <data name="RES_dex.recovercomplaint.rotext" xml:space="preserve">
+    <value>Vyzdvihnutie sťažnosti</value>
+  </data>
+  <data name="RES_dex.recovercomplaintdesc.rotext" xml:space="preserve">
+    <value>Ak chcete zobraziť stav svojej sťažnosti, zadajte svoje ID sťažnosti a heslo.</value>
+  </data>
+  <data name="RES_dex.recovercomplaintid.rotext" xml:space="preserve">
+    <value>Identifikátor sťažnosti</value>
+  </data>
+  <data name="RES_dex.recovercomplaintinforequiered.rotext" xml:space="preserve">
+    <value>Musíte uviesť odkaz na sťažnosť a heslo</value>
+  </data>
+  <data name="RES_dex.roprintcomplaintmessages.rotext" xml:space="preserve">
+    <value>Tlač</value>
+  </data>
+  <data name="RES_dex.sendcomplaint.rotext" xml:space="preserve">
+    <value>Podanie sťažnosti</value>
+  </data>
+  <data name="RES_dex.sendcomplaintdesc.rotext" xml:space="preserve">
+    <value>Pomocou tohto formulára môžete odoslať dôvernú správu.&lt;br /&gt;Odoslané informácie si môže prečítať len určený správca kanála spoločnosti.</value>
+  </data>
+  <data name="RES_dex.title.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_dex.title.search.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_dex.titledesc.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_messages.at.rotext" xml:space="preserve">
+    <value>na stránke </value>
+  </data>
+  <data name="RES_messages.by.rotext" xml:space="preserve">
+    <value>podľa</value>
+  </data>
+  <data name="RES_messages.closed.rotext" xml:space="preserve">
+    <value>Záverečná konverzácia</value>
+  </data>
+  <data name="RES_messages.conversationcomplexity.rotext" xml:space="preserve">
+    <value>Vysoká zložitosť</value>
+  </data>
+  <data name="RES_messages.conversationstatus.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_messages.dismissed.rotext" xml:space="preserve">
+    <value>Ukončenie konverzácie</value>
+  </data>
+  <data name="RES_messages.emptylist.rotext" xml:space="preserve">
+    <value>Nezobrazujú sa žiadne správy</value>
+  </data>
+  <data name="RES_messages.highcomplexity.rotext" xml:space="preserve">
+    <value>Vysoká</value>
+  </data>
+  <data name="RES_messages.lowcomplexity.rotext" xml:space="preserve">
+    <value>Normálne</value>
+  </data>
+  <data name="RES_messages.ongoing.rotext" xml:space="preserve">
+    <value>Zatvoriť</value>
+  </data>
+  <data name="RES_messages.roprintcomplaint.rotext" xml:space="preserve">
+    <value>Tlač</value>
+  </data>
+  <data name="RES_messages.sendbutton.rotext" xml:space="preserve">
+    <value>Odoslať</value>
+  </data>
+  <data name="RES_messages.sendedat.rotext" xml:space="preserve">
+    <value>Odoslané na</value>
+  </data>
+  <data name="RES_messages.sendplaceholder.rotext" xml:space="preserve">
+    <value>Napíšte sem svoj odkaz...</value>
+  </data>
+  <data name="RES_messages.stateclosed.rotext" xml:space="preserve">
+    <value>zatvorené</value>
+  </data>
+  <data name="RES_messages.statedismissed.rotext" xml:space="preserve">
+    <value>prepustený</value>
+  </data>
+  <data name="RES_messages.stateongoing.rotext" xml:space="preserve">
+    <value>prebieha</value>
+  </data>
+  <data name="RES_messages.statepending.rotext" xml:space="preserve">
+    <value>čaká sa na</value>
+  </data>
+  <data name="RES_dex.readandaccept.rotext" xml:space="preserve">
+    <value>Prečítal som si a prijímam</value>
+  </data>
+  <data name="RES_dex.privacypolicycta.rotext" xml:space="preserve">
+    <value> zásady ochrany osobných údajov</value>
+  </data>
+  <data name="RES_dex.privacypolicyctaempty.rotext" xml:space="preserve">
+    <value> zásady ochrany osobných údajov</value>
+  </data>
+</root>

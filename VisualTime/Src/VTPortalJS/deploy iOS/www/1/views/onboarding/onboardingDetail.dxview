@@ -1,0 +1,32 @@
+<div data-options="dxView : { name: 'onboardingDetail', title: 'Tareas', disableCache: true} ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <!--ko with: subscribeBlock-->
+        <div class="bigProfile" data-options="dxViewPlaceholder: { viewName: 'bigUserInfo' }"></div>
+        <!-- /ko-->
+        <div class="dx-searchbar">
+            <div id="searchtasks" data-bind="dxTextBox: searchOptions"></div>
+        </div>
+        <div id="scrollview" style="clear:both" data-bind="dxScrollView: commScroll">
+            <div id="list" class="list-container" data-bind="if: taskDS()">
+
+                <div data-bind="dxList: listtasks">
+                    <div data-options="dxTemplate: {name: 'taskItem'}">
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <div data-bind="if: !taskDS()">
+                <div class="noDataCssClass"></div>
+                <!--<div class="noDataText" >Oops! No hay nada aquí...</div>-->
+            </div>
+        </div>
+
+        <div data-bind="dxLoadPanel: loadingPanel"> </div>
+
+    </div>
+</div>

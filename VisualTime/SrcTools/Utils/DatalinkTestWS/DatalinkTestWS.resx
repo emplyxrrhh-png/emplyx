@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Label31.Text" xml:space="preserve">
+    <value>        
+        _MandatoryDataMissing = 17      ' (No se han informado todos los datos obligatorios)
+        _InvalidShift = 18              ' (El horario no existe)
+        _AbsenceOverlapping = 19        ' (La ausencia se solapa con otra ya existente)
+        _InvalidPeriod = 20             ' (El periodo de fechas o horas es incorrecto)
+        _InvalidCalendarData = 21       ' (Calendario erroneo)
+        _InvalidAccrualData = 22        ' (Saldo erroneo)
+        _InvalidDocumentType = 23       ' (Tipo de documento incorrecto)
+        _InvalidDocumentData = 24       ' (Documneto incorrecto)
+        _ErrorSavingDocument = 25       ' (No se pudo guardar el documento)
+        _DocumentNotDeliverable = 26    ' (Los documentos de la plantilla no se pueden entregar electrónicamente
+        _UnexistentDocumentTemplate = 27 ' (No exsite la plantilla de documento especificada
+       _DocumentTooBig = 28            ' (Documento demasiado grande)
+       _InvalidDocumentTitle = 29      ' (Nombre de documento no permitido)
+       _DocumentAlreadyExists = 30     ' (Documento ya asignado al empleado)
+       _InvalidPunchType = 31          ' (Tipo de fichaje no soportado)
+       _ErrorSavingPunch = 32          ' (No se pudo guardar el fichaje)
+       _ImcompleteDataRecovered = 33   ' No se pudieron recuperar algunos datos
+       _InvalidMovility = 34           '(Movilidad incorrecta)
+
+
+</value>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>Códigos de retorno
+
+        _OK = 0                         ' OK
+        _LoginError = 1                 ' (Error de incio de sesión)
+        _PermissionDenied = 2           ' (No dispone de permisos para acceder a ws)
+        _PasswordUsernameEmpty = 3      ' (nombre o pcontraseña vacio)
+        _UnknownError = 4               ' (Error indefinido de aplicación)
+        _ConnectionError = 5            ' (Error de usuario y contraseña)
+        _SqlError = 6                   ' (Error de conexión a SQL)
+        _InvalidEmployee = 7            ' (No se ha podido crear el empleado)
+        _InvalidGroup = 8               ' (No se ha podido crear el departamento)
+        _InvalidContract = 9            ' (No se ha podido crear el contrato)
+        _InvalidCard = 10               ' (La tarjeta indicada no se ha podido asignar)
+        _AuthorizationError = 11        ' (No se han podido asignar las autorizaciones indicadas)
+        _SomeUserFieldsNotSaved = 12    ' (No se han podido guardar todos los campos de la ficha)
+        _InvalidCause = 13              ' (La justificación no existe)
+        _ContractAlreadyClosed = 14     ' (El contrato ya esta finalizado)
+        _InvalidLabAgree = 15           ' (No se encuentra ningun convenio con el identificador)
+        _InvalidCloseDate = 16          ' (Se están modificando datos en periodo de cierre)
+
+</value>
+  </data>
+  <data name="txtContractsJSON.Text" xml:space="preserve">
+    <value>{
+    "Contracts": [
+        {
+            "StartContractDate": "2021-01-18T00:00:00",
+            "EndContractDate": "2021-02-18T00:00:00",
+            "IDContract": "43534253G/ENERO2021",
+            "LabAgreeName": "GENERAL"
+        },
+        {
+            "StartContractDate": "2021-01-20T00:00:00",
+            "EndContractDate": null,
+            "IDContract": "43534253G/FEBRERO2021",
+            "LabAgreeName": "GENERAL"
+        }
+    ]
+}</value>
+  </data>
+  <data name="txtEmployeesJson.Text" xml:space="preserve">
+    <value>{
+     "NombreEmpleado": "PERICO DE LOS PALOTES",
+     "UniqueEmployeeID": "43534253G",
+     "NifEmpleado": "43534253G",
+     "IDContract": "43534253G/ENERO2021",
+     "LabAgreeName": "Convenio hostelería de las Baleares",
+     "StartContractDate": "2021-01-18T00:00:00",
+     "EndContractDate": null,
+     "MobilityDate": "2021-01-29T00:00:00",
+     "CompositeContractType": 1,
+     "CardNumber": null,
+     "UserName": "ppalotes",
+     "SupervisorGroup": null,
+     "Nivel0": "Mi empresa",
+     "Nivel1": "CENTRAL",
+     "Nivel2": "Comercial",
+     "Nivel3": "Marketing",
+     "Nivel4": "",
+     "Nivel5": "",
+     "Nivel6": "",
+     "Nivel7": "",
+     "Nivel8": "",
+     "Nivel9": "",
+     "Nivel10": "",
+     "ActiveAuthorizations": null,
+     "Field_A_Name": "Centro de trabajo",
+     "Field_A_Value": "CENTRAL",
+     "Field_A_Date": "1970-01-01T00:00:00",
+     "Field_B_Name": "Días de vacacciones anuales",
+     "Field_B_Value": "28,5",
+     "Field_B_Date": "2021-01-29T00:00:00",
+     "Field_C_Name": "Grupo de visibilidad",
+     "Field_C_Value": "COMERCIAL",
+     "Field_C_Date": "1970-01-01T00:00:00",
+     "Field_D_Name": "Correo electrónico",
+     "Field_D_Value": "pruenba@hotmail.com",
+     "Field_D_Date": "2021-01-29T00:00:00",
+     "Field_E_Name": "Grupo de visibilidad 2",
+     "Field_E_Value": "No laborables",
+     "Field_E_Date": "1970-01-01T00:00:00",
+     "Field_F_Name": "NIF",
+     "Field_F_Value": "43534253G",
+     "Field_F_Date": null,
+     "Field_G_Name": "Punto de encuentro",
+     "Field_G_Value": "Parking Targo Bank",
+     "Field_G_Date": "1970-01-01T00:00:00",
+     "Field_H_Name": "Supervisor",
+     "Field_H_Value": "",
+     "Field_H_Date": "1970-01-01T00:00:00",
+     "Field_I_Name": "Teléfono",
+     "Field_I_Value": "",
+     "Field_I_Date": "1970-01-01T00:00:00",
+     "Period": null
+   }</value>
+  </data>
+  <metadata name="OpenFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
+</root>

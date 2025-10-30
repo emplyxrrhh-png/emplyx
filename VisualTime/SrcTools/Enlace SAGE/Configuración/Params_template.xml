@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<appSettings>
+	<empresas>
+		<empresa id="1">
+			<Niveles>
+				<Nivel1>Delegacion</Nivel1>
+			</Niveles>
+			<Mobility>0</Mobility>
+			<UserFields>
+				<Delegacion>Delegacion</Delegacion>
+				<Email>Correo electrónico</Email>
+			</UserFields>
+			<!-- 0 IdEmpleado interno
+			     1 Codigo contrato en sage
+			     2 CodigoEmpresa + delimitador + CodigoEmpleado + delimitador + Codigo contrato
+			     3 DNI + delimitador + Fecha alta 
+				 4 CodigoEmpresa + delimitador + CodigoEmpleado + delimitador + Codigo contrato + delimitador + Fecha alta (yyyyMMdd) -->
+			<ContractType>4</ContractType>
+			<Delimiter>-</Delimiter>
+		</empresa>
+	</empresas>
+	<Accruals>
+	<!-- -->
+		<Active>0</Active>
+		<Frequency>60</Frequency>
+		<days>30</days>
+	</Accruals>
+</appSettings>

@@ -1,0 +1,46 @@
+<div data-options="dxView : { name: 'externalWork', title: 'externalWork', disableCache: true } " >
+
+
+        <!--ko with: subscribeBlock-->
+         <div class="bigProfile" data-options="dxViewPlaceholder: { viewName: 'bigUserInfo' }"></div>
+        <!-- /ko-->
+
+        <div style="clear:both" data-bind="dxScrollView: scrollContent">
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <span data-bind="text: lblInitialDate"></span>
+                    <div class="dx-field-value" data-bind="dxDateBox: beginDate"></div>
+                </div>
+                <div class="dx-field">
+                    <span data-bind="text: lblInitialHour"></span>
+                    <div class="dx-field-value" data-bind="dxDateBox: beginHour"></div>
+                </div>
+                <div class="dx-field">
+                    <span data-bind="text: lblRequestValue1"></span>
+                    <div class="dx-field-value" data-bind="dxSelectBox: cmbRequestValue1"></div>
+                </div>
+                
+                <div class="dx-field">
+                    <span data-bind="text: lblRemarks"></span>
+                    <div class="dx-field-value" data-bind="dxTextArea: remarks"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="approvalPopup" data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:true, visible: popupVisible, height: 'auto'}">
+            <!--ko with: myApprovalsBlock-->
+            <div data-options="dxViewPlaceholder: { viewName: 'approvalHistory' } "></div>
+            <!-- /ko-->
+        </div>
+
+        <div class="fixedMenuButton">
+            <div class="actionButton mainMenuButton" data-bind="dxButton: btnApprove"></div>
+            <div class="actionButton mainMenuButton" data-bind="dxButton: btnRefuse"></div>
+            <div class="actionButton mainMenuButton" data-bind="dxButton: btnHistory"></div>
+            <div class="actionButton mainMenuButton" data-bind="dxButton: btnDelete"></div>
+            <div class="actionButton mainMenuButton" data-bind="dxButton: btnSave"></div>
+        </div>
+
+        <div data-bind="dxLoadPanel: loadingPanel"> </div>
+ 
+</div>

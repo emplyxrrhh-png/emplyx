@@ -1,0 +1,28 @@
+<div data-options="dxView : { name: 'capacityDetail', title: 'capacityDetail', disableCache: true  } ">
+
+	<div id="smallUserInfo"></div>
+
+    <div id="panelsContent" style="height:90%;">
+        <div class="dx-searchbar">
+            <div data-bind="dxTextBox: searchOptions"></div>
+        </div>
+                <div data-bind="dxList: listOptions">
+                    <div data-options="dxTemplate: {name: 'item'}">
+                        <div class="listMenuItem">
+                            <div data-bind="css: $data.cssContainerClass;" class="listMenuItemIcon EmployeeImagePhoto">
+                                <div data-bind="style: { background: $data.Image }" class="listMenuItemIcon EmployeeImagePhoto"></div>
+                            </div>
+                            <div class="listMenuItemContentTeam">
+                                <div style="font-size:11px" data-bind="text: $data.Name"></div>
+                                <div class="smallTextDescription" data-bind="text: $data.Group"></div>
+                            </div>
+                          
+                        </div>
+
+                    </div>
+                    <!--</div>-->
+                </div>
+          
+        <div data-bind="dxLoadPanel: loadingPanel"> </div>
+    </div>
+</div>

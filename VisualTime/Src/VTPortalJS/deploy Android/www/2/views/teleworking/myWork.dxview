@@ -1,0 +1,22 @@
+<div data-options="dxView : { name: 'myWork', title: 'myWork' } " >
+    <div data-bind="if: hasPermission() == true">
+        <div id="scrollview" style="clear:both" data-bind="dxScrollView: { }">
+
+            <div data-bind="dxDeferRendering: { renderWhen: modelIsReady }">
+                <div id="calendarContainer" data-bind="dxCalendar: calendarOptions"></div>
+            </div>
+        </div>
+
+        <div data-bind="dxPopover: calendarCellPopover">
+            <div id="calendarPopupActions" data-bind="dxToolbar: dayToolbarActions"></div>
+        </div>
+    </div>
+
+	<div data-bind="if: hasPermission() == false">
+		<!--ko with: noPermissions-->
+		<div data-options="dxViewPlaceholder: { viewName: 'noPermissions' } "></div>
+		<!-- /ko-->
+	</div>
+
+    <div data-bind="dxLoadPanel: loadingPanel"> </div>
+</div>

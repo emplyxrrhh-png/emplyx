@@ -1,0 +1,1214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{AC339B06-487F-475F-A506-F66D07B75A75}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>VTPortalWeb</RootNamespace>
+    <AssemblyName>VTPortalWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>
+    </IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>
+    </IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>
+    </IISExpressUseClassicPipelineMode>
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Use64BitIISExpress />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1\app.config.js" />
+    <Content Include="1\css\dx.android5.light.css" />
+    <Content Include="1\css\dx.common.css" />
+    <Content Include="1\css\dx.dark.compact.css" />
+    <Content Include="1\css\dx.spa.css" />
+    <Content Include="1\css\dx.VTPortal.css" />
+    <Content Include="1\css\survey.min.css" />
+    <Content Include="1\css\VTPortal.css" />
+    <Content Include="1\Images\833.gif" />
+    <Content Include="1\Images\Accruals\productiv_contract.png" />
+    <Content Include="1\Images\Accruals\productiv_daily.png" />
+    <Content Include="1\Images\Accruals\productiv_month.png" />
+    <Content Include="1\Images\Accruals\productiv_week.png" />
+    <Content Include="1\Images\Accruals\productiv_year.png" />
+    <Content Include="1\Images\Accruals\schedule_contract.png" />
+    <Content Include="1\Images\Accruals\schedule_daily.png" />
+    <Content Include="1\Images\Accruals\schedule_month.png" />
+    <Content Include="1\Images\Accruals\schedule_week.png" />
+    <Content Include="1\Images\Accruals\schedule_year.png" />
+    <Content Include="1\Images\Actions\exit.png" />
+    <Content Include="1\Images\Actions\ico_Accruals.png" />
+    <Content Include="1\Images\Actions\ico_Info.png" />
+    <Content Include="1\Images\Actions\ico_Punches.png" />
+    <Content Include="1\Images\Actions\ico_Requests.png" />
+    <Content Include="1\Images\Actions\password.png" />
+    <Content Include="1\Images\Alerts\ico_AbsenteeismDocuments.png" />
+    <Content Include="1\Images\Alerts\ico_AccessAuthorizationDocuments.png" />
+    <Content Include="1\Images\Alerts\ico_Day_With_Unmatched_Time_Record.png" />
+    <Content Include="1\Images\Alerts\ico_Day_with_Unreliable_Time_Record.png" />
+    <Content Include="1\Images\Alerts\ico_DocumentsValidation.png" />
+    <Content Include="1\Images\Alerts\ico_Employee_Not_Arrived_or_Late.png" />
+    <Content Include="1\Images\Alerts\ico_employee_present_with_expired_documents.png" />
+    <Content Include="1\Images\Alerts\ico_GpaAlerts.png" />
+    <Content Include="1\Images\Alerts\ico_LabAgree_Max_Exceeded.png" />
+    <Content Include="1\Images\Alerts\ico_LabAgree_Min_Reached.png" />
+    <Content Include="1\Images\Alerts\ico_MandatoryDocuments.png" />
+    <Content Include="1\Images\Alerts\ico_Non_Justified_Incident.png" />
+    <Content Include="1\Images\Alerts\ico_Productive_Unit_Under_Coverage.png" />
+    <Content Include="1\Images\Alerts\ico_request_pending.png" />
+    <Content Include="1\Images\Alerts\ico_Tasks_Request_complete.png" />
+    <Content Include="1\Images\Alerts\ico_Task_Close_to_Finish.png" />
+    <Content Include="1\Images\Alerts\ico_Task_Close_to_Start.png" />
+    <Content Include="1\Images\Alerts\ico_Task_Exceeding_Finished_Date.png" />
+    <Content Include="1\Images\Alerts\ico_Task_Exceeding_Planned_Time.png" />
+    <Content Include="1\Images\Alerts\ico_Task_exceeding_Started_Date.png" />
+    <Content Include="1\Images\Alerts\ico_Task_With_ALerts.png" />
+    <Content Include="1\Images\Alerts\ico_WorkForecastDocuments.png" />
+    <Content Include="1\Images\Common\approve.png" />
+    <Content Include="1\Images\Common\aviso.png" />
+    <Content Include="1\Images\Common\ayuda.png" />
+    <Content Include="1\Images\Common\calendario.png" />
+    <Content Include="1\Images\Common\camera.png" />
+    <Content Include="1\Images\Common\delete.png" />
+    <Content Include="1\Images\Common\Document.png" />
+    <Content Include="1\Images\Common\empAvailable.png" />
+    <Content Include="1\Images\Common\error.png" />
+    <Content Include="1\Images\Common\exito.png" />
+    <Content Include="1\Images\Common\filter.png" />
+    <Content Include="1\Images\Common\filter_staus.png" />
+    <Content Include="1\Images\Common\historic.png" />
+    <Content Include="1\Images\Common\Info.png" />
+    <Content Include="1\Images\Common\more.png" />
+    <Content Include="1\Images\Common\moreV.png" />
+    <Content Include="1\Images\Common\nfc.png" />
+    <Content Include="1\Images\Common\NoData.png" />
+    <Content Include="1\Images\Common\NoDataIcon.png" />
+    <Content Include="1\Images\Common\NoGPS.png" />
+    <Content Include="1\Images\Common\NoPermissions.png" />
+    <Content Include="1\Images\Common\notAvailable.png" />
+    <Content Include="1\Images\Common\plus.png" />
+    <Content Include="1\Images\Common\rankings.png" />
+    <Content Include="1\Images\Common\refresh.png" />
+    <Content Include="1\Images\Common\refuse.png" />
+    <Content Include="1\Images\Common\request_approve.png" />
+    <Content Include="1\Images\Common\request_denied.png" />
+    <Content Include="1\Images\Common\request_filterParams_gr.png" />
+    <Content Include="1\Images\Common\request_filterParams_wh.png" />
+    <Content Include="1\Images\Common\request_ongoing.png" />
+    <Content Include="1\Images\Common\request_orderParams_gr.png" />
+    <Content Include="1\Images\Common\request_orderParams_wh.png" />
+    <Content Include="1\Images\Common\request_pending.png" />
+    <Content Include="1\Images\Common\save.png" />
+    <Content Include="1\Images\Communiques\03-Important-128.png" />
+    <Content Include="1\Images\Communiques\03-ImportantRead-128.png" />
+    <Content Include="1\Images\Communiques\12-Spam_Mail-128.png" />
+    <Content Include="1\Images\Communiques\23-Delivered_Mail-128.png" />
+    <Content Include="1\Images\Communiques\25-NotRead_Mail-128.png" />
+    <Content Include="1\Images\Communiques\30-Open_Mail-128.png" />
+    <Content Include="1\Images\Communiques\icons8-attendance-96.png" />
+    <Content Include="1\Images\Communiques\icons8-attendance-96Important.png" />
+    <Content Include="1\Images\Communiques\ico_communiqueNotRead.png" />
+    <Content Include="1\Images\Communiques\ico_communiqueRead.png" />
+    <Content Include="1\Images\Documents\doc-Company.png" />
+    <Content Include="1\Images\Documents\doc-EmployeeContract.png" />
+    <Content Include="1\Images\Documents\doc-EmployeeField.png" />
+    <Content Include="1\Images\Documents\doc-LeaveOrPermission.png" />
+    <Content Include="1\Images\Documents\doc-Punch.png" />
+    <Content Include="1\Images\Documents\doc-Reason.png" />
+    <Content Include="1\Images\Documents\doc-Visit.png" />
+    <Content Include="1\Images\Documents\icons8-sign-document-64.png" />
+    <Content Include="1\Images\Documents\ico_Documents.png" />
+    <Content Include="1\Images\DoubleRing.gif" />
+    <Content Include="1\Images\doubleringblank.gif" />
+    <Content Include="1\Images\eye.png" />
+    <Content Include="1\Images\Holidays\ico_Holiday_available.png" />
+    <Content Include="1\Images\Holidays\ico_Holiday_done.png" />
+    <Content Include="1\Images\Holidays\ico_Holiday_lasting.png" />
+    <Content Include="1\Images\Holidays\ico_Holiday_pending.png" />
+    <Content Include="1\Images\Holidays\ico_Holiday_prevision.png" />
+    <Content Include="1\Images\icons8-home-48.png" />
+    <Content Include="1\Images\icons8-home-64.png" />
+    <Content Include="1\Images\icons8-office-48.png" />
+    <Content Include="1\Images\icons8-queue-48.png" />
+    <Content Include="1\Images\label01.png" />
+    <Content Include="1\Images\Leaves\ico_leave.png" />
+    <Content Include="1\Images\Leaves\ico_leave_gr.png" />
+    <Content Include="1\Images\Leaves\ico_leave_wh.png" />
+    <Content Include="1\Images\Leaves\ico_myAlerts_gr.png" />
+    <Content Include="1\Images\Leaves\ico_myAlerts_wh.png" />
+    <Content Include="1\Images\Leaves\ico_myLeaves_gr.png" />
+    <Content Include="1\Images\Leaves\ico_myLeaves_wh.png" />
+    <Content Include="1\Images\loader_v3.gif" />
+    <Content Include="1\Images\loader_v4.gif" />
+    <Content Include="1\Images\logoVTime.png" />
+    <Content Include="1\Images\logovtl.ico" />
+    <Content Include="1\Images\logovtl.png" />
+    <Content Include="1\Images\Logo_VT5.png" />
+    <Content Include="1\Images\Notifications\ico_assignShift.png" />
+    <Content Include="1\Images\path2994-7-7-6.png" />
+    <Content Include="1\Images\Profile\ico_config_gr.png" />
+    <Content Include="1\Images\Profile\ico_config_wh.png" />
+    <Content Include="1\Images\Profile\ico_requests_gr.png" />
+    <Content Include="1\Images\Profile\ico_requests_wh.png" />
+    <Content Include="1\Images\Profile\ico_userFields.png" />
+    <Content Include="1\Images\Profile\ico_userfields_gr.png" />
+    <Content Include="1\Images\Profile\ico_userfields_wh.png" />
+    <Content Include="1\Images\progress.gif" />
+    <Content Include="1\Images\Punches\ico_Entrada.png" />
+    <Content Include="1\Images\Punches\ico_Entrada_Justificacion.png" />
+    <Content Include="1\Images\Punches\ico_fichar_CC_gr.png" />
+    <Content Include="1\Images\Punches\ico_Salida.png" />
+    <Content Include="1\Images\Punches\ico_Salida_Justificacion.png" />
+    <Content Include="1\Images\Punches\ico_Tarea_Alert.png" />
+    <Content Include="1\Images\Punches\ico_Tarea_Cambio.png" />
+    <Content Include="1\Images\Punches\ico_Tarea_OK.png" />
+    <Content Include="1\Images\Requests\ico_ChangeShift.png" />
+    <Content Include="1\Images\Requests\ico_ExpiredDocAlert.png" />
+    <Content Include="1\Images\Requests\ico_ExternalWorkResume.png" />
+    <Content Include="1\Images\Requests\ico_ExternalWorkWeekResume.png" />
+    <Content Include="1\Images\Requests\ico_ForbiddenCostPunch.png" />
+    <Content Include="1\Images\Requests\ico_ForbiddenPunch.png" />
+    <Content Include="1\Images\Requests\ico_ForbiddenTaskPunch.png" />
+    <Content Include="1\Images\Requests\ico_Holidays.png" />
+    <Content Include="1\Images\Requests\ico_HolidaysCancel.png" />
+    <Content Include="1\Images\Requests\ico_IncompletePunch.png" />
+    <Content Include="1\Images\Requests\ico_JustifyPunch.png" />
+    <Content Include="1\Images\Requests\ico_PlannedAbsences.png" />
+    <Content Include="1\Images\Requests\ico_PlannedCauses.png" />
+    <Content Include="1\Images\Requests\ico_PlannedHoliday.png" />
+    <Content Include="1\Images\Requests\ico_PlannedOvertime.png" />
+    <Content Include="1\Images\Requests\ico_request_params.png" />
+    <Content Include="1\Images\Requests\ico_request_selectDays.png" />
+    <Content Include="1\Images\Requests\ico_ShiftExchange.png" />
+    <Content Include="1\Images\Requests\ico_telecommute.png" />
+    <Content Include="1\Images\Requests\ico_TrackingDocuments.png" />
+    <Content Include="1\Images\Requests\ico_UserFieldChange.png" />
+    <Content Include="1\Images\Ripple.gif" />
+    <Content Include="1\Images\Ripple1.gif" />
+    <Content Include="1\Images\Teleworking\ico_myWorkDaily_gr.png" />
+    <Content Include="1\Images\Teleworking\ico_myWorkDaily_wh.png" />
+    <Content Include="1\Images\Teleworking\ico_myWorkRequests_gr.png" />
+    <Content Include="1\Images\Teleworking\ico_myWorkRequests_wh.png" />
+    <Content Include="1\Images\Teleworking\ico_myWork_gr.png" />
+    <Content Include="1\Images\Teleworking\ico_myWork_wh.png" />
+    <Content Include="1\Images\toolbar\ico_alerts_header.png" />
+    <Content Include="1\Images\toolbar\ico_alert_gr.png" />
+    <Content Include="1\Images\toolbar\ico_alert_wh.png" />
+    <Content Include="1\Images\toolbar\ico_CC_gr.png" />
+    <Content Include="1\Images\toolbar\ico_CC_wh.png" />
+    <Content Include="1\Images\toolbar\ico_fingerprint_gr.png" />
+    <Content Include="1\Images\toolbar\ico_fingerprint_wh.png" />
+    <Content Include="1\Images\toolbar\ico_fPunches_header.png" />
+    <Content Include="1\Images\toolbar\ico_home_gr.png" />
+    <Content Include="1\Images\toolbar\ico_home_wh.png" />
+    <Content Include="1\Images\toolbar\ico_MiEquipo_gr.png" />
+    <Content Include="1\Images\toolbar\ico_MiEquipo_wh.png" />
+    <Content Include="1\Images\toolbar\ico_MiPerfil_gr.png" />
+    <Content Include="1\Images\toolbar\ico_myAccruals_gr.png" />
+    <Content Include="1\Images\toolbar\ico_myAccruals_wh.png" />
+    <Content Include="1\Images\toolbar\ico_myAuthorizations_gr.png" />
+    <Content Include="1\Images\toolbar\ico_myAuthorizations_wh.png" />
+    <Content Include="1\Images\toolbar\ico_myCalendar_gr.png" />
+    <Content Include="1\Images\toolbar\ico_myCalendar_wh.png" />
+    <Content Include="1\Images\toolbar\ico_myHolidays_gr.png" />
+    <Content Include="1\Images\toolbar\ico_myHolidays_wh.png" />
+    <Content Include="1\Images\toolbar\ico_myPuncheRequests_gr.png" />
+    <Content Include="1\Images\toolbar\ico_myPuncheRequests_wh.png" />
+    <Content Include="1\Images\toolbar\ico_myPunches_gr.png" />
+    <Content Include="1\Images\toolbar\ico_myPunches_wh.png" />
+    <Content Include="1\Images\toolbar\ico_myrequests_gr.png" />
+    <Content Include="1\Images\toolbar\ico_myrequests_wh.png" />
+    <Content Include="1\Images\toolbar\ico_noConnection.png" />
+    <Content Include="1\Images\toolbar\ico_presencia_gr.png" />
+    <Content Include="1\Images\toolbar\ico_presencia_wh.png" />
+    <Content Include="1\Images\toolbar\ico_profile_gr.png" />
+    <Content Include="1\Images\toolbar\ico_profile_wh.png" />
+    <Content Include="1\Images\toolbar\ico_requests_header.png" />
+    <Content Include="1\Images\toolbar\ico_sand_gr.png" />
+    <Content Include="1\Images\toolbar\ico_tarea_gr.png" />
+    <Content Include="1\Images\toolbar\ico_tarea_wh.png" />
+    <Content Include="1\Images\toolbar\logout.png" />
+    <Content Include="1\index.css" />
+    <Content Include="1\index.html" />
+    <Content Include="1\index.js" />
+    <Content Include="1\js\roVTPortal.min.js" />
+    <Content Include="1\js\roVTPortalViews.min.js" />
+    <Content Include="1\layouts\Empty\EmptyLayout.css" />
+    <Content Include="1\layouts\Empty\EmptyLayout.html" />
+    <Content Include="1\layouts\Empty\EmptyLayout.js" />
+    <Content Include="1\layouts\Navbar\NavbarLayout.css" />
+    <Content Include="1\layouts\Navbar\NavbarLayout.html" />
+    <Content Include="1\layouts\Navbar\NavbarLayout.js" />
+    <Content Include="1\layouts\Pivot\PivotLayout.css" />
+    <Content Include="1\layouts\Pivot\PivotLayout.html" />
+    <Content Include="1\layouts\Pivot\PivotLayout.js" />
+    <Content Include="2\app.config.js" />
+    <Content Include="2\css\dx.android5.light.css" />
+    <Content Include="2\css\dx.common.css" />
+    <Content Include="2\css\dx.dark.compact.css" />
+    <Content Include="2\css\dx.spa.css" />
+    <Content Include="2\css\dx.VTPortal.css" />
+    <Content Include="2\css\survey.min.css" />
+    <Content Include="2\css\VTPortal.css" />
+    <Content Include="2\Images\833.gif" />
+    <Content Include="2\Images\Accruals\productiv_contract.png" />
+    <Content Include="2\Images\Accruals\productiv_daily.png" />
+    <Content Include="2\Images\Accruals\productiv_month.png" />
+    <Content Include="2\Images\Accruals\productiv_week.png" />
+    <Content Include="2\Images\Accruals\productiv_year.png" />
+    <Content Include="2\Images\Accruals\schedule_contract.png" />
+    <Content Include="2\Images\Accruals\schedule_daily.png" />
+    <Content Include="2\Images\Accruals\schedule_month.png" />
+    <Content Include="2\Images\Accruals\schedule_week.png" />
+    <Content Include="2\Images\Accruals\schedule_year.png" />
+    <Content Include="2\Images\Actions\exit.png" />
+    <Content Include="2\Images\Actions\ico_Accruals.png" />
+    <Content Include="2\Images\Actions\ico_Info.png" />
+    <Content Include="2\Images\Actions\ico_Punches.png" />
+    <Content Include="2\Images\Actions\ico_Requests.png" />
+    <Content Include="2\Images\Actions\language.png" />
+    <Content Include="2\Images\Actions\nfc.png" />
+    <Content Include="2\Images\Actions\password.png" />
+    <Content Include="2\Images\Actions\sharedPortal.png" />
+    <Content Include="2\Images\Alerts\ico_AbsenteeismDocuments.png" />
+    <Content Include="2\Images\Alerts\ico_AccessAuthorizationDocuments.png" />
+    <Content Include="2\Images\Alerts\ico_Day_With_Unmatched_Time_Record.png" />
+    <Content Include="2\Images\Alerts\ico_Day_with_Unreliable_Time_Record.png" />
+    <Content Include="2\Images\Alerts\ico_DocumentsValidation.png" />
+    <Content Include="2\Images\Alerts\ico_Employee_Not_Arrived_or_Late.png" />
+    <Content Include="2\Images\Alerts\ico_employee_present_with_expired_documents.png" />
+    <Content Include="2\Images\Alerts\ico_GpaAlerts.png" />
+    <Content Include="2\Images\Alerts\ico_LabAgree_Max_Exceeded.png" />
+    <Content Include="2\Images\Alerts\ico_LabAgree_Min_Reached.png" />
+    <Content Include="2\Images\Alerts\ico_MandatoryDocuments.png" />
+    <Content Include="2\Images\Alerts\ico_Non_Justified_Incident.png" />
+    <Content Include="2\Images\Alerts\ico_Productive_Unit_Under_Coverage.png" />
+    <Content Include="2\Images\Alerts\ico_request_pending.png" />
+    <Content Include="2\Images\Alerts\ico_Tasks_Request_complete.png" />
+    <Content Include="2\Images\Alerts\ico_Task_Close_to_Finish.png" />
+    <Content Include="2\Images\Alerts\ico_Task_Close_to_Start.png" />
+    <Content Include="2\Images\Alerts\ico_Task_Exceeding_Finished_Date.png" />
+    <Content Include="2\Images\Alerts\ico_Task_Exceeding_Planned_Time.png" />
+    <Content Include="2\Images\Alerts\ico_Task_exceeding_Started_Date.png" />
+    <Content Include="2\Images\Alerts\ico_Task_With_ALerts.png" />
+    <Content Include="2\Images\Alerts\ico_WorkForecastDocuments.png" />
+    <Content Include="2\Images\channels\channel.png" />
+    <Content Include="2\Images\channels\channelsHome.png" />
+    <Content Include="2\Images\channels\communications.png" />
+    <Content Include="2\Images\channels\complaint.png" />
+    <Content Include="2\Images\Common\approve.png" />
+    <Content Include="2\Images\Common\aviso.png" />
+    <Content Include="2\Images\Common\ayuda.png" />
+    <Content Include="2\Images\Common\calendario.png" />
+    <Content Include="2\Images\Common\camera.png" />
+    <Content Include="2\Images\Common\delete.png" />
+    <Content Include="2\Images\Common\Document.png" />
+    <Content Include="2\Images\Common\empAvailable.png" />
+    <Content Include="2\Images\Common\error.png" />
+    <Content Include="2\Images\Common\exito.png" />
+    <Content Include="2\Images\Common\filter.png" />
+    <Content Include="2\Images\Common\filter_staus.png" />
+    <Content Include="2\Images\Common\historic.png" />
+    <Content Include="2\Images\Common\Info.png" />
+    <Content Include="2\Images\Common\logocegid.png" />
+    <Content Include="2\Images\Common\more.png" />
+    <Content Include="2\Images\Common\moreV.png" />
+    <Content Include="2\Images\Common\nfc.png" />
+    <Content Include="2\Images\Common\NoData.png" />
+    <Content Include="2\Images\Common\NoDataIcon.png" />
+    <Content Include="2\Images\Common\NoGPS.png" />
+    <Content Include="2\Images\Common\NoPermissions.png" />
+    <Content Include="2\Images\Common\notAvailable.png" />
+    <Content Include="2\Images\Common\plus.png" />
+    <Content Include="2\Images\Common\rankings.png" />
+    <Content Include="2\Images\Common\refresh.png" />
+    <Content Include="2\Images\Common\refuse.png" />
+    <Content Include="2\Images\Common\request_approve.png" />
+    <Content Include="2\Images\Common\request_denied.png" />
+    <Content Include="2\Images\Common\request_filterParams_gr.png" />
+    <Content Include="2\Images\Common\request_filterParams_wh.png" />
+    <Content Include="2\Images\Common\request_ongoing.png" />
+    <Content Include="2\Images\Common\request_orderParams_gr.png" />
+    <Content Include="2\Images\Common\request_orderParams_wh.png" />
+    <Content Include="2\Images\Common\request_pending.png" />
+    <Content Include="2\Images\Common\save.png" />
+    <Content Include="2\Images\Communiques\03-Important-128.png" />
+    <Content Include="2\Images\Communiques\03-ImportantRead-128.png" />
+    <Content Include="2\Images\Communiques\12-Spam_Mail-128.png" />
+    <Content Include="2\Images\Communiques\23-Delivered_Mail-128.png" />
+    <Content Include="2\Images\Communiques\25-NotRead_Mail-128.png" />
+    <Content Include="2\Images\Communiques\30-Open_Mail-128.png" />
+    <Content Include="2\Images\Communiques\icons8-attendance-96.png" />
+    <Content Include="2\Images\Communiques\icons8-attendance-96Important.png" />
+    <Content Include="2\Images\Communiques\ico_communiqueNotRead.png" />
+    <Content Include="2\Images\Communiques\ico_communiqueRead.png" />
+    <Content Include="2\Images\Documents\doc-Company.png" />
+    <Content Include="2\Images\Documents\doc-EmployeeContract.png" />
+    <Content Include="2\Images\Documents\doc-EmployeeField.png" />
+    <Content Include="2\Images\Documents\doc-LeaveOrPermission.png" />
+    <Content Include="2\Images\Documents\doc-Punch.png" />
+    <Content Include="2\Images\Documents\doc-Reason.png" />
+    <Content Include="2\Images\Documents\doc-Visit.png" />
+    <Content Include="2\Images\Documents\icons8-sign-document-64.png" />
+    <Content Include="2\Images\Documents\ico_Documents.png" />
+    <Content Include="2\Images\DoubleRing.gif" />
+    <Content Include="2\Images\doubleringblank.gif" />
+    <Content Include="2\Images\eye.png" />
+    <Content Include="2\Images\Holidays\ico_Holiday_available.png" />
+    <Content Include="2\Images\Holidays\ico_Holiday_done.png" />
+    <Content Include="2\Images\Holidays\ico_Holiday_lasting.png" />
+    <Content Include="2\Images\Holidays\ico_Holiday_pending.png" />
+    <Content Include="2\Images\Holidays\ico_Holiday_prevision.png" />
+    <Content Include="2\Images\icons8-home-48.png" />
+    <Content Include="2\Images\icons8-home-64.png" />
+    <Content Include="2\Images\icons8-office-48.png" />
+    <Content Include="2\Images\icons8-optional-48.png" />
+    <Content Include="2\Images\icons8-queue-48.png" />
+    <Content Include="2\Images\label01.png" />
+    <Content Include="2\Images\Leaves\ico_leave.png" />
+    <Content Include="2\Images\Leaves\ico_leave_gr.png" />
+    <Content Include="2\Images\Leaves\ico_leave_wh.png" />
+    <Content Include="2\Images\Leaves\ico_myAlerts_gr.png" />
+    <Content Include="2\Images\Leaves\ico_myAlerts_wh.png" />
+    <Content Include="2\Images\Leaves\ico_myLeaves_gr.png" />
+    <Content Include="2\Images\Leaves\ico_myLeaves_wh.png" />
+    <Content Include="2\Images\loader_v3.gif" />
+    <Content Include="2\Images\loader_v4.gif" />
+    <Content Include="2\Images\logoVTime.png" />
+    <Content Include="2\Images\logovtl.ico" />
+    <Content Include="2\Images\logovtl.png" />
+    <Content Include="2\Images\Logo_VT5.png" />
+    <Content Include="2\Images\newMenu\about.png" />
+    <Content Include="2\Images\newMenu\alerts.png" />
+    <Content Include="2\Images\newMenu\backImpersonate.png" />
+    <Content Include="2\Images\newMenu\backTeam.png" />
+    <Content Include="2\Images\newMenu\calendar.png" />
+    <Content Include="2\Images\newMenu\channels.png" />
+    <Content Include="2\Images\newMenu\comunicados.png" />
+    <Content Include="2\Images\newMenu\dailyrecord.png" />
+    <Content Include="2\Images\newMenu\documents.png" />
+    <Content Include="2\Images\newMenu\folder.png" />
+    <Content Include="2\Images\newMenu\home.png" />
+    <Content Include="2\Images\newMenu\hospital.png" />
+    <Content Include="2\Images\newMenu\impersonate.png" />
+    <Content Include="2\Images\newMenu\logout.png" />
+    <Content Include="2\Images\newMenu\onboarding.png" />
+    <Content Include="2\Images\newMenu\configuration.png" />
+    <Content Include="2\Images\newMenu\profile.png" />
+    <Content Include="2\Images\newMenu\punches.png" />
+    <Content Include="2\Images\newMenu\requests.png" />
+    <Content Include="2\Images\newMenu\status.png" />
+    <Content Include="2\Images\newMenu\team.png" />
+    <Content Include="2\Images\newMenu\teletrabajo.png" />
+    <Content Include="2\Images\newMenu\weblink-home.png" />
+    <Content Include="2\Images\newMenu\weblink.png" />
+    <Content Include="2\Images\Notifications\ico_assignShift.png" />
+    <Content Include="2\Images\path2994-7-7-6.png" />
+    <Content Include="2\Images\Profile\ico_config_gr.png" />
+    <Content Include="2\Images\Profile\ico_config_wh.png" />
+    <Content Include="2\Images\Profile\ico_requests_gr.png" />
+    <Content Include="2\Images\Profile\ico_requests_wh.png" />
+    <Content Include="2\Images\Profile\ico_userFields.png" />
+    <Content Include="2\Images\Profile\ico_userfields_gr.png" />
+    <Content Include="2\Images\Profile\ico_userfields_wh.png" />
+    <Content Include="2\Images\progress.gif" />
+    <Content Include="2\Images\Punches\enter.jpg" />
+    <Content Include="2\Images\Punches\exit.jpg" />
+    <Content Include="2\Images\Punches\ico_added.png" />
+    <Content Include="2\Images\Punches\ico_Entrada.png" />
+    <Content Include="2\Images\Punches\ico_Entrada_Justificacion.png" />
+    <Content Include="2\Images\Punches\ico_fichar_CC_gr.png" />
+    <Content Include="2\Images\Punches\ico_Salida.png" />
+    <Content Include="2\Images\Punches\ico_Salida_Justificacion.png" />
+    <Content Include="2\Images\Punches\ico_Tarea_Alert.png" />
+    <Content Include="2\Images\Punches\ico_Tarea_Cambio.png" />
+    <Content Include="2\Images\Punches\ico_Tarea_OK.png" />
+    <Content Include="2\Images\Requests\ico_ChangeShift.png" />
+    <Content Include="2\Images\Requests\ico_ExpiredDocAlert.png" />
+    <Content Include="2\Images\Requests\ico_ExternalWorkResume.png" />
+    <Content Include="2\Images\Requests\ico_ExternalWorkWeekResume.png" />
+    <Content Include="2\Images\Requests\ico_ForbiddenCostPunch.png" />
+    <Content Include="2\Images\Requests\ico_ForbiddenPunch.png" />
+    <Content Include="2\Images\Requests\ico_ForbiddenTaskPunch.png" />
+    <Content Include="2\Images\Requests\ico_Holidays.png" />
+    <Content Include="2\Images\Requests\ico_HolidaysCancel.png" />
+    <Content Include="2\Images\Requests\ico_IncompletePunch.png" />
+    <Content Include="2\Images\Requests\ico_JustifyPunch.png" />
+    <Content Include="2\Images\Requests\ico_PlannedAbsences.png" />
+    <Content Include="2\Images\Requests\ico_PlannedCauses.png" />
+    <Content Include="2\Images\Requests\ico_PlannedHoliday.png" />
+    <Content Include="2\Images\Requests\ico_PlannedOvertime.png" />
+    <Content Include="2\Images\Requests\ico_request_params.png" />
+    <Content Include="2\Images\Requests\ico_request_selectDays.png" />
+    <Content Include="2\Images\Requests\ico_ShiftExchange.png" />
+    <Content Include="2\Images\Requests\ico_telecommute.png" />
+    <Content Include="2\Images\Requests\ico_TrackingDocuments.png" />
+    <Content Include="2\Images\Requests\ico_UserFieldChange.png" />
+    <Content Include="2\Images\Ripple.gif" />
+    <Content Include="2\Images\Ripple1.gif" />
+    <Content Include="2\Images\Teleworking\ico_myWorkDaily_gr.png" />
+    <Content Include="2\Images\Teleworking\ico_myWorkDaily_wh.png" />
+    <Content Include="2\Images\Teleworking\ico_myWorkRequests_gr.png" />
+    <Content Include="2\Images\Teleworking\ico_myWorkRequests_wh.png" />
+    <Content Include="2\Images\Teleworking\ico_myWork_gr.png" />
+    <Content Include="2\Images\Teleworking\ico_myWork_wh.png" />
+    <Content Include="2\Images\toolbar\ico_alerts_header.png" />
+    <Content Include="2\Images\toolbar\ico_alert_gr.png" />
+    <Content Include="2\Images\toolbar\ico_alert_wh.png" />
+    <Content Include="2\Images\toolbar\ico_CC_gr.png" />
+    <Content Include="2\Images\toolbar\ico_CC_wh.png" />
+    <Content Include="2\Images\toolbar\ico_fingerprint_gr.png" />
+    <Content Include="2\Images\toolbar\ico_fingerprint_wh.png" />
+    <Content Include="2\Images\toolbar\ico_fPunches_header.png" />
+    <Content Include="2\Images\toolbar\ico_home_gr.png" />
+    <Content Include="2\Images\toolbar\ico_home_wh.png" />
+    <Content Include="2\Images\toolbar\ico_MiEquipo_gr.png" />
+    <Content Include="2\Images\toolbar\ico_MiEquipo_wh.png" />
+    <Content Include="2\Images\toolbar\ico_MiPerfil_gr.png" />
+    <Content Include="2\Images\toolbar\ico_myAccruals_gr.png" />
+    <Content Include="2\Images\toolbar\ico_myAccruals_wh.png" />
+    <Content Include="2\Images\toolbar\ico_myAuthorizations_gr.png" />
+    <Content Include="2\Images\toolbar\ico_myAuthorizations_wh.png" />
+    <Content Include="2\Images\toolbar\ico_myCalendar_gr.png" />
+    <Content Include="2\Images\toolbar\ico_myCalendar_wh.png" />
+    <Content Include="2\Images\toolbar\ico_myHolidays_gr.png" />
+    <Content Include="2\Images\toolbar\ico_myHolidays_wh.png" />
+    <Content Include="2\Images\toolbar\ico_myPuncheRequests_gr.png" />
+    <Content Include="2\Images\toolbar\ico_myPuncheRequests_wh.png" />
+    <Content Include="2\Images\toolbar\ico_myPunches_gr.png" />
+    <Content Include="2\Images\toolbar\ico_myPunches_wh.png" />
+    <Content Include="2\Images\toolbar\ico_myrequests_gr.png" />
+    <Content Include="2\Images\toolbar\ico_myrequests_wh.png" />
+    <Content Include="2\Images\toolbar\ico_noConnection.png" />
+    <Content Include="2\Images\toolbar\ico_presencia_gr.png" />
+    <Content Include="2\Images\toolbar\ico_presencia_wh.png" />
+    <Content Include="2\Images\toolbar\ico_profile_gr.png" />
+    <Content Include="2\Images\toolbar\ico_profile_wh.png" />
+    <Content Include="2\Images\toolbar\ico_requests_header.png" />
+    <Content Include="2\Images\toolbar\ico_sand_gr.png" />
+    <Content Include="2\Images\toolbar\ico_tarea_gr.png" />
+    <Content Include="2\Images\toolbar\ico_tarea_wh.png" />
+    <Content Include="2\Images\toolbar\logout.png" />
+    <Content Include="2\Images\ZonesStatus.png" />
+    <Content Include="2\index.css" />
+    <Content Include="2\index.html" />
+    <Content Include="2\index.js" />
+    <Content Include="2\indexv2.aspx" />
+    <Content Include="2\js\roVTPortal.min.js" />
+    <Content Include="2\js\roVTPortalViews.min.js" />
+    <Content Include="2\layouts\Empty\EmptyLayout.css" />
+    <Content Include="2\layouts\Empty\EmptyLayout.html" />
+    <Content Include="2\layouts\Empty\EmptyLayout.js" />
+    <Content Include="2\layouts\Navbar\NavbarLayout.css" />
+    <Content Include="2\layouts\Navbar\NavbarLayout.html" />
+    <Content Include="2\layouts\Navbar\NavbarLayout.js" />
+    <Content Include="2\layouts\Pivot\PivotLayout.css" />
+    <Content Include="2\layouts\Pivot\PivotLayout.html" />
+    <Content Include="2\layouts\Pivot\PivotLayout.js" />
+    <Content Include="api\PortalSvcx.svc" />
+    <Content Include="api\TimeGate.svc" />
+    <Content Include="cordova.js" />
+    <Content Include="css\anywhere_pc.css" />
+    <Content Include="css\vtportal.ie11.css" />
+    <Content Include="css\vtportal.ie9.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\bgdefault.png" />
+    <Content Include="Images\logofirst.png" />
+    <Content Include="Images\logovtl.ico" />
+    <Content Include="Images\logovtp.png" />
+    <Content Include="indexWeb.js" />
+    <Content Include="js\cldr.min.js" />
+    <Content Include="js\cldr\event.min.js" />
+    <Content Include="js\cldr\supplemental.min.js" />
+    <Content Include="js\cldr\unresolved.min.js" />
+    <Content Include="js\dx.all.js" />
+    <Content Include="js\emotion-ratings.js" />
+    <Content Include="js\globalize.min.js" />
+    <Content Include="js\globalize\currency.min.js" />
+    <Content Include="js\globalize\date.min.js" />
+    <Content Include="js\globalize\message.min.js" />
+    <Content Include="js\globalize\number.min.js" />
+    <Content Include="js\jquery-3.7.1.min.js" />
+    <Content Include="js\knockout-3.4.2.js" />
+    <Content Include="js\plugins\aes.js" />
+    <Content Include="js\plugins\i18next.ko.min.js" />
+    <Content Include="js\plugins\i18next.min.js" />
+    <Content Include="js\plugins\js.cookie.js" />
+    <Content Include="js\plugins\moment-timezone.min.js" />
+    <Content Include="js\plugins\moment.min.js" />
+    <Content Include="js\plugins\sugar.min.js" />
+    <Content Include="js\plugins\timezone.detect.js" />
+    <Content Include="js\ro.validate.url.min.js" />
+    <Content Include="js\survey.jquery.min.js" />
+    <Content Include="js\surveyjs-widgets.js" />
+    <Content Include="Resources\backgroundDefault.png" />
+    <Content Include="Resources\backgroundEmployee.png" />
+    <Content Include="Resources\BackgroundPlus.png" />
+    <Content Include="Resources\Default%402x~ipad~anyany.png" />
+    <Content Include="Resources\Default%402x~ipad~comany.png" />
+    <Content Include="Resources\Default%402x~iphone~anyany.png" />
+    <Content Include="Resources\Default%402x~iphone~comany.png" />
+    <Content Include="Resources\Default%402x~iphone~comcom.png" />
+    <Content Include="Resources\Default%402x~universal~anyany.png" />
+    <Content Include="Resources\Default%403x~iphone~anyany.png" />
+    <Content Include="Resources\Default%403x~iphone~anycom.png" />
+    <Content Include="Resources\Default%403x~iphone~comany.png" />
+    <Content Include="Resources\drawable-hdpi\ic_android.png" />
+    <Content Include="Resources\drawable-mdpi\ic_android.png" />
+    <Content Include="Resources\drawable-xhdpi\ic_android.png" />
+    <Content Include="Resources\drawable-xxhdpi\ic_android.png" />
+    <Content Include="Resources\drawable-xxxhdpi\ic_android.png" />
+    <Content Include="Resources\dynamicView.js" />
+    <Content Include="Resources\dynamicView.txt" />
+    <Content Include="Resources\icon-ios-83.5%402x.png" />
+    <Content Include="Resources\logovtl_bar.png" />
+    <Content Include="Resources\PackageIcons.Android.ic_launcher_36_36.png" />
+    <Content Include="Resources\PackageIcons.Android.ic_launcher_48_48.png" />
+    <Content Include="Resources\PackageIcons.Android.ic_launcher_72_72.png" />
+    <Content Include="Resources\PackageIcons.Android.ic_launcher_96_96.png" />
+    <Content Include="Resources\PackageIcons.Android.splash_1280_720.png" />
+    <Content Include="Resources\PackageIcons.Android.splash_200_320.png" />
+    <Content Include="Resources\PackageIcons.Android.splash_320_200.png" />
+    <Content Include="Resources\PackageIcons.Android.splash_320_480.png" />
+    <Content Include="Resources\PackageIcons.Android.splash_480_320.png" />
+    <Content Include="Resources\PackageIcons.Android.splash_480_800.png" />
+    <Content Include="Resources\PackageIcons.Android.splash_720_1280.png" />
+    <Content Include="Resources\PackageIcons.Android.splash_800_480.png" />
+    <Content Include="Resources\PackageIcons.iOS.AppIcon29x29%402x.png" />
+    <Content Include="Resources\PackageIcons.iOS.AppIcon29x29%403x.png" />
+    <Content Include="Resources\PackageIcons.iOS.AppIcon29x29.png" />
+    <Content Include="Resources\PackageIcons.iOS.AppIcon40x40%402x.png" />
+    <Content Include="Resources\PackageIcons.iOS.AppIcon40x40%403x.png" />
+    <Content Include="Resources\PackageIcons.iOS.AppIcon40x40~ipad.png" />
+    <Content Include="Resources\PackageIcons.iOS.AppIcon50x50%402x~ipad.png" />
+    <Content Include="Resources\PackageIcons.iOS.AppIcon50x50~ipad.png" />
+    <Content Include="Resources\PackageIcons.iOS.Default%402x~iphone.png" />
+    <Content Include="Resources\PackageIcons.iOS.Default-568h%402x~iphone.png" />
+    <Content Include="Resources\PackageIcons.iOS.Default-667h.png" />
+    <Content Include="Resources\PackageIcons.iOS.Default-736h.png" />
+    <Content Include="Resources\PackageIcons.iOS.Default-Landscape%402x~ipad.png" />
+    <Content Include="Resources\PackageIcons.iOS.Default-Landscape-736h.png" />
+    <Content Include="Resources\PackageIcons.iOS.Default-Landscape~ipad.png" />
+    <Content Include="Resources\PackageIcons.iOS.Default-Portrait%402x~ipad.png" />
+    <Content Include="Resources\PackageIcons.iOS.Default-Portrait~ipad.png" />
+    <Content Include="Resources\PackageIcons.iOS.Default~iphone.png" />
+    <Content Include="Resources\PackageIcons.iOS.icon%402x.png" />
+    <Content Include="Resources\PackageIcons.iOS.icon-60%402x.png" />
+    <Content Include="Resources\PackageIcons.iOS.icon-60%403x.png" />
+    <Content Include="Resources\PackageIcons.iOS.icon-60.png" />
+    <Content Include="Resources\PackageIcons.iOS.icon-72%402x.png" />
+    <Content Include="Resources\PackageIcons.iOS.icon-72.png" />
+    <Content Include="Resources\PackageIcons.iOS.icon-76%402x.png" />
+    <Content Include="Resources\PackageIcons.iOS.icon-76.png" />
+    <Content Include="Resources\PackageIcons.iOS.icon.png" />
+    <Content Include="Resources\PackageIcons.iOS.iTunesArtwork.png" />
+    <Content Include="Resources\PackageIcons.WP.150-240.png" />
+    <Content Include="Resources\PackageIcons.WP.310-240.png" />
+    <Content Include="Resources\PackageIcons.WP.310x150-240.png" />
+    <Content Include="Resources\PackageIcons.WP.44-240.png" />
+    <Content Include="Resources\PackageIcons.WP.50-240.png" />
+    <Content Include="Resources\PackageIcons.WP.71-240.png" />
+    <Content Include="Resources\PackageIcons.WP.Splash-240.png" />
+    <Content Include="Resources\userDefault.png" />
+    <Content Include="robots.txt" />
+    <Content Include="SigningPage.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="index.aspx" />
+    <Content Include="index.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AssemblyVersionInfo.vb">
+      <Link>AssemblyVersionInfo.vb</Link>
+    </Compile>
+    <Compile Include="2\indexv2.aspx.designer.vb">
+      <DependentUpon>indexv2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2\indexv2.aspx.vb">
+      <DependentUpon>indexv2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="api\TimeGate.svc.vb">
+      <DependentUpon>TimeGate.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Base\CustomError.vb" />
+    <Compile Include="Base\CustomErrorAttribute.vb" />
+    <Compile Include="api\PortalSvcx.svc.vb">
+      <DependentUpon>PortalSvcx.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="SigningPage.aspx.designer.vb">
+      <DependentUpon>SigningPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SigningPage.aspx.vb">
+      <DependentUpon>SigningPage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.vb">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.vb">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1\css\fonts\Poppins-Bold.ttf" />
+    <Content Include="1\css\fonts\Poppins-Regular.ttf" />
+    <Content Include="1\css\fonts\Roboto-Regular.ttf" />
+    <Content Include="1\css\icons\dxicons.eot" />
+    <Content Include="1\css\icons\dxicons.ttf" />
+    <Content Include="1\css\icons\dxicons.woff" />
+    <Content Include="1\css\icons\dxiconsios.eot" />
+    <Content Include="1\css\icons\dxiconsios.ttf" />
+    <Content Include="1\css\icons\dxiconsios.woff" />
+    <Content Include="1\js\localization\dx.all.ca.json" />
+    <Content Include="1\js\localization\dx.all.en.json" />
+    <Content Include="1\js\localization\dx.all.es.json" />
+    <Content Include="1\js\localization\dx.all.eu.json" />
+    <Content Include="1\js\localization\dx.all.fr.json" />
+    <Content Include="1\js\localization\dx.all.gl.json" />
+    <Content Include="1\js\localization\dx.all.it.json" />
+    <Content Include="1\js\localization\dx.all.pt.json" />
+    <Content Include="1\js\localization\dx.all.zh.json" />
+    <Content Include="1\js\localization\vtportal.i18n.ca.json" />
+    <Content Include="1\js\localization\vtportal.i18n.dev.json" />
+    <Content Include="1\js\localization\vtportal.i18n.en.json" />
+    <Content Include="1\js\localization\vtportal.i18n.es.json" />
+    <Content Include="1\js\localization\vtportal.i18n.eu.json" />
+    <Content Include="1\js\localization\vtportal.i18n.fr.json" />
+    <Content Include="1\js\localization\vtportal.i18n.gl.json" />
+    <Content Include="1\js\localization\vtportal.i18n.it.json" />
+    <Content Include="1\js\localization\vtportal.i18n.pt.json" />
+    <Content Include="1\js\localization\vtportal.i18n.zh.json" />
+    <Content Include="1\views\actions\DocumentFilters.dxview" />
+    <Content Include="1\views\actions\RequestFilters.dxview" />
+    <Content Include="1\views\actions\SelectListObject.dxview" />
+    <Content Include="1\views\actions\sendDocument.dxview" />
+    <Content Include="1\views\alerts.dxview" />
+    <Content Include="1\views\communiques\communiqueDetail.dxview" />
+    <Content Include="1\views\communiques\communiques.dxview" />
+    <Content Include="1\views\documents.dxview" />
+    <Content Include="1\views\home.dxview" />
+    <Content Include="1\views\home\accrualsHome.dxview" />
+    <Content Include="1\views\home\communiquesHome.dxview" />
+    <Content Include="1\views\home\emptyHome.dxview" />
+    <Content Include="1\views\home\index.dxview" />
+    <Content Include="1\views\home\notificationsHome.dxview" />
+    <Content Include="1\views\home\punchesHome.dxview" />
+    <Content Include="1\views\home\summaryHome.dxview" />
+    <Content Include="1\views\home\surveysHome.dxview" />
+    <Content Include="1\views\home\telecommutingHome.dxview" />
+    <Content Include="1\views\leaves\leaves.dxview" />
+    <Content Include="1\views\leaves\myLeaves.dxview" />
+    <Content Include="1\views\leaves\myLeavesAlerts.dxview" />
+    <Content Include="1\views\leaves\newLeave.dxview" />
+    <Content Include="1\views\leaves\sendLeaveDocument.dxview" />
+    <Content Include="1\views\loading.dxview" />
+    <Content Include="1\views\Login.dxview" />
+    <Content Include="1\views\myteam\myteam.dxview" />
+    <Content Include="1\views\myteam\myTeamAlerts.dxview" />
+    <Content Include="1\views\myteam\myTeamAlertsDetail.dxview" />
+    <Content Include="1\views\myteam\myTeamEmployees.dxview" />
+    <Content Include="1\views\myteam\myTeamRequests.dxview" />
+    <Content Include="1\views\onboarding\onboardingDetail.dxview" />
+    <Content Include="1\views\onboarding\onboardings.dxview" />
+    <Content Include="1\views\partial\bigUserInfo.dxview" />
+    <Content Include="1\views\partial\documentInput.dxview" />
+    <Content Include="1\views\partial\statusHeader.dxview" />
+    <Content Include="1\views\partial\TaskFieldsInput.dxview" />
+    <Content Include="1\views\profile\profile.dxview" />
+    <Content Include="1\views\profile\profileConfig.dxview" />
+    <Content Include="1\views\profile\profileUserFields.dxview" />
+    <Content Include="1\views\punches.dxview" />
+    <Content Include="1\views\punches\myPunches.dxview" />
+    <Content Include="1\views\punches\myPunchRequests.dxview" />
+    <Content Include="1\views\punches\punchManagement.dxview" />
+    <Content Include="1\views\requestsNew\absence.dxview" />
+    <Content Include="1\views\requestsNew\forgotten.dxview" />
+    <Content Include="1\views\requests\approvalHistory.dxview" />
+    <Content Include="1\views\requests\cancelHolidays.dxview" />
+    <Content Include="1\views\requests\changeShift.dxview" />
+    <Content Include="1\views\requests\externalWork.dxview" />
+    <Content Include="1\views\requests\externalWorkWeekResume.dxview" />
+    <Content Include="1\views\requests\forgottenPunch.dxview" />
+    <Content Include="1\views\requests\justifyPunch.dxview" />
+    <Content Include="1\views\requests\plannedAbsence.dxview" />
+    <Content Include="1\views\requests\plannedCause.dxview" />
+    <Content Include="1\views\requests\plannedHoliday.dxview" />
+    <Content Include="1\views\requests\plannedOvertime.dxview" />
+    <Content Include="1\views\requests\requestsList.dxview" />
+    <Content Include="1\views\requests\shiftExchange.dxview" />
+    <Content Include="1\views\requests\telecommute.dxview" />
+    <Content Include="1\views\requests\userFields.dxview" />
+    <Content Include="1\views\scheduler\capacityDetail.dxview" />
+    <Content Include="1\views\scheduler\dayInfo.dxview" />
+    <Content Include="1\views\scheduler\myAccruals.dxview" />
+    <Content Include="1\views\scheduler\myAuthorizations.dxview" />
+    <Content Include="1\views\scheduler\myCalendar.dxview" />
+    <Content Include="1\views\scheduler\myRequests.dxview" />
+    <Content Include="1\views\scheduler\scheduler.dxview" />
+    <Content Include="1\views\survey\surveyDetail.dxview" />
+    <Content Include="1\views\survey\surveys.dxview" />
+    <Content Include="1\views\telecommutingSelector.dxview" />
+    <Content Include="1\views\teleworking\myWork.dxview" />
+    <Content Include="1\views\teleworking\myWorkDaily.dxview" />
+    <Content Include="1\views\teleworking\myWorkRequests.dxview" />
+    <Content Include="1\views\teleworking\teleworking.dxview" />
+    <Content Include="2\css\fonts\Poppins-Bold.ttf" />
+    <Content Include="2\css\fonts\Poppins-Regular.ttf" />
+    <Content Include="2\css\fonts\Roboto-Regular.ttf" />
+    <Content Include="2\css\icons\dxicons.eot" />
+    <Content Include="2\css\icons\dxicons.ttf" />
+    <Content Include="2\css\icons\dxicons.woff" />
+    <Content Include="2\css\icons\dxiconsios.eot" />
+    <Content Include="2\css\icons\dxiconsios.ttf" />
+    <Content Include="2\css\icons\dxiconsios.woff" />
+    <Content Include="2\js\localization\dx.all.ca.json" />
+    <Content Include="2\js\localization\dx.all.en.json" />
+    <Content Include="2\js\localization\dx.all.es.json" />
+    <Content Include="2\js\localization\dx.all.eu.json" />
+    <Content Include="2\js\localization\dx.all.fr.json" />
+    <Content Include="2\js\localization\dx.all.gl.json" />
+    <Content Include="2\js\localization\dx.all.it.json" />
+    <Content Include="2\js\localization\dx.all.pt.json" />
+    <Content Include="2\js\localization\dx.all.zh.json" />
+    <Content Include="2\js\localization\vtportal.i18n.ca.json" />
+    <Content Include="2\js\localization\vtportal.i18n.dev.json" />
+    <Content Include="2\js\localization\vtportal.i18n.en.json" />
+    <Content Include="2\js\localization\vtportal.i18n.es.json" />
+    <Content Include="2\js\localization\vtportal.i18n.eu.json" />
+    <Content Include="2\js\localization\vtportal.i18n.fr.json" />
+    <Content Include="2\js\localization\vtportal.i18n.gl.json" />
+    <Content Include="2\js\localization\vtportal.i18n.it.json" />
+    <Content Include="2\js\localization\vtportal.i18n.pt.json" />
+    <Content Include="2\js\localization\vtportal.i18n.zh.json" />
+    <Content Include="2\views\actions\DocumentFilters.dxview" />
+    <Content Include="2\views\actions\punchInfo.dxview" />
+    <Content Include="2\views\actions\RequestFilters.dxview" />
+    <Content Include="2\views\actions\SelectListObject.dxview" />
+    <Content Include="2\views\actions\sendDocument.dxview" />
+    <Content Include="2\views\actions\taskSelector.dxview" />
+    <Content Include="2\views\alerts.dxview" />
+    <Content Include="2\views\channels\addMessage.dxview" />
+    <Content Include="2\views\channels\channelConversations.dxview" />
+    <Content Include="2\views\channels\conversationMessages.dxview" />
+    <Content Include="2\views\channels\myChannels.dxview" />
+    <Content Include="2\views\communiques\communiqueDetail.dxview" />
+    <Content Include="2\views\communiques\communiques.dxview" />
+    <Content Include="2\views\dailyRecord\addDailyRecord.dxview" />
+    <Content Include="2\views\dailyRecord\myDailyRecord.dxview" />
+    <Content Include="2\views\documents.dxview" />
+    <Content Include="2\views\home.dxview" />
+    <Content Include="2\views\home\accrualsHome.dxview" />
+    <Content Include="2\views\home\channelsHome.dxview" />
+    <Content Include="2\views\home\communiquesHome.dxview" />
+    <Content Include="2\views\home\dailyRecordHome.dxview" />
+    <Content Include="2\views\home\emptyHome.dxview" />
+    <Content Include="2\views\home\index.dxview" />
+    <Content Include="2\views\home\notificationsHome.dxview" />
+    <Content Include="2\views\home\punchesHome.dxview" />
+    <Content Include="2\views\home\summaryHome.dxview" />
+    <Content Include="2\views\home\surveysHome.dxview" />
+    <Content Include="2\views\home\telecommutingHome.dxview" />
+    <Content Include="2\views\leaves\leaves.dxview" />
+    <Content Include="2\views\leaves\myLeaves.dxview" />
+    <Content Include="2\views\leaves\myLeavesAlerts.dxview" />
+    <Content Include="2\views\leaves\newLeave.dxview" />
+    <Content Include="2\views\leaves\sendLeaveDocument.dxview" />
+    <Content Include="2\views\loading.dxview" />
+    <Content Include="2\views\Login.dxview" />
+    <Content Include="2\views\myteam\myteam.dxview" />
+    <Content Include="2\views\myteam\myTeamAlerts.dxview" />
+    <Content Include="2\views\myteam\myTeamAlertsDetail.dxview" />
+    <Content Include="2\views\myteam\myTeamDailyRecords.dxview" />
+    <Content Include="2\views\myteam\myTeamEmployees.dxview" />
+    <Content Include="2\views\myteam\myTeamRequests.dxview" />
+    <Content Include="2\views\onboarding\onboardingDetail.dxview" />
+    <Content Include="2\views\onboarding\onboardings.dxview" />
+    <Content Include="2\views\partial\bigUserInfo.dxview" />
+    <Content Include="2\views\partial\documentInput.dxview" />
+    <Content Include="2\views\partial\noPermissions.dxview" />
+    <Content Include="2\views\partial\statusHeader.dxview" />
+    <Content Include="2\views\partial\TaskFieldsInput.dxview" />
+    <Content Include="2\views\profile\profile.dxview" />
+    <Content Include="2\views\profile\profileConfig.dxview" />
+    <Content Include="2\views\profile\profileUserFields.dxview" />
+    <Content Include="2\views\punches.dxview" />
+    <Content Include="2\views\punches\myPunches.dxview" />
+    <Content Include="2\views\punches\myPunchRequests.dxview" />
+    <Content Include="2\views\punches\punchManagement.dxview" />
+    <Content Include="2\views\requestsNew\absence.dxview" />
+    <Content Include="2\views\requestsNew\cancelHolidaysNew.dxview" />
+    <Content Include="2\views\requestsNew\changeShiftNew.dxview" />
+    <Content Include="2\views\requestsNew\dailyRecordDetail.dxview" />
+    <Content Include="2\views\requestsNew\forgotten.dxview" />
+    <Content Include="2\views\requestsNew\telecommuting.dxview" />
+    <Content Include="2\views\requests\approvalHistory.dxview" />
+    <Content Include="2\views\requests\cancelHolidays.dxview" />
+    <Content Include="2\views\requests\changeShift.dxview" />
+    <Content Include="2\views\requests\externalWork.dxview" />
+    <Content Include="2\views\requests\externalWorkWeekResume.dxview" />
+    <Content Include="2\views\requests\forgottenPunch.dxview" />
+    <Content Include="2\views\requests\justifyPunch.dxview" />
+    <Content Include="2\views\requests\plannedAbsence.dxview" />
+    <Content Include="2\views\requests\plannedCause.dxview" />
+    <Content Include="2\views\requests\plannedHoliday.dxview" />
+    <Content Include="2\views\requests\plannedOvertime.dxview" />
+    <Content Include="2\views\requests\requestsList.dxview" />
+    <Content Include="2\views\requests\shiftExchange.dxview" />
+    <Content Include="2\views\requests\telecommute.dxview" />
+    <Content Include="2\views\requests\userFields.dxview" />
+    <Content Include="2\views\scheduler\capacityDetail.dxview" />
+    <Content Include="2\views\scheduler\dayInfo.dxview" />
+    <Content Include="2\views\scheduler\myAccruals.dxview" />
+    <Content Include="2\views\scheduler\myAuthorizations.dxview" />
+    <Content Include="2\views\scheduler\myCalendar.dxview" />
+    <Content Include="2\views\scheduler\myRequests.dxview" />
+    <Content Include="2\views\scheduler\scheduler.dxview" />
+    <Content Include="2\views\survey\surveyDetail.dxview" />
+    <Content Include="2\views\survey\surveys.dxview" />
+    <Content Include="2\views\telecommutingSelector.dxview" />
+    <Content Include="2\views\teleworking\myWork.dxview" />
+    <Content Include="2\views\teleworking\myWorkDaily.dxview" />
+    <Content Include="2\views\teleworking\myWorkRequests.dxview" />
+    <Content Include="2\views\teleworking\teleworking.dxview" />
+    <Content Include="js\cldr\locales\environment-ca.json" />
+    <Content Include="js\cldr\locales\environment-en.json" />
+    <Content Include="js\cldr\locales\environment-es.json" />
+    <Content Include="js\cldr\locales\environment-eu.json" />
+    <Content Include="js\cldr\locales\environment-fr.json" />
+    <Content Include="js\cldr\locales\environment-gl.json" />
+    <Content Include="js\cldr\locales\environment-it.json" />
+    <Content Include="js\cldr\locales\environment-pt.json" />
+    <Content Include="js\cldr\locales\likelySubtags.json" />
+    <Content Include="2\views\status.dxview" />
+    <Content Include="2\js\localization\dx.all.sk.json" />
+    <Content Include="2\js\localization\vtportal.i18n.sk.json" />
+    <Content Include="2\views\configuration\configuration.dxview" />
+    <Content Include="2\views\configuration\sharedPortalConfig.dxview" />
+    <Content Include="2\views\TimeGate.dxview" />
+    <Content Include="2\views\home\webLinksHome.dxview" />
+    <Content Include="2\views\weblinks\myWebLinks.dxview" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\VisualTimeMTDeploy.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="tsconfig.json" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Multitennant.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\BaseWeb\Business\BaseWeb.vbproj">
+      <Project>{863c7f13-8c1d-4a24-a580-5e3dd0683757}</Project>
+      <Name>BaseWeb</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\DataLayer\DataLayer.vbproj">
+      <Project>{a68015f9-a070-4ab5-941e-c922fbc5ff30}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\DTOs.VTPortal\DTOs.VTPortal.vbproj">
+      <Project>{38052328-369e-4e56-a112-1a03362207e1}</Project>
+      <Name>DTOs.VTPortal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\DTOs\DTOs\DTOs.vbproj">
+      <Project>{00be6247-e1ed-4e0a-bd02-8dbb4e00ffe1}</Project>
+      <Name>DTOs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\SecurityLayer\SecurityLayer.vbproj">
+      <Project>{e712f6a2-5e54-4731-9b11-af80242a246c}</Project>
+      <Name>SecurityLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTAuthBase\VTAuthBase.vbproj">
+      <Project>{47ca7045-819a-4d2a-8e30-c584c309ba4f}</Project>
+      <Name>VTAuthBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTAzure\VTAzure.vbproj">
+      <Project>{c4ad9d15-4368-4343-b1e1-263abf0e8ab0}</Project>
+      <Name>VTAzure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTBase.Extensions\VTBase.Extensions.vbproj">
+      <Project>{d99ce0c2-ad93-4f3d-a35b-c97749de1bde}</Project>
+      <Name>VTBase.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTBase.Security\VTBase.Security.vbproj">
+      <Project>{c1b73385-8dff-40b0-8c3b-d2e0ded2621e}</Project>
+      <Name>VTBase.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTBase\VTBase.vbproj">
+      <Project>{f1d0ec70-d874-4eed-8ab9-f28fcda2b7f0}</Project>
+      <Name>VTBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTBusinessBase\VTBusiness.Common.vbproj">
+      <Project>{97d87ef7-2b41-4216-a6d2-fa9e3c1bc570}</Project>
+      <Name>VTBusiness.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTBusiness\VTBusiness.vbproj">
+      <Project>{19563cd9-657e-48a8-9b7e-c8b7b23af403}</Project>
+      <Name>VTBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTChannels\VTChannels.vbproj">
+      <Project>{df7b157f-567b-45e2-a1fa-d273f2db15fb}</Project>
+      <Name>VTChannels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTCommuniques\VTCommuniques.vbproj">
+      <Project>{1003317b-2084-42b8-91c0-d78addb1ea1e}</Project>
+      <Name>VTCommuniques</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTDailyRecord\VTDailyRecord.vbproj">
+      <Project>{28f34d23-2adf-4453-b059-263104d6eba4}</Project>
+      <Name>VTDailyRecord</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTDocuments\VTDocuments.vbproj">
+      <Project>{41921bbc-f55b-44f9-b72c-0412b237c49e}</Project>
+      <Name>VTDocuments</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTEmployees\VTEmployees.vbproj">
+      <Project>{c0e7da43-d1b9-4427-b147-47a269b8706f}</Project>
+      <Name>VTEmployees</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTLiveApiBase\VTLiveApiBase.vbproj">
+      <Project>{46200707-6117-4aac-abc3-31bfbb16990f}</Project>
+      <Name>VTLiveApiBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTPortalBusiness\VTPortal.vbproj">
+      <Project>{636a00a2-2a32-460b-b2dc-437d56148683}</Project>
+      <Name>VTPortal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTRequests\VTRequests.vbproj">
+      <Project>{0b351286-98d3-4974-90d0-8348a40bea7c}</Project>
+      <Name>VTRequests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTScheduler\VTCalendar.vbproj">
+      <Project>{b0555c2c-7794-40d1-bd31-6af0978048cb}</Project>
+      <Name>VTCalendar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTServiceApi\VTServiceApi.vbproj">
+      <Project>{73f54928-6834-45e9-ac75-511a86f453c3}</Project>
+      <Name>VTServiceApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTSurvey\VTSurvey.vbproj">
+      <Project>{377d60e5-384e-4488-92e3-919d0562114b}</Project>
+      <Name>VTSurvey</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTTerminals\VTTerminals.vbproj">
+      <Project>{c2c99a9a-f600-45fc-82c5-b0d1454f85e9}</Project>
+      <Name>VTTerminals</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTToDoList\VTToDoList.vbproj">
+      <Project>{7cb1463e-f69e-4317-9c4e-725690229289}</Project>
+      <Name>VTToDoList</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTUserFields\VTUserFields.vbproj">
+      <Project>{7085e89b-7690-480f-b8d4-e356e1365048}</Project>
+      <Name>VTUserFields</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTWebLinks\VTWebLinks.vbproj">
+      <Project>{77b7bcb4-0f7a-4fea-899a-883a8e19fe4a}</Project>
+      <Name>VTWebLinks</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Multitennant|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60498</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8035/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>@if "%25TF_BUILD%25"=="" (
+    
+  echo "$(ProjectName) OK"
+
+) else (
+   rmdir /s /q "$(ProjectDir)obj"
+)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_absencedescription.begintime.rotext" xml:space="preserve">
+    <value>Ausente desde as</value>
+  </data>
+  <data name="RES_absencedescription.endtime.rotext" xml:space="preserve">
+    <value>até às</value>
+  </data>
+  <data name="RES_list.nocause.rotext" xml:space="preserve">
+    <value>(Sem motivo)</value>
+  </data>
+  <data name="RES_maxfilesizeexceeded.error.rotext" xml:space="preserve">
+    <value>O tamanho do ficheiro excede o máximo permitido.</value>
+  </data>
+  <data name="RES_request.nextapprovalinfo.rotext" xml:space="preserve">
+    <value>Pendente de ${1}</value>
+  </data>
+  <data name="RES_requestaction.continueaction.rotext" xml:space="preserve">
+    <value>O que deseja fazer?</value>
+  </data>
+  <data name="RES_requestaction.deniedaction.rotext" xml:space="preserve">
+    <value>A realização da ação não é permitida</value>
+  </data>
+  <data name="RES_requestaction.limitdaterequested.rotext" xml:space="preserve">
+    <value>A data solicitada está fora do limite configurado</value>
+  </data>
+  <data name="RES_requestaction.maxdaysabsence.rotext" xml:space="preserve">
+    <value>Foi ultrapassado o máximo de dias a solicitar.</value>
+  </data>
+  <data name="RES_requestaction.maximumnotscheduled.rotext" xml:space="preserve">
+    <value>Existem dias por planear</value>
+  </data>
+  <data name="RES_requestaction.minimumcoveragerequiered.rotext" xml:space="preserve">
+    <value>Cobertura insuficiente</value>
+  </data>
+  <data name="RES_requestaction.minimumdaysbeforerequesteddate.rotext" xml:space="preserve">
+    <value>Pedido fora do prazo</value>
+  </data>
+  <data name="RES_requestaction.negativeaccrual.rotext" xml:space="preserve">
+    <value>Não existe saldo suficiente.</value>
+  </data>
+  <data name="RES_requestaction.periodenjoynment.rotext" xml:space="preserve">
+    <value>Período solicitado fora das regras estabelecidas.</value>
+  </data>
+  <data name="RES_requestinfo.andsince.rotext" xml:space="preserve">
+    <value>e a partir de</value>
+  </data>
+  <data name="RES_requestinfo.cancelholidays.onedate.rotext" xml:space="preserve">
+    <value>Anular as férias do dia &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.cancelholidays.rotext" xml:space="preserve">
+    <value>Anular todas as férias dentro do seguinte período: &lt;b&gt;${1}&lt;/b&gt; e &lt;b&gt;${2}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.cancelholidaysshiftcause.cancelholidays.onedate.rotext" xml:space="preserve">
+    <value>Anular &lt;b&gt;${3}&lt;/b&gt; no dia &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.cancelholidaysshiftcause.cancelholidays.rotext" xml:space="preserve">
+    <value>Anular &lt;b&gt;${3}&lt;/b&gt; dentro do seguinte período: &lt;b&gt;${1}&lt;/b&gt; e &lt;b&gt;${2}&lt;/b&gt; (&lt;b&gt;${4} dias&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.changeallshift.onedate.rotext" xml:space="preserve">
+    <value>Horário &lt;b&gt;${3}&lt;/b&gt;, em &lt;b&gt;${1}&lt;/b&gt; em substituição de todos os horários.</value>
+  </data>
+  <data name="RES_requestinfo.changeallshift.rotext" xml:space="preserve">
+    <value>Horário&lt;b&gt;${3}&lt;/b&gt;, desde &lt;b&gt;${1}&lt;/b&gt; até &lt;b&gt;${2}&lt;/b&gt; em substituição de todos os horários.</value>
+  </data>
+  <data name="RES_requestinfo.changeshift.onedate.rotext" xml:space="preserve">
+    <value>Horário &lt;b&gt;${3}&lt;/b&gt;, em &lt;b&gt;${1}&lt;/b&gt; em substituição do horário &lt;b&gt;${4}&lt;/b&gt;.</value>
+  </data>
+  <data name="RES_requestinfo.changeshift.rotext" xml:space="preserve">
+    <value>Horário&lt;b&gt;${3}&lt;/b&gt;, desde &lt;b&gt;${1}&lt;/b&gt; até &lt;b&gt;${2}&lt;/b&gt; em substituição do horário &lt;b&gt;${4}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.cancelholidays.onedate.rotext" xml:space="preserve">
+    <value>Anular as férias do dia &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.cancelholidays.rotext" xml:space="preserve">
+    <value>Anular todas as férias dentro do seguinte período: &lt;b&gt;${1}&lt;/b&gt; e &lt;b&gt;${2}&lt;/b&gt; (&lt;b&gt;${3} dias&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.detail.cancelholidaysshiftcause.cancelholidays.onedate.rotext" xml:space="preserve">
+    <value>Anular &lt;b&gt;${3}&lt;/b&gt; no dia &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.cancelholidaysshiftcause.cancelholidays.rotext" xml:space="preserve">
+    <value>Anular &lt;b&gt;${3}&lt;/b&gt; dentro do seguinte período: &lt;b&gt;${1}&lt;/b&gt; e &lt;b&gt;${2}&lt;/b&gt; (&lt;b&gt;${4} dias&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.detail.changeallshift.onedate.rotext" xml:space="preserve">
+    <value>Planear horário &lt;b&gt;${3}&lt;/b&gt;, em &lt;b&gt;${1}&lt;/b&gt; em substituição de todos os horários.</value>
+  </data>
+  <data name="RES_requestinfo.detail.changeallshift.rotext" xml:space="preserve">
+    <value>O utilizador pede para planear o horário &lt;b&gt;${3}&lt;/b&gt; de &lt;b&gt;${1}&lt;/b&gt; a &lt;b&gt;${2}&lt;/b&gt; substituindo todos os horários</value>
+  </data>
+  <data name="RES_requestinfo.detail.changeshift.onedate.rotext" xml:space="preserve">
+    <value>Planear horário &lt;b&gt;${3}&lt;/b&gt;, em &lt;b&gt;${1}&lt;/b&gt; em substituição do horário &lt;b&gt;${4}&lt;/b&gt;.</value>
+  </data>
+  <data name="RES_requestinfo.detail.changeshift.rotext" xml:space="preserve">
+    <value>O utilizador pede para planear o horário &lt;b&gt;${3}&lt;/b&gt; substituindo o horário &lt;b&gt;${4}&lt;/b&gt; de &lt;b&gt;${1}&lt;/b&gt; a &lt;b&gt;${2}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.dailyrecord.rotext" xml:space="preserve">
+    <value>Apresentou uma declaração da jornada para o dia &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.exchangeshiftbetweenemployees.rotext" xml:space="preserve">
+    <value>Alteração de horário no dia &lt;b&gt;${1}&lt;/b&gt; entre &lt;b&gt;´${2}´&lt;/b&gt; e &lt;b&gt;´${3}´&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.exchangeshiftbetweenemployees.withcompensation.rotext" xml:space="preserve">
+    <value>Troca de horário no dia &lt;b&gt;${1}&lt;/b&gt; (&lt;b&gt;${4}&lt;/b&gt; por &lt;b&gt;${5}&lt;/b&gt;) entre &lt;b&gt;´${2}´&lt;/b&gt; e &lt;b&gt;´${3}´&lt;/b&gt;, compensado no dia &lt;b&gt;${6}&lt;/b&gt; (&lt;b&gt;${7}&lt;/b&gt; por &lt;b&gt;${8}&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.detail.externalworkresumepart.rotext" xml:space="preserve">
+    <value>Parte trabalho externo no dia &lt;b&gt;${1}&lt;/b&gt; durante &lt;b&gt;${2}&lt;/b&gt; horas em &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.externalworkweekresume.rotext" xml:space="preserve">
+    <value>Do dia &lt;b&gt;${1}&lt;/b&gt; ao dia &lt;b&gt;${2}&lt;/b&gt; (&lt;b&gt;${3} Picagem/ns&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.detail.forbiddenpunch.rotext" xml:space="preserve">
+    <value>Picagem não eftuada de &lt;b&gt;${1}&lt;/b&gt; às &lt;b&gt;${2}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.forbiddenpunch.withcause.rotext" xml:space="preserve">
+    <value>Picagem não efetuada de &lt;b&gt;${1}&lt;/b&gt; às &lt;b&gt;${2}&lt;/b&gt; por &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.forbiddentaskpunch.rotext" xml:space="preserve">
+    <value>Picagem não efetuada de &lt;b&gt;${1}&lt;/b&gt; às &lt;b&gt;${2}&lt;/b&gt; em &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.forbiddentaskpunchwithend.rotext" xml:space="preserve">
+    <value>Picagem não efetuada de &lt;b&gt;${1}&lt;/b&gt; às &lt;b&gt;${2}&lt;/b&gt; em &lt;b&gt;${3}&lt;/b&gt; até às &lt;b&gt;${4}&lt;/b&gt; e continuar com &lt;b&gt;${5}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.forbiddentaskpunchwithendextendedcompleted.rotext" xml:space="preserve">
+    <value>Picagem não efetuada de &lt;b&gt;${1}&lt;/b&gt; às &lt;b&gt;${2}&lt;/b&gt; em &lt;b&gt;${3}&lt;/b&gt; às &lt;b&gt;${4}&lt;/b&gt; e completá-la, continuar com &lt;b&gt;${5}&lt;/b&gt;.Atributos:  &lt;b&gt;${6}&lt;/b&gt;  &lt;b&gt;${7}&lt;/b&gt;  &lt;b&gt;${8}&lt;/b&gt;  &lt;b&gt;${9}&lt;/b&gt;  &lt;b&gt;${10}&lt;/b&gt;  &lt;b&gt;${11}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.forbiddentaskpunchwithendextendednotcompleted.rotext" xml:space="preserve">
+    <value>Picagem não efetuada de &lt;b&gt;${1}&lt;/b&gt; às &lt;b&gt;${2}&lt;/b&gt; em &lt;b&gt;${3}&lt;/b&gt; até às &lt;b&gt;${4}&lt;/b&gt;, continuar com &lt;b&gt;${5}&lt;/b&gt;.Atributos:  &lt;b&gt;${6}&lt;/b&gt;  &lt;b&gt;${7}&lt;/b&gt;  &lt;b&gt;${8}&lt;/b&gt;  &lt;b&gt;${9}&lt;/b&gt;  &lt;b&gt;${10}&lt;/b&gt;  &lt;b&gt;${11}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.forgottencostcenterpunch.rotext" xml:space="preserve">
+    <value>Picagem de centros de custos não efetuada em &lt;b&gt;${1}&lt;/b&gt; às &lt;b&gt;${2}&lt;/b&gt; no centro:&lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.justifypunch.rotext" xml:space="preserve">
+    <value>Justificar picagem de &lt;b&gt;${1}&lt;/b&gt; às &lt;b&gt;${2}&lt;/b&gt; por &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.plannedabsences.rotext" xml:space="preserve">
+    <value>Previsão de dias de ausência de &lt;b&gt;${1}&lt;/b&gt; a &lt;b&gt;${2}&lt;/b&gt; por &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.plannedcauses.rotext" xml:space="preserve">
+    <value>Previsão de dias de ausência do dia &lt;b&gt;${1}&lt;/b&gt; ao dia &lt;b&gt;${2}&lt;/b&gt; entre as &lt;b&gt;${5}&lt;/b&gt; e as &lt;b&gt;${6}&lt;/b&gt; durante um máximo de &lt;b&gt;${4}&lt;/b&gt; por &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.plannedholidays.allday.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${3}&lt;/b&gt;, de &lt;b&gt;${1}&lt;/b&gt; a &lt;b&gt;${2}&lt;/b&gt; todo o tempo (&lt;b&gt;${4} dias&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.detail.plannedholidays.onedate.allday.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${3}&lt;/b&gt;, o &lt;b&gt;${1}&lt;/b&gt; todo o tempo</value>
+  </data>
+  <data name="RES_requestinfo.detail.plannedholidays.onedate.period.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${3}&lt;/b&gt;, em &lt;b&gt;${1}&lt;/b&gt; entre as &lt;b&gt;${4}&lt;/b&gt; e as &lt;b&gt;${5}&lt;/b&gt; durante &lt;b&gt;${6}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.plannedholidays.period.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${3}&lt;/b&gt;, de &lt;b&gt;${1}&lt;/b&gt; até &lt;b&gt;${2}&lt;/b&gt; entre as &lt;b&gt;${5}&lt;/b&gt; e as &lt;b&gt;${6}&lt;/b&gt; durante &lt;b&gt;${7}&lt;/b&gt; (&lt;b&gt;${4} dias&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.detail.plannedovertimes.rotext" xml:space="preserve">
+    <value>Previsão horas em excesso do dia &lt;b&gt;${1}&lt;/b&gt; ao dia &lt;b&gt;${2}&lt;/b&gt; entre as &lt;b&gt;${5}&lt;/b&gt; e as &lt;b&gt;${6}&lt;/b&gt; durante &lt;b&gt;${4}&lt;/b&gt; por &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.telecommutehome.rotext" xml:space="preserve">
+    <value>Solicitou teletrabalho no dia &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.telecommuteoffice.rotext" xml:space="preserve">
+    <value>Solicitou trabalho presencial no dia &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.userfieldschange.history.rotext" xml:space="preserve">
+    <value>Atualizar campo &lt;b&gt;${1}&lt;/b&gt; com o valor &lt;b&gt;${2}&lt;/b&gt; válido a partir de &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.userfieldschange.rotext" xml:space="preserve">
+    <value>Atualizar campo &lt;b&gt;${1}&lt;/b&gt; com o valor &lt;b&gt;${2}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.vacationsorpermissions.onedate.rotext" xml:space="preserve">
+    <value>Solicitou o horário &lt;b&gt;${2}&lt;/b&gt; em &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.detail.vacationsorpermissions.rotext" xml:space="preserve">
+    <value>Solicitou o horário &lt;b&gt;${2}&lt;/b&gt; ${1} (&lt;b&gt;${3} dias&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.exchangeshiftbetweenemployees.rotext" xml:space="preserve">
+    <value>Troca de horário no dia &lt;b&gt;${1}&lt;/b&gt; (&lt;b&gt;${4}&lt;/b&gt; por &lt;b&gt;${5}&lt;/b&gt;) entre &lt;b&gt;´${2}´&lt;/b&gt; e &lt;b&gt;´${3}´&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.exchangeshiftbetweenemployees.withcompensation.rotext" xml:space="preserve">
+    <value>Troca de horário no dia &lt;b&gt;${1}&lt;/b&gt; (&lt;b&gt;${4}&lt;/b&gt; por &lt;b&gt;${5}&lt;/b&gt;) entre &lt;b&gt;´${2}´&lt;/b&gt; e &lt;b&gt;´${3}´&lt;/b&gt;, compensado no dia &lt;b&gt;${6}&lt;/b&gt; (&lt;b&gt;${7}&lt;/b&gt; por &lt;b&gt;${8}&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.externalworkresumepart.rotext" xml:space="preserve">
+    <value>Parte trabalho externo no dia &lt;b&gt;${1}&lt;/b&gt; durante &lt;b&gt;${2}&lt;/b&gt; horas em &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.externalworkweekresume.rotext" xml:space="preserve">
+    <value>Do dia &lt;b&gt;${1}&lt;/b&gt; ao dia &lt;b&gt;${2}&lt;/b&gt; (&lt;b&gt;${3} picagem/ns&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.forbiddenpunch.rotext" xml:space="preserve">
+    <value>Picagem não eftuada de &lt;b&gt;${1}&lt;/b&gt; às &lt;b&gt;${2}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.forbiddenpunch.withcause.rotext" xml:space="preserve">
+    <value>Picagem não efetuada de &lt;b&gt;${1}&lt;/b&gt; às &lt;b&gt;${2}&lt;/b&gt; por &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.forbiddentaskpunch.rotext" xml:space="preserve">
+    <value>Picagem não efetuada de &lt;b&gt;${1}&lt;/b&gt; às &lt;b&gt;${2}&lt;/b&gt; em &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.forbiddentaskpunchwithend.rotext" xml:space="preserve">
+    <value>Picagem não efetuada de &lt;b&gt;${1}&lt;/b&gt; às &lt;b&gt;${2}&lt;/b&gt; em &lt;b&gt;${3}&lt;/b&gt; até às &lt;b&gt;${4}&lt;/b&gt; e continuar com &lt;b&gt;${5}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.forbiddentaskpunchwithendextendedcompleted.rotext" xml:space="preserve">
+    <value>Picagem não efetuada de &lt;b&gt;${1}&lt;/b&gt; às &lt;b&gt;${2}&lt;/b&gt; em &lt;b&gt;${3}&lt;/b&gt; até às &lt;b&gt;${4}&lt;/b&gt; e completá-la, continuar com &lt;b&gt;${5}&lt;/b&gt;.Atributos:  &lt;b&gt;${6}&lt;/b&gt;  &lt;b&gt;${7}&lt;/b&gt;  &lt;b&gt;${8}&lt;/b&gt;  &lt;b&gt;${9}&lt;/b&gt;  &lt;b&gt;${10}&lt;/b&gt;  &lt;b&gt;${11}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.forbiddentaskpunchwithendextendednotcompleted.rotext" xml:space="preserve">
+    <value>Picagem não efetuada de &lt;b&gt;${1}&lt;/b&gt; às &lt;b&gt;${2}&lt;/b&gt; em &lt;b&gt;${3}&lt;/b&gt; até às &lt;b&gt;${4}&lt;/b&gt;, continuar com &lt;b&gt;${5}&lt;/b&gt;.Atributos:  &lt;b&gt;${6}&lt;/b&gt;  &lt;b&gt;${7}&lt;/b&gt;  &lt;b&gt;${8}&lt;/b&gt;  &lt;b&gt;${9}&lt;/b&gt;  &lt;b&gt;${10}&lt;/b&gt;  &lt;b&gt;${11}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.forgottencostcenterpunch.rotext" xml:space="preserve">
+    <value>Picagem de centros de custos não efetuada em &lt;b&gt;${1}&lt;/b&gt; às &lt;b&gt;${2}&lt;/b&gt; no centro:&lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.justifypunch.rotext" xml:space="preserve">
+    <value>Picagem de &lt;b&gt;${1}&lt;/b&gt; às &lt;b&gt;${2}&lt;/b&gt; por &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.plannedabsences.rotext" xml:space="preserve">
+    <value>Desde &lt;b&gt;${1}&lt;/b&gt; até &lt;b&gt;${2}&lt;/b&gt; por &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.plannedcauses.rotext" xml:space="preserve">
+    <value>Do dia &lt;b&gt;${1}&lt;/b&gt; ao dia &lt;b&gt;${2}&lt;/b&gt; entre as &lt;b&gt;${5}&lt;/b&gt; e as &lt;b&gt;${6}&lt;/b&gt; durante um máximo de &lt;b&gt;${4}&lt;/b&gt; por &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.plannedholidays.allday.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${3}&lt;/b&gt;, de &lt;b&gt;${1}&lt;/b&gt; a &lt;b&gt;${2}&lt;/b&gt; todo o tempo (&lt;b&gt;${4} dias&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.plannedholidays.onedate.allday.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${3}&lt;/b&gt;, o &lt;b&gt;${1}&lt;/b&gt; todo o tempo</value>
+  </data>
+  <data name="RES_requestinfo.plannedholidays.onedate.period.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${3}&lt;/b&gt;, em &lt;b&gt;${1}&lt;/b&gt; entre as &lt;b&gt;${4}&lt;/b&gt; e as &lt;b&gt;${5}&lt;/b&gt; durante &lt;b&gt;${6}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.plannedholidays.period.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${3}&lt;/b&gt;, de &lt;b&gt;${1}&lt;/b&gt; até &lt;b&gt;${2}&lt;/b&gt; entre as &lt;b&gt;${5}&lt;/b&gt; e as &lt;b&gt;${6}&lt;/b&gt; durante &lt;b&gt;${7}&lt;/b&gt; (&lt;b&gt;${4} dias&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requestinfo.plannedovertimes.rotext" xml:space="preserve">
+    <value>Do dia &lt;b&gt;${1}&lt;/b&gt; ao dia &lt;b&gt;${2}&lt;/b&gt; entre as &lt;b&gt;${5}&lt;/b&gt; e as &lt;b&gt;${6}&lt;/b&gt; durante &lt;b&gt;${4}&lt;/b&gt; por &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.requestaccepted.rotext" xml:space="preserve">
+    <value>Pedido aprovado</value>
+  </data>
+  <data name="RES_requestinfo.requestchangedtodenied.rotext" xml:space="preserve">
+    <value>Pedido Recusado:</value>
+  </data>
+  <data name="RES_requestinfo.requestdenied.rotext" xml:space="preserve">
+    <value>Pedido Recusado</value>
+  </data>
+  <data name="RES_requestinfo.requeststatus.accepted.rotext" xml:space="preserve">
+    <value>Aprovada</value>
+  </data>
+  <data name="RES_requestinfo.requeststatus.denied.rotext" xml:space="preserve">
+    <value>Recusado</value>
+  </data>
+  <data name="RES_requestinfo.requeststatus.ongoing.rotext" xml:space="preserve">
+    <value>Em curso</value>
+  </data>
+  <data name="RES_requestinfo.requeststatus.pending.rotext" xml:space="preserve">
+    <value>Pendente</value>
+  </data>
+  <data name="RES_requestinfo.requeststatus.rejecteddate.rotext" xml:space="preserve">
+    <value>Caducará a &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.requeststatus.validationdate.rotext" xml:space="preserve">
+    <value>Será validado a &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.since.rotext" xml:space="preserve">
+    <value>desde</value>
+  </data>
+  <data name="RES_requestinfo.telecommutehome.rotext" xml:space="preserve">
+    <value>Solicita fazer teletrabalho no dia &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.telecommuteoffice.rotext" xml:space="preserve">
+    <value>Solicita trabalho presencial no dia &lt;b&gt;${1}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.to.rotext" xml:space="preserve">
+    <value>até</value>
+  </data>
+  <data name="RES_requestinfo.userfieldschange.history.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${1}&lt;/b&gt;, valor &lt;b&gt;${2}&lt;/b&gt; válido a partir de &lt;b&gt;${3}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.userfieldschange.rotext" xml:space="preserve">
+    <value>&lt;b&gt;${1}&lt;/b&gt;, valor &lt;b&gt;${2}&lt;/b&gt;</value>
+  </data>
+  <data name="RES_requestinfo.vacationsorpermissions.onedate.rotext" xml:space="preserve">
+    <value>Horário &lt;b&gt;${2}&lt;/b&gt;, ${1}</value>
+  </data>
+  <data name="RES_requestinfo.vacationsorpermissions.rotext" xml:space="preserve">
+    <value>Horário &lt;b&gt;${2}&lt;/b&gt;, ${1} (&lt;b&gt;${3} dias&lt;/b&gt;)</value>
+  </data>
+  <data name="RES_requests.approvedby.rotext" xml:space="preserve">
+    <value>Aprovada por</value>
+  </data>
+  <data name="RES_requests.refusedby.rotext" xml:space="preserve">
+    <value>Recusada por</value>
+  </data>
+  <data name="RES_requestshelper.shiftexchangeatob.rotext" xml:space="preserve">
+    <value>Horário ${3} trocado com ${4} entre ${1} e ${2}</value>
+  </data>
+  <data name="RES_requestshelper.shiftexchangebtoa.rotext" xml:space="preserve">
+    <value>Horário ${4} trocado com ${3} entre ${2} e ${1}</value>
+  </data>
+  <data name="RES_resultenum.anotherabsenceexistindate.rotext" xml:space="preserve">
+    <value>Existe outra previsão de ausência no mesmo dia</value>
+  </data>
+  <data name="RES_resultenum.anotherholidayexistindate.rotext" xml:space="preserve">
+    <value>Existe outra previsão de férias/licenças por horas no mesmo dia</value>
+  </data>
+  <data name="RES_resultenum.anotherovertimeexistindate.rotext" xml:space="preserve">
+    <value>Existe outra solicitação de horas em excesso para o mesmo período</value>
+  </data>
+  <data name="RES_resultenum.applicantcantcoveremployeeonshiftexchange.rotext" xml:space="preserve">
+    <value>Não foi possível trocar o horário porque o utilizador não pode ocupar o posto atribuído ao horário</value>
+  </data>
+  <data name="RES_resultenum.blockeddayonshiftexchange.rotext" xml:space="preserve">
+    <value>Não é possível trocar o horário porque algum dia está bloqueado</value>
+  </data>
+  <data name="RES_resultenum.calendargenerateindictments.rotext" xml:space="preserve">
+    <value>Não é possível atualizar o calendário, uma vez que geraria incidências</value>
+  </data>
+  <data name="RES_resultenum.causerequired.rotext" xml:space="preserve">
+    <value>Justificação requerida</value>
+  </data>
+  <data name="RES_resultenum.changeshifterror.rotext" xml:space="preserve">
+    <value>Não foi possível alterar o planeamento</value>
+  </data>
+  <data name="RES_resultenum.compensationrequired.rotext" xml:space="preserve">
+    <value>É necessário um dia de compensação para efetuar a alteração</value>
+  </data>
+  <data name="RES_resultenum.costcenterrequiered.rotext" xml:space="preserve">
+    <value>Centro de negócios obrigatório</value>
+  </data>
+  <data name="RES_resultenum.dailyreccordwithoutpunches.rotext" xml:space="preserve">
+    <value>A declaração de jornada associada ao pedido não contém picagens</value>
+  </data>
+  <data name="RES_resultenum.dateoutofcontract.rotext" xml:space="preserve">
+    <value>Data solicitada fora do contrato</value>
+  </data>
+  <data name="RES_resultenum.daterequired.rotext" xml:space="preserve">
+    <value>Data requerida</value>
+  </data>
+  <data name="RES_resultenum.employeecantcoverapplicantonshiftexchange.rotext" xml:space="preserve">
+    <value>Não é possível trocar o horário porque um utilizador tem uma previsão de ausência para o dia</value>
+  </data>
+  <data name="RES_resultenum.employeenotsuitableforshiftexchange.rotext" xml:space="preserve">
+    <value>O utilizador escolhido não é adequado para a alteração</value>
+  </data>
+  <data name="RES_resultenum.existslockeddaysinperiod.rotext" xml:space="preserve">
+    <value>Existem dias bloqueados no período ({0})</value>
+  </data>
+  <data name="RES_resultenum.externalworkresumeparterror.rotext" xml:space="preserve">
+    <value>Erro ao validar o pedido de picagem externo</value>
+  </data>
+  <data name="RES_resultenum.externalworkweekresumeerror.rotext" xml:space="preserve">
+    <value>Erro ao validar o pedido de registo de picagens</value>
+  </data>
+  <data name="RES_resultenum.forbiddenpuncherror.rotext" xml:space="preserve">
+    <value>Erro ao validar a picagem</value>
+  </data>
+  <data name="RES_resultenum.forbiddentaskpuncherror.rotext" xml:space="preserve">
+    <value>Erro ao validar a picagem</value>
+  </data>
+  <data name="RES_resultenum.forgottencostcenterpuncherror.rotext" xml:space="preserve">
+    <value>Erro ao validar a picagem</value>
+  </data>
+  <data name="RES_resultenum.freezedateexception.rotext" xml:space="preserve">
+    <value>O pedido encontra-se dentro do período de conclusão</value>
+  </data>
+  <data name="RES_resultenum.hoursrequired.rotext" xml:space="preserve">
+    <value>Horas requeridas</value>
+  </data>
+  <data name="RES_resultenum.incorrectactualtype.rotext" xml:space="preserve">
+    <value>Tipo de picagem incorreto</value>
+  </data>
+  <data name="RES_resultenum.incorrectdates.rotext" xml:space="preserve">
+    <value>Datas incorretas</value>
+  </data>
+  <data name="RES_resultenum.indictmentonshiftexchange.rotext" xml:space="preserve">
+    <value>Não é possível trocar o horário porque, ao fazê-lo, violar-se-iam regras de planeamento</value>
+  </data>
+  <data name="RES_resultenum.invalidpassport.rotext" xml:space="preserve">
+    <value>Passaporte inválido</value>
+  </data>
+  <data name="RES_resultenum.justifypuncherror.rotext" xml:space="preserve">
+    <value>Erro ao justificar a picagem</value>
+  </data>
+  <data name="RES_resultenum.needconfirmation.rotext" xml:space="preserve">
+    <value>Confirmação</value>
+  </data>
+  <data name="RES_resultenum.noapprovepermissions.rotext" xml:space="preserve">
+    <value>Não tem autorização para aprovar o pedido</value>
+  </data>
+  <data name="RES_resultenum.noapproverefuselevelofauthorityrequired.rotext" xml:space="preserve">
+    <value>O pedido não pode ser aprovado/recusado porque um nível de controlo superior já o aprovou/recusou</value>
+  </data>
+  <data name="RES_resultenum.noassignmentonshiftexchange.rotext" xml:space="preserve">
+    <value>Não é possível trocar o horário porque se um dos horários tem um posto atribuído, os dois horários devem ter o mesmo posto</value>
+  </data>
+  <data name="RES_resultenum.nodeletebecausenotpending.rotext" xml:space="preserve">
+    <value>Não pode eliminar o pedido pois não está pendente</value>
+  </data>
+  <data name="RES_resultenum.nopermissiononshiftexchange.rotext" xml:space="preserve">
+    <value>Não é possível trocar o horário porque um utilizador não dispõe de autorizações para solicitar o horário</value>
+  </data>
+  <data name="RES_resultenum.notenoughconceptbalance.rotext" xml:space="preserve">
+    <value>Excede o saldo permitido</value>
+  </data>
+  <data name="RES_resultenum.onabsenceonshiftexchange.rotext" xml:space="preserve">
+    <value>Não é possível trocar o horário porque um utilizador tem uma previsão de ausência para o dia</value>
+  </data>
+  <data name="RES_resultenum.onholidaysonshiftexchange.rotext" xml:space="preserve">
+    <value>Não é possível trocar o horário porque um utilizador tem férias planeadas no dia</value>
+  </data>
+  <data name="RES_resultenum.plannedabsenceserror.rotext" xml:space="preserve">
+    <value>Erro ao validar o pedido de previsão de dias de ausência</value>
+  </data>
+  <data name="RES_resultenum.plannedabsencesoverlapped.rotext" xml:space="preserve">
+    <value>Existe um pedido de dias de ausência que já inclui o dia indicado</value>
+  </data>
+  <data name="RES_resultenum.plannedcauseserror.rotext" xml:space="preserve">
+    <value>Erro ao validar o pedido de previsão de horas de ausência</value>
+  </data>
+  <data name="RES_resultenum.plannedcausesoverlapped.rotext" xml:space="preserve">
+    <value>Já existe outro pedido de horas de ausência para o dia indicado</value>
+  </data>
+  <data name="RES_resultenum.plannedholidayserror.rotext" xml:space="preserve">
+    <value>Erro na validação do pedido de férias/licenças por horas</value>
+  </data>
+  <data name="RES_resultenum.plannedholidaysoverlapped.rotext" xml:space="preserve">
+    <value>Existe outra previsão de férias/licenças por horas que se sobrepõe</value>
+  </data>
+  <data name="RES_resultenum.plannedovertimeserror.rotext" xml:space="preserve">
+    <value>Erro ao validar o pedido de previsão de horas em excesso</value>
+  </data>
+  <data name="RES_resultenum.plannedovertimesoverlapped.rotext" xml:space="preserve">
+    <value>Horas em excesso existentes para o mesmo período</value>
+  </data>
+  <data name="RES_resultenum.punchdatetimerequired.rotext" xml:space="preserve">
+    <value>Data e hora da picagem necessárias</value>
+  </data>
+  <data name="RES_resultenum.punchexist.rotext" xml:space="preserve">
+    <value>Já existe uma picagem com a mesma data e hora.</value>
+  </data>
+  <data name="RES_resultenum.requestmovenotexist.rotext" xml:space="preserve">
+    <value>A picagem relacionada com o pedido não existe ou foi modificada</value>
+  </data>
+  <data name="RES_resultenum.requestmovetoomany.rotext" xml:space="preserve">
+    <value>Existe mais de uma picagem associada ao pedido</value>
+  </data>
+  <data name="RES_resultenum.requestpendingonshiftexchange.rotext" xml:space="preserve">
+    <value>Não é possível trocar o horário porque num dos dias existe um pedido pendente que afeta o planeamento</value>
+  </data>
+  <data name="RES_resultenum.requestrepited.rotext" xml:space="preserve">
+    <value>Pedido repetido</value>
+  </data>
+  <data name="RES_resultenum.requestruleerror.rotext" xml:space="preserve">
+    <value>Recusado</value>
+  </data>
+  <data name="RES_resultenum.savecalendarexception.rotext" xml:space="preserve">
+    <value>Ocorreu um erro ao guardar o calendário</value>
+  </data>
+  <data name="RES_resultenum.shiftrequired.rotext" xml:space="preserve">
+    <value>Horário requerido</value>
+  </data>
+  <data name="RES_resultenum.startshiftrequired.rotext" xml:space="preserve">
+    <value>Hora de início do horário flutuante requerida</value>
+  </data>
+  <data name="RES_resultenum.taskrequiered.rotext" xml:space="preserve">
+    <value>Tarefa necessária</value>
+  </data>
+  <data name="RES_resultenum.userfieldnorequestvisible.rotext" xml:space="preserve">
+    <value>O campo da ficha não está visível para pedidos</value>
+  </data>
+  <data name="RES_resultenum.userfieldrequired.rotext" xml:space="preserve">
+    <value>Campo da ficha requerido</value>
+  </data>
+  <data name="RES_resultenum.userfieldvaluesaveerror.rotext" xml:space="preserve">
+    <value>Não foi possível guardar o valor do campo da ficha</value>
+  </data>
+  <data name="RES_resultenum.vacationsorpermissionserror.rotext" xml:space="preserve">
+    <value>Não foi possível planear as férias ou autorizações</value>
+  </data>
+  <data name="RES_resultenum.vacationsorpermissionsoverlapped.rotext" xml:space="preserve">
+    <value>Férias existentes para o mesmo período</value>
+  </data>
+  <data name="RES_resultenum.wrongassignmentonshiftexchange.rotext" xml:space="preserve">
+    <value>Não é possível trocar o horário porque os horários solicitados têm postos diferentes atribuídos</value>
+  </data>
+  <data name="RES_programmedovertimedescription.begintime.rotext" xml:space="preserve">
+    <value>Desde las</value>
+  </data>
+  <data name="RES_resultenum.xssvalidationerror.rotext" xml:space="preserve">
+    <value>Foi detetado um script malicioso nalguma propriedade do objeto</value>
+  </data>
+  <data name="RES_resultenum.sqlerror.rotext" xml:space="preserve">
+    <value>Ocorreu um erro ao aceder aos dados necessários para processar o pedido</value>
+  </data>
+  <data name="RES_requestaction.minimumconsecutivedays.rotext" xml:space="preserve">
+    <value>O número mínimo de dias consecutivos solicitado não foi atingido</value>
+  </data>
+  <data name="RES_requestaction.scheduleruletovalidate.rotext" xml:space="preserve">
+    <value>O horário não pode ser alterado uma vez que tal infringiria as regras de planeamento.</value>
+  </data>
+</root>

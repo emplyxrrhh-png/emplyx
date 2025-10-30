@@ -1,0 +1,352 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+name: Cegid VTI-$(Date:yyyyMMdd)$(Rev:.r)
+
+trigger:
+- none
+
+pool:
+  vmImage: windows-latest
+
+parameters:
+
+- name: versionArtifacts  
+  displayName: Choose the vti version ( verify that the version is available from the artifactory production repo https://cegid.jfrog.io/ui/repos/tree/General/vti-software-production?projectKey=vti )
+  type: string
+  default: ''
+
+- name: templates
+  displayName: Copy - templates ?
+  type: boolean
+  default: true
+- name: updates
+  displayName: Copy - updates ?
+  type: boolean
+  default: true
+- name: reports
+  displayName: Copy - reports ?
+  type: boolean
+  default: true
+- name: VTLive
+  displayName: Deploy - VTLive ?
+  type: boolean
+  default: true
+- name: VTLiveApi
+  displayName: Deploy - VTLiveApi ?
+  type: boolean
+  default: true
+- name: VTPortal
+  displayName: Deploy - VTPortal ?
+  type: boolean
+  default: true
+- name: VTTerminals
+  displayName: Deploy - VTTerminals ?
+  type: boolean
+  default: true
+- name: VTVisits
+  displayName: Deploy - VTVisits ?
+  type: boolean
+  default: true
+- name: fnAnalyticsFunction
+  displayName: Deploy - fnAnalyticsFunction ?
+  type: boolean
+  default: true
+- name: fnBackgroundFunction
+  displayName: Deploy - fnBackgroundFunction ?
+  type: boolean
+  default: true
+- name: fnBroadcasterFunction
+  displayName: Deploy - fnBroadcasterFunction ?
+  type: boolean
+  default: true
+- name: fnDatalinkFunction
+  displayName: Deploy - fnDatalinkFunction ?
+  type: boolean
+  default: true
+- name: fnMailFunction
+  displayName: Deploy - fnMailFunction ?
+  type: boolean
+  default: true
+- name: fnReportFunction
+  displayName: Deploy - fnReportFunction ?
+  type: boolean
+  default: true
+- name: fnScheduleFunction
+  displayName: Deploy - fnScheduleFunction ?
+  type: boolean
+  default: true
+- name: fnPushNotificationsFunction
+  displayName: Deploy - fnPushNotificationsFunction ?
+  type: boolean
+  default: true
+- name: fnNotificationsFunction
+  displayName: Deploy - fnNotificationsFunction ?
+  type: boolean
+  default: true
+- name: fnEngineFunction
+  displayName: Deploy - fnEngineFunction ?
+  type: boolean
+  default: true
+- name: fnPunchConnectorFunction
+  displayName: Deploy - fnPunchConnectorFunction ?
+  type: boolean
+  default: true
+- name: fnPNlinkFunction
+  displayName: Deploy - fnPNlinkFunction ?
+  type: boolean
+  default: true
+- name: fnFTPStorageSyncFunction
+  displayName: Build/Deploy - fnFTPStorageSyncFunction ?
+  type: boolean
+  default: true
+
+variables:
+  - name: solution
+    value: './Src/VisualTime Full MT.sln'
+  - name: testProjects
+    value: './Tests/**/*.csproj'
+  - name: buildConfiguration
+    value: 'Multitennant'
+  - name: attachArtifactsToPipeline
+    value: true
+  - name: forceGenerateLang
+    value: false
+
+
+stages:
+
+  #### Deploy to preprod env azure
+  - template: Templates/DeployAzureUnifiedCanaryProd.yml
+    parameters:
+      slot: preprod
+      resourceGroup: 'mtpaaspr'
+      version: ${{parameters.versionArtifacts}}
+      azureService: SAAS-VisualTime-InfraDeployment
+      environment: preprod
+      artifactoryService: ArtifactoryCloudV2-VisualTime
+      artifactoryTargetName: vti-software-production
+      artifacts: 
+        - name: 'VTLive'
+          artifactoryFolderName: 'VT_Live'
+          zip: 'VTLive.zip'
+          destination: 'vtlivePr'
+          enabled: ${{parameters.VTLive}} 
+          type: 'webapp'
+        - name: 'VTLiveApi'
+          artifactoryFolderName: 'VT_LiveApi'
+          zip: 'VTLiveApi.zip'
+          destination: 'vtliveapiPr'
+          enabled: ${{parameters.VTLiveApi}} 
+          type: 'webapp'
+        - name: 'VTPortal'
+          artifactoryFolderName: 'VT_Portal'
+          zip: 'VTPortal.zip'
+          destination: 'vtportalPr'
+          enabled: ${{parameters.VTPortal}}
+          type: 'webapp'
+        - name: 'VTTerminals'
+          artifactoryFolderName: 'VT_Terminals'
+          zip: 'VTTerminals.zip'
+          destination: 'vtterminalsPr'
+          enabled: ${{parameters.VTTerminals}}
+          type: 'webapp'
+        - name: 'VTVisits'
+          artifactoryFolderName: 'VT_Visits'
+          zip: 'VTVisits.zip'
+          destination: 'vtvisitsPr'
+          enabled: ${{parameters.VTVisits}}
+          type: 'webapp'
+        - name: 'fnAnalyticsFunction'
+          artifactoryFolderName: 'FN_AnalyticsFunction'
+          zip: 'fnAnalyticsFunction.zip'
+          destination: 'fnAnalyticsFunctionPr'
+          enabled: ${{parameters.fnAnalyticsFunction}}
+          type: 'funapp'
+        - name: 'fnBackgroundFunction'
+          artifactoryFolderName: 'FN_BackgroundFunction'
+          zip: 'fnBackgroundFunction.zip'
+          destination: 'fnBackgroundFunctionPr'
+          enabled: ${{parameters.fnBackgroundFunction}}
+          type: 'funapp'
+        - name: 'fnBroadcasterFunction'
+          artifactoryFolderName: 'FN_BroadcasterFunction'
+          zip: 'fnBroadcasterFunction.zip'
+          destination: 'fnBroadcasterFunctionPr'
+          enabled: ${{parameters.fnBroadcasterFunction}}
+          type: 'funapp'
+        - name: 'fnDatalinkFunction'
+          artifactoryFolderName: 'FN_DatalinkFunction'
+          zip: 'fnDatalinkFunction.zip'
+          destination: 'fnDatalinkFunctionPr'
+          enabled: ${{parameters.fnDatalinkFunction}}
+          type: 'funapp'
+        - name: 'fnMailFunction'
+          artifactoryFolderName: 'FN_MailFunction'
+          zip: 'fnMailFunction.zip'
+          destination: 'fnMailFunctionPr'
+          enabled: ${{parameters.fnMailFunction}}
+          type: 'funapp'
+        - name: 'fnReportFunction'
+          artifactoryFolderName: 'FN_ReportFunction'
+          zip: 'fnReportFunction.zip'
+          destination: 'fnReportFunctionPr'
+          enabled: ${{parameters.fnReportFunction}}
+          type: 'funapp'
+        - name: 'fnScheduleFunction'
+          artifactoryFolderName: 'FN_ScheduleFunction'
+          zip: 'fnScheduleFunction.zip'
+          destination: 'fnScheduleFunctionPr'
+          enabled: ${{parameters.fnScheduleFunction}}
+          type: 'funapp'
+        - name: 'fnPushNotificationsFunction'
+          artifactoryFolderName: 'FN_PushNotificationsFunction'
+          zip: 'fnPushNotificationsFunction.zip'
+          destination: 'fnPushNotificationsFunctionPr'
+          enabled: ${{parameters.fnPushNotificationsFunction}}
+          type: 'funapp'
+        - name: 'fnNotificationsFunction'
+          artifactoryFolderName: 'FN_NotificationsFunction'
+          zip: 'fnNotificationsFunction.zip'
+          destination: 'fnNotificationFunctionPr'
+          enabled: ${{parameters.fnNotificationsFunction}}
+          type: 'funapp'
+        - name: 'fnEngineFunction'
+          artifactoryFolderName: 'FN_EngineFunction'
+          zip: 'fnEngineFunction.zip'
+          destination: 'fnengineFunctionPr'
+          enabled: ${{parameters.fnEngineFunction}}
+          type: 'funapp'
+        - name: 'fnPunchConnectorFunction'
+          artifactoryFolderName: 'FN_PunchConnectorFunction'
+          zip: 'fnPunchConnectorFunction.zip'
+          destination: 'fnpunchconnectorFunctionPr'
+          enabled: ${{parameters.fnPunchConnectorFunction}}
+          type: 'funapp'
+        - name: 'fnPNLinkFunction'
+          artifactoryFolderName: 'FN_PNlinkFunction'
+          zip: 'fnpnlinkfunction.zip'
+          destination: 'fnPNlinkFunctionPr'
+          enabled: ${{parameters.fnPNlinkFunction}}
+          type: 'funapp'
+        - name: 'fnFTPStorageSyncFunction'
+          artifactoryFolderName: 'FN_FTPStorageSyncFunction'
+          zip: 'fnftpstoragesyncfunction.zip'
+          destination: 'fnFTPStorageSyncPr'
+          enabled: ${{parameters.fnFTPStorageSyncFunction}}
+          type: 'funapp'
+      resources:
+        - name: 'reports'
+          artifactoryFolderName: 'Common_reports'
+          storageAccountName: 'ronextstorage'
+          zip: 'reports.zip'
+          container: 'upgrade'
+          folder: 'reports'
+          pattern: '*.sql;*.vtu'
+          enabled: ${{parameters.reports}}
+        - name: 'updates'
+          artifactoryFolderName: 'Common_updates'
+          storageAccountName: 'ronextstorage'
+          zip: 'updates.zip'
+          container: 'upgrade'
+          folder: 'updates'
+          pattern: '*.sql;*.vtu'
+          enabled: ${{parameters.updates}}
+      resourcesDatalink:
+        - name: 'templates'
+          artifactoryFolderName: 'Common_templates'
+          storageAccountName: 'rsprodatalinksto'
+          zip: 'templates.zip'
+          container: 'datalink'
+          pattern: '*.xlsx;*.vtu'
+          folder: 'common_templates'
+          enabled: ${{parameters.templates}}
+  
+  - template: Templates/SwapSlot.yml
+    parameters:
+      sourceSlot: preprod
+      targetSlot: production
+      resourceGroup: 'mtpaaspr'
+      azureService: SAAS-VisualTime-InfraDeployment
+      environment: production
+      productionSwap: true
+      artifacts: 
+        - name: 'VTLive'
+          destination: 'vtlivePr'
+          enabled: ${{parameters.VTLive}} 
+          type: 'webapp'
+        - name: 'VTLiveApi'
+          destination: 'vtliveapiPr'
+          enabled: ${{parameters.VTLiveApi}} 
+          type: 'webapp'
+        - name: 'VTPortal'
+          destination: 'vtportalPr'
+          enabled: ${{parameters.VTPortal}}
+          type: 'webapp'
+        - name: 'VTTerminals'
+          destination: 'vtterminalsPr'
+          enabled: ${{parameters.VTTerminals}}
+          type: 'webapp'
+        - name: 'VTVisits'
+          destination: 'vtvisitsPr'
+          enabled: ${{parameters.VTVisits}}
+          type: 'webapp'
+        - name: 'fnAnalyticsFunction'
+          destination: 'fnAnalyticsFunctionPr'
+          enabled: ${{parameters.fnAnalyticsFunction}}
+          type: 'funapp'
+        - name: 'fnBackgroundFunction'
+          destination: 'fnBackgroundFunctionPr'
+          enabled: ${{parameters.fnBackgroundFunction}}
+          type: 'funapp'
+        - name: 'fnBroadcasterFunction'
+          destination: 'fnBroadcasterFunctionPr'
+          enabled: ${{parameters.fnBroadcasterFunction}}
+          type: 'funapp'
+        - name: 'fnDatalinkFunction'
+          destination: 'fnDatalinkFunctionPr'
+          enabled: ${{parameters.fnDatalinkFunction}}
+          type: 'funapp'
+        - name: 'fnMailFunction'
+          destination: 'fnMailFunctionPr'
+          enabled: ${{parameters.fnMailFunction}}
+          type: 'funapp'
+        - name: 'fnReportFunction'
+          destination: 'fnReportFunctionPr'
+          enabled: ${{parameters.fnReportFunction}}
+          type: 'funapp'
+        - name: 'fnScheduleFunction'
+          destination: 'fnScheduleFunctionPr'
+          enabled: ${{parameters.fnScheduleFunction}}
+          type: 'funapp'
+        - name: 'fnPushNotificationsFunction'
+          destination: 'fnPushNotificationsFunctionPr'
+          enabled: ${{parameters.fnPushNotificationsFunction}}
+          type: 'funapp'
+        - name: 'fnNotificationsFunction'
+          destination: 'fnNotificationFunctionPr'
+          enabled: ${{parameters.fnNotificationsFunction}}
+          type: 'funapp'
+        - name: 'fnEngineFunction'
+          destination: 'fnengineFunctionPr'
+          enabled: ${{parameters.fnEngineFunction}}
+          type: 'funapp'
+        - name: 'fnPunchConnectorFunction'
+          destination: 'fnpunchconnectorFunctionPr'
+          enabled: ${{parameters.fnPunchConnectorFunction}}
+          type: 'funapp'
+        - name: 'fnPNLinkFunction'
+          destination: 'fnPNlinkFunctionPr'
+          enabled: ${{parameters.fnPNlinkFunction}}
+          type: 'funapp'
+        - name: 'fnFTPStorageSyncFunction'
+          destination: 'fnFTPStorageSyncPr'
+          enabled: ${{parameters.fnFTPStorageSyncFunction}}
+          type: 'funapp'
+
+  #### Tag version
+  # - template: Templates/TagVersion.yml
+  
+

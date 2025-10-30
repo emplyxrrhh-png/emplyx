@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="devIDI01_idi01" Class="PartesTrabajoLINQDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.ESP_PARTESTRABAJO" Member="ESP_PARTESTRABAJOs">
+    <Type Name="ESP_PARTESTRABAJO">
+      <Column Name="IDEmpleado" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="SmallDateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Parte" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Proyecto" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Trabajo1" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Trabajo2" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Trabajo3" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Trabajo4" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Kms" Type="System.Decimal" DbType="Decimal(18,3)" CanBeNull="true" />
+      <Column Name="Cliente" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="HorasNormales" Type="System.Decimal" DbType="Decimal(18,6)" CanBeNull="true" />
+      <Column Name="HorasExtrasNormales" Type="System.Decimal" DbType="Decimal(18,6)" CanBeNull="true" />
+      <Column Name="HorasExtrasSabados" Type="System.Decimal" DbType="Decimal(18,6)" CanBeNull="true" />
+      <Column Name="HorasExtrasFestivo" Type="System.Decimal" DbType="Decimal(18,6)" CanBeNull="true" />
+      <Column Name="BolsaHENormales" Type="System.Decimal" DbType="Decimal(18,6)" CanBeNull="true" />
+      <Column Name="BolsaHEFestivas" Type="System.Decimal" DbType="Decimal(18,6)" CanBeNull="true" />
+      <Column Name="DietasPrimera" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DietasMedia" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DietasComida" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DietasPlusAltura" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DietasTrans" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

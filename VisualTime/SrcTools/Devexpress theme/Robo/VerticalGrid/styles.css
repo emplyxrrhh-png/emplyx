@@ -1,0 +1,585 @@
+.dxvgControl_Robo,
+.dxvgDisabled_Robo
+{
+    font: 11px Century Gothic,Segoe UI,Arial,Helvetica,sans-serif;
+    background-color: White;
+    color: #666;
+    cursor: default;
+}
+.dxvgDisabled_Robo
+{
+    color: #b8b8b8;
+}
+.dxvgControl_Robo a.dxeHyperlink:not([href]):not([onclick]):not(.dxbButtonSys)
+{
+    color: #666;
+    text-decoration: none;
+}
+.dxvgControl_Robo a
+{
+    color: #D76D1D;
+    text-decoration: none;
+}
+.dxvgControl_Robo a:hover
+{
+    text-decoration: underline;
+}
+.dxvgControl_Robo a:hover.dxbDisabled_Robo
+{
+    color: #BBBBBB;
+    text-decoration: none;
+}
+.dxvgDisabled_Robo a
+{
+    color: #b8b8b8;
+}
+.dxvgTable_Robo
+{
+    background-color: White;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-collapse: separate !important;
+    overflow: hidden;
+    table-layout: fixed;
+}
+.dxvgTable_Robo .dxvgHEC
+{
+    background-color: White;
+    border-width: 0;
+    overflow: hidden;
+}
+.dxvgControl_Robo .dxvgCSD
+{
+    border-right: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.dxvgCSD .dxvgTable_Robo
+{
+    border-right: 0;
+}
+.dxvgControl_Robo .dxvgFCW + .dxvgTable_Robo
+{
+    border-top: 0;
+}
+.dxvgControl_Robo .dxvgCSD .dxvgTable_Robo,
+.dxvgControl_Robo table[id$='DXFixedTable']
+{
+    border-bottom: 0;
+}
+.dxvgControl_Robo .dxvgCSD + .dxvgSummaryPanel_Robo,
+.dxvgControl_Robo .dxvgCSD + .dxvgPagerBottomPanel_Robo,
+.dxvgControl_Robo .dxvgCSD + .dxvgFilterBar_Robo,
+.dxvgControl_Robo .dxvgCSD + .dxvgStatusBar_Robo,
+.dxvgTable_Robo + .dxvgSummaryPanel_Robo,
+.dxvgTable_Robo + .dxvgPagerBottomPanel_Robo,
+.dxvgTable_Robo + .dxvgFilterBar_Robo,
+.dxvgTable_Robo + .dxvgStatusBar_Robo
+{
+    border-top: 0;
+}
+.dxvgHeader_Robo
+{
+    cursor: pointer;
+    color: black;
+    font: 11px Century Gothic,Segoe UI,Arial,Helvetica,sans-serif;
+    text-align: left;
+    background-color: white;
+    padding: 10px 10px 8px;
+    border: 1px Solid #DCDCDC;
+    border-width: 0 1px 1px 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.dxvgCategory_Robo
+{
+    color: #939393;
+    font: 11px Century Gothic,Segoe UI,Arial,Helvetica,sans-serif;
+    background-color: #f4f4f4;
+    padding: 9px 10px 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    overflow: hidden;
+    white-space: nowrap;
+}
+.dxvgCSD .dxvgCategory_Robo:not(.dxvg__I)
+{
+    border-right: 1px solid rgba(0,0,0,0.1);
+}
+.dxvgCategoryRow_Robo.dxvgER .dxvgCategory_Robo,
+.dxvgCategoryRow_Robo.dxvgCR .dxvgCategory_Robo
+{
+    cursor: pointer;
+}
+.dxvgCategoryRow_Robo.dxvgER .dxvgCategory_Robo.dxvg__I,
+.dxvgCategoryRow_Robo.dxvgCR .dxvgCategory_Robo.dxvg__I
+{
+    cursor: default;
+}
+.dxvgRecord_Robo
+{
+    padding: 8px 10px 9px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-width: 0 1px 1px 0;
+    overflow: hidden;
+}
+.dxvgRecord_Robo:last-child
+{
+    border-right-width: 0;
+}
+.dxvgRPFC .dxvgRecord_Robo
+{
+    border-bottom: 1px Solid #DCDCDC;
+}
+.dxvgGLNV .dxvgRecord_Robo
+{
+    border-right-width: 0;
+}
+.dxvgGLNH .dxvgRecord_Robo
+{
+    border-bottom-width: 0;
+}
+.dxvgGLNH .dxvgRPFC .dxvgRecord_Robo
+{
+    border-bottom-width: 1px;
+}
+.dxvgGLNH .dxvgRPFC.dxvgER .dxvgRecord_Robo
+{
+    border-bottom-width: 0;
+}
+.dxvgFC .dxvgGLNH tr:last-child .dxvgRecord_Robo
+{
+    border-bottom-width: 1px;
+}
+.dxvgRecordAlt_Robo
+{
+    background-color: #f5f5f5;
+}
+/* Select, Hover */
+.dxvgSelectedRecord_Robo,
+.dxvgSelectedRecord_Robo.dxvgDataRowHover_Robo
+{
+    background-color: #F3E1D3;
+}
+.dxvgDataRowHover_Robo .dxvgRecord_Robo
+{
+    background-color: rgba(0,0,0,0.1);
+}
+/* Command Items */
+.dxvgCommandCell_Robo
+{
+    padding: 8px 4px;
+}
+.dxvgCommandCell_Robo a,
+.dxvgHeader_Robo a.dxvgCommandItem_Robo
+{
+    margin: 0 5px 0 0;
+}
+.dxvgHeader_Robo a,
+.dxvgCommandCell_Robo a
+{
+    color: #D76D1D;
+}
+.dxbButton_Robo[class~="dxvgCommandItem_Robo"]
+{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.dxbButton_Robo[class~="dxvgCommandItem_Robo"] .dxb
+{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+/* Indents */
+.dxvgControl_Robo .dxvg__I
+{
+    border-style: solid;
+    border-color: #DCDCDC;
+    border-width: 0 1px 0 0;
+    cursor: default;
+    box-shadow: none;
+}
+.dxvgControl_Robo .dxvg__I.dxvg__BB
+{
+    border-bottom-width: 1px;
+}
+.dxvgControl_Robo .dxvgER .dxvg__I.dxvg__BB
+{
+    border-bottom-width: 0;
+}
+.dxvgControl_Robo .dxvgMHI .dxvg__I
+{
+    border-right-width: 0;
+}
+.dxvgControl_Robo .dxvgMHI .dxvgER .dxvg__I.dxvg__BB
+{
+    border-bottom-width: 1px;
+}
+/* Title Panel, Status bar, Summary Panel */
+.dxvgTitlePanel_Robo,
+.dxvgTable_Robo caption
+{
+    font-size: 1.25em;
+    font-weight: normal;
+    padding: 3px 3px 5px;
+    text-align: center;
+    color: #999999;
+}
+.dxvgStatusBar_Robo
+{
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+.dxvgStatusBar_Robo tr.dxvg
+{
+    height: 20px;
+}
+.dxvgStatusBar_Robo tr.dxvg > td
+{
+    padding: 24px 0;
+}
+.dxvgStatusBar_Robo tr.dxvg span .dxbButtonSys:first-child
+{
+    margin-left: 20px;
+}
+.dxvgSummaryPanel_Robo
+{
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: #f4f4f4;
+    color: #8e8e93;
+    padding: 5px 21px 4px;
+}
+.dxvgSummaryItem_Robo
+{
+    display: inline-block;
+    margin: 5px 8px 5px 0;
+}
+/* Pager */
+.dxvgPagerTopPanel_Robo,
+.dxvgPagerBottomPanel_Robo
+{
+    padding: 3px 0 1px;
+}
+.dxvgPagerBottomPanel_Robo
+{
+    background-color: white;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-left: 1px solid rgba(0,0,0,0.1);
+    border-right: 1px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+.dxvgSummaryPanel_Robo + .dxvgPagerBottomPanel_Robo
+{
+    border-top-width: 0;
+}
+.dxvgControl_Robo .dxpLite_Robo,
+.dxvgDisabled_Robo .dxpLite_Robo
+{
+    padding-top: 4px;
+}
+/* Filter Builder, Filter Bar */
+.dxvgFilterBar_Robo
+{
+    margin-top: 16px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-collapse: separate;
+}
+.dxvgFilterBar_Robo a
+{
+    color: #D76D1D;
+    text-decoration: none;
+}
+.dxvgFilterBar_Robo a:hover
+{
+    text-decoration: underline;
+}
+.dxvgFilterBar_Robo > tbody > tr > td
+{
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+.dxvgFilterBarCheckBoxCell_Robo
+{
+    padding-left: 8px;
+}
+*[dir="rtl"] .dxvgFilterBarCheckBoxCell_Robo
+{
+    padding-right: 8px;
+}
+.dxvgFilterBarImageCell_Robo
+{
+    padding: 0 8px 0 20px;
+    cursor: pointer;
+}
+*[dir="rtl"] .dxvgFilterBarImageCell_Robo
+{
+    padding: 0 20px 0 8px;
+}
+.dxvgFilterBarImageCell_Robo img
+{
+    margin-top: 3px;
+    margin-left: 0;
+}
+.dxvgFilterBarExpressionCell_Robo
+{
+    padding: 5px 5px 8px 0;
+    white-space: nowrap;
+}
+.dxvgFilterBarClearButtonCell_Robo
+{
+    padding: 5px 20px 8px 6px;
+}
+*[dir="rtl"] .dxvgFilterBarClearButtonCell_Robo
+{
+    padding: 5px 6px 8px 20px;
+}
+.dxvgFilterBuilderMainArea_Robo
+{
+    background: white none;
+    padding: 6px 2px;
+}
+.dxvgFilterBuilderButtonArea_Robo
+{
+    border-top: 1px solid #eaeaea;
+    padding: 10px;
+    white-space: nowrap;
+}
+.dxvgFilterBuilderButtonArea_Robo .dxbButton_Robo
+{
+    margin-left: 8px;
+}
+.dxvgControl_Robo .dxpcLite_Robo
+{
+    -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
+}
+.dxvgControl_Robo .dxpcLite_Robo .dxpc-mainDiv.dxpc-hf
+{
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+/* Header Filter */
+.dxvgControl_Robo .dxpcLite_Robo .dxpc-footerContent > table
+{
+    margin: 13px 20px 11px 0px;
+}
+.dxvgControl_Robo .dxpcLite_Robo .dxpc-footerContent
+{
+    padding: 12px 20px 7px 12px;
+}
+.dxvgControl_Robo .dxvgHFC
+{
+    padding-left: 4px;
+}
+.dxvgControl_Robo .dxvgHFC .dxeCalendar_Robo
+{
+    margin-top: 3px;
+    margin-left: 7px;
+}
+.dxvgControl_Robo div[id$='DXEPLPC']
+{
+    height: 53px;
+}
+.dxvgControl_Robo .dxvgHFSD
+{
+    height: 1px;
+    margin: 2px 0;
+}
+.dxvgControl_Robo .dxvgHFDRC
+{
+    margin: 15px 15px 25px;
+}
+.dxvgControl_Robo .dxvgHFDRP
+{
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 9px 0 6px;
+}
+.dxvgControl_Robo .dxvgHFDRP[id*="HFFDE"]
+{
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.dxvgControl_Robo .dxvgHFDRP[id*="HFTDE"]
+{
+    margin-bottom: 25px;
+}
+/* Batch Edit */
+.dxvgControl_Robo td.dxvgBatchEditCell_Robo
+{
+    padding: 0 2px;
+}
+.dxvgControl_Robo td.dxvgBatchEditModifiedCell_Robo
+{
+    background: #d7f9c7;
+}
+.dxvgBatchEditDeletedItem_Robo,
+.dxvgBatchEditNewItem_Robo.dxvgBatchEditDeletedItem_Robo
+{
+    background: #EFEFEF;
+}
+td.dxvgBatchEditDeletedItem_Robo:not(.dxvgCommandColumn_Robo)
+{
+    color: rgba(0,0,0,0.5);
+}
+.dxvgBatchEditDeletedItem_Robo.dxvgBatchEditModifiedCell_Robo
+{
+    background: #eefbe7 !important;
+}
+.dxvgBatchEditNewItem_Robo
+{
+    background: #F0FAEA;
+}
+.dxvgControl_Robo .dxvgErrorCell
+{
+    padding-left: 5px;
+    width: 1px;
+}
+.dxvgControl_Robo .dxvgErrorCell img
+{
+    margin: -3px 0;
+}
+.dxvgStatusBar_Robo .dxbButton_Robo
+{
+    margin-right: 10px;
+}
+.dxvgControl_Robo td.dxvgBatchEditCell_Robo .dxichCellSys
+{
+    padding-left: 0;
+}
+.dxvgRecordError_Robo
+{
+    background-color: #FFC8C8;
+    color: #FF0000;
+    padding: 6px 10px;
+    height: 100%;
+}
+.dxvgERV .dxvgRecord_Robo
+{
+    display: none;
+}
+.dxvgEmptyRecord_Robo
+{
+    display: none;
+    text-align: center;
+}
+.dxvgERV .dxvgEmptyRecord_Robo
+{
+    display: table-cell;
+}
+/* LoadingPanel */
+.dxvgLoadingPanel_Robo
+{
+    background-color: white;
+    font: 11px Century Gothic,Segoe UI,Arial,Helvetica,sans-serif;
+    color: #666;
+    -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
+}
+.dxvgLoadingPanel_Robo td.dx
+{
+    font-size: 1.17em;
+    white-space: nowrap;
+    text-align: center;
+    padding: 10px 14px;
+}
+.dxvgLoadingPanel_Robo .dxlp-loadingImage
+{
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    border-radius: 50%;
+    animation: dxLoadSpinSys 1s linear infinite;
+    border: 4px solid #D76D1D;
+    border-top: 4px solid #EEE;
+    width: 24px;
+    height: 24px;
+}
+html.dxIE.dxBrowserVersion-9 .dxvgLoadingPanel_Robo .dxlp-loadingImage
+{
+    background-image: url('../Web/Loading.gif');
+    height: 32px;
+    width: 32px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: none;
+    border: none;
+    border-radius: 0;
+}
+.dxvgLoadingPanelStatusBar_Robo
+{
+    background-color: Transparent;
+}
+.dxvgLoadingPanelStatusBar_Robo td
+{
+    white-space: nowrap;
+    text-align: center;
+    padding: 0px 2px;
+}
+.dxvgLoadingPanelStatusBar_Robo .dxlp-loadingImage
+{
+    background-image: url('../GridView/gvLoadingOnStatusBar.gif');
+    height: 16px;
+    width: 16px;
+}
+/* Search Panel */
+.dxvgSearchPanel_Robo
+{
+    padding: 7px 0 16px;
+}
+.dxvgSearchPanel_Robo > table
+{
+    width: 100%;
+}
+.dxvgSearchPanel_Robo .dxeButtonEdit_Robo
+{
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1), 0 2px 10px 0 rgba(0,0,0,0.1);
+    width: 100%;
+}
+.dxvgSearchPanel_Robo .dxeButtonEdit_Robo,
+.dxvgSearchPanel_Robo .dxeButtonEdit_Robo input
+{
+    background-color: #FAFAFA;
+}
+.dxvgSearchPanel_Robo .dxeButtonEdit_Robo td.dxic
+{
+    padding: 13px 8px 14px 12px;
+}
+*[dir="rtl"] .dxvgSearchPanel_Robo .dxeButtonEdit_Robo td.dxic
+{
+    padding: 13px 12px 14px 8px;
+}
+.dxvgControl_Robo .dxvgSearchPanel_Robo .dxbButton_Robo
+{
+    margin-left: 7px;
+    margin-right: 0;
+}
+*[dir="rtl"].dxvgControl_Robo .dxvgSearchPanel_Robo .dxbButton_Robo
+{
+    margin-left: 0;
+    margin-right: 7px;
+}
+.dxvgControl_Robo .dxvgHL
+{
+    background: #D76D1D;
+    color: white;
+    font-weight: bold;
+    font-style: normal;
+}
+/* Removes flicking in Material Safari*/
+.dxvgTable_Robo
+{
+    -webkit-tap-highlight-color: transparent;
+}
+.dxvgRecord_Robo .dxICheckBox_Robo,
+.dxvgRecord_Robo .dxeIRadioButton_Robo
+{
+    margin: 0 10px 0 10px;
+}
+/* Ripple */
+.dxvgFocusedCell_Robo
+{
+    box-shadow: inset 2px 2px 0 #D76D1D, inset -2px -2px 0 #D76D1D;
+    -webkit-box-shadow: inset 2px 2px 0 #D76D1D, inset -2px -2px 0 #D76D1D;
+    -moz-box-shadow: inset 2px 2px 0 #D76D1D, inset -2px -2px 0 #D76D1D;
+}

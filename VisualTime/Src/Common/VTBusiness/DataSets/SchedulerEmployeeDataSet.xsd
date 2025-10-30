@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SchedulerEmployeeDataSet" targetNamespace="http://tempuri.org/SchedulerEmployeeDataSet.xsd" xmlns:mstns="http://tempuri.org/SchedulerEmployeeDataSet.xsd" xmlns="http://tempuri.org/SchedulerEmployeeDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SchedulerEmployeeDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="SchedulerEmployeeDataSet" msprop:Generator_UserDSName="SchedulerEmployeeDataSet" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Scheduler" msprop:Generator_UserTableName="Scheduler" msprop:Generator_RowDeletedName="SchedulerRowDeleted" msprop:Generator_TableClassName="SchedulerDataTable" msprop:Generator_RowChangedName="SchedulerRowChanged" msprop:Generator_RowClassName="SchedulerRow" msprop:Generator_RowChangingName="SchedulerRowChanging" msprop:Generator_RowEvArgName="SchedulerRowChangeEvent" msprop:Generator_RowEvHandlerName="SchedulerRowChangeEventHandler" msprop:Generator_TablePropName="Scheduler" msprop:Generator_TableVarName="tableScheduler" msprop:Generator_RowDeletingName="SchedulerRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDEmployee" msprop:Generator_UserColumnName="IDEmployee" msprop:Generator_ColumnPropNameInRow="IDEmployee" msprop:Generator_ColumnVarNameInTable="columnIDEmployee" msprop:Generator_ColumnPropNameInTable="IDEmployeeColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IDGroup" msprop:Generator_UserColumnName="IDGroup" msprop:Generator_ColumnPropNameInRow="IDGroup" msprop:Generator_ColumnVarNameInTable="columnIDGroup" msprop:Generator_ColumnPropNameInTable="IDGroupColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInTable="NameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Type" msprop:Generator_UserColumnName="Type" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInTable="TypeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TypeEmployee" msprop:Generator_UserColumnName="TypeEmployee" msprop:Generator_ColumnPropNameInRow="TypeEmployee" msprop:Generator_ColumnVarNameInTable="columnTypeEmployee" msprop:Generator_ColumnPropNameInTable="TypeEmployeeColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Mobilities" msprop:Generator_UserTableName="Mobilities" msprop:Generator_RowDeletedName="MobilitiesRowDeleted" msprop:Generator_TableClassName="MobilitiesDataTable" msprop:Generator_RowChangedName="MobilitiesRowChanged" msprop:Generator_RowClassName="MobilitiesRow" msprop:Generator_RowChangingName="MobilitiesRowChanging" msprop:Generator_RowEvArgName="MobilitiesRowChangeEvent" msprop:Generator_RowEvHandlerName="MobilitiesRowChangeEventHandler" msprop:Generator_TablePropName="Mobilities" msprop:Generator_TableVarName="tableMobilities" msprop:Generator_RowDeletingName="MobilitiesRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDEmployee" msprop:Generator_UserColumnName="IDEmployee" msprop:Generator_ColumnPropNameInRow="IDEmployee" msprop:Generator_ColumnVarNameInTable="columnIDEmployee" msprop:Generator_ColumnPropNameInTable="IDEmployeeColumn" type="xs:int" />
+              <xs:element name="IDGroup" msprop:Generator_UserColumnName="IDGroup" msprop:Generator_ColumnPropNameInRow="IDGroup" msprop:Generator_ColumnVarNameInTable="columnIDGroup" msprop:Generator_ColumnPropNameInTable="IDGroupColumn" type="xs:int" />
+              <xs:element name="BeginDate" msprop:Generator_UserColumnName="BeginDate" msprop:Generator_ColumnPropNameInRow="BeginDate" msprop:Generator_ColumnVarNameInTable="columnBeginDate" msprop:Generator_ColumnPropNameInTable="BeginDateColumn" type="xs:dateTime" />
+              <xs:element name="EndDate" msprop:Generator_UserColumnName="EndDate" msprop:Generator_ColumnPropNameInRow="EndDate" msprop:Generator_ColumnVarNameInTable="columnEndDate" msprop:Generator_ColumnPropNameInTable="EndDateColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="MobilitiesKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Mobilities" />
+      <xs:field xpath="mstns:IDEmployee" />
+      <xs:field xpath="mstns:IDGroup" />
+      <xs:field xpath="mstns:BeginDate" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

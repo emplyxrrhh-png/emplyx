@@ -1,0 +1,837 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_employeeexceptionswizard.btclose.text.rotext" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.btclose.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.btend.text.rotext" xml:space="preserve">
+    <value>Koniec</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.btend.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.btnext.text.rotext" xml:space="preserve">
+    <value>Ďalšie &gt;</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.btnext.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.btprev.text.rotext" xml:space="preserve">
+    <value>&lt; Predchádzajúci</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.btprev.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.end.employeecopywelcome1.text.rotext" xml:space="preserve">
+    <value>Sprievodca priradením výnimiek používateľom.</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.end.ok.employeecopywelcome2.text.rotext" xml:space="preserve">
+    <value>Úloha výnimky úspešne dokončená.</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.hdnsetpinfo.text.rotext" xml:space="preserve">
+    <value>Vyberte používateľov, ktorých chcete označiť ako výnimky pre nadriadeného</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.hdnsetpinfo.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.hdnsteptitle.text.rotext" xml:space="preserve">
+    <value>Sprievodca priradením výnimiek používateľom.</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.hdnsteptitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.hdnsteptitle2.text.rotext" xml:space="preserve">
+    <value>Krok {0} z {1}.</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.hdnsteptitle2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.imgnewmultiemployeewizard.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep1error.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep1error.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep1info.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep1info.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep1info2.text.rotext" xml:space="preserve">
+    <value>Teraz vyberte používateľov, ktorí majú byť výnimkou</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep1info2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep1title.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep1title.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep2error.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep2error.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep2info.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep2info.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep2info2.text.rotext" xml:space="preserve">
+    <value>Sprievodca už má dostatok údajov. Stlačením tlačidla Dokončiť dokončíte zadanie.</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep2info2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep2title.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblstep2title.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblwelcome1.text.rotext" xml:space="preserve">
+    <value>Vitajte v sprievodcovi na určenie výnimiek pre tohto supervízora.</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.lblwelcome1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblwelcome2.text.rotext" xml:space="preserve">
+    <value>Tento sprievodca vám pomôže vybrať, ktorí používatelia budú pre tohto supervízora výnimkou.</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.lblwelcome2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.lblwelcome3.text.rotext" xml:space="preserve">
+    <value>Ak chcete pokračovať, kliknite na tlačidlo Ďalej.</value>
+  </data>
+  <data name="RES_employeeexceptionswizard.lblwelcome3.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_employeeexceptionswizard.title.rotext" xml:space="preserve">
+    <value>Sprievodca priradením výnimiek používateľom</value>
+  </data>
+  <data name="RES_frmips.btncancel.text.rotext" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="RES_frmips.btncancel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmips.btnok.text.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_frmips.btnok.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmips.lblblocksupervisor.text.rotext" xml:space="preserve">
+    <value>Rozsah IP</value>
+  </data>
+  <data name="RES_frmips.lblblocksupervisor.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmips.lblcomptit.text.rotext" xml:space="preserve">
+    <value>Rozsah hodnôt Ip</value>
+  </data>
+  <data name="RES_frmips.lblcomptit.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmips.lblipdescription.text.rotext" xml:space="preserve">
+    <value>Zadajte ip alebo rozsah, ktorý chcete povoliť</value>
+  </data>
+  <data name="RES_frmips.lblipdescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_savename.error.option1description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_savename.error.option1text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.aspxcallbackpanelcontenido.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.cc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.cc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.checkpermission.denied.message.rotext" xml:space="preserve">
+    <value>Nedostatočné povolenia na vykonanie tejto činnosti.</value>
+  </data>
+  <data name="RES_securityfunctions.dxpwmb-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.ec.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.ec.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.ei.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.et.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.etc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.etc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.feature.information.button.rotext" xml:space="preserve">
+    <value>popis</value>
+  </data>
+  <data name="RES_securityfunctions.functionalties.columns.name.rotext" xml:space="preserve">
+    <value>Funkčnosť</value>
+  </data>
+  <data name="RES_securityfunctions.functionalties.columns.permission.rotext" xml:space="preserve">
+    <value>Povolenia</value>
+  </data>
+  <data name="RES_securityfunctions.gridips.namevalue.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.i.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.i.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.label1.text.rotext" xml:space="preserve">
+    <value>Názov:</value>
+  </data>
+  <data name="RES_securityfunctions.label1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lblbusinesscenterdesc.text.rotext" xml:space="preserve">
+    <value>Táto skupina používateľov bude mať oprávnenie na zadané nákladové strediská.</value>
+  </data>
+  <data name="RES_securityfunctions.lblbusinesscenterdesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lbldeftitle2.text.rotext" xml:space="preserve">
+    <value>Podnikateľské skupiny</value>
+  </data>
+  <data name="RES_securityfunctions.lbldeftitle2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lbldeftitle3.text.rotext" xml:space="preserve">
+    <value>Nákladové strediská</value>
+  </data>
+  <data name="RES_securityfunctions.lbldeftitle3.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lbldesccamera.text.rotext" xml:space="preserve">
+    <value>Popis: V súčasnosti je na trhu viac ako 10 000 zariadení, ktoré sú určené na predaj:</value>
+  </data>
+  <data name="RES_securityfunctions.lbldesccamera.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lbldescsecuritydescription.text.rotext" xml:space="preserve">
+    <value>Opis bezpečnostnej funkcie</value>
+  </data>
+  <data name="RES_securityfunctions.lbldescsecuritydescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lbldinningroomgeneraldesc.text.rotext" xml:space="preserve">
+    <value>Údaje špecifické pre rolu, ktoré sa majú priradiť nadriadenému.</value>
+  </data>
+  <data name="RES_securityfunctions.lbldinningroomgeneraldesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lblnamedescription.text.rotext" xml:space="preserve">
+    <value>Identifikačný názov funkcie</value>
+  </data>
+  <data name="RES_securityfunctions.lblnamedescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lblpermissions.text.rotext" xml:space="preserve">
+    <value>Na tejto obrazovke môžete upraviť oprávnenia dostupné pre jednotlivé funkcie</value>
+  </data>
+  <data name="RES_securityfunctions.lblpermissions.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lblpermissionstitle.text.rotext" xml:space="preserve">
+    <value>Úlohy</value>
+  </data>
+  <data name="RES_securityfunctions.lblpermissionstitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lblsecurityfunctionname.text.rotext" xml:space="preserve">
+    <value>všeobecné</value>
+  </data>
+  <data name="RES_securityfunctions.lblsecurityfunctionname.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lblselectbusinessgroup.text.rotext" xml:space="preserve">
+    <value>Vybrané obchodné skupiny</value>
+  </data>
+  <data name="RES_securityfunctions.lblselectbusinessgroup.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lblvisibilityalldesc.text.rotext" xml:space="preserve">
+    <value>Táto skupina používateľov bude mať oprávnenie pre všetky obchodné skupiny.</value>
+  </data>
+  <data name="RES_securityfunctions.lblvisibilityalldesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lblvisibilityalltitle.text.rotext" xml:space="preserve">
+    <value>Všetky</value>
+  </data>
+  <data name="RES_securityfunctions.lblvisibilityalltitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lblvisibilitycriteriadesc.text.rotext" xml:space="preserve">
+    <value>Táto skupina používateľov má oprávnenie len na uvedené obchodné skupiny.</value>
+  </data>
+  <data name="RES_securityfunctions.lblvisibilitycriteriadesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.lblvisibilitycriteriatitle.text.rotext" xml:space="preserve">
+    <value>Nižšie uvedené</value>
+  </data>
+  <data name="RES_securityfunctions.lblvisibilitycriteriatitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.message.unknowerror.rotext" xml:space="preserve">
+    <value>Neznáma chyba</value>
+  </data>
+  <data name="RES_securityfunctions.msghaschanges.rotext" xml:space="preserve">
+    <value>Zistili sa zmeny vo funkčnosti</value>
+  </data>
+  <data name="RES_securityfunctions.msghaserrors.rotext" xml:space="preserve">
+    <value>Boli zistené chyby vo funkčnosti</value>
+  </data>
+  <data name="RES_securityfunctions.msgsavechangesbar.rotext" xml:space="preserve">
+    <value>Uloženie zmien</value>
+  </data>
+  <data name="RES_securityfunctions.msgundochangesbar.rotext" xml:space="preserve">
+    <value>Zrušenie zmien</value>
+  </data>
+  <data name="RES_securityfunctions.myhidebutton.text.rotext" xml:space="preserve">
+    <value>Tlačidlo</value>
+  </data>
+  <data name="RES_securityfunctions.myhidebutton.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.newobjectpopup.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.newobjectpopup.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.optbglistall.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.optbglistvalue.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.panelcontent1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.permissioncallback.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.permissionlist.tooltip.admin.rotext" xml:space="preserve">
+    <value>Administratíva</value>
+  </data>
+  <data name="RES_securityfunctions.permissionlist.tooltip.featureforbidden.rotext" xml:space="preserve">
+    <value>Používateľ cegid nemôže upravovať oprávnenie kanála oznamovateľa.</value>
+  </data>
+  <data name="RES_securityfunctions.permissionlist.tooltip.none.rotext" xml:space="preserve">
+    <value>Zakázané</value>
+  </data>
+  <data name="RES_securityfunctions.permissionlist.tooltip.read.rotext" xml:space="preserve">
+    <value>Čítanie</value>
+  </data>
+  <data name="RES_securityfunctions.permissionlist.tooltip.write.rotext" xml:space="preserve">
+    <value>Písanie</value>
+  </data>
+  <data name="RES_securityfunctions.permissionoveremployees.button.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.pw-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.savebeforeedit.info.rotext" xml:space="preserve">
+    <value>Pred nahrávaním nie je možné upraviť oprávnenia funkcie.</value>
+  </data>
+  <data name="RES_securityfunctions.setdefaultpermission.button.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.stylesheetscontainer.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.tabgeneral.rotext" xml:space="preserve">
+    <value>všeobecné</value>
+  </data>
+  <data name="RES_securityfunctions.tabpermissions.rotext" xml:space="preserve">
+    <value>Úlohy</value>
+  </data>
+  <data name="RES_securityfunctions.tbaddnewfunction.rotext" xml:space="preserve">
+    <value>Nová funkcia</value>
+  </data>
+  <data name="RES_securityfunctions.tbcopyfunction.rotext" xml:space="preserve">
+    <value>Funkcia kopírovania</value>
+  </data>
+  <data name="RES_securityfunctions.tbdelfunction.rotext" xml:space="preserve">
+    <value>Odstrániť</value>
+  </data>
+  <data name="RES_securityfunctions.title.rotext" xml:space="preserve">
+    <value>Stránka bez názvu</value>
+  </data>
+  <data name="RES_securityfunctions.treecaptionsecurityfunctions.rotext" xml:space="preserve">
+    <value>Úlohy</value>
+  </data>
+  <data name="RES_securityfunctions.txtdescription.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.txtdescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.txtname.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_securityfunctions.txtname.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deleteitem.info.text.rotext" xml:space="preserve">
+    <value>Odstrániť skupinu</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deleteitem.question.option1description.rotext" xml:space="preserve">
+    <value>Skupina bude natrvalo odstránená z organizačnej schémy</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deleteitem.question.option1text.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deleteitem.question.option2description.rotext" xml:space="preserve">
+    <value>Neodstraňujte skupinu a pokračujte v úpravách</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deleteitem.question.option2text.rotext" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deleteitem.question.text.rotext" xml:space="preserve">
+    <value>Určite odstránite vybranú skupinu</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deletesecurityfunction.description.rotext" xml:space="preserve">
+    <value>Funkcia sa natrvalo odstráni</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deletesecurityfunction.option1description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deletesecurityfunction.option1text.rotext" xml:space="preserve">
+    <value>Odstrániť</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deletesecurityfunction.option2description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deletesecurityfunction.option2text.rotext" xml:space="preserve">
+    <value>Nevymazávať</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.deletesecurityfunction.title.rotext" xml:space="preserve">
+    <value>Chystáte sa odstrániť funkciu. Ste si istí?</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.error.ok.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.error.okdesc.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.error.rowinedit.rotext" xml:space="preserve">
+    <value>V tabuľke supervízorov sú riadky s úpravami</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.error.title.rotext" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.error.unknownaction.rotext" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.error.validationcodefailed.rotext" xml:space="preserve">
+    <value>Kód overovania sa nezhoduje</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.error.validationfieldsfailed.rotext" xml:space="preserve">
+    <value>Chýbajú informácie o skupine</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.info.cancel.rotext" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.info.canceldesc.rotext" xml:space="preserve">
+    <value>Bude sa pokračovať v úprave organizačnej schémy.</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.info.discardcontinue.rotext" xml:space="preserve">
+    <value>NIE</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.info.discardcontinuedesc.rotext" xml:space="preserve">
+    <value>Zmeny vykonané v organizačnej schéme sa vyradia.</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.info.savecontinue.rotext" xml:space="preserve">
+    <value>Áno</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.info.savecontinuedesc.rotext" xml:space="preserve">
+    <value>Zmeny vykonané v organizačnej schéme sa uložia.</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.info.title.rotext" xml:space="preserve">
+    <value>Boli vykonané zmeny v organizačnej schéme. &lt;br/&gt; Chcete uložiť vykonané zmeny?</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.savename.error.option1description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.savename.error.option1text.rotext" xml:space="preserve">
+    <value>Prijať</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.savename.error.text.rotext" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.searchfrm.info.text.rotext" xml:space="preserve">
+    <value>Vyhľadávanie</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.searchfrm.itemnotfound.option1description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.searchfrm.itemnotfound.option1text.rotext" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.searchfrm.itemnotfound.text.rotext" xml:space="preserve">
+    <value>Položka nebola nájdená</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.securitychart.client.selectoption.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.title.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.btclose.text.rotext" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="RES_supervisorcopy.btclose.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.btend.text.rotext" xml:space="preserve">
+    <value>Koniec</value>
+  </data>
+  <data name="RES_supervisorcopy.btend.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.btnext.text.rotext" xml:space="preserve">
+    <value>Ďalšie &gt;</value>
+  </data>
+  <data name="RES_supervisorcopy.btnext.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.btprev.text.rotext" xml:space="preserve">
+    <value>&lt; Predchádzajúci</value>
+  </data>
+  <data name="RES_supervisorcopy.btprev.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.btrefresh.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.btrefresh.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.checkpage.incorrectemployeesselected.rotext" xml:space="preserve">
+    <value>Nesprávny výber</value>
+  </data>
+  <data name="RES_supervisorcopy.ckcopybusinesscenters.text.rotext" xml:space="preserve">
+    <value>Kopírovanie obchodných skupín</value>
+  </data>
+  <data name="RES_supervisorcopy.ckcopybusinesscenters.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.ckcopycategories.text.rotext" xml:space="preserve">
+    <value>Kopírovanie nastavení kategórie aplikácie</value>
+  </data>
+  <data name="RES_supervisorcopy.ckcopycategories.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.ckcopycostcenters.text.rotext" xml:space="preserve">
+    <value>Kopírovanie nákladových stredísk</value>
+  </data>
+  <data name="RES_supervisorcopy.ckcopycostcenters.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.ckcopygroups.text.rotext" xml:space="preserve">
+    <value>Kopírovanie spravovaných skupín a používateľov</value>
+  </data>
+  <data name="RES_supervisorcopy.ckcopygroups.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.ckcopyrestrictions.text.rotext" xml:space="preserve">
+    <value>Bezpečnostné obmedzenia kopírovania</value>
+  </data>
+  <data name="RES_supervisorcopy.ckcopyrestrictions.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.ckcopyroles.text.rotext" xml:space="preserve">
+    <value>Kopírovanie úloh</value>
+  </data>
+  <data name="RES_supervisorcopy.ckcopyroles.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.dxemptyrow.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.dxheadersrow0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.dxheadertable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.dxmaintable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.dxtitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.emptyheader.text.rotext" xml:space="preserve">
+    <value>Potiahnite stĺpec sem...</value>
+  </data>
+  <data name="RES_supervisorcopy.emptyheader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.end.ok.supervisorcopywelcome2.text.rotext" xml:space="preserve">
+    <value>Vybrané atribúty boli úspešne skopírované</value>
+  </data>
+  <data name="RES_supervisorcopy.end.supervisorcopywelcome1.text.rotext" xml:space="preserve">
+    <value>Úspešne dokončené</value>
+  </data>
+  <data name="RES_supervisorcopy.grdsupervisors.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.gridcauses.column.name.rotext" xml:space="preserve">
+    <value>Supervízor</value>
+  </data>
+  <data name="RES_supervisorcopy.iadd.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.iadu.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.idhf.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.imgsecurityactionwizard.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblcopytitle.text.rotext" xml:space="preserve">
+    <value>čo chcete kopírovať?</value>
+  </data>
+  <data name="RES_supervisorcopy.lblcopytitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblstep1error.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblstep1error.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblstep1title.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblstep1title.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblstep2error.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblstep2error.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblstep2infoemployees.text.rotext" xml:space="preserve">
+    <value>Vyberte používateľov, ktorých chcete spracovať.</value>
+  </data>
+  <data name="RES_supervisorcopy.lblstep2infoemployees.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblstep2infousers.text.rotext" xml:space="preserve">
+    <value>Vyberte používateľov, ktorých chcete spracovať.</value>
+  </data>
+  <data name="RES_supervisorcopy.lblstep2infousers.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblstep2title.text.rotext" xml:space="preserve">
+    <value>Vyberte akciu, ktorá sa má vykonať na predchádzajúcom výbere.</value>
+  </data>
+  <data name="RES_supervisorcopy.lblstep2title.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblstep4info2.text.rotext" xml:space="preserve">
+    <value>Nakoniec vyberte možnosti vybraného supervízora, ktoré chcete skopírovať. Môžete kopírovať obmedzenia.</value>
+  </data>
+  <data name="RES_supervisorcopy.lblstep4info2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblwelcome2.text.rotext" xml:space="preserve">
+    <value>Tento sprievodca vám pomôže priradiť obmedzenia od nadriadeného.</value>
+  </data>
+  <data name="RES_supervisorcopy.lblwelcome2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblwelcome3.text.rotext" xml:space="preserve">
+    <value>Ak chcete pokračovať, kliknite na tlačidlo Ďalej.</value>
+  </data>
+  <data name="RES_supervisorcopy.lblwelcome3.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lblwelcomeemployees.text.rotext" xml:space="preserve">
+    <value>Vitajte v Sprievodcovi kopírovaním vlastností supervízora</value>
+  </data>
+  <data name="RES_supervisorcopy.lblwelcomeemployees.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.ld.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lp.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.lp.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.scrollable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.stylesheetscontainer.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_supervisorcopy.title.rotext" xml:space="preserve">
+    <value>Sprievodca úpravou parametrov zabezpečenia</value>
+  </data>
+  <data name="RES_supervisorsv3.savepassport.infopwd.resetdescription.rotext" xml:space="preserve">
+    <value>Heslo nadriadeného bolo obnovené a odoslané na jeho e-mailovú adresu.</value>
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.savefunction.error.option1text,savename.error.option1text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxsecuritychart.savefunction.error.option1description,savename.error.option1description.rotext" xml:space="preserve">
+    <value />
+  </data>
+</root>

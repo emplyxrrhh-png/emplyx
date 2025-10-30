@@ -1,0 +1,90 @@
+<widget id="es.robotics.visualtime.VTPortalV2" version="3.40.1" versionCode="597" ios-CFBundleVersion="597" xmlns="https://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>VTPortal</name>
+	<description>VisualTime employee portal</description>
+	<author email="developer@robotics.es" href="http://www.robotics.es/contactar">Robotics S.A</author>
+	<preference name="permissions" value="none" />
+	<preference name="prerendered-icon" value="true" />
+	<preference name="android-windowSoftInputMode" value="adjustResize" />
+	<preference name="SplashScreenDelay" value="5000" />
+	<preference name="AutoHideSplashScreen" value="true" />
+	<preference name="SplashMaintainAspectRatio" value="true" />
+	<preference name="SplashShowOnlyFirstTime" value="false" />
+	<preference name="FadeSplashScreen" value="false" />
+	<preference name="ShowSplashScreenSpinner" value="false" />
+	<preference name="DisallowOverscroll" value="true" />
+	<preference name="StatusBarOverlaysWebView" value="true" />
+	<preference name="android-minSdkVersion" value="22" />
+	<preference name="AndroidInsecureFileModeEnabled" value="true" />
+	<preference name="android-targetSdkVersion" value="30" />
+	<engine name="ios" spec="6.2.0" />
+
+	<engine name="android" spec="10.1.1" />
+	<content src="index.html" />
+
+	<plugin name="cordova-plugin-androidx" />
+	<plugin name="cordova-plugin-androidx-adapter" />
+	<plugin name="cordova-plugin-geolocation" spec="4.0.2" />
+	<plugin name="cordova-plugin-camera" spec="6.0.0" />
+	<plugin name="cordova-plugin-ios-longpress-fix" spec="1.1.0" />
+	<plugin name="cordova-plugin-device" spec="2.0.3" />
+	<plugin name="cordova-plugin-file" spec="6.0.2" />
+	<plugin name="cordova-plugin-splashscreen" spec="6.0.0" onload="true" />
+	<!-- <plugin name="cordova-plugin-file-transfer" spec="1.7.1" /> -->
+	<plugin name="cordova-plugin-file-opener2" spec="3.0.5" />
+	<plugin name="cordova-plugin-inappbrowser" spec="6.0.0" />
+	<plugin name="cordova-plugin-media" spec="5.0.2" />
+	<plugin name="cordova-plugin-media-capture" spec="3.0.2" />
+	<plugin name="cordova-plugin-network-information" spec="2.0.1" />
+	<plugin name="cordova-plugin-statusbar" spec="2.4.2" onload="true" />
+	<!-- <plugin name="phonegap-nfc" source="npm" /> -->
+	<plugin name="phonegap-nfc" spec="https://github.com/Simbioz/phonegap-nfc" />
+	<plugin name="cordova-plugin-backbutton" source="npm" />
+	<plugin name="cordova-plugin-firebasex" spec="12.1.0-cli">
+		<variable name="ANDROID_FIREBASE_CONFIG_FILEPATH" value="www/google-services.json" />
+		<variable name="IOS_FIREBASE_CONFIG_FILEPATH" value="www/GoogleService-Info.plist" />
+	</plugin>
+	<platform name="ios">
+		<preference name="scheme" value="app" />
+		<preference name="hostname" value="localhost" />
+		<preference name="StatusBarBackgroundColor" value="#ffffff" />
+		<edit-config platform="ios" parent="CFBundleShortVersionString">
+			<string>3.40.1</string>
+		</edit-config>
+		<edit-config target="NSLocationAlwaysUsageDescription" platform="ios" file="*-Info.plist" mode="overwrite">
+			<string>VTPortal necesita acceder a tu localización para realizar el fichaje.</string>
+		</edit-config>
+		<edit-config target="NSLocationWhenInUseUsageDescription" platform="ios" file="*-Info.plist" mode="overwrite">
+			<string>VTPortal necesita acceder a tu localización para realizar el fichaje.</string>
+		</edit-config>
+		<edit-config target="NSCameraUsageDescription" platform="ios" file="*-Info.plist" mode="overwrite">
+			<string>VTPortal necesita acceder a la cámara para realizar el fichaje.</string>
+		</edit-config>
+		<edit-config target="NSPhotoLibraryUsageDescription" platform="ios" file="*-Info.plist" mode="overwrite">
+			<string>VTPortal necesita acceder a la librería de fotos para realizar el fichaje.</string>
+		</edit-config>
+		<edit-config target="NFCReaderUsageDescription" platform="ios" file="*-Info.plist" mode="overwrite">
+			<string>VTPortal necesita acceder al lector NFC para poder escanear la tarjeta.</string>
+		</edit-config>
+		<edit-config target="NSLocationAlwaysAndWhenInUseUsageDescription" platform="ios" file="*-Info.plist" mode="overwrite">
+			<string>VTPortal necesita acceder a tu localización para realizar el fichaje.</string>
+		</edit-config>
+
+		<preference name="SplashScreenDelay" value="2000" />
+		<preference name="AutoHideSplashScreen" value="true" />
+	</platform>
+
+	<platform name="android">
+		<preference name="StatusBarBackgroundColor" value="#000000" />
+		<preference name="loadUrlTimeoutValue" value="700000" />
+		<edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+			<application android:usesCleartextTraffic="true" />
+			<!-- <application android:debuggable="true" /> -->
+		</edit-config>
+	</platform>
+
+	<access origin="*" />
+	<access origin="*.*" />
+	<access origin=".*" />
+	<allow-navigation href="*" />
+	<preference name="orientation" value="default" />
+</widget>

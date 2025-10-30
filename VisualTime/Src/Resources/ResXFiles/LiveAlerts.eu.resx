@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_alerts.alert.documents.company.alertabsenteeism.rotext" xml:space="preserve">
+    <value>${1} absentismo dokumentuak daude entregatu gabe edo egoera okerrean</value>
+  </data>
+  <data name="RES_alerts.alert.documents.company.alertexpired.rotext" xml:space="preserve">
+    <value>Iraungi diren ${1} dokumentu behar dira</value>
+  </data>
+  <data name="RES_alerts.alert.documents.company.alertforecastdocuments.rotext" xml:space="preserve">
+    <value>${1} falta diren lan orduen iragarpen dokumentuak</value>
+  </data>
+  <data name="RES_alerts.alert.documents.company.alertmandatory.rotext" xml:space="preserve">
+    <value>${1} enpresaren beharrezko dokumentuak falta dira</value>
+  </data>
+  <data name="RES_alerts.alert.documents.company.alertvalidation.rotext" xml:space="preserve">
+    <value>Enpresaren ${1} dokumentu daude balioztatzeko zain</value>
+  </data>
+  <data name="RES_alerts.alert.documents.company.authorizationaccessdocumentsundelivered.rotext" xml:space="preserve">
+    <value>Entregatu gabe edo egoera okerrean daude ${1} enpresetarako sarbidea baimentzeko dokumentuak</value>
+  </data>
+  <data name="RES_alerts.alert.documents.company.authorizationaccessdocumentsvalidationpending.rotext" xml:space="preserve">
+    <value>Badira ${1} enpresetarako sarbidea baimentzeko dokumentuak balioztatzeko zain</value>
+  </data>
+  <data name="RES_alerts.alert.documents.employee.alertabsenteeism.rotext" xml:space="preserve">
+    <value>${1} absentismo dokumentuak daude entregatu gabe edo egoera okerrean</value>
+  </data>
+  <data name="RES_alerts.alert.documents.employee.alertabsenteeismundelivered.rotext" xml:space="preserve">
+    <value>${1} absentismo dokumentuak daude entregatu gabe edo egoera okerrean</value>
+  </data>
+  <data name="RES_alerts.alert.documents.employee.alertabsenteeismvalidationpending.rotext" xml:space="preserve">
+    <value>Badira ${1} absentismo dokumentuak balioztatzeko zain</value>
+  </data>
+  <data name="RES_alerts.alert.documents.employee.alertexpired.rotext" xml:space="preserve">
+    <value>Iraungi diren ${1} dokumentu behar dira</value>
+  </data>
+  <data name="RES_alerts.alert.documents.employee.alertforecastdocuments.rotext" xml:space="preserve">
+    <value>${1} lan orduko aurreikuspen dokumentuak falta dira</value>
+  </data>
+  <data name="RES_alerts.alert.documents.employee.alertforecastdocumentsundelivered.rotext" xml:space="preserve">
+    <value>Badaude ${1} lan orduko aurreikuspen dokumentuak entregatu gabe edo egoera okerrean</value>
+  </data>
+  <data name="RES_alerts.alert.documents.employee.alertforecastdocumentsvalidationpending.rotext" xml:space="preserve">
+    <value>${1} lan orduko aurreikuspen dokumentuak daude balioztatu zain</value>
+  </data>
+  <data name="RES_alerts.alert.documents.employee.alertmandatory.rotext" xml:space="preserve">
+    <value>${1} erabiltzaile-dokumentuak falta dira</value>
+  </data>
+  <data name="RES_alerts.alert.documents.employee.alertvalidation.rotext" xml:space="preserve">
+    <value>${1} dokumentu daude balioztatzeko zain</value>
+  </data>
+  <data name="RES_alerts.alert.documents.employee.authorizationaccessdocumentsundelivered.rotext" xml:space="preserve">
+    <value>${1} erabiltzaileentzako sarbidea baimentzeko dokumentuak daude entregatu gabe edo egoera okerrean</value>
+  </data>
+  <data name="RES_alerts.alert.documents.employee.authorizationaccessdocumentsvalidationpending.rotext" xml:space="preserve">
+    <value>Balidazio zain dauden erabiltzaileentzat ${1} atzitzeko baimen-dokumentuak daude</value>
+  </data>
+  <data name="RES_alerts.alertdetailspopup.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.alertdetailspopup.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.aspxcallbackpanelcontenido.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.dxpwmb-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.everythingok.rotext" xml:space="preserve">
+    <value>Dena zuzena da. Ez dago kudeaketa eskatzen duen alertarik.</value>
+  </data>
+  <data name="RES_alerts.ibtrefreshalerts.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.imgaudit.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.lastupdatetext.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.lastupdatetext.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.lblheader.text.rotext" xml:space="preserve">
+    <value>Alertak</value>
+  </data>
+  <data name="RES_alerts.lblheader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.lblinfo.text.rotext" xml:space="preserve">
+    <value>Pantaila honek nolabaiteko neurri zuzentzaile bat behar duten sisteman hautemandako anomaliei buruzko abisuak erakusten ditu.</value>
+  </data>
+  <data name="RES_alerts.lblinfo.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.lblpanelsubtitle.text.rotext" xml:space="preserve">
+    <value>Azken 30 egunetako alertak bistaratzen dira. Horiek kudeatu ondoren, baliteke bistaratzen jarraitzea Visualtime zerbitzariak benetan zuzendu direla egiaztatzen duen arte. Prozesu honek minutu batzuk iraun ditzake zerbitzariaren kargaren arabera. Edukia freskatzeko, egin klik goiko eskuineko izkinan dagoen freskatzeko ikonoan.</value>
+  </data>
+  <data name="RES_alerts.lblpanelsubtitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.lblpaneltitle.text.rotext" xml:space="preserve">
+    <value>Zure arreta eskatzen duten alertak daude. Egin klik xehetasunean horiek kudeatzeko</value>
+  </data>
+  <data name="RES_alerts.lblpaneltitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.lblsupporttext.text.rotext" xml:space="preserve">
+    <value>Azken eguneratzea:</value>
+  </data>
+  <data name="RES_alerts.lblsupporttext.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.newobjectpopup.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.newobjectpopup.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.panelcontent1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.pw-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.stylesheetscontainer.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alerts.title.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.absencetypes.showcoverages.rotext" xml:space="preserve">
+    <value>Erakutsi aurrekontua</value>
+  </data>
+  <data name="RES_alertsdetail.absencetypes.showdocument.rotext" xml:space="preserve">
+    <value>Xehetasunak</value>
+  </data>
+  <data name="RES_alertsdetail.absencetypes.showemployee.rotext" xml:space="preserve">
+    <value>Erakutsi erabiltzailearen profila</value>
+  </data>
+  <data name="RES_alertsdetail.absencetypes.showtask.rotext" xml:space="preserve">
+    <value>Erakutsi zeregina</value>
+  </data>
+  <data name="RES_alertsdetail.btnalertsdetailclose.text.rotext" xml:space="preserve">
+    <value>Itxi</value>
+  </data>
+  <data name="RES_alertsdetail.btnalertsdetailclose.tooltip.rotext" xml:space="preserve">
+    <value>Itxi</value>
+  </data>
+  <data name="RES_alertsdetail.col2.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.col2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.col3.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.col3.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.col4.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.col4.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxeditor0.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxeditor0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxeditor1.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxeditor1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxeditor2.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxeditor2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxeditor3.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxeditor3.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxheadersrow0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxheadertable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxmaintable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.dxstyletable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.griddetails.column.detail1.rotext" xml:space="preserve">
+    <value>Erabiltzailea</value>
+  </data>
+  <data name="RES_alertsdetail.griddetails.column.detail1department.rotext" xml:space="preserve">
+    <value>Sail</value>
+  </data>
+  <data name="RES_alertsdetail.griddetails.column.detail1task.rotext" xml:space="preserve">
+    <value>Zeregin</value>
+  </data>
+  <data name="RES_alertsdetail.griddetails.column.detail2.rotext" xml:space="preserve">
+    <value>Xehetasunak</value>
+  </data>
+  <data name="RES_alertsdetail.griddetails.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.i.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.i.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.iadd.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.iadu.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.idhf.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.label17.text.rotext" xml:space="preserve">
+    <value>Xehetasunak</value>
+  </data>
+  <data name="RES_alertsdetail.label17.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.ld.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.lp.text.rotext" xml:space="preserve">
+    <value>Kargatzen&amp;hellip;</value>
+  </data>
+  <data name="RES_alertsdetail.lp.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.scrollable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.stylesheetscontainer.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.title.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.tl.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_alertsdetail.tl.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.analytic.name.0.1.rotext" xml:space="preserve">
+    <value>Egutegia: balantzeak</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.0.2.rotext" xml:space="preserve">
+    <value>Egutegia: Plangintza</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.0.3.rotext" xml:space="preserve">
+    <value>Egutegia: justifikazioak eta gorabeherak</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.0.4.rotext" xml:space="preserve">
+    <value>Egutegia: presentzia sinaketak</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.0.5.rotext" xml:space="preserve">
+    <value>Egutegia: Eskaerak</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.1.1.rotext" xml:space="preserve">
+    <value>Centros de coste: centros de coste</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.1.2.rotext" xml:space="preserve">
+    <value>Kostu zentroak: Xehetasuna</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.1.3.rotext" xml:space="preserve">
+    <value>Kostu Zentroak: Eskaerak</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.1.4.rotext" xml:space="preserve">
+    <value>Kostu-zentroak: egungo kostu-zentroa erabiltzaile bakoitzeko</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.2.1.rotext" xml:space="preserve">
+    <value>Acceso: acceso</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.2.2.rotext" xml:space="preserve">
+    <value>Sarbidea: baimenak</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.3.1.rotext" xml:space="preserve">
+    <value>Zereginak: atazak</value>
+  </data>
+  <data name="RES_tasksqueue.analytic.name.3.2.rotext" xml:space="preserve">
+    <value>Zereginak: Eskaerak</value>
+  </data>
+  <data name="RES_tasksqueue.btrefresh.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.btrefresh.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.dxemptyrow.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.dxheadersrow0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.dxheadertable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.dxmaintable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.emptyheader.text.rotext" xml:space="preserve">
+    <value>Arrastatu zutabe bat hona...</value>
+  </data>
+  <data name="RES_tasksqueue.emptyheader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.exportsagemurano.rotext" xml:space="preserve">
+    <value>Sage Murano Export (egunero)</value>
+  </data>
+  <data name="RES_tasksqueue.exportstandardxml.rotext" xml:space="preserve">
+    <value>Esportazio estandarra</value>
+  </data>
+  <data name="RES_tasksqueue.gridcompleted.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.gridrunning.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.actiontype.analytic.rotext" xml:space="preserve">
+    <value>Datuen analisia</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.actiontype.export.rotext" xml:space="preserve">
+    <value>Esportatu</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.actiontype.import.rotext" xml:space="preserve">
+    <value>Inportatu</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.actiontype.report.rotext" xml:space="preserve">
+    <value>Txostena</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.column.action.rotext" xml:space="preserve">
+    <value>Guy</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.column.creationdate.rotext" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.column.delete.rotext" xml:space="preserve">
+    <value>Ezabatu</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.column.deletedate.rotext" xml:space="preserve">
+    <value>Ezabatze data</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.column.downloadfile.rotext" xml:space="preserve">
+    <value>Fitxategia</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.column.endstatus.rotext" xml:space="preserve">
+    <value>Estatu</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.column.endtime.rotext" xml:space="preserve">
+    <value>Amaiera ordua</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.column.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.column.starttime.rotext" xml:space="preserve">
+    <value>Hasiera Ordua</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.column.user.rotext" xml:space="preserve">
+    <value>Erabiltzailea</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.status.endok.rotext" xml:space="preserve">
+    <value>Arrakastaz osatu da</value>
+  </data>
+  <data name="RES_tasksqueue.gridsolutions.status.endwitherrors.rotext" xml:space="preserve">
+    <value>Akatsekin osatua</value>
+  </data>
+  <data name="RES_tasksqueue.gridwaiting.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.iadd.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.iadl.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.iadr.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.iadu.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.idhf.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.imgconfigurationoptions.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.label2.text.rotext" xml:space="preserve">
+    <value>Txostenak zain</value>
+  </data>
+  <data name="RES_tasksqueue.label2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.label3.text.rotext" xml:space="preserve">
+    <value>Osatutako txostenak</value>
+  </data>
+  <data name="RES_tasksqueue.label3.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.lblcompleted.text.rotext" xml:space="preserve">
+    <value>Osatutako txostenak</value>
+  </data>
+  <data name="RES_tasksqueue.lblcompleted.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.lbldatabaseoptionstabbutton.text.rotext" xml:space="preserve">
+    <value>Eskatutako txostenak</value>
+  </data>
+  <data name="RES_tasksqueue.lbldatabaseoptionstabbutton.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.lblheader.text.rotext" xml:space="preserve">
+    <value>Eskatutako txostenak</value>
+  </data>
+  <data name="RES_tasksqueue.lblheader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.lblinfo.text.rotext" xml:space="preserve">
+    <value>Pantaila honetatik aurrera egiten ari diren, izapidetzen ari diren eta amaitutako txostenen zerrenda eta sisteman exekutatuko diren ordena kontsulta dezakezu.</value>
+  </data>
+  <data name="RES_tasksqueue.lblinfo.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.lblrunningtitle.text.rotext" xml:space="preserve">
+    <value>Txostenak martxan</value>
+  </data>
+  <data name="RES_tasksqueue.lblrunningtitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.lblsolutionscaption.text.rotext" xml:space="preserve">
+    <value>Txostenak martxan</value>
+  </data>
+  <data name="RES_tasksqueue.lblsolutionscaption.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.lblwaitingtitle.text.rotext" xml:space="preserve">
+    <value>Txostenak zain</value>
+  </data>
+  <data name="RES_tasksqueue.lblwaitingtitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.ld.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.lp.text.rotext" xml:space="preserve">
+    <value>Kargatzen&amp;hellip;</value>
+  </data>
+  <data name="RES_tasksqueue.lp.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.myhidebutton.text.rotext" xml:space="preserve">
+    <value>botoia</value>
+  </data>
+  <data name="RES_tasksqueue.myhidebutton.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.report.target.rotext" xml:space="preserve">
+    <value>Hartzaileak</value>
+  </data>
+  <data name="RES_tasksqueue.scrollable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.stylesheetscontainer.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.title.rotext" xml:space="preserve">
+    <value>Eskatutako txostenak</value>
+  </data>
+  <data name="RES_tasksqueue.tl.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_tasksqueue.tl.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+</root>

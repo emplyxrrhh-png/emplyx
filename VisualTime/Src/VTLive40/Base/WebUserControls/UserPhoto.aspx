@@ -1,0 +1,1 @@
+<%@ Page Language="VB" AutoEventWireup="false" Inherits="VTLive40.Base_WebUserControls_UserPhoto" CodeBehind="UserPhoto.aspx.vb" %>

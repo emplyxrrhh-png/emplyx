@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_calendar.header.assignments.rotext" xml:space="preserve">
+    <value>Postos</value>
+  </data>
+  <data name="RES_calendar.header.concept.rotext" xml:space="preserve">
+    <value>Saldo</value>
+  </data>
+  <data name="RES_calendar.header.employees.rotext" xml:space="preserve">
+    <value>Utilizadores</value>
+  </data>
+  <data name="RES_calendar.header.status.rotext" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.feastday.feastdaydescription.rotext" xml:space="preserve">
+    <value>Feriado</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.dateoutofscope.rotext" xml:space="preserve">
+    <value>A data não está incluída no período selecionado</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.employeedoesnotexist.rotext" xml:space="preserve">
+    <value>O utilizador não está incluído na seleção atual</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.excelcellprofilenotfound.rotext" xml:space="preserve">
+    <value>Não foi possível localizar o modelo do link de planeamento ou ocorreu um erro ao carregá-lo</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.existprogrammedholiday.rotext" xml:space="preserve">
+    <value>Existem previsões de férias/licenças por horas no mesmo dia</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.freezingdate.rotext" xml:space="preserve">
+    <value>Na data de conclusão do dia</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.genericinvaliddata.rotext" xml:space="preserve">
+    <value>Erro geral de dados</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invalidarewokringday.rotext" xml:space="preserve">
+    <value>Não é possível atribuir o horário num dia não útil no dia</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invalidassignmentdata.rotext" xml:space="preserve">
+    <value>Dados de postos de trabalho incorretos</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invalidbudgetdata.rotext" xml:space="preserve">
+    <value>Dados orçamentais incorretos</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invalidcomplementarydata.rotext" xml:space="preserve">
+    <value>Dados suplementares incorretos no dia</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invaliddate.rotext" xml:space="preserve">
+    <value>Data incorreta</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invalidemployeedata.rotext" xml:space="preserve">
+    <value>Dados incorretos do utilizador</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invalidfloatingdata.rotext" xml:space="preserve">
+    <value>Dados flutuantes incorretos</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invalidimportfile.rotext" xml:space="preserve">
+    <value>O ficheiro de importação não está no formato correto. Para obter um ficheiro com o formato correto, efetue uma exportação de planeamento e utilize o ficheiro resultante como modelo.</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invalidimporttemplatefile.rotext" xml:space="preserve">
+    <value>O ficheiro de modelo de planeamento não está no formato correto. Para obter um ficheiro com o formato correto, efetue uma exportação do planeamento de um único utilizador para o período pretendido e, no ficheiro resultante, elimine o nome do utilizador e o respetivo NIF.</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invalidshiftbase.rotext" xml:space="preserve">
+    <value>Horário base incorreto no dia</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invalidshiftdefinition.rotext" xml:space="preserve">
+    <value>Definição incorreta de horário</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invalidstartfloating.rotext" xml:space="preserve">
+    <value>Hora de início incorreta no dia</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.nocontract.rotext" xml:space="preserve">
+    <value>Sem contrato no dia</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.permissiondenied.rotext" xml:space="preserve">
+    <value>Sem autorizações no dia</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.shiftnotexist.rotext" xml:space="preserve">
+    <value>Horário não existente no dia</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.shiftwithoutpermission.rotext" xml:space="preserve">
+    <value>Sem autorizações no horário do dia</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.unknownemployee.rotext" xml:space="preserve">
+    <value>Utilizador desconhecido</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.unknownerror.rotext" xml:space="preserve">
+    <value>Erro desconhecido</value>
+  </data>
+  <data name="RES_calendarschedulerules.2shiftsequence.sequence.rotext" xml:space="preserve">
+    <value>Antes do horário ${4} (dia ${3}), não é possível planear o horário ${2} (dia ${1}), de acordo com a regra de</value>
+  </data>
+  <data name="RES_calendarschedulerules.contract.rotext" xml:space="preserve">
+    <value>contrato</value>
+  </data>
+  <data name="RES_calendarschedulerules.custom.3569.1.rotext" xml:space="preserve">
+    <value>O utilizador tem ${1} feriados trabalhados no período compreendido entre ${2} e ${3}, e ${4} horários FR de livrança, e não são suficientes ou não estão planeados conforme esperado, segundo a regra do ${6} ´${5}´</value>
+  </data>
+  <data name="RES_calendarschedulerules.custom.3569.2.rotext" xml:space="preserve">
+    <value>O utilizador tem ${1} horários DC no período entre ${2} e ${3}, que inclui ${4} feriados trabalhados, pelo que deveria ter, pelo menos, ${5}, de acordo com a regra de ${7} "${6}"</value>
+  </data>
+  <data name="RES_calendarschedulerules.freedays.maximum.rotext" xml:space="preserve">
+    <value>O utilizador tem ${1} dias livres no período, e deveria ter no máximo ${2}, segundo a regra do</value>
+  </data>
+  <data name="RES_calendarschedulerules.freedays.minimum.rotext" xml:space="preserve">
+    <value>O utilizador tem apenas ${1} dias livres no período, e deveria ter pelo menos ${2}, de acordo com a regra de</value>
+  </data>
+  <data name="RES_calendarschedulerules.freedays.rulename.rotext" xml:space="preserve">
+    <value>Dias livres</value>
+  </data>
+  <data name="RES_calendarschedulerules.freedayssequence.maximum.rotext" xml:space="preserve">
+    <value>O utilizador tem ${1} dias de folga seguidos no período, e deveria ter, no máximo, ${2}, de acordo com a regra de</value>
+  </data>
+  <data name="RES_calendarschedulerules.labagree.rotext" xml:space="preserve">
+    <value>Acordo</value>
+  </data>
+  <data name="RES_calendarschedulerules.labourdays.maximum.rotext" xml:space="preserve">
+    <value>O utilizador tem ${1} dias de trabalho no período, e deveria ter, no máximo, ${2}, de acordo com a regra de</value>
+  </data>
+  <data name="RES_calendarschedulerules.labourdays.minimum.rotext" xml:space="preserve">
+    <value>O utilizador só tem ${1} dias laborais no período e deveria ter no mínimo ${2}, segundo a regra do</value>
+  </data>
+  <data name="RES_calendarschedulerules.labourdayssequence.maximum.rotext" xml:space="preserve">
+    <value>Sequência de jornadas</value>
+  </data>
+  <data name="RES_calendarschedulerules.maxexpectedhoursinperiod.rotext" xml:space="preserve">
+    <value>O utilizador tem ${1} horas planeadas no período de ${3} a ${4}, quando o máximo é de ${2}, segundo a regra do</value>
+  </data>
+  <data name="RES_calendarschedulerules.maxholidays.rotext" xml:space="preserve">
+    <value>O utilizador tem ${1} dias de férias planeados entre o dia ${3} e ${4}, quando o máximo permitido é de ${2}, de acordo com a regra de</value>
+  </data>
+  <data name="RES_calendarschedulerules.maxholidays.rulename.rotext" xml:space="preserve">
+    <value>Máximo de férias anuais</value>
+  </data>
+  <data name="RES_calendarschedulerules.maxminshiftssequence.compensation.rotext" xml:space="preserve">
+    <value>O utilizador tem uma sequência de horários no período entre ${1} e ${2} que inclui ${3} feriados, pelo que deveria ser compensado com o horário ${4}, de acordo com a regra de ${6} "${5}"</value>
+  </data>
+  <data name="RES_calendarschedulerules.maxminshiftssequence.startday.rotext" xml:space="preserve">
+    <value>O utilizador tem uma sequência de horários no período entre ${1} e ${2} que deve começar em ${3}, de acordo com a regra ${5} "${4}"</value>
+  </data>
+  <data name="RES_calendarschedulerules.maxnotscheduled.rulename.rotext" xml:space="preserve">
+    <value>Todos os dias planeados</value>
+  </data>
+  <data name="RES_calendarschedulerules.maxnotscheduleddays.rotext" xml:space="preserve">
+    <value>Não podem existir dias por planear no ano ${1}, segundo a regra do</value>
+  </data>
+  <data name="RES_calendarschedulerules.maxshiftssequence.rotext" xml:space="preserve">
+    <value>O utilizador tem ${1} sequência(s) de horários no período entre ${2} e ${3}, quando o máximo é de ${4}, de acordo com a regra ${6} "${5}"</value>
+  </data>
+  <data name="RES_calendarschedulerules.minexpectedhoursinperiod.rotext" xml:space="preserve">
+    <value>O utilizador tem ${1} horas planeadas no período de ${3} a ${4}, quando o mínimo é de ${2}, segundo a regra do</value>
+  </data>
+  <data name="RES_calendarschedulerules.minmaxexpectedhours.rotext" xml:space="preserve">
+    <value>O utilizador tem ${1} horas planeadas no ano ${2}, quando o máximo é de ${3}, de acordo com a regra de</value>
+  </data>
+  <data name="RES_calendarschedulerules.minmaxexpectedhours.rulename.rotext" xml:space="preserve">
+    <value>Número máximo de horas de trabalho anuais</value>
+  </data>
+  <data name="RES_calendarschedulerules.minmaxexpectedhoursinperiod.rulename.rotext" xml:space="preserve">
+    <value>Número máximo de horas de trabalho no período</value>
+  </data>
+  <data name="RES_calendarschedulerules.minmaxshifts.maximum.rotext" xml:space="preserve">
+    <value>O horário ${1} foi planeado ${2} vezes entre o dia ${3} e ${4}, quando o máximo permitido é ${5}, de acordo com a regra de</value>
+  </data>
+  <data name="RES_calendarschedulerules.minmaxshifts.minimum.rotext" xml:space="preserve">
+    <value>O horário ${1} foi planeado ${2} vezes entre o dia ${3} e ${4}, quando o mínimo permitido é ${5}, de acordo com a regra de</value>
+  </data>
+  <data name="RES_calendarschedulerules.minmaxshifts.or.max.rotext" xml:space="preserve">
+    <value>Nenhum dos horários ${1} foi planeado um máximo de ${2} vezes entre o dia ${3} e ${4}, segundo a regra do</value>
+  </data>
+  <data name="RES_calendarschedulerules.minmaxshifts.or.min.rotext" xml:space="preserve">
+    <value>Nenhum dos horários ${1} foi planeado um mínimo de ${2} vezes entre os dias ${3} e ${4}, de acordo com a regra de</value>
+  </data>
+  <data name="RES_calendarschedulerules.minmaxshifts.or.rotext" xml:space="preserve">
+    <value>Nenhum dos horários ${1} foi planeado entre ${2} e ${3} vezes entre o dia ${4} e ${5}, segundo a regra do</value>
+  </data>
+  <data name="RES_calendarschedulerules.minshiftssequence.rotext" xml:space="preserve">
+    <value>O utilizador tem ${1} sequência(s) de horários no período entre ${2} e ${3}, quando o mínimo é de ${4}, de acordo com a regra ${6} "${5}"</value>
+  </data>
+  <data name="RES_calendarschedulerules.minweekendsinperiod.morethanone.rotext" xml:space="preserve">
+    <value>O utilizador tem apenas ${1} fins de semana livres no período, quando deveria ter um mínimo de ${2}, de acordo com a regra de</value>
+  </data>
+  <data name="RES_calendarschedulerules.minweekendsinperiod.one.rotext" xml:space="preserve">
+    <value>O utilizador tem apenas ${1} fim de semana livre no período, quando deveria ter um mínimo de ${2}, de acordo com a regra de</value>
+  </data>
+  <data name="RES_calendarschedulerules.oneshift.day.rotext" xml:space="preserve">
+    <value>O horário ${2} (dia ${1}) não pode ser planeado nessa data, de acordo com a regra ${3} "${4}"</value>
+  </data>
+  <data name="RES_calendarschedulerules.oneshift.resttooshort.rotext" xml:space="preserve">
+    <value>Descanso demasiado curto entre os dias ${1} (horário ${2}) e ${3} (horário ${4}), de acordo com a regra ${5} "${6}"</value>
+  </data>
+  <data name="RES_calendarschedulerules.oneshift.sequence.nextdays.rotext" xml:space="preserve">
+    <value>Depois do horário ${1} (dia ${2}) não é possível planear o horário ${3} (dia ${4}), segundo a regra do ${5} ´${6}´</value>
+  </data>
+  <data name="RES_calendarschedulerules.oneshift.sequence.previousdays.rotext" xml:space="preserve">
+    <value>Antes do horário ${4} (dia ${3}), não é possível planear o horário ${2} (dia ${1}), de acordo com a regra de ${5} "${6}"</value>
+  </data>
+  <data name="RES_calendarschedulerules.rest.resttooshort.rotext" xml:space="preserve">
+    <value>Descanso demasiado curto entre os dias ${1} (horário ${2})e ${3} (horário ${4}), segundo a regra do</value>
+  </data>
+  <data name="RES_calendarschedulerules.workonfestive.rotext" xml:space="preserve">
+    <value>O utilizador não pode trabalhar no dia ${1} porque é feriado, de acordo com a regra de</value>
+  </data>
+  <data name="RES_calendarschedulerules.workonfestive.rulename.rotext" xml:space="preserve">
+    <value>Pode trabalhar em feriados</value>
+  </data>
+  <data name="RES_calendarschedulerules.workonweekend.rotext" xml:space="preserve">
+    <value>O utilizador não pode trabalhar no dia ${1} porque é um dia não útil, de acordo com a regra de</value>
+  </data>
+  <data name="RES_calendarschedulerules.workonweekend.rulename.rotext" xml:space="preserve">
+    <value>Pode trabalhar em dias não úteis</value>
+  </data>
+  <data name="RES_resultenum.invaliddata.rotext" xml:space="preserve">
+    <value>Dados incorretos</value>
+  </data>
+  <data name="RES_resultenum.rowdaydata_assignmentdatainvalid.rotext" xml:space="preserve">
+    <value>Dados do posto incorretos</value>
+  </data>
+  <data name="RES_resultenum.rowdaydata_employeenotexist.rotext" xml:space="preserve">
+    <value>Um utilizador incluído na exportação não pertence ao filtro inicial</value>
+  </data>
+  <data name="RES_resultenum.rowdaydata_permissiondeniedoveremployee.rotext" xml:space="preserve">
+    <value>Não tem autorização para modificar os dados</value>
+  </data>
+  <data name="RES_resultenum.rowdaydata_planneddaynotexist.rotext" xml:space="preserve">
+    <value>Um dia incluído na exportação não pertence ao período inicial</value>
+  </data>
+  <data name="RES_calendar.header.monday.rotext" xml:space="preserve">
+    <value>Segunda-feira </value>
+  </data>
+  <data name="RES_calendar.header.tuesday.rotext" xml:space="preserve">
+    <value>Terça-feira</value>
+  </data>
+  <data name="RES_calendar.header.wednesday.rotext" xml:space="preserve">
+    <value>Quarta-feira</value>
+  </data>
+  <data name="RES_calendar.header.thursday.rotext" xml:space="preserve">
+    <value>Quinta-feira</value>
+  </data>
+  <data name="RES_calendar.header.friday.rotext" xml:space="preserve">
+    <value>Sexta-feira</value>
+  </data>
+  <data name="RES_calendar.header.saturday.rotext" xml:space="preserve">
+    <value>Sábado</value>
+  </data>
+  <data name="RES_calendar.header.sunday.rotext" xml:space="preserve">
+    <value>Domingo</value>
+  </data>
+  <data name="RES_calendar.header.nif.rotext" xml:space="preserve">
+    <value>NIF</value>
+  </data>
+  <data name="RES_calendar.header.employeekey.rotext" xml:space="preserve">
+    <value>Id de importação</value>
+  </data>
+  <data name="RES_calendar.header.employeename.rotext" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="RES_calendar.header.printeddate.rotext" xml:space="preserve">
+    <value>Impresso em</value>
+  </data>
+  <data name="RES_calendar.header.employeegroup.rotext" xml:space="preserve">
+    <value>Grupo</value>
+  </data>
+  <data name="RES_schedulerulesresultenum.cannotdeletescheduleruleinuse.rotext" xml:space="preserve">
+    <value>A regra de planeamento não pode ser eliminada, uma vez que está a ser utilizada numa regra de negócio Visualtime</value>
+  </data>
+  <data name="RES_calendarschedulerules.cannotdeletescheduleruleinuse.rotext" xml:space="preserve">
+    <value>Não é possível eliminar regras de planeamento que estejam a ser utilizadas em qualquer regra comercial do Visualtime. Anular alterações para recuperar definições de regras eliminadas: ${1}</value>
+  </data>
+</root>

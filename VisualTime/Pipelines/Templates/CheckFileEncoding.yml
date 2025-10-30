@@ -1,0 +1,51 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+stages:
+  - stage: FilesIntegrity
+    condition: succeeded()
+    jobs:
+    - job: CheckFileEncoding 
+      displayName: "Ensure sql scripts encoding as UTF8"
+      steps:
+      - powershell: | 
+          $tmpVar = ./checkFileEncoding.ps1
+          Write-Host ("Result:" + $tmpVar)
+          if($tmpVar -eq "KO"){
+            Write-Host "##vso[task.setvariable variable=agent.jobstatus;]canceled
+            Write-Host "##vso[task.complete result=Canceled;]DONE 
+          }
+        displayName: 'Validate scripts encoding'
+        workingDirectory: './Src/Utils/UtilScripts/Scripts/ProductionScripts/v2022/'
+        enabled: true
+    - job: CheckMinifiedFiles
+      displayName: "Ensure javascript and css files are minified"
+      steps:
+      - powershell: | 
+          $tmpVar = ./checkMinifiedFiles.ps1
+          Write-Host ("Result:" + $tmpVar)
+          if($tmpVar -eq "KO"){
+            Write-Host "##vso[task.setvariable variable=agent.jobstatus;]canceled
+            Write-Host "##vso[task.complete result=Canceled;]DONE 
+          }
+        displayName: 'Validate scripts minified'
+        workingDirectory: './Src/Utils/UtilScripts/Scripts/ProductionScripts/v2022/'
+        enabled: true
+    - job: CheckPendingTranslations
+      displayName: "Ensure translations pending are empty"
+      steps:
+      - powershell: | 
+          $tmpVar = ./checkPendingTranslations.ps1
+          Write-Host ("Result:" + $tmpVar)
+          if($tmpVar -eq "KO"){
+            Write-Host "##vso[task.setvariable variable=agent.jobstatus;]canceled
+            Write-Host "##vso[task.complete result=Canceled;]DONE 
+          }
+        displayName: 'Validate pending translations'
+        workingDirectory: './Src/Utils/UtilScripts/Scripts/ProductionScripts/v2022/'
+        enabled: true
+      
+      
+      

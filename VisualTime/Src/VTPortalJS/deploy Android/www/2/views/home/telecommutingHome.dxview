@@ -1,0 +1,25 @@
+<div data-options="dxView : { name: 'telecommutingHome', title: 'telecommutingHome' } ">
+
+    <div style="width:20%; float:left; justify-content:center; display:flex;">
+
+        <div id="remove-button" data-bind="dxButton: iconTC"></div>
+
+    </div>
+
+    <div style="float:left; width: 80%; justify-content:space-between; display:flex;">
+        <div class="employeeCenter" style="float:left;">
+
+            <div>
+
+                <div class="mainTitle"><span data-bind="text:telecommutingTitle"></span></div>
+            </div>
+            
+            <div class="productivTaskText"><span data-bind="text: lblTCToday"></span></div>
+            <div class="productivTaskText"><span data-bind="text: lblTCTomorrow"></span></div>
+			<div class="productivTaskText"><span data-bind="text: lblCurrentPercentage"></span></div>
+            <p></p>
+
+        </div>
+
+    </div><div style="clear:both;"></div>
+</div>

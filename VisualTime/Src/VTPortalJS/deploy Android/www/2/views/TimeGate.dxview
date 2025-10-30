@@ -1,0 +1,458 @@
+<div data-options="dxView : { name: 'TimeGate', title: 'TimeGate', layout: 'empty', disableCache: true } ">
+	<style>
+		/*TODO: SACARLO DE AQUÍ Y PONER NOMBRES DE CLASES MENOS GENÉRICOS*/
+		.container {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		background: linear-gradient(90deg, rgba(36, 113, 246, 1) 0%, rgba(86, 173, 235, 1) 100%);
+		}
+
+		div#timeGate > * {
+		position: relative;
+		}
+
+		#timeGatePhoto {
+		position: absolute !important;
+		}
+
+
+		.top-section {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding: 4rem;
+		}
+
+		.time > span {
+		text-transform: capitalize;
+		display: block;
+		line-height: normal;
+		color: white;
+		}
+
+		span#current-time {
+		font-size: 7rem;
+		line-height: 7rem;
+		}
+
+		span#current-date {
+		font-size: 1.9rem;
+		}
+
+		.bottom-section {
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		}
+
+		div#timeGate > .bottom-section {
+		position: absolute;
+		}
+
+		.waitingForServer {
+		display: none;
+		}
+
+		.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		}
+
+		.form-container, .nfc-container {
+		padding: 25px;
+		width: 120%;
+		border-radius: 12px;
+		background: #ffffff1a;
+		}
+
+
+
+		.form-group {
+		display: grid;
+		grid-template-columns: 40px 1fr;
+		align-items: center;
+		margin-bottom: 34px;
+		gap: 10px;
+		}
+
+		#form {
+		font-size: 1rem;
+		}
+
+		#form .dx-field {
+		padding: .42em .4em;
+		padding-bottom: 2rem;
+		}
+
+		#form label {
+		text-align: left;
+		color: white;
+		}
+
+		#form .dx-texteditor-container {
+		border-color: rgba(255, 255, 255, 0.8);
+		font-size: 1.5rem;
+		}
+
+		#form .dx-placeholder {
+		color: rgba(255, 255, 255, 0.8);
+		padding-left: 25px;
+		font-size: 1.5rem;
+		}
+
+		#form .dx-placeholder:before {
+		padding: 5px 10px 8px;
+		font-size: 1.5rem;
+		line-height: 16px;
+		}
+
+		#form .dx-texteditor.dx-invalid .dx-texteditor-container:after {
+		font-size: 15px !important;
+		}
+
+		#form .dx-state-focused.dx-texteditor .dx-texteditor-container:before {
+		background-color: white !important;
+		}
+
+		#form input {
+		color: white;
+		padding: 10px;
+		font-size: 1em;
+		width: 100%;
+		box-sizing: border-box;
+		text-align: center;
+		border-radius: 8px;
+		border: none;
+		}
+
+		#accessPwd input {
+		-webkit-text-security: disc !important;
+		}
+
+		#form .dx-field > i.dx-icon, #form .dx-field > svg {
+		color: white;
+		position: absolute;
+		top: 18px;
+		width: 20px;
+		font-size: 20px;
+		}
+
+		#form #submit-btn, #nfc-btn {
+		font-size: 1em;
+		cursor: pointer;
+		background-color: #0046FE;
+		color: #fff;
+		width: 100%;
+		border-radius: 8px !important;
+		display: block;
+		margin-top: 20px;
+		}
+
+		#form #submit-btn .dx-button-text, #nfc-btn .dx-button-text {
+		font-size: 1.2rem;
+		}
+
+		#form #nfc-btn {
+		font-size: 1em;
+		cursor: pointer;
+		background-color: #002C52;
+		color: #fff;
+		border: none;
+		border-radius: 2px;
+		width: 100%;
+		margin-top: 12px;
+		min-height: 42px;
+		align-content: center;
+		display: none;
+		}
+
+		#nfc-btn .dx-button-content {
+		height: 42px;
+		}
+
+		#form #submit-btn:hover, #nfc-btn:hover {
+		background-color: #0056b3;
+		}
+
+		#response {
+		padding: 2rem;
+		color: white;
+		width: 120%;
+		min-width: 300px;
+		border-radius: 12px;
+		height: 290px;
+		align-content: center;
+		font-size: 1.2rem;
+		text-align: center;
+		line-height: 2.5rem;
+		}
+
+		#response.inPunch {
+		background: #006900;
+		}
+
+		#response.outPunch {
+		background: #ac0808;
+		}
+
+		#response.coPunch {
+		background: #0056b3;
+		}
+
+		#response.error {
+		background: #808080;
+		text-align: center;
+		}
+
+		div#noDisponible {
+		color: white;
+		font-size: 4rem;
+		line-height: 8rem;
+		text-align: center;
+		width: 100% !important;
+		height: 100%;
+		}
+
+		#timeGate.noDisponible .bottom-section{
+		display: none !important;
+		}
+		#timeGate.noDisponible #noDisponible{
+		display: block !important;
+		}
+
+		#backButtonVT{
+		position: absolute;
+		top: 20px;
+		right: 40px;
+		}
+		div#backButtonVT img {
+		width: 35px;
+		height: auto;
+		}
+
+		#nfc-android {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		}
+		div#nfc-android img {
+		width: 35px;
+		height: auto;
+		}
+		.showAndroid {
+		display: block !important;
+		}
+
+		@media (max-width: 1024px) {
+		.container {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		}
+
+		.top-section {
+		width: 100%;
+		justify-content: center;
+		align-items: flex-start;
+		padding-bottom: 3rem;
+		margin-top: -4rem;
+		/*padding-top: 18rem;*/
+		}
+
+		.bottom-section {
+		width: 100%;
+		height: auto;
+		position: relative !important;
+		/*flex: 1;
+		align-items: flex-start;*/
+		}
+
+		div#noDisponible {
+		font-size: 3rem;
+		height: auto;
+		padding-bottom: 3rem;
+		}
+
+		.time > span {
+		text-align: center;
+		}
+
+		.form-container, .nfc-container {
+		width: 80%;
+		max-width: 400px;
+		}
+		}
+
+		@media only screen and (max-width: 425px) and (orientation: portrait) {
+		.nfc-container {
+		margin-top: 15px;
+		}
+		span#current-time {
+		font-size: 4rem;
+		line-height: 5rem;
+		}
+		span#current-date {
+		font-size: 1.4rem;
+		}
+		#form .dx-field {
+		padding: .2em .4em;
+		padding-bottom: 1rem;
+		}
+		#form #submit-btn .dx-button-text, #nfc-btn .dx-button-text {
+		font-size: 1rem;
+		}
+		#form input, #form .dx-texteditor-container, #form .dx-placeholder:before {
+		font-size: 1.2rem;
+		}
+		#form .dx-field > i.dx-icon, #form .dx-field > svg {
+		top: 14px;
+		width: 18px;
+		font-size: 18px;
+		}
+		#response {
+		font-size: 1rem;
+		}
+		div#noDisponible {
+		font-size: 2rem;
+		}
+		}
+
+		@media only screen and (max-width: 1024px) and (orientation: landscape) {
+		.container{
+		flex-direction: row;
+		}
+		.top-section {
+		padding-right: 0;
+		padding-left: 0;
+		padding-bottom:0;
+		}
+		.bottom-section {
+		margin-right: 4rem;
+		}
+		.bottom-section > .content {
+		align-items: flex-start;
+		}
+		.form-container, .nfc-container {
+		width: 100%;
+		max-width: 400px;
+		padding: 12px;
+		}
+		.nfc-container {
+		margin-top: 15px;
+		}
+		span#current-time {
+		font-size: 5rem;
+		line-height: 5rem;
+		}
+		span#current-date {
+		font-size: 1.4rem;
+		}
+		#form .dx-field {
+		padding: .2em .4em;
+		padding-bottom: 1rem;
+		}
+		#form #submit-btn .dx-button-text, #nfc-btn .dx-button-text {
+		font-size: 1rem;
+		}
+		#form input, #form .dx-texteditor-container, #form .dx-placeholder:before {
+		font-size: 1.2rem;
+		}
+		#form .dx-field > i.dx-icon, #form .dx-field > svg {
+		top: 14px;
+		width: 18px;
+		font-size: 18px;
+		}
+		#response {
+		width: 100%;
+		height: 220px;
+		font-size: 1rem;
+		}
+		div#noDisponible {
+		font-size: 2rem;
+		padding-bottom:0;
+		}
+
+		}
+
+
+		@media only screen and (max-width: 425px) {
+		span#current-time {
+		font-size: 5rem !important;
+		line-height: 4rem !important;
+		}
+		span#current-date {
+		font-size: 1.4rem !important;
+		}
+		.top-section {
+		width: 100%;
+		justify-content: center;
+		align-items: flex-start;
+		padding-bottom: 3rem;
+		margin-top: -8rem;
+		}
+
+		div#noDisponible {
+		font-size: 2rem;
+		}
+		#response {
+		width: 80%;
+		min-width: 240px;
+		height: 220px;
+		font-size: 1rem;
+		}
+
+		}
+	</style>
+	<!-- ko if: timegateNFCEnabled() == true -->
+	<div id="nfc-android" data-bind="dxButton: nfcAndroid, css: {'showAndroid' : isAndroid}" style="display: none;"></div>
+	<!-- /ko-->
+	<div class="container" id="timeGate" data-bind="css: {'noDisponible' : !conectado()}, attr: { style: customCssBackground }">
+		<div class="container" id="timeGatePhoto" data-bind="attr: { style: customPhotoBackground }"></div>
+			<div class="top-section">
+				<div class="time">
+					<span id="current-time" data-bind="text: lblServerTime"></span>
+					<span id="current-date" data-bind="text: lblServerDate"></span>
+				</div>
+			</div>
+
+			<div class="bottom-section" data-bind="css: {'waitingForServer' : status()==null}">
+				<div class="content">
+					<div class="form-container" id="form-container">
+						<form id="form" class="dx-fieldset">
+							<div class="dx-field">
+								<i class='dx-icon dx-icon-user'></i>
+								<!-- ko if: enableTextBox() -->
+								<div class="dx-field-value login" id="accessId" data-bind="dxTextBox: txtID()"></div>
+								<!-- /ko -->
+								<!-- ko if: !enableTextBox() -->
+								<div class="dx-field-value login" id="accessId" data-bind="dxNumberBox: txtID()"></div>
+								<!-- /ko-->
+							</div>
+							<div class="dx-field">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+									<path fill="#ffffff" d="M336 352c97.2 0 176-78.8 176-176S433.2 0 336 0S160 78.8 160 176c0 18.7 2.9 36.8 8.3 53.7L7 391c-4.5 4.5-7 10.6-7 17l0 80c0 13.3 10.7 24 24 24l80 0c13.3 0 24-10.7 24-24l0-40 40 0c13.3 0 24-10.7 24-24l0-40 40 0c6.4 0 12.5-2.5 17-7l33.3-33.3c16.9 5.4 35 8.3 53.7 8.3zM376 96a40 40 0 1 1 0 80 40 40 0 1 1 0-80z"/>
+								</svg>
+								<div class="dx-field-value pass" id="accessPwd" data-bind="dxNumberBox: txtPIN"></div>
+							</div>
+							<div id="submit-btn" data-bind="dxButton: btnSend"></div>
+						</form>
+					</div>
+					<div id="response" class="success" style="display: none;"></div>
+					<div class="nfc-container" id="nfc-container" style="margin-top: 24px;padding: 12px; display:none;">
+						<div id="nfc-btn" data-bind="dxButton: btnNFC" style="margin: 0;max-width: 406px;margin: auto;"></div>
+					</div>
+				</div>
+			</div>
+			<div id="noDisponible" style="display:none;">
+				<span  data-bind="text: lblNotAvailable"></span>
+			</div>
+			<!-- ko if: showBackButton() == true -->
+			<div id="backButtonVT" data-bind="dxButton: backButtonVT"></div>
+			<!-- /ko-->
+		</div>
+</div>

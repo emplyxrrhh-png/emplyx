@@ -1,0 +1,70 @@
+<div data-options="dxView : { name: 'accrualsHome', title: 'accrualsHome', disableCache: true } " class="dx-view" dx-data-template-id="70">
+
+
+    <div style="width:20%; float:left; justify-content:center; display:flex;">
+        <div id="remove-button" data-bind="dxButton: iconAccruals" class="dx-button dx-button-normal dx-widget dx-button-has-icon" role="button" aria-label="columnchooser" tabindex="0"><div class="dx-button-content"><i class="dx-icon dx-icon-columnchooser"></i></div></div>
+    </div>
+
+    <div style="float:left; width: 80%; justify-content:space-between; display:flex;">
+        <div>
+            <div class="employeeCenter" style="float:left;">
+                <div>
+
+                    <div class="mainTitle"><span data-bind="text:accrualsTitle">Mis saldos hasta ayer</span></div>
+                </div>
+                <div style="padding-top:8px; padding-bottom:8px;">
+
+                    <div data-bind="if: hasPermission() == true">
+                        <div data-bind="if: (scheduleDS() != null &amp;&amp; scheduleDS().length > 0)"></div>
+
+                        <div data-bind="if: (holidaysDS() != null &amp;&amp; holidaysDS().length > 0)">
+                            <div>
+                                <div class="mainTitleList"><span data-bind="text:holidaysTitleList">Vacaciones</span></div>
+                            </div>
+                            <div id="scrollview" style="clear:both" data-bind="dxScrollView: { }" class="dx-scrollable dx-scrollview dx-scrollable-customizable-scrollbars dx-scrollable-vertical dx-scrollable-simulated dx-visibility-change-handler"><div class="dx-scrollable-wrapper"><div class="dx-scrollable-container" tabindex="0" style="touch-action: pan-x;"><div class="dx-scrollable-content" style="left: 0px; top: 0px; transform: none;"><div class="dx-scrollview-top-pocket"><div class="dx-scrollview-pull-down" style="display: none;"><div class="dx-scrollview-pull-down-image"></div><div class="dx-scrollview-pull-down-indicator"><div class="dx-loadindicator dx-widget"><div class="dx-loadindicator-wrapper"><div class="dx-loadindicator-content"><div class="dx-loadindicator-icon"><div class="dx-loadindicator-segment dx-loadindicator-segment2"><div class="dx-loadindicator-segment-inner"></div></div><div class="dx-loadindicator-segment dx-loadindicator-segment1"><div class="dx-loadindicator-segment-inner"></div></div><div class="dx-loadindicator-segment dx-loadindicator-segment0"><div class="dx-loadindicator-segment-inner"></div></div></div></div></div></div></div><div class="dx-scrollview-pull-down-text"><div style="opacity: 1;">Desliza hacia abajo para actualizar...</div><div style="opacity: 0;">Suelta para actualizar...</div><div style="opacity: 0;">Actualizando...</div></div></div></div><div class="dx-scrollview-content">
+                                <div id="list" class="list-container" data-bind="if: holidaysDS().length > 0">
+                                    <div id="listHolidays" data-bind="dxList: listHolidays" style="font-size:12px !important" class="dx-scrollable dx-scrollview dx-scrollable-customizable-scrollbars dx-scrollable-vertical dx-scrollable-simulated dx-scrollable-disabled dx-visibility-change-handler dx-list dx-widget dx-collection" role="listbox" tabindex="0" aria-activedescendant="dx-fa991a7b-ec1c-e5d9-0866-0d8915751c8d"><div class="dx-scrollable-wrapper"><div class="dx-scrollable-container" style="touch-action: pan-x;"><div class="dx-scrollable-content" style="left: 0px; top: 0px; transform: none;"><div class="dx-scrollview-top-pocket"><div class="dx-scrollview-pull-down" style="display: none;"><div class="dx-scrollview-pull-down-image"></div><div class="dx-scrollview-pull-down-indicator"><div class="dx-loadindicator dx-widget"><div class="dx-loadindicator-wrapper"><div class="dx-loadindicator-content"><div class="dx-loadindicator-icon"><div class="dx-loadindicator-segment dx-loadindicator-segment2"><div class="dx-loadindicator-segment-inner"></div></div><div class="dx-loadindicator-segment dx-loadindicator-segment1"><div class="dx-loadindicator-segment-inner"></div></div><div class="dx-loadindicator-segment dx-loadindicator-segment0"><div class="dx-loadindicator-segment-inner"></div></div></div></div></div></div></div><div class="dx-scrollview-pull-down-text"><div style="opacity: 1;">Desliza hacia abajo para actualizar...</div><div style="opacity: 0;">Suelta para actualizar...</div><div style="opacity: 0;">Actualizando...</div></div></div></div><div class="dx-scrollview-content"><div class="dx-item dx-list-item" role="option"><div data-options="dxTemplate: {name: 'item'}" style="padding:0px !important" class="listHome dx-template-wrapper dx-item-content dx-list-item-content">
+                                            <div class="listMenuItem" style="height:auto !important">
+                                                <div class="listMenuItemContentAcc">
+                                                    <div data-bind="text: $data.Name" style="font-weight:bold">Vacaciones pendientes</div>
+
+                                                    <div data-bind="text: $data.Pending" style="padding-left: 10px;">Pendientes de procesar: 0</div>
+
+                                                    <div data-bind="text: $data.Lasting" style="padding-left: 10px;">Pendientes de disfrutar: 0</div>
+
+                                                    <div data-bind="text: $data.Available" style="padding-left: 10px;">Disponibles: 22</div>
+
+                                                    <div data-bind="text: $data.Done" style="padding-left: 10px;">Ya disfrutadas: 0</div>
+
+                                                    <div data-bind="text: $data.Prevision" style="padding-left: 10px;">Saldo final previsto: 22</div>
+                                                </div>
+                                            </div>
+                                        </div></div></div><div class="dx-scrollview-bottom-pocket"><div class="dx-scrollview-scrollbottom" style="display: none;"><div class="dx-scrollview-scrollbottom-indicator"><div class="dx-loadindicator dx-widget"><div class="dx-loadindicator-wrapper"><div class="dx-loadindicator-content"><div class="dx-loadindicator-icon"><div class="dx-loadindicator-segment dx-loadindicator-segment2"><div class="dx-loadindicator-segment-inner"></div></div><div class="dx-loadindicator-segment dx-loadindicator-segment1"><div class="dx-loadindicator-segment-inner"></div></div><div class="dx-loadindicator-segment dx-loadindicator-segment0"><div class="dx-loadindicator-segment-inner"></div></div></div></div></div></div></div><div class="dx-scrollview-scrollbottom-text">Cargando...</div></div></div></div><div class="dx-scrollable-scrollbar dx-widget dx-scrollbar-vertical" style="display: none;"><div class="dx-scrollable-scroll dx-state-invisible" style="height: 144px; transform: translate(0px, 0px);"><div class="dx-scrollable-scroll-content"></div></div></div></div></div><div class="dx-scrollview-loadpanel dx-overlay dx-widget dx-visibility-change-handler dx-state-disabled dx-state-invisible dx-loadpanel"><div class="dx-overlay-content dx-state-disabled" aria-disabled="true" aria-hidden="true" style="width: 222px; height: 90px;"></div></div></div>
+                                </div>
+
+                            </div><div class="dx-scrollview-bottom-pocket"><div class="dx-scrollview-scrollbottom" style="display: none;"><div class="dx-scrollview-scrollbottom-indicator"><div class="dx-loadindicator dx-widget"><div class="dx-loadindicator-wrapper"><div class="dx-loadindicator-content"><div class="dx-loadindicator-icon"><div class="dx-loadindicator-segment dx-loadindicator-segment2"><div class="dx-loadindicator-segment-inner"></div></div><div class="dx-loadindicator-segment dx-loadindicator-segment1"><div class="dx-loadindicator-segment-inner"></div></div><div class="dx-loadindicator-segment dx-loadindicator-segment0"><div class="dx-loadindicator-segment-inner"></div></div></div></div></div></div></div><div class="dx-scrollview-scrollbottom-text">Cargando...</div></div></div></div><div class="dx-scrollable-scrollbar dx-widget dx-scrollbar-vertical" style=""><div class="dx-scrollable-scroll dx-state-invisible" style="height: 15px; transform: translate(0px, 0px);"><div class="dx-scrollable-scroll-content"></div></div></div></div></div><div class="dx-scrollview-loadpanel dx-overlay dx-widget dx-visibility-change-handler dx-state-invisible dx-loadpanel"><div class="dx-overlay-content" aria-hidden="true" style="width: 222px; height: 90px;"></div></div></div>
+
+                        </div>
+
+                        <div data-bind="if: (scheduleDS() == null || holidaysDS() == null || (scheduleDS().length <= 0  &amp;&amp; holidaysDS().length <= 0))"></div>
+
+                    </div>
+
+
+                    <div data-bind="if: hasPermission() == false"></div>
+
+                </div>
+                <p></p>
+            </div>
+        </div>
+        <div style=" justify-content:flex-end; display:flex;">
+            <div id="spinright-button" data-bind="dxButton: btnGoAccruals" style="display: none;" class="dx-button dx-button-normal dx-widget dx-button-has-icon" role="button" aria-label="spinright" tabindex="0"><div class="dx-button-content"><i class="dx-icon dx-icon-spinright"></i></div></div>
+        </div>
+
+    </div>
+
+
+    <div style="clear:both;"></div>
+
+
+</div>

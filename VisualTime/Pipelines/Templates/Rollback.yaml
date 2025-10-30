@@ -1,0 +1,58 @@
+parameters:
+  - name: azureService
+    type: string
+    default: ""
+  - name: resourceGroup
+    type: string
+    default: ''
+  - name: environment
+    type: string
+    default: ''
+  - name: azureEnv
+    type: string
+    default: ''
+  - name: artifacts
+    type: object
+    default: ""
+      
+
+
+stages:
+  - stage: Rollback
+    displayName: "Rollback env - ${{ parameters.azureEnv }}"
+    condition: succeeded()
+    jobs:
+    - ${{ each vtartifact in parameters.artifacts }}:
+      - ${{ if eq(vtartifact.enabled, true) }} :
+        - deployment: Rollback_${{ parameters.azureEnv }}
+          pool:
+            vmImage: windows-latest
+          environment: cegid_vti_app_${{ parameters.environment }}
+          strategy:
+            runOnce:
+              deploy:
+                steps:
+                - download: none
+                - checkout: none
+                - ${{ if eq(parameters.azureEnv, 'canary') }} :
+                  - task: AzureAppServiceManage@0
+                    displayName: 'Rollback - ${{ vtartifact.name }}'
+                    inputs:
+                      azureSubscription: ${{ parameters.azureService }}
+                      Action: 'Swap Slots'
+                      WebAppName: '${{ vtartifact.destination }}'
+                      ResourceGroupName: '${{ parameters.resourceGroup }}'
+                      SourceSlot: 'precanary'
+                      SwapWithProduction: false
+                      TargetSlot: 'canary'
+
+                - ${{ if eq(parameters.azureEnv, 'production') }} :
+                  - task: AzureAppServiceManage@0
+                    displayName: 'Rollback - ${{ vtartifact.name }}'
+                    inputs:
+                      azureSubscription: ${{ parameters.azureService }}
+                      Action: 'Swap Slots'
+                      WebAppName: '${{ vtartifact.destination }}'
+                      ResourceGroupName: '${{ parameters.resourceGroup }}'
+                      SourceSlot: 'preprod'
+

@@ -1,0 +1,97 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+#name: Cegid VTI-$(VTI.Version)-$(Date:yyyyMMdd)$(Rev:.r)
+name: Cegid VTI-$(Date:yyyyMMdd)$(Rev:.r)
+
+trigger:
+- none
+
+pool:
+  name: Private VS2022
+
+variables:
+  - name: solution
+    value: './Src/VisualTime Full MT.sln'
+  - name: testProjects
+    value: './Tests/**/*.csproj'
+  - name: buildConfiguration
+    value: 'Multitennant'
+  - name: attachArtifactsToPipeline
+    value: true
+  - name: forceGenerateLang
+    value: false 
+
+
+stages:
+
+  #### Testing
+  # - template: Templates/Testing.yml
+
+  #### Build
+  - template: Templates/Build.yml
+    parameters:
+      appservices: 
+        - project: './Src/VTLive40/VTLive40.vbproj'
+          folder: 'VTLive'
+          enabled: false 
+        - project: './Src/VTLiveApi/VTLiveApi.vbproj'
+          folder: 'VTLiveApi'
+          enabled: false 
+        - project: './Src/VTPortalWeb/VTPortalWeb.vbproj'
+          folder: 'VTPortal'
+          enabled: false
+        - project: './Src/VTTerminalsPushServer/TerminalsPushServer.vbproj'
+          folder: 'VTTerminals'
+          enabled: false
+        - project: './Src/LiveVisits/Visits.vbproj'
+          folder: 'VTVisits'
+          enabled: false 
+      functions: 
+        - project: './Src/Functions/roAnalyticsFunctions/roAnalyticsFunctions.csproj'
+          folder: 'fnAnalyticsFunction'
+          enabled: false 
+        - project: './Src/Functions/roBackgroundFunctions/roBackgroundFunctions.csproj'
+          folder: 'fnBackgroundFunction'
+          enabled: false 
+        - project: './Src/Functions/roBroadcasterFunction/roBroadcasterFunction.csproj'
+          folder: 'fnBroadcasterFunction'
+          enabled: false
+        - project: './Src/Functions/roDatalinkFunctions/roDatalinkFunctions.csproj'
+          folder: 'fnDatalinkFunction'
+          enabled: false
+        - project: './Src/Functions/roMailFunction/roMailFunction.csproj'
+          folder: 'fnMailFunction'
+          enabled: false
+        - project: './Src/Functions/roReportFunctions/roReportFunctions.csproj'
+          folder: 'fnReportFunction'
+          enabled: false
+        - project: './Src/Functions/roScheduleFunctions/roScheduleFunctions.csproj'
+          folder: 'fnScheduleFunction'
+          enabled: false
+        - project: './Src/Functions/roNotificationsFunction/roNotificationsFunction.csproj'
+          folder: 'fnNotificationsFunction'
+          enabled: false 
+        - project: './Src/Functions/roPushNotificationsFunction/roPushNotificationsFunction.csproj'
+          folder: 'fnPushNotificationsFunction'
+          enabled: false
+        - project: './Src/Functions/roEngineFunctions/roEngineFunctions.csproj'
+          folder: 'fnEngineFunction'
+          enabled: false
+        - project: './Src/Functions/roPunchConnectorFunctions/roPunchConnectorFunctions.csproj'
+          folder: 'fnPunchConnectorFunction'
+          enabled: false 
+        - project: './Src/Functions/roSCFunction/roSCFunction.csproj'
+          folder: 'fnpnlinkfunction'
+          enabled: false
+        - project: './Src/Functions/roFTPStorageSynchronizationFunction/roFTPStorageSynchronizationFunction.csproj'
+          folder: 'fnFTPStorageSyncFunction'
+          enabled: false
+      generateLang: false
+      uploadArtifact: false
+      copyTemplates: false
+      copyUpdates: false
+      copyReports: false
+      sonarcloudAnalysis: true 

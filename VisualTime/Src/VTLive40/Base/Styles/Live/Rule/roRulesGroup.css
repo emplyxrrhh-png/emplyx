@@ -1,0 +1,33 @@
+﻿@font-face {
+    font-family: "Robotics";
+    src: local("Poppins"),local("Poppins-Regular"),url(../../fonts/Poppins-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Robotics";
+    src: url(../../fonts/Poppins-Bold.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    font-family: "Robotics";
+    font-size: 12px;
+}
+
+.groupRuleSearchBar {
+    padding: 5px;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#rulesGroupDashboard .dx-datagrid-header-panel {
+    display: none !important;
+}
+
+.groupRuleDashboard {
+    height: 70vh;
+}

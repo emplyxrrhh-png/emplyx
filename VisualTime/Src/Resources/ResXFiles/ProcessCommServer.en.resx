@@ -1,0 +1,705 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_collector.process.addbadline.task.message.rotext" xml:space="preserve">
+    <value>Transfers of cards not assigned to any user have been found.</value>
+  </data>
+  <data name="RES_commserver.frmcommserver.confirmclose.rotext" xml:space="preserve">
+    <value>You are about to shut down the TCP/IP communications server CommServe</value>
+  </data>
+  <data name="RES_commserver.frmcommserver.description.rotext" xml:space="preserve">
+    <value>Stop the CommServe TCP/IP communications server, all terminals will be disconnected from the Visualtime server.</value>
+  </data>
+  <data name="RES_commserver.frmcommserver.dontclose.description.rotext" xml:space="preserve">
+    <value>By leaving CommServe running, communications between the terminals and the Visualtime Server will not be interrupted.</value>
+  </data>
+  <data name="RES_commserver.frmcommserver.mnusystray.tip.rotext" xml:space="preserve">
+    <value>CommServe Console</value>
+  </data>
+  <data name="RES_commserver.process.punchdetected.task.message.rotext" xml:space="preserve">
+    <value>Signing alert. user:</value>
+  </data>
+  <data name="RES_frmcommserver.btnrefresterms.caption.rotext" xml:space="preserve">
+    <value>&amp;Clear error flag</value>
+  </data>
+  <data name="RES_frmcommserver.caption.rotext" xml:space="preserve">
+    <value>CommServe - RT Terminal Console - Visualtime</value>
+  </data>
+  <data name="RES_frmcommserver.cmdok.caption.rotext" xml:space="preserve">
+    <value>&amp;Accept</value>
+  </data>
+  <data name="RES_frmcommserver.cmdrefreshlog.caption.rotext" xml:space="preserve">
+    <value>Update record</value>
+  </data>
+  <data name="RES_frmcommserver.command1.caption.rotext" xml:space="preserve">
+    <value>GETFTP</value>
+  </data>
+  <data name="RES_frmcommserver.command2.caption.rotext" xml:space="preserve">
+    <value>SENDFTP</value>
+  </data>
+  <data name="RES_frmcommserver.command3.caption.rotext" xml:space="preserve">
+    <value>Add terminal</value>
+  </data>
+  <data name="RES_frmcommserver.lbllogheader.caption.rotext" xml:space="preserve">
+    <value>This is the server event log. This information is only useful for Visualtime support staff.</value>
+  </data>
+  <data name="RES_frmcommserver.lblstatusdetails.caption.rotext" xml:space="preserve">
+    <value>Terminal details</value>
+  </data>
+  <data name="RES_frmcommserver.lstatusserver.caption.rotext" xml:space="preserve">
+    <value>Waiting for connection to Visualtime server...</value>
+  </data>
+  <data name="RES_frmcommserver.mnuseparator.caption.rotext" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="RES_frmcommserver.mnusystray.caption.rotext" xml:space="preserve">
+    <value>SysTrayMenu</value>
+  </data>
+  <data name="RES_frmcommserver.mnusystrayclose.caption.rotext" xml:space="preserve">
+    <value>&amp;Exit (leave server running)</value>
+  </data>
+  <data name="RES_frmcommserver.mnusystrayopen.caption.rotext" xml:space="preserve">
+    <value>Open &amp;console</value>
+  </data>
+  <data name="RES_frmcommserver.mnusystraystopserver.caption.rotext" xml:space="preserve">
+    <value>&amp;Stop server and exit</value>
+  </data>
+  <data name="RES_frmcommserver.txtstatus.text.rotext" xml:space="preserve">
+    <value>Waiting for connection to Visualtime Server...</value>
+  </data>
+  <data name="RES_frmconsole.msg.noserverfound.message.rotext" xml:space="preserve">
+    <value>No TCP/IP CommServe Communications Server Found: Verify that the CommServe is running and that there are no network problems.</value>
+  </data>
+  <data name="RES_frmconsole.msg.noserverfound.title.rotext" xml:space="preserve">
+    <value>Server not found</value>
+  </data>
+  <data name="RES_frmconsole.msg.shutdownerror.message.rotext" xml:space="preserve">
+    <value>There is a communication error with the server. Please try closing this console and opening another console to access the option to close the server.</value>
+  </data>
+  <data name="RES_frmconsole.msg.shutdownerror.title.rotext" xml:space="preserve">
+    <value>Communication error with the server</value>
+  </data>
+  <data name="RES_frmconsole.tbmain.tabs.2.caption.rotext" xml:space="preserve">
+    <value>Event Viewer</value>
+  </data>
+  <data name="RES_frmqueryservicedata.caption.rotext" xml:space="preserve">
+    <value>Installing Visualtime CommServe</value>
+  </data>
+  <data name="RES_frmqueryservicedata.cmdfinish.caption.rotext" xml:space="preserve">
+    <value>&amp;Finish</value>
+  </data>
+  <data name="RES_frmqueryservicedata.cmdnext.caption.rotext" xml:space="preserve">
+    <value>&amp;next &gt;</value>
+  </data>
+  <data name="RES_frmqueryservicedata.cmdprevious.caption.rotext" xml:space="preserve">
+    <value>&lt; &amp;Previous</value>
+  </data>
+  <data name="RES_frmqueryservicedata.framain.0.caption.rotext" xml:space="preserve">
+    <value>Server startup configuration:</value>
+  </data>
+  <data name="RES_frmqueryservicedata.framain.1.caption.rotext" xml:space="preserve">
+    <value>Windows Service Configuration:</value>
+  </data>
+  <data name="RES_frmqueryservicedata.lblaccount.caption.rotext" xml:space="preserve">
+    <value>Windows Account:</value>
+  </data>
+  <data name="RES_frmqueryservicedata.lblaccountdata.caption.rotext" xml:space="preserve">
+    <value>Specify the Windows account to use to start the Visualtime CommServe.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.lblaccountdatadesc.caption.rotext" xml:space="preserve">
+    <value>Please note that the account you specify must have sufficient privileges to access all the resources Visualtime needs. It is recommended that you create a Visualtime administrator user or use the Administrator for your computer or directory.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.lblaccounthelp.caption.rotext" xml:space="preserve">
+    <value>(Please enter the full name, including the domain or directory)</value>
+  </data>
+  <data name="RES_frmqueryservicedata.lblruntype.caption.rotext" xml:space="preserve">
+    <value>The Visualtime CommServe can run in two ways on this computer. The following Visualtime server configuration has been detected, please confirm the available option:</value>
+  </data>
+  <data name="RES_frmqueryservicedata.msg.accountdenied.title.rotext" xml:space="preserve">
+    <value>Account error</value>
+  </data>
+  <data name="RES_frmqueryservicedata.msg.invalidaccount.caption.rotext" xml:space="preserve">
+    <value>You must enter a Windows account and password.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.msg.invalidaccount.title.rotext" xml:space="preserve">
+    <value>Incorrect account or password</value>
+  </data>
+  <data name="RES_frmqueryservicedata.msg.invalidpassword.caption.rotext" xml:space="preserve">
+    <value>The passwords entered do not match.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.optruntype.0.buttoncaption.rotext" xml:space="preserve">
+    <value>Install as standard program</value>
+  </data>
+  <data name="RES_frmqueryservicedata.optruntype.0.labelcaption.rotext" xml:space="preserve">
+    <value>The Visualtime CommServe server will start every time you log into Windows or when you run the program from its icon. Recommended if Visualtime CommServe only runs from this computer and you want to run it only a few hours a day.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.optruntype.1.buttoncaption.rotext" xml:space="preserve">
+    <value>Install as Windows Service (Advanced)</value>
+  </data>
+  <data name="RES_frmqueryservicedata.optruntype.1.labelcaption.rotext" xml:space="preserve">
+    <value>The Visualtime CommServe will be running as long as the computer is on, even if you do not log into Windows. You do not need to log in or load any programs manually. Recommended if this computer is a Visualtime server or you want Visualtime CommServe to always be running.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.setdcomwarning.message.rotext" xml:space="preserve">
+    <value>Please note that if you install the Visualtime CommServe as a Windows service, you must configure DCOM permissions manually.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.setdcomwarning.title.rotext" xml:space="preserve">
+    <value>Important notice</value>
+  </data>
+  <data name="RES_frmqueryservicedata.txtaccount.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.txtaccount.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.txtpassword.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.txtpassword.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.txtretypepassword.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.txtretypepassword.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_query.shifts.day.1.rotext" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="RES_query.shifts.day.2.rotext" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+  <data name="RES_query.shifts.day.3.rotext" xml:space="preserve">
+    <value>Wednesday</value>
+  </data>
+  <data name="RES_query.shifts.day.4.rotext" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+  <data name="RES_query.shifts.day.5.rotext" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="RES_query.shifts.day.6.rotext" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="RES_query.shifts.day.7.rotext" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="RES_server.close.question.confirmclose.answer.close.caption.rotext" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="RES_server.close.question.confirmclose.answer.close.description.rotext" xml:space="preserve">
+    <value>Stop the server. Current CommServe Console clients will be disconnected.</value>
+  </data>
+  <data name="RES_server.close.question.confirmclose.answer.dontclose.caption.rotext" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="RES_server.close.question.confirmclose.answer.dontclose.description.rotext" xml:space="preserve">
+    <value>Leave the server running (the server will automatically shut down when you shut down the computer).</value>
+  </data>
+  <data name="RES_server.close.question.confirmclose.caption.rotext" xml:space="preserve">
+    <value>You are about to shut down the Visualtime CommServe.</value>
+  </data>
+  <data name="RES_server.servershutdown.title.rotext" xml:space="preserve">
+    <value>Shutting down VT CommServe server</value>
+  </data>
+  <data name="RES_server.servershutdownstep.2.description.rotext" xml:space="preserve">
+    <value>Notifying customers of closure...</value>
+  </data>
+  <data name="RES_server.servershutdownstep.3.description.rotext" xml:space="preserve">
+    <value>Stopping scheduler...</value>
+  </data>
+  <data name="RES_server.servershutdownstep.4.description.rotext" xml:space="preserve">
+    <value>Closing active sessions...</value>
+  </data>
+  <data name="RES_server.servershutdownstep.5.description.rotext" xml:space="preserve">
+    <value>Stopping active processes...</value>
+  </data>
+  <data name="RES_server.servershutdownstep.6.description.rotext" xml:space="preserve">
+    <value>Deleting references...</value>
+  </data>
+  <data name="RES_server.servershutdownstep.7.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_terminal.modalmsg.accruals.rotext" xml:space="preserve">
+    <value>Balances</value>
+  </data>
+  <data name="RES_terminal.modalmsg.accrualsby.rotext" xml:space="preserve">
+    <value>Balances for</value>
+  </data>
+  <data name="RES_terminal.modalmsg.accsynchends.rotext" xml:space="preserve">
+    <value>$L$2Synchronization completed.$1$L$L ${1} access elements$L and ${2} sirens programmed.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.accsyncherr.rotext" xml:space="preserve">
+    <value>$L$2Synchronization completed.$1$L$LATTENTION: This version of the terminal does not$Lsupport access, only sirens.$LPlease update the version when you can.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.adddefaults.rotext" xml:space="preserve">
+    <value>$2$L$3 ~W ~D ~H:~M$1$L----------------------------------------$L$2 Please log in to operate$1$L$L (Connected to the server)</value>
+  </data>
+  <data name="RES_terminal.modalmsg.adddefaultssaldos.rotext" xml:space="preserve">
+    <value>$2$L$3 ~W ~D ~H:~M$1$L----------------------------------------$L$2 Please log in to operate$1$L (Connected to the server)</value>
+  </data>
+  <data name="RES_terminal.modalmsg.alertmultitask.rotext" xml:space="preserve">
+    <value>$1$L$LYou have started multiple jobs.$LAt the end you will be asked for the details $Lof each of them.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.assignemployee.rotext" xml:space="preserve">
+    <value>Assign user to:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.attendance.rotext" xml:space="preserve">
+    <value>Present.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.back.rotext" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="RES_terminal.modalmsg.beginjob.rotext" xml:space="preserve">
+    <value>Start Another</value>
+  </data>
+  <data name="RES_terminal.modalmsg.beginjobin.rotext" xml:space="preserve">
+    <value>Start of work in:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.beginwork.rotext" xml:space="preserve">
+    <value>$L$2 -- Start of Work --</value>
+  </data>
+  <data name="RES_terminal.modalmsg.cancel.rotext" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="RES_terminal.modalmsg.cancelledoperation.rotext" xml:space="preserve">
+    <value>$1$L$L$L$2Operation cancelled.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.card.rotext" xml:space="preserve">
+    <value>$2$L$3 ~W ~D ~H:~M$1$L---------------------------------------$L$2 Identify yourself</value>
+  </data>
+  <data name="RES_terminal.modalmsg.cardlost.rotext" xml:space="preserve">
+    <value>$2$L$2Incorrect check-in information!$1$L----------------------------------------$L$2Please identify yourself again$L$1If the error persists, consult the person in charge.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.change.rotext" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="RES_terminal.modalmsg.changepunch.rotext" xml:space="preserve">
+    <value>Signing change</value>
+  </data>
+  <data name="RES_terminal.modalmsg.closejob.rotext" xml:space="preserve">
+    <value>Close phase</value>
+  </data>
+  <data name="RES_terminal.modalmsg.code.rotext" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="RES_terminal.modalmsg.connectionestablished.rotext" xml:space="preserve">
+    <value>RT connection established</value>
+  </data>
+  <data name="RES_terminal.modalmsg.connectto.rotext" xml:space="preserve">
+    <value>Connected to</value>
+  </data>
+  <data name="RES_terminal.modalmsg.consult.rotext" xml:space="preserve">
+    <value>Consul.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.continuelast.rotext" xml:space="preserve">
+    <value>Last</value>
+  </data>
+  <data name="RES_terminal.modalmsg.deletedclockin.rotext" xml:space="preserve">
+    <value>$1$L$L$L$2Deleted last entry.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.deletedclockout.rotext" xml:space="preserve">
+    <value>$1$L$L$L$2Last exit removed.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.differenttasks.rotext" xml:space="preserve">
+    <value>Working in different phases</value>
+  </data>
+  <data name="RES_terminal.modalmsg.door.rotext" xml:space="preserve">
+    <value>Door</value>
+  </data>
+  <data name="RES_terminal.modalmsg.downloadingpunches.rotext" xml:space="preserve">
+    <value>Downloading data: Please wait...</value>
+  </data>
+  <data name="RES_terminal.modalmsg.duplicatedjob.rotext" xml:space="preserve">
+    <value>$2$L$3Incorrect:$1$L----------------------------------------$L$2The phase has already been entered$L$1Select another.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.elapsedprevtime.rotext" xml:space="preserve">
+    <value>Previous time invested</value>
+  </data>
+  <data name="RES_terminal.modalmsg.endwork.rotext" xml:space="preserve">
+    <value>Has finished his work</value>
+  </data>
+  <data name="RES_terminal.modalmsg.ent.rotext" xml:space="preserve">
+    <value>ENT.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.enteragain.rotext" xml:space="preserve">
+    <value>I enter again</value>
+  </data>
+  <data name="RES_terminal.modalmsg.enterpunchtype.rotext" xml:space="preserve">
+    <value>Please indicate the type of signing</value>
+  </data>
+  <data name="RES_terminal.modalmsg.entersince.rotext" xml:space="preserve">
+    <value>I entered ${1} ago</value>
+  </data>
+  <data name="RES_terminal.modalmsg.entrie.rotext" xml:space="preserve">
+    <value>Entrance</value>
+  </data>
+  <data name="RES_terminal.modalmsg.errorloadingemployee.rotext" xml:space="preserve">
+    <value>Error loading user data</value>
+  </data>
+  <data name="RES_terminal.modalmsg.exit.rotext" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="RES_terminal.modalmsg.exitfor.rotext" xml:space="preserve">
+    <value>Left ${1} ago</value>
+  </data>
+  <data name="RES_terminal.modalmsg.exitnow.rotext" xml:space="preserve">
+    <value>I'm leaving now</value>
+  </data>
+  <data name="RES_terminal.modalmsg.exitto.rotext" xml:space="preserve">
+    <value>It comes out for ${1}.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.finalize.rotext" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="RES_terminal.modalmsg.finishedjob.rotext" xml:space="preserve">
+    <value>$2$L$3Incorrect:$1$L---------------------------------------$L$2Phase is closed$L$1Consult the manager for more details.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.finishedtask.rotext" xml:space="preserve">
+    <value>$2$L$3Incorrect:$1$L----------------------------------------$L$2The task is closed$L$1Consult the person in charge for more details.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.firstenter.rotext" xml:space="preserve">
+    <value>First entry of the day</value>
+  </data>
+  <data name="RES_terminal.modalmsg.freemem.rotext" xml:space="preserve">
+    <value>Free Mem.:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.gofrom.rotext" xml:space="preserve">
+    <value>Comes from ${1}.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.granted.rotext" xml:space="preserve">
+    <value>Granted</value>
+  </data>
+  <data name="RES_terminal.modalmsg.incidence.rotext" xml:space="preserve">
+    <value>Inc.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.incidenceabrev.rotext" xml:space="preserve">
+    <value>Inc.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.incidencein.rotext" xml:space="preserve">
+    <value>Incidence in</value>
+  </data>
+  <data name="RES_terminal.modalmsg.incidencestarted.rotext" xml:space="preserve">
+    <value>Incident started:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.incidencetime.rotext" xml:space="preserve">
+    <value>Time in incidence:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.inoutmsgkey.rotext" xml:space="preserve">
+    <value>$1$L$L (Press a key)</value>
+  </data>
+  <data name="RES_terminal.modalmsg.internalerror.rotext" xml:space="preserve">
+    <value>$2$L$3Internal error!$1$L----------------------------------------$L$2Error code:${2}-${1}$L$1Please report this error to your dealer.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.intervalyield.rotext" xml:space="preserve">
+    <value>Yield This Interval</value>
+  </data>
+  <data name="RES_terminal.modalmsg.invalidbiometricdata.rotext" xml:space="preserve">
+    <value>$2$L$3Not authorized!$1$L----------------------------------------$L$2Non-existent fingerprint.$L$1Consult the person in charge for more details.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.invalidcard.rotext" xml:space="preserve">
+    <value>$2$L$3Not recognized!$1$L----------------------------------------$L$2Invalid ID$L$1Please consult the person in charge for more details. -</value>
+  </data>
+  <data name="RES_terminal.modalmsg.invalidfirmware.rotext" xml:space="preserve">
+    <value>$2$L$3Version Error!$1$L---------------------------------------$1Terminal firmware not supported$Lwith the current version of Visualtime:$L Terminal Version: ${2}$L Compatible: ${3} to ${4} -</value>
+  </data>
+  <data name="RES_terminal.modalmsg.invalidjobincidence.rotext" xml:space="preserve">
+    <value>$2$L$3Incorrect:$1$L----------------------------------------$L$2The code indicated does not exist$L$1Check the code entered.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.lastaccuyield.rotext" xml:space="preserve">
+    <value>Previous cumulative yield</value>
+  </data>
+  <data name="RES_terminal.modalmsg.leftjobopen.rotext" xml:space="preserve">
+    <value>Do not close</value>
+  </data>
+  <data name="RES_terminal.modalmsg.machines.rotext" xml:space="preserve">
+    <value>Machine.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.machinescontrol.rotext" xml:space="preserve">
+    <value>- Machine control -</value>
+  </data>
+  <data name="RES_terminal.modalmsg.misslastenter.rotext" xml:space="preserve">
+    <value>I forgot the last entry</value>
+  </data>
+  <data name="RES_terminal.modalmsg.misslastexit.rotext" xml:space="preserve">
+    <value>forget the last exit</value>
+  </data>
+  <data name="RES_terminal.modalmsg.movabrev.rotext" xml:space="preserve">
+    <value>Mov.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.multitask.rotext" xml:space="preserve">
+    <value>$L$2 -- Multiple Jobs --</value>
+  </data>
+  <data name="RES_terminal.modalmsg.multitaskabrev.rotext" xml:space="preserve">
+    <value>Multiple</value>
+  </data>
+  <data name="RES_terminal.modalmsg.newteamname.rotext" xml:space="preserve">
+    <value>New Team:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.nextshifts.rotext" xml:space="preserve">
+    <value>Upcoming schedules</value>
+  </data>
+  <data name="RES_terminal.modalmsg.noaccrualavailable.rotext" xml:space="preserve">
+    <value>There are no balances available</value>
+  </data>
+  <data name="RES_terminal.modalmsg.nothing.rotext" xml:space="preserve">
+    <value>Do nothing</value>
+  </data>
+  <data name="RES_terminal.modalmsg.notsavenewassign.rotext" xml:space="preserve">
+    <value>$2$L$3Internal error!$1$L----------------------------------------$L$1Could not store assignment!$LPlease report this error to your dealer.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.ok.rotext" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="RES_terminal.modalmsg.onlyjobemployee.rotext" xml:space="preserve">
+    <value>$L$2Production users only$L$1Please contact the manager for more details.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.openeddoor.rotext" xml:space="preserve">
+    <value>Open door</value>
+  </data>
+  <data name="RES_terminal.modalmsg.passemployeecard.rotext" xml:space="preserve">
+    <value>$L$L$L$2 Swipe the user's card</value>
+  </data>
+  <data name="RES_terminal.modalmsg.pendingjob.rotext" xml:space="preserve">
+    <value>Please indicate if there is any pending work</value>
+  </data>
+  <data name="RES_terminal.modalmsg.piecesleft.rotext" xml:space="preserve">
+    <value>Missing</value>
+  </data>
+  <data name="RES_terminal.modalmsg.previousteamname.rotext" xml:space="preserve">
+    <value>Previous Team:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.punchfewminutes.rotext" xml:space="preserve">
+    <value>Already signed in a moment ago:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.punchofflinedownload.rotext" xml:space="preserve">
+    <value>Transfers downloaded.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.putinc.rotext" xml:space="preserve">
+    <value>Please indicate the incident.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.queryerror.rotext" xml:space="preserve">
+    <value>$2$L$3Error in the query!$1$L-.$L$1Consult the manager for more details.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.replacedclockout.rotext" xml:space="preserve">
+    <value>$1$L$L$L$2Replaced last exit.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.resourceinvalid.rotext" xml:space="preserve">
+    <value>$L$2No permissions on the phase!$L$1Consult the person in charge for more details.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.sal.rotext" xml:space="preserve">
+    <value>SALT.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.saldoscard.rotext" xml:space="preserve">
+    <value>&amp;quot;$1$L$L$2Please swipe the card to inquire:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.sameteamname.rotext" xml:space="preserve">
+    <value>$1$L$L is currently already assigned to the team.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.save.rotext" xml:space="preserve">
+    <value>$2$L$3 ~W ~D ~H:~M$1$L----------------------------------------$L$2 stored signing</value>
+  </data>
+  <data name="RES_terminal.modalmsg.savejobpuncherror.rotext" xml:space="preserve">
+    <value>$2$L$3Internal error!$1$L----------------------------------------$L$1The punch could not be stored!$LPlease report this error to your dealer.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.saveofflinepuncherror.rotext" xml:space="preserve">
+    <value>$2$L$3Internal error!$1$L----------------------------------------$L$1The punch could not be stored!$LPlease report this error to your dealer.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.savepunch.rotext" xml:space="preserve">
+    <value>$1$L$L --------------------------------------$L$L$2      stored clock in$1$L --------------------------------------</value>
+  </data>
+  <data name="RES_terminal.modalmsg.savepuncherror.rotext" xml:space="preserve">
+    <value>$2$L$3Internal error!$1$L----------------------------------------$L$1The punch could not be stored!$LPlease report this error to your dealer.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.selectbarcode.rotext" xml:space="preserve">
+    <value>$L$L$2Select barcode.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.selectedmachine.rotext" xml:space="preserve">
+    <value>You have selected the machine</value>
+  </data>
+  <data name="RES_terminal.modalmsg.selectmachine.rotext" xml:space="preserve">
+    <value>$L$2 -- Select machine --</value>
+  </data>
+  <data name="RES_terminal.modalmsg.selectonemachine.rotext" xml:space="preserve">
+    <value>Machine code:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.selectquery.rotext" xml:space="preserve">
+    <value>Select desired query:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.shifts.rotext" xml:space="preserve">
+    <value>Schedules</value>
+  </data>
+  <data name="RES_terminal.modalmsg.synchends.rotext" xml:space="preserve">
+    <value>Synchronization completed.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.synchprocess.rotext" xml:space="preserve">
+    <value>Synchronizing with server:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.tasks.rotext" xml:space="preserve">
+    <value>Task</value>
+  </data>
+  <data name="RES_terminal.modalmsg.time.rotext" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="RES_terminal.modalmsg.tochange.rotext" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="RES_terminal.modalmsg.unknownstate.rotext" xml:space="preserve">
+    <value>$2$L$3Internal error!$1$L----------------------------------------$L$1Error:Unexpected state (${2}-${1})$LPlease report this error to your dealer.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.updatingcardbio.rotext" xml:space="preserve">
+    <value>Updating cards(${1}): Please wait...</value>
+  </data>
+  <data name="RES_terminal.modalmsg.updatingcodes.rotext" xml:space="preserve">
+    <value>Updating codes(${1}): Please wait…</value>
+  </data>
+  <data name="RES_terminal.modalmsg.updatingshifts.rotext" xml:space="preserve">
+    <value>Updating schedules(${1}): Please wait...</value>
+  </data>
+  <data name="RES_terminal.modalmsg.updatingsirens.rotext" xml:space="preserve">
+    <value>Updating sirens(${1}): Please wait...</value>
+  </data>
+  <data name="RES_terminal.modalmsg.voidteamname.rotext" xml:space="preserve">
+    <value>Without team</value>
+  </data>
+  <data name="RES_terminal.modalmsg.whatdoyouwanttodo.rotext" xml:space="preserve">
+    <value>What do you want to do?</value>
+  </data>
+  <data name="RES_terminal.modalmsg.withtask.rotext" xml:space="preserve">
+    <value>Working on ${1}</value>
+  </data>
+  <data name="RES_terminal.modalmsg.wrongcause.rotext" xml:space="preserve">
+    <value>$2$L$3Incorrect:$1$L----------------------------------------$L$2The code indicated does not exist$L$1Please check the code entered.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.wrongcauseq.rotext" xml:space="preserve">
+    <value>$2$L$3 ~W ~D ~H:~M$1$L---------------------------------------$L$2Invalid incident format</value>
+  </data>
+  <data name="RES_terminal.modalmsg.wrongjob.rotext" xml:space="preserve">
+    <value>$2$L$3Incorrect:$1$L----------------------------------------$L$2The code indicated does not exist$L$1Please check the code entered.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.wrongmsg.rotext" xml:space="preserve">
+    <value>$2$L$3Server Error!$1$L---------------------------------------$1Unexpected error on mx3/ART class$Ldriver. See PC log for details.$L$L Process ORM Errcode:</value>
+  </data>
+  <data name="RES_terminal.modalmsg.wrongpieces.rotext" xml:space="preserve">
+    <value>$2$L$3Incorrect:$1$L----------------------------------------$L$2The pieces are invalid$L$1Please check the value entered.</value>
+  </data>
+  <data name="RES_terminal.modalmsg.wrongpunch.rotext" xml:space="preserve">
+    <value>$2$L$3You have already signed in!$1$L----------------------------------------$L$2You do not need to sign in$Lagain.</value>
+  </data>
+</root>

@@ -1,0 +1,32 @@
+<div data-options="dxView : { name: 'profileUserFields', title: 'profileUserFields' } " >
+    <div data-bind="if: hasPermission() == true">
+        <div id="scrollview" style="clear:both" data-bind="dxScrollView: { }">
+            <div id="list" class="list-container" data-bind="if: userFieldsDS().length > 0">
+                <div id="profileUserFields" data-bind="dxList: profileUserFields">
+                    <div data-options="dxTemplate: {name: 'userField'}">
+                        <div class="listMenuItem">
+                            <div data-bind="css: $data.cssClass" class="listMenuItemIcon"></div>
+                            <div class="listMenuItemContent">
+                                <div data-bind="text: $data.Name"></div>
+                                <div class="userFieldValue" data-bind="text: $data.Value"></div>
+                            </div>
+
+                            <div data-bind="if: $data.hasAction == true"><div class="list-item-arrow"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-bind="if: userFieldsDS().length <= 0">
+                <div class="noDataCssClass"></div>
+            </div>
+        </div>
+    </div>
+    <div data-bind="dxLoadPanel: loadingPanel"> </div>
+
+    <div data-bind="if: hasPermission() == false">
+		<!--ko with: noPermissions-->
+		<div data-options="dxViewPlaceholder: { viewName: 'noPermissions' } "></div>
+		<!-- /ko-->
+    </div>
+</div>

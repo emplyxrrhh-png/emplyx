@@ -1,0 +1,185 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+parameters:
+  - name: azureService
+    type: string
+    default: ""
+  - name: environment
+    type: string
+    default: ''
+  - name: resourceGroup
+    type: string
+    default: ''
+  - name: storageAccount
+    type: string
+    default: ''
+  - name: slot
+    type: string
+    default: ''
+  - name: artifacts
+    type: object
+    default: ""
+  - name: resources
+    type: object
+    default: ""
+  - name: resourcesDatalink
+    type: object
+    default: ""
+
+
+stages:
+  - stage: Publish
+    displayName: "Deploy to ${{ parameters.environment }} env"
+    condition: succeeded()
+    dependsOn: ['Build']
+    jobs:
+    - deployment: Deploy_Blob
+      displayName: "Deploy Storage"
+      variables:
+        - group: 'Cegid VTI Infrastructure'
+      pool:
+        vmImage: windows-latest
+      environment: cegid_vti_app_${{ parameters.environment }}
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+            - download: none
+            - checkout: none
+            - ${{ each vtresource in parameters.resources }}:
+              - ${{ if eq(vtresource.enabled, true) }} :
+                - task: DownloadBuildArtifacts@1
+                  inputs:
+                    buildType: 'current'
+                    downloadType: 'single'
+                    artifactName: '${{ vtresource.name }}'
+                    downloadPath: '$(System.ArtifactsDirectory)'
+                  displayName: 'Download artifact "${{ vtresource.name }}"'
+                - powershell: |
+                    Expand-Archive -Path ${{ vtresource.zip }} -DestinationPath .\${{ vtresource.name }}
+                  workingDirectory: $(System.ArtifactsDirectory)
+                  displayName: 'Expanded artifact "${{ vtresource.name }}"'
+                  enabled: true
+
+                - task: AzureFileCopy@5
+                  displayName: 'Copy artifact to Blob'
+                  inputs:
+                    SourcePath: '$(System.ArtifactsDirectory)/${{ vtresource.name }}/*'
+                    azureSubscription: ${{ parameters.azureService }}
+                    Destination: 'AzureBlob'
+                    storage: ${{ parameters.storageAccount }}
+                    ContainerName: ${{ vtresource.container }}
+                    BlobPrefix: ${{ vtresource.folder }}
+                    AdditionalArgumentsForBlobCopy: '--recursive --include-pattern "${{ vtresource.pattern }}" --overwrite true'
+              
+            - ${{ each vtresource in parameters.resourcesDatalink }}:
+              - ${{ if eq(vtresource.enabled, true) }} :
+                - task: DownloadBuildArtifacts@1
+                  inputs:
+                    buildType: 'current'
+                    downloadType: 'single'
+                    artifactName: '${{ vtresource.name }}'
+                    downloadPath: '$(System.ArtifactsDirectory)'
+                  displayName: 'Download artifact "${{ vtresource.name }}"'
+
+                - powershell: |
+                    Expand-Archive -Path ${{ vtresource.zip }} -DestinationPath .\${{ vtresource.name }}
+                  workingDirectory: $(System.ArtifactsDirectory)
+                  displayName: 'Expanded artifact "${{ vtresource.name }}"'
+                  enabled: true
+
+                - task: AzureFileCopy@5
+                  displayName: 'Copy artifact to Blob'
+                  inputs:
+                    SourcePath: '$(System.ArtifactsDirectory)/${{ vtresource.name }}/*'
+                    azureSubscription: ${{ parameters.azureService }}
+                    Destination: 'AzureBlob'
+                    storage: ${{ parameters.storageAccount }}
+                    ContainerName: ${{ vtresource.container }}
+                    BlobPrefix: ${{ vtresource.folder }}
+                    AdditionalArgumentsForBlobCopy: '--recursive --include-pattern "${{ vtresource.pattern }}" --overwrite true'
+
+
+    - ${{ each vtartifact in parameters.artifacts }}:
+      - ${{ if eq(vtartifact.enabled, true) }} :
+        - deployment: Deploy_${{ vtartifact.name }}
+          dependsOn: Deploy_Blob
+          displayName: "Deploy ${{ vtartifact.name }}"
+          pool:
+            vmImage: windows-latest
+          environment: cegid_vti_app_${{ parameters.environment }}
+          strategy:
+            runOnce:
+              deploy:
+                steps:
+                - download: none
+                - checkout: none
+                - task: DownloadBuildArtifacts@1
+                  inputs:
+                    buildType: 'current'
+                    downloadType: 'single'
+                    artifactName: '${{ vtartifact.name }}'
+                    downloadPath: '$(System.ArtifactsDirectory)'
+                  displayName: 'Download artifact "${{ vtartifact.name }}"'
+
+                - ${{ if eq(vtartifact.type, 'webapp') }} :
+                  - ${{ if eq(parameters.slot, 'dev') }} :
+                    - task: AzureRmWebAppDeployment@4
+                      displayName: 'Deploy webapp'
+                      inputs:
+                        ConnectionType: 'AzureRM'
+                        azureSubscription: ${{ parameters.azureService }}
+                        appType: 'webApp'
+                        WebAppName: '${{ vtartifact.destination }}'
+                        deployToSlotOrASE: false
+                        ResourceGroupName: '${{ parameters.resourceGroup }}'
+                        packageForLinux: '$(System.ArtifactsDirectory)/${{ vtartifact.zip }}'
+                        enableCustomDeployment: true
+                        DeploymentType: 'zipDeploy'
+                  - ${{ if ne(parameters.slot, 'dev') }} :
+                    - task: AzureRmWebAppDeployment@4
+                      displayName: 'Deploy webapp'
+                      inputs:
+                        ConnectionType: 'AzureRM'
+                        azureSubscription: ${{ parameters.azureService }}
+                        appType: 'webApp'
+                        WebAppName: '${{ vtartifact.destination }}'
+                        deployToSlotOrASE: true
+                        ResourceGroupName: '${{ parameters.resourceGroup }}'
+                        SlotName: '${{ parameters.slot }}'
+                        packageForLinux: '$(System.ArtifactsDirectory)/${{ vtartifact.zip }}'
+                        enableCustomDeployment: true
+                        DeploymentType: 'zipDeploy'
+
+                - ${{ if eq(vtartifact.type, 'funapp') }} :
+                  - ${{ if eq(parameters.slot, 'dev') }} :
+                    - task: AzureFunctionApp@2
+                      displayName: 'Deploy funapp'
+                      inputs:
+                        azureSubscription: ${{ parameters.azureService }} 
+                        appType: 'functionApp'
+                        appName: '${{ vtartifact.destination }}'
+                        deployToSlotOrASE: false
+                        resourceGroupName: '${{ parameters.resourceGroup }}'
+                        package: '$(System.ArtifactsDirectory)/${{ vtartifact.zip }}'
+                        deploymentMethod: 'auto'
+                        AppSettings: >-
+                          -FUNCTIONS_EXTENSION_VERSION "~4"
+                          -FUNCTIONS_WORKER_RUNTIME "dotnet-isolated"
+                  - ${{ if ne(parameters.slot, 'dev') }} :
+                    - task: AzureFunctionApp@2
+                      displayName: 'Deploy funapp'
+                      inputs:
+                        azureSubscription: ${{ parameters.azureService }} 
+                        appType: 'functionApp'
+                        appName: '${{ vtartifact.destination }}'
+                        deployToSlotOrASE: true
+                        resourceGroupName: '${{ parameters.resourceGroup }}'
+                        slotName: '${{ parameters.slot }}'
+                        package: '$(System.ArtifactsDirectory)/${{ vtartifact.zip }}'
+                        deploymentMethod: 'auto'
+                        AppSettings: >-
+                          -FUNCTIONS_EXTENSION_VERSION "~4"
+                          -FUNCTIONS_WORKER_RUNTIME "dotnet-isolated"

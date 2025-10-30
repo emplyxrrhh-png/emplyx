@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup Label="Globals">
+    <Configurations>Debug;Release;Multitennant</Configurations>
+  </PropertyGroup>
+  <PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+		<AzureFunctionsVersion>v4</AzureFunctionsVersion>
+		<AssemblyName>VTNotificationsFunction</AssemblyName>
+		<PlatformTarget>x64</PlatformTarget>
+		<OutputType>Exe</OutputType>
+	    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Multitennant|AnyCPU'">
+		<Optimize>True</Optimize>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Azure.Core" Version="1.46.1" />
+		<PackageReference Include="Azure.Identity" Version="1.14.0" />
+		<PackageReference Include="Azure.Messaging.ServiceBus" Version="7.19.0" />
+		<PackageReference Include="Microsoft.Azure.Functions.Worker" Version="2.0.0" />
+		<PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.ServiceBus" Version="5.22.2" />
+		<PackageReference Include="Microsoft.Azure.Functions.Worker.Sdk" Version="2.0.4" />
+		<PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Http" Version="3.3.0" />
+		<PackageReference Include="DnsClient" Version="1.8.0" />
+		<PackageReference Include="System.IO.Pipelines" Version="7.0.0" />
+		<PackageReference Include="System.Memory" Version="4.6.0" />
+		<PackageReference Include="System.Memory.Data" Version="7.0.0" />
+		<PackageReference Include="System.Threading.Tasks.Extensions" Version="4.6.0" />
+	</ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\DataLayer\DataLayer.vbproj" />
+    <ProjectReference Include="..\..\Common\VTAzure\VTAzure.vbproj" />
+    <ProjectReference Include="..\..\Common\VTBase\VTBase.vbproj" />
+    <ProjectReference Include="..\..\Common\VTNotificationsCore\VTNotificationsCore.vbproj" />
+    <ProjectReference Include="..\..\Common\VTScheduleCore\VTScheduleCore.vbproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Caching" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,78 @@
+/* Layout */
+
+.navbar-layout,
+.navbar-layout-tablet {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+    .navbar-layout .layout-header {
+        position: absolute;
+        width: 100%;
+    }
+
+    .navbar-layout .layout-content {
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+    }
+
+        .navbar-layout .layout-content > div,
+        .navbar-layout .transition-frame {
+            height: 100%;
+            width: 100%;
+        }
+
+    .navbar-layout .layout-footer {
+        width: 100%;
+        position: absolute;
+        margin-bottom: constant(safe-area-inset-bottom); /* iOS 11.0 */
+        margin-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
+    }
+
+    .navbar-layout .view-footer {
+        position: static;
+    }
+
+        .navbar-layout .view-footer .dx-toolbar {
+            background: transparent;
+            border: none;
+            margin-bottom: 10px;
+        }
+
+            .navbar-layout .view-footer .dx-toolbar .dx-toolbar-center {
+                width: 100%;
+            }
+
+    /* ios7 */
+
+    .navbar-layout .layout-header {
+        top: 0;
+        height: 44px;
+        padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
+        padding-top: env(safe-area-inset-top); /* iOS 11.2 */
+    }
+
+    .navbar-layout .layout-content {
+        top: 44px;
+        bottom: 0;
+    }
+
+    .navbar-layout.has-navbar .layout-content {
+        bottom: 0px;
+    }
+
+    .navbar-layout.has-navbar .layout-footer {
+        height: 59px;
+        bottom: 0;
+    }
+
+    .navbar-layout .view-footer .dx-toolbar {
+        height: 57px;
+    }
+
+    .navbar-layout .view-footer .dx-button .dx-button-content .dx-button-text {
+        font-size: 20px;
+        line-height: 38px;
+    }

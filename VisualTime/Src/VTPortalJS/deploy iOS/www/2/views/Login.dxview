@@ -1,0 +1,123 @@
+<div data-options="dxView : { name: 'login', title: 'Login', layout: 'empty', disableCache: true } ">
+    <div id="start" data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="logo">
+        </div>
+
+        <div id="scrollview" style="clear:both" data-bind="dxScrollView: commScroll">
+
+        <div class="dx-fieldset">
+            <!-- ko if: isModeApp() == true -->
+            <div class="dx-field">
+                <span data-bind="text: lblConfiguration"></span>
+                <div class="dx-field-value login" data-bind="dxTextBox: txtServer, dxValidator: requiredField "></div>
+            </div>
+            <!-- /ko -->
+            <!-- ko if: isWebEnvironment() == "True" -->
+            <div class="dx-field">
+                <span data-bind="text: lblClientLocation"></span>
+                <div class="dx-field-value login" data-bind="dxTextBox: txtClient, dxValidator: requiredField"></div>
+            </div>
+            <!-- /ko -->
+            <div class="dx-field">
+                <span data-bind="text: lblUsername"></span>
+                <div class="dx-field-value login" data-bind="dxTextBox: txtUsername, dxValidator: requiredField"></div>
+            </div>
+            <div class="dx-field">
+                <span data-bind="text: lblPassword"></span>
+                <div class="dx-field-value pass" id="accessPwd" data-bind="dxTextBox: txtPwd, dxValidator: requiredField "></div>
+
+                <div toggle="#accessPwd" class="eyePwd toggle-password"></div>
+
+            </div>
+            <!-- ko if: ssoEnabled() == true -->
+            <div class="dx-field">
+                <div class="dx-field-value pass" id="accessPwd" data-bind="dxCheckBox: ckUseSSOLogin"></div>
+            </div>
+            <!-- /ko -->
+            <div class="dx-field">
+                <span data-bind="text: lblLanguage"></span>
+                <div class="dx-field-value lang" data-bind="dxSelectBox: dataSourceLanguages">
+                    <div data-options="dxTemplate:{ name:'langItemTemplate' }" class="login-item" data-bind="text: Name"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="get-to-work-orange" data-bind="dxButton: btnLogin"></div>
+        <span style="line-height:25px">&nbsp;</span>
+        <div class="getResetPassword" data-bind="dxButton: btnRecover"></div>
+        <span style="line-height:25px">&nbsp;</span>
+        <div class="get-to-work-blue" data-bind="dxButton: btnRedirectToSSO"></div>
+
+        </div>
+        <div data-bind="dxLoadPanel: loadingPanel"> </div>
+
+        <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false, visible: popupVisible, height: 'auto'}">
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <span data-bind="text: lblServerLocation"></span>
+                    <div id="txtServerLocation" class="dx-field-value login" data-bind="dxTextBox: txtServerLocation"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-value isSSL" data-bind="dxCheckBox: ckServerSecurity"></div>
+                </div>
+            </div>
+
+            <div class="get-to-work-orange" data-bind="dxButton: btnAcceptConf"></div>
+        </div>
+
+        <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:true, visible: popupMTVisible, height: 'auto'}">
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <span data-bind="text: lblClientLocation"></span>
+                    <div id="txtClientLocation" class="dx-field-value login" data-bind="dxTextBox: txtClientLocation"></div>
+                </div>
+
+            </div>
+
+            <div class="get-to-work-orange" data-bind="dxButton: btnAcceptMTConf"></div>
+        </div>
+
+
+        <div data-bind="dxToast: toast"></div>
+
+        <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:true, visible: recoverPwdPopupVisible, height: 'auto'}">
+            <span class="licenseTerms" data-bind="text: lblRecoverTitle"></span>
+            <div class="dx-fieldset">
+                <div class="dx-field recoverInfoMessage">
+                    <span data-bind="text: lblRecoverFullInfo"></span>
+                </div>
+                <div class="dx-field">
+                    <span data-bind="text: lblRecoverUserName"></span>
+                    <div id="txtRecoverUserName" class="dx-field-value login" data-bind="dxTextBox: txtRecoverUserName, dxValidator: requieredRecoverEmail"></div>
+                </div>
+                <div class="dx-field">
+                    <span data-bind="text: lblRecoverEmail"></span>
+                    <div id="txtRecoverEmail" class="dx-field-value login" data-bind="dxTextBox: txtRecoverEmail, dxValidator: requieredRecoverUserName"></div>
+                </div>
+            </div>
+
+            <div class="get-to-work-orange" data-bind="dxButton: btnSendRecoverRequest"></div>
+        </div>
+
+
+        <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:true, visible: setPwdPopupVisible, height: 'auto'}">
+            <span class="licenseTerms" data-bind="text: lblSetPassword"></span>
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <span data-bind="text: lblRequestKey"></span>
+                    <div id="txtRequestKey" class="dx-field-value login" data-bind="dxTextBox: txtRequestKey, dxValidator: requieredRequestKey"></div>
+                </div>
+                <div class="dx-field">
+                    <span data-bind="text: lblNewPassword"></span>
+                    <div id="txtNewPassword" class="dx-field-value login" data-bind="dxTextBox: txtNewPassword, dxValidator: requieredNewPassword"></div>
+                </div>
+            </div>
+
+            <div class="get-to-work-orange" data-bind="dxButton: btnSetNewPassword"></div>
+        </div>
+
+
+    </div>
+
+    
+</div>

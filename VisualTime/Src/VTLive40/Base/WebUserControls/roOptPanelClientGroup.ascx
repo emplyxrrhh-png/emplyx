@@ -1,0 +1,1 @@
+﻿<%@ Control Language="VB" AutoEventWireup="false" Inherits="VTLive40.base_WebUserControls_roOptPanelClientGroup" CodeBehind="roOptPanelClientGroup.ascx.vb" %>

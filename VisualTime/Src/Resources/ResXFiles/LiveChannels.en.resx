@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_channels.complaint1.rotext" xml:space="preserve">
+    <value>You are about to activate the reporting channel in accordance with Law 2/2023 on "Efficient Whistleblower Protection" through our application. It is important for you to know that once you activate this channel, you will not be able to deactivate it. Our platform is designed to provide all employees of your organization registered in Visualtime through the employee portal, allowing them to make complaints if necessary.</value>
+  </data>
+  <data name="RES_channels.complaint2.rotext" xml:space="preserve">
+    <value>We would like to point out that messages sent by your employees through our platform can remain anonymous if they so wish. This is done in order to foster an environment of trust, where employees feel comfortable sharing their concerns.</value>
+  </data>
+  <data name="RES_channels.complaint3.rotext" xml:space="preserve">
+    <value>Please note that all messages and reports made through our platform will be logged and cannot be deleted. This ensures the transparency and integrity of our reporting process and facilitates the investigation of any reported matter.</value>
+  </data>
+  <data name="RES_channels.complaint4.rotext" xml:space="preserve">
+    <value>If you have any additional questions or concerns about activating this reporting channel, please feel free to contact our support team. We are here to provide the necessary support and ensure that your organization has an effective tool to maintain integrity and transparency.</value>
+  </data>
+  <data name="RES_channels.complaint5.rotext" xml:space="preserve">
+    <value>We appreciate your trust in our software and our ability to help your organization effectively manage the reporting process.</value>
+  </data>
+  <data name="RES_channels.rochanneladvanced.rotext" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="RES_channels.rochannelanonymous.rotext" xml:space="preserve">
+    <value>Allow anonymous conversations?</value>
+  </data>
+  <data name="RES_channels.rochannelcancel.rotext" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="RES_channels.rochannelcancelpublish.rotext" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="RES_channels.rochannelchart.rotext" xml:space="preserve">
+    <value>Graphics</value>
+  </data>
+  <data name="RES_channels.rochannelcomplete.rotext" xml:space="preserve">
+    <value>Complete now</value>
+  </data>
+  <data name="RES_channels.rochannelconfiguration.rotext" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="RES_channels.rochannelconversations.rotext" xml:space="preserve">
+    <value>Conversations</value>
+  </data>
+  <data name="RES_channels.rochannelcreatedon.rotext" xml:space="preserve">
+    <value>Created on</value>
+  </data>
+  <data name="RES_channels.rochanneldelete.rotext" xml:space="preserve">
+    <value>Do you want to delete this channel and all its conversations?</value>
+  </data>
+  <data name="RES_channels.rochanneldeletetitle.rotext" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="RES_channels.rochanneldesign.rotext" xml:space="preserve">
+    <value>Design</value>
+  </data>
+  <data name="RES_channels.rochanneldestination.rotext" xml:space="preserve">
+    <value>Which employees can send messages?</value>
+  </data>
+  <data name="RES_channels.rochanneldestinationdesc.rotext" xml:space="preserve">
+    <value>Select recipients</value>
+  </data>
+  <data name="RES_channels.rochanneldexaccept.rotext" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="RES_channels.rochannelforgroups.rotext" xml:space="preserve">
+    <value>To the groups</value>
+  </data>
+  <data name="RES_channels.rochannelforusers.rotext" xml:space="preserve">
+    <value>To the users</value>
+  </data>
+  <data name="RES_channels.rochannelgeneral.rotext" xml:space="preserve">
+    <value>Define your channel</value>
+  </data>
+  <data name="RES_channels.rochannelinfo.rotext" xml:space="preserve">
+    <value>Boost the effectiveness of your internal communication using our robust interaction channels. Find out what your team really thinks about the topics that matter most to you and make informed decisions to boost your business.</value>
+  </data>
+  <data name="RES_channels.rochannelloading.rotext" xml:space="preserve">
+    <value>Charging...</value>
+  </data>
+  <data name="RES_channels.rochannelname.rotext" xml:space="preserve">
+    <value>Channel name</value>
+  </data>
+  <data name="RES_channels.rochannelnew.rotext" xml:space="preserve">
+    <value>Create a new channel</value>
+  </data>
+  <data name="RES_channels.rochannelnewmessages.rotext" xml:space="preserve">
+    <value>New messages</value>
+  </data>
+  <data name="RES_channels.rochannelno.rotext" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="RES_channels.rochannelpendingconversations.rotext" xml:space="preserve">
+    <value>Open conversations</value>
+  </data>
+  <data name="RES_channels.rochannelpublished.rotext" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="RES_channels.rochannelreceiptaknowledgment.rotext" xml:space="preserve">
+    <value>Send delivery confirmation to employee?</value>
+  </data>
+  <data name="RES_channels.rochannelsave.rotext" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="RES_channels.rochannelsend.rotext" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="RES_channels.rochannelsimple.rotext" xml:space="preserve">
+    <value>Simple</value>
+  </data>
+  <data name="RES_channels.rochannelstatus.rotext" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="RES_channels.rochannelstatusresume.rotext" xml:space="preserve">
+    <value>Communication channels</value>
+  </data>
+  <data name="RES_channels.rochannelstitle.rotext" xml:space="preserve">
+    <value>My channels</value>
+  </data>
+  <data name="RES_channels.rochannelsupervisors.rotext" xml:space="preserve">
+    <value>Which supervisors can respond to messages?</value>
+  </data>
+  <data name="RES_channels.rochannelsupervisorsdesc.rotext" xml:space="preserve">
+    <value>Select the supervisors who will be able to reply to messages in channel conversations</value>
+  </data>
+  <data name="RES_channels.rochanneltable.rotext" xml:space="preserve">
+    <value>Board</value>
+  </data>
+  <data name="RES_channels.rochanneltitle.rotext" xml:space="preserve">
+    <value>Communication channels</value>
+  </data>
+  <data name="RES_channels.rochanneltitledesc.rotext" xml:space="preserve">
+    <value>Qualification</value>
+  </data>
+  <data name="RES_channels.rochannelyes.rotext" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="RES_channels.ronodata.rotext" xml:space="preserve">
+    <value>There is no data to display</value>
+  </data>
+  <data name="RES_channels.rorestrictchannel.rotext" xml:space="preserve">
+    <value>Restrict</value>
+  </data>
+  <data name="RES_channels.title.rotext" xml:space="preserve">
+    <value>Communication channels</value>
+  </data>
+  <data name="RES_channels.title.search.rotext" xml:space="preserve">
+    <value>Communication channels</value>
+  </data>
+  <data name="RES_channels.titledesc.rotext" xml:space="preserve">
+    <value>Boost the effectiveness of your internal communication using our robust interaction channels. Find out what your team really thinks about the topics that matter most to you and make informed decisions to boost your business.</value>
+  </data>
+  <data name="RES_channels.validatecomplainttitle.rotext" xml:space="preserve">
+    <value>Activate reporting channel</value>
+  </data>
+  <data name="RES_conversations.emptylist.rotext" xml:space="preserve">
+    <value>Select a conversation from the side menu to view the messages</value>
+  </data>
+  <data name="RES_conversations.rocomplaintid.rotext" xml:space="preserve">
+    <value>Complaint ID</value>
+  </data>
+  <data name="RES_conversations.rocomplaintiddesc.rotext" xml:space="preserve">
+    <value>Complaint ID</value>
+  </data>
+  <data name="RES_conversations.rologbookinfo.rotext" xml:space="preserve">
+    <value>Check the complaints logbook</value>
+  </data>
+  <data name="RES_conversations.rologbooktitle.rotex.rotext" xml:space="preserve">
+    <value>Logbook</value>
+  </data>
+  <data name="RES_conversations.rologbooktitle.rotext" xml:space="preserve">
+    <value>Logbook</value>
+  </data>
+  <data name="RES_conversations.roprintcomplaint.rotext" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="RES_conversations.roshowcomplaint.rotext" xml:space="preserve">
+    <value>Consult</value>
+  </data>
+  <data name="RES_conversations.searchtext.rotext" xml:space="preserve">
+    <value>Enter the text to search for...</value>
+  </data>
+  <data name="RES_conversations.title.rotext" xml:space="preserve">
+    <value>Logbook</value>
+  </data>
+  <data name="RES_conversations.treecaption.rotext" xml:space="preserve">
+    <value>Conversations</value>
+  </data>
+  <data name="RES_dex.acceptprivacypopup.rotext" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="RES_dex.alreadyloggedin.rotext" xml:space="preserve">
+    <value>To continue with the external report, you must first log out of Visualtime.</value>
+  </data>
+  <data name="RES_dex.btnrecovercomplaint.rotext" xml:space="preserve">
+    <value>Recover complaint</value>
+  </data>
+  <data name="RES_dex.closedex.rotext" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="RES_dex.closeprivacypopup.rotext" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="RES_dex.closesessiondex.rotext" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="RES_dex.closesessionerror.rotext" xml:space="preserve">
+    <value>An error occurred while closing the session</value>
+  </data>
+  <data name="RES_dex.companylocation.rotext" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="RES_dex.complaintanonymous.rotext" xml:space="preserve">
+    <value>I want to remain anonymous</value>
+  </data>
+  <data name="RES_dex.complaintbody.rotext" xml:space="preserve">
+    <value>Explain to us what you want to report</value>
+  </data>
+  <data name="RES_dex.complaintemailvalidationerror.rotext" xml:space="preserve">
+    <value>The email address entered is not valid.</value>
+  </data>
+  <data name="RES_dex.complaintguidcopied.rotext" xml:space="preserve">
+    <value>The identifier has been copied to the clipboard</value>
+  </data>
+  <data name="RES_dex.complaintguiddesc.rotext" xml:space="preserve">
+    <value>Save this identifier to be able to access and track the complaint.</value>
+  </data>
+  <data name="RES_dex.complaintguidnotcopied.rotext" xml:space="preserve">
+    <value>The identifier could not be copied. Please make sure to copy it manually so you don't lose it.</value>
+  </data>
+  <data name="RES_dex.complaintidentified.rotext" xml:space="preserve">
+    <value>I want to provide my data</value>
+  </data>
+  <data name="RES_dex.complaintmsgsaveerror.rotext" xml:space="preserve">
+    <value>The report could not be created. Please try again later.</value>
+  </data>
+  <data name="RES_dex.complaintphonevalidationerror.rotext" xml:space="preserve">
+    <value>The phone number provided is not valid.</value>
+  </data>
+  <data name="RES_dex.complaintprivacyrequiered.rotext" xml:space="preserve">
+    <value>It is necessary to read and accept the privacy policy.</value>
+  </data>
+  <data name="RES_dex.complaintpwdrepeaterror.rotext" xml:space="preserve">
+    <value>The passwords entered do not match.</value>
+  </data>
+  <data name="RES_dex.complaintpwdvalidationerror.rotext" xml:space="preserve">
+    <value>Password does not meet the required complexity.</value>
+  </data>
+  <data name="RES_dex.complaintresponse.rotext" xml:space="preserve">
+    <value>Thank you for submitting the complaint</value>
+  </data>
+  <data name="RES_dex.complaintresponsedesc.rotext" xml:space="preserve">
+    <value>Your complaint is being analyzed, you will hear from us very soon.</value>
+  </data>
+  <data name="RES_dex.complainttitle.rotext" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="RES_dex.complaintvalidationerror.rotext" xml:space="preserve">
+    <value>You must indicate a title and content of the complaint</value>
+  </data>
+  <data name="RES_dex.copyguid.rotext" xml:space="preserve">
+    <value>Copy identifier</value>
+  </data>
+  <data name="RES_dex.dexsessionexpired.rotext" xml:space="preserve">
+    <value>The session has expired. Please re-enter the complaint details.</value>
+  </data>
+  <data name="RES_dex.gotohome.rotext" xml:space="preserve">
+    <value>Back to home page</value>
+  </data>
+  <data name="RES_dex.identificationbtnnext.rotext" xml:space="preserve">
+    <value>Following</value>
+  </data>
+  <data name="RES_dex.identificationcompany.rotext" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="RES_dex.identificationmail.rotext" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="RES_dex.identificationname.rotext" xml:space="preserve">
+    <value>Name and surname</value>
+  </data>
+  <data name="RES_dex.identificationphone.rotext" xml:space="preserve">
+    <value>Mobile phone</value>
+  </data>
+  <data name="RES_dex.identificationpwd.rotext" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="RES_dex.identificationrepeatpwd.rotext" xml:space="preserve">
+    <value>Repeat password</value>
+  </data>
+  <data name="RES_dex.identificationtitle.rotext" xml:space="preserve">
+    <value>Identification</value>
+  </data>
+  <data name="RES_dex.lostdatawarning.rotext" xml:space="preserve">
+    <value>Warning: If you lose this number or password, you will have no way to access the report. The password or ID cannot be recovered.</value>
+  </data>
+  <data name="RES_dex.messagetoolarge.rotext" xml:space="preserve">
+    <value>The message must contain less than 6000 characters</value>
+  </data>
+  <data name="RES_dex.missingmandatorydata.rotext" xml:space="preserve">
+    <value>You must enter all mandatory data. Please re-enter the complaint data.</value>
+  </data>
+  <data name="RES_dex.nolicense.rotext" xml:space="preserve">
+    <value>There is no complaints or licensing channel.</value>
+  </data>
+  <data name="RES_dex.passwordinfo.rotext" xml:space="preserve">
+    <value>You will use this password to access your report using the ID. This way you can track your report, attach more information and export the summary to save or print.</value>
+  </data>
+  <data name="RES_dex.passwordinfodesc.rotext" xml:space="preserve">
+    <value>The password must be at least 10 characters, at least one uppercase character, one number and one symbol.</value>
+  </data>
+  <data name="RES_dex.recovercomplaint.rotext" xml:space="preserve">
+    <value>Recover a complaint</value>
+  </data>
+  <data name="RES_dex.recovercomplaintdesc.rotext" xml:space="preserve">
+    <value>Enter the report ID and password to view the status of your report.</value>
+  </data>
+  <data name="RES_dex.recovercomplaintid.rotext" xml:space="preserve">
+    <value>Complaint ID</value>
+  </data>
+  <data name="RES_dex.recovercomplaintinforequiered.rotext" xml:space="preserve">
+    <value>You must indicate the complaint reference and the password</value>
+  </data>
+  <data name="RES_dex.roprintcomplaintmessages.rotext" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="RES_dex.sendcomplaint.rotext" xml:space="preserve">
+    <value>Submit a complaint</value>
+  </data>
+  <data name="RES_dex.sendcomplaintdesc.rotext" xml:space="preserve">
+    <value>You can submit a confidential report using this form.&lt;br /&gt;The information you submit can only be read by the company's designated channel administrator.</value>
+  </data>
+  <data name="RES_dex.title.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_dex.title.search.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_dex.titledesc.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_messages.at.rotext" xml:space="preserve">
+    <value>he</value>
+  </data>
+  <data name="RES_messages.by.rotext" xml:space="preserve">
+    <value>by</value>
+  </data>
+  <data name="RES_messages.closed.rotext" xml:space="preserve">
+    <value>Close conversation</value>
+  </data>
+  <data name="RES_messages.conversationcomplexity.rotext" xml:space="preserve">
+    <value>High complexity</value>
+  </data>
+  <data name="RES_messages.conversationstatus.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_messages.dismissed.rotext" xml:space="preserve">
+    <value>Dismiss conversation</value>
+  </data>
+  <data name="RES_messages.emptylist.rotext" xml:space="preserve">
+    <value>There are no messages to display</value>
+  </data>
+  <data name="RES_messages.highcomplexity.rotext" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="RES_messages.lowcomplexity.rotext" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="RES_messages.ongoing.rotext" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="RES_messages.roprintcomplaint.rotext" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="RES_messages.sendbutton.rotext" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="RES_messages.sendedat.rotext" xml:space="preserve">
+    <value>Sent on</value>
+  </data>
+  <data name="RES_messages.sendplaceholder.rotext" xml:space="preserve">
+    <value>Write your message here...</value>
+  </data>
+  <data name="RES_messages.stateclosed.rotext" xml:space="preserve">
+    <value>closed</value>
+  </data>
+  <data name="RES_messages.statedismissed.rotext" xml:space="preserve">
+    <value>dismissed</value>
+  </data>
+  <data name="RES_messages.stateongoing.rotext" xml:space="preserve">
+    <value>in progress</value>
+  </data>
+  <data name="RES_messages.statepending.rotext" xml:space="preserve">
+    <value>pending</value>
+  </data>
+  <data name="RES_dex.readandaccept.rotext" xml:space="preserve">
+    <value>I have read and accept</value>
+  </data>
+  <data name="RES_dex.privacypolicycta.rotext" xml:space="preserve">
+    <value> privacy policy</value>
+  </data>
+  <data name="RES_dex.privacypolicyctaempty.rotext" xml:space="preserve">
+    <value> privacy policy</value>
+  </data>
+</root>

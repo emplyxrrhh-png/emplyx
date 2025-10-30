@@ -1,0 +1,2 @@
+<%@ Control Language="VB" AutoEventWireup="false" Inherits="VTLive40.roOptionPanelGroup" CodeBehind="roOptionPanelGroup.ascx.vb" %>
+<%@ Register Src="roOptionPanelContainer.ascx" TagName="roOptionPanelContainer" TagPrefix="uc1" %>

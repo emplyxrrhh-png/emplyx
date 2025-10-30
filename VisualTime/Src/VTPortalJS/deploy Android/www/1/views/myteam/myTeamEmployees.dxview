@@ -1,0 +1,65 @@
+<div data-options="dxView : { name: 'myTeamEmployees', title: 'myTeamEmployees', disableCache: true  } ">
+
+    <!--ko with: subscribeBlock-->
+    <div class="bigProfile" data-options="dxViewPlaceholder: { viewName: 'bigUserInfo' }"></div>
+    <!-- /ko-->
+
+    <div id="panelsContent" style="height:76%;">
+        <div class="dx-searchbar">
+            <div data-bind="dxTextBox: searchOptions"></div>
+        </div>
+        
+                <div data-bind="dxList: listOptions">
+                    <!--<div data-bind="if: $data.PresenceStatus == Inside">-->
+                    <div data-options="dxTemplate: {name: 'item'}">
+                        <div class="listMenuItem">
+                            <div data-bind="css: $data.cssContainerClass;" class="listMenuItemIcon EmployeeImagePhoto">
+                                <div data-bind="style: { background: $data.Image }" class="listMenuItemIcon EmployeeImagePhoto"></div>
+                            </div>
+                            <div class="listMenuItemContentTeam">
+                                <div style="font-size:11px" data-bind="text: $data.Name"></div>
+                                <div class="smallTextDescription" data-bind="text: i18nextko.i18n.t('roCodEmp') + $data.EmployeeId"></div>
+                                <div class="smallTextDescription" data-bind="text: $data.Group"></div>
+
+                                <div class="smallTextDescription" style="font-weight: bold;" data-bind="text: $data.TaskTitle"></div>
+                                <div class="smallTextDescription" style="font-weight: bold;" data-bind="text: $data.CostCenterName"></div>
+
+                            </div>
+                            <div class="listMenuItemContentTC">
+                                <div data-bind="css: $data.ImageTC" class="listMenuItemIcon"></div>
+                            </div>
+                            <div class="list-item-arrow"></div>
+                        </div>
+
+                    </div>
+                    <!--</div>-->
+                </div>
+          
+        <div id="btnActionMenuPopover" class="actionButton fixedButton" data-bind="dxButton: btnRefresh"></div>
+
+        <div data-bind="dxLoadPanel: loadingPanel"> </div>
+    </div>
+
+            <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false,closeOnBackButton:false, visible: licenseVisible, height: 'auto'}">
+                <span class="licenseTerms" data-bind="text: lblTermsAndContidions"></span>
+
+                <div class="licenseText" align="justify" data-bind="dxScrollView: licenceViewContent">
+                    <span data-bind="text: lbllicenseText"></span>
+                    <div data-bind="if: customConsent() == false">
+                        <ul class="licenseList">
+                            <li class="licenseListItem"><span data-bind="text: lbllicenseAdv1"></span></li>
+                            <li class="licenseListItem"><span data-bind="text: lbllicenseAdv2"></span></li>
+                            <li class="licenseListItem"><span data-bind="text: lbllicenseAdv3"></span></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="dx-fieldset">
+                    <div class="dx-field">
+                        <div class="dx-field-value" data-bind="dxCheckBox: ckLicenceAccepted"></div>
+                    </div>
+                </div>
+
+                <div class="get-to-work-orange" data-bind="dxButton: btnAcceptLicense"></div>
+            </div>
+        </div>

@@ -1,0 +1,7 @@
+﻿-- DROP DIRECTO
+DROP TABLE ZonesRules
+
+-- ELIMINAR ANTES CÓDIGO RESIDUAL
+-- DROP TABLE EmployeeAccrualsRules
+
+

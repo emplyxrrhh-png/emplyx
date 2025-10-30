@@ -1,0 +1,27 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+stages:
+  - stage: Tag
+    condition: succeeded()
+    jobs:
+    - job: TagVersion 
+      displayName: "Tag pipeline as version"
+      steps:
+      - powershell: | 
+          $tmpVar = ((Get-Content -Path Version.dat -TotalCount 2)[-1]).Replace('Current=','').Split(' ')[0]
+          Write-Host $tmpVar
+          Write-Host "##vso[task.setvariable variable=VersionNumber]$tmpVar"
+        displayName: 'Obtain version number'
+        workingDirectory: './Src/Utils/UtilScripts/Scripts/ProductionScripts/'
+        enabled: true
+      - task: TagGitRelease@1
+        enabled: true
+        displayName: 'Add tag to git'
+        inputs:
+          name: 'VTLive$(VersionNumber)'
+          message: 'Version VTLive $(VersionNumber)'
+      
+      

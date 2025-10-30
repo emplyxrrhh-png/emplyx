@@ -1,0 +1,389 @@
+{
+  "info": {
+    "_postman_id": "467fae6b-c0b7-4e25-b5d5-e7a7152d977e",
+    "name": "SecureConnect",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "27509673",
+    "_collection_link": "https://lunar-crater-346323.postman.co/workspace/Postman~10dde23e-ca4c-4e65-94f0-c95a43618845/collection/27509673-467fae6b-c0b7-4e25-b5d5-e7a7152d977e?action=share&source=collection_link&creator=27509673"
+  },
+  "item": [
+    {
+      "name": "Authenticate",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "var responseBody = pm.response.json();\r",
+              "//console.info(responseBody)\r",
+              "var roToken = responseBody.token;\r",
+              "\r",
+              "pm.collectionVariables.set(\"AuthToken\", roToken);\r",
+              "\r",
+              "pm.test(\"Authentication status test\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"username\": \"vtserviceapi\",\r\n  \"password\": \"bd1b83fd0cfd8b8bbe27903aa0cbf9a476332e4919f50c24f41cb0f33634f81c580315dba974928cd12a7cf0f3de76d499014e3b7d06201ada895b94ba3d5b81\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://haapiidi.azurewebsites.net/api/authenticate/login",
+          "protocol": "https",
+          "host": [
+            "haapiidi",
+            "azurewebsites",
+            "net"
+          ],
+          "path": [
+            "api",
+            "authenticate",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Clear company sc cache",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Clear company sc cache status test\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "companyid",
+            "value": "devisidre",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://haapiidi.azurewebsites.net/api/sc/clearcache",
+          "protocol": "https",
+          "host": [
+            "haapiidi",
+            "azurewebsites",
+            "net"
+          ],
+          "path": [
+            "api",
+            "sc",
+            "clearcache"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Client Token",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Get Client Token status test\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "companyid",
+            "value": "almudena",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://haapiidi.azurewebsites.net/api/sc/GetClientToken",
+          "protocol": "https",
+          "host": [
+            "haapiidi",
+            "azurewebsites",
+            "net"
+          ],
+          "path": [
+            "api",
+            "sc",
+            "GetClientToken"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get endpoint",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Get endpoint status test\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://haapiidi.azurewebsites.net/api/sc/endpoint/almudena/ff7be080828057a0b876dc3b9475ef27f77d04b237f0d8382775d361b746749ebbd8a95f831f66acd3c729c74cf80c0fe5d032ecc65aa1be85b9d749321cf72b/",
+          "protocol": "https",
+          "host": [
+            "haapiidi",
+            "azurewebsites",
+            "net"
+          ],
+          "path": [
+            "api",
+            "sc",
+            "endpoint",
+            "almudena",
+            "ff7be080828057a0b876dc3b9475ef27f77d04b237f0d8382775d361b746749ebbd8a95f831f66acd3c729c74cf80c0fe5d032ecc65aa1be85b9d749321cf72b",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Reset client token",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Reset client status test\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "companyid",
+            "value": "devisidre",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://haapiidi.azurewebsites.net/api/sc/ResetClientToken/2",
+          "protocol": "https",
+          "host": [
+            "haapiidi",
+            "azurewebsites",
+            "net"
+          ],
+          "path": [
+            "api",
+            "sc",
+            "ResetClientToken",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Dex url",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Get Dex url status test\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "companyId",
+            "value": "devisidre",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://haapiidi.azurewebsites.net/api/dex/GetUrl",
+          "protocol": "https",
+          "host": [
+            "haapiidi",
+            "azurewebsites",
+            "net"
+          ],
+          "path": [
+            "api",
+            "dex",
+            "GetUrl"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Dex CompanyInfo",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Get Dex CompanyInfo status test\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://haapiidi.azurewebsites.net/api/dex/GetCompany/181c87ce-0a06-4992-98d0-1c7d01d5ca15",
+          "protocol": "https",
+          "host": [
+            "haapiidi",
+            "azurewebsites",
+            "net"
+          ],
+          "path": [
+            "api",
+            "dex",
+            "GetCompany",
+            "181c87ce-0a06-4992-98d0-1c7d01d5ca15"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Send SMS",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Send SMS status test\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "CompanyId",
+            "value": "system",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"content\": \"test api postman\",\r\n  \"destination\": \"postman@cegid.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://haapiidi.azurewebsites.net/api/sms/send",
+          "protocol": "https",
+          "host": [
+            "haapiidi",
+            "azurewebsites",
+            "net"
+          ],
+          "path": [
+            "api",
+            "sms",
+            "send"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "Bearer {{AuthToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "AuthToken",
+      "value": ""
+    }
+  ]
+}

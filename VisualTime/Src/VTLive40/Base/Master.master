@@ -1,0 +1,33 @@
+<%@ Master Language="VB" Inherits="VTLive40.Base_Master" CodeBehind="Master.master.vb" %>
+
+<%@ Register Src="WebUserControls/ExternalFormV2.ascx" TagName="ExternalForm" TagPrefix="Local" %>
+<%@ Register Src="WebUserControls/MessageModalV2.ascx" TagName="MessageFrame" TagPrefix="Local" %>
+
+<html lang="en" class="notranslate" translate="no" xmlns="http://www.w3.org/1999/xhtml" style="height: 100%;">
+<head id="Head1" runat="server">
+    <meta name="robots" content="noindex" />
+    <meta name="googlebot" content="noindex" />
+    <meta name="robots" content="nofollow" />
+    <meta name="robots" content="nosnippet" />
+    <meta name="robots" content="noarchive" />
+
+    <title>VisualTime Live</title>
+</head>
+<body style="height: 100%; margin: 0;" class="defaultBackgroundColor">
+
+    <!--[if lt IE 7]>
+    <script src="<%= Me.Page.ResolveUrl("~/Base/Scripts/ie6to7/IE7.js") %>" type="text/javascript"></script>
+    <![endif]-->
+
+    <form id="form1" runat="server" style="width: 100%; height: 100%; margin: 0;" autocomplete="off">
+        <div id="divMaster" style="width: 100%; height: 100%; text-align: center;">
+
+            <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="True" EnableScriptLocalization="True" />
+            <asp:ContentPlaceHolder ID="contentMainBody" runat="server" />
+
+            <Local:MessageFrame ID="MessageFrame1" runat="server" />
+            <Local:ExternalForm ID="externalform1" runat="server" />
+        </div>
+    </form>
+</body>
+</html>

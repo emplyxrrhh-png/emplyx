@@ -1,0 +1,98 @@
+<div data-options="dxView : { name: 'accrualsHome', title: 'accrualsHome', disableCache: true } ">
+
+
+    <div style="width:20%; float:left; justify-content:center; display:flex;">
+        <div id="remove-button" data-bind="dxButton: iconAccruals"></div>
+    </div>
+
+    <div style="float:left; width: 80%; justify-content:space-between; display:flex;">
+        <div>
+            <div class="employeeCenter" style="float:left;">
+                <div>
+
+                    <div class="mainTitle"><span data-bind="text:accrualsTitle"></span></div>
+                </div>
+                <div style="padding-top:8px; padding-bottom:8px;">
+
+                    <div data-bind="if: hasPermission() == true">
+                        <div data-bind="if: (scheduleDS() != null && scheduleDS().length > 0)">
+                            <div>
+                                <div class="mainTitleList"><span data-bind="text:accrualsTitleList"></span></div>
+                            </div>
+                            <div id="scrollview" style="clear:both" data-bind="dxScrollView: { }">
+                                <div id="list" class="list-container" data-bind="if: scheduleDS().length > 0">
+                                    <div id="listAccruals" data-bind="dxList: listSchedule" style="font-size:12px !important">
+                                        <div data-options="dxTemplate: {name: 'item'}" style="padding:0px !important" class="listHome">
+                                            <div class="listMenuItem" style="height:auto !important">
+                                                <div class="listMenuItemContentAcc">
+                                                    <div data-bind="text: $data.Name" style="padding-left: 10px;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+                        <div data-bind="if: (holidaysDS() != null && holidaysDS().length > 0)">
+                            <div>
+                                <div class="mainTitleList"><span data-bind="text:holidaysTitleList"></span></div>
+                            </div>
+                            <div id="scrollview" style="clear:both" data-bind="dxScrollView: { }">
+                                <div id="list" class="list-container" data-bind="if: holidaysDS().length > 0">
+                                    <div id="listHolidays" data-bind="dxList: listHolidays" style="font-size:12px !important">
+                                        <div data-options="dxTemplate: {name: 'item'}" style="padding:0px !important" class="listHome">
+                                            <div class="listMenuItem" style="height:auto !important">
+                                                <div class="listMenuItemContentAcc">
+                                                    <div data-bind="text: $data.Name" style="font-weight:bold"></div>
+
+                                                    <div data-bind="text: $data.Pending" style="padding-left: 10px;"></div>
+
+                                                    <div data-bind="text: $data.Lasting" style="padding-left: 10px;"></div>
+
+                                                    <div data-bind="text: $data.Available" style="padding-left: 10px;"></div>
+
+                                                    <div data-bind="text: $data.Done" style="padding-left: 10px;"></div>
+
+                                                    <div data-bind="text: $data.Prevision" style="padding-left: 10px;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div data-bind="if: (scheduleDS() == null || holidaysDS() == null || (scheduleDS().length <= 0  && holidaysDS().length <= 0))">
+                            <div class="productivTaskText"><span data-bind="text: lblnoAccrualsDesc"></span></div>
+                        </div>
+
+                    </div>
+
+
+                    <div data-bind="if: hasPermission() == false">
+                        <div class="productivTaskText"><span data-bind="text: lblnoAccrualsDesc"></span></div>
+                    </div>
+
+                </div>
+                <p></p>
+            </div>
+        </div>
+        <div style=" justify-content:flex-end; display:flex;">
+            <div id="spinright-button" data-bind="dxButton: btnGoAccruals" style="display: none;"></div>
+        </div>
+
+    </div>
+
+
+    <div style="clear:both;"></div>
+
+
+</div>
+

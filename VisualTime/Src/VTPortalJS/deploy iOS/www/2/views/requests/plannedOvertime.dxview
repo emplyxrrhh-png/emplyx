@@ -1,0 +1,82 @@
+<div data-options="dxView : { name: 'plannedOvertime', title: 'plannedOvertime', disableCache: true } ">
+
+
+	<div id="smallUserInfo"></div>
+
+    <div style="clear:both" data-bind="dxScrollView: scrollContent">
+        <div id="configRequestTab" data-bind="dxTabs: tabPanelOptions" class="innerTabPanelList">
+            <div data-options="dxTemplate : { name: 'title' } ">
+                <div data-bind="css: $data.cssClass "></div>
+            </div>
+        </div>
+        <div id="panelsContent" style="height:55%">
+            <!-- ko if: selectedTab() == 0 -->
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <span data-bind="text: lblInitialHour"></span>
+                    <div class="dx-field-value" data-bind="dxDateBox: beginHour"></div>
+                </div>
+                <div class="dx-field">
+                    <span data-bind="text: lblEndHour"></span>
+                    <div class="dx-field-value" data-bind="dxDateBox: endHour"></div>
+                </div>
+                <div class="dx-field">
+                    <span data-bind="text: lblRequestValue1"></span>
+                    <div class="dx-field-value" data-bind="dxSelectBox: cmbRequestValue1"></div>
+                </div>
+
+                <!-- ko if: documentAttached() == true -->
+                <div class="dx-field" style="font-style:italic">
+                    <span data-bind="text: fileAdded"></span>
+                </div>
+                <!-- /ko -->
+
+                <div class="dx-field">
+                    <span data-bind="text: lblRemarks"></span>
+                    <div class="dx-field-value" data-bind="dxTextArea: remarks"></div>
+                </div>
+
+                <!-- ko if: requestId() == null -->
+                <div class="dx-field">
+                    <span data-bind="text: lblSelectDaysInfo"></span>
+                </div>
+                <!-- /ko -->
+            </div>
+            <!-- /ko -->
+            <!-- ko if: selectedTab() == 1 -->
+            <div id="calendarSelectorContainer" data-bind="dxCalendar: calendarOptions"></div>
+            <!-- /ko -->
+        </div>
+    </div>
+
+    <div class="approvalPopup" data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:true, visible: popupVisible, height: 'auto'}">
+        <!--ko with: myApprovalsBlock-->
+        <div data-options="dxViewPlaceholder: { viewName: 'approvalHistory' } "></div>
+        <!-- /ko-->
+    </div>
+
+    <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false, closeOnBackButton:false, visible: popupDocumentsVisible, height: 'auto'}">
+        <!--ko with: myDocumentsBlock-->
+        <div data-options="dxViewPlaceholder: { viewName: 'documentInput' } "></div>
+        <!-- /ko-->
+        <div style="padding-top:5px">
+            <div style="float:left;width:50%" class="get-to-work-blue" data-bind="dxButton: btnCancelUpload"></div>
+            <div style="float:right;width:50%" class="get-to-work-orange" data-bind="dxButton: btnAcceptUpload"></div>
+        </div>
+
+    </div>
+
+    <div class="fixedMenuButton">
+        <div class="actionButton mainMenuButton" data-bind="dxButton: btnApprove"></div>
+        <div class="actionButton mainMenuButton" data-bind="dxButton: btnRefuse"></div>
+        <!-- ko if: hasDocuments() == true -->
+        <div class="actionButton mainMenuButton" data-bind="dxButton: btnDocuments"></div>
+        <!-- /ko-->
+        <div class="actionButton mainMenuButton" data-bind="dxButton: btnHistory"></div>
+        <div class="actionButton mainMenuButton" data-bind="dxButton: btnDelete"></div>
+        <div class="actionButton mainMenuButton" data-bind="dxButton: btnSave"></div>
+    </div>
+
+    <div data-bind="dxLoadPanel: loadingPanel"> </div>
+
+</div>

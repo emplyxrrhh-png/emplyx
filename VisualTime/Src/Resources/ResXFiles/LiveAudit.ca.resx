@@ -1,0 +1,3843 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_audit.action.ablock.rotext" xml:space="preserve">
+    <value>Bloqueig</value>
+  </data>
+  <data name="RES_audit.action.aconnect.rotext" xml:space="preserve">
+    <value>Connexió</value>
+  </data>
+  <data name="RES_audit.action.aconnectfail.rotext" xml:space="preserve">
+    <value>Intent de connexió</value>
+  </data>
+  <data name="RES_audit.action.adelete.rotext" xml:space="preserve">
+    <value>Esborrat</value>
+  </data>
+  <data name="RES_audit.action.adisconnect.rotext" xml:space="preserve">
+    <value>Desconnexió</value>
+  </data>
+  <data name="RES_audit.action.aexecuted.rotext" xml:space="preserve">
+    <value>Execució</value>
+  </data>
+  <data name="RES_audit.action.ainsert.rotext" xml:space="preserve">
+    <value>Alta</value>
+  </data>
+  <data name="RES_audit.action.amultiselect.rotext" xml:space="preserve">
+    <value>M-Consulta</value>
+  </data>
+  <data name="RES_audit.action.anone.rotext" xml:space="preserve">
+    <value>(Desconeguda)</value>
+  </data>
+  <data name="RES_audit.action.aselect.rotext" xml:space="preserve">
+    <value>Consulta</value>
+  </data>
+  <data name="RES_audit.action.aunblock.rotext" xml:space="preserve">
+    <value>Desbloqueig</value>
+  </data>
+  <data name="RES_audit.action.aupdate.rotext" xml:space="preserve">
+    <value>Actualització</value>
+  </data>
+  <data name="RES_audit.aspxloadingpopup.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.aspxloadingpopup.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.bc.text.rotext" xml:space="preserve">
+    <value>Cancel·la</value>
+  </data>
+  <data name="RES_audit.bc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.bo.text.rotext" xml:space="preserve">
+    <value>Acceptar</value>
+  </data>
+  <data name="RES_audit.bo.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.bt.text.rotext" xml:space="preserve">
+    <value>Avui</value>
+  </data>
+  <data name="RES_audit.bt.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btdetailcancel.text.rotext" xml:space="preserve">
+    <value>Cancel·la</value>
+  </data>
+  <data name="RES_audit.btdetailcancel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btdetailok.text.rotext" xml:space="preserve">
+    <value>Acceptar</value>
+  </data>
+  <data name="RES_audit.btdetailok.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btnexporttoxls.text.rotext" xml:space="preserve">
+    <value>Exportar</value>
+  </data>
+  <data name="RES_audit.btnexporttoxls.tooltip.rotext" xml:space="preserve">
+    <value>Exportar a Excel</value>
+  </data>
+  <data name="RES_audit.btnfirst.text.rotext" xml:space="preserve">
+    <value>&lt;&lt;</value>
+  </data>
+  <data name="RES_audit.btnfirst.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btnlast.text.rotext" xml:space="preserve">
+    <value>&gt;&gt;</value>
+  </data>
+  <data name="RES_audit.btnlast.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btnnext.text.rotext" xml:space="preserve">
+    <value>&gt;</value>
+  </data>
+  <data name="RES_audit.btnnext.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btnprev.text.rotext" xml:space="preserve">
+    <value>&lt;</value>
+  </data>
+  <data name="RES_audit.btnprev.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btshowauditdetail.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btshowauditdetail.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.c.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.cmbactions.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.cmbactions.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.cmbobjecttypes.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.cmbobjecttypes.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.cmbusers.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.cmbusers.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.col0.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.col0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.column.action.rotext" xml:space="preserve">
+    <value>Acció</value>
+  </data>
+  <data name="RES_audit.column.date.rotext" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="RES_audit.column.objecttype.rotext" xml:space="preserve">
+    <value>Tipus d’objecte</value>
+  </data>
+  <data name="RES_audit.column.time.rotext" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="RES_audit.column.user.rotext" xml:space="preserve">
+    <value>Usuari</value>
+  </data>
+  <data name="RES_audit.contentframe.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddd.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddd.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddlactions.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddlactions.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddlobjecttypes.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddlobjecttypes.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddlusers.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddlusers.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.dtvauditdetail.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.dxemptyrow.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.dxfilterrow.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.dxheadersrow0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.dxmaintable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.dxstyletable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.emptyheader.text.rotext" xml:space="preserve">
+    <value>Arrossegueu una columna aquí...</value>
+  </data>
+  <data name="RES_audit.emptyheader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.error.couldnotretrievetask.text.rotext" xml:space="preserve">
+    <value>&amp;quot;No s’ha pogut carregar la informació de la tasca&amp;quot;</value>
+  </data>
+  <data name="RES_audit.error.incorrectdates.rotext" xml:space="preserve">
+    <value>La data d’inici no pot ser posterior a la data final.</value>
+  </data>
+  <data name="RES_audit.fnp.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.fnp.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.grdaudit.columns#0.headertext.rotext" xml:space="preserve">
+    <value>Acció</value>
+  </data>
+  <data name="RES_audit.grdaudit.columns#1.headertext.rotext" xml:space="preserve">
+    <value>Data/hora</value>
+  </data>
+  <data name="RES_audit.grdaudit.columns#2.headertext.rotext" xml:space="preserve">
+    <value>Usuari</value>
+  </data>
+  <data name="RES_audit.grdaudit.columns#3.headertext.rotext" xml:space="preserve">
+    <value>Tipus objecte</value>
+  </data>
+  <data name="RES_audit.grdaudit.columns#4.headertext.rotext" xml:space="preserve">
+    <value>Nom de l’objecte</value>
+  </data>
+  <data name="RES_audit.grdaudit.columns#5.headertext.rotext" xml:space="preserve">
+    <value>Descripció</value>
+  </data>
+  <data name="RES_audit.grdaudit.columns#6.headertext.rotext" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="RES_audit.grdaudit.columns#7.headertext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.grdaudit.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.gridcontracts.column.clientlocation.rotext" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="RES_audit.gridcontracts.column.description.rotext" xml:space="preserve">
+    <value>Descripció</value>
+  </data>
+  <data name="RES_audit.gridcontracts.column.objectname.rotext" xml:space="preserve">
+    <value>Nom de l’objecte</value>
+  </data>
+  <data name="RES_audit.grouppanel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.hiddentargetcontrolforloginpopup.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.hiddentargetcontrolforloginpopup.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.i.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.i.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.iadd.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.iadl.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.iadr.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.iadu.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ibtdetailcancel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ibtrefresh.tooltip.rotext" xml:space="preserve">
+    <value>Actualitzar dades</value>
+  </data>
+  <data name="RES_audit.idhf.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.imgaudit.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.imgespecialpaste.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.imgloading.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblaction.text.rotext" xml:space="preserve">
+    <value>Acció:</value>
+  </data>
+  <data name="RES_audit.lblaction.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblauditdetailtitle.text.rotext" xml:space="preserve">
+    <value>Detall auditoria</value>
+  </data>
+  <data name="RES_audit.lblauditdetailtitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblbegindate.text.rotext" xml:space="preserve">
+    <value>Data d’inici:</value>
+  </data>
+  <data name="RES_audit.lblbegindate.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblclientlocation.text.rotext" xml:space="preserve">
+    <value>Client:</value>
+  </data>
+  <data name="RES_audit.lblclientlocation.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbldetailaction.text.rotext" xml:space="preserve">
+    <value>Acció:</value>
+  </data>
+  <data name="RES_audit.lbldetailaction.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbldetailclientlocation.text.rotext" xml:space="preserve">
+    <value>Client:</value>
+  </data>
+  <data name="RES_audit.lbldetailclientlocation.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbldetaildatetime.text.rotext" xml:space="preserve">
+    <value>Data/hora:</value>
+  </data>
+  <data name="RES_audit.lbldetaildatetime.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbldetaildescription.text.rotext" xml:space="preserve">
+    <value>Descripció:</value>
+  </data>
+  <data name="RES_audit.lbldetaildescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbldetailobjectname.text.rotext" xml:space="preserve">
+    <value>Nom de l’objecte:</value>
+  </data>
+  <data name="RES_audit.lbldetailobjectname.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbldetailobjecttype.text.rotext" xml:space="preserve">
+    <value>Tipus d’objecte:</value>
+  </data>
+  <data name="RES_audit.lbldetailobjecttype.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbldetailusername.text.rotext" xml:space="preserve">
+    <value>Usuari:</value>
+  </data>
+  <data name="RES_audit.lbldetailusername.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblenddate.text.rotext" xml:space="preserve">
+    <value>Data final:</value>
+  </data>
+  <data name="RES_audit.lblenddate.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblerrordescription.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblerrordescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblerrordescription2.text.rotext" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="RES_audit.lblerrordescription2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblheader.text.rotext" xml:space="preserve">
+    <value>Auditoria d’accions</value>
+  </data>
+  <data name="RES_audit.lblheader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblinfo.text.rotext" xml:space="preserve">
+    <value>En compliment del RGPD, la pantalla Auditoria registra totes les accions que s’han dut a terme a l’aplicació i quins usuaris les han realitzat. Pots filtrar les consultes per diversos criteris, de manera que puguis localitzar més fàcilment la informació que necessites.</value>
+  </data>
+  <data name="RES_audit.lblinfo.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblobjecttype.text.rotext" xml:space="preserve">
+    <value>Tipus d’objecte:</value>
+  </data>
+  <data name="RES_audit.lblobjecttype.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblpager.text.rotext" xml:space="preserve">
+    <value>0 / 6</value>
+  </data>
+  <data name="RES_audit.lblpager.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbluser.text.rotext" xml:space="preserve">
+    <value>Usuari:</value>
+  </data>
+  <data name="RES_audit.lbluser.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ld.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.loginpanel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lp.text.rotext" xml:space="preserve">
+    <value>Carregant&amp;hellip;</value>
+  </data>
+  <data name="RES_audit.lp.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.m.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.mc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.mc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tabsencetracking.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat el document de seguiment</value>
+  </data>
+  <data name="RES_audit.message.tabsencetracking.aupdate.rotext" xml:space="preserve">
+    <value>S’ha actualitzat el document de seguiment</value>
+  </data>
+  <data name="RES_audit.message.taccessauthorization.adelete.rotext" xml:space="preserve">
+    <value>S’ha concedit l’accés a l’usuari $@EmployeeName@ a la zona $@AccessGroup@</value>
+  </data>
+  <data name="RES_audit.message.taccessauthorization.aexecuted.rotext" xml:space="preserve">
+    <value>S’ha concedit l’accés a l’usuari $@EmployeeName@ a les zones: $@AccessGroup@</value>
+  </data>
+  <data name="RES_audit.message.taccessauthorization.ainsert.rotext" xml:space="preserve">
+    <value>S’ha eliminat l’accés a l’usuari $@EmployeeName@ a la zona $@AccessGroup@</value>
+  </data>
+  <data name="RES_audit.message.taccessdata.aselect.rotext" xml:space="preserve">
+    <value>S’han consultat dades d’accessos del període $@DateIni@ a $@DateEnd@ per als usuaris següents:$CRLF $@EmployeeNames@</value>
+  </data>
+  <data name="RES_audit.message.taccessgroup.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat el grup d’accés</value>
+  </data>
+  <data name="RES_audit.message.taccessgroup.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou grup d’accés amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.taccessgroup.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat el grup d’accés</value>
+  </data>
+  <data name="RES_audit.message.taccessgroup.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents del grup d’accés:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.taccessgrouppermission.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou grup d’accés amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.taccessperiod.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat el període d’accés</value>
+  </data>
+  <data name="RES_audit.message.taccessperiod.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou període d’accés amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.taccessperiod.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat el període d’accés</value>
+  </data>
+  <data name="RES_audit.message.taccessperiod.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents del període d’accés:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.taccessperiodholidays.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou període d’accés (període) amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.taccesszone.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat la zona</value>
+  </data>
+  <data name="RES_audit.message.taccesszone.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una nova zona d’accessos amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.taccesszone.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat la zona</value>
+  </data>
+  <data name="RES_audit.message.taccesszone.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents de la zona d’accessos:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tactivity.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat l’activitat</value>
+  </data>
+  <data name="RES_audit.message.tactivity.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una nova activitat amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tactivity.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat una activitat</value>
+  </data>
+  <data name="RES_audit.message.tactivity.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents de l’activitat:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tadvancedparameter.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat el paràmetre avançat</value>
+  </data>
+  <data name="RES_audit.message.tadvancedparameter.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat el paràmetre avançat</value>
+  </data>
+  <data name="RES_audit.message.tadvancedparameter.aupdate.rotext" xml:space="preserve">
+    <value>S’ha actualitzat el valor del paràmetre</value>
+  </data>
+  <data name="RES_audit.message.tassigncause.ainsert.rotext" xml:space="preserve">
+    <value>S’ha realitzat una introducció massiva de justificacions de l’usuari o usuaris ($@DestinationEmployeeName@) entre el $@DateIni@ i el $@DateEnd@, amb la justificació $@Cause@, absència completa: $@CompletedDays@</value>
+  </data>
+  <data name="RES_audit.message.tassigncause.aupdate.rotext" xml:space="preserve">
+    <value>S’ha realitzat una introducció massiva de justificacions de l’usuari o usuaris ($@DestinationEmployeeName@) entre el $@DateIni@ i el $@DateEnd@, amb la justificació $@Cause@, absència completa: $@CompletedDays@</value>
+  </data>
+  <data name="RES_audit.message.tassigncenters.aupdate.rotext" xml:space="preserve">
+    <value>S’ha realitzat una assignació massiva de centres de cost entre el $@DateIni@ i el $@DateEnd@.</value>
+  </data>
+  <data name="RES_audit.message.tassignment.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat el lloc $@AssignmentName@.</value>
+  </data>
+  <data name="RES_audit.message.tassignment.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou lloc amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tassignment.aselect.rotext" xml:space="preserve">
+    <value>Consulta</value>
+  </data>
+  <data name="RES_audit.message.tassignment.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents del lloc:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tattendancedata.aselect.rotext" xml:space="preserve">
+    <value>S’han consultat dades de control horari ($@CubeView@) del període $@DateIni@ a $@DateEnd@ per als usuaris següents:$CRLF $@EmployeeNames@</value>
+  </data>
+  <data name="RES_audit.message.tbot.adelete.rotext" xml:space="preserve">
+    <value>S´ha esborrat un bot</value>
+  </data>
+  <data name="RES_audit.message.tbot.aexecuted.rotext" xml:space="preserve">
+    <value>S´ha executat un bot</value>
+  </data>
+  <data name="RES_audit.message.tbot.ainsert.rotext" xml:space="preserve">
+    <value>S´ha creat un bot</value>
+  </data>
+  <data name="RES_audit.message.tbot.aselect.rotext" xml:space="preserve">
+    <value>S´ha seleccionat un bot</value>
+  </data>
+  <data name="RES_audit.message.tbot.aupdate.rotext" xml:space="preserve">
+    <value>S´ha modificat un bot</value>
+  </data>
+  <data name="RES_audit.message.tbotrule.adelete.rotext" xml:space="preserve">
+    <value>S´ha esborrat una regla de bot</value>
+  </data>
+  <data name="RES_audit.message.tbotrule.aexecuted.rotext" xml:space="preserve">
+    <value>S´ha executat una regla de bot</value>
+  </data>
+  <data name="RES_audit.message.tbotrule.ainsert.rotext" xml:space="preserve">
+    <value>S´ha creat una regla de bot</value>
+  </data>
+  <data name="RES_audit.message.tbotrule.aselect.rotext" xml:space="preserve">
+    <value>S´ha seleccionat una regla de bot</value>
+  </data>
+  <data name="RES_audit.message.tbotrule.aupdate.rotext" xml:space="preserve">
+    <value>S´ha modificat una regla de bot</value>
+  </data>
+  <data name="RES_audit.message.tbudget.aselect.rotext" xml:space="preserve">
+    <value>Consulta</value>
+  </data>
+  <data name="RES_audit.message.tbudget.aupdate.rotext" xml:space="preserve">
+    <value>S’ha actualitzat el pressupost</value>
+  </data>
+  <data name="RES_audit.message.tbudgetrow.aupdate.rotext" xml:space="preserve">
+    <value>S’ha actualitzat una fila del pressupost</value>
+  </data>
+  <data name="RES_audit.message.tcalendar.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat el calendari</value>
+  </data>
+  <data name="RES_audit.message.tcalendar.aupdate.rotext" xml:space="preserve">
+    <value>S’ha modificat el calendari</value>
+  </data>
+  <data name="RES_audit.message.tcalendarrow.aupdate.rotext" xml:space="preserve">
+    <value>S’ha modificat la planificació de l’usuari $@EmployeeName@ del dia $@ShiftDate@ amb l’horari $@ShiftName@. Bloquejat: $@IsLockedBeforeUpdate@ --&gt; $@NowLocked@. Vacances: $@HasHolidaysBeforeUpdate@ --&gt; $@NowHolidays@</value>
+  </data>
+  <data name="RES_audit.message.tcamera.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat la càmera</value>
+  </data>
+  <data name="RES_audit.message.tcamera.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una nova càmera amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tcamera.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat una càmera</value>
+  </data>
+  <data name="RES_audit.message.tcamera.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents de la càmera:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tcaptcha.aexecuted.rotext" xml:space="preserve">
+    <value>S’ha introduït un codi de validació</value>
+  </data>
+  <data name="RES_audit.message.tcause.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat la justificació</value>
+  </data>
+  <data name="RES_audit.message.tcause.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una nova justificació amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tcause.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat una justificació</value>
+  </data>
+  <data name="RES_audit.message.tcause.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents de la justificació:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tcauselimitvalue.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat el límit de justificació</value>
+  </data>
+  <data name="RES_audit.message.tcauselimitvalue.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou límit de justificació amb les dades:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tcauselimitvalue.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat el límit de justificació</value>
+  </data>
+  <data name="RES_audit.message.tcauselimitvalue.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents del límit de justificació:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tchannel.aconnect.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannel.adelete.rotext" xml:space="preserve">
+    <value>S´ha esborrat el canal de comunicacions $@ChannelTitle@</value>
+  </data>
+  <data name="RES_audit.message.tchannel.aexecuted.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannel.ainsert.rotext" xml:space="preserve">
+    <value>S´ha creat un nou canal de comunicacions $@ChannelTitle@: $CRLF Ids d´empleats subscrits: $@ChannelSuscribedEmployeesId@ $CRLF Ids de departaments subscrits: $@ChannelSuscribedGroupsId@ $CRLF Ids de supervisors subscrits: $@ChannelSu</value>
+  </data>
+  <data name="RES_audit.message.tchannel.amultiselect.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannel.aselect.rotext" xml:space="preserve">
+    <value>S´ha consultat el canal de comunicacions $@ChannelTitle@</value>
+  </data>
+  <data name="RES_audit.message.tchannel.aupdate.rotext" xml:space="preserve">
+    <value>S´ha modificat el canal de comunicacions $@ChannelTitle@: $CRLF Estat: $@ChannelStatus@ $CRLF Ids d´empleats subscrits: $@ChannelSuscribedEmployeesId@ $CRLF Ids de departaments subscrits: $@ChannelSuscribedGroupsId@ $CRLF @ChannelSuscribedSupervisorId@ </value>
+  </data>
+  <data name="RES_audit.message.tchannelconversation.aconnect.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannelconversation.adelete.rotext" xml:space="preserve">
+    <value>S´ha esborrat la conversa</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversation.aexecuted.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannelconversation.ainsert.rotext" xml:space="preserve">
+    <value>S´ha creat una nova $@ConversationType@. Referència $@ConversationReference@</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversation.amultiselect.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannelconversation.aselect.rotext" xml:space="preserve">
+    <value>S´ha consultat la $@ConversationType@ $@ConversationReference@</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversation.aupdate.rotext" xml:space="preserve">
+    <value>S´ha modificat l´estat de $@ConversationType@ $@ConversationReference@: $@ConversationStatus@</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversationcomplexity.aupdate.rotext" xml:space="preserve">
+    <value>S´ha modificat la complexitat de la denúncia: $@ConversationComplexity@</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversationmessage.aconnect.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannelconversationmessage.adelete.rotext" xml:space="preserve">
+    <value>S´ha suprimit el missatge de la conversa.</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversationmessage.aexecuted.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannelconversationmessage.ainsert.rotext" xml:space="preserve">
+    <value>S´ha creat un missatge nou a la $@ConversationType@ amb referència $@ConversationReference@</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversationmessage.amultiselect.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannelconversationmessage.aselect.rotext" xml:space="preserve">
+    <value>S´ha llegit el missatge</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversationmessage.aupdate.rotext" xml:space="preserve">
+    <value>S´ha modificat el missatge amb les dades següents: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tcompletetasks.aexecuted.rotext" xml:space="preserve">
+    <value>(Tasca $@iTask@)  Els projectes següents s’han completat:&amp;quot;$@strProjects@&amp;quot; . Les tasques següents s’han completat: &amp;quot;$@strTaskNames@&amp;quot;.</value>
+  </data>
+  <data name="RES_audit.message.tconcept.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat el saldo</value>
+  </data>
+  <data name="RES_audit.message.tconcept.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou saldo amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tconcept.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat el saldo $@Name@</value>
+  </data>
+  <data name="RES_audit.message.tconcept.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents del saldo:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tconceptcomposition.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat la composició del saldo</value>
+  </data>
+  <data name="RES_audit.message.tconceptcomposition.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una nova composició del saldo amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tconceptcomposition.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat la composició del saldo</value>
+  </data>
+  <data name="RES_audit.message.tconceptgroup.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat el grup de saldo</value>
+  </data>
+  <data name="RES_audit.message.tconceptgroup.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou grup de saldos amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tconceptgroup.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat el grup de saldo</value>
+  </data>
+  <data name="RES_audit.message.tconceptgroup.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents del grup de saldo:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tconnection.aconnect.rotext" xml:space="preserve">
+    <value>L’usuari s’ha connectat.</value>
+  </data>
+  <data name="RES_audit.message.tconnection.aconnectfail.rotext" xml:space="preserve">
+    <value>L’usuari $@Passport@ no ha pogut accedir a Visualtime. Motiu: $@ErrorText@</value>
+  </data>
+  <data name="RES_audit.message.tconnection.adisconnect.rotext" xml:space="preserve">
+    <value>L’usuari s’ha desconnectat.</value>
+  </data>
+  <data name="RES_audit.message.tcopyplanification.ainsert.rotext" xml:space="preserve">
+    <value>S’ha programat una còpia de planificació (tasca $@iTask@) dels usuaris:$@SourceEmployeeName@ als usuaris:$@DestinationEmployeeName@ entre les dates $@DateIni@ - $@DateEnd@. Opcions de còpia: horaris principals:$@CopyMainShifts@ - horaris alternatius:$@AlternativeShifts@ - copiar vacances:$@CopyHolidays@ - Mantenir vacances actuals:$@KeepBloquedDays@ - Mantenir dies bloquejats:$@KeepHolidays@</value>
+  </data>
+  <data name="RES_audit.message.tcopyplanification.aselect.rotext" xml:space="preserve">
+    <value>S’ha realitzat una còpia de planificació de calendari</value>
+  </data>
+  <data name="RES_audit.message.tcopyplanification.aupdate.rotext" xml:space="preserve">
+    <value>S’ha realitzat una còpia de la planificació de l’usuari o usuaris ($@SourceEmployeeName@) entre el $@DateIni@ i el $@DateEnd@ a l’usuari o usuaris ($@DestinationEmployeeName@)</value>
+  </data>
+  <data name="RES_audit.message.tcopyplanificationadvanced.aexecuted.rotext" xml:space="preserve">
+    <value>S’ha executat amb els paràmetres següents:$@ParametersValues@</value>
+  </data>
+  <data name="RES_audit.message.tcopyplanificationadvanced.ainsert.rotext" xml:space="preserve">
+    <value>S’ha programat una còpia de planificació (tasca $@iTask@) dels usuaris:$@SourceEmployeeName@ als usuaris:$@DestinationEmployeeName@ entre les dates $@DateIni@ - $@DateEnd@ a les dates $@DestinationDateIni@ - $@DestinationDateEnd@. Opcions de còpia: horaris principals:$@CopyMainShifts@ - horaris alternatius:$@AlternativeShifts@ - copiar vacances:$@CopyHolidays@ - Mantenir vacances actuals:$@KeepBloquedDays@ - Mantenir dies bloquejats:$@KeepHolidays@</value>
+  </data>
+  <data name="RES_audit.message.tcopyplanificationadvanced.aupdate.rotext" xml:space="preserve">
+    <value>S’ha realitzat una còpia de la planificació de l’usuari o usuaris ($@SourceEmployeeName@) entre el $@DateIni@ i el $@DateEnd@ a l’usuari o usuaris ($@DestinationEmployeeName@) entre el $@DestinationDateIni@ i el $@DestinationDateEnd@</value>
+  </data>
+  <data name="RES_audit.message.tcopyplanificationtoemployees.aupdate.rotext" xml:space="preserve">
+    <value>S’ha realitzat una còpia de planificació a l’usuari o usuaris ($@DestinationEmployeeName@) entre el $@DateIni@ i el $@DateEnd@</value>
+  </data>
+  <data name="RES_audit.message.tdailybudgetposition.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat una posició del pressupost</value>
+  </data>
+  <data name="RES_audit.message.tdailybudgetposition.ainsert.rotext" xml:space="preserve">
+    <value>S’ha afegit una posició al pressupost</value>
+  </data>
+  <data name="RES_audit.message.tdailycause.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una nova justificació $@CauseName@ diària amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tdailycause.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents de la justificació diària:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tdailycoverage.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat la dotació $@AssignmentName@.</value>
+  </data>
+  <data name="RES_audit.message.tdailycoverage.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una nova dotació de lloc amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tdailycoverage.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents del lloc:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tdailypunchesdetail.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat informació de $@Info@ de l’usuari $@EmployeeName@ per al dia $@Date@</value>
+  </data>
+  <data name="RES_audit.message.tdatalink.aexecuted.rotext" xml:space="preserve">
+    <value>S’ha programat una exportació de dades (tasca $@iTask@) de tipus:&amp;quot;$@ExportName@&amp;quot; entre les dates: $@originDate@ i $@destinationDate@.</value>
+  </data>
+  <data name="RES_audit.message.tdatalink.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades de l’enllaç:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkimportdailycoverage.aselect.rotext" xml:space="preserve">
+    <value>S’ha executat una importació de cobertures diàries</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkimportemployees.aselect.rotext" xml:space="preserve">
+    <value>S’ha executat una importació d’usuaris en format $@ImportEmployeesType@</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkimportgroups.aselect.rotext" xml:space="preserve">
+    <value>S’ha executat una importació de grups en format $@ImportGroupsType@</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkimportprogrammedabsences.aexecuted.rotext" xml:space="preserve">
+    <value>S’ha realitzat una importació d’absències prolongades des d’un fitxer de text</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkimporttask.aexecuted.rotext" xml:space="preserve">
+    <value>S’ha programat una importació de dades (tasca $@iTask@) de tipus:&amp;quot;$@ImportName@&amp;quot;</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkimporttask.aselect.rotext" xml:space="preserve">
+    <value>S’ha executat una importació de tasques</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkresult.aexecuted.rotext" xml:space="preserve">
+    <value>$@ImportResult@</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkws.aconnect.rotext" xml:space="preserve">
+    <value>Inici de sessió correcte de $@sUserName@</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkws.aconnectfail.rotext" xml:space="preserve">
+    <value>Error en iniciar la sessió de $@sUserName@ per: $@sReason@</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkws.aexecuted.rotext" xml:space="preserve">
+    <value>Servei web: $@sImportType@. Inserir/actualitzar objecte: $@sObjectId@. Resultat: $@sReason@</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkws.adelete.rotext" xml:space="preserve">
+    <value>Servei web: $@sImportType@. Eliminar objecte: $@sObjectId@. Resultat: $@sReason@</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkws.aupdate.rotext" xml:space="preserve">
+    <value>S'han actualitzat les dades d'accés als serveis d'importació web</value>
+  </data>
+  <data name="RES_audit.message.tdiningroom.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat un torn del menjador</value>
+  </data>
+  <data name="RES_audit.message.tdiningroom.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un torn del menjador</value>
+  </data>
+  <data name="RES_audit.message.tdiningroom.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat un torn del menjador</value>
+  </data>
+  <data name="RES_audit.message.tdiningroom.aupdate.rotext" xml:space="preserve">
+    <value>S’ha modificat un torn del menjador</value>
+  </data>
+  <data name="RES_audit.message.tdocument.adelete.rotext" xml:space="preserve">
+    <value>S’ha eliminat un document</value>
+  </data>
+  <data name="RES_audit.message.tdocument.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat un document</value>
+  </data>
+  <data name="RES_audit.message.tdocument.aupdate.rotext" xml:space="preserve">
+    <value>S’ha actualitzat un document</value>
+  </data>
+  <data name="RES_audit.message.tdocumentabsence.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat el document</value>
+  </data>
+  <data name="RES_audit.message.tdocumentabsence.aselect.rotext" xml:space="preserve">
+    <value>Consulta</value>
+  </data>
+  <data name="RES_audit.message.tdocumentabsence.aupdate.rotext" xml:space="preserve">
+    <value>Actualització</value>
+  </data>
+  <data name="RES_audit.message.tdownloadfile.aexecuted.rotext" xml:space="preserve">
+    <value>S’ha descarregat un fitxer del servidor.</value>
+  </data>
+  <data name="RES_audit.message.temergencyreport.aexecuted.rotext" xml:space="preserve">
+    <value>S’han executat de manera anònima els informes d’emergència següents: $CRLF ´$@Name@´</value>
+  </data>
+  <data name="RES_audit.message.temployee.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat l’usuari $@EmployeeName@.</value>
+  </data>
+  <data name="RES_audit.message.temployee.aexecuted.rotext" xml:space="preserve">
+    <value>S’ha programat una còpia de dades massiva (tasca $@iTask@) de l’usuari:$@SourceEmployeeName@ als usuaris:$@DestinationEmployeeName@. Camps de la fitxa:$@CopyUserFields@ ($@UserFieldsSelected@). Còpia de conveni:$@CopyLabAgree@. Còpia de llocs:$@CopyAssignments@ ($@Assignments@). Còpia de planificació: $@CopySchedule@ entre les dates $@DateIni@ - $@DateEnd@. Opcions de còpia: horaris principals:$@CopyMainShifts@ - horaris alternatius:$@AlternativeShifts@ - Còpia de vacances:$@CopyHolidays@ - Mantenir vacances actuals:$@KeepBloquedDays@ - Mantenir dies bloquejats:$@KeepHolidays@ Còpia de centres:$@BusinessCenters@</value>
+  </data>
+  <data name="RES_audit.message.temployee.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou usuari amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.temployee.amultiselect.rotext" xml:space="preserve">
+    <value>S’han consultat els usuaris següents: $@EmployeeNames@.</value>
+  </data>
+  <data name="RES_audit.message.temployee.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat l’usuari $@EmployeeName@.</value>
+  </data>
+  <data name="RES_audit.message.temployee.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents de l’usuari:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.temployeeassignment.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat el lloc $@AssignmentName@.</value>
+  </data>
+  <data name="RES_audit.message.temployeeassignment.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou lloc amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.temployeeassignment.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents del lloc:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.temployeecenters.adelete.rotext" xml:space="preserve">
+    <value>S’ha eliminat l’usuari $@EmployeeName@ dels centres de cost $@Centers@</value>
+  </data>
+  <data name="RES_audit.message.temployeecenters.aexecuted.rotext" xml:space="preserve">
+    <value>S’ha assignat l’usuari $@EmployeeName@ als centres de cost $@Centers@</value>
+  </data>
+  <data name="RES_audit.message.temployeecenters.ainsert.rotext" xml:space="preserve">
+    <value>S’ha afegit l’usuari $@EmployeeName@ als centres de cost $@Centers@</value>
+  </data>
+  <data name="RES_audit.message.temployeecontract.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat el contracte $@IDContract@ de l’usuari $@EmployeeName@.</value>
+  </data>
+  <data name="RES_audit.message.temployeecontract.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou contracte per a l’usuari $@EmployeeName@ amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.temployeecontract.amultiselect.rotext" xml:space="preserve">
+    <value>S’han consultat els contractes següents de l’usuari $@EmployeeName@:$CRLF $@IDContracts@</value>
+  </data>
+  <data name="RES_audit.message.temployeecontract.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat el contracte $@IDContract@ de l’usuari $@EmployeeName@</value>
+  </data>
+  <data name="RES_audit.message.temployeecontract.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents del contracte de l’usuari $@EmployeeName@:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.temployeegroup.ainsert.rotext" xml:space="preserve">
+    <value>S’ha introduït la mobilitat per a l’usuari $@EmployeeName@:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.temployeegroup.aupdate.rotext" xml:space="preserve">
+    <value>S’ha actualitzat la mobilitat per a l’usuari $@EmployeeName@:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.temployeeonterminal.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou usuari al terminal (no s’hauria hagut de fer)</value>
+  </data>
+  <data name="RES_audit.message.tentry.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat el fitxatge</value>
+  </data>
+  <data name="RES_audit.message.tentry.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou fitxatge amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tentry.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents del fitxatge:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.teventscheduler.adelete.rotext" xml:space="preserve">
+    <value>Esborrat</value>
+  </data>
+  <data name="RES_audit.message.teventscheduler.ainsert.rotext" xml:space="preserve">
+    <value>Alta</value>
+  </data>
+  <data name="RES_audit.message.teventscheduler.aselect.rotext" xml:space="preserve">
+    <value>Consulta</value>
+  </data>
+  <data name="RES_audit.message.teventscheduler.aupdate.rotext" xml:space="preserve">
+    <value>Actualització</value>
+  </data>
+  <data name="RES_audit.message.tgenius.aconnect.rotext" xml:space="preserve">
+    <value>S’han consultat dades de la vista Genius</value>
+  </data>
+  <data name="RES_audit.message.tgenius.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat la vista Genius</value>
+  </data>
+  <data name="RES_audit.message.tgenius.aexecuted.rotext" xml:space="preserve">
+    <value>S’ha obert la vista Genius</value>
+  </data>
+  <data name="RES_audit.message.tgenius.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una nova vista Genius</value>
+  </data>
+  <data name="RES_audit.message.tgenius.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat la vista Genius</value>
+  </data>
+  <data name="RES_audit.message.tgenius.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat els paràmetres de la vista Genius</value>
+  </data>
+  <data name="RES_audit.message.tgeniusscheduler.adelete.rotext" xml:space="preserve">
+    <value>S´ha esborrat la planificació de l´estudi: $@ReportSchedulerName@</value>
+  </data>
+  <data name="RES_audit.message.tgeniusscheduler.ainsert.rotext" xml:space="preserve">
+    <value>S´ha creat una nova planificació de l´estudi amb les dades següents: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tgeniusscheduler.amultiselect.rotext" xml:space="preserve">
+    <value>S´han consultat les planificacions següents de l´estudi: $@GeniusSchedulerNames@.</value>
+  </data>
+  <data name="RES_audit.message.tgeniusscheduler.aselect.rotext" xml:space="preserve">
+    <value>S´ha consultat la planificació de l´estudi: $@GeniusSchedulerName@.</value>
+  </data>
+  <data name="RES_audit.message.tgeniusscheduler.aupdate.rotext" xml:space="preserve">
+    <value>S´han modificat les dades següents de la planificació de l´estudi: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tgroup.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat el grup $@GroupName@.</value>
+  </data>
+  <data name="RES_audit.message.tgroup.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou grup amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tgroup.amultiselect.rotext" xml:space="preserve">
+    <value>S’han consultat els grups següents: $@GroupNames@.</value>
+  </data>
+  <data name="RES_audit.message.tgroup.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat el grup $@GroupName@.</value>
+  </data>
+  <data name="RES_audit.message.tgroup.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents del grup:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tgroupfeature.adelete.rotext" xml:space="preserve">
+    <value>S’ha eliminat una funció</value>
+  </data>
+  <data name="RES_audit.message.tgroupfeature.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una funció</value>
+  </data>
+  <data name="RES_audit.message.tgroupfeature.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat una funció</value>
+  </data>
+  <data name="RES_audit.message.tgroupfeature.aupdate.rotext" xml:space="preserve">
+    <value>S’ha actualitzat una funció</value>
+  </data>
+  <data name="RES_audit.message.tgroupfeaturepermissionoverfeature.aexecuted.rotext" xml:space="preserve">
+    <value>S´ha establert el permís $@sFeature@ al nivell: $@sPermission@</value>
+  </data>
+  <data name="RES_audit.message.tgroupfeaturepermissionoverfeature.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una funció</value>
+  </data>
+  <data name="RES_audit.message.tgroupuserfield.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou camp d’usuari</value>
+  </data>
+  <data name="RES_audit.message.tindicator.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat l’indicador $@IndicatorName@.</value>
+  </data>
+  <data name="RES_audit.message.tindicator.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou indicador amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tindicator.aselect.rotext" xml:space="preserve">
+    <value>Consulta</value>
+  </data>
+  <data name="RES_audit.message.tindicator.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents de l’indicador:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tjustifiedincidences.aupdate.rotext" xml:space="preserve">
+    <value>S’ha realitzat una justificació massiva d’incidències entre el $@DateIni@ i el $@DateEnd@.</value>
+  </data>
+  <data name="RES_audit.message.tlabagree.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat el conveni</value>
+  </data>
+  <data name="RES_audit.message.tlabagree.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou grup de conveni amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tlabagree.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat un conveni</value>
+  </data>
+  <data name="RES_audit.message.tlabagree.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents del conveni:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tlabagreeaccrualrule.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat la regla de conveni</value>
+  </data>
+  <data name="RES_audit.message.tlabagreeaccrualrule.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una nova regla de conveni amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tlabagreeaccrualrule.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat un saldo de regla de conveni</value>
+  </data>
+  <data name="RES_audit.message.tlabagreerule.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat la regla de conveni</value>
+  </data>
+  <data name="RES_audit.message.tlabagreerule.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una nova regla de conveni amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tlabagreerule.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat la regla de conveni</value>
+  </data>
+  <data name="RES_audit.message.tlabagreerule.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents de la regla de conveni:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tlivetask.aexecuted.rotext" xml:space="preserve">
+    <value>L’execució de la tasca $@LiveTaskParameters@ (Configuració: $@LiveTaskConfiguration@) ha finalitzat</value>
+  </data>
+  <data name="RES_audit.message.tlivetask.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una tasca en segon pla</value>
+  </data>
+  <data name="RES_audit.message.tlockdate.aexecuted.rotext" xml:space="preserve">
+    <value>S’ha programat l’assignació de la data de tancament massiva (tasca $@iTask@) als usuaris:$@DestinationEmployeeName@. Amb les opcions següents: aplicar data global: $@ApplyLockDateGlobal@, Data aplicada: $@LockDate@</value>
+  </data>
+  <data name="RES_audit.message.tlockdate.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat la data de tancament de l’usuari</value>
+  </data>
+  <data name="RES_audit.message.tlockdate.aupdate.rotext" xml:space="preserve">
+    <value>Actualització</value>
+  </data>
+  <data name="RES_audit.message.tlogbook.aselect.rotext" xml:space="preserve">
+    <value>S´ha consultat el llibre de registre de la denúncia $@ComplaintRef@</value>
+  </data>
+  <data name="RES_audit.message.tmassmarkconsents.ainsert.rotext" xml:space="preserve">
+    <value>S’ha realitzat una introducció massiva de consentiments ($@ListEmployeeName@), tipus: $@ConsentType@, vàlid: $@IsDelivered@, Data aprovació: $@ApprovalDate@</value>
+  </data>
+  <data name="RES_audit.message.tmassmobilityemployees.anone.rotext" xml:space="preserve">
+    <value>Han fallat $@Employees@ usuaris en intentar aplicar la mobilitat massiva al grup $@Group@.</value>
+  </data>
+  <data name="RES_audit.message.tmassmobilityemployees.aupdate.rotext" xml:space="preserve">
+    <value>S’ha aplicat una mobilitat massiva de $@Employees@ usuaris al grup $@Group@.</value>
+  </data>
+  <data name="RES_audit.message.tmessageemployees.aexecuted.rotext" xml:space="preserve">
+    <value>S’ha enviat el missatge següent (tasca $@iTask@): &amp;quot;$@message@&amp;quot; als usuaris: $@DestinationEmployeeName@</value>
+  </data>
+  <data name="RES_audit.message.tmove.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat el fitxatge $@MoveName@.</value>
+  </data>
+  <data name="RES_audit.message.tmove.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou fitxatge de $@PunchType@ per al dia $@Date@ a les $@Time@$@CauseName@. Detall per a suport:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tmove.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat un fitxatge</value>
+  </data>
+  <data name="RES_audit.message.tmove.aupdate.rotext" xml:space="preserve">
+    <value>S’ha modificat un fitxatge, que ara és de $@PunchType@ per al dia $@Date@ a les $@Time@$@CauseName@. Detall per a suport:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tnotification.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat la notificació $@NotificationName@.</value>
+  </data>
+  <data name="RES_audit.message.tnotification.aexecuted.rotext" xml:space="preserve">
+    <value>S’ha executat una notificació</value>
+  </data>
+  <data name="RES_audit.message.tnotification.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una notificació amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tnotification.amultiselect.rotext" xml:space="preserve">
+    <value>S’han consultat els camp següents: $@NotificationNames@.</value>
+  </data>
+  <data name="RES_audit.message.tnotification.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat una notificació</value>
+  </data>
+  <data name="RES_audit.message.tnotification.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents de la notificació:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tparameters.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat els paràmetres</value>
+  </data>
+  <data name="RES_audit.message.tpassport.ablock.rotext" xml:space="preserve">
+    <value>S’ha bloquejat el compte dels usuaris següents:$CRLF $@EmployeesNames@</value>
+  </data>
+  <data name="RES_audit.message.tpassport.adelete.rotext" xml:space="preserve">
+    <value>S’ha eliminat l’usuari</value>
+  </data>
+  <data name="RES_audit.message.tpassport.aexecuted.rotext" xml:space="preserve">
+    <value>S’ha actualitzat la configuració de les aplicacions dels usuaris següents:$CRLF $@EmployeesNames@</value>
+  </data>
+  <data name="RES_audit.message.tpassport.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou usuari</value>
+  </data>
+  <data name="RES_audit.message.tpassport.aunblock.rotext" xml:space="preserve">
+    <value>S’ha desbloquejat el compte dels usuaris següents:$CRLF $@EmployeesNames@</value>
+  </data>
+  <data name="RES_audit.message.tpassport.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat dades de l’usuari</value>
+  </data>
+  <data name="RES_audit.message.tpassportconsent.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou consentiment</value>
+  </data>
+  <data name="RES_audit.message.tpassportconsent.aupdate.rotext" xml:space="preserve">
+    <value>S’ha actualitzat el consentiment</value>
+  </data>
+  <data name="RES_audit.message.tpassportpassword.aupdate.rotext" xml:space="preserve">
+    <value>S’ha regenerat la contrasenya dels usuaris següents:$CRLF $@EmployeesNames@</value>
+  </data>
+  <data name="RES_audit.message.tpassportpermissionsoveremployees.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat els permisos sobre usuaris de l’usuari o grup d’usuaris $@PassportName@</value>
+  </data>
+  <data name="RES_audit.message.tpassportpermissionsoverfeatures.aexecuted.rotext" xml:space="preserve">
+    <value>S’han actualitzat els permisos del node.</value>
+  </data>
+  <data name="RES_audit.message.tpassportpermissionsoverfeatures.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat els permisos sobre funcionalitats de l’usuari o grup d’usuaris $@PassportName@</value>
+  </data>
+  <data name="RES_audit.message.tpassportpermissionsovergroups.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat els permisos sobre grups de l’usuari o grup d’usuaris $@PassportName@</value>
+  </data>
+  <data name="RES_audit.message.tproductivdata.aselect.rotext" xml:space="preserve">
+    <value>S’han consultat dades de tasques del període $@DateIni@ a $@DateEnd@ per als usuaris següents:$CRLF $@EmployeeNames@</value>
+  </data>
+  <data name="RES_audit.message.tproductiveunit.aselect.rotext" xml:space="preserve">
+    <value>Consulta</value>
+  </data>
+  <data name="RES_audit.message.tproductiveunit.aupdate.rotext" xml:space="preserve">
+    <value>Actualització</value>
+  </data>
+  <data name="RES_audit.message.tproductiveunitmode.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat el mode de la unitat productiva</value>
+  </data>
+  <data name="RES_audit.message.tproductiveunitmode.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou mode de la unitat productiva</value>
+  </data>
+  <data name="RES_audit.message.tproductiveunitmode.aupdate.rotext" xml:space="preserve">
+    <value>Actualització</value>
+  </data>
+  <data name="RES_audit.message.tproductiveunitmodeposition.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat la posició</value>
+  </data>
+  <data name="RES_audit.message.tproductiveunitmodeposition.aupdate.rotext" xml:space="preserve">
+    <value>Actualització</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedabsence.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat la previsió de dies d’absència</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedabsence.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una nova previsió de dies d’absència amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedabsence.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat una previsió de dies d’absència</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedabsence.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents de la previsió de dies d’absència:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedcause.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat la previsió d’hores d’absència</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedcause.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una nova previsió d’hores d’absència amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedcause.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat una previsió d’hores d’absència</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedcause.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents de la previsió d’hores d’absència:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedholiday.adelete.rotext" xml:space="preserve">
+    <value>S’ha eliminat una previsió de vacances/permisos per hores</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedholiday.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una previsió de vacances/permisos per hores</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedholiday.aupdate.rotext" xml:space="preserve">
+    <value>S’ha actualitzat una previsió de vacances/permisos per hores</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedovertime.adelete.rotext" xml:space="preserve">
+    <value>S’ha eliminat una previsió d’hores d’excés</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedovertime.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una nova previsió d’hores d’excés</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedovertime.aupdate.rotext" xml:space="preserve">
+    <value>S’ha actualitzat una previsió d’hores d’excés</value>
+  </data>
+  <data name="RES_audit.message.tprojecttemplate.adelete.rotext" xml:space="preserve">
+    <value>Esborrat</value>
+  </data>
+  <data name="RES_audit.message.tprojecttemplate.ainsert.rotext" xml:space="preserve">
+    <value>Alta</value>
+  </data>
+  <data name="RES_audit.message.tprojecttemplate.aselect.rotext" xml:space="preserve">
+    <value>Consulta</value>
+  </data>
+  <data name="RES_audit.message.tprojecttemplate.aupdate.rotext" xml:space="preserve">
+    <value>Actualització</value>
+  </data>
+  <data name="RES_audit.message.tpunchimage.aselect.rotext" xml:space="preserve">
+    <value>L’usuari ha consultat la foto del fitxatge ($@IdPunch@) de l’usuari $@EmployeeName@</value>
+  </data>
+  <data name="RES_audit.message.tremark.ainsert.rotext" xml:space="preserve">
+    <value>S’ha introduït l’observació als fitxatges del dia $@Date@ per a l’usuari $@EmployeeName@</value>
+  </data>
+  <data name="RES_audit.message.tremark.aupdate.rotext" xml:space="preserve">
+    <value>S’han actualitzat les observacions dels fitxatges del dia $@Date@ per a l’usuari $@EmployeeName@</value>
+  </data>
+  <data name="RES_audit.message.treport.aexecuted.rotext" xml:space="preserve">
+    <value>S’ha executat un informe</value>
+  </data>
+  <data name="RES_audit.message.treportprofile.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat un perfil d’informe</value>
+  </data>
+  <data name="RES_audit.message.treportscheduler.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat la programació $@ReportSchedulerName@.</value>
+  </data>
+  <data name="RES_audit.message.treportscheduler.aexecuted.rotext" xml:space="preserve">
+    <value>S’ha executat una planificació d’informe</value>
+  </data>
+  <data name="RES_audit.message.treportscheduler.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una nova planificació amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.treportscheduler.amultiselect.rotext" xml:space="preserve">
+    <value>S’han consultat els camp següents: $@ReportSchedulerNames@.</value>
+  </data>
+  <data name="RES_audit.message.treportscheduler.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat la planificació $@ReportSchedulerName@.</value>
+  </data>
+  <data name="RES_audit.message.treportscheduler.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents de la planificació:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.trequest.adelete.rotext" xml:space="preserve">
+    <value>S’ha eliminat una sol·licitud amb les dades següents::$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.trequest.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una sol·licitud amb les dades següents::$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.trequest.amultiselect.rotext" xml:space="preserve">
+    <value>S’han consultat diverses sol·licituds</value>
+  </data>
+  <data name="RES_audit.message.trequest.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat una sol·licitud amb les dades següents::$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.trequest.aupdate.rotext" xml:space="preserve">
+    <value>$@Status@ - S’ha actualitzat una sol·licitud amb les dades següents::$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.trequestapproval.ainsert.rotext" xml:space="preserve">
+    <value>$@Status@ - Usuari: $@EmployeeName@ - Tipus de sol·licitud: ´$@RequestTypeName@´ ($@Comments@)</value>
+  </data>
+  <data name="RES_audit.message.trequestapproval.aselect.rotext" xml:space="preserve">
+    <value>$@Status@ - Usuari: $@EmployeeName@ - Tipus de sol·licitud: ´$@RequestTypeName@´ ($@Comments@)</value>
+  </data>
+  <data name="RES_audit.message.trequestapproval.aupdate.rotext" xml:space="preserve">
+    <value>$@Status@ - Usuari: $@EmployeeName@ - Tipus de sol·licitud: ´$@RequestTypeName@´ ($@Comments@)</value>
+  </data>
+  <data name="RES_audit.message.trequestrule.aupdate.rotext" xml:space="preserve">
+    <value>Actualització</value>
+  </data>
+  <data name="RES_audit.message.tsaasservice.aexecuted.rotext" xml:space="preserve">
+    <value>Execució</value>
+  </data>
+  <data name="RES_audit.message.tschedulerdaily.aselect.rotext" xml:space="preserve">
+    <value>S’han consultat entre les dates $@DateStart@ i $@DateEnd@ els usuaris següents: $CRLF $@EmployeesNames@</value>
+  </data>
+  <data name="RES_audit.message.tschedulerholidays.ainsert.rotext" xml:space="preserve">
+    <value>S’ha programat una planificació de festius (tasca $@iTask@) del grup d’usuaris $@Group@, per a l’any $@Year@, utilitzant la plantilla $@Template@ i l’horari $@Shift@. Opcions de còpia: Mantenir vacances actuals:$@KeepBloquedDays@ - Mantenir dies bloquejats:$@KeepHolidays@</value>
+  </data>
+  <data name="RES_audit.message.tschedulerholidays.aupdate.rotext" xml:space="preserve">
+    <value>S’ha modificat la planificació de festius del grup d’usuaris $@Group@, per a l’any $@Year@, utilitzant la plantilla $@Template@ i l’horari $@Shift@</value>
+  </data>
+  <data name="RES_audit.message.tschedulerplanification.aselect.rotext" xml:space="preserve">
+    <value>S’han consultat entre les dates $@DateStart@ i $@DateEnd@ els usuaris següents: $CRLF $@EmployeesNames@</value>
+  </data>
+  <data name="RES_audit.message.tschedulerplanification.aupdate.rotext" xml:space="preserve">
+    <value>S’ha modificat la planificació de l’usuari $@EmployeeName@ del dia $@ShiftDate@ amb l’horari $@ShiftName@ i el lloc $@AssignmentName@</value>
+  </data>
+  <data name="RES_audit.message.tschedulertemplate.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una nova plantilla de festius amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tschedulertemplate.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat una plantilla de festius</value>
+  </data>
+  <data name="RES_audit.message.tschedulertemplate.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents de la plantilla de festius:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tschedulerweekly.ainsert.rotext" xml:space="preserve">
+    <value>S’ha programat una planificació (tasca $@iTask@) dels usuaris $@EmployeeNames@, entre les dates $@DateIni@ i $@DateEnd@, utilitzant els horaris $@Shifts@ de dilluns a diumenge respectivament. Opcions de còpia: Mantenir vacances actuals:$@KeepBloquedDays@ - Mantenir dies bloquejats:$@KeepHolidays@</value>
+  </data>
+  <data name="RES_audit.message.tschedulerweekly.aupdate.rotext" xml:space="preserve">
+    <value>S’ha modificat la planificació dels usuaris $@EmployeeNames@, entre les dates $@DateIni@ i $@DateEnd@, utilitzant els horaris $@Shifts@ de dilluns a diumenge respectivament.</value>
+  </data>
+  <data name="RES_audit.message.tsecuritynode.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un node</value>
+  </data>
+  <data name="RES_audit.message.tsecuritynode.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat el node</value>
+  </data>
+  <data name="RES_audit.message.tsecuritynode.aupdate.rotext" xml:space="preserve">
+    <value>S’ha actualitzat un node</value>
+  </data>
+  <data name="RES_audit.message.tsecuritynodegroup.ainsert.rotext" xml:space="preserve">
+    <value>S’ha assignat un grup</value>
+  </data>
+  <data name="RES_audit.message.tsecuritynodepassport.ainsert.rotext" xml:space="preserve">
+    <value>S’ha assignat un supervisor</value>
+  </data>
+  <data name="RES_audit.message.tsecurityoptions.adelete.rotext" xml:space="preserve">
+    <value>S’han esborrat les opcions de seguretat</value>
+  </data>
+  <data name="RES_audit.message.tsecurityoptions.ainsert.rotext" xml:space="preserve">
+    <value>S’han creat noves opcions de seguretat amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tsecurityoptions.aselect.rotext" xml:space="preserve">
+    <value>S’han consultat les opcions de seguretat</value>
+  </data>
+  <data name="RES_audit.message.tsecurityoptions.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents de les opcions de seguretat:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshift.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat l’horari $@ShiftName@</value>
+  </data>
+  <data name="RES_audit.message.tshift.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou horari amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshift.amultiselect.rotext" xml:space="preserve">
+    <value>S’han consultat els horaris següents:$CRLF $@ShiftNames@</value>
+  </data>
+  <data name="RES_audit.message.tshift.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat l’horari $@ShiftName@</value>
+  </data>
+  <data name="RES_audit.message.tshift.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents de l’horari:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshiftassignment.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat el lloc $@AssignmentName@.</value>
+  </data>
+  <data name="RES_audit.message.tshiftassignment.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una nova assignació de lloc amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshiftassignment.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents del lloc:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshiftgroup.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat el grup d’horari</value>
+  </data>
+  <data name="RES_audit.message.tshiftgroup.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou grup d’horari amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshiftgroup.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat el grup d’horari</value>
+  </data>
+  <data name="RES_audit.message.tshiftgroup.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents del grup d’horaris:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshiftlayer.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat la capa $@ShiftLayerType@ de l’horari $@ShiftName@</value>
+  </data>
+  <data name="RES_audit.message.tshiftlayer.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una nova capa per a l’horari $@ShiftName@ amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshiftlayer.amultiselect.rotext" xml:space="preserve">
+    <value>S’han consultat els capes d’horari següents $@ShiftName@:$CRLF $@ShiftLayerTypes@</value>
+  </data>
+  <data name="RES_audit.message.tshiftlayer.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat la capa $@ShiftLayerType@ de l’horari $@ShiftName@</value>
+  </data>
+  <data name="RES_audit.message.tshiftlayer.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents de la capa $@ShiftLayerType@ de l’horari $@ShiftName@:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshiftrule.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat una regla de l’horari</value>
+  </data>
+  <data name="RES_audit.message.tshiftrule.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents de la regla de l’horari:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshifttimezone.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una nova zona horària amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tssoconfig.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat la configuració de l’inici de sessió integrat</value>
+  </data>
+  <data name="RES_audit.message.tssoconfig.ainsert.rotext" xml:space="preserve">
+    <value>S’ha desat la configuració de l’inici de sessió integrat</value>
+  </data>
+  <data name="RES_audit.message.tssoconfig.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat la configuració de l’inici de sessió integrat</value>
+  </data>
+  <data name="RES_audit.message.tssoconfig.aupdate.rotext" xml:space="preserve">
+    <value>S’ha actualitzat la configuració de l’inici de sessió integrat</value>
+  </data>
+  <data name="RES_audit.message.tstartupvalues.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat el valor inicial</value>
+  </data>
+  <data name="RES_audit.message.tstartupvalues.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou valor inicial amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tstartupvalues.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat un valor inicial</value>
+  </data>
+  <data name="RES_audit.message.tstartupvalues.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents dels valors inicials:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tsupervisedemployeedata.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat informació de l’usuari $@EmployeesName@.</value>
+  </data>
+  <data name="RES_audit.message.ttask.adelete.rotext" xml:space="preserve">
+    <value>Esborrat</value>
+  </data>
+  <data name="RES_audit.message.ttask.ainsert.rotext" xml:space="preserve">
+    <value>Alta</value>
+  </data>
+  <data name="RES_audit.message.ttask.aselect.rotext" xml:space="preserve">
+    <value>Consulta</value>
+  </data>
+  <data name="RES_audit.message.ttask.aupdate.rotext" xml:space="preserve">
+    <value>Actualització</value>
+  </data>
+  <data name="RES_audit.message.ttaskfielddefinition.aupdate.rotext" xml:space="preserve">
+    <value>Actualització</value>
+  </data>
+  <data name="RES_audit.message.ttasktemplate.adelete.rotext" xml:space="preserve">
+    <value>Esborrat</value>
+  </data>
+  <data name="RES_audit.message.ttasktemplate.ainsert.rotext" xml:space="preserve">
+    <value>Alta</value>
+  </data>
+  <data name="RES_audit.message.ttasktemplate.aupdate.rotext" xml:space="preserve">
+    <value>Actualització</value>
+  </data>
+  <data name="RES_audit.message.tterminal.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat el terminal</value>
+  </data>
+  <data name="RES_audit.message.tterminal.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou terminal amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tterminal.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat un terminal</value>
+  </data>
+  <data name="RES_audit.message.tterminal.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents del terminal:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tterminalreader.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents del lector del terminal:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tterminalsiren.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una nova sirena amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tterminalsiren.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents de la sirena del terminal:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tuploadfile.aexecuted.rotext" xml:space="preserve">
+    <value>S’ha carregat un fitxer al servidor.</value>
+  </data>
+  <data name="RES_audit.message.tuserfield.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat el camp $@UserFieldName@.</value>
+  </data>
+  <data name="RES_audit.message.tuserfield.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou camp</value>
+  </data>
+  <data name="RES_audit.message.tuserfield.amultiselect.rotext" xml:space="preserve">
+    <value>S’han consultat els camp següents: $@UserFieldNames@.</value>
+  </data>
+  <data name="RES_audit.message.tuserfield.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat el camp $@UserFieldName@.</value>
+  </data>
+  <data name="RES_audit.message.tuserfield.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat dades del camp</value>
+  </data>
+  <data name="RES_audit.message.tusertask.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat una tasca d’usuari</value>
+  </data>
+  <data name="RES_audit.message.tusertask.ainsert.rotext" xml:space="preserve">
+    <value>S’ha introduït una tasca d’usuari</value>
+  </data>
+  <data name="RES_audit.message.tusertask.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat una tasca d’usuari</value>
+  </data>
+  <data name="RES_audit.message.tvisit.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una visita</value>
+  </data>
+  <data name="RES_audit.message.tvisit.aupdate.rotext" xml:space="preserve">
+    <value>Actualitzada una visita</value>
+  </data>
+  <data name="RES_audit.message.tvisitor.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un visitant</value>
+  </data>
+  <data name="RES_audit.message.tvisitor.aupdate.rotext" xml:space="preserve">
+    <value>Actualitzat un visitant</value>
+  </data>
+  <data name="RES_audit.message.tzoneinactivity.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat una nova zona d’inactivitat amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tzoneinactivity.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents de la zona d’accessos:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tzoneplane.adelete.rotext" xml:space="preserve">
+    <value>S’ha esborrat el plànol de zona</value>
+  </data>
+  <data name="RES_audit.message.tzoneplane.ainsert.rotext" xml:space="preserve">
+    <value>S’ha creat un nou plànol de zona amb les dades següents:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tzoneplane.aselect.rotext" xml:space="preserve">
+    <value>S’ha consultat el plànol de zona</value>
+  </data>
+  <data name="RES_audit.message.tzoneplane.aupdate.rotext" xml:space="preserve">
+    <value>S’han modificat les dades següents del plànol de zona:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.mt.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.myhidebutton.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.myhidebutton.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.mypopupframeimage.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.mypopupframeimagetool.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.nmc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.nmc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.nmcimg.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.nyc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.nyc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.nycimg.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.objecttype.tabsencetracking.rotext" xml:space="preserve">
+    <value>Seguiment d’absències</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessauthorization.rotext" xml:space="preserve">
+    <value>Autoritzacions d’accés</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessdata.rotext" xml:space="preserve">
+    <value>Analítica d’accessos</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessgroup.rotext" xml:space="preserve">
+    <value>Grups d’accés</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessgrouppermission.rotext" xml:space="preserve">
+    <value>Grups d’accés</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessmode.rotext" xml:space="preserve">
+    <value>Mode d’accessos</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessmove.rotext" xml:space="preserve">
+    <value>Fitxatge d’accessos</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessperiod.rotext" xml:space="preserve">
+    <value>Períodes d’accés</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessperioddaily.rotext" xml:space="preserve">
+    <value>Períodes d’accés (portes obertes)</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessperiodholidays.rotext" xml:space="preserve">
+    <value>Períodes d’accés (excepcions)</value>
+  </data>
+  <data name="RES_audit.objecttype.taccesszone.rotext" xml:space="preserve">
+    <value>Zones d’accés</value>
+  </data>
+  <data name="RES_audit.objecttype.taccrualsrule.rotext" xml:space="preserve">
+    <value>Regla de saldo</value>
+  </data>
+  <data name="RES_audit.objecttype.tactivity.rotext" xml:space="preserve">
+    <value>Activitats</value>
+  </data>
+  <data name="RES_audit.objecttype.tactivitycompany.rotext" xml:space="preserve">
+    <value>Activitats (companyia)</value>
+  </data>
+  <data name="RES_audit.objecttype.tadvancedparameter.rotext" xml:space="preserve">
+    <value>Paràmetre avançat</value>
+  </data>
+  <data name="RES_audit.objecttype.tassigncause.rotext" xml:space="preserve">
+    <value>Introducció massiva de justificacions</value>
+  </data>
+  <data name="RES_audit.objecttype.tassigncenters.rotext" xml:space="preserve">
+    <value>Assignació massiva de centres de cost</value>
+  </data>
+  <data name="RES_audit.objecttype.tassignment.rotext" xml:space="preserve">
+    <value>Lloc de treball</value>
+  </data>
+  <data name="RES_audit.objecttype.tattendancedata.rotext" xml:space="preserve">
+    <value>Analítica de control horari</value>
+  </data>
+  <data name="RES_audit.objecttype.tattendanceoptions.rotext" xml:space="preserve">
+    <value>Opcions de presència</value>
+  </data>
+  <data name="RES_audit.objecttype.tbot.rotext" xml:space="preserve">
+    <value>Bots</value>
+  </data>
+  <data name="RES_audit.objecttype.tbotrule.rotext" xml:space="preserve">
+    <value>Regles de bots</value>
+  </data>
+  <data name="RES_audit.objecttype.tbudget.rotext" xml:space="preserve">
+    <value>Pressupost</value>
+  </data>
+  <data name="RES_audit.objecttype.tbudgetrow.rotext" xml:space="preserve">
+    <value>Registre del pressupost</value>
+  </data>
+  <data name="RES_audit.objecttype.tcalendar.rotext" xml:space="preserve">
+    <value>Calendari</value>
+  </data>
+  <data name="RES_audit.objecttype.tcalendarrow.rotext" xml:space="preserve">
+    <value>Registre del calendari</value>
+  </data>
+  <data name="RES_audit.objecttype.tcalendarrowsummarydata.rotext" xml:space="preserve">
+    <value>Resum de la fila</value>
+  </data>
+  <data name="RES_audit.objecttype.tcamera.rotext" xml:space="preserve">
+    <value>Càmeres</value>
+  </data>
+  <data name="RES_audit.objecttype.tcaptcha.rotext" xml:space="preserve">
+    <value>Codi de validació</value>
+  </data>
+  <data name="RES_audit.objecttype.tcapture.rotext" xml:space="preserve">
+    <value>Fotografia</value>
+  </data>
+  <data name="RES_audit.objecttype.tcategorytype.rotext" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="RES_audit.objecttype.tcause.rotext" xml:space="preserve">
+    <value>Justificació</value>
+  </data>
+  <data name="RES_audit.objecttype.tcauselimitvalue.rotext" xml:space="preserve">
+    <value>Límit de justificació</value>
+  </data>
+  <data name="RES_audit.objecttype.tchannel.rotext" xml:space="preserve">
+    <value>Canals</value>
+  </data>
+  <data name="RES_audit.objecttype.tchannelconversation.rotext" xml:space="preserve">
+    <value>Conversa</value>
+  </data>
+  <data name="RES_audit.objecttype.tchannelconversationcomplexity.rotext" xml:space="preserve">
+    <value>Complexitat de conversa</value>
+  </data>
+  <data name="RES_audit.objecttype.tchannelconversationmessage.rotext" xml:space="preserve">
+    <value>Missatge</value>
+  </data>
+  <data name="RES_audit.objecttype.tcommunique.rotext" xml:space="preserve">
+    <value>Comunicats</value>
+  </data>
+  <data name="RES_audit.objecttype.tcompletetasks.rotext" xml:space="preserve">
+    <value>Finalització massiva de tasques</value>
+  </data>
+  <data name="RES_audit.objecttype.tconcept.rotext" xml:space="preserve">
+    <value>Saldos</value>
+  </data>
+  <data name="RES_audit.objecttype.tconceptcomposition.rotext" xml:space="preserve">
+    <value>Composició de saldo</value>
+  </data>
+  <data name="RES_audit.objecttype.tconceptgroup.rotext" xml:space="preserve">
+    <value>Grup de saldos</value>
+  </data>
+  <data name="RES_audit.objecttype.tconnection.rotext" xml:space="preserve">
+    <value>Connexió</value>
+  </data>
+  <data name="RES_audit.objecttype.tcopybudgetplanificationadvanced.rotext" xml:space="preserve">
+    <value>Còpia de pressupostos</value>
+  </data>
+  <data name="RES_audit.objecttype.tcopyplanification.rotext" xml:space="preserve">
+    <value>Còpia de planificació</value>
+  </data>
+  <data name="RES_audit.objecttype.tcopyplanificationadvanced.rotext" xml:space="preserve">
+    <value>Còpia de planificació</value>
+  </data>
+  <data name="RES_audit.objecttype.tcopyplanificationtoemployees.rotext" xml:space="preserve">
+    <value>Còpia de planificació</value>
+  </data>
+  <data name="RES_audit.objecttype.tdailybudgetposition.rotext" xml:space="preserve">
+    <value>Dia planificat de la unitat productiva</value>
+  </data>
+  <data name="RES_audit.objecttype.tdailycause.rotext" xml:space="preserve">
+    <value>Justificacions diàries</value>
+  </data>
+  <data name="RES_audit.objecttype.tdailycoverage.rotext" xml:space="preserve">
+    <value>Dotacions</value>
+  </data>
+  <data name="RES_audit.objecttype.tdailypunchesdetail.rotext" xml:space="preserve">
+    <value>Detall diari</value>
+  </data>
+  <data name="RES_audit.objecttype.tdailyrecord.rotext" xml:space="preserve">
+    <value>Declaració de la jornada</value>
+  </data>
+  <data name="RES_audit.objecttype.tdailyschedule.rotext" xml:space="preserve">
+    <value>Planificació</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalink.rotext" xml:space="preserve">
+    <value>Enllaç de dades</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkimportdailycoverage.rotext" xml:space="preserve">
+    <value>Importació cobertures diàries</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkimportemployees.rotext" xml:space="preserve">
+    <value>Importació usuaris</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkimportgroups.rotext" xml:space="preserve">
+    <value>Importació de grups</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkimportprogrammedabsences.rotext" xml:space="preserve">
+    <value>Important absències prolongades</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkimportscheduler.rotext" xml:space="preserve">
+    <value>Importació planificació</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkimporttask.rotext" xml:space="preserve">
+    <value>Importació tasques</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkresult.rotext" xml:space="preserve">
+    <value>Resultat de la importació</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkws.rotext" xml:space="preserve">
+    <value>Servei web</value>
+  </data>
+  <data name="RES_audit.objecttype.tdiningroom.rotext" xml:space="preserve">
+    <value>Menjador</value>
+  </data>
+  <data name="RES_audit.objecttype.tdocument.rotext" xml:space="preserve">
+    <value>Document</value>
+  </data>
+  <data name="RES_audit.objecttype.tdocumentabsence.rotext" xml:space="preserve">
+    <value>Document d´absentisme</value>
+  </data>
+  <data name="RES_audit.objecttype.tdocumenttemplate.rotext" xml:space="preserve">
+    <value>Plantilla de document</value>
+  </data>
+  <data name="RES_audit.objecttype.tdownloadfile.rotext" xml:space="preserve">
+    <value>Descarregar fitxer</value>
+  </data>
+  <data name="RES_audit.objecttype.temergencyreport.rotext" xml:space="preserve">
+    <value>Informe emergència</value>
+  </data>
+  <data name="RES_audit.objecttype.temployee.rotext" xml:space="preserve">
+    <value>Usuari</value>
+  </data>
+  <data name="RES_audit.objecttype.temployeeassignment.rotext" xml:space="preserve">
+    <value>Lloc d’usuari</value>
+  </data>
+  <data name="RES_audit.objecttype.temployeecenters.rotext" xml:space="preserve">
+    <value>Centres de cost autoritzats</value>
+  </data>
+  <data name="RES_audit.objecttype.temployeecontract.rotext" xml:space="preserve">
+    <value>Contracte</value>
+  </data>
+  <data name="RES_audit.objecttype.temployeegroup.rotext" xml:space="preserve">
+    <value>Mobilitat usuari</value>
+  </data>
+  <data name="RES_audit.objecttype.temployeeonterminal.rotext" xml:space="preserve">
+    <value>Usuari creat al terminal</value>
+  </data>
+  <data name="RES_audit.objecttype.temployeeuserfield.rotext" xml:space="preserve">
+    <value>Usuari (camp de la fitxa)</value>
+  </data>
+  <data name="RES_audit.objecttype.tentry.rotext" xml:space="preserve">
+    <value>Fitxatge</value>
+  </data>
+  <data name="RES_audit.objecttype.teventscheduler.rotext" xml:space="preserve">
+    <value>Esdeveniment planificat</value>
+  </data>
+  <data name="RES_audit.objecttype.tgeneraloptions.rotext" xml:space="preserve">
+    <value>Opcions generals</value>
+  </data>
+  <data name="RES_audit.objecttype.tgenius.rotext" xml:space="preserve">
+    <value>Analítica Genius</value>
+  </data>
+  <data name="RES_audit.objecttype.tgeniusscheduler.rotext" xml:space="preserve">
+    <value>Planificació de l’estudi</value>
+  </data>
+  <data name="RES_audit.objecttype.tgroup.rotext" xml:space="preserve">
+    <value>Grup</value>
+  </data>
+  <data name="RES_audit.objecttype.tgroupfeature.rotext" xml:space="preserve">
+    <value>Funció</value>
+  </data>
+  <data name="RES_audit.objecttype.tgroupfeaturepermissionoverfeature.rotext" xml:space="preserve">
+    <value>Funcionalitats</value>
+  </data>
+  <data name="RES_audit.objecttype.tgroupuserfield.rotext" xml:space="preserve">
+    <value>Usuari (grup de camp de la fitxa)</value>
+  </data>
+  <data name="RES_audit.objecttype.tindicator.rotext" xml:space="preserve">
+    <value>Indicador</value>
+  </data>
+  <data name="RES_audit.objecttype.tjustifiedincidences.rotext" xml:space="preserve">
+    <value>Justificació massiva d’incidències</value>
+  </data>
+  <data name="RES_audit.objecttype.tlabagree.rotext" xml:space="preserve">
+    <value>Convenis</value>
+  </data>
+  <data name="RES_audit.objecttype.tlabagreeaccrualrule.rotext" xml:space="preserve">
+    <value>Regles de conveni</value>
+  </data>
+  <data name="RES_audit.objecttype.tlabagreecauselimitvalue.rotext" xml:space="preserve">
+    <value>Límit de justificació de conveni</value>
+  </data>
+  <data name="RES_audit.objecttype.tlabagreerule.rotext" xml:space="preserve">
+    <value>Regla de conveni</value>
+  </data>
+  <data name="RES_audit.objecttype.tlivetask.rotext" xml:space="preserve">
+    <value>Tasca de live</value>
+  </data>
+  <data name="RES_audit.objecttype.tlockdate.rotext" xml:space="preserve">
+    <value>Data de tancament</value>
+  </data>
+  <data name="RES_audit.objecttype.tlogbook.rotext" xml:space="preserve">
+    <value>Llibre de registre</value>
+  </data>
+  <data name="RES_audit.objecttype.tmassmarkconsents.rotext" xml:space="preserve">
+    <value>Assistent consentiments</value>
+  </data>
+  <data name="RES_audit.objecttype.tmassmobilityemployees.rotext" xml:space="preserve">
+    <value>Mobilitat massiva</value>
+  </data>
+  <data name="RES_audit.objecttype.tmessageemployees.rotext" xml:space="preserve">
+    <value>Missatges usuaris</value>
+  </data>
+  <data name="RES_audit.objecttype.tmove.rotext" xml:space="preserve">
+    <value>Fitxatge</value>
+  </data>
+  <data name="RES_audit.objecttype.tnone.rotext" xml:space="preserve">
+    <value>(Desconeguda)</value>
+  </data>
+  <data name="RES_audit.objecttype.tnotification.rotext" xml:space="preserve">
+    <value>Notificacions</value>
+  </data>
+  <data name="RES_audit.objecttype.tparameters.rotext" xml:space="preserve">
+    <value>Paràmetres (opcions)</value>
+  </data>
+  <data name="RES_audit.objecttype.tpassport.rotext" xml:space="preserve">
+    <value>Usuari</value>
+  </data>
+  <data name="RES_audit.objecttype.tpassportconsent.rotext" xml:space="preserve">
+    <value>Consentiments</value>
+  </data>
+  <data name="RES_audit.objecttype.tpassportpassword.rotext" xml:space="preserve">
+    <value>Contrasenya</value>
+  </data>
+  <data name="RES_audit.objecttype.tpassportpermissionsoveremployees.rotext" xml:space="preserve">
+    <value>Permisos sobre usuaris</value>
+  </data>
+  <data name="RES_audit.objecttype.tpassportpermissionsoverfeatures.rotext" xml:space="preserve">
+    <value>Permisos sobre funcionalitats</value>
+  </data>
+  <data name="RES_audit.objecttype.tpassportpermissionsovergroups.rotext" xml:space="preserve">
+    <value>Permisos sobre grups</value>
+  </data>
+  <data name="RES_audit.objecttype.tproductivdata.rotext" xml:space="preserve">
+    <value>Analítica de tasques</value>
+  </data>
+  <data name="RES_audit.objecttype.tproductiveunit.rotext" xml:space="preserve">
+    <value>Unitat productiva</value>
+  </data>
+  <data name="RES_audit.objecttype.tproductiveunitmode.rotext" xml:space="preserve">
+    <value>Mode de la unitat productiva</value>
+  </data>
+  <data name="RES_audit.objecttype.tproductiveunitmodeposition.rotext" xml:space="preserve">
+    <value>Posició del mode</value>
+  </data>
+  <data name="RES_audit.objecttype.tprogrammedabsence.rotext" xml:space="preserve">
+    <value>Previsió dies d'absència</value>
+  </data>
+  <data name="RES_audit.objecttype.tprogrammedcause.rotext" xml:space="preserve">
+    <value>Previsió hores d'absència</value>
+  </data>
+  <data name="RES_audit.objecttype.tprogrammedholiday.rotext" xml:space="preserve">
+    <value>Vacances/permisos per hores</value>
+  </data>
+  <data name="RES_audit.objecttype.tprogrammedovertime.rotext" xml:space="preserve">
+    <value>Previsió d’hores d’excés</value>
+  </data>
+  <data name="RES_audit.objecttype.tprojecttemplate.rotext" xml:space="preserve">
+    <value>Plantilla de projecte</value>
+  </data>
+  <data name="RES_audit.objecttype.tpunchimage.rotext" xml:space="preserve">
+    <value>Foto de fitxatge</value>
+  </data>
+  <data name="RES_audit.objecttype.tremark.rotext" xml:space="preserve">
+    <value>Alerta</value>
+  </data>
+  <data name="RES_audit.objecttype.treport.rotext" xml:space="preserve">
+    <value>Informes</value>
+  </data>
+  <data name="RES_audit.objecttype.treportprofile.rotext" xml:space="preserve">
+    <value>Perfil d’informes</value>
+  </data>
+  <data name="RES_audit.objecttype.treportscheduler.rotext" xml:space="preserve">
+    <value>Informes planificats</value>
+  </data>
+  <data name="RES_audit.objecttype.trequest.rotext" xml:space="preserve">
+    <value>Sol·licituds</value>
+  </data>
+  <data name="RES_audit.objecttype.trequestapproval.rotext" xml:space="preserve">
+    <value>Sol·licitud aprovada/denegada</value>
+  </data>
+  <data name="RES_audit.objecttype.trequestrule.rotext" xml:space="preserve">
+    <value>Regles de sol·licitud</value>
+  </data>
+  <data name="RES_audit.objecttype.trequesttype.rotext" xml:space="preserve">
+    <value>Tipus de sol·licituds</value>
+  </data>
+  <data name="RES_audit.objecttype.tsaasservice.rotext" xml:space="preserve">
+    <value>Servei SaaS</value>
+  </data>
+  <data name="RES_audit.objecttype.tschedulerdaily.rotext" xml:space="preserve">
+    <value>Calendari entrades i sortides</value>
+  </data>
+  <data name="RES_audit.objecttype.tschedulerholidays.rotext" xml:space="preserve">
+    <value>Planificació de festius</value>
+  </data>
+  <data name="RES_audit.objecttype.tschedulerplanification.rotext" xml:space="preserve">
+    <value>Calendari planificació</value>
+  </data>
+  <data name="RES_audit.objecttype.tschedulerremarks.rotext" xml:space="preserve">
+    <value>Alertes del calendari</value>
+  </data>
+  <data name="RES_audit.objecttype.tschedulertemplate.rotext" xml:space="preserve">
+    <value>Plantilla de festius</value>
+  </data>
+  <data name="RES_audit.objecttype.tschedulerweekly.rotext" xml:space="preserve">
+    <value>Planificació setmanal</value>
+  </data>
+  <data name="RES_audit.objecttype.tsecuritynode.rotext" xml:space="preserve">
+    <value>Organigrama</value>
+  </data>
+  <data name="RES_audit.objecttype.tsecuritynodegroup.rotext" xml:space="preserve">
+    <value>Grup assignat</value>
+  </data>
+  <data name="RES_audit.objecttype.tsecuritynodepassport.rotext" xml:space="preserve">
+    <value>Supervisor assignat</value>
+  </data>
+  <data name="RES_audit.objecttype.tsecuritynodepassportexception.rotext" xml:space="preserve">
+    <value>Excepció</value>
+  </data>
+  <data name="RES_audit.objecttype.tsecurityoptions.rotext" xml:space="preserve">
+    <value>Opcions de seguretat</value>
+  </data>
+  <data name="RES_audit.objecttype.tshift.rotext" xml:space="preserve">
+    <value>Horari</value>
+  </data>
+  <data name="RES_audit.objecttype.tshiftassignment.rotext" xml:space="preserve">
+    <value>Lloc d’horari</value>
+  </data>
+  <data name="RES_audit.objecttype.tshiftgroup.rotext" xml:space="preserve">
+    <value>Grup d’horaris</value>
+  </data>
+  <data name="RES_audit.objecttype.tshiftlayer.rotext" xml:space="preserve">
+    <value>Capa horari</value>
+  </data>
+  <data name="RES_audit.objecttype.tshiftrule.rotext" xml:space="preserve">
+    <value>Regles d’horari</value>
+  </data>
+  <data name="RES_audit.objecttype.tshifttimezone.rotext" xml:space="preserve">
+    <value>Franja horària d’horari</value>
+  </data>
+  <data name="RES_audit.objecttype.tssoconfig.rotext" xml:space="preserve">
+    <value>Inici de sessió integrat</value>
+  </data>
+  <data name="RES_audit.objecttype.tstartupvalues.rotext" xml:space="preserve">
+    <value>Valors inicials (conveni)</value>
+  </data>
+  <data name="RES_audit.objecttype.tsupervisedemployeedata.rotext" xml:space="preserve">
+    <value>Usuari</value>
+  </data>
+  <data name="RES_audit.objecttype.tsurvey.rotext" xml:space="preserve">
+    <value>Enquesta</value>
+  </data>
+  <data name="RES_audit.objecttype.tsurveyresponse.rotext" xml:space="preserve">
+    <value>Resposta a enquesta</value>
+  </data>
+  <data name="RES_audit.objecttype.tsurveyresults.rotext" xml:space="preserve">
+    <value>Resultats d’enquesta</value>
+  </data>
+  <data name="RES_audit.objecttype.ttask.rotext" xml:space="preserve">
+    <value>Tasca</value>
+  </data>
+  <data name="RES_audit.objecttype.ttaskfield.rotext" xml:space="preserve">
+    <value>Atributs de tasca</value>
+  </data>
+  <data name="RES_audit.objecttype.ttaskfielddefinition.rotext" xml:space="preserve">
+    <value>Definició d’atributs de tasca</value>
+  </data>
+  <data name="RES_audit.objecttype.ttasktemplate.rotext" xml:space="preserve">
+    <value>Plantilla de tasques</value>
+  </data>
+  <data name="RES_audit.objecttype.ttelecommute.rotext" xml:space="preserve">
+    <value>Teletreball</value>
+  </data>
+  <data name="RES_audit.objecttype.tterminal.rotext" xml:space="preserve">
+    <value>Terminal</value>
+  </data>
+  <data name="RES_audit.objecttype.tterminalconfigfile.rotext" xml:space="preserve">
+    <value>Fitxer de configuració de terminals</value>
+  </data>
+  <data name="RES_audit.objecttype.tterminalreader.rotext" xml:space="preserve">
+    <value>Lector del terminal</value>
+  </data>
+  <data name="RES_audit.objecttype.tterminalsiren.rotext" xml:space="preserve">
+    <value>Sirena del terminal</value>
+  </data>
+  <data name="RES_audit.objecttype.tterminalsyncfile.rotext" xml:space="preserve">
+    <value>Fitxer de sincronització de terminals</value>
+  </data>
+  <data name="RES_audit.objecttype.ttimezone.rotext" xml:space="preserve">
+    <value>Franja horària</value>
+  </data>
+  <data name="RES_audit.objecttype.tuploadfile.rotext" xml:space="preserve">
+    <value>Carregar fitxer</value>
+  </data>
+  <data name="RES_audit.objecttype.tuserfield.rotext" xml:space="preserve">
+    <value>Camp fitxa</value>
+  </data>
+  <data name="RES_audit.objecttype.tusertask.rotext" xml:space="preserve">
+    <value>Tasca d’usuari</value>
+  </data>
+  <data name="RES_audit.objecttype.tvisit.rotext" xml:space="preserve">
+    <value>Visita</value>
+  </data>
+  <data name="RES_audit.objecttype.tvisitor.rotext" xml:space="preserve">
+    <value>Visitant</value>
+  </data>
+  <data name="RES_audit.objecttype.tzoneinactivity.rotext" xml:space="preserve">
+    <value>Zona d’inactivitat</value>
+  </data>
+  <data name="RES_audit.objecttype.tzoneplane.rotext" xml:space="preserve">
+    <value>Plànol de zona</value>
+  </data>
+  <data name="RES_audit.panaudit.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.pancontent.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.panheader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.panmainmenu.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.panpager.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters..date.rotext" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="RES_audit.parameters..fieldname.rotext" xml:space="preserve">
+    <value>Nom de camp</value>
+  </data>
+  <data name="RES_audit.parameters..idemployee.rotext" xml:space="preserve">
+    <value>ID d’usuari</value>
+  </data>
+  <data name="RES_audit.parameters..value.rotext" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="RES_audit.parameters.accessgroups.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.accessgroups.name.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.accessgroupspermissions.idaccessgroup.rotext" xml:space="preserve">
+    <value>ID de grup d’accés</value>
+  </data>
+  <data name="RES_audit.parameters.accessgroupspermissions.idaccessperiod.rotext" xml:space="preserve">
+    <value>ID de període d’accés</value>
+  </data>
+  <data name="RES_audit.parameters.accessgroupspermissions.idzone.rotext" xml:space="preserve">
+    <value>ID de zona</value>
+  </data>
+  <data name="RES_audit.parameters.accessperioddaily.begintime.rotext" xml:space="preserve">
+    <value>Hora d’inici</value>
+  </data>
+  <data name="RES_audit.parameters.accessperioddaily.dayofweek.rotext" xml:space="preserve">
+    <value>Dia de la setmana</value>
+  </data>
+  <data name="RES_audit.parameters.accessperioddaily.endtime.rotext" xml:space="preserve">
+    <value>Hora final</value>
+  </data>
+  <data name="RES_audit.parameters.accessperioddaily.idaccessperiod.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.accessperiodholidays.begintime.rotext" xml:space="preserve">
+    <value>Hora inicial</value>
+  </data>
+  <data name="RES_audit.parameters.accessperiodholidays.day.rotext" xml:space="preserve">
+    <value>Dia</value>
+  </data>
+  <data name="RES_audit.parameters.accessperiodholidays.endtime.rotext" xml:space="preserve">
+    <value>Hora final</value>
+  </data>
+  <data name="RES_audit.parameters.accessperiodholidays.idaccessperiod.rotext" xml:space="preserve">
+    <value>ID del període</value>
+  </data>
+  <data name="RES_audit.parameters.accessperiodholidays.month.rotext" xml:space="preserve">
+    <value>Mes</value>
+  </data>
+  <data name="RES_audit.parameters.accessperiods.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.accessperiods.name.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.accrualsrules.definition.rotext" xml:space="preserve">
+    <value>definició</value>
+  </data>
+  <data name="RES_audit.parameters.accrualsrules.description.rotext" xml:space="preserve">
+    <value>Descripció</value>
+  </data>
+  <data name="RES_audit.parameters.accrualsrules.idaccrualsrule.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.accrualsrules.name.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.accrualsrules.schedule.rotext" xml:space="preserve">
+    <value>Programació</value>
+  </data>
+  <data name="RES_audit.parameters.assignment.color.rotext" xml:space="preserve">
+    <value>Color del lloc</value>
+  </data>
+  <data name="RES_audit.parameters.assignment.description.rotext" xml:space="preserve">
+    <value>Descripció del lloc</value>
+  </data>
+  <data name="RES_audit.parameters.assignment.id.rotext" xml:space="preserve">
+    <value>ID del lloc</value>
+  </data>
+  <data name="RES_audit.parameters.assignment.name.rotext" xml:space="preserve">
+    <value>Nom del lloc</value>
+  </data>
+  <data name="RES_audit.parameters.assignment.shortname.rotext" xml:space="preserve">
+    <value>Nom curt del lloc</value>
+  </data>
+  <data name="RES_audit.parameters.businesscenter.description.rotext" xml:space="preserve">
+    <value>Descripció</value>
+  </data>
+  <data name="RES_audit.parameters.businesscenter.id.rotext" xml:space="preserve">
+    <value>ID del centre de cost</value>
+  </data>
+  <data name="RES_audit.parameters.businesscenter.name.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.cameras.description.rotext" xml:space="preserve">
+    <value>Descripció</value>
+  </data>
+  <data name="RES_audit.parameters.cameras.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.cameras.model.rotext" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="RES_audit.parameters.cameras.name.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.cameras.url.rotext" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="RES_audit.parameters.causelimitvalues.idcause.rotext" xml:space="preserve">
+    <value>Justificació</value>
+  </data>
+  <data name="RES_audit.parameters.causelimitvalues.idexcesscause.rotext" xml:space="preserve">
+    <value>Justificació per excés</value>
+  </data>
+  <data name="RES_audit.parameters.causelimitvalues.maximumannualvalue.rotext" xml:space="preserve">
+    <value>Valor anual</value>
+  </data>
+  <data name="RES_audit.parameters.causelimitvalues.maximumannualvaluetype.rotext" xml:space="preserve">
+    <value>Origen anual</value>
+  </data>
+  <data name="RES_audit.parameters.causelimitvalues.maximummonthlytype.rotext" xml:space="preserve">
+    <value>Origen mensual</value>
+  </data>
+  <data name="RES_audit.parameters.causelimitvalues.maximummonthlyvalue.rotext" xml:space="preserve">
+    <value>Valor mensual</value>
+  </data>
+  <data name="RES_audit.parameters.causelimitvalues.name.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.causes.allowinputfromreader.rotext" xml:space="preserve">
+    <value>Permetre des del terminal</value>
+  </data>
+  <data name="RES_audit.parameters.causes.applyabsenceonholidays.rotext" xml:space="preserve">
+    <value>Aplicar absència en vacances</value>
+  </data>
+  <data name="RES_audit.parameters.causes.applyjustifyperiod.rotext" xml:space="preserve">
+    <value>Aplicar període</value>
+  </data>
+  <data name="RES_audit.parameters.causes.causetype.rotext" xml:space="preserve">
+    <value>Tipus de justificació</value>
+  </data>
+  <data name="RES_audit.parameters.causes.color.rotext" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="RES_audit.parameters.causes.costfactor.rotext" xml:space="preserve">
+    <value>Factor de cost</value>
+  </data>
+  <data name="RES_audit.parameters.causes.description.rotext" xml:space="preserve">
+    <value>Descripció</value>
+  </data>
+  <data name="RES_audit.parameters.causes.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.causes.inputpermissions.rotext" xml:space="preserve">
+    <value>Permisos d’entrada</value>
+  </data>
+  <data name="RES_audit.parameters.causes.justifyperiodend.rotext" xml:space="preserve">
+    <value>Data final justificar incidència</value>
+  </data>
+  <data name="RES_audit.parameters.causes.justifyperiodstart.rotext" xml:space="preserve">
+    <value>Data inici justificar incidència</value>
+  </data>
+  <data name="RES_audit.parameters.causes.justifyperiodtype.rotext" xml:space="preserve">
+    <value>Tipus justificació incidència</value>
+  </data>
+  <data name="RES_audit.parameters.causes.maxprogrammedabsencedays.rotext" xml:space="preserve">
+    <value>Màxim previsió dies d’absència</value>
+  </data>
+  <data name="RES_audit.parameters.causes.name.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.causes.punchcloseprogrammedabsence.rotext" xml:space="preserve">
+    <value>Absència programada</value>
+  </data>
+  <data name="RES_audit.parameters.causes.readerinputcode.rotext" xml:space="preserve">
+    <value>Codi terminal</value>
+  </data>
+  <data name="RES_audit.parameters.causes.roundingby.rotext" xml:space="preserve">
+    <value>Arredoniment</value>
+  </data>
+  <data name="RES_audit.parameters.causes.roundingbydailyscope.rotext" xml:space="preserve">
+    <value>Àmbit d’arrodoniment</value>
+  </data>
+  <data name="RES_audit.parameters.causes.roundingtype.rotext" xml:space="preserve">
+    <value>Tipus d’arrodoniment</value>
+  </data>
+  <data name="RES_audit.parameters.causes.shortname.rotext" xml:space="preserve">
+    <value>Nom abreujat</value>
+  </data>
+  <data name="RES_audit.parameters.causes.startsprogrammedabsence.rotext" xml:space="preserve">
+    <value>Data inici absència programada</value>
+  </data>
+  <data name="RES_audit.parameters.causes.visibilitypermissions.rotext" xml:space="preserve">
+    <value>Visibilitat</value>
+  </data>
+  <data name="RES_audit.parameters.causes.workingtype.rotext" xml:space="preserve">
+    <value>Tipus de funcionament</value>
+  </data>
+  <data name="RES_audit.parameters.conceptcauses.composition.rotext" xml:space="preserve">
+    <value>Composició</value>
+  </data>
+  <data name="RES_audit.parameters.conceptcauses.hoursfactor.rotext" xml:space="preserve">
+    <value>Hores</value>
+  </data>
+  <data name="RES_audit.parameters.conceptcauses.idcause.rotext" xml:space="preserve">
+    <value>ID de justificació</value>
+  </data>
+  <data name="RES_audit.parameters.conceptcauses.idconcept.rotext" xml:space="preserve">
+    <value>ID de saldo</value>
+  </data>
+  <data name="RES_audit.parameters.conceptcauses.occurrencesfactor.rotext" xml:space="preserve">
+    <value>Comparació</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.absentiismrewarded.rotext" xml:space="preserve">
+    <value>Absentisme retribuït</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.applyexpiredhours.rotext" xml:space="preserve">
+    <value>Té caducitats</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.applyonholidaysrequest.rotext" xml:space="preserve">
+    <value>Utilitzat a la gestió de vacances</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.automaticaccrualcriteria.rotext" xml:space="preserve">
+    <value>Meritació automàtica</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.automaticaccrualidcause.rotext" xml:space="preserve">
+    <value>Justificació de meritació</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.automaticaccrualtype.rotext" xml:space="preserve">
+    <value>Tipus de meritació</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.begindate.rotext" xml:space="preserve">
+    <value>Data d’inici</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.category.rotext" xml:space="preserve">
+    <value>Categoria</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.color.rotext" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.customtype.rotext" xml:space="preserve">
+    <value>Tipus personalitzat</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.defaultquery.rotext" xml:space="preserve">
+    <value>Consulta per omissió</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.description.rotext" xml:space="preserve">
+    <value>Descripció</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.employeescriteria.rotext" xml:space="preserve">
+    <value>Criteris de visualització</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.employeespermission.rotext" xml:space="preserve">
+    <value>permisos de visualització</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.expiredhourscriteria.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.concepts.expiredidcause.rotext" xml:space="preserve">
+    <value>Justificació</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.export.rotext" xml:space="preserve">
+    <value>Exportació</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.finishdate.rotext" xml:space="preserve">
+    <value>Data de finalització</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.fixedpay.rotext" xml:space="preserve">
+    <value>Pagament fix</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.id.rotext" xml:space="preserve">
+    <value>ID de saldo</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.idtype.rotext" xml:space="preserve">
+    <value>Tipus</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.isabsentiism.rotext" xml:space="preserve">
+    <value>Informes d’absentisme</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.isaccrualwork.rotext" xml:space="preserve">
+    <value>Informe d’hores treballades</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.name.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.payvalue.rotext" xml:space="preserve">
+    <value>Valor del pagament</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.roundconceptby.rotext" xml:space="preserve">
+    <value>Arredoniment</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.roundconcepttype.rotext" xml:space="preserve">
+    <value>Tipus d’arrodoniment</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.shortname.rotext" xml:space="preserve">
+    <value>Nom abreujat</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.usedfield.rotext" xml:space="preserve">
+    <value>Camp utilitzat</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.viewinemployees.rotext" xml:space="preserve">
+    <value>Visible per usuaris</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.viewinpays.rotext" xml:space="preserve">
+    <value>Visible en pagaments</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.viewinterminals.rotext" xml:space="preserve">
+    <value>Visible en terminals</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.accrualsrules.rotext" xml:space="preserve">
+    <value>Regles de saldo</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.accruedrule.rotext" xml:space="preserve">
+    <value>Regla acumulat</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.causeuser.rotext" xml:space="preserve">
+    <value>Justificació d’usuari</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.causeusertype.rotext" xml:space="preserve">
+    <value>Tipus de justificació d’usuari</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.dailyrule.rotext" xml:space="preserve">
+    <value>Regles diàries</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.date.rotext" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.defaultcenter.rotext" xml:space="preserve">
+    <value>Centre de cost per defecte</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.idcause.rotext" xml:space="preserve">
+    <value>ID de justificació</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.idcenter.rotext" xml:space="preserve">
+    <value>ID de centre</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.idemployee.rotext" xml:space="preserve">
+    <value>ID d’usuari</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.idrelatedincidence.rotext" xml:space="preserve">
+    <value>ID d’incidència relacionada</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.isnotreliable.rotext" xml:space="preserve">
+    <value>NoÉsFiable</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.manual.rotext" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.manualcenter.rotext" xml:space="preserve">
+    <value>Centre de cost manual</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.value.rotext" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="RES_audit.parameters.dailycoverage.actualstatus.rotext" xml:space="preserve">
+    <value>Dotació real</value>
+  </data>
+  <data name="RES_audit.parameters.dailycoverage.date.rotext" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="RES_audit.parameters.dailycoverage.expectedcoverage.rotext" xml:space="preserve">
+    <value>Quantitat</value>
+  </data>
+  <data name="RES_audit.parameters.dailycoverage.forcedcoveraged.rotext" xml:space="preserve">
+    <value>Dotació forçada</value>
+  </data>
+  <data name="RES_audit.parameters.dailycoverage.idassignment.rotext" xml:space="preserve">
+    <value>ID del lloc</value>
+  </data>
+  <data name="RES_audit.parameters.dailycoverage.idgroup.rotext" xml:space="preserve">
+    <value>ID del grup</value>
+  </data>
+  <data name="RES_audit.parameters.dailycoverage.plannedstatus.rotext" xml:space="preserve">
+    <value>Dotació planificada</value>
+  </data>
+  <data name="RES_audit.parameters.employeeassignments.idassignment.rotext" xml:space="preserve">
+    <value>ID del lloc</value>
+  </data>
+  <data name="RES_audit.parameters.employeeassignments.idemployee.rotext" xml:space="preserve">
+    <value>ID de l’usuari</value>
+  </data>
+  <data name="RES_audit.parameters.employeeassignments.suitability.rotext" xml:space="preserve">
+    <value>Idoneïtat</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.begindate.rotext" xml:space="preserve">
+    <value>Data inici</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.endcontractreason.rotext" xml:space="preserve">
+    <value>Motiu baixa</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.enddate.rotext" xml:space="preserve">
+    <value>Data final</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.enterprise.rotext" xml:space="preserve">
+    <value>Empresa</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.idcard.rotext" xml:space="preserve">
+    <value>Codi targeta</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.idcontract.rotext" xml:space="preserve">
+    <value>Codi contracte</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.idemployee.rotext" xml:space="preserve">
+    <value>Codi usuari</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.idlabagree.rotext" xml:space="preserve">
+    <value>ID de conveni</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.begindate.rotext" xml:space="preserve">
+    <value>Data inici</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.employeename.rotext" xml:space="preserve">
+    <value>Usuari</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.enddate.rotext" xml:space="preserve">
+    <value>Data final</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.groupname.rotext" xml:space="preserve">
+    <value>Grup</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.idemployee.rotext" xml:space="preserve">
+    <value>Codi usuari</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.idgroup.rotext" xml:space="preserve">
+    <value>Codi grup</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.istransfer.rotext" xml:space="preserve">
+    <value>Cessió</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.path.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.employees.alias.rotext" xml:space="preserve">
+    <value>Àlies</value>
+  </data>
+  <data name="RES_audit.parameters.employees.allowbiometric.rotext" xml:space="preserve">
+    <value>PermetreBiomètric</value>
+  </data>
+  <data name="RES_audit.parameters.employees.allowbiopriority.rotext" xml:space="preserve">
+    <value>PermetrePrioritatBio</value>
+  </data>
+  <data name="RES_audit.parameters.employees.allowcardplusbio.rotext" xml:space="preserve">
+    <value>PermetreTargetaMésBio</value>
+  </data>
+  <data name="RES_audit.parameters.employees.allowcards.rotext" xml:space="preserve">
+    <value>PermetreTargetes</value>
+  </data>
+  <data name="RES_audit.parameters.employees.id.rotext" xml:space="preserve">
+    <value>Codi</value>
+  </data>
+  <data name="RES_audit.parameters.employees.idaccessgroup.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.employees.image.rotext" xml:space="preserve">
+    <value>Imatge</value>
+  </data>
+  <data name="RES_audit.parameters.employees.lockdate.rotext" xml:space="preserve">
+    <value>Data de tancament</value>
+  </data>
+  <data name="RES_audit.parameters.employees.name.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.employees.type.rotext" xml:space="preserve">
+    <value>Tipus</value>
+  </data>
+  <data name="RES_audit.parameters.entries.invalidread.rotext" xml:space="preserve">
+    <value>Lector no vàlid</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.destination.rotext" xml:space="preserve">
+    <value>destinació</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.exportfilename.rotext" xml:space="preserve">
+    <value>nom</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.exportfiletype.rotext" xml:space="preserve">
+    <value>format</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.mode.rotext" xml:space="preserve">
+    <value>Mode execució:</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.nextexecution.rotext" xml:space="preserve">
+    <value>següent execució</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.profilename.rotext" xml:space="preserve">
+    <value>plantilla</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.scheduler.rotext" xml:space="preserve">
+    <value>planificació</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.separator.rotext" xml:space="preserve">
+    <value>separador</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.executetask.rotext" xml:space="preserve">
+    <value>Executar tasca</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.idgeniusview.rotext" xml:space="preserve">
+    <value>ID de Genius</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.idpassport.rotext" xml:space="preserve">
+    <value>ID de Passaport</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.lastdatetimeupdated.rotext" xml:space="preserve">
+    <value>Última execució</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.name.rotext" xml:space="preserve">
+    <value>Planificació de l´estudi</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.nextdatetimeexecuted.rotext" xml:space="preserve">
+    <value>Últ. actualització</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.periodtype.rotext" xml:space="preserve">
+    <value>Tipus de Període</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.schedulebegindate.rotext" xml:space="preserve">
+    <value>Data d´inici</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.scheduleenddate.rotext" xml:space="preserve">
+    <value>Data Fi</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.scheduler.rotext" xml:space="preserve">
+    <value>Planificació</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.schedulertext.rotext" xml:space="preserve">
+    <value>Configuració</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.state.rotext" xml:space="preserve">
+    <value>Estat</value>
+  </data>
+  <data name="RES_audit.parameters.groups.descriptiongroup.rotext" xml:space="preserve">
+    <value>Descripció</value>
+  </data>
+  <data name="RES_audit.parameters.groups.id.rotext" xml:space="preserve">
+    <value>Codi</value>
+  </data>
+  <data name="RES_audit.parameters.groups.idcenter.rotext" xml:space="preserve">
+    <value>Centre</value>
+  </data>
+  <data name="RES_audit.parameters.groups.name.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.groups.path.rotext" xml:space="preserve">
+    <value>Ruta</value>
+  </data>
+  <data name="RES_audit.parameters.groups.securityflags.rotext" xml:space="preserve">
+    <value>Seguretat</value>
+  </data>
+  <data name="RES_audit.parameters.importguides.formatfilepath.rotext" xml:space="preserve">
+    <value>format</value>
+  </data>
+  <data name="RES_audit.parameters.importguides.mode.rotext" xml:space="preserve">
+    <value>Mode execució:</value>
+  </data>
+  <data name="RES_audit.parameters.importguides.separator.rotext" xml:space="preserve">
+    <value>separador</value>
+  </data>
+  <data name="RES_audit.parameters.importguides.sourcefilepath.rotext" xml:space="preserve">
+    <value>plantilla</value>
+  </data>
+  <data name="RES_audit.parameters.importguides.type.rotext" xml:space="preserve">
+    <value>tipus</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.allownotification.rotext" xml:space="preserve">
+    <value>Accepta notificacions</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.condition.rotext" xml:space="preserve">
+    <value>Condició</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.description.rotext" xml:space="preserve">
+    <value>Descripció</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.desiredvalue.rotext" xml:space="preserve">
+    <value>Valor desitjat</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.idfirstconcept.rotext" xml:space="preserve">
+    <value>Saldo base</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.idsecondconcept.rotext" xml:space="preserve">
+    <value>Saldo respecte</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.limitvalue.rotext" xml:space="preserve">
+    <value>Valor límit</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.name.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.type.rotext" xml:space="preserve">
+    <value>Tipus</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.typenotification.rotext" xml:space="preserve">
+    <value>Tipus de notificacions</value>
+  </data>
+  <data name="RES_audit.parameters.labagree.description.rotext" xml:space="preserve">
+    <value>Descripció</value>
+  </data>
+  <data name="RES_audit.parameters.labagree.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.labagree.name.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.labagreeaccrualsrules.begindate.rotext" xml:space="preserve">
+    <value>Data d’inici</value>
+  </data>
+  <data name="RES_audit.parameters.labagreeaccrualsrules.enddate.rotext" xml:space="preserve">
+    <value>Data de finalització</value>
+  </data>
+  <data name="RES_audit.parameters.labagreeaccrualsrules.idaccrualsrules.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.labagreeaccrualsrules.idlabagree.rotext" xml:space="preserve">
+    <value>ID de conveni</value>
+  </data>
+  <data name="RES_audit.parameters.moves.id.rotext" xml:space="preserve">
+    <value>Codi</value>
+  </data>
+  <data name="RES_audit.parameters.moves.idemployee.rotext" xml:space="preserve">
+    <value>Codi usuari</value>
+  </data>
+  <data name="RES_audit.parameters.moves.indatetime.rotext" xml:space="preserve">
+    <value>Data/hora entrada</value>
+  </data>
+  <data name="RES_audit.parameters.moves.inidcause.rotext" xml:space="preserve">
+    <value>Codi justificació entrada</value>
+  </data>
+  <data name="RES_audit.parameters.moves.inidreader.rotext" xml:space="preserve">
+    <value>Codi terminal entrada</value>
+  </data>
+  <data name="RES_audit.parameters.moves.inidzone.rotext" xml:space="preserve">
+    <value>Codi zona entrada</value>
+  </data>
+  <data name="RES_audit.parameters.moves.isnotreliablein.rotext" xml:space="preserve">
+    <value>És sospitós entrada</value>
+  </data>
+  <data name="RES_audit.parameters.moves.isnotreliableout.rotext" xml:space="preserve">
+    <value>És sospitós sortida</value>
+  </data>
+  <data name="RES_audit.parameters.moves.outdatetime.rotext" xml:space="preserve">
+    <value>Data/hora sortida</value>
+  </data>
+  <data name="RES_audit.parameters.moves.outidcause.rotext" xml:space="preserve">
+    <value>Codi justificació sortida</value>
+  </data>
+  <data name="RES_audit.parameters.moves.outidreader.rotext" xml:space="preserve">
+    <value>Codi terminal sortida</value>
+  </data>
+  <data name="RES_audit.parameters.moves.outidzone.rotext" xml:space="preserve">
+    <value>Codi zona sortida</value>
+  </data>
+  <data name="RES_audit.parameters.moves.shiftdate.rotext" xml:space="preserve">
+    <value>Data horari</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.activated.rotext" xml:space="preserve">
+    <value>Activada</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.allowmail.rotext" xml:space="preserve">
+    <value>Permetre correu electrònic</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.allowportal.rotext" xml:space="preserve">
+    <value>Permetre portal</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.condition.rotext" xml:space="preserve">
+    <value>Condició</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.destination.rotext" xml:space="preserve">
+    <value>Destinacions</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.id.rotext" xml:space="preserve">
+    <value>ID de la notificació</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.idtype.rotext" xml:space="preserve">
+    <value>Tipus de la notificació</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.name.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.schedule.rotext" xml:space="preserve">
+    <value>Programació</value>
+  </data>
+  <data name="RES_audit.parameters.parameters.data.rotext" xml:space="preserve">
+    <value>Dades</value>
+  </data>
+  <data name="RES_audit.parameters.programmedabsences.automaticclosed.rotext" xml:space="preserve">
+    <value>Tancament automàtic</value>
+  </data>
+  <data name="RES_audit.parameters.programmedabsences.begindate.rotext" xml:space="preserve">
+    <value>Data inici</value>
+  </data>
+  <data name="RES_audit.parameters.programmedabsences.description.rotext" xml:space="preserve">
+    <value>Descripció</value>
+  </data>
+  <data name="RES_audit.parameters.programmedabsences.finishdate.rotext" xml:space="preserve">
+    <value>Data final</value>
+  </data>
+  <data name="RES_audit.parameters.programmedabsences.idcause.rotext" xml:space="preserve">
+    <value>ID de justificació</value>
+  </data>
+  <data name="RES_audit.parameters.programmedabsences.idemployee.rotext" xml:space="preserve">
+    <value>ID d’usuari</value>
+  </data>
+  <data name="RES_audit.parameters.programmedabsences.maxlastingdays.rotext" xml:space="preserve">
+    <value>Dies màxim</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.begintime.rotext" xml:space="preserve">
+    <value>Inici període</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.date.rotext" xml:space="preserve">
+    <value>Data de la previsió d’hores d’absència</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.description.rotext" xml:space="preserve">
+    <value>Descripció</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.duration.rotext" xml:space="preserve">
+    <value>Durada</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.endtime.rotext" xml:space="preserve">
+    <value>Fi període</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.finishdate.rotext" xml:space="preserve">
+    <value>Data final</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.id.rotext" xml:space="preserve">
+    <value>Identificador</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.idcause.rotext" xml:space="preserve">
+    <value>ID de justificació</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.idemployee.rotext" xml:space="preserve">
+    <value>ID d’usuari</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.minduration.rotext" xml:space="preserve">
+    <value>Durada mínima</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.win32.rotext" xml:space="preserve">
+    <value>Win32</value>
+  </data>
+  <data name="RES_audit.parameters.punches.action.rotext" xml:space="preserve">
+    <value>Acció</value>
+  </data>
+  <data name="RES_audit.parameters.punches.actualtype.rotext" xml:space="preserve">
+    <value>Tipus actual</value>
+  </data>
+  <data name="RES_audit.parameters.punches.crc.rotext" xml:space="preserve">
+    <value>Codi de validació</value>
+  </data>
+  <data name="RES_audit.parameters.punches.datetime.rotext" xml:space="preserve">
+    <value>DataHora</value>
+  </data>
+  <data name="RES_audit.parameters.punches.exported.rotext" xml:space="preserve">
+    <value>Exportat</value>
+  </data>
+  <data name="RES_audit.parameters.punches.field1.rotext" xml:space="preserve">
+    <value>Camp 1</value>
+  </data>
+  <data name="RES_audit.parameters.punches.field2.rotext" xml:space="preserve">
+    <value>Camp 2</value>
+  </data>
+  <data name="RES_audit.parameters.punches.field3.rotext" xml:space="preserve">
+    <value>Camp 3</value>
+  </data>
+  <data name="RES_audit.parameters.punches.field4.rotext" xml:space="preserve">
+    <value>Camp 4</value>
+  </data>
+  <data name="RES_audit.parameters.punches.field5.rotext" xml:space="preserve">
+    <value>Camp 5</value>
+  </data>
+  <data name="RES_audit.parameters.punches.field6.rotext" xml:space="preserve">
+    <value>Camp 6</value>
+  </data>
+  <data name="RES_audit.parameters.punches.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idcard.rotext" xml:space="preserve">
+    <value>Identificador</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idcause.rotext" xml:space="preserve">
+    <value>ID de justificació</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idcredential.rotext" xml:space="preserve">
+    <value>Credencial</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idemployee.rotext" xml:space="preserve">
+    <value>ID d’usuari</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idpassport.rotext" xml:space="preserve">
+    <value>ID de passaport</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idreader.rotext" xml:space="preserve">
+    <value>ID del lector</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idterminal.rotext" xml:space="preserve">
+    <value>ID del terminal</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idzone.rotext" xml:space="preserve">
+    <value>ID de zona</value>
+  </data>
+  <data name="RES_audit.parameters.punches.isnotreliable.rotext" xml:space="preserve">
+    <value>No és fiable</value>
+  </data>
+  <data name="RES_audit.parameters.punches.location.rotext" xml:space="preserve">
+    <value>Localització</value>
+  </data>
+  <data name="RES_audit.parameters.punches.locationzone.rotext" xml:space="preserve">
+    <value>zona de localització</value>
+  </data>
+  <data name="RES_audit.parameters.punches.shiftdate.rotext" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="RES_audit.parameters.punches.timestamp.rotext" xml:space="preserve">
+    <value>Creat</value>
+  </data>
+  <data name="RES_audit.parameters.punches.timezone.rotext" xml:space="preserve">
+    <value>Zona</value>
+  </data>
+  <data name="RES_audit.parameters.punches.type.rotext" xml:space="preserve">
+    <value>Tipus</value>
+  </data>
+  <data name="RES_audit.parameters.punches.typedata.rotext" xml:space="preserve">
+    <value>Tipus</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.destination.rotext" xml:space="preserve">
+    <value>Destinació</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.emergencygroup.rotext" xml:space="preserve">
+    <value>Grup d’emergència</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.emergencyreport.rotext" xml:space="preserve">
+    <value>Informe d’emergència</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.executetask.rotext" xml:space="preserve">
+    <value>Executar tasca</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.format.rotext" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.idpassport.rotext" xml:space="preserve">
+    <value>ID usuari</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.iduser.rotext" xml:space="preserve">
+    <value>Usuari VT</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.lastdatetimeexecuted.rotext" xml:space="preserve">
+    <value>Darrera execució</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.lastdatetimeupdated.rotext" xml:space="preserve">
+    <value>Dar. actualització</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.name.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.nextdatetimeexecuted.rotext" xml:space="preserve">
+    <value>Següent execució</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.profile.rotext" xml:space="preserve">
+    <value>Perfil</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.report.rotext" xml:space="preserve">
+    <value>Informe</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.scheduler.rotext" xml:space="preserve">
+    <value>Programació</value>
+  </data>
+  <data name="RES_audit.parameters.requests.comments.rotext" xml:space="preserve">
+    <value>Comentari</value>
+  </data>
+  <data name="RES_audit.parameters.requests.commentsuser.rotext" xml:space="preserve">
+    <value>Comentari</value>
+  </data>
+  <data name="RES_audit.parameters.requests.date1.rotext" xml:space="preserve">
+    <value>Fecha1</value>
+  </data>
+  <data name="RES_audit.parameters.requests.date2.rotext" xml:space="preserve">
+    <value>Fecha2</value>
+  </data>
+  <data name="RES_audit.parameters.requests.hours.rotext" xml:space="preserve">
+    <value>Hores</value>
+  </data>
+  <data name="RES_audit.parameters.requests.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.requests.idcause.rotext" xml:space="preserve">
+    <value>ID justificació</value>
+  </data>
+  <data name="RES_audit.parameters.requests.idemployee.rotext" xml:space="preserve">
+    <value>ID empleat</value>
+  </data>
+  <data name="RES_audit.parameters.requests.notreaded.rotext" xml:space="preserve">
+    <value>No llegida</value>
+  </data>
+  <data name="RES_audit.parameters.requests.requestdate.rotext" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="RES_audit.parameters.requests.requesttype.rotext" xml:space="preserve">
+    <value>Tipus</value>
+  </data>
+  <data name="RES_audit.parameters.requests.status.rotext" xml:space="preserve">
+    <value>Estat</value>
+  </data>
+  <data name="RES_audit.parameters.requests.statuslevel.rotext" xml:space="preserve">
+    <value>Nivell</value>
+  </data>
+  <data name="RES_audit.parameters.shiftassignments.coverage.rotext" xml:space="preserve">
+    <value>Cobertura</value>
+  </data>
+  <data name="RES_audit.parameters.shiftassignments.idassignment.rotext" xml:space="preserve">
+    <value>ID del lloc</value>
+  </data>
+  <data name="RES_audit.parameters.shiftassignments.idshift.rotext" xml:space="preserve">
+    <value>ID de l’horari</value>
+  </data>
+  <data name="RES_audit.parameters.shiftgroups.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.shiftgroups.name.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.advancedparameters.rotext" xml:space="preserve">
+    <value>Paràmetres avançats</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.allowcomplementary.rotext" xml:space="preserve">
+    <value>Permet complementàries</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.allowfloatingdata.rotext" xml:space="preserve">
+    <value>Permet dades flotants</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.applycenteronabsence.rotext" xml:space="preserve">
+    <value>Aplicar a totes les incidències</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.areworkingdays.rotext" xml:space="preserve">
+    <value>Són dies de treball</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.breakhours.rotext" xml:space="preserve">
+    <value>Hores de descans</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.color.rotext" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.description.rotext" xml:space="preserve">
+    <value>Descripció</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.endlimit.rotext" xml:space="preserve">
+    <value>LímitFinal</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.expectedworkinghours.rotext" xml:space="preserve">
+    <value>Hores treballades</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.export.rotext" xml:space="preserve">
+    <value>Exportació de calendari</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.id.rotext" xml:space="preserve">
+    <value>Codi</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.idcauseholidays.rotext" xml:space="preserve">
+    <value>Justificació de vacances</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.idcenter.rotext" xml:space="preserve">
+    <value>Centres de cost</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.idconceptbalance.rotext" xml:space="preserve">
+    <value>Codi concepte</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.idgroup.rotext" xml:space="preserve">
+    <value>Codi grup</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.isfloating.rotext" xml:space="preserve">
+    <value>Flotant</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.isobsolete.rotext" xml:space="preserve">
+    <value>Obsolet</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.istemplate.rotext" xml:space="preserve">
+    <value>ÉsPlantilla</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.manuallimit.rotext" xml:space="preserve">
+    <value>Límit manual</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.name.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.shifttype.rotext" xml:space="preserve">
+    <value>Tipus d’horari</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.shortname.rotext" xml:space="preserve">
+    <value>Nom curt</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.startfloating.rotext" xml:space="preserve">
+    <value>Inici flotant</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.startlimit.rotext" xml:space="preserve">
+    <value>Límit inicial</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.typeshift.rotext" xml:space="preserve">
+    <value>Tipus</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.visibilitypermissions.rotext" xml:space="preserve">
+    <value>Permisos de visibilitat</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.weblaboral.rotext" xml:space="preserve">
+    <value>WebLaboral</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.webvisible.rotext" xml:space="preserve">
+    <value>WebVisible</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.idconcept.rotext" xml:space="preserve">
+    <value>ID de saldo</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.maximumvalue.rotext" xml:space="preserve">
+    <value>Valor màxim</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.maximumvaluetype.rotext" xml:space="preserve">
+    <value>Tipus de valor màxim</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.minimumvalue.rotext" xml:space="preserve">
+    <value>Valor mínim</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.minimumvaluetype.rotext" xml:space="preserve">
+    <value>Tipus de valor mínim</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.name.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.startvalue.rotext" xml:space="preserve">
+    <value>Valor inicial</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.startvaluetype.rotext" xml:space="preserve">
+    <value>Tipus de valor inicial</value>
+  </data>
+  <data name="RES_audit.parameters.sysroreportgroups.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.sysroreportgroups.name.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.sysroscheduletemplates.description.rotext" xml:space="preserve">
+    <value>Descripció</value>
+  </data>
+  <data name="RES_audit.parameters.sysroscheduletemplates.feasttemplate.rotext" xml:space="preserve">
+    <value>Festiu</value>
+  </data>
+  <data name="RES_audit.parameters.sysroscheduletemplates.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.sysroscheduletemplates.mode.rotext" xml:space="preserve">
+    <value>Mode</value>
+  </data>
+  <data name="RES_audit.parameters.sysroscheduletemplates.name.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.accessattempspermanentblock.rotext" xml:space="preserve">
+    <value>Intents de bloqueig indefinit</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.accessattempstemporaryblock.rotext" xml:space="preserve">
+    <value>Intents de bloqueig temporal</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.blockaccessvtdesktop.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.blockaccessvtportal.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.blockaccessvtsupervisor.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.dayspasswordexpired.rotext" xml:space="preserve">
+    <value>Dies de caducitat</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.differentaccesspointexceeded.rotext" xml:space="preserve">
+    <value>Número d’IP diferents autoritzats</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.enabledaccesssupportrobotics.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.idpassport.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.onlyallowedadress.rotext" xml:space="preserve">
+    <value>Restriccions d’adreces IP</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.onlysameversionapp.rotext" xml:space="preserve">
+    <value>Utilitzar la mateixa versió d’app que el servidor de Visualtime</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.passwordsecuritylevel.rotext" xml:space="preserve">
+    <value>Complexitat de la contrasenya</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.previouspasswordsstored.rotext" xml:space="preserve">
+    <value>Contrasenyes prèvies emmagatzemades</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.requestvalidationcode.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.saveauthorizedpointdays.rotext" xml:space="preserve">
+    <value>Dies que es conserva l’IP autoritzat</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshiftslayers.definition.rotext" xml:space="preserve">
+    <value>definició</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshiftslayers.id.rotext" xml:space="preserve">
+    <value>Número capa</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshiftslayers.idshift.rotext" xml:space="preserve">
+    <value>Codi horari</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshiftslayers.idtype.rotext" xml:space="preserve">
+    <value>Codi tipus capa</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshiftslayers.parentlayerid.rotext" xml:space="preserve">
+    <value>Codi capa superior</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshifttimezones.begintime.rotext" xml:space="preserve">
+    <value>Hora inicial</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshifttimezones.endtime.rotext" xml:space="preserve">
+    <value>Hora final</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshifttimezones.idshift.rotext" xml:space="preserve">
+    <value>ID d’horari</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshifttimezones.idzone.rotext" xml:space="preserve">
+    <value>ID de zona</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.accesslevel.rotext" xml:space="preserve">
+    <value>Nivell accés</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.accessvalidation.rotext" xml:space="preserve">
+    <value>Tipus de validació</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.category.rotext" xml:space="preserve">
+    <value>Categoria</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.description.rotext" xml:space="preserve">
+    <value>Descripció</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.fieldname.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.fieldtype.rotext" xml:space="preserve">
+    <value>Tipus</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.history.rotext" xml:space="preserve">
+    <value>Històric</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.listvalues.rotext" xml:space="preserve">
+    <value>Valors llista</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.requestcriteria.rotext" xml:space="preserve">
+    <value>Criteris de sol·licitud</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.requestpermissions.rotext" xml:space="preserve">
+    <value>Permisos de sol·licitud</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.type.rotext" xml:space="preserve">
+    <value>Tipus</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.used.rotext" xml:space="preserve">
+    <value>Utilitzat</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.duration.rotext" xml:space="preserve">
+    <value>Durada</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.idactivity.rotext" xml:space="preserve">
+    <value>ID d’activitat</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.idcamera.rotext" xml:space="preserve">
+    <value>ID de càmera</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.idzone.rotext" xml:space="preserve">
+    <value>ID de zona</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.interactionaction.rotext" xml:space="preserve">
+    <value>Acció d’interacció</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.interactionmode.rotext" xml:space="preserve">
+    <value>Mode d’interacció</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.interactiveconfig.rotext" xml:space="preserve">
+    <value>Configuració interactiva</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.invalidduration.rotext" xml:space="preserve">
+    <value>Durada accés no vàlid</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.invalidoutput.rotext" xml:space="preserve">
+    <value>Relé accés no vàlid</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.mode.rotext" xml:space="preserve">
+    <value>Mode</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.ohp.rotext" xml:space="preserve">
+    <value>OHP</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.output.rotext" xml:space="preserve">
+    <value>Relé</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.picturex.rotext" xml:space="preserve">
+    <value>Posició X</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.picturey.rotext" xml:space="preserve">
+    <value>Posició Y</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.usedispkey.rotext" xml:space="preserve">
+    <value>Utilitzar tecles terminal</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.validationmode.rotext" xml:space="preserve">
+    <value>Mode validació</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.allowantipassback.rotext" xml:space="preserve">
+    <value>Permetre AntiPassBack</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.allowcustombutton.rotext" xml:space="preserve">
+    <value>Permetre botó personalitzat</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.allowmovereason.rotext" xml:space="preserve">
+    <value>Permetre justificació</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.autodaylight.rotext" xml:space="preserve">
+    <value>Canviar l’hora automàticament</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.behavior.rotext" xml:space="preserve">
+    <value>Comportament</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.confdata.rotext" xml:space="preserve">
+    <value>Dades de configuració</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.customduration.rotext" xml:space="preserve">
+    <value>Durada omissió</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.customfield.rotext" xml:space="preserve">
+    <value>Camp personalitzat</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.customfieldvalue.rotext" xml:space="preserve">
+    <value>Valor camp personalitzat</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.customoutput.rotext" xml:space="preserve">
+    <value>Relé omissió</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.description.rotext" xml:space="preserve">
+    <value>Descripció</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.disconnectioncounter.rotext" xml:space="preserve">
+    <value>Comptador de desconnexions</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.isdifferentzonetime.rotext" xml:space="preserve">
+    <value>Zona horària</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.location.rotext" xml:space="preserve">
+    <value>Localització</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.other.rotext" xml:space="preserve">
+    <value>Un altre</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.rigidmode.rotext" xml:space="preserve">
+    <value>Mode rígid</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.sirensoutput.rotext" xml:space="preserve">
+    <value>Sirena</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.skin.rotext" xml:space="preserve">
+    <value>Pell</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.supportedmodes.rotext" xml:space="preserve">
+    <value>Modes admesos</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.supportedoutputs.rotext" xml:space="preserve">
+    <value>Relés admesos</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.supportedsirens.rotext" xml:space="preserve">
+    <value>Sirenes admeses</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.timezonename.rotext" xml:space="preserve">
+    <value>Nom zona horària</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.type.rotext" xml:space="preserve">
+    <value>Tipus</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.zonetime.rotext" xml:space="preserve">
+    <value>Franja horària</value>
+  </data>
+  <data name="RES_audit.parameters.terminalsirens.duration.rotext" xml:space="preserve">
+    <value>Durada</value>
+  </data>
+  <data name="RES_audit.parameters.terminalsirens.hour.rotext" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="RES_audit.parameters.terminalsirens.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.terminalsirens.idterminal.rotext" xml:space="preserve">
+    <value>ID de terminal</value>
+  </data>
+  <data name="RES_audit.parameters.terminalsirens.weekday.rotext" xml:space="preserve">
+    <value>Dia de la setmana</value>
+  </data>
+  <data name="RES_audit.parameters.timezones.description.rotext" xml:space="preserve">
+    <value>Descripció</value>
+  </data>
+  <data name="RES_audit.parameters.timezones.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.timezones.name.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.zoneplanes.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.zoneplanes.name.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.zoneplanes.planeimage.rotext" xml:space="preserve">
+    <value>Imatge de plànol</value>
+  </data>
+  <data name="RES_audit.parameters.zones.begin.rotext" xml:space="preserve">
+    <value>Inici</value>
+  </data>
+  <data name="RES_audit.parameters.zones.color.rotext" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="RES_audit.parameters.zones.description.rotext" xml:space="preserve">
+    <value>Descripció</value>
+  </data>
+  <data name="RES_audit.parameters.zones.end.rotext" xml:space="preserve">
+    <value>Final</value>
+  </data>
+  <data name="RES_audit.parameters.zones.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.zones.idcamera.rotext" xml:space="preserve">
+    <value>ID de càmera</value>
+  </data>
+  <data name="RES_audit.parameters.zones.idparent.rotext" xml:space="preserve">
+    <value>ID zona pare</value>
+  </data>
+  <data name="RES_audit.parameters.zones.idplane.rotext" xml:space="preserve">
+    <value>ID de plànol de zona</value>
+  </data>
+  <data name="RES_audit.parameters.zones.idzone.rotext" xml:space="preserve">
+    <value>ID de la zona</value>
+  </data>
+  <data name="RES_audit.parameters.zones.isworkingzone.rotext" xml:space="preserve">
+    <value>Tipus comptabilització de la zona</value>
+  </data>
+  <data name="RES_audit.parameters.zones.name.rotext" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="RES_audit.parameters.zones.proportion.rotext" xml:space="preserve">
+    <value>Proporció</value>
+  </data>
+  <data name="RES_audit.parameters.zones.weekday.rotext" xml:space="preserve">
+    <value>Dia de la setmana</value>
+  </data>
+  <data name="RES_audit.parameters.zones.x1.rotext" xml:space="preserve">
+    <value>Posició X1</value>
+  </data>
+  <data name="RES_audit.parameters.zones.x2.rotext" xml:space="preserve">
+    <value>Posició X2</value>
+  </data>
+  <data name="RES_audit.parameters.zones.y1.rotext" xml:space="preserve">
+    <value>Posició Y1</value>
+  </data>
+  <data name="RES_audit.parameters.zones.y2.rotext" xml:space="preserve">
+    <value>Posició Y2</value>
+  </data>
+  <data name="RES_audit.pmc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.pmc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.pmcimg.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.pw-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.pyc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.pyc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.pycimg.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.rosfheader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.state.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.stylesheetscontainer.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.t.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.t.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.tc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.tc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.title.rotext" xml:space="preserve">
+    <value>Auditoria d’accions</value>
+  </data>
+  <data name="RES_audit.title_audit_pathway.rotext" xml:space="preserve">
+    <value>Auditoria</value>
+  </data>
+  <data name="RES_audit.tl.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.tl.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtbegindate.emptyvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;camp obligatori.&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtbegindate.invalidvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;camp no vàlid.&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtbegindate.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtbegindate.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtbegindate.tooltipmessage.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtbegintime.emptyvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;camp obligatori.&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtbegintime.invalidvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;camp no vàlid.&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtbegintime.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtbegintime.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtbegintime.tooltipmessage.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtclientlocation.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtclientlocation.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailaction.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailaction.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailclientlocation.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailclientlocation.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetaildatetime.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetaildatetime.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetaildescription.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetaildescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailobjectname.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailobjectname.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailobjecttype.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailobjecttype.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailusername.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailusername.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtenddate.emptyvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;camp obligatori.&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtenddate.invalidvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;camp no vàlid.&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtenddate.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtenddate.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtenddate.tooltipmessage.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtendtime.emptyvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;camp obligatori.&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtendtime.invalidvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;camp no vàlid.&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtendtime.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtendtime.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtendtime.tooltipmessage.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.y.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.objecttype.tpassportpin.rotext" xml:space="preserve">
+    <value>PIN</value>
+  </data>
+  <data name="RES_audit.parameters.zones.ipsrestriction.rotext" xml:space="preserve">
+    <value>IPs assignades</value>
+  </data>
+  <data name="RES_audit.parameters.zones.timezone.rotext" xml:space="preserve">
+    <value>Zona horària</value>
+  </data>
+  <data name="RES_audit.parameters.zones.mapinfo.rotext" xml:space="preserve">
+    <value>Mapa</value>
+  </data>
+  <data name="RES_audit.parameters.zones.area.rotext" xml:space="preserve">
+    <value>Àrea</value>
+  </data>
+  <data name="RES_audit.parameters.zones.capacityvisible.rotext" xml:space="preserve">
+    <value>Capacitat</value>
+  </data>
+  <data name="RES_audit.parameters.zones.isemergencyzone.rotext" xml:space="preserve">
+    <value>Zona d'emergència</value>
+  </data>
+  <data name="RES_audit.parameters.zones.zonenameaslocation.rotext" xml:space="preserve">
+    <value>Nom com a localització</value>
+  </data>
+  <data name="RES_audit.parameters.zones.idzonetype.rotext" xml:space="preserve">
+    <value>Zona de presència</value>
+  </data>
+  <data name="RES_audit.parameters.zones.idzonesupervisor.rotext" xml:space="preserve">
+    <value>Supervisor de la zona</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.autoapproverequestsdr.rotext" xml:space="preserve">
+    <value>Aprobación automática</value>
+  </data>
+  <data name="RES_audit.message.tdocument.ainsert.rotext" xml:space="preserve">
+    <value>Creació de nou document</value>
+  </data>
+  <data name="RES_audit.message.tdocumenttemplate.adelete.rotext" xml:space="preserve">
+    <value>Se ha borrado la plantilla de documento</value>
+  </data>
+  <data name="RES_audit.message.tdocumenttemplate.ainsert.rotext" xml:space="preserve">
+    <value>Se ha creado la plantilla de documento</value>
+  </data>
+  <data name="RES_audit.message.tdocumenttemplate.aupdate.rotext" xml:space="preserve">
+    <value>Se ha modificado la plantilla de documento</value>
+  </data>
+  <data name="RES_audit.message.ta3payrollimport.aexecuted.rotext" xml:space="preserve">
+    <value>$@message@</value>
+  </data>
+  <data name="RES_audit.objecttype.ta3payrollimport.rotext" xml:space="preserve">
+    <value>Importación nómina A3</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.enabled.rotext" xml:space="preserve">
+    <value>Activat</value>
+  </data>
+  <data name="RES_audit.objecttype.tcollective.rotext" xml:space="preserve">
+    <value>Col·lectiu</value>
+  </data>
+  <data name="RES_audit.objecttype.tcollectiveemployees.rotext" xml:space="preserve">
+    <value>Usuarios de Colectivo</value>
+  </data>
+  <data name="RES_audit.objecttype.tcollectivedefinition.rotext" xml:space="preserve">
+    <value>Definición de Colectivo</value>
+  </data>
+  <data name="RES_audit.message.tcollectiveemployees.aselect.rotext" xml:space="preserve">
+    <value>Se ha consultado la lista de usuarios inluidos en la definición de colectivo $@CollectiveExpression@. Se han mostrado un total de $@TotalEmployeesShown@.</value>
+  </data>
+  <data name="RES_audit.message.tcollective.aupdate.rotext" xml:space="preserve">
+    <value>S'ha modificat el nom o la descripció del col·lectiu $@CollectiveName@</value>
+  </data>
+  <data name="RES_audit.message.tcollective.ainsert.rotext" xml:space="preserve">
+    <value>S'ha creat el col·lectiu $@CollectiveName@</value>
+  </data>
+  <data name="RES_audit.message.tcollective.adelete.rotext" xml:space="preserve">
+    <value>S'ha eliminat el col·lectiu $@CollectiveName@</value>
+  </data>
+  <data name="RES_audit.message.tcollectivedefinition.ainsert.rotext" xml:space="preserve">
+    <value>Se ha creado una nueva definición para el colectivo $@CollectiveName@: $@DefinitionDescription@.</value>
+  </data>
+  <data name="RES_audit.message.tcollectivedefinition.aupdate.rotext" xml:space="preserve">
+    <value>S'ha modificat la definició del col·lectiu $@CollectiveName@: $@ChangeDetails@</value>
+  </data>
+  <data name="RES_audit.message.tdailyrecord.ainsert.rotext" xml:space="preserve">
+    <value>S'ha creat una sol·licitud de declaració de la jornada</value>
+  </data>
+  <data name="RES_audit.message.tdailyrecord.aselect.rotext" xml:space="preserve">
+    <value>S'ha consultat la declaració de la jornada</value>
+  </data>
+  <data name="RES_audit.message.tcollective.aselect.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tcollectivedefinition.adelete.rotext" xml:space="preserve">
+    <value />
+  </data>
+</root>

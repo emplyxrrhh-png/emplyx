@@ -1,0 +1,672 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_documentarymanagement.lbllimit.rotext" xml:space="preserve">
+    <value>Nous avons limité le résultat à 200 documents pour optimiser la charge</value>
+  </data>
+  <data name="RES_documentarymanagement.showall.rotext" xml:space="preserve">
+    <value>Afficher tous les résultats</value>
+  </data>
+  <data name="RES_documentarymanagement.tbaddnewdocumenttemplate.rotext" xml:space="preserve">
+    <value>Nouveau</value>
+  </data>
+  <data name="RES_documentarymanagement.tbdeletedocumenttemplate.rotext" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="RES_documentarymanagement.tbeditdocumenttemplate.rotext" xml:space="preserve">
+    <value>Éditer</value>
+  </data>
+  <data name="RES_documentarymanagement.tbmaximize.rotext" xml:space="preserve">
+    <value>Agrandir</value>
+  </data>
+  <data name="RES_documentarymanagement.title.rotext" xml:space="preserve">
+    <value>Gestion documentaire</value>
+  </data>
+  <data name="RES_documentarymanagement.treetitle.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.area.labor.rotext" xml:space="preserve">
+    <value>Professionnel</value>
+  </data>
+  <data name="RES_documenttemplate.area.legal.rotext" xml:space="preserve">
+    <value>Juridique</value>
+  </data>
+  <data name="RES_documenttemplate.area.prevention.rotext" xml:space="preserve">
+    <value>Prévention</value>
+  </data>
+  <data name="RES_documenttemplate.area.quality.rotext" xml:space="preserve">
+    <value>Qualité</value>
+  </data>
+  <data name="RES_documenttemplate.area.security.rotext" xml:space="preserve">
+    <value>Sécurité</value>
+  </data>
+  <data name="RES_documenttemplate.aspxcallbackpanel1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.aspxcallbackpanelcontenido.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.btclose.text.rotext" xml:space="preserve">
+    <value>Fermer</value>
+  </data>
+  <data name="RES_documenttemplate.btclose.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.btnext.text.rotext" xml:space="preserve">
+    <value>sauvegarder</value>
+  </data>
+  <data name="RES_documenttemplate.btnext.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.captiongrid.rotext" xml:space="preserve">
+    <value>Liste de modèles de documents</value>
+  </data>
+  <data name="RES_documenttemplate.ckapproverequiered.text.rotext" xml:space="preserve">
+    <value>Les documents du dossier doivent être validés par un superviseur de niveau  </value>
+  </data>
+  <data name="RES_documenttemplate.ckapproverequiered.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.ckcanadddocumentemployee.text.rotext" xml:space="preserve">
+    <value>Utilisateurs</value>
+  </data>
+  <data name="RES_documenttemplate.ckcanadddocumentemployee.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.ckcanadddocumentsupervisor.text.rotext" xml:space="preserve">
+    <value>Superviseurs</value>
+  </data>
+  <data name="RES_documenttemplate.ckcanadddocumentsupervisor.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.ckexpireold.text.rotext" xml:space="preserve">
+    <value>Lorsque vous enregistrez un document pour un utilisateur, tous les autres documents de l’utilisateur deviennent périmés</value>
+  </data>
+  <data name="RES_documenttemplate.ckexpireold.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.cknotification700.text.rotext" xml:space="preserve">
+    <value>Avertir le superviseur lorsqu´un utilisateur enregistre un document dans ce dossier</value>
+  </data>
+  <data name="RES_documenttemplate.cknotification700.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.cknotification701.text.rotext" xml:space="preserve">
+    <value>Informer l'utilisateur qu'il doit fournir un document</value>
+  </data>
+  <data name="RES_documenttemplate.cknotification701.tooltip.rotext" xml:space="preserve">
+    <value>L´utilisateur sera informé par e-mail, deux jours à l´avance, qu´il doit fournir le document (parce qu´il ne l´a pas fourni, parce qu´il va expirer…)</value>
+  </data>
+  <data name="RES_documenttemplate.cknotification702.text.rotext" xml:space="preserve">
+    <value>Avertir le superviseur que l´un de ses utilisateurs doit fournir un document</value>
+  </data>
+  <data name="RES_documenttemplate.cknotification702.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.cknotification703.text.rotext" xml:space="preserve">
+    <value>Informer le superviseur direct et l´employé lorsqu´un document est rejeté</value>
+  </data>
+  <data name="RES_documenttemplate.cknotification703.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.ckrequieressign.text.rotext" xml:space="preserve">
+    <value>Les documents du dossier nécessitent une signature numérique</value>
+  </data>
+  <data name="RES_documenttemplate.ckrequieressign.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.cksystemdocument.text.rotext" xml:space="preserve">
+    <value>Est un document système</value>
+  </data>
+  <data name="RES_documenttemplate.cksystemdocument.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.ckvalidperiod.text.rotext" xml:space="preserve">
+    <value>Appliquer seulement à partir de la date</value>
+  </data>
+  <data name="RES_documenttemplate.ckvalidperiod.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.cmblopdlevel.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.cmblopdlevel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.communications.700.rotext" xml:space="preserve">
+    <value>Avertir le superviseur lorsqu´un utilisateur enregistre un document dans ce dossier</value>
+  </data>
+  <data name="RES_documenttemplate.communications.701.rotext" xml:space="preserve">
+    <value>Informer l'utilisateur qu'il doit fournir un document</value>
+  </data>
+  <data name="RES_documenttemplate.communications.702.rotext" xml:space="preserve">
+    <value>Avertir le superviseur que l´un de ses utilisateurs doit fournir un document</value>
+  </data>
+  <data name="RES_documenttemplate.company.rotext" xml:space="preserve">
+    <value>Entreprise</value>
+  </data>
+  <data name="RES_documenttemplate.employee.rotext" xml:space="preserve">
+    <value>Employé</value>
+  </data>
+  <data name="RES_documenttemplate.label1.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.label1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.label2.text.rotext" xml:space="preserve">
+    <value>Ils peuvent enregistrer des documents dans le dossier :</value>
+  </data>
+  <data name="RES_documenttemplate.label2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.label3.text.rotext" xml:space="preserve">
+    <value>Les documents du dossier sont valides :</value>
+  </data>
+  <data name="RES_documenttemplate.label3.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lblalcancedes.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lblalcancedes.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lblambit.text.rotext" xml:space="preserve">
+    <value>Contient des informations provenant de :</value>
+  </data>
+  <data name="RES_documenttemplate.lblambit.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lblarea.text.rotext" xml:space="preserve">
+    <value>Quelle catégorie avez-vous ?</value>
+  </data>
+  <data name="RES_documenttemplate.lblarea.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lblareadescription.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lblareadescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lblcriticality.text.rotext" xml:space="preserve">
+    <value>Si vous n'avez aucun document valide :</value>
+  </data>
+  <data name="RES_documenttemplate.lblcriticality.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lblcriticalitydes.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lblcriticalitydes.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lblcriticidad.text.rotext" xml:space="preserve">
+    <value>Contrôle</value>
+  </data>
+  <data name="RES_documenttemplate.lblcriticidad.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lbldaysafter.text.rotext" xml:space="preserve">
+    <value>jours à partir de la date d´approbation.</value>
+  </data>
+  <data name="RES_documenttemplate.lbldaysafter.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lbldocdescription.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lbldocdescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lbldocdescriptiondesc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lbldocdescriptiondesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lbldocname.text.rotext" xml:space="preserve">
+    <value>Quel est le nom du document ?</value>
+  </data>
+  <data name="RES_documenttemplate.lbldocname.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lbldocnamedescription.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lbldocnamedescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lbldocscope.text.rotext" xml:space="preserve">
+    <value>Les informations des documents contenus concernent :</value>
+  </data>
+  <data name="RES_documenttemplate.lbldocscope.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lbldocshortname.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lbldocshortname.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lbldocshortnamedescription.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lbldocshortnamedescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lbldoctemplatedesc.text.rotext" xml:space="preserve">
+    <value>Dans cette section, vous pouvez créer les documents qui seront demandés à vos utilisateurs ou entreprises.</value>
+  </data>
+  <data name="RES_documenttemplate.lbldoctemplatedesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lbldocumentexpires.text.rotext" xml:space="preserve">
+    <value>Les documents sont conservés dans le système</value>
+  </data>
+  <data name="RES_documenttemplate.lbldocumentexpires.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lbldocumentexpiresdescription.text.rotext" xml:space="preserve">
+    <value>Indiquez le nombre de jours après lesquels le document sera supprimé.</value>
+  </data>
+  <data name="RES_documenttemplate.lbldocumentexpiresdescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lbldocumentgeneral.text.rotext" xml:space="preserve">
+    <value>Général</value>
+  </data>
+  <data name="RES_documenttemplate.lbldocumentgeneral.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lbldocumentscope.text.rotext" xml:space="preserve">
+    <value>Champ d´application</value>
+  </data>
+  <data name="RES_documenttemplate.lbldocumentscope.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lbldocvalidity.text.rotext" xml:space="preserve">
+    <value>Tous les utilisateurs/entreprises doivent disposer d’un document valide dans ce dossier. Si ce n´est pas le cas, une alerte est générée.</value>
+  </data>
+  <data name="RES_documenttemplate.lbldocvalidity.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lbllopdlevel.text.rotext" xml:space="preserve">
+    <value>Niveau de protection applicable conformément au RGPD :</value>
+  </data>
+  <data name="RES_documenttemplate.lbllopdlevel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lbllopdleveldescription.text.rotext" xml:space="preserve">
+    <value>Indiquez le niveau d´information contenu dans le document selon la RGPD.</value>
+  </data>
+  <data name="RES_documenttemplate.lbllopdleveldescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lbllopdtitle.text.rotext" xml:space="preserve">
+    <value>Sécurité</value>
+  </data>
+  <data name="RES_documenttemplate.lbllopdtitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lblmandatorydesc.text.rotext" xml:space="preserve">
+    <value>Les documents du dossier sont</value>
+  </data>
+  <data name="RES_documenttemplate.lblmandatorydesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.lopd.high.rotext" xml:space="preserve">
+    <value>haut</value>
+  </data>
+  <data name="RES_documenttemplate.lopd.low.rotext" xml:space="preserve">
+    <value>Faible</value>
+  </data>
+  <data name="RES_documenttemplate.lopd.medium.rotext" xml:space="preserve">
+    <value>Moyenne</value>
+  </data>
+  <data name="RES_documenttemplate.mandatories.rotext" xml:space="preserve">
+    <value>Obligatoire</value>
+  </data>
+  <data name="RES_documenttemplate.msghaschanges.rotext" xml:space="preserve">
+    <value>Des changements ont été trouvés.</value>
+  </data>
+  <data name="RES_documenttemplate.msghaserrors.rotext" xml:space="preserve">
+    <value>Des erreurs ont été détectées.</value>
+  </data>
+  <data name="RES_documenttemplate.newobjectpopup.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.newobjectpopup.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.optionals.rotext" xml:space="preserve">
+    <value>Facultatif</value>
+  </data>
+  <data name="RES_documenttemplate.pnlscope.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.rbalways.text.rotext" xml:space="preserve">
+    <value>Toujours</value>
+  </data>
+  <data name="RES_documenttemplate.rbalways.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.rblambit.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.rblcausenote.text.rotext" xml:space="preserve">
+    <value>Absence d’un utilisateur</value>
+  </data>
+  <data name="RES_documenttemplate.rblcausenote.tooltip.rotext" xml:space="preserve">
+    <value>Par exemple : visite médicale, décès, hospitalisation ou tout document lié à une demande ou une prévision d´absence.</value>
+  </data>
+  <data name="RES_documenttemplate.rblcompany.text.rotext" xml:space="preserve">
+    <value>Informations générales</value>
+  </data>
+  <data name="RES_documenttemplate.rblcompany.tooltip.rotext" xml:space="preserve">
+    <value>Ex : Fiche de paie, contrat, certificat de prélèvements, numéro de sécurité sociale, copie de carte d’identité, communiqué</value>
+  </data>
+  <data name="RES_documenttemplate.rblcompanyaccessauthorization.text.rotext" xml:space="preserve">
+    <value>Autorisation d´accès</value>
+  </data>
+  <data name="RES_documenttemplate.rblcompanyaccessauthorization.tooltip.rotext" xml:space="preserve">
+    <value>Ex : TC1, TC2, …</value>
+  </data>
+  <data name="RES_documenttemplate.rbldocumentarea.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.rblemployeeaccessauthorization.text.rotext" xml:space="preserve">
+    <value>Autorisation d´accès</value>
+  </data>
+  <data name="RES_documenttemplate.rblemployeeaccessauthorization.tooltip.rotext" xml:space="preserve">
+    <value>Ex : TC1, TC2, …</value>
+  </data>
+  <data name="RES_documenttemplate.rblemployeecontract.text.rotext" xml:space="preserve">
+    <value>Informations générales</value>
+  </data>
+  <data name="RES_documenttemplate.rblemployeecontract.tooltip.rotext" xml:space="preserve">
+    <value>Ex : Fiche de paie, contrat, certificat de prélèvements, numéro de sécurité sociale, copie de carte d’identité, communiqué</value>
+  </data>
+  <data name="RES_documenttemplate.rblemployeefield.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.rblemployeefield.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.rblleaveorpermission.text.rotext" xml:space="preserve">
+    <value>Processus d’arrêt d’un utilisateur</value>
+  </data>
+  <data name="RES_documenttemplate.rblleaveorpermission.tooltip.rotext" xml:space="preserve">
+    <value>Ex : bulletin d’arrêt, autorisation ou confirmation</value>
+  </data>
+  <data name="RES_documenttemplate.rblmandatory.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.rbnadvicecriticality.text.rotext" xml:space="preserve">
+    <value>Autoriser l´accès, mais avertir si l’appareil sur lequel l´utilisateur s’identifie le permet </value>
+  </data>
+  <data name="RES_documenttemplate.rbnadvicecriticality.tooltip.rotext" xml:space="preserve">
+    <value>La non-conformité sera notifiée. S´il existe un contrôle d´accès, l´accès sera autorisé</value>
+  </data>
+  <data name="RES_documenttemplate.rbndeniedcriticality.text.rotext" xml:space="preserve">
+    <value>Ne pas autoriser l´accès à l’utilisateur</value>
+  </data>
+  <data name="RES_documenttemplate.rbndeniedcriticality.tooltip.rotext" xml:space="preserve">
+    <value>s´il existe un contrôle d´accès, l´accès ne sera pas autorisé</value>
+  </data>
+  <data name="RES_documenttemplate.rbnnoncriticality.text.rotext" xml:space="preserve">
+    <value>Ne pas tenir compte et autoriser l’accès </value>
+  </data>
+  <data name="RES_documenttemplate.rbnnoncriticality.tooltip.rotext" xml:space="preserve">
+    <value>Aucune action ne sera effectuée en cas de non-conformité du document</value>
+  </data>
+  <data name="RES_documenttemplate.rbnotifications.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.rbnpanelexpireonserver.text.rotext" xml:space="preserve">
+    <value>Nombre de jours indiqué dans la section de configuration de l´audit de données</value>
+  </data>
+  <data name="RES_documenttemplate.rbnpanelexpireonserver.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.rbnpanelnoexpire.text.rotext" xml:space="preserve">
+    <value>Toujours. Ne sont jamais supprimés</value>
+  </data>
+  <data name="RES_documenttemplate.rbnpanelnoexpire.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.rbvaliduntil.text.rotext" xml:space="preserve">
+    <value>Pendant</value>
+  </data>
+  <data name="RES_documenttemplate.rbvaliduntil.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.scope.causenote.rotext" xml:space="preserve">
+    <value>Document relatif à une justification</value>
+  </data>
+  <data name="RES_documenttemplate.scope.company.rotext" xml:space="preserve">
+    <value>Document en rapport avec l´entreprise</value>
+  </data>
+  <data name="RES_documenttemplate.scope.companyaccessauthorization.rotext" xml:space="preserve">
+    <value>Document relatif à une autorisation d´accès d´entreprise</value>
+  </data>
+  <data name="RES_documenttemplate.scope.employeeaccessauthorization.rotext" xml:space="preserve">
+    <value>Document relatif à une autorisation d’accès d’utilisateur</value>
+  </data>
+  <data name="RES_documenttemplate.scope.employeecontract.rotext" xml:space="preserve">
+    <value>Documentation générale de l’utilisateur</value>
+  </data>
+  <data name="RES_documenttemplate.scope.employeefield.rotext" xml:space="preserve">
+    <value>Document relatif à un champ de la fiche d’utilisateur (par ex. photocopie de la carte d’identité de l’utilisateur)</value>
+  </data>
+  <data name="RES_documenttemplate.scope.leaveorpermission.rotext" xml:space="preserve">
+    <value>Document en rapport avec un arrêt ou une permission</value>
+  </data>
+  <data name="RES_documenttemplate.stylesheetscontainer.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_documenttemplate.tabcontrol.rotext" xml:space="preserve">
+    <value>Contrôle</value>
+  </data>
+  <data name="RES_documenttemplate.tabestado.rotext" xml:space="preserve">
+    <value>Général</value>
+  </data>
+  <data name="RES_documenttemplate.tablopd.rotext" xml:space="preserve">
+    <value>Sécurité</value>
+  </data>
+  <data name="RES_documenttemplate.tabscope.rotext" xml:space="preserve">
+    <value>Champ d´application</value>
+  </data>
+  <data name="RES_documenttemplate.title.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_index.causenoteorleaveorpermission.rotext" xml:space="preserve">
+    <value>Téléchargez ce document à partir du dossier de l’utilisateur.</value>
+  </data>
+  <data name="RES_index.companyrequired.rotext" xml:space="preserve">
+    <value>Le nom du document doit inclure le CIF de l’entreprise.</value>
+  </data>
+  <data name="RES_index.contractrequired.rotext" xml:space="preserve">
+    <value>L´utilisateur doit avoir un contrat pour pouvoir télécharger le document.</value>
+  </data>
+  <data name="RES_index.documentmaxsizefile.rotext" xml:space="preserve">
+    <value>Le fichier dépasse la taille maximale autorisée.</value>
+  </data>
+  <data name="RES_index.employeerequired.rotext" xml:space="preserve">
+    <value>Aucun utilisateur auquel associer le document n´a été trouvé. Le format du nom du document doit être DNI_&lt;suite du nom du fichier&gt;.&lt;extension&gt;</value>
+  </data>
+  <data name="RES_index.a3payrollemployeerequired.rotext" xml:space="preserve">
+    <value>Aucun utilisateur n'a pu être trouvé pour associer le document aux pages suivantes :</value>
+  </data>
+  <data name="RES_index.invalida3payrollformat.rotext" xml:space="preserve">
+    <value>Le document n'est pas au format A3</value>
+  </data>
+  <data name="RES_index.employeerequiredpatternalt1.rotext" xml:space="preserve">
+    <value>Aucun utilisateur auquel associer le document n´a été trouvé. Le format du nom du document doit être &lt;*&gt;_nif_(DNI)_&lt;suite du nom du fichier&gt;.&lt;extension&gt;</value>
+  </data>
+  <data name="RES_index.excludedfileextensions.rotext" xml:space="preserve">
+    <value>Extension de fichier non autorisée.</value>
+  </data>
+  <data name="RES_index.nodocumenttemplate.rotext" xml:space="preserve">
+    <value>Aucun dossier n´est sélectionné pour télécharger le document.</value>
+  </data>
+  <data name="RES_index.nopermissionoveremployee.rotext" xml:space="preserve">
+    <value>Vous n´avez pas d’autorisation sur l’utilisateur pour télécharger le document.</value>
+  </data>
+  <data name="RES_index.nopermissionovergroup.rotext" xml:space="preserve">
+    <value>Vous n´avez pas d’autorisation sur le groupe pour télécharger le document.</value>
+  </data>
+  <data name="RES_index.numberofsigneddocumentsexceeded.rotext" xml:space="preserve">
+    <value>Le nombre de documents disponibles à signer a été dépassé</value>
+  </data>
+  <data name="RES_index.pdfdocumentrequired.rotext" xml:space="preserve">
+    <value>Le document doit être au format PDF</value>
+  </data>
+  <data name="RES_index.templateinuse.rotext" xml:space="preserve">
+    <value>Le dossier contient des documents, il ne peut pas être supprimé.</value>
+  </data>
+  <data name="RES_index.title.rotext" xml:space="preserve">
+    <value>Gestion des documents</value>
+  </data>
+  <data name="RES_index.title.search.rotext" xml:space="preserve">
+    <value>Rechercher des dossiers</value>
+  </data>
+  <data name="RES_index.treetitle.rotext" xml:space="preserve">
+    <value>Dossiers</value>
+  </data>
+  <data name="RES_index.a3payrollcorrect.noone.rotext" xml:space="preserve">
+    <value>Aucune masse salariale n'a été importée</value>
+  </data>
+  <data name="RES_index.a3payrollcorrect.one.rotext" xml:space="preserve">
+    <value>Paie ${1} importée avec succès</value>
+  </data>
+  <data name="RES_index.a3payrollcorrect.many.rotext" xml:space="preserve">
+    <value>Les feuilles de paie de ${1} ont été importées correctement</value>
+  </data>
+  <data name="RES_index.a3payrollunknownemployee.rotext" xml:space="preserve">
+    <value>Impossible d'importer les feuilles de paie de ${1} car l'utilisateur dont le numéro d'identification est indiqué sur la feuille de paie n'a pas pu être localisé. Veuillez consulter les pages suivantes : ${2}</value>
+  </data>
+  <data name="RES_index.a3payrollunauthorizedemployee.rotext" xml:space="preserve">
+    <value>Impossible d'importer les paies de ${1} car nous n'avons pas les permissions sur l'utilisateur avec le numéro d'identification indiqué sur la paie. Vérifiez les pages suivantes : ${2}</value>
+  </data>
+  <data name="RES_index.a3payrollnocontractemployee.rotext" xml:space="preserve">
+    <value>Impossible d'importer les paies de ${1} car nous n'avons pas les permissions sur l'utilisateur avec le numéro d'identification indiqué sur la paie. Vérifiez les pages suivantes : ${2}</value>
+  </data>
+</root>

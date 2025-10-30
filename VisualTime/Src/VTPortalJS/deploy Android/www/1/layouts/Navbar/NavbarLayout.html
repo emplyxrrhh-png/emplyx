@@ -1,0 +1,168 @@
+<div class="navbar-layout" data-options="dxLayout : { name: 'navbar' } ">
+    <div class="layout-header dx-toolbar-background" id="navbarLayout" data-options="dxContentPlaceholder : { name: 'header', animation: 'view-header-toolbar' }">
+        <div data-bind="dxToolbar: { items: [ { text: title, location: 'center' },
+             {
+             location: 'after' ,
+             widget: 'dxButton' ,
+             visible: (!VTPortal.roApp.isOnline()),
+             locateInMenu: 'auto' ,
+             options: {
+             icon: 'warning' ,
+             onClick: function() {
+                              DevExpress.ui.notify(i18nextko.t('roNoConnectionAvailable'), 'warning', 3000);
+                        }
+                    }
+                },
+              {
+             location: 'after' ,
+             widget: 'dxButton' ,
+             visible: (VTPortal.roApp.nfcEnabled()),
+             locateInMenu: 'auto' ,
+             options: {
+             icon: 'Images/Common/nfc.png' ,
+             onClick: function() {
+                              DevExpress.ui.notify(i18nextko.t('roNfcEnabled'), 'info', 3000);
+                        }
+                    }
+                },
+             {
+             location: 'after' ,
+             widget: 'dxButton' ,
+             visible: (VTPortal.roApp.syncing()),
+             locateInMenu: 'auto' ,
+             options: {
+             icon: 'refresh' ,
+             onClick: function() {
+                              DevExpress.ui.notify(i18nextko.t('roSyncing'), 'info', 3000);
+                        }
+                    }
+                },
+              {
+                locateInMenu: 'always',
+                visible: (VTPortal.roApp.impersonatedIDEmployee != -1),
+                text: VTPortal.roApp.impersonatedNameEmployee,
+            },
+
+             {
+                locateInMenu: 'always',
+                visible: (VTPortal.roApp.impersonatedIDEmployee != -1),
+                text: i18nextko.t('roBackToTeam'),
+                onClick: function() {
+
+                           VTPortal.roApp.impersonatedIDEmployee = -1;
+        if (VTPortal.roApp.db.settings.onlySupervisor) {
+            VTPortal.roApp.redirectAtHome(false);
+        } else {
+            VTPortal.roApp.selectedTab(2);
+            VTPortal.app.navigate('myteam', { root: true });
+        }
+
+        VTPortal.roApp.loadInitialData(true, true, true, false, false);
+                        }
+            },
+             {
+                locateInMenu: 'always',
+                text: i18nextko.t('roLogout'),
+                onClick: function() {
+                     new WebServiceRobotics(function (result) {
+                window.VTPortalUtils.utils.onLogoutSuccessFunc(result);
+            }, function (error) {
+                    window.VTPortalUtils.utils.onLogoutErrorFunc(error);;
+
+            }).logout(VTPortal.roApp.db.settings.UUID);
+                }
+            },
+             {
+                locateInMenu: 'always',
+                text: i18nextko.t('roAbout'),
+                onClick: function() {
+                    DevExpress.ui.notify('VisualTime Portal ' + VTPortal.roApp.infoVersion, 'info', 3000);
+                }
+            }
+             ] }" data-options="dxCommandContainer : { id: 'ios-header-toolbar' }"></div>
+    </div>
+
+    <div class="layout-content" data-options="dxContentPlaceholder : { name: 'content', animation: 'view-content-change' }">
+    </div>
+
+    <div class="layout-footer" style="visibility:hidden; height:0px !important">
+        <div class="navbar-container" data-bind="dxNavBar: { }" data-options="dxCommandContainer: { id: 'global-navigation' }" style="padding-top:5px;">
+        </div>
+    </div>
+
+    <div class="view-footer" data-options="dxContent : { targetPlaceholder: 'view-footer' } ">
+        <div class="view-toolbar-bottom" data-bind="dxToolbar: { visible: false }" data-options="dxCommandContainer : { id: 'ios-view-footer' } ">
+        </div>
+    </div>
+</div>
+
+<!--{
+      locateInMenu: 'always',
+      text: i18nextko.t('roHelp'),
+      onClick: function() {
+           VTPortal.roApp.showPopover(true);
+      }
+  }-->
+<!--<div class="navbar-layout" data-options="dxLayout : { name: 'navbar', platform: 'android' } ">
+
+    <div class="layout-header">
+        <div class="navbar-container dx-navbar-layout-header" data-bind="dxNavBar: {}" data-options="dxCommandContainer: { id: 'global-navigation' }">
+        </div>
+    </div>
+
+    <div class="layout-content" data-options="dxContentPlaceholder : { name: 'content', animation: 'view-content-change' }">
+    </div>
+
+    <div class="layout-footer" data-options="dxContentPlaceholder: { name: 'footer' } ">
+        <div data-bind="dxToolbar: { visible: false }" data-options="dxCommandContainer : { id: 'android-footer-toolbar' } "></div>
+    </div>
+</div>
+
+<div class="navbar-layout" data-options="dxLayout : { name: 'navbar', platform: 'generic' } ">
+
+    <div class="layout-header dx-toolbar-background" data-options="dxContentPlaceholder : { name: 'header', animation: 'view-header-toolbar' }">
+        <div data-bind="dxToolbar: { items: [{ text: title, location: 'center' }] }" data-options="dxCommandContainer : { id: 'generic-header-toolbar' }">
+        </div>
+    </div>
+
+    <div class="layout-content" data-options="dxContentPlaceholder : { name: 'content', animation: 'view-content-change' }">
+    </div>
+
+    <div class="layout-footer">
+        <div class="navbar-container" data-bind="dxNavBar: {}" data-options="dxCommandContainer: { id: 'global-navigation' }">
+        </div>
+    </div>
+
+    <div class="view-footer" data-options="dxContent : { targetPlaceholder: 'view-footer' } ">
+        <div class="view-toolbar-bottom" data-bind="dxToolbar: { visible: false }" data-options="dxCommandContainer : { id: 'generic-view-footer' } ">
+        </div>
+    </div>
+</div>
+
+<div class="navbar-layout-tablet" data-options="dxLayout : { name: 'navbar', platform: 'win', phone: false }">
+    <div class="layout-header">
+        <div data-options="dxContentPlaceholder : { name: 'header', contentCssPosition: 'static' }">
+            <h1 class="view-title" data-bind="text: title"></h1>
+        </div>
+        <div class="navbar-container" data-bind="dxNavBar: { selectionMode: 'none' }" data-options="dxCommandContainer : { id: 'global-navigation' }"></div>
+    </div>
+    <div class="layout-content-wrapper">
+        <div class="layout-content" data-options="dxContentPlaceholder : { name: 'content', contentCssPosition: 'static' }">
+        </div>
+    </div>
+</div>
+
+<div class="navbar-layout" data-options="dxLayout : { name: 'navbar', platform: 'win', phone: true } ">
+
+    <div class="layout-header">
+        <div class="navbar-container dx-navbar-layout-header" data-bind="dxNavBar: {}" data-options="dxCommandContainer: { id: 'global-navigation' }">
+        </div>
+    </div>
+
+    <div class="layout-content" data-options="dxContentPlaceholder : { name: 'content', animation: 'view-content-change' }">
+    </div>
+
+    <div class="layout-footer" data-options="dxContentPlaceholder : { name: 'footer' }">
+        <div class="layout-toolbar-bottom" data-bind="dxToolbar: { items: [], renderAs: 'bottomToolbar', visible: false }" data-options="dxCommandContainer : { id: 'win10-phone-appbar' } "></div>
+    </div>
+</div>-->

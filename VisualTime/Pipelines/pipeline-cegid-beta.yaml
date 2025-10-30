@@ -1,0 +1,241 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+schedules:
+- cron: "10 2 4,18 * *"
+  displayName: Publish nightly build
+  branches:
+    include:
+    - development
+
+trigger:
+- none
+
+pool:
+  name: Private VS2022
+
+# pool:
+#   vmImage: windows-latest
+
+variables:
+  - name: solution
+    value: './Src/VisualTime Full MT.sln'
+  - name: testProjects
+    value: './Tests/**/*.csproj'
+  - name: buildConfiguration
+    value: 'Multitennant'
+  - name: attachArtifactsToPipeline
+    value: true
+  - name: storageName
+    value: "idistagestorage"
+  - name: slotName
+    value: "stage"
+
+stages:
+
+  - template: Templates/Build.yml
+    parameters:
+      appservices: 
+        - project: './Src/VTLive40/VTLive40.vbproj'
+          folder: 'VTLive'
+          enabled: true
+        - project: './Src/VTLiveApi/VTLiveApi.vbproj'
+          folder: 'VTLiveApi'
+          enabled: true
+        - project: './Src/VTPortalWeb/VTPortalWeb.vbproj'
+          folder: 'VTPortal'
+          enabled: true
+        - project: './Src/VTTerminalsPushServer/TerminalsPushServer.vbproj'
+          folder: 'VTTerminals'
+          enabled: true
+        - project: './Src/LiveVisits/Visits.vbproj'
+          folder: 'VTVisits'
+          enabled: true
+      functions: 
+        - project: './Src/Functions/roAnalyticsFunctions/roAnalyticsFunctions.csproj'
+          folder: 'fnAnalyticsFunction'
+          enabled: true
+        - project: './Src/Functions/roBackgroundFunctions/roBackgroundFunctions.csproj'
+          folder: 'fnBackgroundFunction'
+          enabled: true
+        - project: './Src/Functions/roBroadcasterFunction/roBroadcasterFunction.csproj'
+          folder: 'fnBroadcasterFunction'
+          enabled: true
+        - project: './Src/Functions/roDatalinkFunctions/roDatalinkFunctions.csproj'
+          folder: 'fnDatalinkFunction'
+          enabled: true
+        - project: './Src/Functions/roMailFunction/roMailFunction.csproj'
+          folder: 'fnMailFunction'
+          enabled: true
+        - project: './Src/Functions/roReportFunctions/roReportFunctions.csproj'
+          folder: 'fnReportFunction'
+          enabled: true
+        - project: './Src/Functions/roScheduleFunctions/roScheduleFunctions.csproj'
+          folder: 'fnScheduleFunction'
+          enabled: true
+        - project: './Src/Functions/roNotificationsFunction/roNotificationsFunction.csproj'
+          folder: 'fnNotificationsFunction'
+          enabled: true
+        - project: './Src/Functions/roPushNotificationsFunction/roPushNotificationsFunction.csproj'
+          folder: 'fnPushNotificationsFunction'
+          enabled: true
+        - project: './Src/Functions/roEngineFunctions/roEngineFunctions.csproj'
+          folder: 'fnEngineFunction'
+          enabled: true
+        - project: './Src/Functions/roPunchConnectorFunctions/roPunchConnectorFunctions.csproj'
+          folder: 'fnPunchConnectorFunction'
+          enabled: true
+        - project: './Src/Functions/roSCFunction/roSCFunction.csproj'
+          folder: 'fnpnlinkfunction'
+          enabled: true
+        - project: './Src/Functions/roFTPStorageSynchronizationFunction/roFTPStorageSynchronizationFunction.csproj'
+          folder: 'fnFTPStorageSyncFunction'
+          enabled: true
+      generateLang: false
+      uploadArtifact: ${{ variables.attachArtifactsToPipeline }}
+      copyTemplates: true
+      copyUpdates: true
+      copyReports: true
+      sonarcloudAnalysis: false 
+
+  - template: Templates/DeployAzureUnifiedBeta.yml
+    parameters:
+        slot: ${{ variables.slotName }}
+        resourceGroup: 'MTDEV'
+        storageAccount: ${{ variables.storageName }}
+        azureService: 3124-Dev-Vti-Deployment
+        environment: beta
+        artifacts: 
+          - name: 'VTLive'
+            artifactoryFolderName: 'VT_Live'
+            zip: 'VTLive.zip'
+            destination: 'vtliveidi'
+            enabled: true
+            type: 'webapp'
+          - name: 'VTLiveApi'
+            artifactoryFolderName: 'VT_LiveApi'
+            zip: 'VTLiveApi.zip'
+            destination: 'vtliveapiidi'
+            enabled: true
+            type: 'webapp'
+          - name: 'VTPortal'
+            artifactoryFolderName: 'VT_Portal'
+            zip: 'VTPortal.zip'
+            destination: 'vtportalidi'
+            enabled: true
+            type: 'webapp'
+          - name: 'VTTerminals'
+            artifactoryFolderName: 'VT_Terminals'
+            zip: 'VTTerminals.zip'
+            destination: 'vtterminalsidi'
+            enabled: true
+            type: 'webapp'
+          - name: 'VTVisits'
+            artifactoryFolderName: 'VT_Visits'
+            zip: 'VTVisits.zip'
+            destination: 'vtvisitsidi'
+            enabled: true
+            type: 'webapp'
+          - name: 'fnAnalyticsFunction'
+            artifactoryFolderName: 'FN_AnalyticsFunction'
+            zip: 'fnAnalyticsFunction.zip'
+            destination: 'fnAnalyticsIDI'
+            enabled: true
+            type: 'funapp'
+          - name: 'fnBackgroundFunction'
+            artifactoryFolderName: 'FN_BackgroundFunction'
+            zip: 'fnBackgroundFunction.zip'
+            destination: 'fnBackgroundIdi'
+            enabled: true
+            type: 'funapp'
+          - name: 'fnBroadcasterFunction'
+            artifactoryFolderName: 'FN_BroadcasterFunction'
+            zip: 'fnBroadcasterFunction.zip'
+            destination: 'fnBroadcasterIdi'
+            enabled: true
+            type: 'funapp'
+          - name: 'fnDatalinkFunction'
+            artifactoryFolderName: 'FN_DatalinkFunction'
+            zip: 'fnDatalinkFunction.zip'
+            destination: 'fnDatalinkIdi'
+            enabled: true
+            type: 'funapp'
+          - name: 'fnMailFunction'
+            artifactoryFolderName: 'FN_MailFunction'
+            zip: 'fnMailFunction.zip'
+            destination: 'fnMailidi'
+            enabled: true
+            type: 'funapp'
+          - name: 'fnReportFunction'
+            artifactoryFolderName: 'FN_ReportFunction'
+            zip: 'fnReportFunction.zip'
+            destination: 'fnReportIdi'
+            enabled: true
+            type: 'funapp'
+          - name: 'fnScheduleFunction'
+            artifactoryFolderName: 'FN_ScheduleFunction'
+            zip: 'fnScheduleFunction.zip'
+            destination: 'fnScheduleIdi'
+            enabled: true
+            type: 'funapp'
+          - name: 'fnPushNotificationsFunction'
+            artifactoryFolderName: 'FN_NotificationsFunction'
+            zip: 'fnPushNotificationsFunction.zip'
+            destination: 'fnPushIdi'
+            enabled: true
+            type: 'funapp'
+          - name: 'fnNotificationsFunction'
+            artifactoryFolderName: 'FN_PushNotificationsFunction'
+            zip: 'fnNotificationsFunction.zip'
+            destination: 'fnNotificationsIdi'
+            enabled: true
+            type: 'funapp'
+          - name: 'fnEngineFunction'
+            artifactoryFolderName: 'FN_EngineFunction'
+            zip: 'fnEngineFunction.zip'
+            destination: 'fnEngineIdi'
+            enabled: true
+            type: 'funapp'
+          - name: 'fnPunchConnectorFunction'
+            artifactoryFolderName: 'FN_PunchConnectorFunction'
+            zip: 'fnPunchConnectorFunction.zip'
+            destination: 'fnConnectorIdi'
+            enabled: true
+            type: 'funapp'
+          - name: 'fnPNlinkFunction'
+            artifactoryFolderName: 'FN_PNlinkFunction'
+            zip: 'fnpnlinkfunction.zip'
+            destination: 'fnPNLinkIdi'
+            enabled: true
+            type: 'funapp'
+          - name: 'fnFTPStorageSyncFunction'
+            artifactoryFolderName: 'FN_FTPStorageSyncFunction'
+            zip: 'fnFTPStorageSyncFunction.zip'
+            destination: 'fnFTPsyncIdi'
+            enabled: true
+            type: 'funapp'
+        resources:
+          - name: 'reports'
+            artifactoryFolderName: 'Common_reports'
+            zip: 'reports.zip'
+            container: 'upgrade'
+            folder: 'reports'
+            pattern: '*.sql;*.vtu'
+            enabled: true
+          - name: 'updates'
+            artifactoryFolderName: 'Common_updates'
+            zip: 'updates.zip'
+            container: 'upgrade'
+            folder: 'updates'
+            pattern: '*.sql;*.vtu'
+            enabled: true
+        resourcesDatalink:
+          - name: 'templates'
+            artifactoryFolderName: 'Common_templates'
+            zip: 'templates.zip'
+            container: 'datalink'
+            pattern: '*.xlsx;*.vtu'
+            folder: 'common_templates'
+            enabled: true

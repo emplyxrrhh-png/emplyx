@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00BE6247-E1ED-4E0A-BD02-8DBB4E00FFE1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>VTDto</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\CommonBin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\CommonBin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Multitennant|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\CommonBin\</OutputPath>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SwaggerWcf, Version=0.2.15.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\SwaggerWcf.0.2.15\lib\net45\SwaggerWcf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\AssemblyVersionInfo.vb">
+      <Link>AssemblyVersionInfo.vb</Link>
+    </Compile>
+    <Compile Include="Models\Analytics\roLayoutDescription.vb" />
+    <Compile Include="Models\Api\ExportTypes.vb" />
+    <Compile Include="Models\Api\ReturnCode.vb" />
+    <Compile Include="Models\Api\roApi.vb" />
+    <Compile Include="Models\Api\roDatalinkAbsence.vb" />
+    <Compile Include="Models\Api\roDatalinkAccrual.vb" />
+    <Compile Include="Models\Api\roDatalinkCalendar.vb" />
+    <Compile Include="Models\Api\roDatalinkDailyCause.vb" />
+    <Compile Include="Models\Api\roDatalinkDocument.vb" />
+    <Compile Include="Models\Api\roDatalinkVSL_WorkSheets.vb" />
+    <Compile Include="Models\Api\roDatalinkSupervisor.vb" />
+    <Compile Include="Models\Api\roDatalinkEmployee.vb" />
+    <Compile Include="Models\Api\roDatalinkHolidays.vb" />
+    <Compile Include="Models\Api\roDatalinkImport.vb" />
+    <Compile Include="Models\Api\roDatalinkPunch.vb" />
+    <Compile Include="Models\Api\roDatalinkRequest.vb" />
+    <Compile Include="Models\Api\roWCFHelper.vb" />
+    <Compile Include="Models\App\threadData.vb" />
+    <Compile Include="Models\App\contants.vb" />
+    <Compile Include="Models\Azure\roAzureLocale.vb" />
+    <Compile Include="Models\Azure\roCegidIDConfig.vb" />
+    <Compile Include="Models\Azure\roKeyVaultConfig.vb" />
+    <Compile Include="Models\Azure\roFTPConnection.vb" />
+    <Compile Include="Models\Azure\roServiceConfiguration.vb" />
+    <Compile Include="Models\Bots\roBotConfig.vb" />
+    <Compile Include="Models\Causes\roCause.vb" />
+    <Compile Include="Models\Causes\roEngineCauseDocument.vb" />
+    <Compile Include="Models\Collectives\roCollective.vb" />
+    <Compile Include="Models\Concept\roConcept.vb" />
+    <Compile Include="Models\Concept\roConceptComposition.vb" />
+    <Compile Include="Models\EmployeeGroups\roEmployeeSelectionPath.vb" />
+    <Compile Include="Models\EmployeeGroups\roGroupTree.vb" />
+    <Compile Include="Models\EmployeeGroups\roEmployeeTree.vb" />
+    <Compile Include="Models\Filter\roEmpFilter.vb" />
+    <Compile Include="Models\EmployeeGroups\roEmployeeGroupPeriod.vb" />
+    <Compile Include="Models\LabAgree\roLabAgreeCauseLimitValues.vb" />
+    <Compile Include="Models\LabAgree\roStartupValue.vb" />
+    <Compile Include="Models\LabAgree\roLabAgreeAccrualRule.vb" />
+    <Compile Include="Models\LabAgree\roLabAgree.vb" />
+    <Compile Include="Models\Notification\roNotificationTask.vb" />
+    <Compile Include="Models\Parameters\Parameter.vb" />
+    <Compile Include="Models\Parameters\AdvancedParameterType.vb" />
+    <Compile Include="AuthenticationMethod.vb" />
+    <Compile Include="Diagnostics\Parameter.vb" />
+    <Compile Include="Diagnostics\ParameterType.vb" />
+    <Compile Include="Diagnostics\ParameterValue.vb" />
+    <Compile Include="Diagnostics\Query.vb" />
+    <Compile Include="GenericResponse.vb" />
+    <Compile Include="Models\Analytics\roGeniusExecution.vb" />
+    <Compile Include="Models\Analytics\roGeniusScheduler.vb" />
+    <Compile Include="Models\Analytics\roGeniusView.vb" />
+    <Compile Include="Models\Analytics\roAnalytics.vb" />
+    <Compile Include="Models\Analytics\roAnalyticSchedule.vb" />
+    <Compile Include="Models\Parameters\AdvancedParametersData.vb" />
+    <Compile Include="Models\Api\roApiSession.vb" />
+    <Compile Include="Models\Azure\roAzureConfig.vb" />
+    <Compile Include="Models\Azure\roAzureTerminal.vb" />
+    <Compile Include="Models\Azure\roCompanyConfiguration.vb" />
+    <Compile Include="Models\Common\roEnums.vb" />
+    <Compile Include="Models\Common\ViewOptions.vb" />
+    <Compile Include="Models\Email\roSmsConfig.vb" />
+    <Compile Include="Models\Email\roMailConfig.vb" />
+    <Compile Include="Models\Notification\roNotificationCache.vb" />
+    <Compile Include="Models\Notification\roNotificationItem.vb" />
+    <Compile Include="Models\PlanningEngine\roPlanningEngine.vb" />
+    <Compile Include="Models\Punch\roConnectorParameter.vb" />
+    <Compile Include="Models\Result\roResultField.vb" />
+    <Compile Include="Models\Bots\roBotRules.vb" />
+    <Compile Include="Models\Bots\roBots.vb" />
+    <Compile Include="Models\roCookie.vb" />
+    <Compile Include="Models\roStart.vb" />
+    <Compile Include="Models\roPortalConfiguration.vb" />
+    <Compile Include="Models\roChannels.vb" />
+    <Compile Include="Models\roSurvey.vb" />
+    <Compile Include="Models\roToDoList.vb" />
+    <Compile Include="Models\Security\roPassportTicket.vb" />
+    <Compile Include="Models\Selectors\roSelectorType.vb" />
+    <Compile Include="Models\ServiceApi\roCompanyInfo.vb" />
+    <Compile Include="Models\ServiceApi\roCompanyToken.vb" />
+    <Compile Include="Models\ServiceApi\roAuthenticationResponse.vb" />
+    <Compile Include="Models\Shift\roShiftAssignment.vb" />
+    <Compile Include="Models\Shift\roShiftRule.vb" />
+    <Compile Include="Models\Shift\roShiftTimeZone.vb" />
+    <Compile Include="Models\Shift\roShiftLayer.vb" />
+    <Compile Include="Models\Shift\roShift.vb" />
+    <Compile Include="Models\SSO\roSSOConfiguration.vb" />
+    <Compile Include="Models\Security\Permission.vb" />
+    <Compile Include="LabAgree.vb" />
+    <Compile Include="Models\Security\PermissionCheckMode.vb" />
+    <Compile Include="Models\TimeGate\roTimeGate.vb" />
+    <Compile Include="Report.vb" />
+    <Compile Include="RequestTypes.vb" />
+    <Compile Include="ResponseTypes.vb" />
+    <Compile Include="roAIProblem.vb" />
+    <Compile Include="roAISolution.vb" />
+    <Compile Include="roBase.vb" />
+    <Compile Include="roRule.vb" />
+    <Compile Include="roDailyRecord.vb" />
+    <Compile Include="roWebLink.vb" />
+    <Compile Include="roShift.vb" />
+    <Compile Include="roTrackedEvent.vb" />
+    <Compile Include="roSupremaConfiguration.vb" />
+    <Compile Include="roZoneTypes.vb" />
+    <Compile Include="roConnector.vb" />
+    <Compile Include="roEngine.vb" />
+    <Compile Include="roIndicators.vb" />
+    <Compile Include="roCause.vb" />
+    <Compile Include="roCommunique.vb" />
+    <Compile Include="Models\Security\roPassport.vb" />
+    <Compile Include="roLiveTask.vb" />
+    <Compile Include="roSecurityCategory.vb" />
+    <Compile Include="roTerminal.vb" />
+    <Compile Include="roTask.vb" />
+    <Compile Include="roReportBase.vb" />
+    <Compile Include="roBudget.vb" />
+    <Compile Include="roCalendar.vb" />
+    <Compile Include="roDocument.vb" />
+    <Compile Include="roEmployeeSummary.vb" />
+    <Compile Include="roGroupChartItem.vb" />
+    <Compile Include="roDatalinkGuide.vb" />
+    <Compile Include="Models\Security\roPassportConsent.vb" />
+    <Compile Include="roProductiveUnit.vb" />
+    <Compile Include="roProductiveUnitMode.vb" />
+    <Compile Include="roProductiveUnitModePosition.vb" />
+    <Compile Include="roProgrammedHoliday.vb" />
+    <Compile Include="roProgrammedOvertime.vb" />
+    <Compile Include="roAnalytics.vb" />
+    <Compile Include="roDateTimePeriod.vb" />
+    <Compile Include="roEmployees.vb" />
+    <Compile Include="roPunch.vb" />
+    <Compile Include="roMobility.vb" />
+    <Compile Include="roRequests.vb" />
+    <Compile Include="roSDK.vb" />
+    <Compile Include="roGroupFeature.vb" />
+    <Compile Include="roGroupFeaturePermissionsOverFeature.vb" />
+    <Compile Include="roSecurityNodePassportExceptions.vb" />
+    <Compile Include="roSecurityNodePassport.vb" />
+    <Compile Include="roSecurityNodeGroup.vb" />
+    <Compile Include="LicenseInformation.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="roGuiAction.vb" />
+    <Compile Include="roSecurityNode.vb" />
+    <Compile Include="Models\Shift\roShiftDailyRule.vb" />
+    <Compile Include="Models\Notification\roNotifications.vb" />
+    <Compile Include="roTerminalData.vb" />
+    <Compile Include="roUserFields.vb" />
+    <Compile Include="roUserFieldTypes.vb" />
+    <Compile Include="roValidateID.vb" />
+    <Compile Include="roWsState.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

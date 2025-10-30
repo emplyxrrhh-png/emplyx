@@ -1,0 +1,69 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+parameters:
+  - name: azureService
+    type: string
+    default: ""
+  - name: sourceSlot
+    type: string
+    default: ""
+  - name: targetSlot
+    type: string
+    default: ""
+  - name: resourceGroup
+    type: string
+    default: ''
+  - name: environment
+    type: string
+    default: ''
+  - name: artifacts
+    type: object
+    default: ""
+  - name: productionSwap
+    type: boolean
+    default: ''
+      
+
+
+stages:
+  - stage: SwapSlot
+    displayName: "Swap slot - ${{ parameters.sourceSlot }} to ${{ parameters.targetSlot }}"
+    condition: succeeded()
+    jobs:
+    - ${{ each vtartifact in parameters.artifacts }}:
+      - ${{ if eq(vtartifact.enabled, true) }} :
+        - deployment: SwapSlot_${{ vtartifact.name }}
+          pool:
+            vmImage: windows-latest
+          environment: cegid_vti_app_${{ parameters.environment }}
+          strategy:
+            runOnce:
+              deploy:
+                steps:
+                - download: none
+                - checkout: none
+                - ${{ if eq(parameters.productionSwap, false) }} :
+                  - task: AzureAppServiceManage@0
+                    displayName: 'Swap slot- ${{ vtartifact.name }}'
+                    inputs:
+                      azureSubscription: ${{ parameters.azureService }}
+                      Action: 'Swap Slots'
+                      WebAppName: '${{ vtartifact.destination }}'
+                      ResourceGroupName: '${{ parameters.resourceGroup }}'
+                      SourceSlot: ${{ parameters.sourceSlot }}
+                      SwapWithProduction: false
+                      TargetSlot: ${{ parameters.targetSlot }}
+
+                - ${{ if eq(parameters.productionSwap, true) }} :
+                  - task: AzureAppServiceManage@0
+                    displayName: 'Swap slot - ${{ vtartifact.name }}'
+                    inputs:
+                      azureSubscription: ${{ parameters.azureService }}
+                      Action: 'Swap Slots'
+                      WebAppName: '${{ vtartifact.destination }}'
+                      ResourceGroupName: '${{ parameters.resourceGroup }}'
+                      SourceSlot: ${{ parameters.sourceSlot }}
+
+

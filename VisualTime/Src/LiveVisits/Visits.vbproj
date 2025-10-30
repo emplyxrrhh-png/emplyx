@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{CEBF0C31-B693-4371-A7B4-41099AEF29EC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LiveVisits</RootNamespace>
+    <AssemblyName>LiveVisits</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Afk.ZoneInfo">
+      <HintPath>..\..\Common\Afk.ZoneInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Api\VisitsSvcx.svc" />
+    <Content Include="css\dx.light.css" />
+    <Content Include="css\dx.spa.css" />
+    <Content Include="css\src\dataTables.foundation.min.css" />
+    <Content Include="css\dx.common.css" />
+    <Content Include="css\src\font-awesome.min.css" />
+    <Content Include="css\src\dataTables.foundation.css" />
+    <Content Include="css\src\foundation-5.5.3.min.css" />
+    <Content Include="css\src\jquery.dataTables.min.css" />
+    <Content Include="css\src\jquery.datetimepicker.css" />
+    <Content Include="css\src\normalize.css" />
+    <Content Include="css\visits.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="img\loader.gif" />
+    <Content Include="img\logovtl.png" />
+    <Content Include="img\logovtl_bar.png" />
+    <Content Include="img\logovtp.png" />
+    <Content Include="img\Logo_VT5.png" />
+    <Content Include="img\Q1-1.jpg" />
+    <Content Include="img\Q1-2.jpg" />
+    <Content Include="img\Q1-3.jpg" />
+    <Content Include="img\Q1-4.jpg" />
+    <Content Include="img\Q1-5.jpg" />
+    <Content Include="img\Q1-6.jpg" />
+    <Content Include="img\Q2-1.jpg" />
+    <Content Include="img\Q2-2.jpg" />
+    <Content Include="img\Q2-3.jpg" />
+    <Content Include="img\Q2-4.jpg" />
+    <Content Include="img\Q2-5.jpg" />
+    <Content Include="img\Q2-6.jpg" />
+    <Content Include="img\Q3-1.jpg" />
+    <Content Include="img\Q3-2.jpg" />
+    <Content Include="img\Q3-3.jpg" />
+    <Content Include="img\Q3-4.jpg" />
+    <Content Include="img\Q3-5.jpg" />
+    <Content Include="img\Q3-6.jpg" />
+    <Content Include="img\Q4-1.jpg" />
+    <Content Include="img\Q4-2.jpg" />
+    <Content Include="img\Q4-3.jpg" />
+    <Content Include="img\Q4-4.jpg" />
+    <Content Include="img\Q4-5.jpg" />
+    <Content Include="img\Q4-6.jpg" />
+    <Content Include="img\sort_asc.png" />
+    <Content Include="img\sort_asc_disabled.png" />
+    <Content Include="img\sort_both.png" />
+    <Content Include="img\sort_desc.png" />
+    <Content Include="img\sort_desc_disabled.png" />
+    <Content Include="login.aspx" />
+    <Content Include="index.aspx" />
+    <Content Include="js\login.min.js" />
+    <Content Include="js\cldr.min.js" />
+    <Content Include="js\cldr\event.min.js" />
+    <Content Include="js\cldr\supplemental.min.js" />
+    <Content Include="js\cldr\unresolved.min.js" />
+    <Content Include="js\quill.min.js" />
+    <Content Include="js\dx.all.js" />
+    <Content Include="js\globalize.min.js" />
+    <Content Include="js\globalize\currency.min.js" />
+    <Content Include="js\globalize\date.min.js" />
+    <Content Include="js\globalize\message.min.js" />
+    <Content Include="js\globalize\number.min.js" />
+    <Content Include="js\jszip.min.js" />
+    <Content Include="js\visitors.min.js" />
+    <Content Include="js\visits.min.js" />
+    <Content Include="robots.txt" />
+    <Content Include="visitors.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AssemblyVersionInfo.vb">
+      <Link>AssemblyVersionInfo.vb</Link>
+    </Compile>
+    <Compile Include="Api\VisitsSvcx.svc.vb">
+      <DependentUpon>VisitsSvcx.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.designer.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.vb">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.vb">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="visitors.aspx.designer.vb">
+      <DependentUpon>visitors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="visitors.aspx.vb">
+      <DependentUpon>visitors.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="locales\translation.ca.json" />
+    <Content Include="locales\translation.es.json" />
+    <Content Include="locales\translation.dev.json" />
+    <Content Include="locales\datatables.ca.json" />
+    <Content Include="locales\datatables.en.json" />
+    <Content Include="locales\datatables.es.json" />
+    <Content Include="locales\translation.en.json" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\century-gothic.eot" />
+    <Content Include="fonts\century-gothic.ttf" />
+    <Content Include="locales\translation.pt.json" />
+    <Content Include="js\localization\dx.all.ca.json" />
+    <Content Include="js\localization\dx.all.en.json" />
+    <Content Include="js\localization\dx.all.es.json" />
+    <Content Include="js\localization\dx.all.gl.json" />
+    <Content Include="js\localization\dx.all.pt.json" />
+    <Content Include="js\cldr\locales\environment-ca.json" />
+    <Content Include="js\cldr\locales\environment-en.json" />
+    <Content Include="js\cldr\locales\environment-es.json" />
+    <Content Include="js\cldr\locales\environment-gl.json" />
+    <Content Include="js\cldr\locales\environment-pt.json" />
+    <Content Include="js\cldr\locales\likelySubtags.json" />
+    <Content Include="locales\translation.fr.json" />
+    <Content Include="locales\translation.gl.json" />
+    <Content Include="js\localization\dx.all.fr.json" />
+    <Content Include="js\localization\dx.all.it.json" />
+    <Content Include="locales\translation.it.json" />
+    <Content Include="css\icons\dxicons.ttf" />
+    <Content Include="css\icons\dxicons.woff" />
+    <Content Include="css\icons\dxiconsios.ttf" />
+    <Content Include="css\icons\dxiconsios.woff" />
+    <Content Include="css\icons\dxicons.woff2" />
+    <Content Include="css\icons\dxiconsios.woff2" />
+    <Content Include="locales\translation.eu.json" />
+    <Content Include="locales\translation.zh.json" />
+    <Content Include="fonts\Roboto-Regular.ttf" />
+    <Content Include="fonts\Poppins-Regular.ttf" />
+    <Content Include="fonts\Poppins-Bold.ttf" />
+    <Content Include="js\localization\dx.all.eu.json" />
+    <Content Include="js\localization\dx.all.zh.json" />
+    <Content Include="js\localization\dx.all.sk.json" />
+    <Content Include="locales\translation.sk.json" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\VisualTimeMTDeploy.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Multitennant.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="locales\ca\" />
+    <Folder Include="locales\dev\" />
+    <Folder Include="locales\en\" />
+    <Folder Include="locales\es\" />
+    <Folder Include="locales\pt\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\BaseWeb\Business\BaseWeb.vbproj">
+      <Project>{863c7f13-8c1d-4a24-a580-5e3dd0683757}</Project>
+      <Name>BaseWeb</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\DataLayer\DataLayer.vbproj">
+      <Project>{a68015f9-a070-4ab5-941e-c922fbc5ff30}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\DTOs.VTPortal\DTOs.VTPortal.vbproj">
+      <Project>{38052328-369e-4e56-a112-1a03362207e1}</Project>
+      <Name>DTOs.VTPortal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\DTOs\DTOs\DTOs.vbproj">
+      <Project>{00be6247-e1ed-4e0a-bd02-8dbb4e00ffe1}</Project>
+      <Name>DTOs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTAuthBase\VTAuthBase.vbproj">
+      <Project>{47ca7045-819a-4d2a-8e30-c584c309ba4f}</Project>
+      <Name>VTAuthBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTBase.Extensions\VTBase.Extensions.vbproj">
+      <Project>{d99ce0c2-ad93-4f3d-a35b-c97749de1bde}</Project>
+      <Name>VTBase.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTBase.Security\VTBase.Security.vbproj">
+      <Project>{c1b73385-8dff-40b0-8c3b-d2e0ded2621e}</Project>
+      <Name>VTBase.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTBase\VTBase.vbproj">
+      <Project>{f1d0ec70-d874-4eed-8ab9-f28fcda2b7f0}</Project>
+      <Name>VTBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTBusinessBase\VTBusiness.Common.vbproj">
+      <Project>{97d87ef7-2b41-4216-a6d2-fa9e3c1bc570}</Project>
+      <Name>VTBusiness.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTBusiness\VTBusiness.vbproj">
+      <Project>{19563cd9-657e-48a8-9b7e-c8b7b23af403}</Project>
+      <Name>VTBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTPortalBusiness\VTPortal.vbproj">
+      <Project>{636a00a2-2a32-460b-b2dc-437d56148683}</Project>
+      <Name>VTPortal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTVisits\VTVisits.vbproj">
+      <Project>{561c49cd-eb00-464b-b6e9-e7432c693b45}</Project>
+      <Name>VTVisits</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Multitennant|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>8030</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8030/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>@if "%25TF_BUILD%25"=="" (
+    
+  echo "$(ProjectName) OK"
+
+) else (
+   rmdir /s /q "$(ProjectDir)obj"
+)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_calendar.header.assignments.rotext" xml:space="preserve">
+    <value>Príspevky</value>
+  </data>
+  <data name="RES_calendar.header.concept.rotext" xml:space="preserve">
+    <value>Saldo</value>
+  </data>
+  <data name="RES_calendar.header.employees.rotext" xml:space="preserve">
+    <value>používatelia</value>
+  </data>
+  <data name="RES_calendar.header.status.rotext" xml:space="preserve">
+    <value>Štát</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.feastday.feastdaydescription.rotext" xml:space="preserve">
+    <value>Slávnostné</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.dateoutofscope.rotext" xml:space="preserve">
+    <value>Dátum nie je zahrnutý vo vybranom období</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.employeedoesnotexist.rotext" xml:space="preserve">
+    <value>Používateľ nie je zahrnutý do aktuálneho výberu</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.excelcellprofilenotfound.rotext" xml:space="preserve">
+    <value>Šablónu prepojenia plánovania sa nepodarilo nájsť alebo pri načítaní šablóny došlo k chybe</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.existprogrammedholiday.rotext" xml:space="preserve">
+    <value>Existuje ustanovenie o dovolenkách v ten istý deň/hodinových povoleniach</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.freezingdate.rotext" xml:space="preserve">
+    <value>V deň uzávierky</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.genericinvaliddata.rotext" xml:space="preserve">
+    <value>Všeobecná chyba údajov</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invalidarewokringday.rotext" xml:space="preserve">
+    <value>Rozvrh nemôžete priradiť na deň pracovného pokoja v deň</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invalidassignmentdata.rotext" xml:space="preserve">
+    <value>Nesprávne údaje o príspevku</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invalidbudgetdata.rotext" xml:space="preserve">
+    <value>Nesprávne rozpočtové údaje</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invalidcomplementarydata.rotext" xml:space="preserve">
+    <value>Nesprávne doplňujúce údaje v daný deň</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invaliddate.rotext" xml:space="preserve">
+    <value>Nesprávny dátum</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invalidemployeedata.rotext" xml:space="preserve">
+    <value>Nesprávne údaje používateľa</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invalidfloatingdata.rotext" xml:space="preserve">
+    <value>Nesprávne plávajúce údaje</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invalidimportfile.rotext" xml:space="preserve">
+    <value>Importný súbor nie je správne naformátovaný. Ak chcete získať správne naformátovaný súbor, vykonajte export plánovania a výsledný súbor použite ako šablónu.</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invalidimporttemplatefile.rotext" xml:space="preserve">
+    <value>Súbor šablóny plánovania nie je správne naformátovaný. Ak chcete získať správne naformátovaný súbor, vykonajte export plánovania pre jedného používateľa pre požadované obdobie a vo výslednom súbore odstráňte meno používateľa a IČO.</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invalidshiftbase.rotext" xml:space="preserve">
+    <value>Nesprávny základný čas v daný deň</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invalidshiftdefinition.rotext" xml:space="preserve">
+    <value>Nesprávna definícia rozvrhu</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.invalidstartfloating.rotext" xml:space="preserve">
+    <value>Nesprávny čas začiatku v daný deň</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.nocontract.rotext" xml:space="preserve">
+    <value>Žiadna zmluva o</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.permissiondenied.rotext" xml:space="preserve">
+    <value>Žiadne povolenia v deň konania</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.shiftnotexist.rotext" xml:space="preserve">
+    <value>Neexistujúce hodiny v daný deň</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.shiftwithoutpermission.rotext" xml:space="preserve">
+    <value>Žiadne povolenie v rozvrhu v deň konania</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.unknownemployee.rotext" xml:space="preserve">
+    <value>Používateľ neznámy</value>
+  </data>
+  <data name="RES_calendarrowperioddatamanager.validate.unknownerror.rotext" xml:space="preserve">
+    <value>Neznáma chyba</value>
+  </data>
+  <data name="RES_calendarschedulerules.2shiftsequence.sequence.rotext" xml:space="preserve">
+    <value>Pred plánom ${4} (deň ${3}) nie je možné naplánovať plán ${2} (deň ${1}), podľa pravidla</value>
+  </data>
+  <data name="RES_calendarschedulerules.contract.rotext" xml:space="preserve">
+    <value>Zmluva</value>
+  </data>
+  <data name="RES_calendarschedulerules.custom.3569.1.rotext" xml:space="preserve">
+    <value>Používateľ má ${1} odpracovaných sviatkov v období medzi ${2} a ${3} a ${4} voľna FR a nie je ich dostatok alebo nie sú naplánované podľa očakávaní, podľa pravidla ${6} '${5}'</value>
+  </data>
+  <data name="RES_calendarschedulerules.custom.3569.2.rotext" xml:space="preserve">
+    <value>Používateľ má ${1} hodín DC v období medzi ${2} a ${3}, ktoré zahŕňa ${4} odpracovaných sviatkov, a preto by mal mať podľa pravidla ${7} '${6}' aspoň ${5}</value>
+  </data>
+  <data name="RES_calendarschedulerules.freedays.maximum.rotext" xml:space="preserve">
+    <value>Používateľ má v danom období ${1} dní voľna a mal by mať aspoň ${2}, podľa pravidla</value>
+  </data>
+  <data name="RES_calendarschedulerules.freedays.minimum.rotext" xml:space="preserve">
+    <value>Používateľ má v danom období len ${1} dní voľna a podľa pravidla by mal mať aspoň ${2}</value>
+  </data>
+  <data name="RES_calendarschedulerules.freedays.rulename.rotext" xml:space="preserve">
+    <value>Dni voľna</value>
+  </data>
+  <data name="RES_calendarschedulerules.freedayssequence.maximum.rotext" xml:space="preserve">
+    <value>Používateľ má v danom období ${1} nepracovných dní za sebou a podľa pravidla</value>
+  </data>
+  <data name="RES_calendarschedulerules.labagree.rotext" xml:space="preserve">
+    <value>Zjazd</value>
+  </data>
+  <data name="RES_calendarschedulerules.labourdays.maximum.rotext" xml:space="preserve">
+    <value>Používateľ má v období ${1} pracovných dní a mal by mať najviac ${2}, podľa pravidla</value>
+  </data>
+  <data name="RES_calendarschedulerules.labourdays.minimum.rotext" xml:space="preserve">
+    <value>Používateľ má v danom období len ${1} pracovných dní a podľa pravidla by mal mať aspoň ${2}</value>
+  </data>
+  <data name="RES_calendarschedulerules.labourdayssequence.maximum.rotext" xml:space="preserve">
+    <value>Poradie dní</value>
+  </data>
+  <data name="RES_calendarschedulerules.maxexpectedhoursinperiod.rotext" xml:space="preserve">
+    <value>Používateľ má naplánovaných ${1} hodín v období od ${3} do ${4}, keď maximum je ${2}, podľa pravidla</value>
+  </data>
+  <data name="RES_calendarschedulerules.maxholidays.rotext" xml:space="preserve">
+    <value>Používateľ má naplánovanú dovolenku v rozsahu ${1} dní medzi ${3} a ${4}, pričom maximálna povolená dovolenka je ${2}, podľa pravidla</value>
+  </data>
+  <data name="RES_calendarschedulerules.maxholidays.rulename.rotext" xml:space="preserve">
+    <value>Maximálna ročná dovolenka</value>
+  </data>
+  <data name="RES_calendarschedulerules.maxminshiftssequence.compensation.rotext" xml:space="preserve">
+    <value>Používateľ má v období medzi ${1} a ${2} postupnosť rozvrhov, ktorá zahŕňa ${3} sviatkov, a preto by mal byť kompenzovaný rozvrhom ${4} podľa pravidla ${6} '${5}'</value>
+  </data>
+  <data name="RES_calendarschedulerules.maxminshiftssequence.startday.rotext" xml:space="preserve">
+    <value>Používateľ má postupnosť rozvrhov v období medzi ${1} a ${2}, ktoré by mali začínať na ${3} podľa pravidla ${5} '${4}'</value>
+  </data>
+  <data name="RES_calendarschedulerules.maxnotscheduled.rulename.rotext" xml:space="preserve">
+    <value>Všetky plánované dni</value>
+  </data>
+  <data name="RES_calendarschedulerules.maxnotscheduleddays.rotext" xml:space="preserve">
+    <value>V roku ${1} nemôžu byť žiadne neplánované dni, podľa pravidla</value>
+  </data>
+  <data name="RES_calendarschedulerules.maxshiftssequence.rotext" xml:space="preserve">
+    <value>Používateľ má ${1} sekvenciu/sekvencie rozvrhov v období medzi ${2} a ${3}, keď maximum je ${4}, podľa pravidla ${6} '${5}'</value>
+  </data>
+  <data name="RES_calendarschedulerules.minexpectedhoursinperiod.rotext" xml:space="preserve">
+    <value>Používateľ má naplánovaných ${1} hodín v období od ${3} do ${4}, keď minimum je ${2}, podľa pravidla</value>
+  </data>
+  <data name="RES_calendarschedulerules.minmaxexpectedhours.rotext" xml:space="preserve">
+    <value>Používateľ má v roku ${1} naplánovaných ${2} hodín, pričom maximum je ${3}, podľa pravidla</value>
+  </data>
+  <data name="RES_calendarschedulerules.minmaxexpectedhours.rulename.rotext" xml:space="preserve">
+    <value>Maximálny ročný pracovný čas</value>
+  </data>
+  <data name="RES_calendarschedulerules.minmaxexpectedhoursinperiod.rulename.rotext" xml:space="preserve">
+    <value>Maximálny počet pracovných hodín za obdobie</value>
+  </data>
+  <data name="RES_calendarschedulerules.minmaxshifts.maximum.rotext" xml:space="preserve">
+    <value>Rozvrh ${1} bol naplánovaný ${2} krát medzi dňami ${3} a ${4}, keď maximálna povolená hodnota je ${5}, podľa pravidla ${5}</value>
+  </data>
+  <data name="RES_calendarschedulerules.minmaxshifts.minimum.rotext" xml:space="preserve">
+    <value>Rozvrh ${1} bol naplánovaný ${2} krát medzi dňami ${3} a ${4}, keď je minimálna povolená hodnota ${5}, podľa pravidla ${5}</value>
+  </data>
+  <data name="RES_calendarschedulerules.minmaxshifts.or.max.rotext" xml:space="preserve">
+    <value>Žiadny z rozvrhov ${1} nebol naplánovaný maximálne ${2} krát medzi dňami ${3} a ${4}, podľa pravidla ${3} a ${4}</value>
+  </data>
+  <data name="RES_calendarschedulerules.minmaxshifts.or.min.rotext" xml:space="preserve">
+    <value>Žiadny z rozvrhov ${1} nebol naplánovaný minimálne ${2} krát medzi dňami ${3} a ${4}, podľa pravidla ${3} a ${4}</value>
+  </data>
+  <data name="RES_calendarschedulerules.minmaxshifts.or.rotext" xml:space="preserve">
+    <value>Žiadny z rozvrhov ${1} nebol naplánovaný medzi ${2} a ${3} krát medzi ${4} a ${5}, podľa pravidla ${4} a ${5}</value>
+  </data>
+  <data name="RES_calendarschedulerules.minshiftssequence.rotext" xml:space="preserve">
+    <value>Používateľ má ${1} sekvenciu/sekvencie rozvrhov v období medzi ${2} a ${3}, keď minimum je ${4}, podľa pravidla ${6} '${5}'</value>
+  </data>
+  <data name="RES_calendarschedulerules.minweekendsinperiod.morethanone.rotext" xml:space="preserve">
+    <value>Používateľ má v danom období voľný len ${1} víkend, hoci by mal mať minimálne ${2}, podľa pravidla</value>
+  </data>
+  <data name="RES_calendarschedulerules.minweekendsinperiod.one.rotext" xml:space="preserve">
+    <value>Používateľ má v období, keď by mal mať minimálne ${2}, voľný len ${1} víkend, podľa pravidla</value>
+  </data>
+  <data name="RES_calendarschedulerules.oneshift.day.rotext" xml:space="preserve">
+    <value>Čas ${2} (deň ${1}) nemôže byť naplánovaný na tento dátum podľa pravidla ${3} '${4}'</value>
+  </data>
+  <data name="RES_calendarschedulerules.oneshift.resttooshort.rotext" xml:space="preserve">
+    <value>Príliš krátka prestávka medzi dňami ${1} (čas ${2}) a ${3} (čas ${4}) podľa pravidla ${5} '${6}'</value>
+  </data>
+  <data name="RES_calendarschedulerules.oneshift.sequence.nextdays.rotext" xml:space="preserve">
+    <value>Po rozvrhu ${1} (deň ${2}) nie je možné naplánovať rozvrh ${3} (deň ${4}) podľa pravidla ${5} '${6}'</value>
+  </data>
+  <data name="RES_calendarschedulerules.oneshift.sequence.previousdays.rotext" xml:space="preserve">
+    <value>Pred plánom ${4} (deň ${3}) nie je možné naplánovať plán ${2} (deň ${1}) podľa pravidla ${5} '${6}'</value>
+  </data>
+  <data name="RES_calendarschedulerules.rest.resttooshort.rotext" xml:space="preserve">
+    <value>Príliš krátka prestávka medzi dňami ${1} (čas ${2}) a ${3} (čas ${4}) podľa pravidla</value>
+  </data>
+  <data name="RES_calendarschedulerules.workonfestive.rotext" xml:space="preserve">
+    <value>Používateľ nemôže pracovať v deň ${1}, pretože je to štátny sviatok, podľa pravidla</value>
+  </data>
+  <data name="RES_calendarschedulerules.workonfestive.rulename.rotext" xml:space="preserve">
+    <value>Môže pracovať počas štátnych sviatkov</value>
+  </data>
+  <data name="RES_calendarschedulerules.workonweekend.rotext" xml:space="preserve">
+    <value>Používateľ nemôže pracovať v deň ${1}, pretože je to nepracovný deň, podľa pravidla</value>
+  </data>
+  <data name="RES_calendarschedulerules.workonweekend.rulename.rotext" xml:space="preserve">
+    <value>Môže pracovať v dňoch pracovného pokoja</value>
+  </data>
+  <data name="RES_resultenum.invaliddata.rotext" xml:space="preserve">
+    <value>Nesprávne údaje</value>
+  </data>
+  <data name="RES_resultenum.rowdaydata_assignmentdatainvalid.rotext" xml:space="preserve">
+    <value>Nesprávne údaje o pracovnom mieste</value>
+  </data>
+  <data name="RES_resultenum.rowdaydata_employeenotexist.rotext" xml:space="preserve">
+    <value>Niektorý používateľ zahrnutý do exportu nepatrí do pôvodného filtra</value>
+  </data>
+  <data name="RES_resultenum.rowdaydata_permissiondeniedoveremployee.rotext" xml:space="preserve">
+    <value>Nemáte oprávnenie upravovať údaje</value>
+  </data>
+  <data name="RES_resultenum.rowdaydata_planneddaynotexist.rotext" xml:space="preserve">
+    <value>Každý deň zahrnutý do exportu nepatrí do počiatočného obdobia</value>
+  </data>
+  <data name="RES_calendar.header.monday.rotext" xml:space="preserve">
+    <value>Pondelok</value>
+  </data>
+  <data name="RES_calendar.header.tuesday.rotext" xml:space="preserve">
+    <value>Utorok</value>
+  </data>
+  <data name="RES_calendar.header.wednesday.rotext" xml:space="preserve">
+    <value>Streda</value>
+  </data>
+  <data name="RES_calendar.header.thursday.rotext" xml:space="preserve">
+    <value>Štvrtok</value>
+  </data>
+  <data name="RES_calendar.header.friday.rotext" xml:space="preserve">
+    <value>Piatok</value>
+  </data>
+  <data name="RES_calendar.header.saturday.rotext" xml:space="preserve">
+    <value>Sobota</value>
+  </data>
+  <data name="RES_calendar.header.sunday.rotext" xml:space="preserve">
+    <value>Nedeľa</value>
+  </data>
+  <data name="RES_calendar.header.nif.rotext" xml:space="preserve">
+    <value>Nif</value>
+  </data>
+  <data name="RES_calendar.header.employeekey.rotext" xml:space="preserve">
+    <value>Import Id</value>
+  </data>
+  <data name="RES_calendar.header.employeename.rotext" xml:space="preserve">
+    <value>názov</value>
+  </data>
+  <data name="RES_calendar.header.printeddate.rotext" xml:space="preserve">
+    <value>Vytlačené na</value>
+  </data>
+  <data name="RES_calendar.header.employeegroup.rotext" xml:space="preserve">
+    <value>Skupina</value>
+  </data>
+  <data name="RES_schedulerulesresultenum.cannotdeletescheduleruleinuse.rotext" xml:space="preserve">
+    <value>Pravidlo plánovania nie je možné odstrániť, pretože sa používa v obchodnom pravidle Visualtime</value>
+  </data>
+  <data name="RES_calendarschedulerules.cannotdeletescheduleruleinuse.rotext" xml:space="preserve">
+    <value>Nemôžete odstrániť pravidlá plánovania, ktoré sa používajú v akomkoľvek obchodnom pravidle programu Visualtime. Zrušenie zmien na obnovenie odstránených definícií pravidiel: ${1}</value>
+  </data>
+</root>

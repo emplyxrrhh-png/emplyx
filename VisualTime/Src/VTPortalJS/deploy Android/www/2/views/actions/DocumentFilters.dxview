@@ -1,0 +1,61 @@
+<div data-options="dxView : { name: 'DocumentFilters', disableCache: true } ">
+
+
+	<div id="smallUserInfo"></div>
+
+    <div data-bind="dxTabs: tabPanelOptions" class="innerTabPanelList">
+        <div data-options="dxTemplate : { name: 'title' } ">
+            <div data-bind="css: $data.cssClass "></div>
+        </div>
+    </div>
+    <div id="panelsContent" style="height:82%">
+        <!-- ko if: selectedTab() == 0 -->
+        <div style="clear:both" data-bind="dxScrollView: {  }">
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <span data-bind="text: lblInitialDate"></span>
+                    <div class="dx-field-value" data-bind="dxDateBox: beginDate"></div>
+                </div>
+
+                <div class="dx-field">
+                    <span data-bind="text: lblEndDate"></span>
+                    <div class="dx-field-value" data-bind="dxDateBox: endDate"></div>
+                </div>
+
+                <div class="dx-field">
+                    <span data-bind="text: lblStatus"></span>
+                    <div class="dx-field-value" data-bind="dxTagBox: statusTagBox">
+                        <div data-options="dxTemplate: { name: 'statusItem' }">
+                            <div class="custom-item">
+                                <div style="float:left;width:20%"><img style="width:32px;height:32px;" data-bind="attr:{src: ImageSrc}" /></div>
+                                <div style="float:left;width:80%"><div class="smallTextDescription" data-bind="text: Name"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /ko -->
+        <!-- ko if: selectedTab() == 1 -->
+        <div style="clear:both" data-bind="dxScrollView: {  }">
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <span data-bind="text: lblOrderBy"></span>
+                    <div class="dx-field-value" data-bind="dxRadioGroup: orderFields"></div>
+                </div>
+                <div class="dx-field">
+                    <span data-bind="text: lblOrderDirection"></span>
+                    <div class="dx-field-value" data-bind="dxRadioGroup: orderDirection"></div>
+                </div>
+            </div>
+        </div>
+        <!-- /ko -->
+    </div>
+
+    <div style="padding-top:5px">
+        <div style="float:left;width:50%" class="get-to-work-blue" data-bind="dxButton: btnRemoveFilter"></div>
+        <div style="float:left;width:50%" class="get-to-work-orange" data-bind="dxButton: btnAccept"></div>
+    </div>
+
+
+</div>

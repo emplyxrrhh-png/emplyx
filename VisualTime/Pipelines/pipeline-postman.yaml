@@ -1,0 +1,22 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+schedules:
+- cron: "10 4,14 * * 1-5"
+  displayName: Integration test nightly build
+  branches:
+    include:
+    - development
+
+trigger:
+- none
+
+pool:
+  vmImage: windows-latest
+
+stages:
+  - template: Templates/Postman.yml
+  - template: Templates/cypress.yml
+      

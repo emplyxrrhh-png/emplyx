@@ -1,0 +1,19 @@
+﻿-- No borréis esta línea
+CREATE TABLE [dbo].[Collectives](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](max) NOT NULL,
+	[Conditions] [nvarchar](MAX) NOT NULL,
+	[BeginDate] SMALLDATETIME NOT NULL,
+	[EndDate] SMALLDATETIME NULL
+	 CONSTRAINT [PK_Collectives] PRIMARY KEY CLUSTERED
+(
+[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+UPDATE sysroParameters SET Data='0' WHERE ID='DXVersion'
+GO
+
+UPDATE sysroParameters SET Data='999' WHERE ID='DBVersion'
+GO

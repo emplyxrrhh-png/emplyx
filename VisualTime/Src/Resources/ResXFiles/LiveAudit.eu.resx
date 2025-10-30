@@ -1,0 +1,3843 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_audit.action.ablock.rotext" xml:space="preserve">
+    <value>Blokeatzea</value>
+  </data>
+  <data name="RES_audit.action.aconnect.rotext" xml:space="preserve">
+    <value>Konexioa</value>
+  </data>
+  <data name="RES_audit.action.aconnectfail.rotext" xml:space="preserve">
+    <value>Konexio saiakera</value>
+  </data>
+  <data name="RES_audit.action.adelete.rotext" xml:space="preserve">
+    <value>Ezabatua</value>
+  </data>
+  <data name="RES_audit.action.adisconnect.rotext" xml:space="preserve">
+    <value>Deskonexioa</value>
+  </data>
+  <data name="RES_audit.action.aexecuted.rotext" xml:space="preserve">
+    <value>Exekuzioa</value>
+  </data>
+  <data name="RES_audit.action.ainsert.rotext" xml:space="preserve">
+    <value>altua</value>
+  </data>
+  <data name="RES_audit.action.amultiselect.rotext" xml:space="preserve">
+    <value>M-Kontsulta</value>
+  </data>
+  <data name="RES_audit.action.anone.rotext" xml:space="preserve">
+    <value>(Ezezaguna)</value>
+  </data>
+  <data name="RES_audit.action.aselect.rotext" xml:space="preserve">
+    <value>Kontsulta</value>
+  </data>
+  <data name="RES_audit.action.aunblock.rotext" xml:space="preserve">
+    <value>Desblokeatu</value>
+  </data>
+  <data name="RES_audit.action.aupdate.rotext" xml:space="preserve">
+    <value>Eguneratu</value>
+  </data>
+  <data name="RES_audit.aspxloadingpopup.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.aspxloadingpopup.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.bc.text.rotext" xml:space="preserve">
+    <value>Utzi</value>
+  </data>
+  <data name="RES_audit.bc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.bo.text.rotext" xml:space="preserve">
+    <value>Onartu</value>
+  </data>
+  <data name="RES_audit.bo.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.bt.text.rotext" xml:space="preserve">
+    <value>Gaur</value>
+  </data>
+  <data name="RES_audit.bt.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btdetailcancel.text.rotext" xml:space="preserve">
+    <value>Utzi</value>
+  </data>
+  <data name="RES_audit.btdetailcancel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btdetailok.text.rotext" xml:space="preserve">
+    <value>Onartu</value>
+  </data>
+  <data name="RES_audit.btdetailok.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btnexporttoxls.text.rotext" xml:space="preserve">
+    <value>Esportatu</value>
+  </data>
+  <data name="RES_audit.btnexporttoxls.tooltip.rotext" xml:space="preserve">
+    <value>Esportatu Excel-era</value>
+  </data>
+  <data name="RES_audit.btnfirst.text.rotext" xml:space="preserve">
+    <value>&lt;&lt;</value>
+  </data>
+  <data name="RES_audit.btnfirst.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btnlast.text.rotext" xml:space="preserve">
+    <value>&gt;&gt;</value>
+  </data>
+  <data name="RES_audit.btnlast.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btnnext.text.rotext" xml:space="preserve">
+    <value>&gt;</value>
+  </data>
+  <data name="RES_audit.btnnext.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btnprev.text.rotext" xml:space="preserve">
+    <value>&lt;</value>
+  </data>
+  <data name="RES_audit.btnprev.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btshowauditdetail.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.btshowauditdetail.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.c.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.cmbactions.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.cmbactions.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.cmbobjecttypes.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.cmbobjecttypes.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.cmbusers.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.cmbusers.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.col0.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.col0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.column.action.rotext" xml:space="preserve">
+    <value>Ekintza</value>
+  </data>
+  <data name="RES_audit.column.date.rotext" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="RES_audit.column.objecttype.rotext" xml:space="preserve">
+    <value>Objektu mota</value>
+  </data>
+  <data name="RES_audit.column.time.rotext" xml:space="preserve">
+    <value>Ordua</value>
+  </data>
+  <data name="RES_audit.column.user.rotext" xml:space="preserve">
+    <value>Erabiltzailea</value>
+  </data>
+  <data name="RES_audit.contentframe.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddd.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddd.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddlactions.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddlactions.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddlobjecttypes.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddlobjecttypes.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddlusers.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ddlusers.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.dtvauditdetail.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.dxemptyrow.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.dxfilterrow.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.dxheadersrow0.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.dxmaintable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.dxstyletable.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.emptyheader.text.rotext" xml:space="preserve">
+    <value>Arrastatu zutabe bat hona...</value>
+  </data>
+  <data name="RES_audit.emptyheader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.error.couldnotretrievetask.text.rotext" xml:space="preserve">
+    <value>&amp;quot;Ezin izan da zereginaren informazioa kargatzean.&amp;quot;</value>
+  </data>
+  <data name="RES_audit.error.incorrectdates.rotext" xml:space="preserve">
+    <value>Hasiera-data ezin da izan amaiera-data baino geroagokoa.</value>
+  </data>
+  <data name="RES_audit.fnp.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.fnp.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.grdaudit.columns#0.headertext.rotext" xml:space="preserve">
+    <value>Ekintza</value>
+  </data>
+  <data name="RES_audit.grdaudit.columns#1.headertext.rotext" xml:space="preserve">
+    <value>Data ordua</value>
+  </data>
+  <data name="RES_audit.grdaudit.columns#2.headertext.rotext" xml:space="preserve">
+    <value>Erabiltzailea</value>
+  </data>
+  <data name="RES_audit.grdaudit.columns#3.headertext.rotext" xml:space="preserve">
+    <value>Objektu mota</value>
+  </data>
+  <data name="RES_audit.grdaudit.columns#4.headertext.rotext" xml:space="preserve">
+    <value>Objektuaren izena</value>
+  </data>
+  <data name="RES_audit.grdaudit.columns#5.headertext.rotext" xml:space="preserve">
+    <value>Deskribapena</value>
+  </data>
+  <data name="RES_audit.grdaudit.columns#6.headertext.rotext" xml:space="preserve">
+    <value>Bezeroa</value>
+  </data>
+  <data name="RES_audit.grdaudit.columns#7.headertext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.grdaudit.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.gridcontracts.column.clientlocation.rotext" xml:space="preserve">
+    <value>Bezeroa</value>
+  </data>
+  <data name="RES_audit.gridcontracts.column.description.rotext" xml:space="preserve">
+    <value>Deskribapena</value>
+  </data>
+  <data name="RES_audit.gridcontracts.column.objectname.rotext" xml:space="preserve">
+    <value>Objektuaren izena</value>
+  </data>
+  <data name="RES_audit.grouppanel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.hiddentargetcontrolforloginpopup.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.hiddentargetcontrolforloginpopup.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.i.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.i.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.iadd.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.iadl.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.iadr.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.iadu.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ibtdetailcancel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ibtrefresh.tooltip.rotext" xml:space="preserve">
+    <value>Eguneratu datuak</value>
+  </data>
+  <data name="RES_audit.idhf.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.imgaudit.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.imgespecialpaste.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.imgloading.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblaction.text.rotext" xml:space="preserve">
+    <value>Ekintza:</value>
+  </data>
+  <data name="RES_audit.lblaction.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblauditdetailtitle.text.rotext" xml:space="preserve">
+    <value>Ikuskaritzaren xehetasuna</value>
+  </data>
+  <data name="RES_audit.lblauditdetailtitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblbegindate.text.rotext" xml:space="preserve">
+    <value>Data:</value>
+  </data>
+  <data name="RES_audit.lblbegindate.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblclientlocation.text.rotext" xml:space="preserve">
+    <value>Bezeroa:</value>
+  </data>
+  <data name="RES_audit.lblclientlocation.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbldetailaction.text.rotext" xml:space="preserve">
+    <value>Ekintza:</value>
+  </data>
+  <data name="RES_audit.lbldetailaction.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbldetailclientlocation.text.rotext" xml:space="preserve">
+    <value>Bezeroa:</value>
+  </data>
+  <data name="RES_audit.lbldetailclientlocation.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbldetaildatetime.text.rotext" xml:space="preserve">
+    <value>Data ordua:</value>
+  </data>
+  <data name="RES_audit.lbldetaildatetime.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbldetaildescription.text.rotext" xml:space="preserve">
+    <value>Deskribapena:</value>
+  </data>
+  <data name="RES_audit.lbldetaildescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbldetailobjectname.text.rotext" xml:space="preserve">
+    <value>Objektuaren izena:</value>
+  </data>
+  <data name="RES_audit.lbldetailobjectname.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbldetailobjecttype.text.rotext" xml:space="preserve">
+    <value>Objektu mota:</value>
+  </data>
+  <data name="RES_audit.lbldetailobjecttype.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbldetailusername.text.rotext" xml:space="preserve">
+    <value>Erabiltzailea:</value>
+  </data>
+  <data name="RES_audit.lbldetailusername.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblenddate.text.rotext" xml:space="preserve">
+    <value>Eguna arte:</value>
+  </data>
+  <data name="RES_audit.lblenddate.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblerrordescription.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblerrordescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblerrordescription2.text.rotext" xml:space="preserve">
+    <value>Akatsa</value>
+  </data>
+  <data name="RES_audit.lblerrordescription2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblheader.text.rotext" xml:space="preserve">
+    <value>Stock Auditoria</value>
+  </data>
+  <data name="RES_audit.lblheader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblinfo.text.rotext" xml:space="preserve">
+    <value>Auditoria pantailan, GDPR-a betez, aplikazioan egin diren ekintza guztiak eta zein erabiltzailek egin dituzten erregistratzen dira. Zure kontsultak hainbat irizpideren arabera iragazteko aukera duzu, nahi duzun informazioa errazago aurkitzeko.</value>
+  </data>
+  <data name="RES_audit.lblinfo.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblobjecttype.text.rotext" xml:space="preserve">
+    <value>Objektu mota:</value>
+  </data>
+  <data name="RES_audit.lblobjecttype.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lblpager.text.rotext" xml:space="preserve">
+    <value>0/6</value>
+  </data>
+  <data name="RES_audit.lblpager.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lbluser.text.rotext" xml:space="preserve">
+    <value>Erabiltzailea:</value>
+  </data>
+  <data name="RES_audit.lbluser.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.ld.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.loginpanel.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.lp.text.rotext" xml:space="preserve">
+    <value>Kargatzen&amp;hellip;</value>
+  </data>
+  <data name="RES_audit.lp.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.m.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.mc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.mc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tabsencetracking.adelete.rotext" xml:space="preserve">
+    <value>Jarraipen-dokumentua ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tabsencetracking.aupdate.rotext" xml:space="preserve">
+    <value>Jarraipen-dokumentua eguneratu da</value>
+  </data>
+  <data name="RES_audit.message.taccessauthorization.adelete.rotext" xml:space="preserve">
+    <value>$@EmployeeName@ erabiltzaileari $@AccessGroup@ eremurako sarbidea eman zaio</value>
+  </data>
+  <data name="RES_audit.message.taccessauthorization.aexecuted.rotext" xml:space="preserve">
+    <value>$@EmployeeName@ erabiltzaileari eremuetarako sarbidea eman zaio: $@AccessGroup@</value>
+  </data>
+  <data name="RES_audit.message.taccessauthorization.ainsert.rotext" xml:space="preserve">
+    <value>$@EmployeeName@ erabiltzailea $@AccessGroup@ eremutik kendu da</value>
+  </data>
+  <data name="RES_audit.message.taccessdata.aselect.rotext" xml:space="preserve">
+    <value>$@DateIni@ bitarteko $@DateEnd@ bitarteko sarbide-datuak kontsultatu dira erabiltzaile hauentzat: $CRLF $@EmployeeNames@</value>
+  </data>
+  <data name="RES_audit.message.taccessgroup.adelete.rotext" xml:space="preserve">
+    <value>Sarbide taldea ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.taccessgroup.ainsert.rotext" xml:space="preserve">
+    <value>Sarbide-talde berri bat sortu da datu hauekin:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.taccessgroup.aselect.rotext" xml:space="preserve">
+    <value>Sarbide-taldea kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.taccessgroup.aupdate.rotext" xml:space="preserve">
+    <value>Sarbide-taldearen datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.taccessgrouppermission.ainsert.rotext" xml:space="preserve">
+    <value>Sarbide-talde berri bat sortu da datu hauekin:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.taccessperiod.adelete.rotext" xml:space="preserve">
+    <value>Sarbide epea garbitu da</value>
+  </data>
+  <data name="RES_audit.message.taccessperiod.ainsert.rotext" xml:space="preserve">
+    <value>Sarbide-aldi berri bat sortu da datu hauekin:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.taccessperiod.aselect.rotext" xml:space="preserve">
+    <value>Sarbide epea kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.taccessperiod.aupdate.rotext" xml:space="preserve">
+    <value>Sarbide-aldiko datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.taccessperiodholidays.ainsert.rotext" xml:space="preserve">
+    <value>Sarbide-aldi (aldi) berri bat sortu da datu hauekin:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.taccesszone.adelete.rotext" xml:space="preserve">
+    <value>Eremua ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.taccesszone.ainsert.rotext" xml:space="preserve">
+    <value>Sarbide-eremu berri bat sortu da datu hauekin: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.taccesszone.aselect.rotext" xml:space="preserve">
+    <value>Eremua kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.taccesszone.aupdate.rotext" xml:space="preserve">
+    <value>Sarbide eremuko datu hauek aldatu dira: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tactivity.adelete.rotext" xml:space="preserve">
+    <value>Jarduera ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tactivity.ainsert.rotext" xml:space="preserve">
+    <value>Jarduera berri bat sortu da datu hauekin:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tactivity.aselect.rotext" xml:space="preserve">
+    <value>Jarduera bat kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tactivity.aupdate.rotext" xml:space="preserve">
+    <value>Jarduera-datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tadvancedparameter.ainsert.rotext" xml:space="preserve">
+    <value>Parametro aurreratua sortu da</value>
+  </data>
+  <data name="RES_audit.message.tadvancedparameter.aselect.rotext" xml:space="preserve">
+    <value>Parametro aurreratua kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tadvancedparameter.aupdate.rotext" xml:space="preserve">
+    <value>Parametroaren balioa eguneratu da</value>
+  </data>
+  <data name="RES_audit.message.tassigncause.ainsert.rotext" xml:space="preserve">
+    <value>Erabiltzaileen justifikazioen ($@DestinationEmployeeName@) sarrera masiboa egin da $@DateIni@ eta $@DateEnd@ artean, $@Cause@ justifikazioarekin, absentzia osoa: $@CompletedDays@</value>
+  </data>
+  <data name="RES_audit.message.tassigncause.aupdate.rotext" xml:space="preserve">
+    <value>Erabiltzaileen justifikazioen ($@DestinationEmployeeName@) sarrera masiboa egin da $@DateIni@ eta $@DateEnd@ artean, $@Cause@ justifikazioarekin, absentzia osoa: $@CompletedDays@</value>
+  </data>
+  <data name="RES_audit.message.tassigncenters.aupdate.rotext" xml:space="preserve">
+    <value>Kostu-zentroen esleipen masiboa egin da $@DateIni@ eta $@DateEnd@ artean.</value>
+  </data>
+  <data name="RES_audit.message.tassignment.adelete.rotext" xml:space="preserve">
+    <value>$@AssignmentName@ posizioa ezabatu da.</value>
+  </data>
+  <data name="RES_audit.message.tassignment.ainsert.rotext" xml:space="preserve">
+    <value>Postu berri bat sortu da datu hauekin:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tassignment.aselect.rotext" xml:space="preserve">
+    <value>Kontsulta</value>
+  </data>
+  <data name="RES_audit.message.tassignment.aupdate.rotext" xml:space="preserve">
+    <value>Posizio-datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tattendancedata.aselect.rotext" xml:space="preserve">
+    <value>$@DateIni@ eta $@DateEnd@ arteko denboraren datuak ($@CubeView@) erabiltzaile hauentzat kontsultatu dira: $CRLF $@EmployeeNames@</value>
+  </data>
+  <data name="RES_audit.message.tbot.adelete.rotext" xml:space="preserve">
+    <value>Bot bat ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tbot.aexecuted.rotext" xml:space="preserve">
+    <value>Bot bat exekutatu da</value>
+  </data>
+  <data name="RES_audit.message.tbot.ainsert.rotext" xml:space="preserve">
+    <value>Bot berri bat sortu da</value>
+  </data>
+  <data name="RES_audit.message.tbot.aselect.rotext" xml:space="preserve">
+    <value>Bot bat hautatu da</value>
+  </data>
+  <data name="RES_audit.message.tbot.aupdate.rotext" xml:space="preserve">
+    <value>Bot bat aldatu da</value>
+  </data>
+  <data name="RES_audit.message.tbotrule.adelete.rotext" xml:space="preserve">
+    <value>Bot arau bat ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tbotrule.aexecuted.rotext" xml:space="preserve">
+    <value>Bot arau bat exekutatu da</value>
+  </data>
+  <data name="RES_audit.message.tbotrule.ainsert.rotext" xml:space="preserve">
+    <value>Bot arau bat sortu da</value>
+  </data>
+  <data name="RES_audit.message.tbotrule.aselect.rotext" xml:space="preserve">
+    <value>Bot arau bat hautatu da</value>
+  </data>
+  <data name="RES_audit.message.tbotrule.aupdate.rotext" xml:space="preserve">
+    <value>Bot arau bat aldatu da</value>
+  </data>
+  <data name="RES_audit.message.tbudget.aselect.rotext" xml:space="preserve">
+    <value>Kontsulta</value>
+  </data>
+  <data name="RES_audit.message.tbudget.aupdate.rotext" xml:space="preserve">
+    <value>Aurrekontua eguneratu da</value>
+  </data>
+  <data name="RES_audit.message.tbudgetrow.aupdate.rotext" xml:space="preserve">
+    <value>Aurrekontu errenkada bat eguneratu da</value>
+  </data>
+  <data name="RES_audit.message.tcalendar.aselect.rotext" xml:space="preserve">
+    <value>Egutegia kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tcalendar.aupdate.rotext" xml:space="preserve">
+    <value>Egutegia aldatu egin da</value>
+  </data>
+  <data name="RES_audit.message.tcalendarrow.aupdate.rotext" xml:space="preserve">
+    <value>$@ShiftDate@ eguneko $@EmployeeName@ erabiltzailearen ordutegia $@ShiftName@ denborarekin aldatu da. Blokeatuta: $@IsLockedBeforeUpdate@ --&gt; $@NowLocked@. Oporrak: $@HasHolidaysBeforeUpdate@ --&gt; $@NowHolidays@</value>
+  </data>
+  <data name="RES_audit.message.tcamera.adelete.rotext" xml:space="preserve">
+    <value>Kamera ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tcamera.ainsert.rotext" xml:space="preserve">
+    <value>Kamera berri bat sortu da datu hauekin:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tcamera.aselect.rotext" xml:space="preserve">
+    <value>Kamera bat kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tcamera.aupdate.rotext" xml:space="preserve">
+    <value>Kameraren datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tcaptcha.aexecuted.rotext" xml:space="preserve">
+    <value>Baliozkotze-kode bat sartu da</value>
+  </data>
+  <data name="RES_audit.message.tcause.adelete.rotext" xml:space="preserve">
+    <value>Justifikazioa ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tcause.ainsert.rotext" xml:space="preserve">
+    <value>Justifikazio berri bat sortu da datu hauekin: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tcause.aselect.rotext" xml:space="preserve">
+    <value>Justifikazio bat kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tcause.aupdate.rotext" xml:space="preserve">
+    <value>Justifikazio-datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tcauselimitvalue.adelete.rotext" xml:space="preserve">
+    <value>Justifikazio-muga garbitu da</value>
+  </data>
+  <data name="RES_audit.message.tcauselimitvalue.ainsert.rotext" xml:space="preserve">
+    <value>Justifikazio-muga berri bat sortu da datuekin: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tcauselimitvalue.aselect.rotext" xml:space="preserve">
+    <value>Justifikazio-muga kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tcauselimitvalue.aupdate.rotext" xml:space="preserve">
+    <value>Justifikazio-mugako datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tchannel.aconnect.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannel.adelete.rotext" xml:space="preserve">
+    <value>$@ChannelTitle@ komunikazio-kanala ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tchannel.aexecuted.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannel.ainsert.rotext" xml:space="preserve">
+    <value>Komunikazio-kanal berri bat sortu da $@ChannelTitle@: $CRLF Harpidetutako Langileen Id.ak: $@ChannelSuscribedEmployeesId@ $CRLF Harpidedun Sailaren Id.ak: $@ChannelSuscribedGroupsId@ $CRLF Harpidetutako Supervisor Idak: $@ChannelSuscribedSupervisorId@</value>
+  </data>
+  <data name="RES_audit.message.tchannel.amultiselect.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannel.aselect.rotext" xml:space="preserve">
+    <value>$@ChannelTitle@ komunikazio kanala kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tchannel.aupdate.rotext" xml:space="preserve">
+    <value> $@ChannelTitle@ komunikazio-kanala aldatu da: $CRLF Egoera: $@ChannelStatus@ $CRLF Harpidetutako Langileen Id.ak: $@ChannelSuscribedEmployeesId@ $CRLF Harpidetutako Sailaren Id.ak: $@ChannelSuscribedGroupsId@ $CRLF Harpidetutako Begiralearen Id.ak: $ISubscribed@</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversation.aconnect.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannelconversation.adelete.rotext" xml:space="preserve">
+    <value>Elkarrizketa ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversation.aexecuted.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannelconversation.ainsert.rotext" xml:space="preserve">
+    <value>$@ConversationType@ berria sortu da. Erreferentzia $@ConversationReference@</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversation.amultiselect.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannelconversation.aselect.rotext" xml:space="preserve">
+    <value>$@ConversationType@ $@ConversationReference@ kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversation.aupdate.rotext" xml:space="preserve">
+    <value>$@ConversationType@ $@ConversationReference@-ren egoera aldatu da: $@ConversationStatus@</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversationcomplexity.aupdate.rotext" xml:space="preserve">
+    <value>Kexaren konplexutasuna aldatu da: $@ConversationComplexity@</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversationmessage.aconnect.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannelconversationmessage.adelete.rotext" xml:space="preserve">
+    <value>Mezua elkarrizketatik ezabatu da.</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversationmessage.aexecuted.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannelconversationmessage.ainsert.rotext" xml:space="preserve">
+    <value>Mezu berri bat sortu da $@ConversationType@-n $@ConversationReference@ erreferentziarekin</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversationmessage.amultiselect.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tchannelconversationmessage.aselect.rotext" xml:space="preserve">
+    <value>Mezua irakurri da</value>
+  </data>
+  <data name="RES_audit.message.tchannelconversationmessage.aupdate.rotext" xml:space="preserve">
+    <value>Mezua datu hauekin aldatu da:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tcompletetasks.aexecuted.rotext" xml:space="preserve">
+    <value>($@iTask@ ataza) Proiektu hauek burutu dira:&amp;quot;$@strProjects@&amp;quot; . Honako zeregin hauek burutu dira: &amp;quot;$@strTaskNames@&amp;quot;.</value>
+  </data>
+  <data name="RES_audit.message.tconcept.adelete.rotext" xml:space="preserve">
+    <value>Saldoa ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tconcept.ainsert.rotext" xml:space="preserve">
+    <value>Balantze berri bat sortu da datu hauekin: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tconcept.aselect.rotext" xml:space="preserve">
+    <value>$@Name@ saldoa kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tconcept.aupdate.rotext" xml:space="preserve">
+    <value>Balantze-datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tconceptcomposition.adelete.rotext" xml:space="preserve">
+    <value>Balantzearen konposizioa ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tconceptcomposition.ainsert.rotext" xml:space="preserve">
+    <value>Balantze-konposizio berri bat sortu da datu hauekin:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tconceptcomposition.aselect.rotext" xml:space="preserve">
+    <value>Balantzearen osaera kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tconceptgroup.adelete.rotext" xml:space="preserve">
+    <value>Balantze taldea ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tconceptgroup.ainsert.rotext" xml:space="preserve">
+    <value>Balantze-talde berri bat sortu da datu hauekin: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tconceptgroup.aselect.rotext" xml:space="preserve">
+    <value>Oreka taldeari galdetu zaio</value>
+  </data>
+  <data name="RES_audit.message.tconceptgroup.aupdate.rotext" xml:space="preserve">
+    <value>Balantze-taldearen datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tconnection.aconnect.rotext" xml:space="preserve">
+    <value>Erabiltzaileak saioa hasi du.</value>
+  </data>
+  <data name="RES_audit.message.tconnection.aconnectfail.rotext" xml:space="preserve">
+    <value>$@Passport@ erabiltzaileak ezin izan du Visualtime atzitu Arrazoia: $@ErrorText@.</value>
+  </data>
+  <data name="RES_audit.message.tconnection.adisconnect.rotext" xml:space="preserve">
+    <value>Erabiltzaileak saioa amaitu du.</value>
+  </data>
+  <data name="RES_audit.message.tcopyplanification.ainsert.rotext" xml:space="preserve">
+    <value>Plangintzaren kopia bat ($@iTask@ ataza) programatu da erabiltzaileengandik:$@SourceEmployeeName@ erabiltzaileentzat:$@DestinationEmployeeName@ $@DateIni@ - $@DateEnd@ daten artean. Kopiatu aukerak: ordutegi nagusiak:$@CopyMainShifts@ - ordutegi alternatiboak:$@AlternativeShifts@ - kopiatu oporrak:$@CopyHolidays@ - Mantendu uneko oporrak:$@KeepBlockedDays@ - Mantendu blokeatutako egunak:$@KeepHolidays@</value>
+  </data>
+  <data name="RES_audit.message.tcopyplanification.aselect.rotext" xml:space="preserve">
+    <value>Egutegiaren plangintzaren kopia egin da</value>
+  </data>
+  <data name="RES_audit.message.tcopyplanification.aupdate.rotext" xml:space="preserve">
+    <value>Erabiltzaileen ordutegiaren kopia bat ($@SourceEmployeeName@) egin da $@DateIni@ eta $@DateEnd@ artean, erabiltzaileari ($@DestinationEmployeeName@)</value>
+  </data>
+  <data name="RES_audit.message.tcopyplanificationadvanced.aexecuted.rotext" xml:space="preserve">
+    <value>Parametro hauekin exekutatu da:$@ParametersValues@</value>
+  </data>
+  <data name="RES_audit.message.tcopyplanificationadvanced.ainsert.rotext" xml:space="preserve">
+    <value>Plangintzaren kopia bat ($@iTask@ ataza) programatu da erabiltzaileengandik:$@SourceEmployeeName@ erabiltzaileentzat:$@DestinationEmployeeName@ $@DateIni@ - $@DateEnd@ $@DestinationDateIni@ - $@DestinationDateEnd daten artean. @. Kopiatu aukerak: ordutegi nagusiak:$@CopyMainShifts@ - ordutegi alternatiboak:$@AlternativeShifts@ - kopiatu oporrak:$@CopyHolidays@ - Mantendu uneko oporrak:$@KeepBlockedDays@ - Mantendu blokeatutako egunak:$@KeepHolidays@</value>
+  </data>
+  <data name="RES_audit.message.tcopyplanificationadvanced.aupdate.rotext" xml:space="preserve">
+    <value>Ordutegiaren kopia bat egin da $@DateIni@ eta $@DateEnd@ artean ($@SourceEmployeeName@) erabiltzaileari ($@DestinationEmployeeName@) $@DestinationDateIni@ eta $ @DestinationDateEnd@ artean. @</value>
+  </data>
+  <data name="RES_audit.message.tcopyplanificationtoemployees.aupdate.rotext" xml:space="preserve">
+    <value>Plangintzaren kopia bat egin zaie erabiltzaileei ($@DestinationEmployeeName@) $@DateIni@ eta $@DateEnd@ artean.</value>
+  </data>
+  <data name="RES_audit.message.tdailybudgetposition.adelete.rotext" xml:space="preserve">
+    <value>Aurrekontu-partida bat ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tdailybudgetposition.ainsert.rotext" xml:space="preserve">
+    <value>Aurrekontuari partida bat gehitu zaio</value>
+  </data>
+  <data name="RES_audit.message.tdailycause.ainsert.rotext" xml:space="preserve">
+    <value>Eguneko justifikazio berri bat sortu da $@CauseName@ datu hauekin:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tdailycause.aupdate.rotext" xml:space="preserve">
+    <value>Eguneroko justifikazio-datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tdailycoverage.adelete.rotext" xml:space="preserve">
+    <value>$@AssignmentName@ esleipena ezabatu da.</value>
+  </data>
+  <data name="RES_audit.message.tdailycoverage.ainsert.rotext" xml:space="preserve">
+    <value>Kargu esleipen berria sortu da datu hauekin: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tdailycoverage.aupdate.rotext" xml:space="preserve">
+    <value>Posizio-datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tdailypunchesdetail.aselect.rotext" xml:space="preserve">
+    <value>$@EmployeeName@ erabiltzailearen $@Info@-ren informazioa eskatu da $@Date@ eguneko</value>
+  </data>
+  <data name="RES_audit.message.tdatalink.aexecuted.rotext" xml:space="preserve">
+    <value>Datu-esportazio bat programatu da ($@iTask@ ataza) mota hau:&amp;quot;$@ExportName@&amp;quot; daten artean: $@originDate@ eta $@destinationDate@.</value>
+  </data>
+  <data name="RES_audit.message.tdatalink.aupdate.rotext" xml:space="preserve">
+    <value>Estekaren datuak aldatu dira: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkimportdailycoverage.aselect.rotext" xml:space="preserve">
+    <value>Eguneroko estalduren inportazioa gauzatu da</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkimportemployees.aselect.rotext" xml:space="preserve">
+    <value>$@ImportEmployeesType@ formatuan erabiltzaileen inportazio bat exekutatu da</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkimportgroups.aselect.rotext" xml:space="preserve">
+    <value>$@ImportGroupsType@ formatuan dauden taldeen inportazioa exekutatu da</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkimportprogrammedabsences.aexecuted.rotext" xml:space="preserve">
+    <value>Absentzia luzeak testu fitxategi batetik inportatu dira</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkimporttask.aexecuted.rotext" xml:space="preserve">
+    <value>Datu-inportazio bat programatu da (ataza $@iTask@) motako:&amp;quot;$@ImportName@&amp;quot;</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkimporttask.aselect.rotext" xml:space="preserve">
+    <value>Zereginen inportazio bat exekutatu da</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkresult.aexecuted.rotext" xml:space="preserve">
+    <value>$@InportResult@</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkws.aconnect.rotext" xml:space="preserve">
+    <value>$@sUserName@ erabiltzailearen saioa arrakastatsua izan da</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkws.aconnectfail.rotext" xml:space="preserve">
+    <value>Errore bat gertatu da $@sUserName@-tik saioa hastean: $@sReason@ hau dela eta</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkws.aexecuted.rotext" xml:space="preserve">
+    <value>Web zerbitzua: $@sImportType@. Txertatu/eguneratu objektua: $@sObjectId@. Emaitza: $@sReason@</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkws.adelete.rotext" xml:space="preserve">
+    <value>Web Zerbitzua: $@sImportType@. Ezabatu objektua: $@sObjectId@. Emaitza: $@sReason@</value>
+  </data>
+  <data name="RES_audit.message.tdatalinkws.aupdate.rotext" xml:space="preserve">
+    <value>Inportazioko web-zerbitzuetarako sarbide-datuak eguneratu dira</value>
+  </data>
+  <data name="RES_audit.message.tdiningroom.adelete.rotext" xml:space="preserve">
+    <value>Jangelako txanda bat ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tdiningroom.ainsert.rotext" xml:space="preserve">
+    <value>Jangelako txanda sortu da</value>
+  </data>
+  <data name="RES_audit.message.tdiningroom.aselect.rotext" xml:space="preserve">
+    <value>Jangelako txanda bat kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tdiningroom.aupdate.rotext" xml:space="preserve">
+    <value>Jangelako txanda aldatu da</value>
+  </data>
+  <data name="RES_audit.message.tdocument.adelete.rotext" xml:space="preserve">
+    <value>Dokumentu bat ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tdocument.aselect.rotext" xml:space="preserve">
+    <value>Dokumentu bat kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tdocument.aupdate.rotext" xml:space="preserve">
+    <value>Dokumentu bat eguneratu da</value>
+  </data>
+  <data name="RES_audit.message.tdocumentabsence.adelete.rotext" xml:space="preserve">
+    <value>Dokumentua ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tdocumentabsence.aselect.rotext" xml:space="preserve">
+    <value>Kontsulta</value>
+  </data>
+  <data name="RES_audit.message.tdocumentabsence.aupdate.rotext" xml:space="preserve">
+    <value>Eguneratu</value>
+  </data>
+  <data name="RES_audit.message.tdownloadfile.aexecuted.rotext" xml:space="preserve">
+    <value>Fitxategi bat deskargatu da zerbitzaritik.</value>
+  </data>
+  <data name="RES_audit.message.temergencyreport.aexecuted.rotext" xml:space="preserve">
+    <value>Larrialdi-txosten hauek modu anonimoan egin dira: $CRLF ´$@Name@´</value>
+  </data>
+  <data name="RES_audit.message.temployee.adelete.rotext" xml:space="preserve">
+    <value>$@EmployeeName@ erabiltzailea ezabatu da.</value>
+  </data>
+  <data name="RES_audit.message.temployee.aexecuted.rotext" xml:space="preserve">
+    <value>Datu masiboen kopia ($@iTask@ ataza) erabiltzaileak:$@SourceEmployeeName@ erabiltzaileak:$@DestinationEmployeeName@ erabiltzaileentzat programatu da. Fitxa-eremuak:$@CopyUserFields@($@UserFieldsSelected@). Akordioaren kopia:$@CopyLabAgree@. Postuen kopia:$@CopyAssignments@($@Assignments@). Ordutegiaren kopia: $@CopySchedule@ $@DateIni@ - $@DateEnd@ daten artean. Kopiatu aukerak: ordutegi nagusiak:$@CopyMainShifts@ - ordutegi alternatiboak:$@AlternativeShifts@ - Kopiatu oporrak:$@CopyHolidays@ - Mantendu uneko oporrak:$@KeepBlockedDays@ - Mantendu blokeatutako egunak:$@KeepHolidays@. Zentroen kopia:$@BusinessCenters@</value>
+  </data>
+  <data name="RES_audit.message.temployee.ainsert.rotext" xml:space="preserve">
+    <value>Erabiltzaile berri bat sortu da datu hauekin: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.temployee.amultiselect.rotext" xml:space="preserve">
+    <value>Erabiltzaile hauek kontsultatu dira: $@EmployeeNames@.</value>
+  </data>
+  <data name="RES_audit.message.temployee.aselect.rotext" xml:space="preserve">
+    <value>$@EmployeeName@ erabiltzaileari galdetu zaio.</value>
+  </data>
+  <data name="RES_audit.message.temployee.aupdate.rotext" xml:space="preserve">
+    <value>Erabiltzaile-datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.temployeeassignment.adelete.rotext" xml:space="preserve">
+    <value>$@AssignmentName@ posizioa ezabatu da.</value>
+  </data>
+  <data name="RES_audit.message.temployeeassignment.ainsert.rotext" xml:space="preserve">
+    <value>Postu berri bat sortu da datu hauekin:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.temployeeassignment.aupdate.rotext" xml:space="preserve">
+    <value>Posizio-datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.temployeecenters.adelete.rotext" xml:space="preserve">
+    <value>$@EmployeeName@ erabiltzailea kendu da $@Centers@ kostu-zentroetatik</value>
+  </data>
+  <data name="RES_audit.message.temployeecenters.aexecuted.rotext" xml:space="preserve">
+    <value>$@EmployeeName@ erabiltzaileari $@Centers@ kostu-zentroak esleitu zaizkio</value>
+  </data>
+  <data name="RES_audit.message.temployeecenters.ainsert.rotext" xml:space="preserve">
+    <value>$@Centers@ kostu-zentroak $@EmployeeName@ erabiltzaileari gehitu zaizkio</value>
+  </data>
+  <data name="RES_audit.message.temployeecontract.adelete.rotext" xml:space="preserve">
+    <value>$@IDContract@ $@EmployeeName@ erabiltzailearen kontratua ezabatu da.</value>
+  </data>
+  <data name="RES_audit.message.temployeecontract.ainsert.rotext" xml:space="preserve">
+    <value>$@EmployeeName@ erabiltzailearentzat kontratu berri bat sortu da datu hauekin: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.temployeecontract.amultiselect.rotext" xml:space="preserve">
+    <value>Kontratu hauek $@EmployeeName@ erabiltzailearentzat kontsultatu dira:$CRLF $@IDContracts@</value>
+  </data>
+  <data name="RES_audit.message.temployeecontract.aselect.rotext" xml:space="preserve">
+    <value>$@EmployeeName@ erabiltzailearen $@IDContract@ kontratua kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.temployeecontract.aupdate.rotext" xml:space="preserve">
+    <value>$@EmployeeName@:$CRLF $@FieldsValues@ erabiltzailearen kontratuaren datu hauek aldatu dira</value>
+  </data>
+  <data name="RES_audit.message.temployeegroup.ainsert.rotext" xml:space="preserve">
+    <value>Mugikortasuna txertatu da $@EmployeeName@:$CRLF $@FieldsValues@ erabiltzailearentzat</value>
+  </data>
+  <data name="RES_audit.message.temployeegroup.aupdate.rotext" xml:space="preserve">
+    <value>Mugikortasun eguneratua $@EmployeeName@:$CRLF $@FieldsValues@ erabiltzailearentzat</value>
+  </data>
+  <data name="RES_audit.message.temployeeonterminal.ainsert.rotext" xml:space="preserve">
+    <value>Erabiltzaile berri bat sortu da terminalean (ez luke izan behar)</value>
+  </data>
+  <data name="RES_audit.message.tentry.adelete.rotext" xml:space="preserve">
+    <value>Sinadura ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tentry.ainsert.rotext" xml:space="preserve">
+    <value>Erreserba berri bat sortu da datu hauekin: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tentry.aupdate.rotext" xml:space="preserve">
+    <value>Transferentzia datu hauek aldatu dira: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.teventscheduler.adelete.rotext" xml:space="preserve">
+    <value>Ezabatua</value>
+  </data>
+  <data name="RES_audit.message.teventscheduler.ainsert.rotext" xml:space="preserve">
+    <value>altua</value>
+  </data>
+  <data name="RES_audit.message.teventscheduler.aselect.rotext" xml:space="preserve">
+    <value>Kontsulta</value>
+  </data>
+  <data name="RES_audit.message.teventscheduler.aupdate.rotext" xml:space="preserve">
+    <value>Eguneratu</value>
+  </data>
+  <data name="RES_audit.message.tgenius.aconnect.rotext" xml:space="preserve">
+    <value>Genius-en ikusitako datuak kontsultatu dira</value>
+  </data>
+  <data name="RES_audit.message.tgenius.adelete.rotext" xml:space="preserve">
+    <value>jenio-ikuspegia ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tgenius.aexecuted.rotext" xml:space="preserve">
+    <value>Genius ikuspegia kaleratu da</value>
+  </data>
+  <data name="RES_audit.message.tgenius.ainsert.rotext" xml:space="preserve">
+    <value>Jenio ikuspegi berri bat sortu da</value>
+  </data>
+  <data name="RES_audit.message.tgenius.aselect.rotext" xml:space="preserve">
+    <value>Jenioaren ikuspegia kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tgenius.aupdate.rotext" xml:space="preserve">
+    <value>Jenio ikuspegiaren parametroak aldatu dira</value>
+  </data>
+  <data name="RES_audit.message.tgeniusscheduler.adelete.rotext" xml:space="preserve">
+    <value>Ikasketa-egutegia ezabatu da: $@ReportSchedulerName@</value>
+  </data>
+  <data name="RES_audit.message.tgeniusscheduler.ainsert.rotext" xml:space="preserve">
+    <value>Ikasketa-egutegi berri bat sortu da datu hauekin:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tgeniusscheduler.amultiselect.rotext" xml:space="preserve">
+    <value>Ikasketa-egutegi hauek kontsultatu dira: $@GeniusSchedulerNames@.</value>
+  </data>
+  <data name="RES_audit.message.tgeniusscheduler.aselect.rotext" xml:space="preserve">
+    <value>Ikasketa-egutegia kontsultatu da: $@GeniusSchedulerName@.</value>
+  </data>
+  <data name="RES_audit.message.tgeniusscheduler.aupdate.rotext" xml:space="preserve">
+    <value>Ikasketa planifikatzeko datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tgroup.adelete.rotext" xml:space="preserve">
+    <value>$@GroupName@ taldea ezabatu da.</value>
+  </data>
+  <data name="RES_audit.message.tgroup.ainsert.rotext" xml:space="preserve">
+    <value>Talde berri bat sortu da datu hauekin:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tgroup.amultiselect.rotext" xml:space="preserve">
+    <value>Talde hauek kontsultatu dira: $@GroupNames@.</value>
+  </data>
+  <data name="RES_audit.message.tgroup.aselect.rotext" xml:space="preserve">
+    <value>$@GroupName@ taldeari kontsulta egin zaio.</value>
+  </data>
+  <data name="RES_audit.message.tgroup.aupdate.rotext" xml:space="preserve">
+    <value>Taldeko datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tgroupfeature.adelete.rotext" xml:space="preserve">
+    <value>Ezaugarri bat kendu da</value>
+  </data>
+  <data name="RES_audit.message.tgroupfeature.ainsert.rotext" xml:space="preserve">
+    <value>Funtzio bat sortu da</value>
+  </data>
+  <data name="RES_audit.message.tgroupfeature.aselect.rotext" xml:space="preserve">
+    <value>Funtzio bat kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tgroupfeature.aupdate.rotext" xml:space="preserve">
+    <value>Ezaugarri bat eguneratu da</value>
+  </data>
+  <data name="RES_audit.message.tgroupfeaturepermissionoverfeature.aexecuted.rotext" xml:space="preserve">
+    <value>$@sFeature@ baimena mailan ezarri da: $@sPermission@</value>
+  </data>
+  <data name="RES_audit.message.tgroupfeaturepermissionoverfeature.ainsert.rotext" xml:space="preserve">
+    <value>Funtzio bat sortu da</value>
+  </data>
+  <data name="RES_audit.message.tgroupuserfield.ainsert.rotext" xml:space="preserve">
+    <value>Erabiltzaile-eremu berri bat sortu da</value>
+  </data>
+  <data name="RES_audit.message.tindicator.adelete.rotext" xml:space="preserve">
+    <value>$@IndicatorName@ adierazlea garbitu da.</value>
+  </data>
+  <data name="RES_audit.message.tindicator.ainsert.rotext" xml:space="preserve">
+    <value>Adierazle berri bat sortu da datu hauekin:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tindicator.aselect.rotext" xml:space="preserve">
+    <value>Kontsulta</value>
+  </data>
+  <data name="RES_audit.message.tindicator.aupdate.rotext" xml:space="preserve">
+    <value>Adierazleen datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tjustifiedincidences.aupdate.rotext" xml:space="preserve">
+    <value>Gorabeheren justifikazio masiboa egin da $@DateIni@ eta $@DateEnd@ artean.</value>
+  </data>
+  <data name="RES_audit.message.tlabagree.adelete.rotext" xml:space="preserve">
+    <value>Akordioa ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tlabagree.ainsert.rotext" xml:space="preserve">
+    <value>Hitzarmen-talde berri bat sortu da datu hauekin:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tlabagree.aselect.rotext" xml:space="preserve">
+    <value>Akordio bat kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tlabagree.aupdate.rotext" xml:space="preserve">
+    <value>Konbentzio-datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tlabagreeaccrualrule.adelete.rotext" xml:space="preserve">
+    <value>Konbentzio-araua ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tlabagreeaccrualrule.ainsert.rotext" xml:space="preserve">
+    <value>Konbentzio-arau berri bat sortu da datu hauekin:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tlabagreeaccrualrule.aselect.rotext" xml:space="preserve">
+    <value>Konbentzio-arauen balantzea kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tlabagreerule.adelete.rotext" xml:space="preserve">
+    <value>Konbentzio-araua ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tlabagreerule.ainsert.rotext" xml:space="preserve">
+    <value>Konbentzio-arau berri bat sortu da datu hauekin:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tlabagreerule.aselect.rotext" xml:space="preserve">
+    <value>Hitzarmenaren araua kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tlabagreerule.aupdate.rotext" xml:space="preserve">
+    <value>Konbentzio-arauaren datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tlivetask.aexecuted.rotext" xml:space="preserve">
+    <value>$@LiveTaskParameters@ zereginaren exekuzioa (konfigurazioa: $@LiveTaskConfiguration@) amaitu da</value>
+  </data>
+  <data name="RES_audit.message.tlivetask.ainsert.rotext" xml:space="preserve">
+    <value>Zeregin bat sortu da atzealdean</value>
+  </data>
+  <data name="RES_audit.message.tlockdate.aexecuted.rotext" xml:space="preserve">
+    <value>Itxiera dataren esleipen masiboa ($@iTask@ ataza) erabiltzaileentzat programatu da: $@DestinationEmployeeName@. Aukera hauekin: aplikatu data globala: $@ApplyLockDateGlobal@, Aplikatu data: $@LockDate@</value>
+  </data>
+  <data name="RES_audit.message.tlockdate.aselect.rotext" xml:space="preserve">
+    <value>Erabiltzailearen itxiera data kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tlockdate.aupdate.rotext" xml:space="preserve">
+    <value>Eguneratu</value>
+  </data>
+  <data name="RES_audit.message.tlogbook.aselect.rotext" xml:space="preserve">
+    <value>$@ComplaintRef@ kexen erregistro-liburua kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tmassmarkconsents.ainsert.rotext" xml:space="preserve">
+    <value>Baimenen sarrera masiboa egin da ($@ListEmployeeName@), mota: $@ConsentType@, baliozkoa: $@IsDelivered@, Onarpen data: $@ApprovalDate@</value>
+  </data>
+  <data name="RES_audit.message.tmassmobilityemployees.anone.rotext" xml:space="preserve">
+    <value>$@Employees@ erabiltzaileek huts egin dute $@Group@ talderako mugikortasun masiboa egiten saiatzean.</value>
+  </data>
+  <data name="RES_audit.message.tmassmobilityemployees.aupdate.rotext" xml:space="preserve">
+    <value>$@Employees@ erabiltzaileen mugikortasun masiboa egin da $@Group@ taldera.</value>
+  </data>
+  <data name="RES_audit.message.tmessageemployees.aexecuted.rotext" xml:space="preserve">
+    <value>Mezu hau bidali da ($@iTask@ ataza): &amp;quot;$@message@&amp;quot; erabiltzaileei: $@DestinationEmployeeName@</value>
+  </data>
+  <data name="RES_audit.message.tmove.adelete.rotext" xml:space="preserve">
+    <value>$@MoveName@ erlojua ezabatu da.</value>
+  </data>
+  <data name="RES_audit.message.tmove.ainsert.rotext" xml:space="preserve">
+    <value>$@PunchType@-ren zulatu berri bat sortu da $@Date@-rako $@Time@$@CauseName@ helbidean. Laguntzarako xehetasunak: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tmove.aselect.rotext" xml:space="preserve">
+    <value>Transferentzia bat kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tmove.aupdate.rotext" xml:space="preserve">
+    <value>Punch bat aldatu dute, orain $@PunchType@ $@Date@ eguneko $@Time@$@CauseName@ helbidean. Laguntzarako xehetasunak: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tnotification.adelete.rotext" xml:space="preserve">
+    <value>$@NotificationName@ jakinarazpena ezabatu da.</value>
+  </data>
+  <data name="RES_audit.message.tnotification.aexecuted.rotext" xml:space="preserve">
+    <value>Jakinarazpen bat exekutatu da</value>
+  </data>
+  <data name="RES_audit.message.tnotification.ainsert.rotext" xml:space="preserve">
+    <value>Jakinarazpen bat sortu da datu hauekin: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tnotification.amultiselect.rotext" xml:space="preserve">
+    <value>Eremu hauek kontsultatu dira: $@NotificationNames@.</value>
+  </data>
+  <data name="RES_audit.message.tnotification.aselect.rotext" xml:space="preserve">
+    <value>Jakinarazpen bat kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tnotification.aupdate.rotext" xml:space="preserve">
+    <value>Jakinarazpen-datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tparameters.aupdate.rotext" xml:space="preserve">
+    <value>Parametroak aldatu dira</value>
+  </data>
+  <data name="RES_audit.message.tpassport.ablock.rotext" xml:space="preserve">
+    <value>Erabiltzaile hauei kontuak blokeatu zaizkie:$CRLF $@EmployeesNames@</value>
+  </data>
+  <data name="RES_audit.message.tpassport.adelete.rotext" xml:space="preserve">
+    <value>Erabiltzailea ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tpassport.aexecuted.rotext" xml:space="preserve">
+    <value>Aplikazioaren ezarpenak eguneratu dira erabiltzaile hauentzat: $CRLF $@EmployeesNames@</value>
+  </data>
+  <data name="RES_audit.message.tpassport.ainsert.rotext" xml:space="preserve">
+    <value>Erabiltzaile berri bat sortu da</value>
+  </data>
+  <data name="RES_audit.message.tpassport.aunblock.rotext" xml:space="preserve">
+    <value>Erabiltzaile hauek desblokeatu dute kontua:$CRLF $@EmployeesNames@</value>
+  </data>
+  <data name="RES_audit.message.tpassport.aupdate.rotext" xml:space="preserve">
+    <value>Erabiltzaileen datuak aldatu dira</value>
+  </data>
+  <data name="RES_audit.message.tpassportconsent.ainsert.rotext" xml:space="preserve">
+    <value>Baimen berri bat sortu da</value>
+  </data>
+  <data name="RES_audit.message.tpassportconsent.aupdate.rotext" xml:space="preserve">
+    <value>Adostasuna eguneratu da</value>
+  </data>
+  <data name="RES_audit.message.tpassportpassword.aupdate.rotext" xml:space="preserve">
+    <value>Erabiltzaile hauen pasahitza birsortu da:$CRLF $@EmployeesNames@</value>
+  </data>
+  <data name="RES_audit.message.tpassportpermissionsoveremployees.aupdate.rotext" xml:space="preserve">
+    <value>$@PassportName@ erabiltzaile edo erabiltzaile taldearen erabiltzaile-baimenak aldatu dira</value>
+  </data>
+  <data name="RES_audit.message.tpassportpermissionsoverfeatures.aexecuted.rotext" xml:space="preserve">
+    <value>Nodoen baimenak eguneratu dira.</value>
+  </data>
+  <data name="RES_audit.message.tpassportpermissionsoverfeatures.aupdate.rotext" xml:space="preserve">
+    <value>$@PassportName@ erabiltzaile edo erabiltzaile taldearen funtzionalitate-baimenak aldatu dira</value>
+  </data>
+  <data name="RES_audit.message.tpassportpermissionsovergroups.aupdate.rotext" xml:space="preserve">
+    <value>$@PassportName@ erabiltzaile edo erabiltzaile taldearen talde-baimenak aldatu dira</value>
+  </data>
+  <data name="RES_audit.message.tproductivdata.aselect.rotext" xml:space="preserve">
+    <value>$@DateIni@ bitarteko $@DateEnd@ bitarteko ataza datuak erabiltzaile hauentzat kontsultatu dira: $CRLF $@EmployeeNames@</value>
+  </data>
+  <data name="RES_audit.message.tproductiveunit.aselect.rotext" xml:space="preserve">
+    <value>Kontsulta</value>
+  </data>
+  <data name="RES_audit.message.tproductiveunit.aupdate.rotext" xml:space="preserve">
+    <value>Eguneratu</value>
+  </data>
+  <data name="RES_audit.message.tproductiveunitmode.adelete.rotext" xml:space="preserve">
+    <value>Unitate produktiboaren modua garbitu da</value>
+  </data>
+  <data name="RES_audit.message.tproductiveunitmode.ainsert.rotext" xml:space="preserve">
+    <value>Unitate produktiboaren modu berri bat sortu da</value>
+  </data>
+  <data name="RES_audit.message.tproductiveunitmode.aupdate.rotext" xml:space="preserve">
+    <value>Eguneratu</value>
+  </data>
+  <data name="RES_audit.message.tproductiveunitmodeposition.adelete.rotext" xml:space="preserve">
+    <value>Kargua ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tproductiveunitmodeposition.aupdate.rotext" xml:space="preserve">
+    <value>Eguneratu</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedabsence.adelete.rotext" xml:space="preserve">
+    <value>Aurreikusitako absentzia egunak ezabatu dira</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedabsence.ainsert.rotext" xml:space="preserve">
+    <value>Absentzia egunen iragarpen berri bat sortu da datu hauekin: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedabsence.aselect.rotext" xml:space="preserve">
+    <value>Absentzia egunetarako aurreikuspena kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedabsence.aupdate.rotext" xml:space="preserve">
+    <value>Absentzia-egunen aurreikuspen-datuak aldatu dira: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedcause.adelete.rotext" xml:space="preserve">
+    <value>Absentzia-orduen aurreikuspena ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedcause.ainsert.rotext" xml:space="preserve">
+    <value>Aurreikuspeneko absentzia ordu berri bat sortu da datu hauekin: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedcause.aselect.rotext" xml:space="preserve">
+    <value>Absentzia-aurreikuspena kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedcause.aupdate.rotext" xml:space="preserve">
+    <value>Absentzia-orduen aurreikuspenaren datuak aldatu dira: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedholiday.adelete.rotext" xml:space="preserve">
+    <value>Orduko oporraldi/oporren iragarpena kendu da</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedholiday.ainsert.rotext" xml:space="preserve">
+    <value>Orduko oporraldi/baden iragarpena sortu da</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedholiday.aupdate.rotext" xml:space="preserve">
+    <value>Orduko oporraldi/baten iragarpena eguneratu da</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedovertime.adelete.rotext" xml:space="preserve">
+    <value>Gehiegizko orduen aurreikuspena kendu da</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedovertime.ainsert.rotext" xml:space="preserve">
+    <value>Gehiegizko orduen iragarpen berria sortu da</value>
+  </data>
+  <data name="RES_audit.message.tprogrammedovertime.aupdate.rotext" xml:space="preserve">
+    <value>Gehiegizko orduen aurreikuspena eguneratu da</value>
+  </data>
+  <data name="RES_audit.message.tprojecttemplate.adelete.rotext" xml:space="preserve">
+    <value>Ezabatua</value>
+  </data>
+  <data name="RES_audit.message.tprojecttemplate.ainsert.rotext" xml:space="preserve">
+    <value>altua</value>
+  </data>
+  <data name="RES_audit.message.tprojecttemplate.aselect.rotext" xml:space="preserve">
+    <value>Kontsulta</value>
+  </data>
+  <data name="RES_audit.message.tprojecttemplate.aupdate.rotext" xml:space="preserve">
+    <value>Eguneratu</value>
+  </data>
+  <data name="RES_audit.message.tpunchimage.aselect.rotext" xml:space="preserve">
+    <value>Erabiltzaileak $@EmployeeName@ erabiltzailearen sinatzeko argazkia ($@IdPunch@) kontsultatu du</value>
+  </data>
+  <data name="RES_audit.message.tremark.ainsert.rotext" xml:space="preserve">
+    <value>Behaketa eguneko erlojuetan txertatu da $@Date@ $@EmployeeName@ erabiltzailearentzat</value>
+  </data>
+  <data name="RES_audit.message.tremark.aupdate.rotext" xml:space="preserve">
+    <value>$@Date@ eguneko $@Date@ $@EmployeeName@ erabiltzailearentzat eguneratutako sinadura-behaketak</value>
+  </data>
+  <data name="RES_audit.message.treport.aexecuted.rotext" xml:space="preserve">
+    <value>Txosten bat egin da</value>
+  </data>
+  <data name="RES_audit.message.treportprofile.aselect.rotext" xml:space="preserve">
+    <value>Txostenaren profila kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.treportscheduler.adelete.rotext" xml:space="preserve">
+    <value>$@ReportSchedulerName@ programazioa ezabatu da.</value>
+  </data>
+  <data name="RES_audit.message.treportscheduler.aexecuted.rotext" xml:space="preserve">
+    <value>Txostenen egitaraua egin da</value>
+  </data>
+  <data name="RES_audit.message.treportscheduler.ainsert.rotext" xml:space="preserve">
+    <value>Ordutegi berri bat sortu da datu hauekin: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.treportscheduler.amultiselect.rotext" xml:space="preserve">
+    <value>Eremu hauek kontsultatu dira: $@ReportSchedulerNames@.</value>
+  </data>
+  <data name="RES_audit.message.treportscheduler.aselect.rotext" xml:space="preserve">
+    <value>$@ReportSchedulerName@ programazioa kontsultatu da.</value>
+  </data>
+  <data name="RES_audit.message.treportscheduler.aupdate.rotext" xml:space="preserve">
+    <value>Plangintza-datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.trequest.adelete.rotext" xml:space="preserve">
+    <value>Datu hauek dituen eskaera bat ezabatu da::$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.trequest.ainsert.rotext" xml:space="preserve">
+    <value>Eskaera bat sortu da datu hauekin::$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.trequest.amultiselect.rotext" xml:space="preserve">
+    <value>Hainbat eskaera kontsultatu dira</value>
+  </data>
+  <data name="RES_audit.message.trequest.aselect.rotext" xml:space="preserve">
+    <value>Eskaera bat egin da datu hauekin::$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.trequest.aupdate.rotext" xml:space="preserve">
+    <value>$@Status@ - Eskaera bat eguneratu da datu hauekin: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.trequestapproval.ainsert.rotext" xml:space="preserve">
+    <value>$@Status@ - Erabiltzailea: $@EmployeeName@ - Eskaera mota: ´$@RequestTypeName@´ ($@Comments@)</value>
+  </data>
+  <data name="RES_audit.message.trequestapproval.aselect.rotext" xml:space="preserve">
+    <value>$@Status@ - Erabiltzailea: $@EmployeeName@ - Eskaera mota: ´$@RequestTypeName@´ ($@Comments@)</value>
+  </data>
+  <data name="RES_audit.message.trequestapproval.aupdate.rotext" xml:space="preserve">
+    <value>$@Status@ - Erabiltzailea: $@EmployeeName@ - Eskaera mota: ´$@RequestTypeName@´ ($@Comments@)</value>
+  </data>
+  <data name="RES_audit.message.trequestrule.aupdate.rotext" xml:space="preserve">
+    <value>Eguneratu</value>
+  </data>
+  <data name="RES_audit.message.tsaasservice.aexecuted.rotext" xml:space="preserve">
+    <value>Exekuzioa</value>
+  </data>
+  <data name="RES_audit.message.tschedulerdaily.aselect.rotext" xml:space="preserve">
+    <value>$@DateStart@ eta $@DateEnd@ daten artean honako erabiltzaile hauek kontsultatu dira: $CRLF $@EmployeesNames@</value>
+  </data>
+  <data name="RES_audit.message.tschedulerholidays.ainsert.rotext" xml:space="preserve">
+    <value>Oporretako egutegia programatu da ($@iTask@ ataza) $@Group@, $@Year@ urterako, $@Template@ il'horario $@Shift@ txantiloia erabiliz: Kopiatu aukerak: Mantendu eguneratuta oporrak:$@KeepBloquedDays@ - Mantendu blokeatutako egunak:$@KeepHolidays@</value>
+  </data>
+  <data name="RES_audit.message.tschedulerholidays.aupdate.rotext" xml:space="preserve">
+    <value>$@Group@ erabiltzaile-taldearen oporretako plangintza aldatu egin da, $@Year@ urterako, $@Template@ txantiloia eta $@Shift@ ordutegia erabiliz.</value>
+  </data>
+  <data name="RES_audit.message.tschedulerplanification.aselect.rotext" xml:space="preserve">
+    <value>$@DateStart@ eta $@DateEnd@ daten artean honako erabiltzaile hauek kontsultatu dira: $CRLF $@EmployeesNames@</value>
+  </data>
+  <data name="RES_audit.message.tschedulerplanification.aupdate.rotext" xml:space="preserve">
+    <value>$@EmployeeName@ erabiltzailearen ordutegia $@ShiftDate@ eguneko $@ShiftName@ orduarekin eta $@AssignmentName@ posizioa aldatu da</value>
+  </data>
+  <data name="RES_audit.message.tschedulertemplate.ainsert.rotext" xml:space="preserve">
+    <value>Oporretako txantiloi berri bat sortu da datu hauekin:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tschedulertemplate.aselect.rotext" xml:space="preserve">
+    <value>Oporretako txantiloia kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tschedulertemplate.aupdate.rotext" xml:space="preserve">
+    <value>Oporretako txantiloiaren datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tschedulerweekly.ainsert.rotext" xml:space="preserve">
+    <value>Ordutegi bat antolatu da ($@iTask@ ataza) $@EmployeeNames@ erabiltzaileentzat, $@DateIni@ eta $@DateEnd@ daten artean, $@Shifts@ ordutegiak erabiliz, hurrenez hurren, astelehenetik igandera. oporrak:$@KeepBloquedDays@ - Mantendu blokeatutako egunak:$@KeepHolidays@</value>
+  </data>
+  <data name="RES_audit.message.tschedulerweekly.aupdate.rotext" xml:space="preserve">
+    <value>$@EmployeeNames@ erabiltzaileen programazioa aldatu egin da, $@DateIni@ eta $@DateEnd@ daten artean, $@Shifts@ ordutegiak erabiliz astelehenetik igandera hurrenez hurren.</value>
+  </data>
+  <data name="RES_audit.message.tsecuritynode.ainsert.rotext" xml:space="preserve">
+    <value>Nodo bat sortu da</value>
+  </data>
+  <data name="RES_audit.message.tsecuritynode.aselect.rotext" xml:space="preserve">
+    <value>Nodoa kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tsecuritynode.aupdate.rotext" xml:space="preserve">
+    <value>Nodo bat eguneratu da</value>
+  </data>
+  <data name="RES_audit.message.tsecuritynodegroup.ainsert.rotext" xml:space="preserve">
+    <value>Talde bat esleitu da</value>
+  </data>
+  <data name="RES_audit.message.tsecuritynodepassport.ainsert.rotext" xml:space="preserve">
+    <value>Begirale bat izendatu dute</value>
+  </data>
+  <data name="RES_audit.message.tsecurityoptions.adelete.rotext" xml:space="preserve">
+    <value>Segurtasun-aukerak garbitu dira</value>
+  </data>
+  <data name="RES_audit.message.tsecurityoptions.ainsert.rotext" xml:space="preserve">
+    <value>Segurtasun-aukera berriak sortu dira datu hauekin:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tsecurityoptions.aselect.rotext" xml:space="preserve">
+    <value>Segurtasun-aukerak kontsultatu dira</value>
+  </data>
+  <data name="RES_audit.message.tsecurityoptions.aupdate.rotext" xml:space="preserve">
+    <value>Segurtasun-aukeraren datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshift.adelete.rotext" xml:space="preserve">
+    <value>$@ShiftName@ programazioa ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tshift.ainsert.rotext" xml:space="preserve">
+    <value>Ordutegi berri bat sortu da datu hauekin: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshift.amultiselect.rotext" xml:space="preserve">
+    <value>Ondorengo ordutegiak kontsultatu dira:$CRLF $@ShiftNames@</value>
+  </data>
+  <data name="RES_audit.message.tshift.aselect.rotext" xml:space="preserve">
+    <value>$@ShiftName@ programazioa kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tshift.aupdate.rotext" xml:space="preserve">
+    <value>Programazio-datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshiftassignment.adelete.rotext" xml:space="preserve">
+    <value>$@AssignmentName@ posizioa ezabatu da.</value>
+  </data>
+  <data name="RES_audit.message.tshiftassignment.ainsert.rotext" xml:space="preserve">
+    <value>Kargu esleipen berri bat sortu da datu hauekin: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshiftassignment.aupdate.rotext" xml:space="preserve">
+    <value>Posizio-datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshiftgroup.adelete.rotext" xml:space="preserve">
+    <value>Ordutegi-taldea ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tshiftgroup.ainsert.rotext" xml:space="preserve">
+    <value>Ordutegi-talde berri bat sortu da datu hauekin:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshiftgroup.aselect.rotext" xml:space="preserve">
+    <value>Ordutegi taldeari kontsulta egin zaio</value>
+  </data>
+  <data name="RES_audit.message.tshiftgroup.aupdate.rotext" xml:space="preserve">
+    <value>Programazio taldearen datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshiftlayer.adelete.rotext" xml:space="preserve">
+    <value>$@ShiftLayerType@ geruza $@ShiftName@ programaziotik ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tshiftlayer.ainsert.rotext" xml:space="preserve">
+    <value>$@ShiftName@ programaziorako geruza berri bat sortu da datu hauekin: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshiftlayer.amultiselect.rotext" xml:space="preserve">
+    <value>$@ShiftName@:$CRLF $@ShiftLayerTypes@ honako programazio-geruza hauek kontsultatu dira</value>
+  </data>
+  <data name="RES_audit.message.tshiftlayer.aselect.rotext" xml:space="preserve">
+    <value>$@ShiftLayerType@ $@ShiftName@ programazioaren geruza kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tshiftlayer.aupdate.rotext" xml:space="preserve">
+    <value>Datu hauek aldatu dira $@ShiftLayerType@ programazioko $@ShiftName@:$CRLF $@FieldsValues@ geruzerako</value>
+  </data>
+  <data name="RES_audit.message.tshiftrule.adelete.rotext" xml:space="preserve">
+    <value>Ordutegi-arau bat ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tshiftrule.aupdate.rotext" xml:space="preserve">
+    <value>Programazio-arauaren datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tshifttimezone.ainsert.rotext" xml:space="preserve">
+    <value>Ordu-eremu berri bat sortu da datu hauekin:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tssoconfig.adelete.rotext" xml:space="preserve">
+    <value>Saioa hasteko konfigurazio integratua ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tssoconfig.ainsert.rotext" xml:space="preserve">
+    <value>Saioa hasteko konfigurazio integratua gorde da</value>
+  </data>
+  <data name="RES_audit.message.tssoconfig.aselect.rotext" xml:space="preserve">
+    <value>Saioa hasteko konfigurazio integratua kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tssoconfig.aupdate.rotext" xml:space="preserve">
+    <value>Saioa hasteko konfigurazio integratua eguneratu da</value>
+  </data>
+  <data name="RES_audit.message.tstartupvalues.adelete.rotext" xml:space="preserve">
+    <value>Hasierako balioa ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tstartupvalues.ainsert.rotext" xml:space="preserve">
+    <value>Hasierako balio berri bat sortu da datu hauekin: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tstartupvalues.aselect.rotext" xml:space="preserve">
+    <value>Hasierako balio bat galdetu da</value>
+  </data>
+  <data name="RES_audit.message.tstartupvalues.aupdate.rotext" xml:space="preserve">
+    <value>Hasierako balio-datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tsupervisedemployeedata.aselect.rotext" xml:space="preserve">
+    <value>$@EmployeesName@ erabiltzailearen informazioa kontsultatu da.</value>
+  </data>
+  <data name="RES_audit.message.ttask.adelete.rotext" xml:space="preserve">
+    <value>Ezabatua</value>
+  </data>
+  <data name="RES_audit.message.ttask.ainsert.rotext" xml:space="preserve">
+    <value>altua</value>
+  </data>
+  <data name="RES_audit.message.ttask.aselect.rotext" xml:space="preserve">
+    <value>Kontsulta</value>
+  </data>
+  <data name="RES_audit.message.ttask.aupdate.rotext" xml:space="preserve">
+    <value>Eguneratu</value>
+  </data>
+  <data name="RES_audit.message.ttaskfielddefinition.aupdate.rotext" xml:space="preserve">
+    <value>Eguneratu</value>
+  </data>
+  <data name="RES_audit.message.ttasktemplate.adelete.rotext" xml:space="preserve">
+    <value>Ezabatua</value>
+  </data>
+  <data name="RES_audit.message.ttasktemplate.ainsert.rotext" xml:space="preserve">
+    <value>altua</value>
+  </data>
+  <data name="RES_audit.message.ttasktemplate.aupdate.rotext" xml:space="preserve">
+    <value>Eguneratu</value>
+  </data>
+  <data name="RES_audit.message.tterminal.adelete.rotext" xml:space="preserve">
+    <value>Terminala ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tterminal.ainsert.rotext" xml:space="preserve">
+    <value>Terminal berri bat sortu da datu hauekin: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tterminal.aselect.rotext" xml:space="preserve">
+    <value>Terminal bat kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tterminal.aupdate.rotext" xml:space="preserve">
+    <value>Terminaleko datu hauek aldatu dira: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tterminalreader.aupdate.rotext" xml:space="preserve">
+    <value>Terminal-irakurlearen datu hauek aldatu dira: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tterminalsiren.ainsert.rotext" xml:space="preserve">
+    <value>Sirena berri bat sortu da datu hauekin: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tterminalsiren.aupdate.rotext" xml:space="preserve">
+    <value>Terminaleko sirenaren datu hauek aldatu dira: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tuploadfile.aexecuted.rotext" xml:space="preserve">
+    <value>Fitxategi bat kargatu da zerbitzarira.</value>
+  </data>
+  <data name="RES_audit.message.tuserfield.adelete.rotext" xml:space="preserve">
+    <value>$@UserFieldName@ eremua garbitu da.</value>
+  </data>
+  <data name="RES_audit.message.tuserfield.ainsert.rotext" xml:space="preserve">
+    <value>Eremu berri bat sortu da</value>
+  </data>
+  <data name="RES_audit.message.tuserfield.amultiselect.rotext" xml:space="preserve">
+    <value>Eremu hauek kontsultatu dira: $@UserFieldNames@.</value>
+  </data>
+  <data name="RES_audit.message.tuserfield.aselect.rotext" xml:space="preserve">
+    <value>$@UserFieldName@ eremua kontsultatu da.</value>
+  </data>
+  <data name="RES_audit.message.tuserfield.aupdate.rotext" xml:space="preserve">
+    <value>Eremuko datuak aldatu dira</value>
+  </data>
+  <data name="RES_audit.message.tusertask.adelete.rotext" xml:space="preserve">
+    <value>Erabiltzaile-zeregin bat ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tusertask.ainsert.rotext" xml:space="preserve">
+    <value>Erabiltzaile-zeregin bat txertatu da</value>
+  </data>
+  <data name="RES_audit.message.tusertask.aselect.rotext" xml:space="preserve">
+    <value>Erabiltzaile-zeregin bat kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tvisit.ainsert.rotext" xml:space="preserve">
+    <value>Bisita bat sortu da</value>
+  </data>
+  <data name="RES_audit.message.tvisit.aupdate.rotext" xml:space="preserve">
+    <value>Bisita bat eguneratu da</value>
+  </data>
+  <data name="RES_audit.message.tvisitor.ainsert.rotext" xml:space="preserve">
+    <value>Bisitari bat sortu da</value>
+  </data>
+  <data name="RES_audit.message.tvisitor.aupdate.rotext" xml:space="preserve">
+    <value>Bisitari bat eguneratu da</value>
+  </data>
+  <data name="RES_audit.message.tzoneinactivity.ainsert.rotext" xml:space="preserve">
+    <value>Inaktibo eremu berri bat sortu da datu hauekin:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tzoneinactivity.aupdate.rotext" xml:space="preserve">
+    <value>Sarbide eremuko datu hauek aldatu dira: $CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tzoneplane.adelete.rotext" xml:space="preserve">
+    <value>Zonaldearen planoa ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tzoneplane.ainsert.rotext" xml:space="preserve">
+    <value>Zona-plan berri bat sortu da datu hauekin:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.message.tzoneplane.aselect.rotext" xml:space="preserve">
+    <value>Zonaldearen planoa kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tzoneplane.aupdate.rotext" xml:space="preserve">
+    <value>Zona-planaren datu hauek aldatu dira:$CRLF $@FieldsValues@</value>
+  </data>
+  <data name="RES_audit.mt.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.myhidebutton.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.myhidebutton.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.mypopupframeimage.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.mypopupframeimagetool.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.nmc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.nmc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.nmcimg.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.nyc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.nyc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.nycimg.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.objecttype.tabsencetracking.rotext" xml:space="preserve">
+    <value>Absentziaren jarraipena</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessauthorization.rotext" xml:space="preserve">
+    <value>Sarbide-baimenak</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessdata.rotext" xml:space="preserve">
+    <value>Sarbide analitikak</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessgroup.rotext" xml:space="preserve">
+    <value>Sartu taldeetan</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessgrouppermission.rotext" xml:space="preserve">
+    <value>Sartu taldeetan</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessmode.rotext" xml:space="preserve">
+    <value>Sarbide modua</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessmove.rotext" xml:space="preserve">
+    <value>Sarbide sinadura</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessperiod.rotext" xml:space="preserve">
+    <value>Sarbide epeak</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessperioddaily.rotext" xml:space="preserve">
+    <value>Sarbide epeak (ate irekiak)</value>
+  </data>
+  <data name="RES_audit.objecttype.taccessperiodholidays.rotext" xml:space="preserve">
+    <value>Sarbide epeak (salbuespenak)</value>
+  </data>
+  <data name="RES_audit.objecttype.taccesszone.rotext" xml:space="preserve">
+    <value>Sarbide Guneak</value>
+  </data>
+  <data name="RES_audit.objecttype.taccrualsrule.rotext" xml:space="preserve">
+    <value>Oreka-araua</value>
+  </data>
+  <data name="RES_audit.objecttype.tactivity.rotext" xml:space="preserve">
+    <value>Jarduerak</value>
+  </data>
+  <data name="RES_audit.objecttype.tactivitycompany.rotext" xml:space="preserve">
+    <value>Jarduerak (Enpresa)</value>
+  </data>
+  <data name="RES_audit.objecttype.tadvancedparameter.rotext" xml:space="preserve">
+    <value>Parametro aurreratua</value>
+  </data>
+  <data name="RES_audit.objecttype.tassigncause.rotext" xml:space="preserve">
+    <value>Justifikazioak masiboki sartzea</value>
+  </data>
+  <data name="RES_audit.objecttype.tassigncenters.rotext" xml:space="preserve">
+    <value>Kostu-zentroen esleipen masiboa</value>
+  </data>
+  <data name="RES_audit.objecttype.tassignment.rotext" xml:space="preserve">
+    <value>Posizioa</value>
+  </data>
+  <data name="RES_audit.objecttype.tattendancedata.rotext" xml:space="preserve">
+    <value>Denbora Kontrolaren Analitika</value>
+  </data>
+  <data name="RES_audit.objecttype.tattendanceoptions.rotext" xml:space="preserve">
+    <value>Presentzia aukerak</value>
+  </data>
+  <data name="RES_audit.objecttype.tbot.rotext" xml:space="preserve">
+    <value>Botak</value>
+  </data>
+  <data name="RES_audit.objecttype.tbotrule.rotext" xml:space="preserve">
+    <value>Bot arauak</value>
+  </data>
+  <data name="RES_audit.objecttype.tbudget.rotext" xml:space="preserve">
+    <value>Aurrekontua</value>
+  </data>
+  <data name="RES_audit.objecttype.tbudgetrow.rotext" xml:space="preserve">
+    <value>Aurrekontuaren erregistroa</value>
+  </data>
+  <data name="RES_audit.objecttype.tcalendar.rotext" xml:space="preserve">
+    <value>Egutegia</value>
+  </data>
+  <data name="RES_audit.objecttype.tcalendarrow.rotext" xml:space="preserve">
+    <value>Egutegiko erregistroa</value>
+  </data>
+  <data name="RES_audit.objecttype.tcalendarrowsummarydata.rotext" xml:space="preserve">
+    <value>Errenkadaren laburpena</value>
+  </data>
+  <data name="RES_audit.objecttype.tcamera.rotext" xml:space="preserve">
+    <value>Kamerak</value>
+  </data>
+  <data name="RES_audit.objecttype.tcaptcha.rotext" xml:space="preserve">
+    <value>Baliozkotze kodea</value>
+  </data>
+  <data name="RES_audit.objecttype.tcapture.rotext" xml:space="preserve">
+    <value>Argazkia</value>
+  </data>
+  <data name="RES_audit.objecttype.tcategorytype.rotext" xml:space="preserve">
+    <value>Kategoriak</value>
+  </data>
+  <data name="RES_audit.objecttype.tcause.rotext" xml:space="preserve">
+    <value>Justifikazioa</value>
+  </data>
+  <data name="RES_audit.objecttype.tcauselimitvalue.rotext" xml:space="preserve">
+    <value>Justifikazio muga</value>
+  </data>
+  <data name="RES_audit.objecttype.tchannel.rotext" xml:space="preserve">
+    <value>Kanalak</value>
+  </data>
+  <data name="RES_audit.objecttype.tchannelconversation.rotext" xml:space="preserve">
+    <value>Elkarrizketa</value>
+  </data>
+  <data name="RES_audit.objecttype.tchannelconversationcomplexity.rotext" xml:space="preserve">
+    <value>Elkarrizketa konplexutasuna</value>
+  </data>
+  <data name="RES_audit.objecttype.tchannelconversationmessage.rotext" xml:space="preserve">
+    <value>Mezua</value>
+  </data>
+  <data name="RES_audit.objecttype.tcommunique.rotext" xml:space="preserve">
+    <value>Iragarkiak</value>
+  </data>
+  <data name="RES_audit.objecttype.tcompletetasks.rotext" xml:space="preserve">
+    <value>Zeregin masiboa osatzea</value>
+  </data>
+  <data name="RES_audit.objecttype.tconcept.rotext" xml:space="preserve">
+    <value>Balantzeak</value>
+  </data>
+  <data name="RES_audit.objecttype.tconceptcomposition.rotext" xml:space="preserve">
+    <value>Balantzearen konposizioa</value>
+  </data>
+  <data name="RES_audit.objecttype.tconceptgroup.rotext" xml:space="preserve">
+    <value>Oreka taldea</value>
+  </data>
+  <data name="RES_audit.objecttype.tconnection.rotext" xml:space="preserve">
+    <value>Konexioa</value>
+  </data>
+  <data name="RES_audit.objecttype.tcopybudgetplanificationadvanced.rotext" xml:space="preserve">
+    <value>Aurrekontuen kopia</value>
+  </data>
+  <data name="RES_audit.objecttype.tcopyplanification.rotext" xml:space="preserve">
+    <value>Plangintzaren kopia</value>
+  </data>
+  <data name="RES_audit.objecttype.tcopyplanificationadvanced.rotext" xml:space="preserve">
+    <value>Plangintza aurreratuaren kopia</value>
+  </data>
+  <data name="RES_audit.objecttype.tcopyplanificationtoemployees.rotext" xml:space="preserve">
+    <value>Langileen arteko plangintzaren kopia</value>
+  </data>
+  <data name="RES_audit.objecttype.tdailybudgetposition.rotext" xml:space="preserve">
+    <value>Unitate produktiboaren aurreikusitako eguna</value>
+  </data>
+  <data name="RES_audit.objecttype.tdailycause.rotext" xml:space="preserve">
+    <value>eguneroko justifikazioak</value>
+  </data>
+  <data name="RES_audit.objecttype.tdailycoverage.rotext" xml:space="preserve">
+    <value>Dotazioak</value>
+  </data>
+  <data name="RES_audit.objecttype.tdailypunchesdetail.rotext" xml:space="preserve">
+    <value>Eguneroko xehetasuna</value>
+  </data>
+  <data name="RES_audit.objecttype.tdailyrecord.rotext" xml:space="preserve">
+    <value>Eguneko adierazpena</value>
+  </data>
+  <data name="RES_audit.objecttype.tdailyschedule.rotext" xml:space="preserve">
+    <value>Plangintza</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalink.rotext" xml:space="preserve">
+    <value>datu-lotura</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkimportdailycoverage.rotext" xml:space="preserve">
+    <value>Inportatu eguneroko estaldura</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkimportemployees.rotext" xml:space="preserve">
+    <value>Erabiltzaileak inportatu</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkimportgroups.rotext" xml:space="preserve">
+    <value>Inportatu taldeak</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkimportprogrammedabsences.rotext" xml:space="preserve">
+    <value>Absentzia luzeak inportatzea</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkimportscheduler.rotext" xml:space="preserve">
+    <value>Inportazioen plangintza</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkimporttask.rotext" xml:space="preserve">
+    <value>Inportatu zereginak</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkresult.rotext" xml:space="preserve">
+    <value>Inportatu emaitza</value>
+  </data>
+  <data name="RES_audit.objecttype.tdatalinkws.rotext" xml:space="preserve">
+    <value>web zerbitzua</value>
+  </data>
+  <data name="RES_audit.objecttype.tdiningroom.rotext" xml:space="preserve">
+    <value>Jangela</value>
+  </data>
+  <data name="RES_audit.objecttype.tdocument.rotext" xml:space="preserve">
+    <value>Dokumentua</value>
+  </data>
+  <data name="RES_audit.objecttype.tdocumentabsence.rotext" xml:space="preserve">
+    <value>Absentismoaren agiria</value>
+  </data>
+  <data name="RES_audit.objecttype.tdocumenttemplate.rotext" xml:space="preserve">
+    <value>Dokumentu txantiloia</value>
+  </data>
+  <data name="RES_audit.objecttype.tdownloadfile.rotext" xml:space="preserve">
+    <value>Deskargatu fitxategia</value>
+  </data>
+  <data name="RES_audit.objecttype.temergencyreport.rotext" xml:space="preserve">
+    <value>Larrialdi Txostena</value>
+  </data>
+  <data name="RES_audit.objecttype.temployee.rotext" xml:space="preserve">
+    <value>Erabiltzailea</value>
+  </data>
+  <data name="RES_audit.objecttype.temployeeassignment.rotext" xml:space="preserve">
+    <value>Erabiltzailearen posizioa</value>
+  </data>
+  <data name="RES_audit.objecttype.temployeecenters.rotext" xml:space="preserve">
+    <value>Baimendutako kostu-zentroak</value>
+  </data>
+  <data name="RES_audit.objecttype.temployeecontract.rotext" xml:space="preserve">
+    <value>Kontratua</value>
+  </data>
+  <data name="RES_audit.objecttype.temployeegroup.rotext" xml:space="preserve">
+    <value>Erabiltzaileen mugikortasuna</value>
+  </data>
+  <data name="RES_audit.objecttype.temployeeonterminal.rotext" xml:space="preserve">
+    <value>Terminalean sortutako erabiltzailea</value>
+  </data>
+  <data name="RES_audit.objecttype.temployeeuserfield.rotext" xml:space="preserve">
+    <value>Erabiltzailea (Token eremua)</value>
+  </data>
+  <data name="RES_audit.objecttype.tentry.rotext" xml:space="preserve">
+    <value>Sinatzea</value>
+  </data>
+  <data name="RES_audit.objecttype.teventscheduler.rotext" xml:space="preserve">
+    <value>aurreikusitako ekitaldia</value>
+  </data>
+  <data name="RES_audit.objecttype.tgeneraloptions.rotext" xml:space="preserve">
+    <value>Aukera orokorrak</value>
+  </data>
+  <data name="RES_audit.objecttype.tgenius.rotext" xml:space="preserve">
+    <value>jenio analitika</value>
+  </data>
+  <data name="RES_audit.objecttype.tgeniusscheduler.rotext" xml:space="preserve">
+    <value>Ikasketen plangintza</value>
+  </data>
+  <data name="RES_audit.objecttype.tgroup.rotext" xml:space="preserve">
+    <value>Klusterra</value>
+  </data>
+  <data name="RES_audit.objecttype.tgroupfeature.rotext" xml:space="preserve">
+    <value>Funtzioa</value>
+  </data>
+  <data name="RES_audit.objecttype.tgroupfeaturepermissionoverfeature.rotext" xml:space="preserve">
+    <value>Ezaugarriak</value>
+  </data>
+  <data name="RES_audit.objecttype.tgroupuserfield.rotext" xml:space="preserve">
+    <value>Erabiltzailea (Token Field Group)</value>
+  </data>
+  <data name="RES_audit.objecttype.tindicator.rotext" xml:space="preserve">
+    <value>Adierazlea</value>
+  </data>
+  <data name="RES_audit.objecttype.tjustifiedincidences.rotext" xml:space="preserve">
+    <value>Gorabeheren justifikazio masiboa</value>
+  </data>
+  <data name="RES_audit.objecttype.tlabagree.rotext" xml:space="preserve">
+    <value>Hitzarmenak</value>
+  </data>
+  <data name="RES_audit.objecttype.tlabagreeaccrualrule.rotext" xml:space="preserve">
+    <value>hitzarmenaren arauak</value>
+  </data>
+  <data name="RES_audit.objecttype.tlabagreecauselimitvalue.rotext" xml:space="preserve">
+    <value>Hitzarmenaren justifikazio-muga</value>
+  </data>
+  <data name="RES_audit.objecttype.tlabagreerule.rotext" xml:space="preserve">
+    <value>akordioaren araua</value>
+  </data>
+  <data name="RES_audit.objecttype.tlivetask.rotext" xml:space="preserve">
+    <value>zuzeneko zeregina</value>
+  </data>
+  <data name="RES_audit.objecttype.tlockdate.rotext" xml:space="preserve">
+    <value>Epemuga</value>
+  </data>
+  <data name="RES_audit.objecttype.tlogbook.rotext" xml:space="preserve">
+    <value>Egunkaria</value>
+  </data>
+  <data name="RES_audit.objecttype.tmassmarkconsents.rotext" xml:space="preserve">
+    <value>Baimenen Laguntzailea</value>
+  </data>
+  <data name="RES_audit.objecttype.tmassmobilityemployees.rotext" xml:space="preserve">
+    <value>Masa Mugikortasuna</value>
+  </data>
+  <data name="RES_audit.objecttype.tmessageemployees.rotext" xml:space="preserve">
+    <value>Erabiltzaileen mezuak</value>
+  </data>
+  <data name="RES_audit.objecttype.tmove.rotext" xml:space="preserve">
+    <value>Sinatzea</value>
+  </data>
+  <data name="RES_audit.objecttype.tnone.rotext" xml:space="preserve">
+    <value>(Ezezaguna)</value>
+  </data>
+  <data name="RES_audit.objecttype.tnotification.rotext" xml:space="preserve">
+    <value>Jakinarazpenak</value>
+  </data>
+  <data name="RES_audit.objecttype.tparameters.rotext" xml:space="preserve">
+    <value>Parametroak (aukerak)</value>
+  </data>
+  <data name="RES_audit.objecttype.tpassport.rotext" xml:space="preserve">
+    <value>Erabiltzailea</value>
+  </data>
+  <data name="RES_audit.objecttype.tpassportconsent.rotext" xml:space="preserve">
+    <value>Adostasunak</value>
+  </data>
+  <data name="RES_audit.objecttype.tpassportpassword.rotext" xml:space="preserve">
+    <value>Pasahitza</value>
+  </data>
+  <data name="RES_audit.objecttype.tpassportpermissionsoveremployees.rotext" xml:space="preserve">
+    <value>Erabiltzaileen baimenak</value>
+  </data>
+  <data name="RES_audit.objecttype.tpassportpermissionsoverfeatures.rotext" xml:space="preserve">
+    <value>Eginbideei buruzko baimenak</value>
+  </data>
+  <data name="RES_audit.objecttype.tpassportpermissionsovergroups.rotext" xml:space="preserve">
+    <value>Baimenak taldeetan</value>
+  </data>
+  <data name="RES_audit.objecttype.tproductivdata.rotext" xml:space="preserve">
+    <value>Zereginen analitika</value>
+  </data>
+  <data name="RES_audit.objecttype.tproductiveunit.rotext" xml:space="preserve">
+    <value>Unitate produktiboa</value>
+  </data>
+  <data name="RES_audit.objecttype.tproductiveunitmode.rotext" xml:space="preserve">
+    <value>Unitate produktiboen modua</value>
+  </data>
+  <data name="RES_audit.objecttype.tproductiveunitmodeposition.rotext" xml:space="preserve">
+    <value>Modu-posizioa</value>
+  </data>
+  <data name="RES_audit.objecttype.tprogrammedabsence.rotext" xml:space="preserve">
+    <value>Absentzia egunen aurreikuspena</value>
+  </data>
+  <data name="RES_audit.objecttype.tprogrammedcause.rotext" xml:space="preserve">
+    <value>Absentzia orduen aurreikuspena</value>
+  </data>
+  <data name="RES_audit.objecttype.tprogrammedholiday.rotext" xml:space="preserve">
+    <value>Oporrak/orduko baimena</value>
+  </data>
+  <data name="RES_audit.objecttype.tprogrammedovertime.rotext" xml:space="preserve">
+    <value>Gehiegizko orduen aurreikuspena</value>
+  </data>
+  <data name="RES_audit.objecttype.tprojecttemplate.rotext" xml:space="preserve">
+    <value>Proiektuaren txantiloia</value>
+  </data>
+  <data name="RES_audit.objecttype.tpunchimage.rotext" xml:space="preserve">
+    <value>Transferitu argazkia</value>
+  </data>
+  <data name="RES_audit.objecttype.tremark.rotext" xml:space="preserve">
+    <value>Nabarmendu</value>
+  </data>
+  <data name="RES_audit.objecttype.treport.rotext" xml:space="preserve">
+    <value>Txostenak</value>
+  </data>
+  <data name="RES_audit.objecttype.treportprofile.rotext" xml:space="preserve">
+    <value>Txostenaren profila</value>
+  </data>
+  <data name="RES_audit.objecttype.treportscheduler.rotext" xml:space="preserve">
+    <value>Aurreikusitako txostenak</value>
+  </data>
+  <data name="RES_audit.objecttype.trequest.rotext" xml:space="preserve">
+    <value>Eskaerak</value>
+  </data>
+  <data name="RES_audit.objecttype.trequestapproval.rotext" xml:space="preserve">
+    <value>Onartu/ukatu egin da eskaera</value>
+  </data>
+  <data name="RES_audit.objecttype.trequestrule.rotext" xml:space="preserve">
+    <value>Aplikazio-arauak</value>
+  </data>
+  <data name="RES_audit.objecttype.trequesttype.rotext" xml:space="preserve">
+    <value>Eskaera mota</value>
+  </data>
+  <data name="RES_audit.objecttype.tsaasservice.rotext" xml:space="preserve">
+    <value>SaaS zerbitzua</value>
+  </data>
+  <data name="RES_audit.objecttype.tschedulerdaily.rotext" xml:space="preserve">
+    <value>Sarrera eta irteera egutegia</value>
+  </data>
+  <data name="RES_audit.objecttype.tschedulerholidays.rotext" xml:space="preserve">
+    <value>Oporretako plangintza</value>
+  </data>
+  <data name="RES_audit.objecttype.tschedulerplanification.rotext" xml:space="preserve">
+    <value>Plangintzaren egutegia</value>
+  </data>
+  <data name="RES_audit.objecttype.tschedulerremarks.rotext" xml:space="preserve">
+    <value>Egutegiko aipamenak</value>
+  </data>
+  <data name="RES_audit.objecttype.tschedulertemplate.rotext" xml:space="preserve">
+    <value>Oporretako txantiloia</value>
+  </data>
+  <data name="RES_audit.objecttype.tschedulerweekly.rotext" xml:space="preserve">
+    <value>Asteko plangintza</value>
+  </data>
+  <data name="RES_audit.objecttype.tsecuritynode.rotext" xml:space="preserve">
+    <value>Organigrama</value>
+  </data>
+  <data name="RES_audit.objecttype.tsecuritynodegroup.rotext" xml:space="preserve">
+    <value>Esleitutako taldea</value>
+  </data>
+  <data name="RES_audit.objecttype.tsecuritynodepassport.rotext" xml:space="preserve">
+    <value>Esleitutako arduraduna</value>
+  </data>
+  <data name="RES_audit.objecttype.tsecuritynodepassportexception.rotext" xml:space="preserve">
+    <value>Salbuespena</value>
+  </data>
+  <data name="RES_audit.objecttype.tsecurityoptions.rotext" xml:space="preserve">
+    <value>Segurtasun aukerak</value>
+  </data>
+  <data name="RES_audit.objecttype.tshift.rotext" xml:space="preserve">
+    <value>Ordutegia</value>
+  </data>
+  <data name="RES_audit.objecttype.tshiftassignment.rotext" xml:space="preserve">
+    <value>ordutegiaren posizioa</value>
+  </data>
+  <data name="RES_audit.objecttype.tshiftgroup.rotext" xml:space="preserve">
+    <value>Ordutegi taldea</value>
+  </data>
+  <data name="RES_audit.objecttype.tshiftlayer.rotext" xml:space="preserve">
+    <value>Denbora-geruza</value>
+  </data>
+  <data name="RES_audit.objecttype.tshiftrule.rotext" xml:space="preserve">
+    <value>Ordutegi-arauak</value>
+  </data>
+  <data name="RES_audit.objecttype.tshifttimezone.rotext" xml:space="preserve">
+    <value>Programatu ordu-eremua</value>
+  </data>
+  <data name="RES_audit.objecttype.tssoconfig.rotext" xml:space="preserve">
+    <value>Saio-hasiera integratua</value>
+  </data>
+  <data name="RES_audit.objecttype.tstartupvalues.rotext" xml:space="preserve">
+    <value>Hasierako balioak (hitzarmena)</value>
+  </data>
+  <data name="RES_audit.objecttype.tsupervisedemployeedata.rotext" xml:space="preserve">
+    <value>Erabiltzailea</value>
+  </data>
+  <data name="RES_audit.objecttype.tsurvey.rotext" xml:space="preserve">
+    <value>Inkesta</value>
+  </data>
+  <data name="RES_audit.objecttype.tsurveyresponse.rotext" xml:space="preserve">
+    <value>Inkestaren erantzuna</value>
+  </data>
+  <data name="RES_audit.objecttype.tsurveyresults.rotext" xml:space="preserve">
+    <value>Inkestaren emaitzak</value>
+  </data>
+  <data name="RES_audit.objecttype.ttask.rotext" xml:space="preserve">
+    <value>Zeregin</value>
+  </data>
+  <data name="RES_audit.objecttype.ttaskfield.rotext" xml:space="preserve">
+    <value>Zereginaren atributuak</value>
+  </data>
+  <data name="RES_audit.objecttype.ttaskfielddefinition.rotext" xml:space="preserve">
+    <value>Zereginaren atributuak zehaztea</value>
+  </data>
+  <data name="RES_audit.objecttype.ttasktemplate.rotext" xml:space="preserve">
+    <value>Zereginen txantiloia</value>
+  </data>
+  <data name="RES_audit.objecttype.ttelecommute.rotext" xml:space="preserve">
+    <value>Telelangintza</value>
+  </data>
+  <data name="RES_audit.objecttype.tterminal.rotext" xml:space="preserve">
+    <value>Terminala</value>
+  </data>
+  <data name="RES_audit.objecttype.tterminalconfigfile.rotext" xml:space="preserve">
+    <value>Terminalaren konfigurazio fitxategia</value>
+  </data>
+  <data name="RES_audit.objecttype.tterminalreader.rotext" xml:space="preserve">
+    <value>Terminal irakurgailua</value>
+  </data>
+  <data name="RES_audit.objecttype.tterminalsiren.rotext" xml:space="preserve">
+    <value>Terminaleko sirena</value>
+  </data>
+  <data name="RES_audit.objecttype.tterminalsyncfile.rotext" xml:space="preserve">
+    <value>Terminaleko sinkronizazio fitxategia</value>
+  </data>
+  <data name="RES_audit.objecttype.ttimezone.rotext" xml:space="preserve">
+    <value>Ordu eremu</value>
+  </data>
+  <data name="RES_audit.objecttype.tuploadfile.rotext" xml:space="preserve">
+    <value>Kargatu fitxategia</value>
+  </data>
+  <data name="RES_audit.objecttype.tuserfield.rotext" xml:space="preserve">
+    <value>Fitxa eremua</value>
+  </data>
+  <data name="RES_audit.objecttype.tusertask.rotext" xml:space="preserve">
+    <value>Erabiltzailearen zeregina</value>
+  </data>
+  <data name="RES_audit.objecttype.tvisit.rotext" xml:space="preserve">
+    <value>Bisitatu</value>
+  </data>
+  <data name="RES_audit.objecttype.tvisitor.rotext" xml:space="preserve">
+    <value>Bisitaria</value>
+  </data>
+  <data name="RES_audit.objecttype.tzoneinactivity.rotext" xml:space="preserve">
+    <value>eremu inaktiboa</value>
+  </data>
+  <data name="RES_audit.objecttype.tzoneplane.rotext" xml:space="preserve">
+    <value>Zonaldearen planoa</value>
+  </data>
+  <data name="RES_audit.panaudit.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.pancontent.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.panheader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.panmainmenu.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.panpager.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters..date.rotext" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="RES_audit.parameters..fieldname.rotext" xml:space="preserve">
+    <value>Eremuaren izena</value>
+  </data>
+  <data name="RES_audit.parameters..idemployee.rotext" xml:space="preserve">
+    <value>Erabiltzaile IDa</value>
+  </data>
+  <data name="RES_audit.parameters..value.rotext" xml:space="preserve">
+    <value>Merezi</value>
+  </data>
+  <data name="RES_audit.parameters.accessgroups.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.accessgroups.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.accessgroupspermissions.idaccessgroup.rotext" xml:space="preserve">
+    <value>atzitu taldearen IDa</value>
+  </data>
+  <data name="RES_audit.parameters.accessgroupspermissions.idaccessperiod.rotext" xml:space="preserve">
+    <value>Sarbide Aldiaren IDa</value>
+  </data>
+  <data name="RES_audit.parameters.accessgroupspermissions.idzone.rotext" xml:space="preserve">
+    <value>zonaren ID</value>
+  </data>
+  <data name="RES_audit.parameters.accessperioddaily.begintime.rotext" xml:space="preserve">
+    <value>Hasiera Ordua</value>
+  </data>
+  <data name="RES_audit.parameters.accessperioddaily.dayofweek.rotext" xml:space="preserve">
+    <value>Asteguna</value>
+  </data>
+  <data name="RES_audit.parameters.accessperioddaily.endtime.rotext" xml:space="preserve">
+    <value>Amaiera ordua</value>
+  </data>
+  <data name="RES_audit.parameters.accessperioddaily.idaccessperiod.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.accessperiodholidays.begintime.rotext" xml:space="preserve">
+    <value>Hasiera ordua</value>
+  </data>
+  <data name="RES_audit.parameters.accessperiodholidays.day.rotext" xml:space="preserve">
+    <value>Eguna</value>
+  </data>
+  <data name="RES_audit.parameters.accessperiodholidays.endtime.rotext" xml:space="preserve">
+    <value>Azken ordua</value>
+  </data>
+  <data name="RES_audit.parameters.accessperiodholidays.idaccessperiod.rotext" xml:space="preserve">
+    <value>Aldiaren IDa</value>
+  </data>
+  <data name="RES_audit.parameters.accessperiodholidays.month.rotext" xml:space="preserve">
+    <value>Hilabetea</value>
+  </data>
+  <data name="RES_audit.parameters.accessperiods.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.accessperiods.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.accrualsrules.definition.rotext" xml:space="preserve">
+    <value>definizioa</value>
+  </data>
+  <data name="RES_audit.parameters.accrualsrules.description.rotext" xml:space="preserve">
+    <value>Deskribapena</value>
+  </data>
+  <data name="RES_audit.parameters.accrualsrules.idaccrualsrule.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.accrualsrules.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.accrualsrules.schedule.rotext" xml:space="preserve">
+    <value>Programazioa</value>
+  </data>
+  <data name="RES_audit.parameters.assignment.color.rotext" xml:space="preserve">
+    <value>Post Kolorea</value>
+  </data>
+  <data name="RES_audit.parameters.assignment.description.rotext" xml:space="preserve">
+    <value>Lanaren deskribapena</value>
+  </data>
+  <data name="RES_audit.parameters.assignment.id.rotext" xml:space="preserve">
+    <value>Kargua ID</value>
+  </data>
+  <data name="RES_audit.parameters.assignment.name.rotext" xml:space="preserve">
+    <value>Lanpostuaren izena</value>
+  </data>
+  <data name="RES_audit.parameters.assignment.shortname.rotext" xml:space="preserve">
+    <value>Karguaren izen laburra</value>
+  </data>
+  <data name="RES_audit.parameters.businesscenter.description.rotext" xml:space="preserve">
+    <value>Deskribapena</value>
+  </data>
+  <data name="RES_audit.parameters.businesscenter.id.rotext" xml:space="preserve">
+    <value>Kostu zentroaren IDa</value>
+  </data>
+  <data name="RES_audit.parameters.businesscenter.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.cameras.description.rotext" xml:space="preserve">
+    <value>Deskribapena</value>
+  </data>
+  <data name="RES_audit.parameters.cameras.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.cameras.model.rotext" xml:space="preserve">
+    <value>Eredua</value>
+  </data>
+  <data name="RES_audit.parameters.cameras.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.cameras.url.rotext" xml:space="preserve">
+    <value>URLa</value>
+  </data>
+  <data name="RES_audit.parameters.causelimitvalues.idcause.rotext" xml:space="preserve">
+    <value>Justifikazioa</value>
+  </data>
+  <data name="RES_audit.parameters.causelimitvalues.idexcesscause.rotext" xml:space="preserve">
+    <value>Gehiegikeriaren justifikazioa</value>
+  </data>
+  <data name="RES_audit.parameters.causelimitvalues.maximumannualvalue.rotext" xml:space="preserve">
+    <value>Urteko balioa</value>
+  </data>
+  <data name="RES_audit.parameters.causelimitvalues.maximumannualvaluetype.rotext" xml:space="preserve">
+    <value>Urteko jatorria</value>
+  </data>
+  <data name="RES_audit.parameters.causelimitvalues.maximummonthlytype.rotext" xml:space="preserve">
+    <value>Jatorri menuala</value>
+  </data>
+  <data name="RES_audit.parameters.causelimitvalues.maximummonthlyvalue.rotext" xml:space="preserve">
+    <value>Hileko balioa</value>
+  </data>
+  <data name="RES_audit.parameters.causelimitvalues.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.causes.allowinputfromreader.rotext" xml:space="preserve">
+    <value>Baimendu terminaletik</value>
+  </data>
+  <data name="RES_audit.parameters.causes.applyabsenceonholidays.rotext" xml:space="preserve">
+    <value>Aplikatu absentzia oporretan</value>
+  </data>
+  <data name="RES_audit.parameters.causes.applyjustifyperiod.rotext" xml:space="preserve">
+    <value>Aplikatu epea</value>
+  </data>
+  <data name="RES_audit.parameters.causes.causetype.rotext" xml:space="preserve">
+    <value>Justifikazio mota</value>
+  </data>
+  <data name="RES_audit.parameters.causes.color.rotext" xml:space="preserve">
+    <value>Kolore</value>
+  </data>
+  <data name="RES_audit.parameters.causes.costfactor.rotext" xml:space="preserve">
+    <value>Kostu faktorea</value>
+  </data>
+  <data name="RES_audit.parameters.causes.description.rotext" xml:space="preserve">
+    <value>Deskribapena</value>
+  </data>
+  <data name="RES_audit.parameters.causes.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.causes.inputpermissions.rotext" xml:space="preserve">
+    <value>Sarrera baimenak</value>
+  </data>
+  <data name="RES_audit.parameters.causes.justifyperiodend.rotext" xml:space="preserve">
+    <value>Amaiera-data gertakaria justifikatzea</value>
+  </data>
+  <data name="RES_audit.parameters.causes.justifyperiodstart.rotext" xml:space="preserve">
+    <value>Hasiera-data gertakaria justifikatzea</value>
+  </data>
+  <data name="RES_audit.parameters.causes.justifyperiodtype.rotext" xml:space="preserve">
+    <value>Intzidentziaren justifikazio mota</value>
+  </data>
+  <data name="RES_audit.parameters.causes.maxprogrammedabsencedays.rotext" xml:space="preserve">
+    <value>Aurreikusitako gehienezko absentzia egunak</value>
+  </data>
+  <data name="RES_audit.parameters.causes.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.causes.punchcloseprogrammedabsence.rotext" xml:space="preserve">
+    <value>Programatutako absentzia</value>
+  </data>
+  <data name="RES_audit.parameters.causes.readerinputcode.rotext" xml:space="preserve">
+    <value>Terminal kodea</value>
+  </data>
+  <data name="RES_audit.parameters.causes.roundingby.rotext" xml:space="preserve">
+    <value>Biribilketa</value>
+  </data>
+  <data name="RES_audit.parameters.causes.roundingbydailyscope.rotext" xml:space="preserve">
+    <value>Eremuaren biribilketa</value>
+  </data>
+  <data name="RES_audit.parameters.causes.roundingtype.rotext" xml:space="preserve">
+    <value>Biribilketa mota</value>
+  </data>
+  <data name="RES_audit.parameters.causes.shortname.rotext" xml:space="preserve">
+    <value>Izen laburtua</value>
+  </data>
+  <data name="RES_audit.parameters.causes.startsprogrammedabsence.rotext" xml:space="preserve">
+    <value>Programatutako absentziak hasteko data</value>
+  </data>
+  <data name="RES_audit.parameters.causes.visibilitypermissions.rotext" xml:space="preserve">
+    <value>Ikusgarritasuna</value>
+  </data>
+  <data name="RES_audit.parameters.causes.workingtype.rotext" xml:space="preserve">
+    <value>Eragiketa mota</value>
+  </data>
+  <data name="RES_audit.parameters.conceptcauses.composition.rotext" xml:space="preserve">
+    <value>Konposizioa</value>
+  </data>
+  <data name="RES_audit.parameters.conceptcauses.hoursfactor.rotext" xml:space="preserve">
+    <value>Orduak</value>
+  </data>
+  <data name="RES_audit.parameters.conceptcauses.idcause.rotext" xml:space="preserve">
+    <value>Justifikazio ID</value>
+  </data>
+  <data name="RES_audit.parameters.conceptcauses.idconcept.rotext" xml:space="preserve">
+    <value>saldoaren ID</value>
+  </data>
+  <data name="RES_audit.parameters.conceptcauses.occurrencesfactor.rotext" xml:space="preserve">
+    <value>Konparaketa</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.absentiismrewarded.rotext" xml:space="preserve">
+    <value>Ordaindutako absentismoa</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.applyexpiredhours.rotext" xml:space="preserve">
+    <value>Iraungitze datak ditu</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.applyonholidaysrequest.rotext" xml:space="preserve">
+    <value>Oporren kudeaketan erabiltzen da</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.automaticaccrualcriteria.rotext" xml:space="preserve">
+    <value>Sortze automatikoa</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.automaticaccrualidcause.rotext" xml:space="preserve">
+    <value>Sortze-justifikazioa</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.automaticaccrualtype.rotext" xml:space="preserve">
+    <value>Sortze mota</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.begindate.rotext" xml:space="preserve">
+    <value>Hasiera data</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.category.rotext" xml:space="preserve">
+    <value>Kategoria</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.color.rotext" xml:space="preserve">
+    <value>Kolore</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.customtype.rotext" xml:space="preserve">
+    <value>Mota pertsonalizatua</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.defaultquery.rotext" xml:space="preserve">
+    <value>Kontsulta lehenetsia</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.description.rotext" xml:space="preserve">
+    <value>Deskribapena</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.employeescriteria.rotext" xml:space="preserve">
+    <value>Bistaratzeko irizpideak</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.employeespermission.rotext" xml:space="preserve">
+    <value>ikusteko baimenak</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.expiredhourscriteria.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.concepts.expiredidcause.rotext" xml:space="preserve">
+    <value>Justifikazioa</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.export.rotext" xml:space="preserve">
+    <value>Esportatu</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.finishdate.rotext" xml:space="preserve">
+    <value>Amaitzeko data</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.fixedpay.rotext" xml:space="preserve">
+    <value>Ordainketa finkoa</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.id.rotext" xml:space="preserve">
+    <value>saldoaren ID</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.idtype.rotext" xml:space="preserve">
+    <value>Guy</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.isabsentiism.rotext" xml:space="preserve">
+    <value>Absentismo-txostenak</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.isaccrualwork.rotext" xml:space="preserve">
+    <value>Lan egindako orduen txostena</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.payvalue.rotext" xml:space="preserve">
+    <value>Ordainketa balioa</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.roundconceptby.rotext" xml:space="preserve">
+    <value>Biribilketa</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.roundconcepttype.rotext" xml:space="preserve">
+    <value>Biribilketa mota</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.shortname.rotext" xml:space="preserve">
+    <value>Izen laburtua</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.usedfield.rotext" xml:space="preserve">
+    <value>Erabilitako eremua</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.viewinemployees.rotext" xml:space="preserve">
+    <value>Erabiltzaileek ikusgai</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.viewinpays.rotext" xml:space="preserve">
+    <value>Ordainketetan ikusgai</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.viewinterminals.rotext" xml:space="preserve">
+    <value>Terminaletan ikusgai</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.accrualsrules.rotext" xml:space="preserve">
+    <value>Oreka-arauak</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.accruedrule.rotext" xml:space="preserve">
+    <value>Arau metatua</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.causeuser.rotext" xml:space="preserve">
+    <value>Erabiltzailearen justifikazioa</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.causeusertype.rotext" xml:space="preserve">
+    <value>Erabiltzaileen Justifikazio Mota</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.dailyrule.rotext" xml:space="preserve">
+    <value>eguneroko arauak</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.date.rotext" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.defaultcenter.rotext" xml:space="preserve">
+    <value>Kostu-zentro lehenetsia</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.idcause.rotext" xml:space="preserve">
+    <value>Justifikazio ID</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.idcenter.rotext" xml:space="preserve">
+    <value>NAN Zentroa</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.idemployee.rotext" xml:space="preserve">
+    <value>Erabiltzaile IDa</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.idrelatedincidence.rotext" xml:space="preserve">
+    <value>Erlazionatutako gorabeheraren IDa</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.isnotreliable.rotext" xml:space="preserve">
+    <value>EzDaFidagarria</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.manual.rotext" xml:space="preserve">
+    <value>Eskuliburua</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.manualcenter.rotext" xml:space="preserve">
+    <value>Eskuzko kostu-zentroa</value>
+  </data>
+  <data name="RES_audit.parameters.dailycauses.value.rotext" xml:space="preserve">
+    <value>Merezi</value>
+  </data>
+  <data name="RES_audit.parameters.dailycoverage.actualstatus.rotext" xml:space="preserve">
+    <value>errege-dotazioa</value>
+  </data>
+  <data name="RES_audit.parameters.dailycoverage.date.rotext" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="RES_audit.parameters.dailycoverage.expectedcoverage.rotext" xml:space="preserve">
+    <value>Zenbatekoa</value>
+  </data>
+  <data name="RES_audit.parameters.dailycoverage.forcedcoveraged.rotext" xml:space="preserve">
+    <value>Dotazio behartua</value>
+  </data>
+  <data name="RES_audit.parameters.dailycoverage.idassignment.rotext" xml:space="preserve">
+    <value>Kargua ID</value>
+  </data>
+  <data name="RES_audit.parameters.dailycoverage.idgroup.rotext" xml:space="preserve">
+    <value>Taldearen IDa</value>
+  </data>
+  <data name="RES_audit.parameters.dailycoverage.plannedstatus.rotext" xml:space="preserve">
+    <value>Aurreikusitako plantilla</value>
+  </data>
+  <data name="RES_audit.parameters.employeeassignments.idassignment.rotext" xml:space="preserve">
+    <value>Kargua ID</value>
+  </data>
+  <data name="RES_audit.parameters.employeeassignments.idemployee.rotext" xml:space="preserve">
+    <value>Erabiltzaile IDa</value>
+  </data>
+  <data name="RES_audit.parameters.employeeassignments.suitability.rotext" xml:space="preserve">
+    <value>Egokitasuna</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.begindate.rotext" xml:space="preserve">
+    <value>Hasiera data</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.endcontractreason.rotext" xml:space="preserve">
+    <value>Arrazoi baxua</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.enddate.rotext" xml:space="preserve">
+    <value>Amaiera data</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.enterprise.rotext" xml:space="preserve">
+    <value>Enpresa</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.idcard.rotext" xml:space="preserve">
+    <value>Txartelaren kodea</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.idcontract.rotext" xml:space="preserve">
+    <value>Kontratuaren kodea</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.idemployee.rotext" xml:space="preserve">
+    <value>Erabiltzaile kodea</value>
+  </data>
+  <data name="RES_audit.parameters.employeecontracts.idlabagree.rotext" xml:space="preserve">
+    <value>hitzarmenaren ID</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.begindate.rotext" xml:space="preserve">
+    <value>Hasiera data</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.employeename.rotext" xml:space="preserve">
+    <value>Erabiltzailea</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.enddate.rotext" xml:space="preserve">
+    <value>Azken data</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.groupname.rotext" xml:space="preserve">
+    <value>Klusterra</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.idemployee.rotext" xml:space="preserve">
+    <value>Erabiltzaile kodea</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.idgroup.rotext" xml:space="preserve">
+    <value>Talde kodea</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.istransfer.rotext" xml:space="preserve">
+    <value>Esleipena</value>
+  </data>
+  <data name="RES_audit.parameters.employeegroups.path.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.employees.alias.rotext" xml:space="preserve">
+    <value>Ezizena</value>
+  </data>
+  <data name="RES_audit.parameters.employees.allowbiometric.rotext" xml:space="preserve">
+    <value>BaimenduBiometrikoa</value>
+  </data>
+  <data name="RES_audit.parameters.employees.allowbiopriority.rotext" xml:space="preserve">
+    <value>AllowBioPriority</value>
+  </data>
+  <data name="RES_audit.parameters.employees.allowcardplusbio.rotext" xml:space="preserve">
+    <value>AllowCardPlusBio</value>
+  </data>
+  <data name="RES_audit.parameters.employees.allowcards.rotext" xml:space="preserve">
+    <value>Baimendu Txartelak</value>
+  </data>
+  <data name="RES_audit.parameters.employees.id.rotext" xml:space="preserve">
+    <value>Kodea</value>
+  </data>
+  <data name="RES_audit.parameters.employees.idaccessgroup.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.employees.image.rotext" xml:space="preserve">
+    <value>Irudia</value>
+  </data>
+  <data name="RES_audit.parameters.employees.lockdate.rotext" xml:space="preserve">
+    <value>Epemuga</value>
+  </data>
+  <data name="RES_audit.parameters.employees.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.employees.type.rotext" xml:space="preserve">
+    <value>Guy</value>
+  </data>
+  <data name="RES_audit.parameters.entries.invalidread.rotext" xml:space="preserve">
+    <value>irakurle baliogabea</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.destination.rotext" xml:space="preserve">
+    <value>helmuga</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.exportfilename.rotext" xml:space="preserve">
+    <value>izena</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.exportfiletype.rotext" xml:space="preserve">
+    <value>Formatua</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.mode.rotext" xml:space="preserve">
+    <value>Exekuzio modua:</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.nextexecution.rotext" xml:space="preserve">
+    <value>hurrengo korrika</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.profilename.rotext" xml:space="preserve">
+    <value>txantiloia</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.scheduler.rotext" xml:space="preserve">
+    <value>plangintza</value>
+  </data>
+  <data name="RES_audit.parameters.exportguides.separator.rotext" xml:space="preserve">
+    <value>bereizle</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.executetask.rotext" xml:space="preserve">
+    <value>Exekutatu zeregina</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.idgeniusview.rotext" xml:space="preserve">
+    <value>Genius ID</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.idpassport.rotext" xml:space="preserve">
+    <value>Pasaportea ID</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.lastdatetimeupdated.rotext" xml:space="preserve">
+    <value>Azken korrika</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.name.rotext" xml:space="preserve">
+    <value>Ikasketen plangintza</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.nextdatetimeexecuted.rotext" xml:space="preserve">
+    <value>Azkena eguneratu</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.periodtype.rotext" xml:space="preserve">
+    <value>Aldi Mota</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.schedulebegindate.rotext" xml:space="preserve">
+    <value>Hasiera data</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.scheduleenddate.rotext" xml:space="preserve">
+    <value>Amaiera data</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.scheduler.rotext" xml:space="preserve">
+    <value>Plangintza</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.schedulertext.rotext" xml:space="preserve">
+    <value>Ezarpena</value>
+  </data>
+  <data name="RES_audit.parameters.genius_views_scheduler.state.rotext" xml:space="preserve">
+    <value>Estatu</value>
+  </data>
+  <data name="RES_audit.parameters.groups.descriptiongroup.rotext" xml:space="preserve">
+    <value>Deskribapena</value>
+  </data>
+  <data name="RES_audit.parameters.groups.id.rotext" xml:space="preserve">
+    <value>Kodea</value>
+  </data>
+  <data name="RES_audit.parameters.groups.idcenter.rotext" xml:space="preserve">
+    <value>Zentroa</value>
+  </data>
+  <data name="RES_audit.parameters.groups.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.groups.path.rotext" xml:space="preserve">
+    <value>Ibilbidea</value>
+  </data>
+  <data name="RES_audit.parameters.groups.securityflags.rotext" xml:space="preserve">
+    <value>Segurtasuna</value>
+  </data>
+  <data name="RES_audit.parameters.importguides.formatfilepath.rotext" xml:space="preserve">
+    <value>Formatua</value>
+  </data>
+  <data name="RES_audit.parameters.importguides.mode.rotext" xml:space="preserve">
+    <value>Exekuzio modua:</value>
+  </data>
+  <data name="RES_audit.parameters.importguides.separator.rotext" xml:space="preserve">
+    <value>bereizle</value>
+  </data>
+  <data name="RES_audit.parameters.importguides.sourcefilepath.rotext" xml:space="preserve">
+    <value>txantiloia</value>
+  </data>
+  <data name="RES_audit.parameters.importguides.type.rotext" xml:space="preserve">
+    <value>tipoa</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.allownotification.rotext" xml:space="preserve">
+    <value>Onartu jakinarazpenak</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.condition.rotext" xml:space="preserve">
+    <value>Baldintza</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.description.rotext" xml:space="preserve">
+    <value>Deskribapena</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.desiredvalue.rotext" xml:space="preserve">
+    <value>Nahi den balioa</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.idfirstconcept.rotext" xml:space="preserve">
+    <value>Oinarrizko balantzea</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.idsecondconcept.rotext" xml:space="preserve">
+    <value>buruzko balantzea</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.limitvalue.rotext" xml:space="preserve">
+    <value>Muga-balioa</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.type.rotext" xml:space="preserve">
+    <value>Guy</value>
+  </data>
+  <data name="RES_audit.parameters.indicators.typenotification.rotext" xml:space="preserve">
+    <value>Jakinarazpen mota</value>
+  </data>
+  <data name="RES_audit.parameters.labagree.description.rotext" xml:space="preserve">
+    <value>Deskribapena</value>
+  </data>
+  <data name="RES_audit.parameters.labagree.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.labagree.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.labagreeaccrualsrules.begindate.rotext" xml:space="preserve">
+    <value>Hasiera data</value>
+  </data>
+  <data name="RES_audit.parameters.labagreeaccrualsrules.enddate.rotext" xml:space="preserve">
+    <value>Amaitzeko data</value>
+  </data>
+  <data name="RES_audit.parameters.labagreeaccrualsrules.idaccrualsrules.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.labagreeaccrualsrules.idlabagree.rotext" xml:space="preserve">
+    <value>hitzarmenaren ID</value>
+  </data>
+  <data name="RES_audit.parameters.moves.id.rotext" xml:space="preserve">
+    <value>Kodea</value>
+  </data>
+  <data name="RES_audit.parameters.moves.idemployee.rotext" xml:space="preserve">
+    <value>Erabiltzaile kodea</value>
+  </data>
+  <data name="RES_audit.parameters.moves.indatetime.rotext" xml:space="preserve">
+    <value>Sarrera data/ordua</value>
+  </data>
+  <data name="RES_audit.parameters.moves.inidcause.rotext" xml:space="preserve">
+    <value>Sarreraren justifikazio-kodea</value>
+  </data>
+  <data name="RES_audit.parameters.moves.inidreader.rotext" xml:space="preserve">
+    <value>Sarrerako terminal kodea</value>
+  </data>
+  <data name="RES_audit.parameters.moves.inidzone.rotext" xml:space="preserve">
+    <value>Sarrera zonako kodea</value>
+  </data>
+  <data name="RES_audit.parameters.moves.isnotreliablein.rotext" xml:space="preserve">
+    <value>Sarrera susmagarria da</value>
+  </data>
+  <data name="RES_audit.parameters.moves.isnotreliableout.rotext" xml:space="preserve">
+    <value>Irteera susmagarria da</value>
+  </data>
+  <data name="RES_audit.parameters.moves.outdatetime.rotext" xml:space="preserve">
+    <value>Irteera data/ordua</value>
+  </data>
+  <data name="RES_audit.parameters.moves.outidcause.rotext" xml:space="preserve">
+    <value>Irteeraren justifikazio-kodea</value>
+  </data>
+  <data name="RES_audit.parameters.moves.outidreader.rotext" xml:space="preserve">
+    <value>Irteerako terminal kodea</value>
+  </data>
+  <data name="RES_audit.parameters.moves.outidzone.rotext" xml:space="preserve">
+    <value>Irteteko zonaren kodea</value>
+  </data>
+  <data name="RES_audit.parameters.moves.shiftdate.rotext" xml:space="preserve">
+    <value>Ordu-data</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.activated.rotext" xml:space="preserve">
+    <value>Aktibatuta</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.allowmail.rotext" xml:space="preserve">
+    <value>Baimendu posta elektronikoa</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.allowportal.rotext" xml:space="preserve">
+    <value>Baimendu ataria</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.condition.rotext" xml:space="preserve">
+    <value>Baldintza</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.destination.rotext" xml:space="preserve">
+    <value>Helmugak</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.id.rotext" xml:space="preserve">
+    <value>Jakinarazpenaren IDa</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.idtype.rotext" xml:space="preserve">
+    <value>Jakinarazpen mota</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.notifications.schedule.rotext" xml:space="preserve">
+    <value>Programazioa</value>
+  </data>
+  <data name="RES_audit.parameters.parameters.data.rotext" xml:space="preserve">
+    <value>Datuak</value>
+  </data>
+  <data name="RES_audit.parameters.programmedabsences.automaticclosed.rotext" xml:space="preserve">
+    <value>ixte automatikoa</value>
+  </data>
+  <data name="RES_audit.parameters.programmedabsences.begindate.rotext" xml:space="preserve">
+    <value>Hasiera data</value>
+  </data>
+  <data name="RES_audit.parameters.programmedabsences.description.rotext" xml:space="preserve">
+    <value>Deskribapena</value>
+  </data>
+  <data name="RES_audit.parameters.programmedabsences.finishdate.rotext" xml:space="preserve">
+    <value>Amaiera data</value>
+  </data>
+  <data name="RES_audit.parameters.programmedabsences.idcause.rotext" xml:space="preserve">
+    <value>Justifikazio ID</value>
+  </data>
+  <data name="RES_audit.parameters.programmedabsences.idemployee.rotext" xml:space="preserve">
+    <value>Erabiltzaile IDa</value>
+  </data>
+  <data name="RES_audit.parameters.programmedabsences.maxlastingdays.rotext" xml:space="preserve">
+    <value>Gehienezko egunak</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.begintime.rotext" xml:space="preserve">
+    <value>hasierako epea</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.date.rotext" xml:space="preserve">
+    <value>Aurreikusitako atseden orduen data</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.description.rotext" xml:space="preserve">
+    <value>Deskribapena</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.duration.rotext" xml:space="preserve">
+    <value>Iraupena</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.endtime.rotext" xml:space="preserve">
+    <value>Epearen amaiera</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.finishdate.rotext" xml:space="preserve">
+    <value>Azken data</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.id.rotext" xml:space="preserve">
+    <value>Identifikatzailea</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.idcause.rotext" xml:space="preserve">
+    <value>Justifikazio ID</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.idemployee.rotext" xml:space="preserve">
+    <value>Erabiltzaile IDa</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.minduration.rotext" xml:space="preserve">
+    <value>Gutxieneko iraupena</value>
+  </data>
+  <data name="RES_audit.parameters.programmedcauses.win32.rotext" xml:space="preserve">
+    <value>Irabazi 32</value>
+  </data>
+  <data name="RES_audit.parameters.punches.action.rotext" xml:space="preserve">
+    <value>Ekintza</value>
+  </data>
+  <data name="RES_audit.parameters.punches.actualtype.rotext" xml:space="preserve">
+    <value>Uneko Mota</value>
+  </data>
+  <data name="RES_audit.parameters.punches.crc.rotext" xml:space="preserve">
+    <value>Baliozkotze kodea</value>
+  </data>
+  <data name="RES_audit.parameters.punches.datetime.rotext" xml:space="preserve">
+    <value>Data ordua</value>
+  </data>
+  <data name="RES_audit.parameters.punches.exported.rotext" xml:space="preserve">
+    <value>Esportatua</value>
+  </data>
+  <data name="RES_audit.parameters.punches.field1.rotext" xml:space="preserve">
+    <value>1. eremua</value>
+  </data>
+  <data name="RES_audit.parameters.punches.field2.rotext" xml:space="preserve">
+    <value>2. eremua</value>
+  </data>
+  <data name="RES_audit.parameters.punches.field3.rotext" xml:space="preserve">
+    <value>3. eremua</value>
+  </data>
+  <data name="RES_audit.parameters.punches.field4.rotext" xml:space="preserve">
+    <value>4. eremua</value>
+  </data>
+  <data name="RES_audit.parameters.punches.field5.rotext" xml:space="preserve">
+    <value>5. eremua</value>
+  </data>
+  <data name="RES_audit.parameters.punches.field6.rotext" xml:space="preserve">
+    <value>6. eremua</value>
+  </data>
+  <data name="RES_audit.parameters.punches.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idcard.rotext" xml:space="preserve">
+    <value>Identifikatzailea</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idcause.rotext" xml:space="preserve">
+    <value>Justifikazio ID</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idcredential.rotext" xml:space="preserve">
+    <value>Kredentziala</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idemployee.rotext" xml:space="preserve">
+    <value>Erabiltzaile IDa</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idpassport.rotext" xml:space="preserve">
+    <value>Pasaportea ID</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idreader.rotext" xml:space="preserve">
+    <value>Irakurlearen IDa</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idterminal.rotext" xml:space="preserve">
+    <value>Terminalaren IDa</value>
+  </data>
+  <data name="RES_audit.parameters.punches.idzone.rotext" xml:space="preserve">
+    <value>zonaren ID</value>
+  </data>
+  <data name="RES_audit.parameters.punches.isnotreliable.rotext" xml:space="preserve">
+    <value>Ez fidagarria</value>
+  </data>
+  <data name="RES_audit.parameters.punches.location.rotext" xml:space="preserve">
+    <value>Kokapena</value>
+  </data>
+  <data name="RES_audit.parameters.punches.locationzone.rotext" xml:space="preserve">
+    <value>Kokapen eremua</value>
+  </data>
+  <data name="RES_audit.parameters.punches.shiftdate.rotext" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="RES_audit.parameters.punches.timestamp.rotext" xml:space="preserve">
+    <value>Sortu</value>
+  </data>
+  <data name="RES_audit.parameters.punches.timezone.rotext" xml:space="preserve">
+    <value>Zona</value>
+  </data>
+  <data name="RES_audit.parameters.punches.type.rotext" xml:space="preserve">
+    <value>Guy</value>
+  </data>
+  <data name="RES_audit.parameters.punches.typedata.rotext" xml:space="preserve">
+    <value>Guy</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.destination.rotext" xml:space="preserve">
+    <value>Helmuga</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.emergencygroup.rotext" xml:space="preserve">
+    <value>larrialdi taldea</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.emergencyreport.rotext" xml:space="preserve">
+    <value>Larrialdi Txostena</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.executetask.rotext" xml:space="preserve">
+    <value>Exekutatu zeregina</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.format.rotext" xml:space="preserve">
+    <value>Formatua</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.idpassport.rotext" xml:space="preserve">
+    <value>erabiltzailearen ID</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.iduser.rotext" xml:space="preserve">
+    <value>LH Erabiltzailea</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.lastdatetimeexecuted.rotext" xml:space="preserve">
+    <value>Azken korrika</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.lastdatetimeupdated.rotext" xml:space="preserve">
+    <value>Ult. eguneratu</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.nextdatetimeexecuted.rotext" xml:space="preserve">
+    <value>Hurrengo korrika</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.profile.rotext" xml:space="preserve">
+    <value>Profila</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.report.rotext" xml:space="preserve">
+    <value>Txostena</value>
+  </data>
+  <data name="RES_audit.parameters.reportscheduler.scheduler.rotext" xml:space="preserve">
+    <value>Programazioa</value>
+  </data>
+  <data name="RES_audit.parameters.requests.comments.rotext" xml:space="preserve">
+    <value>Iruzkina</value>
+  </data>
+  <data name="RES_audit.parameters.requests.commentsuser.rotext" xml:space="preserve">
+    <value>Iruzkina</value>
+  </data>
+  <data name="RES_audit.parameters.requests.date1.rotext" xml:space="preserve">
+    <value>Data 1</value>
+  </data>
+  <data name="RES_audit.parameters.requests.date2.rotext" xml:space="preserve">
+    <value>Data2</value>
+  </data>
+  <data name="RES_audit.parameters.requests.hours.rotext" xml:space="preserve">
+    <value>Orduak</value>
+  </data>
+  <data name="RES_audit.parameters.requests.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.requests.idcause.rotext" xml:space="preserve">
+    <value>IDKausa</value>
+  </data>
+  <data name="RES_audit.parameters.requests.idemployee.rotext" xml:space="preserve">
+    <value>IDElangilea</value>
+  </data>
+  <data name="RES_audit.parameters.requests.notreaded.rotext" xml:space="preserve">
+    <value>Ez irakurri</value>
+  </data>
+  <data name="RES_audit.parameters.requests.requestdate.rotext" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="RES_audit.parameters.requests.requesttype.rotext" xml:space="preserve">
+    <value>Guy</value>
+  </data>
+  <data name="RES_audit.parameters.requests.status.rotext" xml:space="preserve">
+    <value>Estatu</value>
+  </data>
+  <data name="RES_audit.parameters.requests.statuslevel.rotext" xml:space="preserve">
+    <value>Maila</value>
+  </data>
+  <data name="RES_audit.parameters.shiftassignments.coverage.rotext" xml:space="preserve">
+    <value>Estaldura</value>
+  </data>
+  <data name="RES_audit.parameters.shiftassignments.idassignment.rotext" xml:space="preserve">
+    <value>Kargua ID</value>
+  </data>
+  <data name="RES_audit.parameters.shiftassignments.idshift.rotext" xml:space="preserve">
+    <value>ordutegiaren ID</value>
+  </data>
+  <data name="RES_audit.parameters.shiftgroups.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.shiftgroups.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.advancedparameters.rotext" xml:space="preserve">
+    <value>Parametro aurreratuak</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.allowcomplementary.rotext" xml:space="preserve">
+    <value>Osagarritasuna ahalbidetzen du</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.allowfloatingdata.rotext" xml:space="preserve">
+    <value>Baimendu datu flotagarriak</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.applycenteronabsence.rotext" xml:space="preserve">
+    <value>Aplikatu gorabehera guztietan</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.areworkingdays.rotext" xml:space="preserve">
+    <value>Lan egunak dira</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.breakhours.rotext" xml:space="preserve">
+    <value>Atseden orduak</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.color.rotext" xml:space="preserve">
+    <value>Kolore</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.description.rotext" xml:space="preserve">
+    <value>Deskribapena</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.endlimit.rotext" xml:space="preserve">
+    <value>EndLimit</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.expectedworkinghours.rotext" xml:space="preserve">
+    <value>Lan egindako orduak</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.export.rotext" xml:space="preserve">
+    <value>Egutegia esportatzea</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.id.rotext" xml:space="preserve">
+    <value>Kodea</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.idcauseholidays.rotext" xml:space="preserve">
+    <value>Oporrak justifikatzea</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.idcenter.rotext" xml:space="preserve">
+    <value>Kostu zentroak</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.idconceptbalance.rotext" xml:space="preserve">
+    <value>Kontzeptu kodea</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.idgroup.rotext" xml:space="preserve">
+    <value>Talde kodea</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.isfloating.rotext" xml:space="preserve">
+    <value>Flotatzailea</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.isobsolete.rotext" xml:space="preserve">
+    <value>Zaharkituta</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.istemplate.rotext" xml:space="preserve">
+    <value>Txantiloia</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.manuallimit.rotext" xml:space="preserve">
+    <value>eskuzko muga</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.shifttype.rotext" xml:space="preserve">
+    <value>Ordutegi mota</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.shortname.rotext" xml:space="preserve">
+    <value>Izen laburra</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.startfloating.rotext" xml:space="preserve">
+    <value>etxea flotatzen</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.startlimit.rotext" xml:space="preserve">
+    <value>Hasierako muga</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.typeshift.rotext" xml:space="preserve">
+    <value>Guy</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.visibilitypermissions.rotext" xml:space="preserve">
+    <value>Ikusgarritasun-baimenak</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.weblaboral.rotext" xml:space="preserve">
+    <value>WebLaboral</value>
+  </data>
+  <data name="RES_audit.parameters.shifts.webvisible.rotext" xml:space="preserve">
+    <value>WebVisible</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.idconcept.rotext" xml:space="preserve">
+    <value>saldoaren ID</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.maximumvalue.rotext" xml:space="preserve">
+    <value>Gehieneko balioa</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.maximumvaluetype.rotext" xml:space="preserve">
+    <value>Gehienezko balio mota</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.minimumvalue.rotext" xml:space="preserve">
+    <value>Gutxieneko balioa</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.minimumvaluetype.rotext" xml:space="preserve">
+    <value>Gutxieneko balio mota</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.startvalue.rotext" xml:space="preserve">
+    <value>Hasierako balioa</value>
+  </data>
+  <data name="RES_audit.parameters.startupvalues.startvaluetype.rotext" xml:space="preserve">
+    <value>Hasierako balio mota</value>
+  </data>
+  <data name="RES_audit.parameters.sysroreportgroups.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.sysroreportgroups.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.sysroscheduletemplates.description.rotext" xml:space="preserve">
+    <value>Deskribapena</value>
+  </data>
+  <data name="RES_audit.parameters.sysroscheduletemplates.feasttemplate.rotext" xml:space="preserve">
+    <value>Jaia</value>
+  </data>
+  <data name="RES_audit.parameters.sysroscheduletemplates.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.sysroscheduletemplates.mode.rotext" xml:space="preserve">
+    <value>Era</value>
+  </data>
+  <data name="RES_audit.parameters.sysroscheduletemplates.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.accessattempspermanentblock.rotext" xml:space="preserve">
+    <value>Blokeatzeko saiakera mugagabeak</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.accessattempstemporaryblock.rotext" xml:space="preserve">
+    <value>Aldi baterako blokeo saiakerak</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.blockaccessvtdesktop.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.blockaccessvtportal.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.blockaccessvtsupervisor.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.dayspasswordexpired.rotext" xml:space="preserve">
+    <value>Iraungitze egunak</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.differentaccesspointexceeded.rotext" xml:space="preserve">
+    <value>Baimendutako IP desberdinen kopurua</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.enabledaccesssupportrobotics.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.idpassport.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.onlyallowedadress.rotext" xml:space="preserve">
+    <value>IP helbidearen murrizketak</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.onlysameversionapp.rotext" xml:space="preserve">
+    <value>Erabili Visualtime zerbitzariaren aplikazioaren bertsio bera</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.passwordsecuritylevel.rotext" xml:space="preserve">
+    <value>Pasahitzaren konplexutasuna</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.previouspasswordsstored.rotext" xml:space="preserve">
+    <value>Aurreko pasahitzak gordeta</value>
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.requestvalidationcode.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.parameters.sysrosecurityparameters.saveauthorizedpointdays.rotext" xml:space="preserve">
+    <value>Baimendutako IPa gordetzen den egunak</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshiftslayers.definition.rotext" xml:space="preserve">
+    <value>definizioa</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshiftslayers.id.rotext" xml:space="preserve">
+    <value>Geruza zenbakia</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshiftslayers.idshift.rotext" xml:space="preserve">
+    <value>Denbora-kodea</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshiftslayers.idtype.rotext" xml:space="preserve">
+    <value>Geruza motako kodea</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshiftslayers.parentlayerid.rotext" xml:space="preserve">
+    <value>Goiko geruzaren kodea</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshifttimezones.begintime.rotext" xml:space="preserve">
+    <value>Hasiera ordua</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshifttimezones.endtime.rotext" xml:space="preserve">
+    <value>Azken ordua</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshifttimezones.idshift.rotext" xml:space="preserve">
+    <value>ordutegiaren ID</value>
+  </data>
+  <data name="RES_audit.parameters.sysroshifttimezones.idzone.rotext" xml:space="preserve">
+    <value>zonaren ID</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.accesslevel.rotext" xml:space="preserve">
+    <value>Sarbide maila</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.accessvalidation.rotext" xml:space="preserve">
+    <value>Baliozkotze mota</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.category.rotext" xml:space="preserve">
+    <value>Kategoria</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.description.rotext" xml:space="preserve">
+    <value>Deskribapena</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.fieldname.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.fieldtype.rotext" xml:space="preserve">
+    <value>Guy</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.history.rotext" xml:space="preserve">
+    <value>Historikoa</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.listvalues.rotext" xml:space="preserve">
+    <value>Zerrendaren balioak</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.requestcriteria.rotext" xml:space="preserve">
+    <value>Aplikazio-irizpideak</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.requestpermissions.rotext" xml:space="preserve">
+    <value>Eskatu baimenak</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.type.rotext" xml:space="preserve">
+    <value>Guy</value>
+  </data>
+  <data name="RES_audit.parameters.sysrouserfields.used.rotext" xml:space="preserve">
+    <value>Erabiliak</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.duration.rotext" xml:space="preserve">
+    <value>Iraupena</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.idactivity.rotext" xml:space="preserve">
+    <value>jardueraren ID</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.idcamera.rotext" xml:space="preserve">
+    <value>kameraren IDa</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.idzone.rotext" xml:space="preserve">
+    <value>zonaren ID</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.interactionaction.rotext" xml:space="preserve">
+    <value>interakzio ekintza</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.interactionmode.rotext" xml:space="preserve">
+    <value>Interakzio modua</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.interactiveconfig.rotext" xml:space="preserve">
+    <value>Konfigurazio interaktiboa</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.invalidduration.rotext" xml:space="preserve">
+    <value>Sarbide-iraupena baliogabea</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.invalidoutput.rotext" xml:space="preserve">
+    <value>Sarbide-errele baliogabea</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.mode.rotext" xml:space="preserve">
+    <value>Era</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.ohp.rotext" xml:space="preserve">
+    <value>OH P</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.output.rotext" xml:space="preserve">
+    <value>Erreleboa</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.picturex.rotext" xml:space="preserve">
+    <value>X posizioa</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.picturey.rotext" xml:space="preserve">
+    <value>Y posizioa</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.usedispkey.rotext" xml:space="preserve">
+    <value>Erabili terminaleko teklak</value>
+  </data>
+  <data name="RES_audit.parameters.terminalreaders.validationmode.rotext" xml:space="preserve">
+    <value>Balioztatze modua</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.allowantipassback.rotext" xml:space="preserve">
+    <value>Baimendu AntiPassBack</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.allowcustombutton.rotext" xml:space="preserve">
+    <value>Baimendu botoi pertsonalizatua</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.allowmovereason.rotext" xml:space="preserve">
+    <value>Justifikazioa baimendu</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.autodaylight.rotext" xml:space="preserve">
+    <value>Aldatu ordua automatikoki</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.behavior.rotext" xml:space="preserve">
+    <value>Portaera</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.confdata.rotext" xml:space="preserve">
+    <value>Konfigurazio datuak</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.customduration.rotext" xml:space="preserve">
+    <value>Hutsaren iraupena</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.customfield.rotext" xml:space="preserve">
+    <value>Eremu pertsonalizatua</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.customfieldvalue.rotext" xml:space="preserve">
+    <value>Eremu pertsonalizatuaren balioa</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.customoutput.rotext" xml:space="preserve">
+    <value>Ez-erreleboa</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.description.rotext" xml:space="preserve">
+    <value>Deskribapena</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.disconnectioncounter.rotext" xml:space="preserve">
+    <value>Deskonexio-kontagailua</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.isdifferentzonetime.rotext" xml:space="preserve">
+    <value>Ordu eremu</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.location.rotext" xml:space="preserve">
+    <value>Kokapena</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.other.rotext" xml:space="preserve">
+    <value>Bestela</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.rigidmode.rotext" xml:space="preserve">
+    <value>modu zurruna</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.sirensoutput.rotext" xml:space="preserve">
+    <value>Sirena</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.skin.rotext" xml:space="preserve">
+    <value>Fur</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.supportedmodes.rotext" xml:space="preserve">
+    <value>Onartutako moduak</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.supportedoutputs.rotext" xml:space="preserve">
+    <value>Onartutako erreleak</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.supportedsirens.rotext" xml:space="preserve">
+    <value>Sirenak onartzen dira</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.timezonename.rotext" xml:space="preserve">
+    <value>Ordu-zonaren izena</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.type.rotext" xml:space="preserve">
+    <value>Guy</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.zonetime.rotext" xml:space="preserve">
+    <value>Ordu eremu</value>
+  </data>
+  <data name="RES_audit.parameters.terminalsirens.duration.rotext" xml:space="preserve">
+    <value>Iraupena</value>
+  </data>
+  <data name="RES_audit.parameters.terminalsirens.hour.rotext" xml:space="preserve">
+    <value>Ordua</value>
+  </data>
+  <data name="RES_audit.parameters.terminalsirens.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.terminalsirens.idterminal.rotext" xml:space="preserve">
+    <value>Terminalaren IDa</value>
+  </data>
+  <data name="RES_audit.parameters.terminalsirens.weekday.rotext" xml:space="preserve">
+    <value>Asteguna</value>
+  </data>
+  <data name="RES_audit.parameters.timezones.description.rotext" xml:space="preserve">
+    <value>Deskribapena</value>
+  </data>
+  <data name="RES_audit.parameters.timezones.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.timezones.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.zoneplanes.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.zoneplanes.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.zoneplanes.planeimage.rotext" xml:space="preserve">
+    <value>Planoaren irudia</value>
+  </data>
+  <data name="RES_audit.parameters.zones.begin.rotext" xml:space="preserve">
+    <value>Hasi</value>
+  </data>
+  <data name="RES_audit.parameters.zones.color.rotext" xml:space="preserve">
+    <value>Kolore</value>
+  </data>
+  <data name="RES_audit.parameters.zones.description.rotext" xml:space="preserve">
+    <value>Deskribapena</value>
+  </data>
+  <data name="RES_audit.parameters.zones.end.rotext" xml:space="preserve">
+    <value>Amaiera</value>
+  </data>
+  <data name="RES_audit.parameters.zones.id.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_audit.parameters.zones.idcamera.rotext" xml:space="preserve">
+    <value>kameraren IDa</value>
+  </data>
+  <data name="RES_audit.parameters.zones.idparent.rotext" xml:space="preserve">
+    <value>Guraso Zonaren IDa</value>
+  </data>
+  <data name="RES_audit.parameters.zones.idplane.rotext" xml:space="preserve">
+    <value>Zona Planaren IDa</value>
+  </data>
+  <data name="RES_audit.parameters.zones.idzone.rotext" xml:space="preserve">
+    <value>zonaren ID</value>
+  </data>
+  <data name="RES_audit.parameters.zones.isworkingzone.rotext" xml:space="preserve">
+    <value>Zonako kontabilitate mota</value>
+  </data>
+  <data name="RES_audit.parameters.zones.name.rotext" xml:space="preserve">
+    <value>Izena</value>
+  </data>
+  <data name="RES_audit.parameters.zones.proportion.rotext" xml:space="preserve">
+    <value>Proportzioa</value>
+  </data>
+  <data name="RES_audit.parameters.zones.weekday.rotext" xml:space="preserve">
+    <value>Asteguna</value>
+  </data>
+  <data name="RES_audit.parameters.zones.x1.rotext" xml:space="preserve">
+    <value>X1 posizioa</value>
+  </data>
+  <data name="RES_audit.parameters.zones.x2.rotext" xml:space="preserve">
+    <value>X2 posizioa</value>
+  </data>
+  <data name="RES_audit.parameters.zones.y1.rotext" xml:space="preserve">
+    <value>Y1 posizioa</value>
+  </data>
+  <data name="RES_audit.parameters.zones.y2.rotext" xml:space="preserve">
+    <value>Y2 posizioa</value>
+  </data>
+  <data name="RES_audit.pmc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.pmc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.pmcimg.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.pw-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.pyc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.pyc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.pycimg.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.rosfheader.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.state.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.stylesheetscontainer.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.t.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.t.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.tc.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.tc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.title.rotext" xml:space="preserve">
+    <value>Stock Auditoria</value>
+  </data>
+  <data name="RES_audit.title_audit_pathway.rotext" xml:space="preserve">
+    <value>Ikuskaritza</value>
+  </data>
+  <data name="RES_audit.tl.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.tl.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtbegindate.emptyvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;beharrezko eremua.&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtbegindate.invalidvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;eremu baliogabea.&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtbegindate.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtbegindate.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtbegindate.tooltipmessage.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtbegintime.emptyvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;beharrezko eremua.&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtbegintime.invalidvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;eremu baliogabea.&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtbegintime.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtbegintime.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtbegintime.tooltipmessage.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtclientlocation.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtclientlocation.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailaction.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailaction.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailclientlocation.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailclientlocation.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetaildatetime.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetaildatetime.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetaildescription.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetaildescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailobjectname.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailobjectname.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailobjecttype.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailobjecttype.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailusername.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtdetailusername.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtenddate.emptyvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;beharrezko eremua.&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtenddate.invalidvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;eremu baliogabea.&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtenddate.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtenddate.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtenddate.tooltipmessage.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtendtime.emptyvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;beharrezko eremua.&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtendtime.invalidvaluemessage.rotext" xml:space="preserve">
+    <value>&lt;b&gt;eremu baliogabea.&lt;/b&gt;</value>
+  </data>
+  <data name="RES_audit.txtendtime.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtendtime.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.txtendtime.tooltipmessage.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.y.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.objecttype.tpassportpin.rotext" xml:space="preserve">
+    <value>PINa</value>
+  </data>
+  <data name="RES_audit.parameters.zones.ipsrestriction.rotext" xml:space="preserve">
+    <value>Esleitutako IPak</value>
+  </data>
+  <data name="RES_audit.parameters.zones.timezone.rotext" xml:space="preserve">
+    <value>Ordu eremu</value>
+  </data>
+  <data name="RES_audit.parameters.zones.mapinfo.rotext" xml:space="preserve">
+    <value>Mapa</value>
+  </data>
+  <data name="RES_audit.parameters.zones.area.rotext" xml:space="preserve">
+    <value>Eremua</value>
+  </data>
+  <data name="RES_audit.parameters.zones.capacityvisible.rotext" xml:space="preserve">
+    <value>Gaitasuna</value>
+  </data>
+  <data name="RES_audit.parameters.zones.isemergencyzone.rotext" xml:space="preserve">
+    <value>larrialdi gunea</value>
+  </data>
+  <data name="RES_audit.parameters.zones.zonenameaslocation.rotext" xml:space="preserve">
+    <value>Izena kokapen gisa</value>
+  </data>
+  <data name="RES_audit.parameters.zones.idzonetype.rotext" xml:space="preserve">
+    <value>presentzia eremua</value>
+  </data>
+  <data name="RES_audit.parameters.zones.idzonesupervisor.rotext" xml:space="preserve">
+    <value>Arloko arduraduna</value>
+  </data>
+  <data name="RES_audit.parameters.concepts.autoapproverequestsdr.rotext" xml:space="preserve">
+    <value>Aprobación automática</value>
+  </data>
+  <data name="RES_audit.message.tdocument.ainsert.rotext" xml:space="preserve">
+    <value>Dokumentu berri bat sortzea</value>
+  </data>
+  <data name="RES_audit.message.tdocumenttemplate.adelete.rotext" xml:space="preserve">
+    <value>Se ha borrado la plantilla de documento</value>
+  </data>
+  <data name="RES_audit.message.tdocumenttemplate.ainsert.rotext" xml:space="preserve">
+    <value>Se ha creado la plantilla de documento</value>
+  </data>
+  <data name="RES_audit.message.tdocumenttemplate.aupdate.rotext" xml:space="preserve">
+    <value>Se ha modificado la plantilla de documento</value>
+  </data>
+  <data name="RES_audit.message.ta3payrollimport.aexecuted.rotext" xml:space="preserve">
+    <value>$@message@</value>
+  </data>
+  <data name="RES_audit.objecttype.ta3payrollimport.rotext" xml:space="preserve">
+    <value>Importación nómina A3</value>
+  </data>
+  <data name="RES_audit.parameters.terminals.enabled.rotext" xml:space="preserve">
+    <value>Aktibatuta</value>
+  </data>
+  <data name="RES_audit.objecttype.tcollective.rotext" xml:space="preserve">
+    <value>Kolektiboa</value>
+  </data>
+  <data name="RES_audit.objecttype.tcollectiveemployees.rotext" xml:space="preserve">
+    <value>Usuarios de Colectivo</value>
+  </data>
+  <data name="RES_audit.objecttype.tcollectivedefinition.rotext" xml:space="preserve">
+    <value>Definición de Colectivo</value>
+  </data>
+  <data name="RES_audit.message.tcollectiveemployees.aselect.rotext" xml:space="preserve">
+    <value>Se ha consultado la lista de usuarios inluidos en la definición de colectivo $@CollectiveExpression@. Se han mostrado un total de $@TotalEmployeesShown@.</value>
+  </data>
+  <data name="RES_audit.message.tcollective.aupdate.rotext" xml:space="preserve">
+    <value>$@CollectiveName@ kolektiboaren izena edo deskribapena aldatu da.</value>
+  </data>
+  <data name="RES_audit.message.tcollective.ainsert.rotext" xml:space="preserve">
+    <value>$@CollectiveName@ kolektiboa sortu da</value>
+  </data>
+  <data name="RES_audit.message.tcollective.adelete.rotext" xml:space="preserve">
+    <value>$@CollectiveName@ kolektiboa ezabatu da</value>
+  </data>
+  <data name="RES_audit.message.tcollectivedefinition.ainsert.rotext" xml:space="preserve">
+    <value>Se ha creado una nueva definición para el colectivo $@CollectiveName@: $@DefinitionDescription@.</value>
+  </data>
+  <data name="RES_audit.message.tcollectivedefinition.aupdate.rotext" xml:space="preserve">
+    <value>$@CollectiveName@ kolektiboaren definizioa aldatu da: $@ChangeDetails@</value>
+  </data>
+  <data name="RES_audit.message.tdailyrecord.ainsert.rotext" xml:space="preserve">
+    <value>Eguneko aitorpena egiteko eskaera sortu da</value>
+  </data>
+  <data name="RES_audit.message.tdailyrecord.aselect.rotext" xml:space="preserve">
+    <value>Eguneko adierazpena kontsultatu da</value>
+  </data>
+  <data name="RES_audit.message.tcollective.aselect.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_audit.message.tcollectivedefinition.adelete.rotext" xml:space="preserve">
+    <value />
+  </data>
+</root>

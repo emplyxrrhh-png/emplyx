@@ -1,0 +1,985 @@
+/*ResourceNavigator*/
+/*ResourceNavigator*/
+.dxscControl_Robo .dxsc-detailed-apt-tooltip .dxsc-dat-container > div
+{
+    background: #454545;
+}
+.dxscControl_Robo .dxsc-detailed-apt-tooltip .dxsc-dat-header span,
+.dxscControl_Robo .dxsc-detailed-apt-tooltip .dxsc-dat-middle span
+{
+    color: white;
+}
+.dxscControl_Robo .dxsc-detailed-apt-tooltip .dxsc-dat-buttons-container .dxbButtonSys
+{
+    border-top-color: #737373;
+}
+.dxscControl_Robo .dxsc-detailed-apt-tooltip .dxsc-dat-buttons-container .dxbButtonSys:not(.dxsc-dat-colored-button)
+{
+    color: white;
+}
+.dxscControl_Robo .dxsc-detailed-apt-tooltip .dxsc-dat-buttons-container .dxbButtonSys.dxsc-dat-disabled-btn
+{
+    color: #989898;
+}
+.dxscControl_Robo
+{
+    background-color: #dfdfdf;
+    font: 11px Century Gothic,Segoe UI,Arial,Helvetica,sans-serif;
+    color: #666;
+    border-collapse: separate;
+}
+.dxscControl_Robo .dxscAppointmentForm
+{
+    width: 740px !important;
+}
+.dxscControl_Robo .dxscRangeControl .dxscRCEndByDateCell
+{
+    width: 163px;
+}
+/* recurrence form */
+.dxscControl_Robo .dxsc-rc-week-of-month
+{
+    width: 90px;
+}
+.dxscControl_Robo .dxsc-rc-week-days
+{
+    width: 130px;
+}
+.dxscControl_Robo .dxsc-rc-month
+{
+    width: 115px;
+}
+.dxscLoadingPanel_Robo
+{
+    background-color: white;
+    font: 11px Century Gothic,Segoe UI,Arial,Helvetica,sans-serif;
+    color: #666;
+    -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
+}
+.dxscLoadingPanel_Robo td.dx
+{
+    font-size: 1.17em;
+    white-space: nowrap;
+    text-align: center;
+    padding: 10px 14px;
+}
+.dxscLoadingPanel_Robo .dxlp-loadingImage
+{
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    border-radius: 50%;
+    animation: dxLoadSpinSys 1s linear infinite;
+    border: 4px solid #D76D1D;
+    border-top: 4px solid #EEE;
+    width: 24px;
+    height: 24px;
+}
+html.dxIE.dxBrowserVersion-9 .dxscLoadingPanel_Robo .dxlp-loadingImage
+{
+    background-image: url('../Web/Loading.gif');
+    height: 32px;
+    width: 32px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: none;
+    border: none;
+    border-radius: 0;
+}
+/* Headers */
+.dxscDateHeader_Robo,
+.dxscAlternateDateHeader_Robo,
+.dxscDayHeader_Robo,
+.dxscDateCellHeader_Robo,
+.dxscTodayCellHeader_Robo,
+.dxscTimelineDateHeader_Robo,
+.dxscHorizontalResourceHeader_Robo,
+.dxscVerticalResourceHeader_Robo
+{
+    color: black;
+    background: #eeeeee;
+    border-style: solid;
+    border-color: #DADADA;
+    border-width: 0 1px 1px 0;
+    padding: 12px 4px;
+    text-align: center;
+    vertical-align: top;
+    cursor: default;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.dxscDayHeader_Robo
+{
+    border-width: 1px 1px 0 0;
+}
+.dxscDateCellHeader_Robo
+{
+    border-width: 1px;
+}
+.dxscAlternateTimelineDateHeader_Robo,
+.dxscAlternateDateHeader_Robo
+{
+    background: #D76D1D;
+    color: white;
+}
+.dxscTodayCellHeader_Robo
+{
+    border-top-width: 1px;
+    background: #D76D1D;
+    color: white;
+}
+.dxscTimelineDateHeader_Robo
+{
+    border-width: 1px 1px 1px 0;
+}
+.dxsc-month-mobile-layout .dxscDayHeader_Robo,
+.dxsc-month-mobile-layout .dxscDateCellHeader_Robo,
+.dxsc-month-mobile-layout .dxscTodayCellHeader_Robo
+{
+    padding: 4px;
+}
+.dxscAgendaView .dxscDateCell_Robo,
+.dxscAgendaView .dxscDateRow_Robo,
+.dxscControl_Robo .dxsc-agenda-header-row,
+.dxscControl_Robo .dxsc-agenda-horizontal-header
+{
+    background-color: #FAFAFA;
+    border-bottom: solid 1px #D6D6D6;
+}
+.dxscControl_Robo .dxscAgendaView .dxscTodayDateCell_Robo,
+.dxscControl_Robo .dxscAgendaView .dxscTodayDateRow_Robo
+{
+    background: #D76D1D;
+}
+.dxscControl_Robo .dxscAgendaView .dxscTodayDateCell_Robo,
+.dxscControl_Robo .dxscAgendaView .dxscTodayDateCell_Robo .dxsc-agenda-day-cell,
+.dxscControl_Robo .dxscAgendaView .dxscTodayDateCell_Robo .dxsc-agenda-day-of-week-cell,
+.dxscControl_Robo .dxscAgendaView .dxscTodayDateRow_Robo,
+.dxscControl_Robo .dxscAgendaView .dxscTodayDateRow_Robo .dxsc-agenda-day-cell,
+.dxscControl_Robo .dxscAgendaView .dxscTodayDateRow_Robo .dxsc-agenda-day-of-week-cell
+{
+    color: white;
+}
+.dxscControl_Robo .dxscAgendaView .dxscTodayMonthOfYearCell_Robo,
+.dxscControl_Robo .dxscAgendaView .dxscTodayMonthYearCaption_Robo
+{
+    color: #e0e0e0;
+}
+.dxscHorizontalResourceHeader_Robo
+{
+    border-width: 1px 1px 1px 0;
+    background: white;
+}
+.dxscVerticalResourceHeader_Robo
+{
+    border-width: 1px 1px 0 0;
+    background: white;
+    white-space: normal;
+}
+.dxscSelectionBar_Robo
+{
+    border-style: solid;
+    border-width: 0 1px 0 0;
+    height: 30px;
+}
+.dxscControl_Robo .dxscSel
+{
+    opacity: 0.25;
+}
+/* Corners */
+.dxscLeftTopCorner_Robo,
+.dxscRightTopCorner_Robo,
+.dxscBottomLeftCorner_Robo,
+.dxscControl_Robo .dxsc-timeline-resourcesContainer
+{
+    background: white;
+}
+.dxscLeftTopCorner_Robo,
+.dxscRightTopCorner_Robo
+{
+    width: 1px;
+    border-style: solid;
+    border-color: #DADADA;
+    border-width: 0 0 1px;
+}
+.dxscLeftTopCorner_Robo
+{
+    border-width: 1px 1px 1px 0;
+    font-size: 0.91em;
+    text-align: center;
+    padding: 2px;
+    overflow: hidden;
+}
+/* Separators */
+.dxscGroupSeparatorVertical_Robo,
+.dxscGroupSeparatorHorizontal_Robo
+{
+    background: white;
+    border: solid 1px #DADADA;
+}
+.dxscGroupSeparatorVertical_Robo
+{
+    width: 1px;
+    border-width: 0 1px;
+}
+.dxscGroupSeparatorHorizontal_Robo
+{
+    height: 1px;
+    border-width: 1px 0 0;
+    font-size: 0;
+}
+/* Apts Area */
+.dxscAllDayArea_Robo
+{
+    background: white;
+    border: solid 1px #DADADA;
+    border-width: 0 1px 1px 0;
+}
+.dxscDateCellBody_Robo
+{
+    height: 100px;
+    border: solid 1px;
+    border-width: 0 1px 0 0;
+}
+.dxscTimeCellBody_Robo
+{
+    border: 1px solid;
+    background-color: White;
+}
+.dxscTimelineCellBody_Robo
+{
+    height: 300px;
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+}
+.dxscAppointment_Robo
+{
+    font-size: 0.91em;
+    padding: 0;
+    margin: 0;
+    cursor: default;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.dxscAppointmentInnerBorders_Robo
+{
+    padding: 0px;
+}
+.dxscAppointmentHorizontalSeparator_Robo
+{
+    height: 1px;
+    width: 100%;
+    overflow: hidden;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-right-style: none;
+}
+.dxscAppointment_Robo .dxsc-apt-left-container > img,
+.dxscAppointment_Robo .dxsc-apt-right-container > img,
+.dxscAppointment_Robo .dxsc-apt-images-container
+{
+    opacity: .3;
+}
+.dxscApt.dxsc-selected .dxscAppointment_Robo .dxsc-apt-left-container > img,
+.dxscApt.dxsc-selected .dxscAppointment_Robo .dxsc-apt-right-container > img,
+.dxscApt.dxsc-selected .dxscAppointment_Robo .dxsc-apt-images-container
+{
+    opacity: 1;
+}
+.dxpcLite_Robo .dxscButtonTable,
+.dxpcLite_Robo .dxscAppointmentForm
+{
+    border-collapse: separate;
+    border-spacing: 8px;
+}
+.dxscMoreButton_Robo
+{
+    font-size: 0.91em;
+    color: #D76D1D;
+    text-decoration: none;
+    padding: 0;
+}
+.dxscMoreButton_Robo:hover
+{
+    text-decoration: underline;
+}
+/* Rulers */
+.dxscTimeRulerHoursItem_Robo, .dxscTimeRulerMinuteItem_Robo
+{
+    color: #3f3f3f;
+    background: #fafafa;
+    border: solid 1px #DADADA;
+    border-width: 0px 1px 1px 0;
+    vertical-align: top;
+    white-space: nowrap;
+}
+.dxscTimeRulerHoursItem_Robo
+{
+    border-right-width: 0;
+    border-left-color: #DADADA;
+    font-size: 1.42em;
+    text-align: right;
+    width: 45px;
+    padding: 2px 4px 0px;
+}
+.dxscTimeRulerMinuteItem_Robo
+{
+    border-left-width: 0px;
+    text-align: center;
+    width: 18px;
+    font-size: 0.91em;
+    padding: 4px 1px 4px 1px;
+}
+.dxscTimeRulerHeaderHourItem_Robo
+{
+    width: 55px;
+}
+.dxscTimeRulerHeaderMinuteItem_Robo
+{
+    width: 16px;
+}
+.dxscScrollHeaderItem_Robo
+{
+    width: 16px;
+}
+/* Control elements */
+.dxscToolbarContainer_Robo
+{
+    padding: 0 1em;
+    border-color: #DADADA;
+    border-style: solid;
+    border-width: 1px 1px 0px 1px;
+    background-color: White;
+    position: relative;
+}
+.dxscToolbar_Robo
+{
+    border: none;
+    padding: 0.5em;
+}
+.dxscControl_Robo .dxscRendererTable
+{
+    border: 1px solid #DADADA;
+    border-top-width: 0;
+}
+.dxscControl_Robo .dxscAgendaViewScrollContainer,
+.dxscControl_Robo .dxscRendererTable
+{
+    background: white;
+}
+.dxscToolbar_Robo .dxeCalendar_Robo,
+.dxscToolbar_Robo .dxeCalendar_Robo.dxeFocused_Robo
+{
+    border: 1px Solid Silver;
+}
+.dxscResourceNavigator_Robo
+{
+    background: white;
+    padding: 10px 16px;
+    border-color: #DADADA;
+    color: #666;
+    font: 11px Century Gothic,Segoe UI,Arial,Helvetica,sans-serif;
+}
+.dxscControl_Robo .dxscResourceNavigator_Robo
+{
+    border-width: 1px 1px 0 1px;
+}
+.dxscResourceNavigator_Robo.dxsc-resselector-container
+{
+    padding: 10px;
+}
+.dxscResourceNavigator_Robo .dxsc-restoken
+{
+    border: none;
+    background: #EAEAEA;
+    border-radius: 14px;
+    line-height: 100%;
+}
+.dxscResourceNavigator_Robo .dxsc-restoken .dxsc-rh-sys
+{
+    border: none;
+}
+.dxscResourceNavigator_Robo .dxsc-restokens .dxsc-restoken.dxsc-rh-color-mode .dxsc-rc-sys
+{
+    padding-left: 28px;
+}
+.dxscResourceNavigator_Robo .dxsc-restoken .dxsc-rh-sys
+{
+    width: 12px;
+    height: 12px;
+    top: 8px;
+    left: 9px;
+    border-radius: 50%;
+}
+.dxscResourceNavigator_Robo .dxsc-restoken .dxsc-rc-sys
+{
+    padding: 8px 0px 6px 12px;
+}
+.dxscResourceNavigator_Robo .dxsc-restoken .dxsc-restoken-remove
+{
+    margin: 2px 4px 2px 1px;
+    float: right;
+}
+.dxscResourceNavigator_Robo .dxpc-footerContent > div:first-child
+{
+    margin-right: 6px;
+}
+.dxscResourceNavigatorButton_Robo.dxsc-filter-button
+{
+    padding: 8px 8px 7px 8px;
+    background: #EAEAEA;
+    border-radius: 50%;
+}
+.dxscResourceNavigatorButton_Robo.dxsc-more-button
+{
+    padding: 6px 7px 7px 7px;
+    background: #eaeaea;
+    border-radius: 50%;
+}
+.dxscResourceNavigatorButton_Robo.dxsc-filter-button > div,
+.dxscResourceNavigatorButton_Robo.dxsc-more-button > div
+{
+    padding-top: 1px;
+}
+.dxscViewVisibleInterval_Robo
+{
+    font-size: 1.17em;
+    white-space: nowrap;
+    color: #666;
+}
+.dxscToolbarContainer_Robo .dxsc-adaptive-toolbar .dxsc-view-visible-interval-table
+{
+    min-width: 140px;
+}
+.dxscInplaceEditor_Robo
+{
+    background: #fdfdfd;
+    border: solid 2px #303030;
+    padding: 0;
+    color: #303030;
+}
+.dxscControlAreaForm_Robo
+{
+    font-size: 1.33em;
+    background-color: #efefef;
+    border: none;
+    white-space: normal;
+    padding: 9px 12px;
+}
+.dxscErrorInfo_Robo
+{
+    background: #f1abab;
+    color: #853a3a;
+    padding: 10px;
+}
+/* Buttons */
+.dxscViewNavigatorButton_Robo,
+.dxscViewNavigatorGotoDateButton_Robo
+{
+    font-size: 1.17em;
+    line-height: 100%;
+    padding: 0 4px;
+    min-height: 1em;
+    display: block !important;
+}
+.dxscViewNavigatorGotoDateButton_Robo
+{
+    padding: 0 0 0 4px;
+}
+.dxscViewNavigatorButton_Robo.dxscViewNavigatorGotoTodayButton
+{
+    padding: 0 4px 3px;
+    color: #666;
+}
+.dxscViewNavigatorButtonHover_Robo.dxscViewNavigatorGotoTodayButton
+{
+    text-decoration: underline;
+}
+.dxscResourceNavigatorButton_Robo,
+.dxscNavigationButton_Robo,
+.dxscDVTopMoreButton_Robo,
+.dxscDVBottomMoreButton_Robo
+{
+    cursor: pointer;
+    padding: 6px;
+}
+.dxscNavigationButton_Robo
+{
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
+    border-radius: 50%;
+    padding: 0;
+}
+.dxscResourceNavigator_Robo table td:nth-child(6) table td.dxscResourceNavigatorButton_Robo
+{
+    padding: 6px 8px 6px 6px;
+}
+.dxscSmartTagButton_Robo
+{
+    border: solid 1px black;
+    background: #ffffee;
+    padding: 4px 5px;
+    cursor: pointer;
+}
+.dxscViewSelector_Robo
+{
+    font: 11px Century Gothic,Segoe UI,Arial,Helvetica,sans-serif;
+}
+.dxscViewSelectorButton_Robo
+{
+    padding: 0.71em 0.86em calc(.71em - 3px);
+    margin-bottom: 0;
+    color: #666;
+    border-bottom: 3px solid transparent;
+}
+.dxscViewSelector_Robo .dxmLite_Robo .dxm-main .dxm-item.dxm-checked,
+.dxscViewSelector_Robo .dxmLite_Robo .dxm-main .dxm-item.dxm-checked.dxm-hovered,
+.dxscViewSelectorButtonChecked_Robo
+{
+    border-bottom: 3px solid #D76D1D;
+    color: black;
+}
+.dxscViewSelector_Robo .dxmLite_Robo .dxm-main .dxm-item.dxm-hovered
+{
+    color: #666;
+}
+.dxscViewSelector_Robo .dxmLite_Robo .dxm-main .dxm-item.dxm-hovered,
+.dxscViewSelector_Robo .dxmLite_Robo .dxm-main .dxm-item.dxm-checked,
+.dxscViewSelector_Robo .dxmLite_Robo .dxm-main .dxm-item.dxm-checked.dxm-hovered
+{
+    background: none;
+}
+.dxscViewSelector_Robo .dxmLite_Robo .dxm-main
+{
+    background: none;
+    border: none;
+    color: #666;
+}
+.dxscViewSelector_Robo .dxmLite_Robo .dxm-main .dxm-item
+{
+    margin-bottom: -8px;
+    border-bottom: 4px solid transparent;
+}
+.dxscViewSelector_Robo .dxmLite_Robo .dxm-horizontal .dxm-separator b
+{
+    width: 0;
+}
+.dxscToolbar_Robo .dxscViewSelector_Robo .dxmLite_Robo .dxm-main
+{
+    margin-bottom: 0;
+}
+.dxscToolbar_Robo .dxscViewSelector_Robo .dxmLite_Robo .dxm-main .dxm-item
+{
+    margin-bottom: 0px;
+}
+.dxscViewSelector_Robo.dxscVSVert .dxbButtonSys
+{
+    width: 100%;
+    text-align: left;
+}
+.dxscNoBorderButton_Robo
+{
+    border: solid 1px #FDFDFD;
+    background: none;
+    cursor: pointer;
+}
+.dxscNoBorderButtonHover_Robo
+{
+    border: solid 1px #A8A8A8;
+}
+.dxscToolTipRoundedCornersTopBottomRow_Robo
+{
+    font-size: 0;
+}
+.dxscToolTipRoundedCornersTopSide_Robo
+{
+    border-top: 1px #757575 solid;
+    vertical-align: bottom;
+    height: 1px;
+    background-color: #FFFFFF;
+}
+.dxscToolTipRoundedCornersLeftSide_Robo
+{
+    border-left: 1px #757575 solid;
+    vertical-align: bottom;
+    background-color: #FFFFFF;
+}
+.dxscToolTipRoundedCornersRightSide_Robo
+{
+    border-right: 1px #757575 solid;
+    vertical-align: bottom;
+    background-color: #FFFFFF;
+}
+.dxscToolTipRoundedCornersBottomSide_Robo
+{
+    border-bottom: 1px #757575 solid;
+    vertical-align: bottom;
+    height: 1px;
+    background-color: #FFFFFF;
+}
+.dxscToolTipRoundedCornersContent_Robo
+{
+    background-color: #FFFFFF;
+    padding: 0;
+}
+.dxscToolTipSquaredCorners_Robo
+{
+    background: #f9f9cd;
+    padding: 1px 1px;
+    font-size: 0;
+    color: #303030;
+    white-space: nowrap;
+    border: solid 1px black;
+}
+.dxscTimeMarker_Robo
+{
+    top: -6px;
+}
+.dxscTimeMarkerLine_Robo
+{
+    top: -2px;
+    background-color: Red;
+    height: 3px;
+    font-size: 0;
+}
+.dxscTimeMarkerLineV_Robo
+{
+    position: absolute;
+    background-color: #D76D1D;
+    width: 1px;
+    font-size: 0;
+    border: solid 1px #FFFFFF;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    box-sizing: content-box;
+}
+.dxscTimeMarkerLineH_Robo
+{
+    position: absolute;
+    top: -2px;
+    background-color: #D76D1D;
+    height: 1px;
+    font-size: 0;
+    border: solid 1px #FFFFFF;
+    border-left-width: 0;
+    border-right-width: 0;
+}
+.dxscHiddenContainer td.dxscTimeRulerHoursItem_Robo,
+.dxscHiddenContainer td.dxscTimeRulerMinuteItem_Robo,
+.dxscHiddenContainer td.dxscTimeCellBody_Robo
+{
+    height: 1px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-color: #DADADA;
+    background-color: white;
+}
+.dxscClientRendering td.dxscTimeCellBody_Robo:last-child,
+.dxscClientRendering td.dxscDateCellBody_Robo.dxscLastCell,
+.dxscRendererTable.dxscClientRendering td.dxscDayHeader_Robo:last-child,
+.dxscRendererTable.dxscClientRendering td.dxscDateCellHeader_Robo.dxscLastCell,
+.dxscClientRendering.dxscTimelineView td.dxscTimelineDateHeader_Robo:last-child,
+.dxscClientRendering.dxscTimelineView td.dxscTimelineCellBody_Robo:last-child,
+.dxscRendererTable.dxscClientRendering td.dxscHorizontalResourceHeader_Robo,
+.dxscHiddenContainer td.dxscGroupSeparatorVertical_Robo
+{
+    border-right-width: 0px;
+}
+.dxscRendererTable.dxscClientRendering td.dxscHorizontalResourceHeader_Robo
+{
+    border-bottom-width: 0px;
+}
+.dxscRendererTable.dxscClientRendering td.dxscDateCellHeader_Robo,
+.dxscRendererTable.dxscClientRendering td.dxscDateCellHeader_Robo.dxscCompressed.dxscFirstCell,
+.dxscRendererTable.dxscClientRendering td.dxscTodayCellHeader_Robo.dxscCompressed.dxscFirstCell
+{
+    border-left-width: 0px;
+}
+.dxscRendererTable.dxscClientRendering td.dxscDateCellHeader_Robo.dxscCompressed,
+.dxscRendererTable.dxscClientRendering td.dxscTodayCellHeader_Robo.dxscCompressed
+{
+    border-left-width: 1px;
+}
+.dxscClientRendering.dxscDayView .dxscLeftTopCorner_Robo,
+.dxscClientRendering.dxscDayView .dxscHorizontalResourceHeader_Robo,
+.dxscClientRendering.dxscTimelineView .dxscVerticalResourceHeader_Robo.dxscFirstVerticalResourceHeader,
+.dxscClientRendering.dxscTimelineView .dxscTimelineDateHeader_Robo.dxscAlternateTimelineDateHeader_Robo,
+.dxscClientRendering.dxscTimelineView .dxscTimelineDateHeader_Robo
+{
+    border-top-width: 0px;
+}
+.dxscClientRendering.dxscTimelineView .dxscFirstScale .dxscTimelineDateHeader_Robo.dxscAlternateTimelineDateHeader_Robo,
+.dxscClientRendering.dxscTimelineView .dxscFirstScale .dxscTimelineDateHeader_Robo
+{
+    border-top-width: 1px;
+}
+.dxscControl_Robo .dxeButtonEdit_Robo
+{
+    min-width: 65px;
+}
+.dxscControl_Robo .dxscRCEndByDateCell
+{
+    min-width: 155px;
+}
+.dxscAgendaView .dxscAppointmentEndArrowIconCell_Robo
+{
+    border-right: 1px solid #D6D6D6;
+}
+.dxscAgendaView .dxscEmptyCell_Robo
+{
+    background-color: #FAFAFA;
+    height: 65px;
+    text-align: center;
+    color: #5C5C5C;
+    font-size: 14px;
+}
+.dxscDateRow_Robo.dxsc-agenda-horizontal-header
+{
+    padding-top: 7px;
+}
+.dxscAgendaView .dxscDateCell_Robo
+{
+    vertical-align: top;
+    padding-top: 6px;
+    padding-left: 10px;
+    width: 160px;
+}
+.dxscAgendaView .dxscAppointmentStatusCell_Robo
+{
+    border-left: 1px solid #D6D6D6;
+    border-right: 1px solid #D6D6D6;
+    width: 5px;
+}
+.dxscControl_Robo .dxsc-agenda-compact-time-cell .dxsc-apt-time-table-wrapper
+{
+    border-right-color: #D6D6D6;
+    border-bottom-color: #D6D6D6;
+}
+.dxscControl_Robo .dxsc-agenda-date-cell,
+.dxscControl_Robo .dxscAgendaView .dxsc-apt-status-cell,
+.dxscControl_Robo .dxscAgendaView .dxsc-agenda-apt > table,
+.dxscControl_Robo .dxsc-agenda-compact-time-cell .dxsc-apt-time-table-wrapper,
+.dxscControl_Robo .dxscAgendaViewScrollContainer,
+.dxscControl_Robo .dxscRendererTable.dxscAgendaView,
+.dxscControl_Robo .dxscDayScrollContent,
+.dxscControl_Robo .dxsc-timeline-horizontalContainer
+{
+    border-bottom: 1px solid #D6D6D6;
+}
+.dxscControl_Robo .dxsc-content-overflow .dxscDayScrollContent,
+.dxscControl_Robo .dxsc-content-overflow .dxscAgendaView
+{
+    border-bottom-width: 0px;
+}
+.dxscControl_Robo .dxsc-scroll .dxscDayScrollBodyTable td:last-child
+{
+    border-right-width: 1px !important;
+}
+.dxscControl_Robo .dxsc-agenda-apt.dxsc-apt-no-status .dxsc-apt-start-arrow-cell
+{
+    border-left: 1px solid #D6D6D6;
+}
+.dxscControl_Robo .dxsc-agenda-apt .dxsc-apt-start-arrow-cell,
+.dxscControl_Robo .dxsc-agenda-apt .dxsc-apt-end-arrow-cell,
+.dxscControl_Robo .dxsc-agenda-apt .dxsc-apt-icon-cell
+{
+    padding-top: 12px;
+}
+.dxscControl_Robo .dxsc-agenda-compact-time-cell .dxsc-agenda-apt .dxsc-apt-start-arrow-cell,
+.dxscControl_Robo .dxsc-agenda-compact-time-cell .dxsc-agenda-apt .dxsc-apt-end-arrow-cell,
+.dxscControl_Robo .dxsc-agenda-compact-time-cell .dxsc-agenda-apt .dxsc-apt-icon-cell
+{
+    padding-top: 8px;
+}
+.dxscAgendaView .dxscEmptyCell_Robo
+{
+    border-top: 0px;
+}
+.dxscControl_Robo .dxscAgendaView
+{
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+}
+.dxscControl_Robo .dxscAgendaViewScrollContainer
+{
+    border: 1px solid #D6D6D6;
+    box-sizing: border-box;
+}
+.dxsc-dialog-reminder .dxflFormLayout_Robo .dialog-item-Subject .dialog-aspxlabel,
+.dxscBorderSpacing .dxeBase_Robo.dxsc-reminder-form-apt-subject
+{
+    color: #D76D1D;
+    font-size: 16px;
+}
+.dxscControl_Robo .dxsc-cell-touch-handle
+{
+    background-color: #D76D1D;
+}
+.dxpcLite_Robo.dxsc-modal.dxsc-modal-appoinment
+{
+    min-width: 350px;
+    max-width: 900px;
+}
+.dxpcLite_Robo.dxsc-modal.dxsc-modal-reminder
+{
+    max-width: 550px;
+    min-width: 200px;
+}
+.dxpcLite_Robo.dxsc-modal.dxsc-modal-recur-apt-action
+{
+    max-width: 420px;
+    min-width: 200px;
+}
+.dxpcLite_Robo.dxsc-modal.dxsc-modal-goto-date
+{
+    max-width: 340px;
+    min-width: 170px;
+}
+.dxsc-dialog.dxsc-dialog-goto-date div.dxflFormLayout_Robo .dialog-lgc.dialog-group-ButtonsGroup > .dialog-lgb > .dialog-lg,
+.dxsc-dialog.dxsc-dialog-recur-apt-action div.dxflFormLayout_Robo .dialog-lgc.dialog-group-ButtonsGroup > .dialog-lgb > .dialog-lg,
+.dxsc-dialog div.dxflFormLayout_Robo.dialog-singlecolumn .dialog-group-Recurrence > .dialog-lgb,
+.dxsc-dialog div.dxflFormLayout_Robo.dialog-singlecolumn .dialog-flow-container-RecurrenceViewModelEndDateGroup .dialog-lg,
+.dxsc-dialog div.dxflFormLayout_Robo.dialog-singlecolumn .dialog-flow-container-EndDateGroup .dialog-lg,
+.dxsc-dialog.dxsc-dialog-appoinment > div.dxflFormLayout_Robo:not(.dialog-singlecolumn) .dialog-lgc.dialog-group-ButtonsGroup > .dialog-lgb > .dialog-lg
+{
+    border-color: #DCDCDC;
+}
+.dxsc-dialog-appoinment div.dxflFormLayout_Robo .dialog-group-Recurrence > .dialog-lg,
+.dxsc-dialog-appoinment div.dxflFormLayout_Robo.dialog-singlecolumn .dialog-group-RecurrenceViewModelEndDateGroup .dialog-lgb > .dialog-lg > div,
+.dxsc-dialog-appoinment div.dxflFormLayout_Robo.dialog-singlecolumn .dialog-flow-container-IsRecurring,
+.dxmodalSys .dxsc-dialog-appoinment div.dxflFormLayout_Robo.dialog-singlecolumn .dialog-flow-container-RecurrenceViewModelRecurrenceGroup .dialog-group-RecurrenceViewModelRecurrenceGroup,
+.dxsc-dialog div.dxflFormLayout_Robo > .dialog-lg > div:not(.dialog-flow-container-ButtonsGroup)
+{
+    padding: 0 8px;
+}
+.dxsc-dialog-appoinment div.dxflFormLayout_Robo:not(.dialog-singlecolumn) .dialog-flow-container-ButtonsGroup
+{
+    margin-top: 4px;
+}
+.dxsc-dialog div.dxflFormLayout_Robo .dialog-flow-container-ButtonsGroup .dialog-lgb > .dialog-lg .dialog-lgc
+{
+    padding: 12px 10px 12px 0;
+}
+.dxsc-dialog-appoinment div.dxflFormLayout_Robo.dialog-singlecolumn .dialog-lgc .dialog-item-Description
+{
+    padding-top: 10px;
+}
+.dxsc-dialog div.dxflFormLayout_Robo.dialog-singlecolumn .dialog-group-Recurrence > .dialog-lgb
+{
+    margin-top: 10px;
+}
+.dxsc-dialog div.dxflFormLayout_Robo.dialog-singlecolumn .dialog-flow-container-RecurrenceViewModelRecurrenceGroup
+{
+    margin-bottom: 18px;
+}
+.dxmodalSys .dxsc-dialog .dxflGroup_Robo > .dxflChildInLastRowSys > .dxflGroupCell_Robo > .dxflGroupBox_Robo
+{
+    padding-bottom: 0px;
+}
+.dxmodalSys .dxsc-dialog .dxflGroupBox_Robo > .dxflGroup_Robo > .dxflChildInFirstRowSys > .dxflGroupCell_Robo > .dxflItem_Robo
+{
+    padding-top: 10px;
+}
+.dxsc-dialog div.dxflFormLayout_Robo .dialog-item-IsAllDay .dialog-aspxcheckbox,
+.dxsc-dialog div.dxflFormLayout_Robo .dialog-item-IsRecurring .dialog-aspxcheckbox
+{
+    padding-top: 7px;
+}
+.dxsc-dialog div.dxflFormLayout_Robo.dialog-singlecolumn .dialog-item-IsAllDay .dialog-aspxcheckbox,
+.dxsc-dialog div.dxflFormLayout_Robo.dialog-singlecolumn .dialog-item-IsRecurring .dialog-aspxcheckbox
+{
+    padding-top: 9px;
+}
+.dxsc-dialog div.dxflFormLayout_Robo.dialog-singlecolumn .dialog-item-IsAllDay .dxflCaptionCellSys,
+.dxsc-dialog div.dxflFormLayout_Robo.dialog-singlecolumn .dialog-item-IsRecurring .dxflCaptionCellSys
+{
+    padding: 11px 0 11px 0;
+}
+.dxmodalSys .dxsc-dialog.dialog-container div.dxflFormLayout_Robo .dialog-lgb .dialog-lg .dialog-item-IsRecurring
+{
+    padding-bottom: 0px;
+    padding-top: 3px;
+}
+.dxmodalSys .dxsc-dialog.dialog-container div.dxflFormLayout_Robo.dialog-singlecolumn .dialog-lgb .dialog-lg .dialog-item-IsAllDay .dxToggle,
+.dxmodalSys .dxsc-dialog.dialog-container div.dxflFormLayout_Robo.dialog-singlecolumn .dialog-lgb .dialog-lg .dialog-item-IsRecurring .dxToggle
+{
+    margin-top: 2px;
+}
+.dxmodalSys div.dialog-container div.dxflFormLayout_Robo .dialog-linc.buttons .dialog-control-wrapper
+{
+    margin-left: 10px;
+}
+.dxmodalSys .dxsc-dialog .dxflFormLayout_Robo.dialog-singlecolumn .dialog-flow-container-RecurrenceViewModelDailyRecurrenceDaysCount,
+.dxmodalSys .dxsc-dialog .dxflFormLayout_Robo.dialog-singlecolumn .dialog-flow-container-RecurrenceViewModelMonthlyRecurrenceDay,
+.dxmodalSys .dxsc-dialog .dxflFormLayout_Robo.dialog-singlecolumn .dialog-flow-container-RecurrenceViewModelMonthlyRecurrenceWeekOfMonth,
+.dxmodalSys .dxsc-dialog .dxflFormLayout_Robo.dialog-singlecolumn .dialog-flow-container-RecurrenceViewModelYearlyRecurrenceWeekDaysMonth,
+.dxmodalSys .dxsc-dialog .dxflFormLayout_Robo.dialog-singlecolumn .dialog-flow-container-RecurrenceViewModelYearlyRecurrenceWeekOfMonth,
+.dxsc-dialog .dxflFormLayout_Robo .dialog-flow-container-SnoozeTimeSpanCaption
+{
+    padding-top: 6px;
+}
+.dxmodalSys .dxsc-dialog .dxeRadioButtonList_Robo td.dxe
+{
+    padding: 16px 0 0px 8px;
+}
+.dxmodalSys .dxsc-dialog .dxflFormLayout_Robo .dialog-flow-container-Action > .dialog-lgc > .dialog-item-Action
+{
+    padding-bottom: 0px;
+}
+.dxsc-modal.dxsc-modal-reminder.dxpcLite_Robo .dxpc-content
+{
+    padding: 0 18px 18px 18px;
+}
+.dxscViewSelector_Robo .dxmLite_Robo .dxm-horizontal .dxm-image-l .dxm-content,
+.dxscViewSelector_Robo .dxmLite_Robo .dxm-horizontal .dxm-image-r .dxm-content
+{
+    padding: 0.6em 1.1em calc(0.6em - 3px);
+}
+.dxscViewSelector_Robo .dxmLite_Robo .dxm-horizontal .dxm-image-l .dxm-popOut,
+.dxscViewSelector_Robo .dxmLite_Robo .dxm-horizontal .dxm-image-r .dxm-popOut,
+.dxscViewSelector_Robo .dxmLite_Robo .dxm-horizontal .dxm-image-t.dxm-noImages .dxm-popOut,
+.dxscViewSelector_Robo .dxmLite_Robo .dxm-horizontal .dxm-image-t .dxm-noImage .dxm-popOut,
+.dxscViewSelector_Robo .dxmLite_Robo .dxm-horizontal .dxm-image-b.dxm-noImages .dxm-popOut,
+.dxscViewSelector_Robo .dxmLite_Robo .dxm-horizontal .dxm-image-b .dxm-noImage .dxm-popOut
+{
+    padding-bottom: 3px;
+}
+.dxscControl_Robo .dxsc-cell-touch-handle
+{
+    background-color: #D76D1D;
+}
+.dxscToolbar_Robo
+{
+    font-weight: 500;
+}
+.dxscViewVisibleInterval_Robo
+{
+    font-size: 1.17em;
+}
+/* Buttons */
+.dxscViewNavigatorButton_Robo,
+.dxscViewNavigatorGotoDateButton_Robo
+{
+    padding: 4px 4px 0;
+}
+.dxscViewNavigatorGotoDateButton_Robo
+{
+    padding: 4px 4px 0;
+}
+.dxscViewNavigatorButton_Robo.dxscViewNavigatorGotoTodayButton
+{
+    padding: 0 4px;
+}
+.dxscViewSelector_Robo .dxmLite_Robo .dxm-main .dxm-item.dxm-checked,
+.dxscViewSelector_Robo .dxmLite_Robo .dxm-main .dxm-item.dxm-checked.dxm-hovered
+{
+    color: #D76D1D;
+}

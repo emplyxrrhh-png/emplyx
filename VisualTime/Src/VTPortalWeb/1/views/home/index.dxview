@@ -1,0 +1,21 @@
+<div data-options="dxView : { name: 'index', title: 'index', disableCache: true  } ">
+
+    <div id="panelsContent" style="height:76%">
+        <!--ko with: communique-->
+        <div data-options="dxViewPlaceholder: { viewName: 'communique' } "></div>
+        <!-- /ko-->
+        <!--ko with: summary-->
+        <div data-options="dxViewPlaceholder: { viewName: 'summary' } "></div>
+        <!-- /ko-->
+        <!--ko with: notifications-->
+        <div data-options="dxViewPlaceholder: { viewName: 'notifications' } "></div>
+        <!-- /ko-->
+        <!--ko with: punches-->
+        <div data-options="dxViewPlaceholder: { viewName: 'punches' } "></div>
+        <!-- /ko-->
+        <!--ko with: accruals-->
+        <div data-options="dxViewPlaceholder: { viewName: 'accruals' } "></div>
+        <!-- /ko-->
+        <div data-options="dxViewPlaceholder: { viewName: 'empty' } "></div>
+    </div>
+</div>

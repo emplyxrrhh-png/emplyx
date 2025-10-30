@@ -1,0 +1,27 @@
+
+<div data-options="dxView : { name: 'myTeamAlertsDetail', title: 'Detalle Alertas', disableCache: true  } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+		<div id="smallUserInfo"></div>
+        <div data-bind="dxLoadPanel: loadingPanel"> </div>
+        <div id="panelsContent" style="height:90%;">
+            <div class="dx-searchbar">
+                <div data-bind="dxTextBox: searchAlerts"></div>
+            </div>
+            <div id="scrollview" data-bind="dxScrollView: {}">
+                <div data-bind="dxList: listAlerts">
+                    <div data-options="dxTemplate: {name: 'AlertItem'}">
+                        <div class="listMenuItem">
+                            <div data-bind="css: $data.cssClass" class="listMenuItemIcon"></div>
+                            <div class="listMenuItemContent">
+                                <div data-bind="text: $data.name"></div>
+                                <div class="smallTextDescription" data-bind="html: $data.description"></div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

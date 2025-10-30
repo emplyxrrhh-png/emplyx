@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <Configurations>Debug;Release;Multitennant</Configurations>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <AzureFunctionsVersion>v4</AzureFunctionsVersion>
+    <AssemblyName>VTSenerFunctions</AssemblyName>
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputType>Exe</OutputType>
+	<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Multitennant|AnyCPU'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Azure.Core" Version="1.44.1" />
+		<PackageReference Include="Azure.Identity" Version="1.13.1" />
+		<PackageReference Include="Microsoft.Azure.Functions.Worker" Version="2.0.0" />
+		<PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Timer" Version="4.3.1" />
+		<PackageReference Include="Microsoft.Azure.Functions.Worker.Sdk" Version="2.0.0" />
+		<PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Http" Version="3.2.0" />
+		<PackageReference Include="DnsClient" Version="1.8.0" />
+		<PackageReference Include="System.IO.Pipelines" Version="7.0.0" />
+	</ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Src\Common\DataLayer\DataLayer.vbproj" />
+    <ProjectReference Include="..\..\..\Src\Common\VTAzure\VTAzure.vbproj" />
+    <ProjectReference Include="..\..\..\Src\Common\VTBase.Extensions\VTBase.Extensions.vbproj" />
+    <ProjectReference Include="..\..\..\Src\Common\VTBase\VTBase.vbproj" />
+    <ProjectReference Include="..\..\..\Src\Common\VTBusiness\VTBusiness.vbproj" />
+    <ProjectReference Include="..\..\..\Src\Common\VTScheduleCore\VTScheduleCore.vbproj" />
+    <ProjectReference Include="..\..\Common\VTSener\VTSener.vbproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Caching" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+</Project>

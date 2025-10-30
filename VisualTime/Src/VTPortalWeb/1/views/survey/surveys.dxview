@@ -1,0 +1,39 @@
+<div data-options="dxView : { name: 'surveys', title: 'surveys', disableCache: true } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <!--ko with: subscribeBlock-->
+        <div class="bigProfile" data-options="dxViewPlaceholder: { viewName: 'bigUserInfo' }"></div>
+        <!-- /ko-->
+        <div class="dx-searchbar">
+            <div id="searchSurveys" data-bind="dxTextBox: searchOptions"></div>
+        </div>
+        <div id="scrollview" style="clear:both" data-bind="dxScrollView: commScroll">
+            <div id="list" class="list-container" data-bind="if: surveyDS()">
+                <div data-bind="dxList: listsurveys">
+                    <div data-options="dxTemplate: {name: 'surveyItem'}">
+                        <div class="listMenuItem">
+                            <div data-bind="css: $data.cssClass" class="listMenuItemIcon"></div>
+                            <div class="listMenuItemContent">
+                                <div data-bind="text: $data.Subject, css: $data.cssClassText"></div>
+                                <div><span data-bind="text: $data.CreatedBy" class="smallTextDescriptionComm"></span><span style="float:right;margin-top: 6px;" data-bind="text: $data.SentOn" class="smallTextDescriptionComm"></span></div>
+                                <div>
+                                    <span style="font-weight:600;" data-bind="text: $data.IsAnonymous" class="smallTextDescriptionComm"></span>
+                                </div>
+                                <div>
+                                    <span style="margin-top: 6px;" data-bind="text: $data.ExpiresOn" class="smallTextDescriptionComm"></span>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div data-bind="if: !surveyDS()">
+                <div class="noDataCssClass"></div>
+                <!--<div class="noDataText" >Oops! No hay nada aquí...</div>-->
+            </div>
+        </div>
+
+        <div data-bind="dxLoadPanel: loadingPanel"> </div>
+
+    </div>

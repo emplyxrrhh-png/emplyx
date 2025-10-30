@@ -1,0 +1,657 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_access.rotext" xml:space="preserve">
+    <value>Acessos</value>
+  </data>
+  <data name="RES_accessgroup.rotext" xml:space="preserve">
+    <value>grupo de acesso</value>
+  </data>
+  <data name="RES_accessgroups.rotext" xml:space="preserve">
+    <value>grupos de acesso</value>
+  </data>
+  <data name="RES_accessperiod.rotext" xml:space="preserve">
+    <value>período de acesso</value>
+  </data>
+  <data name="RES_accessperiods.rotext" xml:space="preserve">
+    <value>períodos de acesso</value>
+  </data>
+  <data name="RES_action.copy.rotext" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
+  <data name="RES_action.move.rotext" xml:space="preserve">
+    <value>Mover</value>
+  </data>
+  <data name="RES_assignment.rotext" xml:space="preserve">
+    <value>registo</value>
+  </data>
+  <data name="RES_assignments.rotext" xml:space="preserve">
+    <value>Postos</value>
+  </data>
+  <data name="RES_authorization.rotext" xml:space="preserve">
+    <value>autorização</value>
+  </data>
+  <data name="RES_authorizations.rotext" xml:space="preserve">
+    <value>autorizações</value>
+  </data>
+  <data name="RES_budget.rotext" xml:space="preserve">
+    <value>orçamento</value>
+  </data>
+  <data name="RES_budgets.rotext" xml:space="preserve">
+    <value>orçamentos</value>
+  </data>
+  <data name="RES_businesscenter.rotext" xml:space="preserve">
+    <value>centro de custo</value>
+  </data>
+  <data name="RES_businesscenters.rotext" xml:space="preserve">
+    <value>centros de custos</value>
+  </data>
+  <data name="RES_businessgroup.rotext" xml:space="preserve">
+    <value>grupo de negócio</value>
+  </data>
+  <data name="RES_businessgroups.rotext" xml:space="preserve">
+    <value>grupos de negócio</value>
+  </data>
+  <data name="RES_button.accept.rotext" xml:space="preserve">
+    <value>Aceitar</value>
+  </data>
+  <data name="RES_button.apply.rotext" xml:space="preserve">
+    <value>Aplicar</value>
+  </data>
+  <data name="RES_button.applychanges.rotext" xml:space="preserve">
+    <value>Aplicar alterações</value>
+  </data>
+  <data name="RES_button.cancel.rotext" xml:space="preserve">
+    <value>Anular</value>
+  </data>
+  <data name="RES_button.clear.rotext" xml:space="preserve">
+    <value>Esvaziar</value>
+  </data>
+  <data name="RES_button.close.rotext" xml:space="preserve">
+    <value>Fechar</value>
+  </data>
+  <data name="RES_button.delete.rotext" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="RES_button.down.rotext" xml:space="preserve">
+    <value>Transferir</value>
+  </data>
+  <data name="RES_button.edit.rotext" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="RES_button.end.rotext" xml:space="preserve">
+    <value>Terminar</value>
+  </data>
+  <data name="RES_button.next.rotext" xml:space="preserve">
+    <value>Seguinte &gt;</value>
+  </data>
+  <data name="RES_button.previous.rotext" xml:space="preserve">
+    <value>&lt; Anterior</value>
+  </data>
+  <data name="RES_button.save.rotext" xml:space="preserve">
+    <value>Aplicar</value>
+  </data>
+  <data name="RES_button.undochanges.rotext" xml:space="preserve">
+    <value>Anular alterações</value>
+  </data>
+  <data name="RES_button.up.rotext" xml:space="preserve">
+    <value>Carregar</value>
+  </data>
+  <data name="RES_calendar.rotext" xml:space="preserve">
+    <value>Calendário</value>
+  </data>
+  <data name="RES_card.rotext" xml:space="preserve">
+    <value>Cartão</value>
+  </data>
+  <data name="RES_cards.rotext" xml:space="preserve">
+    <value>cartões</value>
+  </data>
+  <data name="RES_cause.rotext" xml:space="preserve">
+    <value>justificação</value>
+  </data>
+  <data name="RES_causes.rotext" xml:space="preserve">
+    <value>justificações</value>
+  </data>
+  <data name="RES_comparation.equal.rotext" xml:space="preserve">
+    <value>Igual</value>
+  </data>
+  <data name="RES_comparation.equalless.rotext" xml:space="preserve">
+    <value>Menor ou igual</value>
+  </data>
+  <data name="RES_comparation.equalmore.rotext" xml:space="preserve">
+    <value>Maior ou igual</value>
+  </data>
+  <data name="RES_comparation.equals.rotext" xml:space="preserve">
+    <value>Igual</value>
+  </data>
+  <data name="RES_comparation.less.rotext" xml:space="preserve">
+    <value>Menor</value>
+  </data>
+  <data name="RES_comparation.more.rotext" xml:space="preserve">
+    <value>Maior</value>
+  </data>
+  <data name="RES_concept.rotext" xml:space="preserve">
+    <value>Saldo</value>
+  </data>
+  <data name="RES_concepts.rotext" xml:space="preserve">
+    <value>saldos</value>
+  </data>
+  <data name="RES_criteria.contains.rotext" xml:space="preserve">
+    <value>contenha</value>
+  </data>
+  <data name="RES_criteria.different.rotext" xml:space="preserve">
+    <value>seja diferente</value>
+  </data>
+  <data name="RES_criteria.equals.rotext" xml:space="preserve">
+    <value>seja igual</value>
+  </data>
+  <data name="RES_criteria.major.rotext" xml:space="preserve">
+    <value>seja maior que</value>
+  </data>
+  <data name="RES_criteria.majororequals.rotext" xml:space="preserve">
+    <value>seja maior ou igual a</value>
+  </data>
+  <data name="RES_criteria.minor.rotext" xml:space="preserve">
+    <value>seja menor que</value>
+  </data>
+  <data name="RES_criteria.minororequals.rotext" xml:space="preserve">
+    <value>seja menor ou igual a</value>
+  </data>
+  <data name="RES_criteria.nocontains.rotext" xml:space="preserve">
+    <value>não contenha</value>
+  </data>
+  <data name="RES_criteria.startwith.rotext" xml:space="preserve">
+    <value>comece por</value>
+  </data>
+  <data name="RES_criteria.thedate.rotext" xml:space="preserve">
+    <value>a data</value>
+  </data>
+  <data name="RES_criteria.thedateactual.rotext" xml:space="preserve">
+    <value>a data atual</value>
+  </data>
+  <data name="RES_criteria.thedateofjustification.rotext" xml:space="preserve">
+    <value>a data da justificação</value>
+  </data>
+  <data name="RES_criteria.theperiod.rotext" xml:space="preserve">
+    <value>o período</value>
+  </data>
+  <data name="RES_criteria.thetime.rotext" xml:space="preserve">
+    <value>o tempo</value>
+  </data>
+  <data name="RES_criteria.thetimeactual.rotext" xml:space="preserve">
+    <value>a hora atual</value>
+  </data>
+  <data name="RES_criteria.thetimeofjustification.rotext" xml:space="preserve">
+    <value>o tempo da justificação</value>
+  </data>
+  <data name="RES_criteria.thevalue.rotext" xml:space="preserve">
+    <value>o valor</value>
+  </data>
+  <data name="RES_criteria.thevalues.rotext" xml:space="preserve">
+    <value>os valores (separados por ;)</value>
+  </data>
+  <data name="RES_dailyrecord.rotext" xml:space="preserve">
+    <value>declaração de jornada</value>
+  </data>
+  <data name="RES_dailyrecords.rotext" xml:space="preserve">
+    <value>Declarações de jornada</value>
+  </data>
+  <data name="RES_dif.all.rotext" xml:space="preserve">
+    <value>o valor do saldo</value>
+  </data>
+  <data name="RES_dif.diff.rotext" xml:space="preserve">
+    <value>a diferença</value>
+  </data>
+  <data name="RES_dif.untilvalue.rotext" xml:space="preserve">
+    <value>até ao valor</value>
+  </data>
+  <data name="RES_dif.userfielduntilvalue.rotext" xml:space="preserve">
+    <value>até ao valor do campo do perfil</value>
+  </data>
+  <data name="RES_dif.userfieldvalue.rotext" xml:space="preserve">
+    <value>o valor do campo do perfil</value>
+  </data>
+  <data name="RES_dif.value.rotext" xml:space="preserve">
+    <value>o valor</value>
+  </data>
+  <data name="RES_diningroom.rotext" xml:space="preserve">
+    <value>Refeitório</value>
+  </data>
+  <data name="RES_diningrooms.rotext" xml:space="preserve">
+    <value>Refeitórios</value>
+  </data>
+  <data name="RES_document.rotext" xml:space="preserve">
+    <value>documento</value>
+  </data>
+  <data name="RES_documentabsences.rotext" xml:space="preserve">
+    <value>documento</value>
+  </data>
+  <data name="RES_documents.rotext" xml:space="preserve">
+    <value>documentos</value>
+  </data>
+  <data name="RES_documentsabsences.rotext" xml:space="preserve">
+    <value>documentos</value>
+  </data>
+  <data name="RES_employee.rotext" xml:space="preserve">
+    <value>utilizador</value>
+  </data>
+  <data name="RES_employees.rotext" xml:space="preserve">
+    <value>Utilizadores</value>
+  </data>
+  <data name="RES_employeeselector.rotext" xml:space="preserve">
+    <value>Selecionar, pesquisar, pesquisa por:,&amp;nome,&amp;contrato,&amp;cartão,&amp;filtros:,ver utilizadores eliminados,ver registos futuros, ver utilizadores com contrato em vigor, ver utilizadores em trânsito,campo do perfil, ver utilizadores consoante campo do perfil,campo do perfil utilizadores, valor: filtrar pelo campo do perfil,campo do perfil do utilizador, aplicar, opções de filtragem, opções de filtragem</value>
+  </data>
+  <data name="RES_event.rotext" xml:space="preserve">
+    <value>Evento planeado</value>
+  </data>
+  <data name="RES_events.rotext" xml:space="preserve">
+    <value>Eventos planeados</value>
+  </data>
+  <data name="RES_field.invalid.rotext" xml:space="preserve">
+    <value>Campo inválido.</value>
+  </data>
+  <data name="RES_field.required.rotext" xml:space="preserve">
+    <value>Campo requerido.</value>
+  </data>
+  <data name="RES_group.rotext" xml:space="preserve">
+    <value>grupo</value>
+  </data>
+  <data name="RES_groups.rotext" xml:space="preserve">
+    <value>grupos</value>
+  </data>
+  <data name="RES_incidence.1001.rotext" xml:space="preserve">
+    <value>horas trabalhadas</value>
+  </data>
+  <data name="RES_incidence.1010.rotext" xml:space="preserve">
+    <value>excesso</value>
+  </data>
+  <data name="RES_incidence.1011.rotext" xml:space="preserve">
+    <value>ausência</value>
+  </data>
+  <data name="RES_incidence.1020.rotext" xml:space="preserve">
+    <value>atraso</value>
+  </data>
+  <data name="RES_incidence.1021.rotext" xml:space="preserve">
+    <value>interrupção</value>
+  </data>
+  <data name="RES_incidence.1022.rotext" xml:space="preserve">
+    <value>saída antecipada</value>
+  </data>
+  <data name="RES_incidence.1030.rotext" xml:space="preserve">
+    <value>excesso em horas flexíveis</value>
+  </data>
+  <data name="RES_incidence.1031.rotext" xml:space="preserve">
+    <value>ausência em horas flexíveis</value>
+  </data>
+  <data name="RES_incidence.1040.rotext" xml:space="preserve">
+    <value>descanso</value>
+  </data>
+  <data name="RES_incidence.1041.rotext" xml:space="preserve">
+    <value>descanso demasiado longo</value>
+  </data>
+  <data name="RES_incidence.1042.rotext" xml:space="preserve">
+    <value>descanso demasiado curto</value>
+  </data>
+  <data name="RES_incidence.1050.rotext" xml:space="preserve">
+    <value>diferença positiva</value>
+  </data>
+  <data name="RES_incidence.1051.rotext" xml:space="preserve">
+    <value>diferença negativa</value>
+  </data>
+  <data name="RES_incidence.2000.rotext" xml:space="preserve">
+    <value>horas complementares</value>
+  </data>
+  <data name="RES_incidence.rotext" xml:space="preserve">
+    <value>Incidência</value>
+  </data>
+  <data name="RES_incidences.rotext" xml:space="preserve">
+    <value>incidências</value>
+  </data>
+  <data name="RES_incorrectdates.rotext" xml:space="preserve">
+    <value>Datas incorretas.</value>
+  </data>
+  <data name="RES_incorrectperiod.rotext" xml:space="preserve">
+    <value>Período incorreto.</value>
+  </data>
+  <data name="RES_indicator.rotext" xml:space="preserve">
+    <value>indicador</value>
+  </data>
+  <data name="RES_indicators.rotext" xml:space="preserve">
+    <value>indicadores</value>
+  </data>
+  <data name="RES_invaliddate.message.rotext" xml:space="preserve">
+    <value>A data de entrada não é válida.</value>
+  </data>
+  <data name="RES_invalidtime.message.rotext" xml:space="preserve">
+    <value>A hora de entrada não é válida.</value>
+  </data>
+  <data name="RES_job.rotext" xml:space="preserve">
+    <value>fase</value>
+  </data>
+  <data name="RES_jobs.rotext" xml:space="preserve">
+    <value>fases</value>
+  </data>
+  <data name="RES_labagree.rotext" xml:space="preserve">
+    <value>Acordo</value>
+  </data>
+  <data name="RES_labagrees.rotext" xml:space="preserve">
+    <value>Acordos</value>
+  </data>
+  <data name="RES_last.rotext" xml:space="preserve">
+    <value>Último</value>
+  </data>
+  <data name="RES_loading.message.rotext" xml:space="preserve">
+    <value>A carregar...</value>
+  </data>
+  <data name="RES_machine.rotext" xml:space="preserve">
+    <value>Máquina</value>
+  </data>
+  <data name="RES_machinegroup.rotext" xml:space="preserve">
+    <value>grupo de máquinas</value>
+  </data>
+  <data name="RES_machinegroups.rotext" xml:space="preserve">
+    <value>grupos de máquinas</value>
+  </data>
+  <data name="RES_machines.rotext" xml:space="preserve">
+    <value>máquinas</value>
+  </data>
+  <data name="RES_month.1.rotext" xml:space="preserve">
+    <value>Janeiro</value>
+  </data>
+  <data name="RES_month.10.rotext" xml:space="preserve">
+    <value>Outubro</value>
+  </data>
+  <data name="RES_month.11.rotext" xml:space="preserve">
+    <value>Novembro</value>
+  </data>
+  <data name="RES_month.12.rotext" xml:space="preserve">
+    <value>Dezembro</value>
+  </data>
+  <data name="RES_month.2.rotext" xml:space="preserve">
+    <value>Fevereiro</value>
+  </data>
+  <data name="RES_month.3.rotext" xml:space="preserve">
+    <value>Março</value>
+  </data>
+  <data name="RES_month.4.rotext" xml:space="preserve">
+    <value>Abril</value>
+  </data>
+  <data name="RES_month.5.rotext" xml:space="preserve">
+    <value>Maio</value>
+  </data>
+  <data name="RES_month.6.rotext" xml:space="preserve">
+    <value>Junho</value>
+  </data>
+  <data name="RES_month.7.rotext" xml:space="preserve">
+    <value>Julho</value>
+  </data>
+  <data name="RES_month.8.rotext" xml:space="preserve">
+    <value>Agosto</value>
+  </data>
+  <data name="RES_month.9.rotext" xml:space="preserve">
+    <value>Setembro</value>
+  </data>
+  <data name="RES_notification.rotext" xml:space="preserve">
+    <value>notificação</value>
+  </data>
+  <data name="RES_notifications.rotext" xml:space="preserve">
+    <value>notificações</value>
+  </data>
+  <data name="RES_num.1.rotext" xml:space="preserve">
+    <value>1.º</value>
+  </data>
+  <data name="RES_num.2.rotext" xml:space="preserve">
+    <value>2.º</value>
+  </data>
+  <data name="RES_num.3.rotext" xml:space="preserve">
+    <value>3.º</value>
+  </data>
+  <data name="RES_num.4.rotext" xml:space="preserve">
+    <value>4.º</value>
+  </data>
+  <data name="RES_num.last.rotext" xml:space="preserve">
+    <value>Último</value>
+  </data>
+  <data name="RES_ordertemplate.rotext" xml:space="preserve">
+    <value>ordem teórica</value>
+  </data>
+  <data name="RES_ordertemplates.rotext" xml:space="preserve">
+    <value>ordens teóricas</value>
+  </data>
+  <data name="RES_passport.rotext" xml:space="preserve">
+    <value>utilizador</value>
+  </data>
+  <data name="RES_passports.rotext" xml:space="preserve">
+    <value>utilizadores</value>
+  </data>
+  <data name="RES_piece.rotext" xml:space="preserve">
+    <value>peça</value>
+  </data>
+  <data name="RES_pieces.rotext" xml:space="preserve">
+    <value>peças</value>
+  </data>
+  <data name="RES_productiveunit.rotext" xml:space="preserve">
+    <value>unidade de produção</value>
+  </data>
+  <data name="RES_productiveunits.rotext" xml:space="preserve">
+    <value>Unidades de produção</value>
+  </data>
+  <data name="RES_prograbsence.rotext" xml:space="preserve">
+    <value>ausência prolongada</value>
+  </data>
+  <data name="RES_prograbsences.rotext" xml:space="preserve">
+    <value>ausências prolongadas</value>
+  </data>
+  <data name="RES_project.rotext" xml:space="preserve">
+    <value>projeto</value>
+  </data>
+  <data name="RES_projects.rotext" xml:space="preserve">
+    <value>projetos</value>
+  </data>
+  <data name="RES_punch.rotext" xml:space="preserve">
+    <value>picagem</value>
+  </data>
+  <data name="RES_punches.rotext" xml:space="preserve">
+    <value>picagens</value>
+  </data>
+  <data name="RES_realorder.rotext" xml:space="preserve">
+    <value>ordem real</value>
+  </data>
+  <data name="RES_realorders.rotext" xml:space="preserve">
+    <value>ordens reais</value>
+  </data>
+  <data name="RES_shift.rotext" xml:space="preserve">
+    <value>horário</value>
+  </data>
+  <data name="RES_shifts.rotext" xml:space="preserve">
+    <value>horários</value>
+  </data>
+  <data name="RES_task.rotext" xml:space="preserve">
+    <value>tarefa</value>
+  </data>
+  <data name="RES_tasks.rotext" xml:space="preserve">
+    <value>tarefas</value>
+  </data>
+  <data name="RES_taskstemplate.rotext" xml:space="preserve">
+    <value>modelo de projeto</value>
+  </data>
+  <data name="RES_taskstemplates.rotext" xml:space="preserve">
+    <value>modelos de projeto</value>
+  </data>
+  <data name="RES_tasktemplate.rotext" xml:space="preserve">
+    <value>modelo de tarefa</value>
+  </data>
+  <data name="RES_tasktemplates.rotext" xml:space="preserve">
+    <value>modelos de tarefa</value>
+  </data>
+  <data name="RES_tbmaximize.rotext" xml:space="preserve">
+    <value>Ampliar</value>
+  </data>
+  <data name="RES_tbminimize.rotext" xml:space="preserve">
+    <value>Restaurar</value>
+  </data>
+  <data name="RES_team.rotext" xml:space="preserve">
+    <value>equipa</value>
+  </data>
+  <data name="RES_teams.rotext" xml:space="preserve">
+    <value>equipas</value>
+  </data>
+  <data name="RES_terminal.rotext" xml:space="preserve">
+    <value>Posto</value>
+  </data>
+  <data name="RES_terminals.rotext" xml:space="preserve">
+    <value>terminais</value>
+  </data>
+  <data name="RES_timezone.rotext" xml:space="preserve">
+    <value>período de acesso</value>
+  </data>
+  <data name="RES_timezones.rotext" xml:space="preserve">
+    <value>períodos de acesso</value>
+  </data>
+  <data name="RES_visit.rotext" xml:space="preserve">
+    <value>Visita</value>
+  </data>
+  <data name="RES_visits.rotext" xml:space="preserve">
+    <value>Visitas</value>
+  </data>
+  <data name="RES_weekday.1.rotext" xml:space="preserve">
+    <value>Segunda-feira</value>
+  </data>
+  <data name="RES_weekday.2.rotext" xml:space="preserve">
+    <value>Terça-feira</value>
+  </data>
+  <data name="RES_weekday.3.rotext" xml:space="preserve">
+    <value>Quarta-feira</value>
+  </data>
+  <data name="RES_weekday.4.rotext" xml:space="preserve">
+    <value>Quinta-feira</value>
+  </data>
+  <data name="RES_weekday.5.rotext" xml:space="preserve">
+    <value>Sexta-feira</value>
+  </data>
+  <data name="RES_weekday.6.rotext" xml:space="preserve">
+    <value>Sábado</value>
+  </data>
+  <data name="RES_weekday.7.rotext" xml:space="preserve">
+    <value>Domingo</value>
+  </data>
+  <data name="RES_incidence..rotext" xml:space="preserve">
+    <value />
+  </data>
+</root>

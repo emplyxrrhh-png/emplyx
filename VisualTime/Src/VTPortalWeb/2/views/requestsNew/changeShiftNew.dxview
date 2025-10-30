@@ -1,0 +1,98 @@
+<div data-options="dxView : { name: 'changeShiftNew', title: 'changeShiftNew', disableCache: true } " >
+
+	<div id="smallUserInfo"></div>
+
+	<div  style="height:90%">
+		<div style="clear:both;border-radius: 25px;height: calc(100% - 2rem);" class="card card-one" data-bind="dxScrollView: scrollContent">
+			<!-- ko if: requestMainDivVisible() -->
+			<div id="divEmployeeInfo">
+				<header>
+					<div class="avatar">
+						<div style="width:100px; height:100px;background-size: contain !important; " data-bind="style: { backgroundImage: empImage }"></div>
+					</div>
+				</header>
+
+				<h3>
+					<span data-bind="text: lblEmployee"></span>
+					<div class="descGroup">
+						<span data-bind="text: lblGroupName"></span>
+					</div>
+				</h3>
+
+			</div>
+			<div id="divRequestDates">
+				<div class="desc">
+					<div data-bind="html: lblRequestDates">
+					</div>
+				</div>
+			
+			</div>
+			<!-- /ko-->
+			<!-- ko if: loadingDivVisible() -->
+			<div id="divLoadingInfo">
+				<header>
+					<div class="avatar">
+						<div style="width:100px; height:100px;background-size: contain !important; " data-bind="style: { backgroundImage: empImage }"></div>
+					</div>
+				</header>
+				<div class="desc">
+					<div style="margin-top: 100px;"  data-bind="text: lblLoading"></div>
+				</div>
+			</div>
+			<!-- /ko-->
+			<!-- ko if: infoDivVisible() -->
+			<div id="divRequestInfo">
+				<h4>
+					<span data-bind="text: lblRemarks"></span>
+				</h4>
+				<div class="h-divider">
+					<div class="shadow"></div>
+				</div>
+				<div class="desc">
+					<div data-bind="text: remarks"></div>
+				</div>
+			</div>
+			<!-- /ko-->
+	
+			<!-- ko if: myTeamPlanDivVisible() -->
+			<div id="divMyTeamPlan">
+				<h4>
+					<span data-bind="text: lblmyTeamPlan"></span>
+				</h4>
+				<div class="h-divider">
+					<div class="shadow"></div>
+				</div>
+				<div class="desc" style="padding: 0 !important">
+					<div style="display: flex;flex-direction: row;justify-content: center;align-items: center;">
+						<div id="spinleft-button" data-bind="dxButton: btnPrevious"></div>
+						<div data-bind="html: lblSelectedDayMV"></div>
+						<div id="spinright-button" data-bind="dxButton: btnNext"></div>
+					</div>
+					
+					<div style="margin: 0px 10px 0px 10px;" data-bind="html: lblSelectedDayDetails"></div>
+				</div>
+				<div id="myTeamPlanDiv" style="padding-left: 25px;padding-right: 25px;" data-bind="dxMultiView: myTeamPlan">
+				</div>
+			</div>
+			<!-- /ko-->
+
+			<br></br>
+			
+		</div>
+	</div>
+	<div class="approvalPopup" data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:true, visible: popupVisible, height: 'auto'}">
+		<!--ko with: myApprovalsBlock-->
+		<div data-options="dxViewPlaceholder: { viewName: 'approvalHistory' } "></div>
+		<!-- /ko-->
+	</div>
+
+
+	<div class="fixedMenuButton2">
+		<div class="actionButton mainMenuButton" data-bind="dxButton: btnApprove"></div>
+		<div class="actionButton mainMenuButton" data-bind="dxButton: btnRefuse"></div>
+		<div class="actionButton mainMenuButton" data-bind="dxButton: btnHistory"></div>
+	</div>
+
+	<div data-bind="dxLoadPanel: loadingPanel"> </div>
+   
+</div>

@@ -1,0 +1,198 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+parameters:
+  - name: azureService
+    type: string
+    default: ""
+  - name: version
+    type: string
+    default: ""
+  - name: resourceGroup
+    type: string
+    default: ''
+  - name: environment
+    type: string
+    default: ''
+  - name: slot
+    type: string
+    default: ''
+  - name: artifactoryTargetName
+    type: string
+    default: ""
+  - name: artifactoryService
+    type: string
+    default: ""
+  - name: artifacts
+    type: object
+    default: ""
+  - name: resources
+    type: object
+    default: ""
+  - name: resourcesDatalink
+    type: object
+    default: ""
+      
+
+
+stages:
+  - stage: Publish
+    displayName: "Deploy to ${{ parameters.environment }} env"
+    condition: succeeded()
+    jobs:
+    - deployment: Deploy_Blob
+      displayName: "Deploy Storage"
+      variables:
+        - name: artifactorySubfolderName
+          value: ${{ parameters.version }}
+      pool:
+        vmImage: windows-latest
+      environment: cegid_vti_app_${{ parameters.environment }}
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+            - download: none
+            - checkout: none
+            - ${{ each vtresource in parameters.resources }}:
+              - ${{ if eq(vtresource.enabled, true) }} :
+                - task: JFrogGenericArtifacts@1
+                  displayName: 'Download- ${{ vtresource.artifactoryFolderName }}'
+                  inputs:
+                    command: 'Download'
+                    specSource: 'taskConfiguration'
+                    collectBuildInfo: false
+                    includeEnvVars: false
+                    connection: ${{ parameters.artifactoryService }}
+                    fileSpec: |
+                      {
+                        "files": [
+                          {
+                            "pattern": "${{ parameters.artifactoryTargetName }}/${{ vtresource.artifactoryFolderName }}/$(artifactorySubfolderName)/",
+                            "target": "$(System.ArtifactsDirectory)/"
+                          }
+                        ]
+                      }
+                - powershell: |
+                    Expand-Archive -Path ${{ vtresource.artifactoryFolderName }}/$(artifactorySubfolderName)/${{ vtresource.zip }} -DestinationPath .\${{ vtresource.name }}
+                  workingDirectory: $(System.ArtifactsDirectory)
+                  displayName: 'Expanded artifact "${{ vtresource.name }}"'
+                  enabled: true
+
+                - task: AzureFileCopy@5
+                  displayName: 'Copy artifact to Blob'
+                  inputs:
+                    SourcePath: '$(System.ArtifactsDirectory)/${{ vtresource.name }}/*'
+                    azureSubscription: ${{ parameters.azureService }}
+                    Destination: 'AzureBlob'
+                    storage: ${{ vtresource.storageAccountName }}
+                    ContainerName: ${{ vtresource.container }}
+                    BlobPrefix: '${{ vtresource.folder }}'
+                    AdditionalArgumentsForBlobCopy: '--recursive --include-pattern "${{ vtresource.pattern }}" --overwrite true'
+ 
+            - ${{ each vtresource in parameters.resourcesDatalink }}:
+              - ${{ if eq(vtresource.enabled, true) }} :
+                - task: JFrogGenericArtifacts@1
+                  displayName: 'Download- ${{ vtresource.artifactoryFolderName }}'
+                  inputs:
+                    command: 'Download'
+                    specSource: 'taskConfiguration'
+                    collectBuildInfo: false
+                    includeEnvVars: false
+                    connection: ${{ parameters.artifactoryService }}
+                    fileSpec: |
+                      {
+                        "files": [
+                          {
+                            "pattern": "${{ parameters.artifactoryTargetName }}/${{ vtresource.artifactoryFolderName }}/$(artifactorySubfolderName)/",
+                            "target": "$(System.ArtifactsDirectory)/"
+                          }
+                        ]
+                      }
+
+                - powershell: |
+                    Expand-Archive -Path ${{ vtresource.artifactoryFolderName }}/$(artifactorySubfolderName)/${{ vtresource.zip }} -DestinationPath .\${{ vtresource.name }}
+                  workingDirectory: $(System.ArtifactsDirectory)
+                  displayName: 'Expanded artifact "${{ vtresource.name }}"'
+                  enabled: true
+
+                - task: AzureFileCopy@5
+                  displayName: 'Copy artifact to Blob'
+                  inputs:
+                    SourcePath: '$(System.ArtifactsDirectory)/${{ vtresource.name }}/*'
+                    azureSubscription: ${{ parameters.azureService }}
+                    Destination: 'AzureBlob'
+                    storage: ${{ vtresource.storageAccountName }}
+                    ContainerName: ${{ vtresource.container }}
+                    BlobPrefix: '${{ vtresource.folder }}'
+                    AdditionalArgumentsForBlobCopy: '--recursive --include-pattern "${{ vtresource.pattern }}" --overwrite true'
+
+    - ${{ each vtartifact in parameters.artifacts }}:
+      - ${{ if eq(vtartifact.enabled, true) }} :
+        - deployment: Deploy_${{ vtartifact.name }}
+          dependsOn: Deploy_Blob
+          displayName: "Deploy ${{ vtartifact.name }}"
+          variables:
+            - name: artifactorySubfolderName
+              value: ${{ parameters.version }}
+          pool:
+            vmImage: windows-latest
+          environment: cegid_vti_app_${{ parameters.environment }}
+          strategy:
+            runOnce:
+              deploy:
+                steps:
+                - download: none
+                - checkout: none
+                - task: JFrogGenericArtifacts@1
+                  displayName: 'Download- ${{ vtartifact.artifactoryFolderName }}'
+                  inputs:
+                    command: 'Download'
+                    specSource: 'taskConfiguration'
+                    collectBuildInfo: false
+                    includeEnvVars: false
+                    connection: ${{ parameters.artifactoryService }}  
+                    fileSpec: |
+                      {
+                        "files": [
+                          {
+                            "pattern": "${{ parameters.artifactoryTargetName }}/${{ vtartifact.artifactoryFolderName }}/$(artifactorySubfolderName)/",
+                            "target": "$(System.ArtifactsDirectory)/"
+                          }
+                        ]
+                      }
+
+                - ${{ if eq(vtartifact.type, 'webapp') }} :
+                  - task: AzureRmWebAppDeployment@4
+                    displayName: 'Deploy webapp'
+                    inputs:
+                      ConnectionType: 'AzureRM'
+                      azureSubscription: ${{ parameters.azureService }}
+                      appType: 'webApp'
+                      WebAppName: '${{ vtartifact.destination }}'
+                      deployToSlotOrASE: true
+                      ResourceGroupName: '${{ parameters.resourceGroup }}'
+                      SlotName: '${{ parameters.slot }}'
+                      packageForLinux: '$(System.ArtifactsDirectory)/${{ vtartifact.artifactoryFolderName }}/$(artifactorySubfolderName)/${{ vtartifact.zip }}'
+                      enableCustomDeployment: true
+                      DeploymentType: 'zipDeploy'
+
+                      
+                - ${{ if eq(vtartifact.type, 'funapp') }} :
+                  - task: AzureFunctionApp@2
+                    displayName: 'Deploy funapp'
+                    inputs:
+                      azureSubscription: ${{ parameters.azureService }} 
+                      appType: 'functionApp'
+                      appName: '${{ vtartifact.destination }}'
+                      deployToSlotOrASE: true
+                      resourceGroupName: '${{ parameters.resourceGroup }}'
+                      slotName: '${{ parameters.slot }}'
+                      package: '$(System.ArtifactsDirectory)/${{ vtartifact.artifactoryFolderName }}/$(artifactorySubfolderName)/${{ vtartifact.zip }}'
+                      deploymentMethod: 'auto'
+                      AppSettings: >-
+                        -FUNCTIONS_EXTENSION_VERSION "~4"
+                        -FUNCTIONS_WORKER_RUNTIME "dotnet-isolated"
+
+              

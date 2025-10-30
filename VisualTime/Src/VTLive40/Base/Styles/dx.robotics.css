@@ -1,0 +1,451 @@
+﻿.dx-fieldset {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.dx-fieldset-header {
+  color: #00BCD4;
+  line-height: 24px;
+  padding: 12px 0px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.dx-field {
+  padding: .42em .4em;
+}
+.dx-field-label {
+  padding: 11px 0 8px 0;
+  min-height: 26px;
+  font-size: 12px;
+  color: #999999;
+}
+.dx-field-value {
+  position: relative;
+  padding-top: 11px;
+  padding-bottom: 8px;
+}
+.dx-field-value.dx-attention {
+  color: #e78747;
+}
+.dx-field-value.dx-attention:before {
+  display: inline-block;
+  content: '';
+  width: 15px;
+  height: 12px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAYAAAC9QufkAAAAiklEQVQoz2N43u7OgAMzA/FMKI1VDQMezXlA/B+IC0nVLAPEn6CaPwOxLCma10E1wvAGYjX7ImliQGIHENLMA8SPcGh+DMS8+DT3ojmXAY0/AZdmQyD+Q0AzSN4YXTMoLk+jKcSmGYTPwuIepjkXiyJ8OB+mWRqIP+JQxIBDHBT3MiDJtSTaCo97AMUmhvHkzy7qAAAAAElFTkSuQmCC);
+}
+.dx-field-value.dx-widget {
+  padding-left: 0;
+}
+.dx-field-value.dx-texteditor,
+.dx-field-value.dx-checkbox,
+.dx-field-value.dx-radiogroup,
+.dx-field-value.dx-slider {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.dx-field-value.dx-texteditor {
+  margin-top: -1px;
+}
+.dx-field-value.dx-button {
+  margin-top: 5px;
+  margin-bottom: 3px;
+  padding: 0;
+}
+.dx-field-value .dx-button,
+.dx-field-value.dx-button {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.dx-field-value .dx-button .dx-button-content,
+.dx-field-value.dx-button .dx-button-content {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+.dx-field-value .dx-button.dx-button-success,
+.dx-field-value.dx-button.dx-button-success {
+  color: #0f9d58;
+}
+.dx-field-value .dx-button.dx-button-success .dx-inkripple-wave,
+.dx-field-value.dx-button.dx-button-success .dx-inkripple-wave {
+  background-color: rgba(13, 83, 2, 0.26);
+}
+.dx-field-value .dx-button.dx-button-danger,
+.dx-field-value.dx-button.dx-button-danger {
+  color: #ff5252;
+}
+.dx-field-value .dx-button.dx-button-danger .dx-inkripple-wave,
+.dx-field-value.dx-button.dx-button-danger .dx-inkripple-wave {
+  background-color: rgba(176, 18, 10, 0.26);
+}
+.dx-field-value .dx-button.dx-button-default,
+.dx-field-value.dx-button.dx-button-default {
+  color: #2196f3;
+}
+.dx-field-value .dx-button.dx-button-default .dx-inkripple-wave,
+.dx-field-value.dx-button.dx-button-default .dx-inkripple-wave {
+  background-color: rgba(25, 118, 210, 0.26);
+}
+.dx-field-value .dx-button.dx-state-hover,
+.dx-field-value.dx-button.dx-state-hover,
+.dx-field-value .dx-button.dx-state-focused,
+.dx-field-value.dx-button.dx-state-focused {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.dx-field-value .dx-button.dx-button-success.dx-state-hover,
+.dx-field-value.dx-button.dx-button-success.dx-state-hover,
+.dx-field-value .dx-button.dx-button-success.dx-state-focused,
+.dx-field-value.dx-button.dx-button-success.dx-state-focused {
+  background-color: rgba(10, 143, 8, 0.06);
+}
+.dx-field-value .dx-button.dx-button-danger.dx-state-hover,
+.dx-field-value.dx-button.dx-button-danger.dx-state-hover,
+.dx-field-value .dx-button.dx-button-danger.dx-state-focused,
+.dx-field-value.dx-button.dx-button-danger.dx-state-focused {
+  background-color: rgba(221, 25, 29, 0.06);
+}
+.dx-field-value .dx-button.dx-button-default.dx-state-hover,
+.dx-field-value.dx-button.dx-button-default.dx-state-hover,
+.dx-field-value .dx-button.dx-button-default.dx-state-focused,
+.dx-field-value.dx-button.dx-button-default.dx-state-focused {
+  background-color: rgba(30, 136, 229, 0.06);
+}
+.dx-field-value .dx-button.dx-button-has-icon:not(.dx-button-has-text),
+.dx-field-value.dx-button.dx-button-has-icon:not(.dx-button-has-text),
+.dx-field-value .dx-button.dx-button-back,
+.dx-field-value.dx-button.dx-button-back {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.dx-field-value .dx-button.dx-button-has-icon:not(.dx-button-has-text) .dx-button-content,
+.dx-field-value.dx-button.dx-button-has-icon:not(.dx-button-has-text) .dx-button-content,
+.dx-field-value .dx-button.dx-button-back .dx-button-content,
+.dx-field-value.dx-button.dx-button-back .dx-button-content {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+.dx-field-value .dx-button.dx-button-has-icon:not(.dx-button-has-text).dx-button-success,
+.dx-field-value.dx-button.dx-button-has-icon:not(.dx-button-has-text).dx-button-success,
+.dx-field-value .dx-button.dx-button-back.dx-button-success,
+.dx-field-value.dx-button.dx-button-back.dx-button-success {
+  color: #0f9d58;
+}
+.dx-field-value .dx-button.dx-button-has-icon:not(.dx-button-has-text).dx-button-success .dx-inkripple-wave,
+.dx-field-value.dx-button.dx-button-has-icon:not(.dx-button-has-text).dx-button-success .dx-inkripple-wave,
+.dx-field-value .dx-button.dx-button-back.dx-button-success .dx-inkripple-wave,
+.dx-field-value.dx-button.dx-button-back.dx-button-success .dx-inkripple-wave {
+  background-color: rgba(13, 83, 2, 0.26);
+}
+.dx-field-value .dx-button.dx-button-has-icon:not(.dx-button-has-text).dx-button-danger,
+.dx-field-value.dx-button.dx-button-has-icon:not(.dx-button-has-text).dx-button-danger,
+.dx-field-value .dx-button.dx-button-back.dx-button-danger,
+.dx-field-value.dx-button.dx-button-back.dx-button-danger {
+  color: #ff5252;
+}
+.dx-field-value .dx-button.dx-button-has-icon:not(.dx-button-has-text).dx-button-danger .dx-inkripple-wave,
+.dx-field-value.dx-button.dx-button-has-icon:not(.dx-button-has-text).dx-button-danger .dx-inkripple-wave,
+.dx-field-value .dx-button.dx-button-back.dx-button-danger .dx-inkripple-wave,
+.dx-field-value.dx-button.dx-button-back.dx-button-danger .dx-inkripple-wave {
+  background-color: rgba(176, 18, 10, 0.26);
+}
+.dx-field-value .dx-button.dx-button-has-icon:not(.dx-button-has-text).dx-button-default,
+.dx-field-value.dx-button.dx-button-has-icon:not(.dx-button-has-text).dx-button-default,
+.dx-field-value .dx-button.dx-button-back.dx-button-default,
+.dx-field-value.dx-button.dx-button-back.dx-button-default {
+  color: #2196f3;
+}
+.dx-field-value .dx-button.dx-button-has-icon:not(.dx-button-has-text).dx-button-default .dx-inkripple-wave,
+.dx-field-value.dx-button.dx-button-has-icon:not(.dx-button-has-text).dx-button-default .dx-inkripple-wave,
+.dx-field-value .dx-button.dx-button-back.dx-button-default .dx-inkripple-wave,
+.dx-field-value.dx-button.dx-button-back.dx-button-default .dx-inkripple-wave {
+  background-color: rgba(25, 118, 210, 0.26);
+}
+.dx-field-value.dx-checkbox,
+.dx-field-value.dx-button,
+.dx-field-value.dx-switch,
+.dx-field-value.dx-radiogroup {
+  overflow: visible;
+}
+.dx-field-value.dx-radiogroup {
+  padding-top: 3px;
+}
+.dx-field-value.dx-checkbox {
+  padding-top: 14px;
+}
+.dx-field-value.dx-lookup {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.dx-field-value.dx-slider {
+  overflow: visible;
+  margin-top: 7px;
+  margin-bottom: 2px;
+}
+.dx-field-value.dx-switch {
+  height: 38px;
+  padding-top: 14px;
+}
+.dx-field-value:not(.dx-widget) {
+  overflow: visible;
+}
+.dx-field-value:not(.dx-widget) > .dx-texteditor:not(.dx-tagbox):not(.dx-textarea),
+.dx-field-value:not(.dx-widget) > .dx-checkbox,
+.dx-field-value:not(.dx-widget) > .dx-switch,
+.dx-field-value:not(.dx-widget) > .dx-lookup,
+.dx-field-value:not(.dx-widget) > .dx-slider {
+  position: absolute;
+  top: 50%;
+  left: auto;
+}
+.dx-field-value:not(.dx-widget) > .dx-switch {
+  padding-top: 3px;
+}
+.dx-field-value:not(.dx-widget) > .dx-checkbox {
+  padding-top: 3px;
+}
+.dx-field-value:not(.dx-widget) > .dx-texteditor,
+.dx-field-value:not(.dx-widget) > .dx-lookup,
+.dx-field-value:not(.dx-widget) > .dx-slider {
+  width: 100%;
+}
+.dx-field-value:not(.dx-widget) > .dx-texteditor {
+  margin-top: -11px;
+}
+.dx-field-value:not(.dx-widget) > .dx-tagbox {
+  margin-top: -12px;
+  margin-bottom: -12px;
+}
+.dx-field-value:not(.dx-widget) > .dx-autocomplete {
+  margin-right: 1px;
+  margin-left: 1px;
+}
+.dx-field-value:not(.dx-widget) > .dx-lookup {
+  margin-top: -11px;
+}
+.dx-field-value:not(.dx-widget) > .dx-slider {
+  margin-top: -3px;
+}
+.dx-field-value:not(.dx-widget) > .dx-slider-tooltip-position-top,
+.dx-field-value:not(.dx-widget) > .dx-slider-tooltip-position-bottom {
+  position: static;
+  margin: -9px 0 -8px 0;
+}
+.dx-field-value:not(.dx-widget) > .dx-selectbox.dx-selectbox-multiselect {
+  margin-bottom: -9px;
+  margin-left: -9px;
+}
+.dx-field-value:not(.dx-widget) > .dx-button,
+.dx-field-value:not(.dx-widget) > .dx-radiogroup {
+  margin-top: -6px;
+  margin-bottom: -8px;
+}
+.dx-field-value:not(.dx-widget) > .dx-button {
+  float: right;
+  margin-left: 3px;
+}
+.dx-field-value:not(.dx-widget) > .dx-button:before,
+.dx-field-value:not(.dx-widget) > .dx-button:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.dx-field-value:not(.dx-widget) > .dx-button:after {
+  clear: both;
+}
+.dx-field-value:not(.dx-widget) > .dx-tagbox {
+  margin-left: 0;
+}
+.dx-field-value:not(.dx-widget) > .dx-textarea {
+  margin-top: -13px;
+  margin-left: 1px;
+}
+.dx-field-value-static {
+  padding-top: 11px;
+  padding-bottom: 8px;
+}
+.dx-field-value:not(.dx-switch):not(.dx-checkbox):not(.dx-button),
+.dx-field-value-static {
+  width: 60%;
+}
+.dx-rtl .dx-field-value:not(.dx-widget) > .dx-texteditor,
+.dx-rtl.dx-field-value:not(.dx-widget) > .dx-texteditor,
+.dx-rtl .dx-field-value:not(.dx-widget) > .dx-checkbox,
+.dx-rtl.dx-field-value:not(.dx-widget) > .dx-checkbox,
+.dx-rtl .dx-field-value:not(.dx-widget) > .dx-switch,
+.dx-rtl.dx-field-value:not(.dx-widget) > .dx-switch,
+.dx-rtl .dx-field-value:not(.dx-widget) > .dx-lookup,
+.dx-rtl.dx-field-value:not(.dx-widget) > .dx-lookup,
+.dx-rtl .dx-field-value:not(.dx-widget) > .dx-slider,
+.dx-rtl.dx-field-value:not(.dx-widget) > .dx-slider {
+  left: -1px;
+  right: auto;
+}
+.dx-rtl .dx-field-value:not(.dx-widget) > .dx-button,
+.dx-rtl.dx-field-value:not(.dx-widget) > .dx-button {
+  float: left;
+  margin-left: 0;
+  margin-right: 3px;
+}
+
+.dx-fieldset {
+    margin-top:0px !important;
+    margin-bottom: 10px !important; 
+}
+
+
+
+.dx-fieldset{
+    padding-left: 0;
+    /*margin-left: 26px;*/
+}
+
+/*.dx-button-text {
+    font-size: 20px;
+}
+
+.dx-theme-android5 .dx-button-text {
+    line-height: 20px;
+}*/
+
+
+.dx-field-value {
+    width: 100% !important;
+}
+
+.dx-theme-tizen #start .dx-field-value {
+    color: lightgray;
+}
+
+.acceptButton{
+    color: #FF5C35 !important;
+}
+
+.innerCalCellTemplate{
+    /*width:30px !important;
+    height:30px !important;*/
+}
+
+.dx-calendar-other-view, .dx-calendar-other-month{
+    color: #fff;
+    background-color: #fff;
+}
+
+.dx-calendar-cell.dx-calendar-selected-date{
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow:  none !important;
+    box-shadow:  none !important;
+}
+
+.dx-icon-save {
+    color: #FF5C35 !important;
+}
+
+.dextremeGrid {
+    font-family: "Robotics" !important;
+    font-size: 11px !important;
+}
+
+.dx-header-row {
+    padding: 2px !important;
+    padding-left: 5px !important;
+    text-align: left !important;
+    background-color: #85a6ff !important;
+    font-weight: bold !important;
+    border: solid 1px #85a6ff !important;
+    color: #fff !important;
+}
+
+.dx-datagrid .dx-row > td {
+    border: none !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
+
+.dx-datagrid .dx-link {
+    text-decoration: none;
+}
+
+.dx-row-lines {
+    padding: 2px;
+    padding-left: 5px;
+    text-align: left;
+    border-left: solid 1px #b6cfd8;
+    background-color: #d7e5ea;
+}
+
+.dx-row-alt {
+    padding: 2px;
+    padding-left: 5px;
+    text-align: left;
+    border-left: solid 1px #b6cfd8;
+    background-color: #fff;
+}
+
+.dx-treeview .dx-treeview-node-container {
+    clear: both !important;
+}
+
+.roPopupIcon {
+    float: left;
+}
+
+.roPopupText {
+    float: left;
+    margin-top: 10px;
+    padding-left: 10px;
+    width: calc(100% - 32px);
+}
+
+.ro-icon-errorType-0 {
+    background-image: url(icons/exito.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.ro-icon-errorType-1 {
+    background-image: url(icons/error.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.ro-icon-errorType-2 {
+    background-image: url(icons/Info.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.ro-icon-errorType-3 {
+    background-image: url(icons/aviso.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.ro-icon-errorType-4{
+    background-image: url(icons/aviso.png);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+.dxbButton.btnFlat{
+    height:27px!important;
+}
+
+.dxeRadioButtonList_Material1 {
+    border: 0px solid #DCDCDC !important;
+}
+
+.dx-field-value:not(.dx-widget) > .dx-switch {
+    margin-top: -14px;
+}

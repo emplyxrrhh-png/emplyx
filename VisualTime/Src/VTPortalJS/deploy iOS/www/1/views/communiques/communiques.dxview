@@ -1,0 +1,53 @@
+<div data-options="dxView : { name: 'communiques', title: 'communiques', disableCache: true } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <!--ko with: subscribeBlock-->
+        <div class="bigProfile" data-options="dxViewPlaceholder: { viewName: 'bigUserInfo' }"></div>
+        <!-- /ko-->
+        <div class="dx-searchbar">
+            <div id="searchCommuniques" data-bind="dxTextBox: searchOptions"></div>
+        </div>
+        <div id="scrollview" style="clear:both" data-bind="dxScrollView: commScroll">
+            <div id="list" class="list-container communiques" data-bind="if: communiqueDS()">
+                <div data-bind="dxList: listcommuniques" >
+                    <div data-options="dxTemplate: {name: 'communiqueItem'}">
+                        <div class="listMenuItem">
+                            <div data-bind="css: $data.cssClass" class="listMenuItemIcon"></div>
+                            <div class="listMenuItemContent">
+                                <div data-bind="text: $data.Subject, css: $data.cssClassText"></div>
+
+                                <div> <span data-bind="text: $data.CreatedBy" class="smallTextDescriptionComm"></span><span style="float:right;margin-top: 6px;" data-bind="text: $data.SentOn" class="smallTextDescriptionComm"></span></div>
+
+                                <div class="smallTextDescriptionComm" data-bind="html: $data.Message"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <div data-bind="if: !communiqueDS()">
+                <div class="noDataCssClass"></div>
+                <!--<div class="noDataText" >Oops! No hay nada aquí...</div>-->
+            </div>
+        </div>
+
+        <div data-bind="dxLoadPanel: loadingPanel"> </div>
+
+        <div style="float:left;padding: 10px; position:absolute; bottom:10px; right:calc(60%); z-index:15005;">
+            <div id="btnNotRead" class="actionHome" data-bind="dxButton: notRead" style=" color:white; background: #F9A701 !important; bottom: 10px;"></div>
+        </div>
+        <div style="float:left; position:absolute; left:calc(50% - 25px); bottom:40px; z-index:15001;">
+            <div id="btnAllCom" class="actionHome" data-bind="dxButton: allComm" style=" color:white; background: #66c160 !important;"></div>
+        </div>
+
+        <div style="float:left;padding: 10px; position:absolute; bottom:10px; left:calc(60%);">
+            <div id="btnArchived" class="actionHome" data-bind="dxButton: archived" style=" color:white; background: #FF9C3F !important; bottom: 10px;"></div>
+        </div>
+
+    </div>
+	
+	

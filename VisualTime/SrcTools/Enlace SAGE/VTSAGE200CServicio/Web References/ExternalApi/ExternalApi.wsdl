@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ExternalApi" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://localhost:44365/datalink/ExternalApi.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://localhost:44365/datalink/ExternalApi.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://localhost:44365/datalink/ExternalApi.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Robotics.ExternalSystems.DataLink.RoboticsExternAccess" />
+      <xsd:import schemaLocation="https://localhost:44365/datalink/ExternalApi.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="https://localhost:44365/datalink/ExternalApi.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Robotics.ExternalSystems.DataLink" />
+      <xsd:import schemaLocation="https://localhost:44365/datalink/ExternalApi.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Robotics.Base.DTOs" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IExternalApi_CreateOrUpdateEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IExternalApi_CreateOrUpdateEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExternalApi_CreateOrUpdateDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateDocument" />
+  </wsdl:message>
+  <wsdl:message name="IExternalApi_CreateOrUpdateDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExternalApi_GetAccruals_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccruals" />
+  </wsdl:message>
+  <wsdl:message name="IExternalApi_GetAccruals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccrualsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExternalApi_GetAbsences_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbsences" />
+  </wsdl:message>
+  <wsdl:message name="IExternalApi_GetAbsences_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbsencesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExternalApi_CreateOrUpdateCalendar_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateCalendar" />
+  </wsdl:message>
+  <wsdl:message name="IExternalApi_CreateOrUpdateCalendar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateCalendarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExternalApi_CreateOrUpdateAbsence_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateAbsence" />
+  </wsdl:message>
+  <wsdl:message name="IExternalApi_CreateOrUpdateAbsence_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateAbsenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExternalApi_CreateOrUpdateHolidays_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateHolidays" />
+  </wsdl:message>
+  <wsdl:message name="IExternalApi_CreateOrUpdateHolidays_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateHolidaysResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExternalApi_GetPunches_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPunches" />
+  </wsdl:message>
+  <wsdl:message name="IExternalApi_GetPunches_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPunchesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExternalApi_GetPunchesBetweenDates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPunchesBetweenDates" />
+  </wsdl:message>
+  <wsdl:message name="IExternalApi_GetPunchesBetweenDates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPunchesBetweenDatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExternalApi_AddPunches_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPunches" />
+  </wsdl:message>
+  <wsdl:message name="IExternalApi_AddPunches_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPunchesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IExternalApi">
+    <wsdl:operation name="CreateOrUpdateEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExternalApi/CreateOrUpdateEmployee" message="tns:IExternalApi_CreateOrUpdateEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExternalApi/CreateOrUpdateEmployeeResponse" message="tns:IExternalApi_CreateOrUpdateEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExternalApi/CreateOrUpdateDocument" message="tns:IExternalApi_CreateOrUpdateDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExternalApi/CreateOrUpdateDocumentResponse" message="tns:IExternalApi_CreateOrUpdateDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccruals">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExternalApi/GetAccruals" message="tns:IExternalApi_GetAccruals_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExternalApi/GetAccrualsResponse" message="tns:IExternalApi_GetAccruals_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAbsences">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExternalApi/GetAbsences" message="tns:IExternalApi_GetAbsences_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExternalApi/GetAbsencesResponse" message="tns:IExternalApi_GetAbsences_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateCalendar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExternalApi/CreateOrUpdateCalendar" message="tns:IExternalApi_CreateOrUpdateCalendar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExternalApi/CreateOrUpdateCalendarResponse" message="tns:IExternalApi_CreateOrUpdateCalendar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateAbsence">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExternalApi/CreateOrUpdateAbsence" message="tns:IExternalApi_CreateOrUpdateAbsence_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExternalApi/CreateOrUpdateAbsenceResponse" message="tns:IExternalApi_CreateOrUpdateAbsence_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateHolidays">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExternalApi/CreateOrUpdateHolidays" message="tns:IExternalApi_CreateOrUpdateHolidays_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExternalApi/CreateOrUpdateHolidaysResponse" message="tns:IExternalApi_CreateOrUpdateHolidays_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPunches">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExternalApi/GetPunches" message="tns:IExternalApi_GetPunches_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExternalApi/GetPunchesResponse" message="tns:IExternalApi_GetPunches_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPunchesBetweenDates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExternalApi/GetPunchesBetweenDates" message="tns:IExternalApi_GetPunchesBetweenDates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExternalApi/GetPunchesBetweenDatesResponse" message="tns:IExternalApi_GetPunchesBetweenDates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPunches">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExternalApi/AddPunches" message="tns:IExternalApi_AddPunches_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExternalApi/AddPunchesResponse" message="tns:IExternalApi_AddPunches_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IExternalApi" type="tns:IExternalApi">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateOrUpdateEmployee">
+      <soap:operation soapAction="http://tempuri.org/IExternalApi/CreateOrUpdateEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateDocument">
+      <soap:operation soapAction="http://tempuri.org/IExternalApi/CreateOrUpdateDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccruals">
+      <soap:operation soapAction="http://tempuri.org/IExternalApi/GetAccruals" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAbsences">
+      <soap:operation soapAction="http://tempuri.org/IExternalApi/GetAbsences" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateCalendar">
+      <soap:operation soapAction="http://tempuri.org/IExternalApi/CreateOrUpdateCalendar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateAbsence">
+      <soap:operation soapAction="http://tempuri.org/IExternalApi/CreateOrUpdateAbsence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateHolidays">
+      <soap:operation soapAction="http://tempuri.org/IExternalApi/CreateOrUpdateHolidays" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPunches">
+      <soap:operation soapAction="http://tempuri.org/IExternalApi/GetPunches" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPunchesBetweenDates">
+      <soap:operation soapAction="http://tempuri.org/IExternalApi/GetPunchesBetweenDates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPunches">
+      <soap:operation soapAction="http://tempuri.org/IExternalApi/AddPunches" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExternalApi">
+    <wsdl:port name="BasicHttpBinding_IExternalApi" binding="tns:BasicHttpBinding_IExternalApi">
+      <soap:address location="http://localhost:8031/datalink/ExternalApi.svc/soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

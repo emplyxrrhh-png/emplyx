@@ -1,0 +1,32 @@
+<div data-options="dxView : { name: 'myDailyRecord', title: 'myDailyRecord', disableCache: true, width:'100%' } " >
+
+	<div id="smallUserInfo"></div>
+	<div id="dayRecordContent" style="height:90%">
+		<div style="clear:both;border-radius: 25px;height: calc(100% - 2rem);" class="card card-one" data-bind="dxScrollView: scrollContent">
+		
+			<div id="divEmployeeInfo">
+				<section class="triangle">
+					<div class="descResume">
+						<span data-bind="text: lblDailyRecordResume"></span>
+					</div>
+					<div class="descResumeDetail">
+						<span data-bind="text: lblDailyRecordMissing"></span>
+					</div>
+					<div class="descResumeDetail">
+						<span data-bind="text: lblDailyRecordPending"></span>
+					</div>
+				</section>
+			</div>
+
+			<br />
+			<div id="divCurrentMonth">
+				<div id="calendarContainer" style="background:unset;width:104% !important;margin-left:-6px" data-bind="dxCalendar: calendarOptions"></div>
+			</div>
+		
+		</div>
+
+	</div>
+
+	<div data-bind="dxLoadPanel: loadingPanel"> </div>
+   
+</div>

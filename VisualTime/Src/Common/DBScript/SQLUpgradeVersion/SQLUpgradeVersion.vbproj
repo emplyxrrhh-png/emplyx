@@ -1,0 +1,1177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SSDTUnitTestPath Condition="'$(SSDTUnitTestPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB</SSDTUnitTestPath>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup>
+    <SSDTPath Condition="'$(SSDTPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\130</SSDTPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Multitennant|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\CommonBin\</OutputPath>
+    <DocumentationFile>SQLUpgradeVersion.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{303C12FB-67E5-47A2-A67F-49BC5B1862EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SQLUpgradeVersion</RootNamespace>
+    <AssemblyName>SQLUpgradeVersion</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\CommonBin\</OutputPath>
+    <DocumentationFile>SQLUpgradeVersion.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\CommonBin\</OutputPath>
+    <DocumentationFile>SQLUpgradeVersion.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\AssemblyVersionInfo.vb">
+      <Link>AssemblyVersionInfo.vb</Link>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Content Include="Custom\Escada\PlanificacionPorFranjas.sql" />
+    <Content Include="Custom\Escada\FichaDePersonal.sql" />
+    <Content Include="Custom\ExtrusionesToledo-InformeDetalladoUsuariosExcel.sql" />
+    <Content Include="Custom\InformeAusenciasVacacionesAlcaliber.sql" />
+    <Content Include="Custom\CumplimientoHorarioHorasExcesoMayorDedicacionLleida.sql" />
+    <Content Include="Custom\Lear\Lear-HojaDePago.sql" />
+    <Content Include="Custom\Merck\Merk-InformeHorariosCS.sql" />
+    <Content Include="Custom\Merck\Merk-InformeDeTiempoSinTratarCS.sql" />
+    <Content Include="Custom\Merck\Merk-InformeDeFichajesCS.sql" />
+    <Content Include="Custom\Merck\Merk-ESMVSaldosaFechaFormatoHoras.sql" />
+    <Content Include="Custom\Merck\Merk-ESMVSaldosaFecha.sql" />
+    <Content Include="Custom\Merck\Merk-PuestosYHorariosPorEmpleado.sql" />
+    <Content Include="Custom\JustificacionesPendientesAPV.sql" />
+    <Content Include="Custom\Permisos Fase I.sql" />
+    <Content Include="Custom\Lear-InformeSOX.sql" />
+    <Content Include="Custom\Preciber\RegistroMensualJornadaConDNI_Preciber.sql" />
+    <Content Include="Custom\VSL\VSL-ControlDeSaldosPorEmpleado.sql" />
+    <Content Include="Custom\VSL\VSL-PartesPorProyectoYTotalizados.sql" />
+    <Content Include="Custom\VSL\VSL-PartesPorEmpleadoYTotalizados.sql" />
+    <Content Include="Database Texts\DATABASE.ONE.6540.EN.sql" />
+    <Content Include="Database Texts\DATABASE.6540.EN.sql" />
+    <Content Include="Database Texts\DATABASE.ONE.6540.ES.sql" />
+    <Content Include="Database Texts\DATABASE.6540.ES.sql" />
+    <Content Include="Database Texts\DATABASE.ONE.6540.FR.sql" />
+    <Content Include="Database Texts\DATABASE.6540.FR.sql" />
+    <Content Include="Database Texts\DATABASE.ONE.6540.IT.sql" />
+    <Content Include="Database Texts\DATABASE.6540.IT.sql" />
+    <Content Include="Database Texts\DATABASE.ONE.6540.POR.sql" />
+    <Content Include="Database Texts\DATABASE.6540.POR.sql" />
+    <Content Include="Database Texts\DATABASE.ONE.6540.SK.sql" />
+    <Content Include="Database Texts\DATABASE.6540.SK.sql" />
+    <Content Include="Database Texts\ONE_DatabaseFixedLanguageTexts.sql" />
+    <Content Include="Database Texts\Partial.sql" />
+    <Content Include="Database Texts\DatabaseFixedLanguageTexts.sql" />
+    <Content Include="Doc\CodingStandard.txt" />
+    <Content Include="En curso\Drop Candidates.sql" />
+    <Content Include="En curso\Patch1061.sql" />
+    <Content Include="Updates\Patch1046.sql" />
+    <Content Include="Updates\Patch1042.sql" />
+    <Content Include="Updates\Patch1036.sql" />
+    <Content Include="Informes DX\45CalendarioAnualUsuariosCompacto.sql" />
+    <Content Include="Updates\Patch1033.sql" />
+    <Content Include="Partials\Rules.sql" />
+    <Content Include="Updates\Patch1027.sql" />
+    <Content Include="Updates\Patch1025.sql" />
+    <Content Include="Updates\Patch1019.sql" />
+    <Content Include="Updates\Patch1016.sql" />
+    <Content Include="Partials\Collectives.sql" />
+    <Content Include="Updates\Patch1003.sql" />
+    <Content Include="Updates\Patch1000.sql" />
+    <Content Include="Updates\Patch1001.sql" />
+    <Content Include="Updates\Patch1002.sql" />
+    <Content Include="Updates\Patch1004.sql" />
+    <Content Include="Updates\Patch1005.sql" />
+    <Content Include="Updates\Patch1006.sql" />
+    <Content Include="Updates\Patch1007.sql" />
+    <Content Include="Updates\Patch1008.sql" />
+    <Content Include="Updates\Patch1009.sql" />
+    <Content Include="Updates\Patch1010.sql" />
+    <Content Include="Updates\Patch1011.sql" />
+    <Content Include="Updates\Patch1012.sql" />
+    <Content Include="Updates\Patch1013.sql" />
+    <Content Include="Updates\Patch1014.sql" />
+    <Content Include="Updates\Patch1015.sql" />
+    <Content Include="Updates\Patch1017.sql" />
+    <Content Include="Updates\Patch1018.sql" />
+    <Content Include="Updates\Patch1020.sql" />
+    <Content Include="Updates\Patch1021.sql" />
+    <Content Include="Updates\Patch1022.sql" />
+    <Content Include="Updates\Patch1023.sql" />
+    <Content Include="Updates\Patch1024.sql" />
+    <Content Include="Updates\Patch1026.sql" />
+    <Content Include="Updates\Patch1028.sql" />
+    <Content Include="Updates\Patch1029.sql" />
+    <Content Include="Updates\Patch1030.sql" />
+    <Content Include="Updates\Patch1031.sql" />
+    <Content Include="Updates\Patch1032.sql" />
+    <Content Include="Updates\Patch1034.sql" />
+    <Content Include="Updates\Patch1035.sql" />
+    <Content Include="Updates\Patch1037.sql" />
+    <Content Include="Updates\Patch1038.sql" />
+    <Content Include="Updates\Patch1039.sql" />
+    <Content Include="Updates\Patch1040.sql" />
+    <Content Include="Updates\Patch1041.sql" />
+    <Content Include="Updates\Patch1043.sql" />
+    <Content Include="Updates\Patch1044.sql" />
+    <Content Include="Updates\Patch1045.sql" />
+    <Content Include="Updates\Patch1047.sql" />
+    <Content Include="Updates\Patch1048.sql" />
+    <Content Include="Updates\Patch1049.sql" />
+    <Content Include="Updates\Patch1050.sql" />
+    <Content Include="Updates\Patch1051.sql" />
+    <Content Include="Updates\Patch1052.sql" />
+    <Content Include="Updates\Patch1053.sql" />
+    <Content Include="Updates\Patch1054.sql" />
+    <Content Include="Updates\Patch1055.sql" />
+    <Content Include="Updates\Patch1056.sql" />
+    <Content Include="Updates\Patch1057.sql" />
+    <Content Include="Updates\Patch1058.sql" />
+    <Content Include="Updates\Patch1059.sql" />
+    <Content Include="Updates\Patch1060.sql" />
+    <Content Include="Updates\RunOnceByVersion.sql" />
+    <Content Include="_Antiguos\Patch997.sql" />
+    <Content Include="Informes DX\44FichaDelUsuario.sql" />
+    <Content Include="_Antiguos\Patch993.sql" />
+    <Content Include="_Antiguos\Patch989.sql" />
+    <Content Include="_Antiguos\Patch980.sql" />
+    <Content Include="Informes DX\43LogsDeAcceso.sql" />
+    <Content Include="_Antiguos\Patch978.sql" />
+    <Content Include="_Antiguos\Patch994.sql" />
+    <Content Include="_Antiguos\Patch995.sql" />
+    <Content Include="_Antiguos\Patch996.sql" />
+    <Content Include="_Antiguos\Patch998.sql" />
+    <Content Include="_Antiguos\Patch999.sql" />
+    <Content Include="_Antiguos\Patch967.sql" />
+    <Content Include="_Antiguos\Patch964.sql" />
+    <Content Include="_Antiguos\Patch962.sql" />
+    <Content Include="_Antiguos\Patch960.sql" />
+    <Content Include="_Antiguos\Patch957.sql" />
+    <Content Include="_Antiguos\Patch952.sql" />
+    <Content Include="_Antiguos\Patch951.sql" />
+    <Content Include="_Antiguos\Patch948.sql" />
+    <Content Include="Informes DX\42Fichajesaldetallecontotales.sql" />
+    <Content Include="_Antiguos\Patch947.sql" />
+    <Content Include="_Antiguos\Patch944.sql" />
+    <Content Include="Partials\TerminalsSyncTasksIndexes.sql" />
+    <Content Include="Partials\TerminalsSyncTaskPartitioning.sql" />
+    <Content Include="_Antiguos\Patch931.sql" />
+    <Content Include="_Antiguos\Patch933.sql" />
+    <Content Include="_Antiguos\Patch930.sql" />
+    <Content Include="Informes DX\41CuadranteHorarios.sql" />
+    <Content Include="Informes DX\40MapaFerias.sql" />
+    <Content Include="_Antiguos\Patch945.sql" />
+    <Content Include="_Antiguos\Patch946.sql" />
+    <Content Include="_Antiguos\Patch949.sql" />
+    <Content Include="_Antiguos\Patch950.sql" />
+    <Content Include="_Antiguos\Patch953.sql" />
+    <Content Include="_Antiguos\Patch954.sql" />
+    <Content Include="_Antiguos\Patch955.sql" />
+    <Content Include="_Antiguos\Patch956.sql" />
+    <Content Include="_Antiguos\Patch958.sql" />
+    <Content Include="_Antiguos\Patch959.sql" />
+    <Content Include="_Antiguos\Patch961.sql" />
+    <Content Include="_Antiguos\Patch963.sql" />
+    <Content Include="_Antiguos\Patch965.sql" />
+    <Content Include="_Antiguos\Patch966.sql" />
+    <Content Include="_Antiguos\Patch968.sql" />
+    <Content Include="_Antiguos\Patch969.sql" />
+    <Content Include="_Antiguos\Patch970.sql" />
+    <Content Include="_Antiguos\Patch971.sql" />
+    <Content Include="_Antiguos\Patch972.sql" />
+    <Content Include="_Antiguos\Patch973.sql" />
+    <Content Include="_Antiguos\Patch974.sql" />
+    <Content Include="_Antiguos\Patch975.sql" />
+    <Content Include="_Antiguos\Patch976.sql" />
+    <Content Include="_Antiguos\Patch977.sql" />
+    <Content Include="_Antiguos\Patch979.sql" />
+    <Content Include="_Antiguos\Patch981.sql" />
+    <Content Include="_Antiguos\Patch982.sql" />
+    <Content Include="_Antiguos\Patch983.sql" />
+    <Content Include="_Antiguos\Patch984.sql" />
+    <Content Include="_Antiguos\Patch985.sql" />
+    <Content Include="_Antiguos\Patch986.sql" />
+    <Content Include="_Antiguos\Patch987.sql" />
+    <Content Include="_Antiguos\Patch988.sql" />
+    <Content Include="_Antiguos\Patch990.sql" />
+    <Content Include="_Antiguos\Patch991.sql" />
+    <Content Include="_Antiguos\Patch992.sql" />
+    <Content Include="_Antiguos\Patch922.sql" />
+    <Content Include="_Antiguos\Patch921.sql" />
+    <Content Include="_Antiguos\Patch918.sql" />
+    <Content Include="_Antiguos\Patch917.sql" />
+    <Content Include="Partials\mapadeferias.sql" />
+    <Content Include="Informes DX\38SaldosMensuales.sql" />
+    <Content Include="Informes DX\37DiasConFichajesImpares.sql" />
+    <Content Include="Informes DX\36ListaUsuarios.sql" />
+    <Content Include="Informes DX\35VisitantesPresentes.sql" />
+    <Content Include="Informes DX\34TarjetasEnUso.sql" />
+    <Content Include="Informes DX\32DocumentosPendientesEntregar.sql" />
+    <Content Include="Informes DX\33InformePresentes.sql" />
+    <Content Include="Informes DX\39SaldosDiaDia.sql" />
+    <Content Include="Partials\Template.sql" />
+    <Content Include="_Antiguos\Patch871.sql" />
+    <Content Include="_Antiguos\Patch870.sql" />
+    <Content Include="_Antiguos\Patch867.sql" />
+    <Content Include="_Antiguos\Patch866.sql" />
+    <Content Include="_Antiguos\Patch862.sql" />
+    <Content Include="_Antiguos\Patch856.sql" />
+    <Content Include="Informes DX\31ListaTareasDetalladas.sql" />
+    <Content Include="Partials\DocumentsAndPerformanceBIS.sql" />
+    <Content Include="_Antiguos\Patch872.sql" />
+    <Content Include="_Antiguos\Patch873.sql" />
+    <Content Include="_Antiguos\Patch874.sql" />
+    <Content Include="_Antiguos\Patch875.sql" />
+    <Content Include="_Antiguos\Patch876.sql" />
+    <Content Include="_Antiguos\Patch877.sql" />
+    <Content Include="_Antiguos\Patch878.sql" />
+    <Content Include="_Antiguos\Patch879.sql" />
+    <Content Include="_Antiguos\Patch880.sql" />
+    <Content Include="_Antiguos\Patch881.sql" />
+    <Content Include="_Antiguos\Patch882.sql" />
+    <Content Include="_Antiguos\Patch883.sql" />
+    <Content Include="_Antiguos\Patch884.sql" />
+    <Content Include="_Antiguos\Patch885.sql" />
+    <Content Include="_Antiguos\Patch886.sql" />
+    <Content Include="_Antiguos\Patch887.sql" />
+    <Content Include="_Antiguos\Patch888.sql" />
+    <Content Include="_Antiguos\Patch889.sql" />
+    <Content Include="_Antiguos\Patch890.sql" />
+    <Content Include="_Antiguos\Patch891.sql" />
+    <Content Include="_Antiguos\Patch892.sql" />
+    <Content Include="_Antiguos\Patch893.sql" />
+    <Content Include="_Antiguos\Patch894.sql" />
+    <Content Include="_Antiguos\Patch895.sql" />
+    <Content Include="_Antiguos\Patch896.sql" />
+    <Content Include="_Antiguos\Patch897.sql" />
+    <Content Include="_Antiguos\Patch898.sql" />
+    <Content Include="_Antiguos\Patch899.sql" />
+    <Content Include="_Antiguos\Patch900.sql" />
+    <Content Include="_Antiguos\Patch901.sql" />
+    <Content Include="_Antiguos\Patch902.sql" />
+    <Content Include="_Antiguos\Patch903.sql" />
+    <Content Include="_Antiguos\Patch904.sql" />
+    <Content Include="_Antiguos\Patch905.sql" />
+    <Content Include="_Antiguos\Patch906.sql" />
+    <Content Include="_Antiguos\Patch907.sql" />
+    <Content Include="_Antiguos\Patch908.sql" />
+    <Content Include="_Antiguos\Patch909.sql" />
+    <Content Include="_Antiguos\Patch910.sql" />
+    <Content Include="_Antiguos\Patch911.sql" />
+    <Content Include="_Antiguos\Patch912.sql" />
+    <Content Include="_Antiguos\Patch913.sql" />
+    <Content Include="_Antiguos\Patch914.sql" />
+    <Content Include="_Antiguos\Patch915.sql" />
+    <Content Include="_Antiguos\Patch916.sql" />
+    <Content Include="_Antiguos\Patch919.sql" />
+    <Content Include="_Antiguos\Patch920.sql" />
+    <Content Include="_Antiguos\Patch923.sql" />
+    <Content Include="_Antiguos\Patch924.sql" />
+    <Content Include="_Antiguos\Patch925.sql" />
+    <Content Include="_Antiguos\Patch926.sql" />
+    <Content Include="_Antiguos\Patch927.sql" />
+    <Content Include="_Antiguos\Patch928.sql" />
+    <Content Include="_Antiguos\Patch929.sql" />
+    <Content Include="_Antiguos\Patch932.sql" />
+    <Content Include="_Antiguos\Patch934.sql" />
+    <Content Include="_Antiguos\Patch935.sql" />
+    <Content Include="_Antiguos\Patch936.sql" />
+    <Content Include="_Antiguos\Patch937.sql" />
+    <Content Include="_Antiguos\Patch938.sql" />
+    <Content Include="_Antiguos\Patch939.sql" />
+    <Content Include="_Antiguos\Patch940.sql" />
+    <Content Include="_Antiguos\Patch941.sql" />
+    <Content Include="_Antiguos\Patch942.sql" />
+    <Content Include="_Antiguos\Patch943.sql" />
+    <Content Include="_Antiguos\Patch839.sql" />
+    <Content Include="Informes DX\30SeguimientoSolicitudesExcel.sql" />
+    <Content Include="Partials\DocumentsAndPerformance.sql" />
+    <Content Include="_Antiguos\Patch833.sql" />
+    <Content Include="Partials\portalPerformance.sql" />
+    <Content Include="_Antiguos\Patch826.sql" />
+    <Content Include="_Antiguos\Patch822.sql" />
+    <Content Include="_Antiguos\Patch812.sql" />
+    <Content Include="_Antiguos\Patch793.sql" />
+    <Content Include="_Antiguos\Patch804.sql" />
+    <Content Include="_Antiguos\Patch779.sql" />
+    <Content Include="_Antiguos\Patch769.sql" />
+    <Content Include="_Antiguos\Patch767.sql" />
+    <Content Include="_Antiguos\Patch759.sql" />
+    <Content Include="_Antiguos\Patch757.sql" />
+    <Content Include="_Antiguos\Patch756.sql" />
+    <Content Include="_Antiguos\Patch768.sql" />
+    <Content Include="_Antiguos\Patch770.sql" />
+    <Content Include="_Antiguos\Patch771.sql" />
+    <Content Include="_Antiguos\Patch772.sql" />
+    <Content Include="_Antiguos\Patch773.sql" />
+    <Content Include="_Antiguos\Patch774.sql" />
+    <Content Include="_Antiguos\Patch775.sql" />
+    <Content Include="_Antiguos\Patch776.sql" />
+    <Content Include="_Antiguos\Patch777.sql" />
+    <Content Include="_Antiguos\Patch778.sql" />
+    <Content Include="_Antiguos\Patch780.sql" />
+    <Content Include="_Antiguos\Patch781.sql" />
+    <Content Include="_Antiguos\Patch782.sql" />
+    <Content Include="_Antiguos\Patch783.sql" />
+    <Content Include="_Antiguos\Patch784.sql" />
+    <Content Include="_Antiguos\Patch785.sql" />
+    <Content Include="_Antiguos\Patch786.sql" />
+    <Content Include="_Antiguos\Patch787.sql" />
+    <Content Include="_Antiguos\Patch788.sql" />
+    <Content Include="_Antiguos\Patch789.sql" />
+    <Content Include="_Antiguos\Patch790.sql" />
+    <Content Include="_Antiguos\Patch791.sql" />
+    <Content Include="_Antiguos\Patch792.sql" />
+    <Content Include="_Antiguos\Patch794.sql" />
+    <Content Include="_Antiguos\Patch795.sql" />
+    <Content Include="_Antiguos\Patch796.sql" />
+    <Content Include="_Antiguos\Patch797.sql" />
+    <Content Include="_Antiguos\Patch798.sql" />
+    <Content Include="_Antiguos\Patch800.sql" />
+    <Content Include="_Antiguos\Patch801.sql" />
+    <Content Include="_Antiguos\Patch802.sql" />
+    <Content Include="_Antiguos\Patch803.sql" />
+    <Content Include="_Antiguos\Patch805.sql" />
+    <Content Include="_Antiguos\Patch806.sql" />
+    <Content Include="_Antiguos\Patch807.sql" />
+    <Content Include="_Antiguos\Patch808.sql" />
+    <Content Include="_Antiguos\Patch809.sql" />
+    <Content Include="_Antiguos\Patch810.sql" />
+    <Content Include="_Antiguos\Patch811.sql" />
+    <Content Include="_Antiguos\Patch813.sql" />
+    <Content Include="_Antiguos\Patch814.sql" />
+    <Content Include="_Antiguos\Patch815.sql" />
+    <Content Include="_Antiguos\Patch816.sql" />
+    <Content Include="_Antiguos\Patch817.sql" />
+    <Content Include="_Antiguos\Patch818.sql" />
+    <Content Include="_Antiguos\Patch819.sql" />
+    <Content Include="_Antiguos\Patch820.sql" />
+    <Content Include="_Antiguos\Patch821.sql" />
+    <Content Include="_Antiguos\Patch824.sql" />
+    <Content Include="_Antiguos\Patch823.sql" />
+    <Content Include="_Antiguos\Patch825.sql" />
+    <Content Include="_Antiguos\Patch827.sql" />
+    <Content Include="_Antiguos\Patch828.sql" />
+    <Content Include="_Antiguos\Patch829.sql" />
+    <Content Include="_Antiguos\Patch830.sql" />
+    <Content Include="_Antiguos\Patch831.sql" />
+    <Content Include="_Antiguos\Patch832.sql" />
+    <Content Include="_Antiguos\Patch834.sql" />
+    <Content Include="_Antiguos\Patch835.sql" />
+    <Content Include="_Antiguos\Patch836.sql" />
+    <Content Include="_Antiguos\Patch837.sql" />
+    <Content Include="_Antiguos\Patch838.sql" />
+    <Content Include="_Antiguos\Patch840.sql" />
+    <Content Include="_Antiguos\Patch841.sql" />
+    <Content Include="_Antiguos\Patch842.sql" />
+    <Content Include="_Antiguos\Patch843.sql" />
+    <Content Include="_Antiguos\Patch844.sql" />
+    <Content Include="_Antiguos\Patch845.sql" />
+    <Content Include="_Antiguos\Patch846.sql" />
+    <Content Include="_Antiguos\Patch847.sql" />
+    <Content Include="_Antiguos\Patch848.sql" />
+    <Content Include="_Antiguos\Patch849.sql" />
+    <Content Include="_Antiguos\Patch850.sql" />
+    <Content Include="_Antiguos\Patch851.sql" />
+    <Content Include="_Antiguos\Patch852.sql" />
+    <Content Include="_Antiguos\Patch853.sql" />
+    <Content Include="_Antiguos\Patch854.sql" />
+    <Content Include="_Antiguos\Patch855.sql" />
+    <Content Include="_Antiguos\Patch857.sql" />
+    <Content Include="_Antiguos\Patch858.sql" />
+    <Content Include="_Antiguos\Patch859.sql" />
+    <Content Include="_Antiguos\Patch861.sql" />
+    <Content Include="_Antiguos\Patch860.sql" />
+    <Content Include="_Antiguos\Patch863.sql" />
+    <Content Include="_Antiguos\Patch864.sql" />
+    <Content Include="_Antiguos\Patch865.sql" />
+    <Content Include="_Antiguos\Patch868.sql" />
+    <Content Include="_Antiguos\Patch869.sql" />
+    <Content Include="Updates\UpgradeFromNewONE.sql" />
+    <Content Include="_Antiguos\Patch799.sql" />
+    <Content Include="_Antiguos\Patch748.sql" />
+    <Content Include="Informes DX\29CalendarioAnualUsuariosCompacto.sql" />
+    <Content Include="_Antiguos\Patch741.sql" />
+    <Content Include="_Antiguos\Patch740.sql" />
+    <Content Include="_Antiguos\Patch739.sql" />
+    <Content Include="_Antiguos\Patch736.sql" />
+    <Content Include="_Antiguos\Patch738.sql" />
+    <Content Include="_Antiguos\Patch737.sql" />
+    <Content Include="_Antiguos\Patch735.sql" />
+    <Content Include="_Antiguos\Patch732.sql" />
+    <Content Include="_Antiguos\Patch721.sql" />
+    <Content Include="_Antiguos\Patch720.sql" />
+    <Content Include="_Antiguos\Patch719.sql" />
+    <Content Include="_Antiguos\Patch714.sql" />
+    <Content Include="_Antiguos\Patch713.sql" />
+    <Content Include="_Antiguos\Patch712.sql" />
+    <Content Include="_Antiguos\Patch709.sql" />
+    <Content Include="Informes DX\28PrevisionDelAbsentismo.sql" />
+    <Content Include="_Antiguos\Patch705.sql" />
+    <Content Include="_Antiguos\Patch703.sql" />
+    <Content Include="_Antiguos\Patch733.sql" />
+    <Content Include="_Antiguos\Patch734.sql" />
+    <Content Include="_Antiguos\Patch742.sql" />
+    <Content Include="_Antiguos\Patch743.sql" />
+    <Content Include="_Antiguos\Patch744.sql" />
+    <Content Include="_Antiguos\Patch745.sql" />
+    <Content Include="_Antiguos\Patch746.sql" />
+    <Content Include="_Antiguos\Patch747.sql" />
+    <Content Include="_Antiguos\Patch749.sql" />
+    <Content Include="_Antiguos\Patch750.sql" />
+    <Content Include="_Antiguos\Patch751.sql" />
+    <Content Include="_Antiguos\Patch752.sql" />
+    <Content Include="_Antiguos\Patch753.sql" />
+    <Content Include="_Antiguos\Patch754.sql" />
+    <Content Include="_Antiguos\Patch755.sql" />
+    <Content Include="_Antiguos\Patch758.sql" />
+    <Content Include="_Antiguos\Patch760.sql" />
+    <Content Include="_Antiguos\Patch761.sql" />
+    <Content Include="_Antiguos\Patch762.sql" />
+    <Content Include="_Antiguos\Patch763.sql" />
+    <Content Include="_Antiguos\Patch764.sql" />
+    <Content Include="_Antiguos\Patch765.sql" />
+    <Content Include="_Antiguos\Patch766.sql" />
+    <Content Include="_Antiguos\Patch698.sql" />
+    <Content Include="_Antiguos\Patch695.sql" />
+    <Content Include="_Antiguos\Patch692.sql" />
+    <Content Include="Informes DX\27CalendarioSemanalUsuarios.sql" />
+    <Content Include="_Antiguos\Patch682.sql" />
+    <Content Include="_Antiguos\Patch669.sql" />
+    <Content Include="Informes DX\26Bradford.sql" />
+    <Content Include="_Antiguos\Patch660.sql" />
+    <Content Include="_Antiguos\Patch674.sql" />
+    <Content Include="_Antiguos\Patch654.sql" />
+    <Content Include="_Antiguos\Patch641.sql" />
+    <Content Include="_Antiguos\Patch640.sql" />
+    <Content Include="_Antiguos\Patch638.sql" />
+    <Content Include="_Antiguos\Patch636.sql" />
+    <Content Include="_Antiguos\Patch635.sql" />
+    <Content Include="Informes DX\25PagosPorContrato.sql" />
+    <Content Include="_Antiguos\Patch613.sql" />
+    <Content Include="_Antiguos\Patch617.sql" />
+    <Content Include="_Antiguos\Patch623.sql" />
+    <Content Include="Custom\IngenieriaMagneticaAplicadaSLU-FichaDelEmpleado.sql" />
+    <Content Include="Informes DX\24AuditoriaDeFichajes.sql" />
+    <Content Include="_Antiguos\Patch593.sql" />
+    <Content Include="_Antiguos\Patch587.sql" />
+    <Content Include="_Antiguos\Patch584.sql" />
+    <Content Include="_Antiguos\Patch586.sql" />
+    <Content Include="_Antiguos\Patch581.sql" />
+    <Content Include="Informes DX\23TareasDiariasPorUsuario.sql" />
+    <Content Include="Informes DX\22ListaTareas.sql" />
+    <Content Include="_Antiguos\Patch575.sql" />
+    <Content Include="_Antiguos\Patch574.sql" />
+    <Content Include="Informes DX\16SeguimientoPlanHorarioUsuarios.sql" />
+    <Content Include="_Antiguos\Patch572.sql" />
+    <Content Include="_Antiguos\Patch570.sql" />
+    <Content Include="_Antiguos\Patch569.sql" />
+    <Content Include="Informes DX\20AccesosPorZonas.sql" />
+    <Content Include="_Antiguos\Patch563.sql" />
+    <Content Include="_Antiguos\Patch560.sql" />
+    <Content Include="Informes DX\19ListadoTotalComedor.sql" />
+    <Content Include="Informes DX\18ListadoDiarioComedor.sql" />
+    <Content Include="_Antiguos\Patch557.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Database Texts\Database.LNG.xlsx" />
+    <None Include="Informes DX\DBPatchIndex.vtu" />
+    <None Include="InitialDB\InitBBDD_ONE_VT654_SQL2019.bak" />
+    <None Include="InitialDB\InitBBDD_VT654_SQL2019.bak" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Updates\DBPatchIndex.vtu" />
+    <None Include="VisualTimeStarter\NewOneHR.rar" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_Antiguos\Patch551.sql" />
+    <Content Include="Informes DX\17QuienDeberiaHaberLlegado.sql" />
+    <Content Include="_Antiguos\Patch550.sql" />
+    <Content Include="_Antiguos\Patch543.sql" />
+    <Content Include="_Antiguos\Patch542.sql" />
+    <Content Include="_Antiguos\Patch539.sql" />
+    <Content Include="_Antiguos\Patch536.sql" />
+    <Content Include="_Antiguos\Patch535.sql" />
+    <Content Include="Informes DX\21SeguimientoIrregularidades.sql" />
+    <Content Include="_Antiguos\Patch532.sql" />
+    <Content Include="_Antiguos\Patch530.sql" />
+    <Content Include="Informes DX\14InformeDetalladoUsuarios.sql" />
+    <Content Include="Informes DX\13CalendarioSemanalGrupos.sql" />
+    <Content Include="_Antiguos\Patch529.sql" />
+    <Content Include="Informes DX\09CalendarioMensualGrupos.sql" />
+    <Content Include="Informes DX\10CalendarioMensualUsuarios.sql" />
+    <Content Include="Informes DX\11CalendarioAnualUsuarios.sql" />
+    <Content Include="Informes DX\12PorcentajeAbsentismo.sql" />
+    <Content Include="Informes DX\08CumplenCriterio.sql" />
+    <Content Include="_Antiguos\Patch526.sql" />
+    <Content Include="_Antiguos\Patch528.sql" />
+    <Content Include="_Antiguos\Patch531.sql" />
+    <Content Include="_Antiguos\Patch533.sql" />
+    <Content Include="_Antiguos\Patch534.sql" />
+    <Content Include="_Antiguos\Patch537.sql" />
+    <Content Include="_Antiguos\Patch538.sql" />
+    <Content Include="_Antiguos\Patch540.sql" />
+    <Content Include="_Antiguos\Patch541.sql" />
+    <Content Include="_Antiguos\Patch544.sql" />
+    <Content Include="_Antiguos\Patch545.sql" />
+    <Content Include="_Antiguos\Patch546.sql" />
+    <Content Include="_Antiguos\Patch547.sql" />
+    <Content Include="_Antiguos\Patch548.sql" />
+    <Content Include="_Antiguos\Patch549.sql" />
+    <Content Include="_Antiguos\Patch552.sql" />
+    <Content Include="_Antiguos\Patch553.sql" />
+    <Content Include="_Antiguos\Patch554.sql" />
+    <Content Include="_Antiguos\Patch555.sql" />
+    <Content Include="_Antiguos\Patch556.sql" />
+    <Content Include="_Antiguos\Patch558.sql" />
+    <Content Include="_Antiguos\Patch559.sql" />
+    <Content Include="_Antiguos\Patch561.sql" />
+    <Content Include="_Antiguos\Patch562.sql" />
+    <Content Include="_Antiguos\Patch564.sql" />
+    <Content Include="_Antiguos\Patch565.sql" />
+    <Content Include="_Antiguos\Patch566.sql" />
+    <Content Include="_Antiguos\Patch567.sql" />
+    <Content Include="_Antiguos\Patch568.sql" />
+    <Content Include="_Antiguos\Patch571.sql" />
+    <Content Include="_Antiguos\Patch573.sql" />
+    <Content Include="_Antiguos\Patch576.sql" />
+    <Content Include="_Antiguos\Patch577.sql" />
+    <Content Include="_Antiguos\Patch578.sql" />
+    <Content Include="_Antiguos\Patch579.sql" />
+    <Content Include="_Antiguos\Patch580.sql" />
+    <Content Include="_Antiguos\Patch582.sql" />
+    <Content Include="_Antiguos\Patch583.sql" />
+    <Content Include="_Antiguos\Patch585.sql" />
+    <Content Include="_Antiguos\Patch588.sql" />
+    <Content Include="_Antiguos\Patch589.sql" />
+    <Content Include="_Antiguos\Patch590.sql" />
+    <Content Include="_Antiguos\Patch591.sql" />
+    <Content Include="_Antiguos\Patch592.sql" />
+    <Content Include="_Antiguos\Patch594.sql" />
+    <Content Include="_Antiguos\Patch595.sql" />
+    <Content Include="_Antiguos\Patch596.sql" />
+    <Content Include="_Antiguos\Patch597.sql" />
+    <Content Include="_Antiguos\Patch598.sql" />
+    <Content Include="_Antiguos\Patch599.sql" />
+    <Content Include="_Antiguos\Patch600.sql" />
+    <Content Include="_Antiguos\Patch601.sql" />
+    <Content Include="_Antiguos\Patch602.sql" />
+    <Content Include="_Antiguos\Patch603.sql" />
+    <Content Include="_Antiguos\Patch604.sql" />
+    <Content Include="_Antiguos\Patch605.sql" />
+    <Content Include="_Antiguos\Patch606.sql" />
+    <Content Include="_Antiguos\Patch607.sql" />
+    <Content Include="_Antiguos\Patch608.sql" />
+    <Content Include="_Antiguos\Patch609.sql" />
+    <Content Include="_Antiguos\Patch610.sql" />
+    <Content Include="_Antiguos\Patch611.sql" />
+    <Content Include="_Antiguos\Patch612.sql" />
+    <Content Include="_Antiguos\Patch614.sql" />
+    <Content Include="_Antiguos\Patch615.sql" />
+    <Content Include="_Antiguos\Patch616.sql" />
+    <Content Include="_Antiguos\Patch618.sql" />
+    <Content Include="_Antiguos\Patch619.sql" />
+    <Content Include="_Antiguos\Patch620.sql" />
+    <Content Include="_Antiguos\Patch621.sql" />
+    <Content Include="_Antiguos\Patch622.sql" />
+    <Content Include="_Antiguos\Patch624.sql" />
+    <Content Include="_Antiguos\Patch625.sql" />
+    <Content Include="_Antiguos\Patch626.sql" />
+    <Content Include="_Antiguos\Patch627.sql" />
+    <Content Include="_Antiguos\Patch628.sql" />
+    <Content Include="_Antiguos\Patch629.sql" />
+    <Content Include="_Antiguos\Patch630.sql" />
+    <Content Include="_Antiguos\Patch631.sql" />
+    <Content Include="_Antiguos\Patch632.sql" />
+    <Content Include="_Antiguos\Patch633.sql" />
+    <Content Include="_Antiguos\Patch634.sql" />
+    <Content Include="_Antiguos\Patch637.sql" />
+    <Content Include="_Antiguos\Patch639.sql" />
+    <Content Include="_Antiguos\Patch642.sql" />
+    <Content Include="_Antiguos\Patch643.sql" />
+    <Content Include="_Antiguos\Patch644.sql" />
+    <Content Include="_Antiguos\Patch645.sql" />
+    <Content Include="_Antiguos\Patch646.sql" />
+    <Content Include="_Antiguos\Patch647.sql" />
+    <Content Include="_Antiguos\Patch648.sql" />
+    <Content Include="_Antiguos\Patch649.sql" />
+    <Content Include="_Antiguos\Patch650.sql" />
+    <Content Include="_Antiguos\Patch651.sql" />
+    <Content Include="_Antiguos\Patch652.sql" />
+    <Content Include="_Antiguos\Patch653.sql" />
+    <Content Include="_Antiguos\Patch655.sql" />
+    <Content Include="_Antiguos\Patch656.sql" />
+    <Content Include="_Antiguos\Patch657.sql" />
+    <Content Include="_Antiguos\Patch658.sql" />
+    <Content Include="_Antiguos\Patch659.sql" />
+    <Content Include="_Antiguos\Patch661.sql" />
+    <Content Include="_Antiguos\Patch662.sql" />
+    <Content Include="_Antiguos\Patch663.sql" />
+    <Content Include="_Antiguos\Patch664.sql" />
+    <Content Include="_Antiguos\Patch665.sql" />
+    <Content Include="_Antiguos\Patch666.sql" />
+    <Content Include="_Antiguos\Patch667.sql" />
+    <Content Include="_Antiguos\Patch668.sql" />
+    <Content Include="_Antiguos\Patch670.sql" />
+    <Content Include="_Antiguos\Patch671.sql" />
+    <Content Include="_Antiguos\Patch672.sql" />
+    <Content Include="_Antiguos\Patch673.sql" />
+    <Content Include="_Antiguos\Patch675.sql" />
+    <Content Include="_Antiguos\Patch676.sql" />
+    <Content Include="_Antiguos\Patch677.sql" />
+    <Content Include="_Antiguos\Patch678.sql" />
+    <Content Include="_Antiguos\Patch679.sql" />
+    <Content Include="_Antiguos\Patch680.sql" />
+    <Content Include="_Antiguos\Patch681.sql" />
+    <Content Include="_Antiguos\Patch683.sql" />
+    <Content Include="_Antiguos\Patch684.sql" />
+    <Content Include="_Antiguos\Patch685.sql" />
+    <Content Include="_Antiguos\Patch686.sql" />
+    <Content Include="_Antiguos\Patch687.sql" />
+    <Content Include="_Antiguos\Patch688.sql" />
+    <Content Include="_Antiguos\Patch689.sql" />
+    <Content Include="_Antiguos\Patch690.sql" />
+    <Content Include="_Antiguos\Patch691.sql" />
+    <Content Include="_Antiguos\Patch693.sql" />
+    <Content Include="_Antiguos\Patch694.sql" />
+    <Content Include="_Antiguos\Patch696.sql" />
+    <Content Include="_Antiguos\Patch697.sql" />
+    <Content Include="_Antiguos\Patch699.sql" />
+    <Content Include="_Antiguos\Patch700.sql" />
+    <Content Include="_Antiguos\Patch701.sql" />
+    <Content Include="_Antiguos\Patch702.sql" />
+    <Content Include="_Antiguos\Patch704.sql" />
+    <Content Include="_Antiguos\Patch706.sql" />
+    <Content Include="_Antiguos\Patch707.sql" />
+    <Content Include="_Antiguos\Patch708.sql" />
+    <Content Include="_Antiguos\Patch710.sql" />
+    <Content Include="_Antiguos\Patch711.sql" />
+    <Content Include="_Antiguos\Patch716.sql" />
+    <Content Include="_Antiguos\Patch715.sql" />
+    <Content Include="_Antiguos\Patch717.sql" />
+    <Content Include="_Antiguos\Patch718.sql" />
+    <Content Include="_Antiguos\Patch723.sql" />
+    <Content Include="_Antiguos\Patch722.sql" />
+    <Content Include="_Antiguos\Patch724.sql" />
+    <Content Include="_Antiguos\Patch725.sql" />
+    <Content Include="_Antiguos\Patch727.sql" />
+    <Content Include="_Antiguos\Patch726.sql" />
+    <Content Include="_Antiguos\Patch728.sql" />
+    <Content Include="_Antiguos\Patch729.sql" />
+    <Content Include="_Antiguos\Patch730.sql" />
+    <Content Include="_Antiguos\Patch731.sql" />
+    <Content Include="VisualTimeStarter\Inicialización BBD Starter.sql" />
+    <Content Include="Custom\IntegraciónSuprema.sql" />
+    <Content Include="_Antiguos\Patch527.sql" />
+    <Content Include="Informes DX\07RegistroMensualJornada.sql" />
+    <Content Include="_Antiguos\Patch521.sql" />
+    <Content Include="_Antiguos\Patch519.sql" />
+    <Content Include="_Antiguos\Patch520.sql" />
+    <Content Include="_Antiguos\Patch518.sql" />
+    <Content Include="_Antiguos\Patch517.sql" />
+    <Content Include="Informes DX\05ControlVacacionesDias.sql" />
+    <Content Include="Informes DX\06ControlVacacionesHoras.sql" />
+    <Content Include="_Antiguos\Patch516.sql" />
+    <Content Include="_Antiguos\Patch515.sql" />
+    <Content Include="_Antiguos\Patch513.sql" />
+    <Content Include="_Antiguos\Patch512.sql" />
+    <Content Include="Informes DX\04SaldosDetalle.sql" />
+    <Content Include="_Antiguos\Patch508.sql" />
+    <Content Include="Informes DX\02JustificacionesDetalle.sql" />
+    <Content Include="Informes DX\03SaldosaFecha.sql" />
+    <Content Include="_Antiguos\Patch507.sql" />
+    <Content Include="Informes DX\01RegistroDeJornadaPorEmpleadoDXReport.sql" />
+    <Content Include="_Antiguos\Patch503.sql" />
+    <Content Include="_Antiguos\Patch501.sql" />
+    <Content Include="Custom\Terquimsa\InformeDeEmergenciaPorAccesosDXReport.sql" />
+    <Content Include="_Antiguos\Patch500.sql" />
+    <Content Include="_Antiguos\Patch499.sql" />
+    <Content Include="_Antiguos\Patch498.sql" />
+    <Content Include="_Antiguos\Patch496.sql" />
+    <Content Include="Informes DX\15InformeDeEmergenciaDXReport.sql" />
+    <Content Include="_Antiguos\Patch495.sql" />
+    <Content Include="_Antiguos\Patch494.sql" />
+    <Content Include="_Antiguos\Patch493.sql" />
+    <Content Include="_Antiguos\Patch492.sql" />
+    <Content Include="_Antiguos\Patch491.sql" />
+    <Content Include="_Antiguos\Patch490.sql" />
+    <Content Include="_Antiguos\Patch487.sql" />
+    <Content Include="_Antiguos\Patch485.sql" />
+    <Content Include="_Antiguos\Patch484.sql" />
+    <Content Include="_Antiguos\Patch483.sql" />
+    <Content Include="_Antiguos\Patch482.sql" />
+    <Content Include="_Antiguos\Patch481.sql" />
+    <Content Include="_Antiguos\Patch480.sql" />
+    <Content Include="_Antiguos\Patch477.sql" />
+    <Content Include="_Antiguos\Patch474.sql" />
+    <Content Include="_Antiguos\Patch472.sql" />
+    <Content Include="_Antiguos\Patch468.sql" />
+    <Content Include="_Antiguos\Patch467.sql" />
+    <Content Include="_Antiguos\Patch466.sql" />
+    <Content Include="_Antiguos\Patch465.sql" />
+    <Content Include="_Antiguos\Patch463.sql" />
+    <Content Include="_Antiguos\Patch461.sql" />
+    <Content Include="_Antiguos\Patch460.sql" />
+    <Content Include="_Antiguos\Patch459.sql" />
+    <Content Include="_Antiguos\Patch447.sql" />
+    <Content Include="_Antiguos\Patch445.sql" />
+    <Content Include="_Antiguos\Patch446.sql" />
+    <Content Include="_Antiguos\Patch444.sql" />
+    <Content Include="_Antiguos\Patch443.sql" />
+    <Content Include="_Antiguos\Patch442.sql" />
+    <Content Include="_Antiguos\Patch123.sql" />
+    <Content Include="_Antiguos\Patch124.sql" />
+    <Content Include="_Antiguos\Patch130.sql" />
+    <Content Include="_Antiguos\Patch132.sql" />
+    <Content Include="_Antiguos\Patch133.sql" />
+    <Content Include="_Antiguos\Patch134.sql" />
+    <Content Include="_Antiguos\Patch136.sql" />
+    <Content Include="_Antiguos\Patch139.sql" />
+    <Content Include="_Antiguos\Patch140.sql" />
+    <Content Include="_Antiguos\Patch141.sql" />
+    <Content Include="_Antiguos\Patch142.sql" />
+    <Content Include="_Antiguos\Patch143.sql" />
+    <Content Include="_Antiguos\Patch144.sql" />
+    <Content Include="_Antiguos\Patch145.sql" />
+    <Content Include="_Antiguos\Patch146.sql" />
+    <Content Include="_Antiguos\Patch147.sql" />
+    <Content Include="_Antiguos\Patch148.sql" />
+    <Content Include="_Antiguos\Patch149.sql" />
+    <Content Include="_Antiguos\Patch150.sql" />
+    <Content Include="_Antiguos\Patch151.sql" />
+    <Content Include="_Antiguos\Patch152.sql" />
+    <Content Include="_Antiguos\Patch153.sql" />
+    <Content Include="_Antiguos\Patch154.sql" />
+    <Content Include="_Antiguos\Patch155.sql" />
+    <Content Include="_Antiguos\Patch156.sql" />
+    <Content Include="_Antiguos\Patch157.sql" />
+    <Content Include="_Antiguos\Patch158.sql" />
+    <Content Include="_Antiguos\Patch159.sql" />
+    <Content Include="_Antiguos\Patch160.sql" />
+    <Content Include="_Antiguos\Patch161.sql" />
+    <Content Include="_Antiguos\Patch162.sql" />
+    <Content Include="_Antiguos\Patch163.sql" />
+    <Content Include="_Antiguos\Patch164.sql" />
+    <Content Include="_Antiguos\Patch165.sql" />
+    <Content Include="_Antiguos\Patch166.sql" />
+    <Content Include="_Antiguos\Patch167.sql" />
+    <Content Include="_Antiguos\Patch168.sql" />
+    <Content Include="_Antiguos\Patch169.sql" />
+    <Content Include="_Antiguos\Patch170.sql" />
+    <Content Include="_Antiguos\Patch171.sql" />
+    <Content Include="_Antiguos\Patch172.sql" />
+    <Content Include="_Antiguos\Patch173.sql" />
+    <Content Include="_Antiguos\Patch174.sql" />
+    <Content Include="_Antiguos\Patch175.sql" />
+    <Content Include="_Antiguos\Patch176.sql" />
+    <Content Include="_Antiguos\Patch177.sql" />
+    <Content Include="_Antiguos\Patch178.sql" />
+    <Content Include="_Antiguos\Patch179.sql" />
+    <Content Include="_Antiguos\Patch180.sql" />
+    <Content Include="_Antiguos\Patch181.sql" />
+    <Content Include="_Antiguos\Patch182.sql" />
+    <Content Include="_Antiguos\Patch183.sql" />
+    <Content Include="_Antiguos\Patch184.sql" />
+    <Content Include="_Antiguos\Patch185.sql" />
+    <Content Include="_Antiguos\Patch186.sql" />
+    <Content Include="_Antiguos\Patch187.sql" />
+    <Content Include="_Antiguos\Patch188.sql" />
+    <Content Include="_Antiguos\Patch189.sql" />
+    <Content Include="_Antiguos\Patch190.sql" />
+    <Content Include="_Antiguos\Patch191.sql" />
+    <Content Include="_Antiguos\Patch192.sql" />
+    <Content Include="_Antiguos\Patch193.sql" />
+    <Content Include="_Antiguos\Patch194.sql" />
+    <Content Include="_Antiguos\Patch195.sql" />
+    <Content Include="_Antiguos\Patch196.sql" />
+    <Content Include="_Antiguos\Patch197.sql" />
+    <Content Include="_Antiguos\Patch198.sql" />
+    <Content Include="_Antiguos\Patch199.sql" />
+    <Content Include="_Antiguos\Patch200.sql" />
+    <Content Include="_Antiguos\Patch201.sql" />
+    <Content Include="_Antiguos\Patch202.sql" />
+    <Content Include="_Antiguos\Patch203.sql" />
+    <Content Include="_Antiguos\Patch204.sql" />
+    <Content Include="_Antiguos\Patch205.sql" />
+    <Content Include="_Antiguos\Patch206.sql" />
+    <Content Include="_Antiguos\Patch207.sql" />
+    <Content Include="_Antiguos\Patch208.sql" />
+    <Content Include="_Antiguos\Patch209.sql" />
+    <Content Include="_Antiguos\Patch210.sql" />
+    <Content Include="_Antiguos\Patch211.sql" />
+    <Content Include="_Antiguos\Patch212.sql" />
+    <Content Include="_Antiguos\Patch213.sql" />
+    <Content Include="_Antiguos\Patch214.sql" />
+    <Content Include="_Antiguos\Patch215.sql" />
+    <Content Include="_Antiguos\Patch216.sql" />
+    <Content Include="_Antiguos\Patch217.sql" />
+    <Content Include="_Antiguos\Patch218.sql" />
+    <Content Include="_Antiguos\Patch219.sql" />
+    <Content Include="_Antiguos\Patch220.sql" />
+    <Content Include="_Antiguos\Patch221.sql" />
+    <Content Include="_Antiguos\Patch222.sql" />
+    <Content Include="_Antiguos\Patch223.sql" />
+    <Content Include="_Antiguos\Patch224.sql" />
+    <Content Include="_Antiguos\Patch225.sql" />
+    <Content Include="_Antiguos\Patch226.sql" />
+    <Content Include="_Antiguos\Patch227.sql" />
+    <Content Include="_Antiguos\Patch228.sql" />
+    <Content Include="_Antiguos\Patch229.sql" />
+    <Content Include="_Antiguos\Patch230.sql" />
+    <Content Include="_Antiguos\Patch231.sql" />
+    <Content Include="_Antiguos\Patch232.sql" />
+    <Content Include="_Antiguos\Patch233.sql" />
+    <Content Include="_Antiguos\Patch234.sql" />
+    <Content Include="_Antiguos\Patch235.sql" />
+    <Content Include="_Antiguos\Patch236.sql" />
+    <Content Include="_Antiguos\Patch237.sql" />
+    <Content Include="_Antiguos\Patch238.sql" />
+    <Content Include="_Antiguos\Patch239.sql" />
+    <Content Include="_Antiguos\Patch240.sql" />
+    <Content Include="_Antiguos\Patch241.sql" />
+    <Content Include="_Antiguos\Patch242.sql" />
+    <Content Include="_Antiguos\Patch243.sql" />
+    <Content Include="_Antiguos\Patch244.sql" />
+    <Content Include="_Antiguos\Patch245.sql" />
+    <Content Include="_Antiguos\Patch246.sql" />
+    <Content Include="_Antiguos\Patch247.sql" />
+    <Content Include="_Antiguos\Patch248.sql" />
+    <Content Include="_Antiguos\Patch249.sql" />
+    <Content Include="_Antiguos\Patch250.sql" />
+    <Content Include="_Antiguos\Patch251.sql" />
+    <Content Include="_Antiguos\Patch252.sql" />
+    <Content Include="_Antiguos\Patch253.sql" />
+    <Content Include="_Antiguos\Patch254.sql" />
+    <Content Include="_Antiguos\Patch255.sql" />
+    <Content Include="_Antiguos\Patch256.sql" />
+    <Content Include="_Antiguos\Patch257.sql" />
+    <Content Include="_Antiguos\Patch258.sql" />
+    <Content Include="_Antiguos\Patch259.sql" />
+    <Content Include="_Antiguos\Patch260.sql" />
+    <Content Include="_Antiguos\Patch261.sql" />
+    <Content Include="_Antiguos\Patch262.sql" />
+    <Content Include="_Antiguos\Patch263.sql" />
+    <Content Include="_Antiguos\Patch264.sql" />
+    <Content Include="_Antiguos\Patch265.sql" />
+    <Content Include="_Antiguos\Patch266.sql" />
+    <Content Include="_Antiguos\Patch267.sql" />
+    <Content Include="_Antiguos\Patch268.sql" />
+    <Content Include="_Antiguos\Patch269.sql" />
+    <Content Include="_Antiguos\Patch270.sql" />
+    <Content Include="_Antiguos\Patch271.sql" />
+    <Content Include="_Antiguos\Patch272.sql" />
+    <Content Include="_Antiguos\Patch273.sql" />
+    <Content Include="_Antiguos\Patch274.sql" />
+    <Content Include="_Antiguos\Patch275.sql" />
+    <Content Include="_Antiguos\Patch276.sql" />
+    <Content Include="_Antiguos\Patch277.sql" />
+    <Content Include="_Antiguos\Patch278.sql" />
+    <Content Include="_Antiguos\Patch279.sql" />
+    <Content Include="_Antiguos\Patch280.sql" />
+    <Content Include="_Antiguos\Patch281.sql" />
+    <Content Include="_Antiguos\Patch282.sql" />
+    <Content Include="_Antiguos\Patch283.sql" />
+    <Content Include="_Antiguos\Patch284.sql" />
+    <Content Include="_Antiguos\Patch285.sql" />
+    <Content Include="_Antiguos\Patch286.sql" />
+    <Content Include="_Antiguos\Patch287.sql" />
+    <Content Include="_Antiguos\Patch288.sql" />
+    <Content Include="_Antiguos\Patch289.sql" />
+    <Content Include="_Antiguos\Patch290.sql" />
+    <Content Include="_Antiguos\Patch291.sql" />
+    <Content Include="_Antiguos\Patch292.sql" />
+    <Content Include="_Antiguos\Patch293.sql" />
+    <Content Include="_Antiguos\Patch294.sql" />
+    <Content Include="_Antiguos\Patch295.sql" />
+    <Content Include="_Antiguos\Patch296.sql" />
+    <Content Include="_Antiguos\Patch297.sql" />
+    <Content Include="_Antiguos\Patch298.sql" />
+    <Content Include="_Antiguos\Patch299.sql" />
+    <Content Include="_Antiguos\Patch300.sql" />
+    <Content Include="_Antiguos\Patch301.sql" />
+    <Content Include="_Antiguos\Patch302.sql" />
+    <Content Include="_Antiguos\Patch303.sql" />
+    <Content Include="_Antiguos\Patch304.sql" />
+    <Content Include="_Antiguos\Patch305.sql" />
+    <Content Include="_Antiguos\Patch306.sql" />
+    <Content Include="_Antiguos\Patch307.sql" />
+    <Content Include="_Antiguos\Patch308.sql" />
+    <Content Include="_Antiguos\Patch309.sql" />
+    <Content Include="_Antiguos\Patch310.sql" />
+    <Content Include="_Antiguos\Patch311.sql" />
+    <Content Include="_Antiguos\Patch312.sql" />
+    <Content Include="_Antiguos\Patch313.sql" />
+    <Content Include="_Antiguos\Patch314.sql" />
+    <Content Include="_Antiguos\Patch315.sql" />
+    <Content Include="_Antiguos\Patch316.sql" />
+    <Content Include="_Antiguos\Patch317.sql" />
+    <Content Include="_Antiguos\Patch318.sql" />
+    <Content Include="_Antiguos\Patch319.sql" />
+    <Content Include="_Antiguos\Patch320.sql" />
+    <Content Include="_Antiguos\Patch321.sql" />
+    <Content Include="_Antiguos\Patch322.sql" />
+    <Content Include="_Antiguos\Patch323.sql" />
+    <Content Include="_Antiguos\Patch324.sql" />
+    <Content Include="_Antiguos\Patch325.sql" />
+    <Content Include="_Antiguos\Patch326.sql" />
+    <Content Include="_Antiguos\Patch327.sql" />
+    <Content Include="_Antiguos\Patch328.sql" />
+    <Content Include="_Antiguos\Patch329.sql" />
+    <Content Include="_Antiguos\Patch330.sql" />
+    <Content Include="_Antiguos\Patch331.sql" />
+    <Content Include="_Antiguos\Patch332.sql" />
+    <Content Include="_Antiguos\Patch333.sql" />
+    <Content Include="_Antiguos\Patch334.sql" />
+    <Content Include="_Antiguos\Patch335.sql" />
+    <Content Include="_Antiguos\Patch336.sql" />
+    <Content Include="_Antiguos\Patch337.sql" />
+    <Content Include="_Antiguos\Patch338.sql" />
+    <Content Include="_Antiguos\Patch339.sql" />
+    <Content Include="_Antiguos\Patch340.sql" />
+    <Content Include="_Antiguos\Patch341.sql" />
+    <Content Include="_Antiguos\Patch342.sql" />
+    <Content Include="_Antiguos\Patch343.sql" />
+    <Content Include="_Antiguos\Patch344.sql" />
+    <Content Include="_Antiguos\Patch345.sql" />
+    <Content Include="_Antiguos\Patch346.sql" />
+    <Content Include="_Antiguos\Patch347.sql" />
+    <Content Include="_Antiguos\Patch348.sql" />
+    <Content Include="_Antiguos\Patch349.sql" />
+    <Content Include="_Antiguos\Patch350.sql" />
+    <Content Include="_Antiguos\Patch351.sql" />
+    <Content Include="_Antiguos\Patch352.sql" />
+    <Content Include="_Antiguos\Patch353.sql" />
+    <Content Include="_Antiguos\Patch354.sql" />
+    <Content Include="_Antiguos\Patch355.sql" />
+    <Content Include="_Antiguos\Patch356.sql" />
+    <Content Include="_Antiguos\Patch357.sql" />
+    <Content Include="_Antiguos\Patch358.sql" />
+    <Content Include="_Antiguos\Patch359.sql" />
+    <Content Include="_Antiguos\Patch360.sql" />
+    <Content Include="_Antiguos\Patch361.sql" />
+    <Content Include="_Antiguos\Patch362.sql" />
+    <Content Include="_Antiguos\Patch363.sql" />
+    <Content Include="_Antiguos\Patch364.sql" />
+    <Content Include="_Antiguos\Patch365.sql" />
+    <Content Include="_Antiguos\Patch366.sql" />
+    <Content Include="_Antiguos\Patch367.sql" />
+    <Content Include="_Antiguos\Patch368.sql" />
+    <Content Include="_Antiguos\Patch369.sql" />
+    <Content Include="_Antiguos\Patch370.sql" />
+    <Content Include="_Antiguos\Patch371.sql" />
+    <Content Include="_Antiguos\Patch372.sql" />
+    <Content Include="_Antiguos\Patch373.sql" />
+    <Content Include="_Antiguos\Patch374.sql" />
+    <Content Include="_Antiguos\Patch375.sql" />
+    <Content Include="_Antiguos\Patch376.sql" />
+    <Content Include="_Antiguos\Patch377.sql" />
+    <Content Include="_Antiguos\Patch378.sql" />
+    <Content Include="_Antiguos\Patch379.sql" />
+    <Content Include="_Antiguos\Patch380.sql" />
+    <Content Include="_Antiguos\Patch381.sql" />
+    <Content Include="_Antiguos\Patch382.sql" />
+    <Content Include="_Antiguos\Patch383.sql" />
+    <Content Include="_Antiguos\Patch384.sql" />
+    <Content Include="_Antiguos\Patch385.sql" />
+    <Content Include="_Antiguos\Patch386.sql" />
+    <Content Include="_Antiguos\Patch387.sql" />
+    <Content Include="_Antiguos\Patch388.sql" />
+    <Content Include="_Antiguos\Patch389.sql" />
+    <Content Include="_Antiguos\Patch390.sql" />
+    <Content Include="_Antiguos\Patch391.sql" />
+    <Content Include="_Antiguos\Patch392.sql" />
+    <Content Include="_Antiguos\Patch393.sql" />
+    <Content Include="_Antiguos\Patch394.sql" />
+    <Content Include="_Antiguos\Patch395.sql" />
+    <Content Include="_Antiguos\Patch396.sql" />
+    <Content Include="_Antiguos\Patch397.sql" />
+    <Content Include="_Antiguos\Patch398.sql" />
+    <Content Include="_Antiguos\Patch399.sql" />
+    <Content Include="_Antiguos\Patch400.sql" />
+    <Content Include="_Antiguos\Patch401.sql" />
+    <Content Include="_Antiguos\Patch402.sql" />
+    <Content Include="_Antiguos\Patch403.sql" />
+    <Content Include="_Antiguos\Patch404.sql" />
+    <Content Include="_Antiguos\Patch405.sql" />
+    <Content Include="_Antiguos\Patch406.sql" />
+    <Content Include="_Antiguos\Patch407.sql" />
+    <Content Include="_Antiguos\Patch408.sql" />
+    <Content Include="_Antiguos\Patch409.sql" />
+    <Content Include="_Antiguos\Patch410.sql" />
+    <Content Include="_Antiguos\Patch411.sql" />
+    <Content Include="_Antiguos\Patch412.sql" />
+    <Content Include="_Antiguos\Patch413.sql" />
+    <Content Include="_Antiguos\Patch414.sql" />
+    <Content Include="_Antiguos\Patch415.sql" />
+    <Content Include="_Antiguos\Patch416.sql" />
+    <Content Include="_Antiguos\Patch417.sql" />
+    <Content Include="_Antiguos\Patch418.sql" />
+    <Content Include="_Antiguos\Patch419.sql" />
+    <Content Include="_Antiguos\Patch420.sql" />
+    <Content Include="_Antiguos\Patch421.sql" />
+    <Content Include="_Antiguos\Patch422.sql" />
+    <Content Include="_Antiguos\Patch423.sql" />
+    <Content Include="_Antiguos\Patch424.sql" />
+    <Content Include="_Antiguos\Patch425.sql" />
+    <Content Include="_Antiguos\Patch426.sql" />
+    <Content Include="_Antiguos\Patch427.sql" />
+    <Content Include="_Antiguos\Patch428.sql" />
+    <Content Include="_Antiguos\Patch429.sql" />
+    <Content Include="_Antiguos\Patch430.sql" />
+    <Content Include="_Antiguos\Patch431.sql" />
+    <Content Include="_Antiguos\Patch432.sql" />
+    <Content Include="_Antiguos\Patch433.sql" />
+    <Content Include="_Antiguos\Patch434.sql" />
+    <Content Include="_Antiguos\Patch435.sql" />
+    <Content Include="_Antiguos\Patch436.sql" />
+    <Content Include="_Antiguos\Patch437.sql" />
+    <Content Include="_Antiguos\Patch438.sql" />
+    <Content Include="_Antiguos\Patch439.sql" />
+    <Content Include="_Antiguos\Patch440.sql" />
+    <Content Include="_Antiguos\Patch441.sql" />
+    <Content Include="_Antiguos\Patch448.sql" />
+    <Content Include="_Antiguos\Patch449.sql" />
+    <Content Include="_Antiguos\Patch450.sql" />
+    <Content Include="_Antiguos\Patch451.sql" />
+    <Content Include="_Antiguos\Patch452.sql" />
+    <Content Include="_Antiguos\Patch453.sql" />
+    <Content Include="_Antiguos\Patch454.sql" />
+    <Content Include="_Antiguos\Patch455.sql" />
+    <Content Include="_Antiguos\Patch456.sql" />
+    <Content Include="_Antiguos\Patch457.sql" />
+    <Content Include="_Antiguos\Patch458.sql" />
+    <Content Include="_Antiguos\Patch462.sql" />
+    <Content Include="_Antiguos\Patch464.sql" />
+    <Content Include="_Antiguos\Patch469.sql" />
+    <Content Include="_Antiguos\Patch470.sql" />
+    <Content Include="_Antiguos\Patch471.sql" />
+    <Content Include="_Antiguos\Patch473.sql" />
+    <Content Include="_Antiguos\Patch475.sql" />
+    <Content Include="_Antiguos\Patch476.sql" />
+    <Content Include="_Antiguos\Patch478.sql" />
+    <Content Include="_Antiguos\Patch479.sql" />
+    <Content Include="_Antiguos\Patch486.sql" />
+    <Content Include="_Antiguos\Patch488.sql" />
+    <Content Include="_Antiguos\Patch489.sql" />
+    <Content Include="_Antiguos\Patch497.sql" />
+    <Content Include="_Antiguos\Patch502.sql" />
+    <Content Include="_Antiguos\Patch504.sql" />
+    <Content Include="_Antiguos\Patch505.sql" />
+    <Content Include="_Antiguos\Patch506.sql" />
+    <Content Include="_Antiguos\Patch509.sql" />
+    <Content Include="_Antiguos\Patch510.sql" />
+    <Content Include="_Antiguos\Patch511.sql" />
+    <Content Include="_Antiguos\Patch514.sql" />
+    <Content Include="_Antiguos\Patch522.sql" />
+    <Content Include="_Antiguos\Patch523.sql" />
+    <Content Include="_Antiguos\Patch524.sql" />
+    <Content Include="_Antiguos\Patch525.sql" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <SsdtUnitTestVersion>3.1</SsdtUnitTestVersion>
+  </PropertyGroup>
+  <Import Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="$(VisualStudioVersion) != '15.0' And '$(SQLDBExtensionsRefPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="$(VisualStudioVersion) != '15.0' And '$(SQLDBExtensionsRefPath)' == ''" />
+</Project>

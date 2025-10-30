@@ -1,0 +1,177 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+name: Cegid VTI-$(Date:yyyyMMdd)$(Rev:.r)
+
+trigger:
+- none
+
+pool:
+  vmImage: windows-latest
+
+parameters:
+
+- name: rollbackEnv  
+  displayName: Choose the environment
+  type: string
+  default: 'production'
+  values:
+  - production
+  - canary
+
+
+- name: VTLive
+  displayName: Rollback - VTLive ?
+  type: boolean
+  default: true
+- name: VTLiveApi
+  displayName: Rollback - VTLiveApi ?
+  type: boolean
+  default: true
+- name: VTPortal
+  displayName: Rollback - VTPortal ?
+  type: boolean
+  default: true
+- name: VTTerminals
+  displayName: Rollback - VTTerminals ?
+  type: boolean
+  default: true
+- name: VTVisits
+  displayName: Rollback - VTVisits ?
+  type: boolean
+  default: true
+- name: fnAnalyticsFunction
+  displayName: Rollback - fnAnalyticsFunction ?
+  type: boolean
+  default: true
+- name: fnBackgroundFunction
+  displayName: Rollback - fnBackgroundFunction ?
+  type: boolean
+  default: true
+- name: fnBroadcasterFunction
+  displayName: Rollback - fnBroadcasterFunction ?
+  type: boolean
+  default: true
+- name: fnDatalinkFunction
+  displayName: Rollback - fnDatalinkFunction ?
+  type: boolean
+  default: true
+- name: fnMailFunction
+  displayName: Rollback - fnMailFunction ?
+  type: boolean
+  default: true
+- name: fnReportFunction
+  displayName: Rollback - fnReportFunction ?
+  type: boolean
+  default: true
+- name: fnScheduleFunction
+  displayName: Rollback - fnScheduleFunction ?
+  type: boolean
+  default: true
+- name: fnPushNotificationsFunction
+  displayName: Rollback - fnPushNotificationsFunction ?
+  type: boolean
+  default: true
+- name: fnNotificationsFunction
+  displayName: Rollback - fnNotificationsFunction ?
+  type: boolean
+  default: true
+- name: fnEngineFunction
+  displayName: Rollback - fnEngineFunction ?
+  type: boolean
+  default: true
+- name: fnPunchConnectorFunction
+  displayName: Rollback - fnPunchConnectorFunction ?
+  type: boolean
+  default: true
+- name: fnPNlinkFunction
+  displayName: Rollback - fnPNlinkFunction ?
+  type: boolean
+  default: true
+
+
+stages:
+
+  - template: Templates/Rollback.yml
+    parameters:
+      azureEnv: ${{parameters.rollbackEnv}} 
+      resourceGroup: 'mtpaaspr'
+      azureService: SAAS-VisualTime-InfraDeployment
+      environment: rollback
+      artifacts: 
+        - name: 'VTLive'
+          destination: 'vtlivePr'
+          enabled: ${{parameters.VTLive}} 
+          type: 'webapp'
+        - name: 'VTLiveApi'
+          destination: 'vtliveapiPr'
+          enabled: ${{parameters.VTLiveApi}} 
+          type: 'webapp'
+        - name: 'VTPortal'
+          destination: 'vtportalPr'
+          enabled: ${{parameters.VTPortal}}
+          type: 'webapp'
+        - name: 'VTTerminals'
+          destination: 'vtterminalsPr'
+          enabled: ${{parameters.VTTerminals}}
+          type: 'webapp'
+        - name: 'VTVisits'
+          destination: 'vtvisitsPr'
+          enabled: ${{parameters.VTVisits}}
+          type: 'webapp'
+        - name: 'fnAnalyticsFunction'
+          destination: 'fnAnalyticsFunctionPr'
+          enabled: ${{parameters.fnAnalyticsFunction}}
+          type: 'funapp'
+        - name: 'fnBackgroundFunction'
+          destination: 'fnBackgroundFunctionPr'
+          enabled: ${{parameters.fnBackgroundFunction}}
+          type: 'funapp'
+        - name: 'fnBroadcasterFunction'
+          destination: 'fnBroadcasterFunctionPr'
+          enabled: ${{parameters.fnBroadcasterFunction}}
+          type: 'funapp'
+        - name: 'fnDatalinkFunction'
+          destination: 'fnDatalinkFunctionPr'
+          enabled: ${{parameters.fnDatalinkFunction}}
+          type: 'funapp'
+        - name: 'fnMailFunction'
+          destination: 'fnMailFunctionPr'
+          enabled: ${{parameters.fnMailFunction}}
+          type: 'funapp'
+        - name: 'fnReportFunction'
+          destination: 'fnReportFunctionPr'
+          enabled: ${{parameters.fnReportFunction}}
+          type: 'funapp'
+        - name: 'fnScheduleFunction'
+          destination: 'fnScheduleFunctionPr'
+          enabled: ${{parameters.fnScheduleFunction}}
+          type: 'funapp'
+        - name: 'fnPushNotificationsFunction'
+          destination: 'fnPushNotificationsFunctionPr'
+          enabled: ${{parameters.fnPushNotificationsFunction}}
+          type: 'funapp'
+        - name: 'fnNotificationsFunction'
+          destination: 'fnNotificationFunctionPr'
+          enabled: ${{parameters.fnNotificationsFunction}}
+          type: 'funapp'
+        - name: 'fnEngineFunction'
+          destination: 'fnengineFunctionPr'
+          enabled: ${{parameters.fnEngineFunction}}
+          type: 'funapp'
+        - name: 'fnPunchConnectorFunction'
+          destination: 'fnpunchconnectorFunctionPr'
+          enabled: ${{parameters.fnPunchConnectorFunction}}
+          type: 'funapp'
+        - name: 'fnPNlinkFunction'
+          destination: 'fnPNlinkFunctionPr'
+          enabled: ${{parameters.fnPNlinkFunction}}
+          type: 'funapp'
+
+
+  #### Tag version
+  - template: Templates/TagVersion.yml
+  
+

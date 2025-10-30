@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SchedulerRemarksDataSet" targetNamespace="http://tempuri.org/SchedulerRemarksDataSet.xsd" xmlns:mstns="http://tempuri.org/SchedulerRemarksDataSet.xsd" xmlns="http://tempuri.org/SchedulerRemarksDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SchedulerRemarksDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="SchedulerRemarksDataSet" msprop:Generator_DataSetName="SchedulerRemarksDataSet" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SchedulerRemarks" msprop:Generator_UserTableName="SchedulerRemarks" msprop:Generator_RowDeletedName="SchedulerRemarksRowDeleted" msprop:Generator_RowChangedName="SchedulerRemarksRowChanged" msprop:Generator_RowClassName="SchedulerRemarksRow" msprop:Generator_RowChangingName="SchedulerRemarksRowChanging" msprop:Generator_RowEvArgName="SchedulerRemarksRowChangeEvent" msprop:Generator_RowEvHandlerName="SchedulerRemarksRowChangeEventHandler" msprop:Generator_TableClassName="SchedulerRemarksDataTable" msprop:Generator_TableVarName="tableSchedulerRemarks" msprop:Generator_RowDeletingName="SchedulerRemarksRowDeleting" msprop:Generator_TablePropName="SchedulerRemarks">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Date" msprop:Generator_UserColumnName="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="_Date" msprop:Generator_ColumnPropNameInTable="DateColumn" type="xs:dateTime" />
+              <xs:element name="Colour" msprop:Generator_UserColumnName="Colour" msprop:Generator_ColumnVarNameInTable="columnColour" msprop:Generator_ColumnPropNameInRow="Colour" msprop:Generator_ColumnPropNameInTable="ColourColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IDCause" msprop:Generator_UserColumnName="IDCause" msprop:Generator_ColumnVarNameInTable="columnIDCause" msprop:Generator_ColumnPropNameInRow="IDCause" msprop:Generator_ColumnPropNameInTable="IDCauseColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Compare" msprop:Generator_UserColumnName="Compare" msprop:Generator_ColumnVarNameInTable="columnCompare" msprop:Generator_ColumnPropNameInRow="Compare" msprop:Generator_ColumnPropNameInTable="CompareColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Value" msprop:Generator_UserColumnName="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SchedulerRemarks" />
+      <xs:field xpath="mstns:Date" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

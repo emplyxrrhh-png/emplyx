@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_ai.schedulerulenotsupported.title.rotext" xml:space="preserve">
+    <value>La règle de planification de type ${1} n'est pas prise en charge dans le moteur AI Scheduling</value>
+  </data>
+  <data name="RES_nosolutionatall.aicoredetail.rotext" xml:space="preserve">
+    <value>Le moteur d'IA a renvoyé le détail suivant :</value>
+  </data>
+  <data name="RES_resultenum.errorsavingsolution.rotext" xml:space="preserve">
+    <value>Erreur lors de l'enregistrement du planning. Aucune modification n'a été apportée</value>
+  </data>
+  <data name="RES_resultenum.nobudgetdataprovided.rotext" xml:space="preserve">
+    <value>Il n’y a aucun besoin budgétaire à résoudre.</value>
+  </data>
+  <data name="RES_resultenum.nocoverrequired.rotext" xml:space="preserve">
+    <value>Il n'y a aucun poste à pourvoir</value>
+  </data>
+  <data name="RES_resultenum.nosolutionatall.rotext" xml:space="preserve">
+    <value>La planification actuelle ne peut être assurée ni par des utilisateurs réguliers ni par du personnel externe.</value>
+  </data>
+  <data name="RES_resultenum.nosolutionincludescurrentemployees.rotext" xml:space="preserve">
+    <value>Aucune des solutions n’inclut des utilisateurs de l´entreprise. Pour couvrir les besoins définis, il faudrait embaucher ${1} nouveaux utilisateurs</value>
+  </data>
+  <data name="RES_resultenum.nosolutionnoexplanation.rotext" xml:space="preserve">
+    <value>Le moteur AI Scheduling n'a trouvé aucune erreur dans le scénario actuel, mais aucun des postes n'a pu être pourvu, ni par les propres utilisateurs ni par les nouvelles recrues.</value>
+  </data>
+  <data name="RES_resultenum.someextraemployeerequired.rotext" xml:space="preserve">
+    <value>Pour couvrir les postes nécessaires, en plus des utilisateurs de l’entreprise, vous devez embaucher ${1} nouveaux utilisateurs</value>
+  </data>
+  <data name="RES_scheduleruletype.freedaysinperiod.rotext" xml:space="preserve">
+    <value>"Jours de congé"</value>
+  </data>
+  <data name="RES_scheduleruletype.maxholidays.rotext" xml:space="preserve">
+    <value>"Nombre maximum de jours de vacances"</value>
+  </data>
+  <data name="RES_scheduleruletype.minmaxexpectedhours.rotext" xml:space="preserve">
+    <value>"Nombre maximum d'heures annuelles"</value>
+  </data>
+  <data name="RES_scheduleruletype.minmaxshiftsinperiod.rotext" xml:space="preserve">
+    <value>"Heures maximales ou minimales"</value>
+  </data>
+  <data name="RES_scheduleruletype.minweekendsinperiod.rotext" xml:space="preserve">
+    <value>&amp;quot;Minimum de repos les week-ends&amp;quot;</value>
+  </data>
+  <data name="RES_scheduleruletype.oneshiftoneday.rotext" xml:space="preserve">
+    <value>&amp;quot;Un horaire un jour&amp;quot;</value>
+  </data>
+  <data name="RES_scheduleruletype.restbetweenshifts.rotext" xml:space="preserve">
+    <value>"Repos entre les jours"</value>
+  </data>
+  <data name="RES_scheduleruletype.twoshiftsequence.rotext" xml:space="preserve">
+    <value>&amp;quot;Incompatibilité d´horaires&amp;quot;</value>
+  </data>
+  <data name="RES_scheduleruletype.workonfestive.rotext" xml:space="preserve">
+    <value>"Travailler un jour férié"</value>
+  </data>
+  <data name="RES_scheduleruletype.workonweekend.rotext" xml:space="preserve">
+    <value>"Travailler le week-end"</value>
+  </data>
+</root>

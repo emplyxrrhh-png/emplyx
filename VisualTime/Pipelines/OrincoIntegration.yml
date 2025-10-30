@@ -1,0 +1,64 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+#name: Cegid VTI-$(VTI.Version)-$(Date:yyyyMMdd)$(Rev:.r)
+name: Cegid VTI-$(Date:yyyyMMdd)$(Rev:.r)
+
+schedules:
+- cron: "10 12,3 * * 1-5"
+  displayName: Publish nightly build
+  branches:
+    include:
+    - development
+
+trigger:
+  none
+
+pool:
+  vmImage: windows-latest
+
+steps:
+  # Step 1: Checkout the repository
+  - checkout: self
+    persistCredentials: true
+    displayName: 'Checkout repository'
+
+    
+  # Step 3: Run language  script
+  - powershell: .\roLngToolsV2.exe JSON
+    displayName: 'Generando ficheros de idioma'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/Common/roLngTools/'
+
+    # Step 3: add languages to applications
+  - powershell: .\updateMobileAppsPipe.ps1
+    displayName: 'Copiando ficheros de idioma a aplicacióon'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/Src/Utils/UtilScripts/Scripts/ProductionScripts/v2022/'
+
+  # Step 4: Commit the changes
+  - script: |
+      git config user.name "Azure DevOps"
+      git config user.email "visualtimedevelopmentarea@cegid.com"
+      git add .
+      git commit -m "Compilación de cambios de idioma"
+      git push origin HEAD:development
+    displayName: 'Commit changes'
+    env:
+      SYSTEM_ACCESSTOKEN: $(System.AccessToken)
+
+  # Step 5: Create the pull request
+  # - powershell: |
+  #     $PR = az repos pr create --organization=https://dev.azure.com/cegid --project=VisualTime --repository VisualTime --bypass-policy true  --bypass-policy-reason "Orinoco automtic integration" --source-branch feature-orinoco --target-branch development --title "Auto PR Orinoco Lang integration" --description "Automated pull request for language integration"
+  #     $PR_obj= $PR | ConvertFrom-Json
+  #     az repos pr work-item add --id $PR_obj.pullRequestId --work-items 1132055
+  #     az repos pr set-vote --id $PR_obj.pullRequestId --vote approve
+  #     az repos pr update --id $PR_obj.pullRequestId --status completed
+  #   displayName: 'Create PR'
+  #   env:
+  #     AZURE_DEVOPS_EXT_PAT: $(System.AccessToken)
+  
+
+
+
+

@@ -1,0 +1,1734 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_features.absences.description.rotext" xml:space="preserve">
+    <value>Proaktívne riadenie absencií používateľov</value>
+  </data>
+  <data name="RES_features.absences.documentsabsences.description.rotext" xml:space="preserve">
+    <value>Správa zoznamu dokumentov používaných pri kontrole neprítomnosti používateľov</value>
+  </data>
+  <data name="RES_features.absences.documentsabsences.name.rotext" xml:space="preserve">
+    <value>Dokumenty o absencii</value>
+  </data>
+  <data name="RES_features.absences.name.rotext" xml:space="preserve">
+    <value>Absencie</value>
+  </data>
+  <data name="RES_features.access.analytics.description.rotext" xml:space="preserve">
+    <value>Analytická kontrola údajov súvisiacich s prístupom</value>
+  </data>
+  <data name="RES_features.access.analytics.name.rotext" xml:space="preserve">
+    <value>Analytika</value>
+  </data>
+  <data name="RES_features.access.description.rotext" xml:space="preserve">
+    <value>Správa prístupov a konfigurácia používateľov, na ktorých sa bude vykonávať správa jednotlivých povolených funkcií prístupu</value>
+  </data>
+  <data name="RES_features.access.groups.assign.description.rotext" xml:space="preserve">
+    <value>Priradenie používateľov</value>
+  </data>
+  <data name="RES_features.access.groups.assign.name.rotext" xml:space="preserve">
+    <value>Zadanie</value>
+  </data>
+  <data name="RES_features.access.groups.definition.description.rotext" xml:space="preserve">
+    <value>Konfigurácia vzťahov medzi zónami a obdobiami, ktoré budú mať skupiny prístupu, ako aj používateľov, ktorí patria do jednotlivých skupín</value>
+  </data>
+  <data name="RES_features.access.groups.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.access.groups.description.rotext" xml:space="preserve">
+    <value>Správa prístupových skupín</value>
+  </data>
+  <data name="RES_features.access.groups.name.rotext" xml:space="preserve">
+    <value>skupiny</value>
+  </data>
+  <data name="RES_features.access.name.rotext" xml:space="preserve">
+    <value>Prístup</value>
+  </data>
+  <data name="RES_features.access.periods.definition.description.rotext" xml:space="preserve">
+    <value>Konfigurácia dní prístupu a intervalov prístupu pre každé obdobie</value>
+  </data>
+  <data name="RES_features.access.periods.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.access.periods.description.rotext" xml:space="preserve">
+    <value>Riadenie prístupových období</value>
+  </data>
+  <data name="RES_features.access.periods.name.rotext" xml:space="preserve">
+    <value>Obdobia</value>
+  </data>
+  <data name="RES_features.access.zones.definition.description.rotext" xml:space="preserve">
+    <value>Konfigurácia prístupových zón: určenie, či ide o pracovnú zónu, umiestnenie v rámci plánu, integrácia s kamerou a otváracím relé</value>
+  </data>
+  <data name="RES_features.access.zones.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.access.zones.description.rotext" xml:space="preserve">
+    <value>Riadenie prístupových oblastí</value>
+  </data>
+  <data name="RES_features.access.zones.name.rotext" xml:space="preserve">
+    <value>Zóny</value>
+  </data>
+  <data name="RES_features.access.zones.supervision.description.rotext" xml:space="preserve">
+    <value>Umožňuje zobraziť informácie spojené s existujúcimi zónami</value>
+  </data>
+  <data name="RES_features.access.zones.supervision.name.rotext" xml:space="preserve">
+    <value>Monitorovanie</value>
+  </data>
+  <data name="RES_features.activities.definition.description.rotext" xml:space="preserve">
+    <value>Konfigurácia činností, ktoré sa majú vykonávať v spoločnosti: organizácia štruktúry jednotiek rôznych spoločností zapojených do jednotlivých činností</value>
+  </data>
+  <data name="RES_features.activities.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.activities.description.rotext" xml:space="preserve">
+    <value>Riadenie činností, ktoré sa majú vykonávať v podniku</value>
+  </data>
+  <data name="RES_features.activities.name.rotext" xml:space="preserve">
+    <value>Aktivity</value>
+  </data>
+  <data name="RES_features.administration.alerts.description.rotext" xml:space="preserve">
+    <value>Umožňuje spravovať a kontrolovať upozornenia Visualtime</value>
+  </data>
+  <data name="RES_features.administration.alerts.name.rotext" xml:space="preserve">
+    <value>Upozornenia</value>
+  </data>
+  <data name="RES_features.administration.audit.description.rotext" xml:space="preserve">
+    <value>Vizualizácia činností, ktoré používatelia vykonali v aplikácii, podľa vyhľadávacích kritérií na vyhľadanie informácií</value>
+  </data>
+  <data name="RES_features.administration.audit.name.rotext" xml:space="preserve">
+    <value>Audit</value>
+  </data>
+  <data name="RES_features.administration.businesscenters.description.rotext" xml:space="preserve">
+    <value>Riadenie nákladových stredísk pre následné použitie v systéme ProductiV a kontrolu nákladov</value>
+  </data>
+  <data name="RES_features.administration.businesscenters.name.rotext" xml:space="preserve">
+    <value>Nákladové strediská</value>
+  </data>
+  <data name="RES_features.administration.cameras.definition.description.rotext" xml:space="preserve">
+    <value>Konfigurácia kamier: názov, url a model</value>
+  </data>
+  <data name="RES_features.administration.cameras.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.administration.cameras.description.rotext" xml:space="preserve">
+    <value>Správa kamier, ktoré posilnia kontrolu prístupu</value>
+  </data>
+  <data name="RES_features.administration.cameras.name.rotext" xml:space="preserve">
+    <value>Kamery</value>
+  </data>
+  <data name="RES_features.administration.cameras.visualization.description.rotext" xml:space="preserve">
+    <value>Umožňuje zobrazenie snímok zachytených existujúcimi kamerami</value>
+  </data>
+  <data name="RES_features.administration.cameras.visualization.name.rotext" xml:space="preserve">
+    <value>Vizualizácia</value>
+  </data>
+  <data name="RES_features.administration.description.rotext" xml:space="preserve">
+    <value>Správa funkcií správy</value>
+  </data>
+  <data name="RES_features.administration.name.rotext" xml:space="preserve">
+    <value>Administratíva</value>
+  </data>
+  <data name="RES_features.administration.notifications.definition.description.rotext" xml:space="preserve">
+    <value>Konfigurácia oznámení: príjemca, typ - začiatok a koniec zmluvy, dlhšia neprítomnosť, zamietnutý prístup do aplikácie, do zakázanej oblasti,... -</value>
+  </data>
+  <data name="RES_features.administration.notifications.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.administration.notifications.description.rotext" xml:space="preserve">
+    <value>Správa funkcií oznámení</value>
+  </data>
+  <data name="RES_features.administration.notifications.name.rotext" xml:space="preserve">
+    <value>Oznámenia</value>
+  </data>
+  <data name="RES_features.administration.options.attendance.description.rotext" xml:space="preserve">
+    <value>Konfigurácia možností taktovania: detekcia príchodu/odchodu hodín a opakované taktovanie; ako aj ročné a mesačné obdobie, s ktorým spoločnosť pracuje vo firme</value>
+  </data>
+  <data name="RES_features.administration.options.attendance.name.rotext" xml:space="preserve">
+    <value>Možnosti prítomnosti</value>
+  </data>
+  <data name="RES_features.administration.options.description.rotext" xml:space="preserve">
+    <value>Správa parametrizovateľných možností bbdd</value>
+  </data>
+  <data name="RES_features.administration.options.general.description.rotext" xml:space="preserve">
+    <value>Konfigurácia formátu času, karty používateľa a spoločnosti, globálneho dátumu uzávierky a možností poštového servera</value>
+  </data>
+  <data name="RES_features.administration.options.general.name.rotext" xml:space="preserve">
+    <value>Všeobecné možnosti</value>
+  </data>
+  <data name="RES_features.administration.options.name.rotext" xml:space="preserve">
+    <value>Možnosti</value>
+  </data>
+  <data name="RES_features.administration.reportscheduler.definition.description.rotext" xml:space="preserve">
+    <value>Konfigurácia úloh automatického vykonávania periodických hlásení: zoznam a profil, adresát, periodicita a či ide o hlásenia o mimoriadnych udalostiach</value>
+  </data>
+  <data name="RES_features.administration.reportscheduler.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.administration.reportscheduler.description.rotext" xml:space="preserve">
+    <value>Správa funkcií plánovača správ</value>
+  </data>
+  <data name="RES_features.administration.reportscheduler.emergencyreport.description.rotext" xml:space="preserve">
+    <value>Umožňuje stlačenie núdzového tlačidla na vykonanie núdzových hlásení</value>
+  </data>
+  <data name="RES_features.administration.reportscheduler.emergencyreport.name.rotext" xml:space="preserve">
+    <value>Spustenie núdzových hlásení</value>
+  </data>
+  <data name="RES_features.administration.reportscheduler.name.rotext" xml:space="preserve">
+    <value>Plánovač správ</value>
+  </data>
+  <data name="RES_features.administration.security.description.rotext" xml:space="preserve">
+    <value>Správa pracovných povolení pre manažérov, nadriadených a/alebo používateľov aplikácie</value>
+  </data>
+  <data name="RES_features.administration.security.name.rotext" xml:space="preserve">
+    <value>Zabezpečenie</value>
+  </data>
+  <data name="RES_features.administration.securityoptions.description.rotext" xml:space="preserve">
+    <value>Správa rôznych možností zabezpečenia aplikácie</value>
+  </data>
+  <data name="RES_features.administration.securityoptions.name.rotext" xml:space="preserve">
+    <value>Možnosti zabezpečenia</value>
+  </data>
+  <data name="RES_features.administration.tasksqueue.description.rotext" xml:space="preserve">
+    <value>Umožňuje spravovať a kontrolovať stav správ v systéme</value>
+  </data>
+  <data name="RES_features.administration.tasksqueue.name.rotext" xml:space="preserve">
+    <value>Požadované správy</value>
+  </data>
+  <data name="RES_features.administration.usertasks.description.rotext" xml:space="preserve">
+    <value>Správa nevyriešených úloh používateľov: prideľovanie kariet používateľom, oprava hodín, ktoré boli vykonané s nesprávnou kartou,...</value>
+  </data>
+  <data name="RES_features.administration.usertasks.name.rotext" xml:space="preserve">
+    <value>Úlohy používateľa</value>
+  </data>
+  <data name="RES_features.assignments.definition.description.rotext" xml:space="preserve">
+    <value>Konfigurácia príspevkov</value>
+  </data>
+  <data name="RES_features.assignments.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.assignments.description.rotext" xml:space="preserve">
+    <value>Správa pracovných miest</value>
+  </data>
+  <data name="RES_features.assignments.name.rotext" xml:space="preserve">
+    <value>Príspevky</value>
+  </data>
+  <data name="RES_features.bots.definition.description.rotext" xml:space="preserve">
+    <value>Definícia botov</value>
+  </data>
+  <data name="RES_features.bots.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.bots.description.rotext" xml:space="preserve">
+    <value>Správa botov</value>
+  </data>
+  <data name="RES_features.bots.name.rotext" xml:space="preserve">
+    <value>Boty</value>
+  </data>
+  <data name="RES_features.budgets.definition.description.rotext" xml:space="preserve">
+    <value>Riadiť pracovné metódy výrobných jednotiek</value>
+  </data>
+  <data name="RES_features.budgets.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.budgets.description.rotext" xml:space="preserve">
+    <value>Správa rozpočtov jednotlivých uzlov</value>
+  </data>
+  <data name="RES_features.budgets.name.rotext" xml:space="preserve">
+    <value>Rozpočty</value>
+  </data>
+  <data name="RES_features.budgets.schedule.description.rotext" xml:space="preserve">
+    <value>Naplánujte používateľov, ktorí budú priradení ku každej výrobnej jednotke rozpočtu</value>
+  </data>
+  <data name="RES_features.budgets.schedule.name.rotext" xml:space="preserve">
+    <value>plánovanie</value>
+  </data>
+  <data name="RES_features.businesscenters.analytics.description.rotext" xml:space="preserve">
+    <value>Analytická kontrola údajov týkajúcich sa nákladových stredísk</value>
+  </data>
+  <data name="RES_features.businesscenters.analytics.name.rotext" xml:space="preserve">
+    <value>Analýza nákladov</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.description.rotext" xml:space="preserve">
+    <value>Dátové prepojenia dostupné na obrazovke dátových prepojení</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.exports.advbusinesscenter.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na spustenie rozšíreného exportu nákladových stredísk</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.exports.advbusinesscenter.name.rotext" xml:space="preserve">
+    <value>Pokročilý export nákladových stredísk</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.exports.description.rotext" xml:space="preserve">
+    <value>Exporty dostupné na obrazovke dátového prepojenia</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.exports.name.rotext" xml:space="preserve">
+    <value>Vývoz</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.imports.businesscenter.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na vykonávanie nahrávania nákladových stredísk</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.imports.businesscenter.name.rotext" xml:space="preserve">
+    <value>Poplatok za nákladové stredisko</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.imports.description.rotext" xml:space="preserve">
+    <value>Importy dostupné na obrazovke dátového prepojenia</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.imports.name.rotext" xml:space="preserve">
+    <value>Dovoz</value>
+  </data>
+  <data name="RES_features.businesscenters.datalink.name.rotext" xml:space="preserve">
+    <value>Dátové spojenie</value>
+  </data>
+  <data name="RES_features.businesscenters.definition.description.rotext" xml:space="preserve">
+    <value>Definícia nákladových stredísk</value>
+  </data>
+  <data name="RES_features.businesscenters.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.businesscenters.description.rotext" xml:space="preserve">
+    <value>Správa nákladových stredísk: konfigurácia, prideľovanie atď.</value>
+  </data>
+  <data name="RES_features.businesscenters.name.rotext" xml:space="preserve">
+    <value>Nákladové strediská</value>
+  </data>
+  <data name="RES_features.businesscenters.punches.description.rotext" xml:space="preserve">
+    <value>Riadenie záznamov a incidentov v nákladových strediskách</value>
+  </data>
+  <data name="RES_features.businesscenters.punches.name.rotext" xml:space="preserve">
+    <value>Úprava podpisov</value>
+  </data>
+  <data name="RES_features.calendar.accruals.description.rotext" xml:space="preserve">
+    <value>Umožňuje skontrolovať zostatky dochádzky z obrazovky úprav punch-in.</value>
+  </data>
+  <data name="RES_features.calendar.accruals.name.rotext" xml:space="preserve">
+    <value>Dotaz na zostatok prítomnosti</value>
+  </data>
+  <data name="RES_features.calendar.analytics.description.rotext" xml:space="preserve">
+    <value>Analytická kontrola údajov súvisiacich s kalendárom</value>
+  </data>
+  <data name="RES_features.calendar.analytics.name.rotext" xml:space="preserve">
+    <value>Analytika</value>
+  </data>
+  <data name="RES_features.calendar.dailyrecord.description.rotext" xml:space="preserve">
+    <value>Umožňuje správu výkazov pracovného času</value>
+  </data>
+  <data name="RES_features.calendar.dailyrecord.name.rotext" xml:space="preserve">
+    <value>vyhlásenie o pracovnom čase</value>
+  </data>
+  <data name="RES_features.calendar.datalink.description.rotext" xml:space="preserve">
+    <value>Dátové prepojenia dostupné na obrazovke dátových prepojení</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.assignments.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na vykonávanie exportu príspevkov</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.assignments.name.rotext" xml:space="preserve">
+    <value>Export príspevkov</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.calendar.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na spustenie exportu kalendára</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.calendar.name.rotext" xml:space="preserve">
+    <value>Export kalendára</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.calendarassignments.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na spustenie exportu kalendára a príspevkov</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.calendarassignments.name.rotext" xml:space="preserve">
+    <value>Export kalendára a príspevkov</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.calendarnameassignments.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na spustenie exportu kalendára a pošty podľa mena</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.calendarnameassignments.name.rotext" xml:space="preserve">
+    <value>Export kalendára a príspevkov podľa mena</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.description.rotext" xml:space="preserve">
+    <value>Exporty dostupné na obrazovke dátového prepojenia</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.holidays.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na vykonanie exportu na dovolenku</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.holidays.name.rotext" xml:space="preserve">
+    <value>Vývoz dovoleniek</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.holidaysshifts.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na vykonávanie exportu rozvrhov a sviatkov</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.holidaysshifts.name.rotext" xml:space="preserve">
+    <value>Export rozvrhov a sviatkov</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.name.rotext" xml:space="preserve">
+    <value>Vývoz</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.shifts.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na spustenie exportu rozvrhu</value>
+  </data>
+  <data name="RES_features.calendar.datalink.exports.shifts.name.rotext" xml:space="preserve">
+    <value>Export rozvrhu</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.assignments.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na vykonanie importu pridelených príspevkov</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.assignments.name.rotext" xml:space="preserve">
+    <value>Import pridelených príspevkov</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.causes.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na vykonanie importu odôvodnení</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.causes.name.rotext" xml:space="preserve">
+    <value>Import odôvodnení</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.description.rotext" xml:space="preserve">
+    <value>Importy dostupné na obrazovke dátového prepojenia</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.hrschedule.description.rotext" xml:space="preserve">
+    <value>Umožňuje vykonať dovoz fiktívneho vkladu</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.hrschedule.name.rotext" xml:space="preserve">
+    <value>Teoretický dovoz dotácií</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.name.rotext" xml:space="preserve">
+    <value>Dovoz</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.schedule.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na vykonanie importu plánovania</value>
+  </data>
+  <data name="RES_features.calendar.datalink.imports.schedule.name.rotext" xml:space="preserve">
+    <value>Plánovanie dovozu</value>
+  </data>
+  <data name="RES_features.calendar.datalink.name.rotext" xml:space="preserve">
+    <value>Dátové spojenie</value>
+  </data>
+  <data name="RES_features.calendar.description.rotext" xml:space="preserve">
+    <value>Správa kalendára a konfigurácia používateľov, na ktorých sa bude vykonávať správa jednotlivých povolených funkcií kalendára</value>
+  </data>
+  <data name="RES_features.calendar.directcauses.description.rotext" xml:space="preserve">
+    <value>Umožňuje zadávať dodatočné odôvodnenia v rámci obrazovky Úprava vnorenia, ktorá nekóduje žiadne incidenty</value>
+  </data>
+  <data name="RES_features.calendar.directcauses.name.rotext" xml:space="preserve">
+    <value>Priame odôvodnenia</value>
+  </data>
+  <data name="RES_features.calendar.highlight.description.rotext" xml:space="preserve">
+    <value>Konfigurácia zvýraznenia odôvodnenia: napr. zvýraznenie oneskorenia viac ako 10 minút, odpracovaných hodín menej ako 8 hodín,...</value>
+  </data>
+  <data name="RES_features.calendar.highlight.name.rotext" xml:space="preserve">
+    <value>Najdôležitejšie informácie</value>
+  </data>
+  <data name="RES_features.calendar.justifyincidences.description.rotext" xml:space="preserve">
+    <value>Denné riadenie incidentov: manuálne zadávanie dôvodu/odôvodnenia incidentu</value>
+  </data>
+  <data name="RES_features.calendar.justifyincidences.name.rotext" xml:space="preserve">
+    <value>Odôvodnenie incidentov</value>
+  </data>
+  <data name="RES_features.calendar.name.rotext" xml:space="preserve">
+    <value>Kalendár</value>
+  </data>
+  <data name="RES_features.calendar.punches.description.rotext" xml:space="preserve">
+    <value>Správa dierovania: oprava zabudnutých dierok, akceptácia dierok zadaných ručne používateľom,...</value>
+  </data>
+  <data name="RES_features.calendar.punches.name.rotext" xml:space="preserve">
+    <value>transfery</value>
+  </data>
+  <data name="RES_features.calendar.punches.punches.description.rotext" xml:space="preserve">
+    <value>Úprava a modifikácia údajov obsiahnutých na obrazovke Edit Punch-in</value>
+  </data>
+  <data name="RES_features.calendar.punches.punches.name.rotext" xml:space="preserve">
+    <value>Úprava podpisov</value>
+  </data>
+  <data name="RES_features.calendar.punches.punches.photo.description.rotext" xml:space="preserve">
+    <value>Označuje, či má nadriadený oprávnenie prezerať fotografie pripojené k hodinám.</value>
+  </data>
+  <data name="RES_features.calendar.punches.punches.photo.name.rotext" xml:space="preserve">
+    <value>Fotografie z podpisových akcií</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.costcenterforgotten.description.rotext" xml:space="preserve">
+    <value>Riadenie žiadostí o zabudnuté dierovanie nákladových stredísk</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.costcenterforgotten.name.rotext" xml:space="preserve">
+    <value>Zabudnuté podpisy nákladových stredísk</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.description.rotext" xml:space="preserve">
+    <value>Správa požiadaviek týkajúcich sa hodín používateľov</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.externalparts.description.rotext" xml:space="preserve">
+    <value>Správa externých požiadaviek na pracovné položky</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.externalparts.name.rotext" xml:space="preserve">
+    <value>Vonkajšie pracovné časti</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.externalworkweekresume.description.rotext" xml:space="preserve">
+    <value>Saldos</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.externalworkweekresume.name.rotext" xml:space="preserve">
+    <value>Saldos</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.forgotten.description.rotext" xml:space="preserve">
+    <value>Správa zabudnutých žiadostí o prihlásenie</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.forgotten.name.rotext" xml:space="preserve">
+    <value>Zabudnuté podpisy</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.justify.description.rotext" xml:space="preserve">
+    <value>Riadenie žiadostí o odôvodnenie presunov</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.justify.name.rotext" xml:space="preserve">
+    <value>Odôvodnenie existujúcich presunov</value>
+  </data>
+  <data name="RES_features.calendar.punches.requests.name.rotext" xml:space="preserve">
+    <value>žiadosti</value>
+  </data>
+  <data name="RES_features.calendar.remarks.description.rotext" xml:space="preserve">
+    <value>Riadenie denných poznámok uvedených v edícii úderov</value>
+  </data>
+  <data name="RES_features.calendar.remarks.name.rotext" xml:space="preserve">
+    <value>Poznámky</value>
+  </data>
+  <data name="RES_features.calendar.requests.cancelholidays.description.rotext" xml:space="preserve">
+    <value>Vybavovanie žiadostí o zrušenie dovolenky, napr. letných prázdnin</value>
+  </data>
+  <data name="RES_features.calendar.requests.cancelholidays.name.rotext" xml:space="preserve">
+    <value>Zrušenie dovolenky</value>
+  </data>
+  <data name="RES_features.calendar.requests.description.rotext" xml:space="preserve">
+    <value>Riadenie požiadaviek používateľov na plánovanie</value>
+  </data>
+  <data name="RES_features.calendar.requests.name.rotext" xml:space="preserve">
+    <value>žiadosti</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedabsence.description.rotext" xml:space="preserve">
+    <value>Riadenie žiadostí o plánovanú neprítomnosť</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedabsence.name.rotext" xml:space="preserve">
+    <value>Predpokladané dni neprítomnosti</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedcause.description.rotext" xml:space="preserve">
+    <value>Riadenie žiadostí o predpovedané hodiny neprítomnosti</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedcause.name.rotext" xml:space="preserve">
+    <value>Predpokladané hodiny neprítomnosti</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedhour.description.rotext" xml:space="preserve">
+    <value>Saldos</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedhour.name.rotext" xml:space="preserve">
+    <value>Plánované hodiny</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedovertime.description.rotext" xml:space="preserve">
+    <value>Žiadosti o nadbytočné hodiny možno podávať</value>
+  </data>
+  <data name="RES_features.calendar.requests.plannedovertime.name.rotext" xml:space="preserve">
+    <value>Predpokladaný počet nadčasových hodín</value>
+  </data>
+  <data name="RES_features.calendar.requests.shiftchange.description.rotext" xml:space="preserve">
+    <value>Riadenie žiadostí o zmenu rozvrhu: napr. žiadosť o intenzívnu zmenu budúci piatok</value>
+  </data>
+  <data name="RES_features.calendar.requests.shiftchange.name.rotext" xml:space="preserve">
+    <value>Zmeny v rozvrhu</value>
+  </data>
+  <data name="RES_features.calendar.requests.shiftexchange.description.rotext" xml:space="preserve">
+    <value>Správa požiadaviek na výmenu rozvrhu medzi používateľmi</value>
+  </data>
+  <data name="RES_features.calendar.requests.shiftexchange.name.rotext" xml:space="preserve">
+    <value>Výmena rozvrhu</value>
+  </data>
+  <data name="RES_features.calendar.requests.telecommute.description.rotext" xml:space="preserve">
+    <value>Umožňuje schváliť alebo zamietnuť žiadosti o teleprácu</value>
+  </data>
+  <data name="RES_features.calendar.requests.telecommute.name.rotext" xml:space="preserve">
+    <value>Riadenie žiadostí o prácu na diaľku</value>
+  </data>
+  <data name="RES_features.calendar.requests.vacations.description.rotext" xml:space="preserve">
+    <value>Správa žiadostí o dovolenku: napr. žiadosť o týždennú dovolenku</value>
+  </data>
+  <data name="RES_features.calendar.requests.vacations.name.rotext" xml:space="preserve">
+    <value>Dovolenka</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat1.description.rotext" xml:space="preserve">
+    <value>Definícia povolení pre kategóriu 1</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat1.name.rotext" xml:space="preserve">
+    <value>Kategória 1</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat10.description.rotext" xml:space="preserve">
+    <value>Definícia povolení pre kategóriu 10</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat10.name.rotext" xml:space="preserve">
+    <value>Kategória 10</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat11.description.rotext" xml:space="preserve">
+    <value>Definícia povolení pre kategóriu 11</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat11.name.rotext" xml:space="preserve">
+    <value>Kategória 11</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat12.description.rotext" xml:space="preserve">
+    <value>Definícia povolení pre kategóriu 12</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat12.name.rotext" xml:space="preserve">
+    <value>Kategória 12</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat2.description.rotext" xml:space="preserve">
+    <value>Definícia povolení pre kategóriu 2</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat2.name.rotext" xml:space="preserve">
+    <value>Kategória 2</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat3.description.rotext" xml:space="preserve">
+    <value>Definícia povolení kategórie 3</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat3.name.rotext" xml:space="preserve">
+    <value>Kategória 3</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat4.description.rotext" xml:space="preserve">
+    <value>Definícia povolení kategórie 4</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat4.name.rotext" xml:space="preserve">
+    <value>Kategória 4</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat5.description.rotext" xml:space="preserve">
+    <value>Definícia povolení kategórie 5</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat5.name.rotext" xml:space="preserve">
+    <value>Kategória 5</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat6.description.rotext" xml:space="preserve">
+    <value>Definícia povolení kategórie 6</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat6.name.rotext" xml:space="preserve">
+    <value>Kategória 6</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat7.description.rotext" xml:space="preserve">
+    <value>Definícia povolení pre kategóriu 7</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat7.name.rotext" xml:space="preserve">
+    <value>Kategória 7</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat8.description.rotext" xml:space="preserve">
+    <value>Definícia povolení pre kategóriu 8</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat8.name.rotext" xml:space="preserve">
+    <value>Kategória 8</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat9.description.rotext" xml:space="preserve">
+    <value>Definícia povolení pre kategóriu 9</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.cat9.name.rotext" xml:space="preserve">
+    <value>Kategória 9</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.description.rotext" xml:space="preserve">
+    <value>Konfigurácia ročných kalendárov používateľov a správa nástrojov súvisiacich s plánovaním: šablóny štátnych sviatkov, blokovanie dní, plánovanie kópií,...</value>
+  </data>
+  <data name="RES_features.calendar.scheduler.name.rotext" xml:space="preserve">
+    <value>plánovanie</value>
+  </data>
+  <data name="RES_features.causes.definition.description.rotext" xml:space="preserve">
+    <value>Konfigurácia odôvodnení: definícia, typ, viditeľnosť, zaokrúhľovanie,</value>
+  </data>
+  <data name="RES_features.causes.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.causes.description.rotext" xml:space="preserve">
+    <value>Riadenie zoznamu príčin/dôvodov súvisiacich s politikou riadenia času spoločnosti</value>
+  </data>
+  <data name="RES_features.causes.name.rotext" xml:space="preserve">
+    <value>odôvodnenia</value>
+  </data>
+  <data name="RES_features.concepts.definition.c1.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.concepts.definition.c1.name.rotext" xml:space="preserve">
+    <value>Kategória 1</value>
+  </data>
+  <data name="RES_features.concepts.definition.c2.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.concepts.definition.c2.name.rotext" xml:space="preserve">
+    <value>Kategória 2</value>
+  </data>
+  <data name="RES_features.concepts.definition.c3.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.concepts.definition.c3.name.rotext" xml:space="preserve">
+    <value>Kategória 3</value>
+  </data>
+  <data name="RES_features.concepts.definition.c4.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.concepts.definition.c4.name.rotext" xml:space="preserve">
+    <value>Kategória 4</value>
+  </data>
+  <data name="RES_features.concepts.definition.c5.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.concepts.definition.c5.name.rotext" xml:space="preserve">
+    <value>Kategória 5</value>
+  </data>
+  <data name="RES_features.concepts.definition.description.rotext" xml:space="preserve">
+    <value>Konfigurácia zostatkov: definícia, typ atď...</value>
+  </data>
+  <data name="RES_features.concepts.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.concepts.description.rotext" xml:space="preserve">
+    <value>Správa zoznamu zostatkov zapojených do politiky a analýzy riadenia času používateľov</value>
+  </data>
+  <data name="RES_features.concepts.name.rotext" xml:space="preserve">
+    <value>zostatky</value>
+  </data>
+  <data name="RES_features.conventions.definition.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.conventions.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.conventions.description.rotext" xml:space="preserve">
+    <value>Konfigurácia používateľov, ktorí budú spravovať jednotlivé povolené funkcie dohody</value>
+  </data>
+  <data name="RES_features.conventions.employeeassign.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.conventions.employeeassign.name.rotext" xml:space="preserve">
+    <value>Priradenie používateľom</value>
+  </data>
+  <data name="RES_features.conventions.name.rotext" xml:space="preserve">
+    <value>Dohody</value>
+  </data>
+  <data name="RES_features.diningroom.description.rotext" xml:space="preserve">
+    <value>Riadenie zmien v jedálni</value>
+  </data>
+  <data name="RES_features.diningroom.name.rotext" xml:space="preserve">
+    <value>Jedáleň</value>
+  </data>
+  <data name="RES_features.diningroom.punches.description.rotext" xml:space="preserve">
+    <value>Správa dierovania: oprava zabudnutých dierok, akceptácia dierok zadaných ručne používateľom,...</value>
+  </data>
+  <data name="RES_features.diningroom.punches.name.rotext" xml:space="preserve">
+    <value>transfery</value>
+  </data>
+  <data name="RES_features.diningroom.turns.description.rotext" xml:space="preserve">
+    <value>Konfigurácia zmien umožňujúca prístup do jedálne</value>
+  </data>
+  <data name="RES_features.diningroom.turns.name.rotext" xml:space="preserve">
+    <value>Zmeny v jedálni</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.description.rotext" xml:space="preserve">
+    <value>Úroveň zabezpečenia GDPR</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.high.description.rotext" xml:space="preserve">
+    <value>Vysoká úroveň</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.high.name.rotext" xml:space="preserve">
+    <value>Vysoká úroveň</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.low.description.rotext" xml:space="preserve">
+    <value>Základná úroveň</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.low.name.rotext" xml:space="preserve">
+    <value>Základná úroveň</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.medium.description.rotext" xml:space="preserve">
+    <value>Stredná úroveň</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.medium.name.rotext" xml:space="preserve">
+    <value>Stredná úroveň</value>
+  </data>
+  <data name="RES_features.documents.accesslevel.name.rotext" xml:space="preserve">
+    <value>Úroveň zabezpečenia GDPR</value>
+  </data>
+  <data name="RES_features.documents.description.rotext" xml:space="preserve">
+    <value>Dokumenty</value>
+  </data>
+  <data name="RES_features.documents.documentsdefinition.description.rotext" xml:space="preserve">
+    <value>Definovanie šablón dokumentov</value>
+  </data>
+  <data name="RES_features.documents.documentsdefinition.name.rotext" xml:space="preserve">
+    <value>Definovanie šablón dokumentov</value>
+  </data>
+  <data name="RES_features.documents.name.rotext" xml:space="preserve">
+    <value>Dokumenty</value>
+  </data>
+  <data name="RES_features.documents.permision.description.rotext" xml:space="preserve">
+    <value>Rozsah pôsobnosti</value>
+  </data>
+  <data name="RES_features.documents.permision.labor.description.rotext" xml:space="preserve">
+    <value>Práca</value>
+  </data>
+  <data name="RES_features.documents.permision.labor.name.rotext" xml:space="preserve">
+    <value>Práca</value>
+  </data>
+  <data name="RES_features.documents.permision.legal.description.rotext" xml:space="preserve">
+    <value>Právna stránka</value>
+  </data>
+  <data name="RES_features.documents.permision.legal.name.rotext" xml:space="preserve">
+    <value>Právna stránka</value>
+  </data>
+  <data name="RES_features.documents.permision.name.rotext" xml:space="preserve">
+    <value>Rozsah pôsobnosti</value>
+  </data>
+  <data name="RES_features.documents.permision.prevention.description.rotext" xml:space="preserve">
+    <value>Prevencia</value>
+  </data>
+  <data name="RES_features.documents.permision.prevention.name.rotext" xml:space="preserve">
+    <value>Prevencia</value>
+  </data>
+  <data name="RES_features.documents.permision.quality.description.rotext" xml:space="preserve">
+    <value>Kvalita</value>
+  </data>
+  <data name="RES_features.documents.permision.quality.name.rotext" xml:space="preserve">
+    <value>Kvalita</value>
+  </data>
+  <data name="RES_features.documents.permision.security.description.rotext" xml:space="preserve">
+    <value>Zabezpečenie</value>
+  </data>
+  <data name="RES_features.documents.permision.security.name.rotext" xml:space="preserve">
+    <value>Zabezpečenie</value>
+  </data>
+  <data name="RES_features.documentsabsences.definition.description.rotext" xml:space="preserve">
+    <value>Definícia dokumentov, ktoré sa majú používať na sledovanie neprítomnosti</value>
+  </data>
+  <data name="RES_features.documentsabsences.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.documentsabsences.description.rotext" xml:space="preserve">
+    <value>Správa dokumentov, ktoré sa majú používať na sledovanie neprítomnosti</value>
+  </data>
+  <data name="RES_features.documentsabsences.name.rotext" xml:space="preserve">
+    <value>Dokumenty</value>
+  </data>
+  <data name="RES_features.e.planification.description.rotext" xml:space="preserve">
+    <value>Umožňuje v rámci používateľského portálu prístup k funkcii "Kalendár kontroly rozvrhu"</value>
+  </data>
+  <data name="RES_features.e.planification.forecast.description.rotext" xml:space="preserve">
+    <value>Zrušenie schválených plánovaných absencií</value>
+  </data>
+  <data name="RES_features.e.planification.forecast.name.rotext" xml:space="preserve">
+    <value>Zrušenie schválených plánovaných absencií</value>
+  </data>
+  <data name="RES_features.e.planification.name.rotext" xml:space="preserve">
+    <value>plánovanie</value>
+  </data>
+  <data name="RES_features.e.planification.query.description.rotext" xml:space="preserve">
+    <value>Používateľ si môže prezerať naplánované rozvrhy</value>
+  </data>
+  <data name="RES_features.e.planification.query.name.rotext" xml:space="preserve">
+    <value>Konzultácie</value>
+  </data>
+  <data name="RES_features.e.planification.requests.description.rotext" xml:space="preserve">
+    <value>Používateľ môže zadávať požiadavky na zmeny v teoretickom plánovaní</value>
+  </data>
+  <data name="RES_features.e.planification.requests.name.rotext" xml:space="preserve">
+    <value>žiadosti</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedabsence .description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.e.planification.requests.plannedabsence .name.rotext" xml:space="preserve">
+    <value>Očakávaná neprítomnosť</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedabsence.description.rotext" xml:space="preserve">
+    <value>Používateľ môže podávať žiadosti o predvídanie dní neprítomnosti</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedabsence.name.rotext" xml:space="preserve">
+    <value>Predpokladané dni neprítomnosti</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedcause.description.rotext" xml:space="preserve">
+    <value>Používateľ môže zadávať požiadavky na predpoveď hodín neprítomnosti</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedcause.name.rotext" xml:space="preserve">
+    <value>Predpokladané hodiny neprítomnosti</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedhour.description.rotext" xml:space="preserve">
+    <value>Používateľ môže zadávať požiadavky na dovolenku/odchod na hodinovom základe</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedhour.name.rotext" xml:space="preserve">
+    <value>Hodinový rozvrh dovoleniek/odchodov</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedovertime.description.rotext" xml:space="preserve">
+    <value>Používateľ môže požiadať o nadbytočné hodiny</value>
+  </data>
+  <data name="RES_features.e.planification.requests.plannedovertime.name.rotext" xml:space="preserve">
+    <value>Predpokladaný počet nadčasových hodín</value>
+  </data>
+  <data name="RES_features.e.planification.requests.shiftchange.description.rotext" xml:space="preserve">
+    <value>Používateľ môže požiadať o zmenu pracovnej zmeny: napr. popoludňajšiu zmenu na rannú zmenu na budúci piatok</value>
+  </data>
+  <data name="RES_features.e.planification.requests.shiftchange.name.rotext" xml:space="preserve">
+    <value>Zmena rozvrhu</value>
+  </data>
+  <data name="RES_features.e.planification.requests.shiftexchange.description.rotext" xml:space="preserve">
+    <value>Používateľ môže požiadať o výmenu pracovných zmien s iným používateľom v určitý deň</value>
+  </data>
+  <data name="RES_features.e.planification.requests.shiftexchange.name.rotext" xml:space="preserve">
+    <value>Výmena cestovných poriadkov</value>
+  </data>
+  <data name="RES_features.e.planification.requests.vacations.description.rotext" xml:space="preserve">
+    <value>Používateľ môže požiadať o dni dovolenky alebo voľna</value>
+  </data>
+  <data name="RES_features.e.planification.requests.vacations.name.rotext" xml:space="preserve">
+    <value>Dovolenka</value>
+  </data>
+  <data name="RES_features.e.punches.dailyrecord.description.rotext" xml:space="preserve">
+    <value>Používateľ môže vykonať denné vyhlásenia. Upozornenia, ktoré vyžadujú hodiny v reálnom čase, ako napríklad upozornenie, že používateľ mal prísť, sa nebudú generovať.</value>
+  </data>
+  <data name="RES_features.e.punches.dailyrecord.name.rotext" xml:space="preserve">
+    <value>vyhlásenie o pracovnom čase</value>
+  </data>
+  <data name="RES_features.e.punches.description.rotext" xml:space="preserve">
+    <value>Umožňuje v rámci používateľského portálu prístup k funkcii "Kontrola času a dochádzky"</value>
+  </data>
+  <data name="RES_features.e.punches.name.rotext" xml:space="preserve">
+    <value>Záznamy o čase a dochádzke</value>
+  </data>
+  <data name="RES_features.e.punches.punches.description.rotext" xml:space="preserve">
+    <value>Používateľ môže uskutočniť svoje rezervácie prostredníctvom portálu používateľa</value>
+  </data>
+  <data name="RES_features.e.punches.punches.name.rotext" xml:space="preserve">
+    <value>Vykonávanie prevodov</value>
+  </data>
+  <data name="RES_features.e.punches.query.description.rotext" xml:space="preserve">
+    <value>Používateľ si môže pozrieť podpisy vykonané v konkrétny deň</value>
+  </data>
+  <data name="RES_features.e.punches.query.name.rotext" xml:space="preserve">
+    <value>Konzultácie</value>
+  </data>
+  <data name="RES_features.e.punches.requests.costcenterforgotten.description.rotext" xml:space="preserve">
+    <value>Používateľ môže zadávať požiadavky na zabudnuté taktovanie nákladových stredísk</value>
+  </data>
+  <data name="RES_features.e.punches.requests.costcenterforgotten.name.rotext" xml:space="preserve">
+    <value>Zabudnuté podpisy nákladových stredísk</value>
+  </data>
+  <data name="RES_features.e.punches.requests.description.rotext" xml:space="preserve">
+    <value>Používateľ môže zadávať požiadavky týkajúce sa taktovania</value>
+  </data>
+  <data name="RES_features.e.punches.requests.externalparts.description.rotext" xml:space="preserve">
+    <value>Používateľ môže zadávať požiadavky na externé časti úloh</value>
+  </data>
+  <data name="RES_features.e.punches.requests.externalparts.name.rotext" xml:space="preserve">
+    <value>Externé časti</value>
+  </data>
+  <data name="RES_features.e.punches.requests.externalworkweekresume.description.rotext" xml:space="preserve">
+    <value>Používateľ môže zadávať týždenné súhrnné požiadavky na externú prácu</value>
+  </data>
+  <data name="RES_features.e.punches.requests.externalworkweekresume.name.rotext" xml:space="preserve">
+    <value>Týždenná časť externej práce</value>
+  </data>
+  <data name="RES_features.e.punches.requests.forgotten.description.rotext" xml:space="preserve">
+    <value>Používateľ môže požiadať o zabudnuté údery</value>
+  </data>
+  <data name="RES_features.e.punches.requests.forgotten.name.rotext" xml:space="preserve">
+    <value>Zabudnuté podpisy</value>
+  </data>
+  <data name="RES_features.e.punches.requests.justify.description.rotext" xml:space="preserve">
+    <value>Používateľ môže podať žiadosť o zdôvodnenie existujúcich taktovaní</value>
+  </data>
+  <data name="RES_features.e.punches.requests.justify.name.rotext" xml:space="preserve">
+    <value>Odôvodnenie existujúcich presunov</value>
+  </data>
+  <data name="RES_features.e.punches.requests.name.rotext" xml:space="preserve">
+    <value>žiadosti</value>
+  </data>
+  <data name="RES_features.e.taskpunches.complete.description.rotext" xml:space="preserve">
+    <value>Používateľ bude môcť dokončiť úlohy, na ktorých pracuje.</value>
+  </data>
+  <data name="RES_features.e.taskpunches.complete.name.rotext" xml:space="preserve">
+    <value>Kompletné</value>
+  </data>
+  <data name="RES_features.e.taskpunches.description.rotext" xml:space="preserve">
+    <value>Umožňuje v rámci portálu používateľa prístup k funkcii "Moje úlohy"</value>
+  </data>
+  <data name="RES_features.e.taskpunches.name.rotext" xml:space="preserve">
+    <value>Karty úloh</value>
+  </data>
+  <data name="RES_features.e.taskpunches.punches.description.rotext" xml:space="preserve">
+    <value>Používateľ môže uskutočniť svoje rezervácie prostredníctvom portálu používateľa</value>
+  </data>
+  <data name="RES_features.e.taskpunches.punches.name.rotext" xml:space="preserve">
+    <value>Vykonávanie prevodov</value>
+  </data>
+  <data name="RES_features.e.taskpunches.query.description.rotext" xml:space="preserve">
+    <value>Používateľ si môže pozrieť podpisy vykonané v konkrétny deň</value>
+  </data>
+  <data name="RES_features.e.taskpunches.query.name.rotext" xml:space="preserve">
+    <value>Konzultácie</value>
+  </data>
+  <data name="RES_features.e.taskpunches.requests.description.rotext" xml:space="preserve">
+    <value>Používateľ môže zadávať požiadavky týkajúce sa taktovania</value>
+  </data>
+  <data name="RES_features.e.taskpunches.requests.forgotten.description.rotext" xml:space="preserve">
+    <value>Správa zabudnutých žiadostí o prihlásenie</value>
+  </data>
+  <data name="RES_features.e.taskpunches.requests.forgotten.name.rotext" xml:space="preserve">
+    <value>Zabudnuté podpisy</value>
+  </data>
+  <data name="RES_features.e.taskpunches.requests.name.rotext" xml:space="preserve">
+    <value>žiadosti</value>
+  </data>
+  <data name="RES_features.e.tasks.description.rotext" xml:space="preserve">
+    <value>Oprávnenia používateľa k úlohám</value>
+  </data>
+  <data name="RES_features.e.tasks.name.rotext" xml:space="preserve">
+    <value>úlohy</value>
+  </data>
+  <data name="RES_features.e.tasktotals.description.rotext" xml:space="preserve">
+    <value>Oprávnenia používateľa k zostatkom úloh</value>
+  </data>
+  <data name="RES_features.e.tasktotals.name.rotext" xml:space="preserve">
+    <value>Dotaz na bilanciu úloh</value>
+  </data>
+  <data name="RES_features.e.tasktotals.query.description.rotext" xml:space="preserve">
+    <value>Používateľ si môže pozrieť zostatky a úlohy</value>
+  </data>
+  <data name="RES_features.e.tasktotals.query.name.rotext" xml:space="preserve">
+    <value>Konzultácie</value>
+  </data>
+  <data name="RES_features.e.totals.description.rotext" xml:space="preserve">
+    <value>Oprávnenia používateľa k zostatkom</value>
+  </data>
+  <data name="RES_features.e.totals.name.rotext" xml:space="preserve">
+    <value>zostatky</value>
+  </data>
+  <data name="RES_features.e.totals.query.description.rotext" xml:space="preserve">
+    <value>Označuje, či používateľ môže nahliadnuť do svojich zostatkov</value>
+  </data>
+  <data name="RES_features.e.totals.query.name.rotext" xml:space="preserve">
+    <value>Konzultácie</value>
+  </data>
+  <data name="RES_features.e.userfields.description.rotext" xml:space="preserve">
+    <value>Umožňuje v rámci používateľského portálu prístup k funkcii "Môj profil"</value>
+  </data>
+  <data name="RES_features.e.userfields.name.rotext" xml:space="preserve">
+    <value>Profil používateľa</value>
+  </data>
+  <data name="RES_features.e.userfields.query.description.rotext" xml:space="preserve">
+    <value>Používateľ môže skontrolovať hodnoty osobného súboru</value>
+  </data>
+  <data name="RES_features.e.userfields.query.name.rotext" xml:space="preserve">
+    <value>Konzultácie</value>
+  </data>
+  <data name="RES_features.e.userfields.requests.description.rotext" xml:space="preserve">
+    <value>Používateľ môže požiadať o zmenu hodnôt na karte</value>
+  </data>
+  <data name="RES_features.e.userfields.requests.name.rotext" xml:space="preserve">
+    <value>žiadosti</value>
+  </data>
+  <data name="RES_features.e.visits.definition.description.rotext" xml:space="preserve">
+    <value>Definovať typy návštev</value>
+  </data>
+  <data name="RES_features.e.visits.definition.name.rotext" xml:space="preserve">
+    <value>Definovať typy návštev</value>
+  </data>
+  <data name="RES_features.e.visits.description.rotext" xml:space="preserve">
+    <value>Používateľ môže prijímať návštevy</value>
+  </data>
+  <data name="RES_features.e.visits.name.rotext" xml:space="preserve">
+    <value>Navštívte stránku</value>
+  </data>
+  <data name="RES_features.e.visits.program.description.rotext" xml:space="preserve">
+    <value>Naplánujte návštevy</value>
+  </data>
+  <data name="RES_features.e.visits.program.name.rotext" xml:space="preserve">
+    <value>Naplánujte návštevy</value>
+  </data>
+  <data name="RES_features.e.visits.receive.description.rotext" xml:space="preserve">
+    <value>Prijímanie návštevníkov</value>
+  </data>
+  <data name="RES_features.e.visits.receive.name.rotext" xml:space="preserve">
+    <value>Prijímanie návštevníkov</value>
+  </data>
+  <data name="RES_features.employees.allowedapplications.description.rotext" xml:space="preserve">
+    <value>Správa aplikácií, do ktorých sa používateľ môže prihlásiť</value>
+  </data>
+  <data name="RES_features.employees.allowedapplications.name.rotext" xml:space="preserve">
+    <value>Aplikácie</value>
+  </data>
+  <data name="RES_features.employees.assignments.description.rotext" xml:space="preserve">
+    <value>Správa príspevkov používateľov</value>
+  </data>
+  <data name="RES_features.employees.assignments.name.rotext" xml:space="preserve">
+    <value>Príspevky</value>
+  </data>
+  <data name="RES_features.employees.businesscenters.description.rotext" xml:space="preserve">
+    <value>Správa nákladových stredísk pridelených používateľom a skupinám</value>
+  </data>
+  <data name="RES_features.employees.businesscenters.name.rotext" xml:space="preserve">
+    <value>Nákladové strediská</value>
+  </data>
+  <data name="RES_features.employees.channels.description.rotext" xml:space="preserve">
+    <value>Umožňuje spravovať komunikačné kanály vašej spoločnosti</value>
+  </data>
+  <data name="RES_features.employees.channels.name.rotext" xml:space="preserve">
+    <value>Komunikačné kanály</value>
+  </data>
+  <data name="RES_features.employees.communiques.description.rotext" xml:space="preserve">
+    <value>Prístup k funkciám komuniké</value>
+  </data>
+  <data name="RES_features.employees.communiques.name.rotext" xml:space="preserve">
+    <value>komunikoval</value>
+  </data>
+  <data name="RES_features.employees.complaints.description.rotext" xml:space="preserve">
+    <value>Umožňuje riadenie kanála na oznamovanie nekalých praktík v spoločnosti</value>
+  </data>
+  <data name="RES_features.employees.complaints.name.rotext" xml:space="preserve">
+    <value>Kanál na podávanie sťažností</value>
+  </data>
+  <data name="RES_features.employees.contract.description.rotext" xml:space="preserve">
+    <value>Správa zmlúv a prideľovanie dohôd</value>
+  </data>
+  <data name="RES_features.employees.contract.name.rotext" xml:space="preserve">
+    <value>Zmluva</value>
+  </data>
+  <data name="RES_features.employees.datalink.custom.dailycauses.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.employees.datalink.custom.dailycauses.name.rotext" xml:space="preserve">
+    <value>(NoEntry)</value>
+  </data>
+  <data name="RES_features.employees.datalink.custom.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.employees.datalink.custom.name.rotext" xml:space="preserve">
+    <value>Prispôsobené</value>
+  </data>
+  <data name="RES_features.employees.datalink.custom.prima.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.employees.datalink.custom.prima.name.rotext" xml:space="preserve">
+    <value>Výpočet poistného</value>
+  </data>
+  <data name="RES_features.employees.datalink.custom.primasummary.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.employees.datalink.custom.primasummary.name.rotext" xml:space="preserve">
+    <value>Zhrnutie výpočtu poistného na používateľa</value>
+  </data>
+  <data name="RES_features.employees.datalink.custom.punches.description.rotext" xml:space="preserve">
+    <value>Podrobný zoznam podpisov používateľov</value>
+  </data>
+  <data name="RES_features.employees.datalink.custom.punches.name.rotext" xml:space="preserve">
+    <value>Podpisy používateľov</value>
+  </data>
+  <data name="RES_features.employees.datalink.custom.punchespresence.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.employees.datalink.custom.punchespresence.name.rotext" xml:space="preserve">
+    <value>Podpisovanie prítomnosti</value>
+  </data>
+  <data name="RES_features.employees.datalink.description.rotext" xml:space="preserve">
+    <value>Dátové prepojenia dostupné na obrazovke dátových prepojení</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.accrualsday.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na vykonanie denného exportu zostatku</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.accrualsday.name.rotext" xml:space="preserve">
+    <value>Export denného zostatku</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.accrualsperiod.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na spustenie pravidelného exportu zostatku</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.accrualsperiod.name.rotext" xml:space="preserve">
+    <value>Pravidelný vývoz bilancie</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advabsence.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na spustenie rozšíreného exportu predĺžených neprítomností</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advabsence.name.rotext" xml:space="preserve">
+    <value>Pokročilý export predĺžených absencií</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advabsences.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na vykonanie exportu neprítomností</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advabsences.name.rotext" xml:space="preserve">
+    <value>Exportovanie neprítomností</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advaccruals.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na spustenie rozšíreného exportu zostatkov</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advaccruals.name.rotext" xml:space="preserve">
+    <value>Pokročilý export zostatku</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advcauses.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na vykonávanie exportu odôvodnení</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advcauses.name.rotext" xml:space="preserve">
+    <value>Vývoz odôvodnení</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advdinning.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na spustenie rozšíreného exportu jedál</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advdinning.name.rotext" xml:space="preserve">
+    <value>Pokročilý vývoz do jedální</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advemployees.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na spustenie rozšíreného exportu používateľov</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advemployees.name.rotext" xml:space="preserve">
+    <value>Pokročilý export používateľa</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advrequests.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na vykonávanie exportu aplikácií</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.advrequests.name.rotext" xml:space="preserve">
+    <value>Export aplikácií</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.description.rotext" xml:space="preserve">
+    <value>Exporty dostupné na obrazovke dátového prepojenia</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.iberper.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na vykonanie exportu Iberper</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.iberper.name.rotext" xml:space="preserve">
+    <value>Vývoz Iberper</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.labor.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na vykonanie exportu do služby Labor</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.labor.name.rotext" xml:space="preserve">
+    <value>Vývoz na trh práce</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.loginclass.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na spustenie exportu do Logic-Class</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.loginclass.name.rotext" xml:space="preserve">
+    <value>Export do triedy Logic</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.name.rotext" xml:space="preserve">
+    <value>Vývoz</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.punches.description.rotext" xml:space="preserve">
+    <value>Údaje o používateľoch, ktorí sa prihlásili na pracovný čas, sa exportujú</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.punches.name.rotext" xml:space="preserve">
+    <value>Pokročilý export podpisov</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.sage.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na spustenie exportu SAGE-murano</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.sage.name.rotext" xml:space="preserve">
+    <value>Vývoz SAGE-murano</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.stdemployees.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na spustenie štandardného exportu</value>
+  </data>
+  <data name="RES_features.employees.datalink.exports.stdemployees.name.rotext" xml:space="preserve">
+    <value>Štandardný vývoz</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.absences.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na vykonávanie importu predĺžených neprítomností</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.absences.name.rotext" xml:space="preserve">
+    <value>Dôležitosť dlhodobých absencií</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.company.description.rotext" xml:space="preserve">
+    <value>Povolenia na realizáciu dovozu spoločností</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.company.name.rotext" xml:space="preserve">
+    <value>Dovozné spoločnosti</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.description.rotext" xml:space="preserve">
+    <value>Importy dostupné na obrazovke dátového prepojenia</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.employees.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na spustenie importu používateľa</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.employees.name.rotext" xml:space="preserve">
+    <value>Importovanie používateľov</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.name.rotext" xml:space="preserve">
+    <value>Dovoz</value>
+  </data>
+  <data name="RES_features.employees.datalink.name.rotext" xml:space="preserve">
+    <value>Dátové spojenie</value>
+  </data>
+  <data name="RES_features.employees.description.rotext" xml:space="preserve">
+    <value>Správa a konfigurácia používateľov, na ktorých sa bude vykonávať správa jednotlivých povolených funkcií používateľov</value>
+  </data>
+  <data name="RES_features.employees.groupmobility.description.rotext" xml:space="preserve">
+    <value>Správa skupinovej mobility používateľov</value>
+  </data>
+  <data name="RES_features.employees.groupmobility.name.rotext" xml:space="preserve">
+    <value>Mobilita</value>
+  </data>
+  <data name="RES_features.employees.groups.description.rotext" xml:space="preserve">
+    <value>Správa skupín používateľov: úprava a konfigurácia.</value>
+  </data>
+  <data name="RES_features.employees.groups.name.rotext" xml:space="preserve">
+    <value>skupiny</value>
+  </data>
+  <data name="RES_features.employees.identifymethods.description.rotext" xml:space="preserve">
+    <value>Úprava a konfigurácia identifikačných prostriedkov, s ktorými bude používateľ pracovať: karta, odtlačok prsta, používateľ a heslo,...</value>
+  </data>
+  <data name="RES_features.employees.identifymethods.name.rotext" xml:space="preserve">
+    <value>Metódy identifikácie</value>
+  </data>
+  <data name="RES_features.employees.name.rotext" xml:space="preserve">
+    <value>používatelia</value>
+  </data>
+  <data name="RES_features.employees.namefoto.description.rotext" xml:space="preserve">
+    <value>Úprava a modifikácia priradenia mena používateľa a fotografie</value>
+  </data>
+  <data name="RES_features.employees.namefoto.name.rotext" xml:space="preserve">
+    <value>Meno a fotografia</value>
+  </data>
+  <data name="RES_features.employees.surveys.description.rotext" xml:space="preserve">
+    <value>Umožňuje vytvárať a odosielať prieskumy dohliadaným zamestnancom</value>
+  </data>
+  <data name="RES_features.employees.surveys.name.rotext" xml:space="preserve">
+    <value>Prieskumy</value>
+  </data>
+  <data name="RES_features.employees.type.description.rotext" xml:space="preserve">
+    <value>Úprava a konfigurácia procesov, do ktorých používateľ zasahuje: správa času, prístup, PRL,...</value>
+  </data>
+  <data name="RES_features.employees.type.name.rotext" xml:space="preserve">
+    <value>Typ používateľa</value>
+  </data>
+  <data name="RES_features.employees.userfields.definition.description.rotext" xml:space="preserve">
+    <value>Konfigurácia osobného spisu</value>
+  </data>
+  <data name="RES_features.employees.userfields.definition.name.rotext" xml:space="preserve">
+    <value>Definícia polí</value>
+  </data>
+  <data name="RES_features.employees.userfields.description.rotext" xml:space="preserve">
+    <value>Vedenie osobného spisu.</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.description.rotext" xml:space="preserve">
+    <value>Správa hodnôt osobných spisov podľa stupňa citlivosti, ako je stanovené v nariadení RGPD</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.high.description.rotext" xml:space="preserve">
+    <value>Údaje o ideológii, náboženstve, rasovom pôvode, zdraví,...</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.high.name.rotext" xml:space="preserve">
+    <value>Vysoká úroveň</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.low.description.rotext" xml:space="preserve">
+    <value>Osobné údaje: PID, adresa, úroveň vzdelania,...</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.low.name.rotext" xml:space="preserve">
+    <value>Základná úroveň</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.medium.description.rotext" xml:space="preserve">
+    <value>Úverové údaje, daňové úrady, priestupky,...</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.medium.name.rotext" xml:space="preserve">
+    <value>Stredná úroveň</value>
+  </data>
+  <data name="RES_features.employees.userfields.information.name.rotext" xml:space="preserve">
+    <value>Informačné polia</value>
+  </data>
+  <data name="RES_features.employees.userfields.name.rotext" xml:space="preserve">
+    <value>Súbor</value>
+  </data>
+  <data name="RES_features.employees.userfields.requests.description.rotext" xml:space="preserve">
+    <value>Správa žiadostí o úpravu karty</value>
+  </data>
+  <data name="RES_features.employees.userfields.requests.name.rotext" xml:space="preserve">
+    <value>žiadosti</value>
+  </data>
+  <data name="RES_features.events.definition.description.rotext" xml:space="preserve">
+    <value>Definícia plánovaných podujatí</value>
+  </data>
+  <data name="RES_features.events.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.events.description.rotext" xml:space="preserve">
+    <value>Riadenie plánovaných podujatí</value>
+  </data>
+  <data name="RES_features.events.name.rotext" xml:space="preserve">
+    <value>Plánované podujatia</value>
+  </data>
+  <data name="RES_features.kpi.definition.description.rotext" xml:space="preserve">
+    <value>Definícia ukazovateľov výkonnosti</value>
+  </data>
+  <data name="RES_features.kpi.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.kpi.description.rotext" xml:space="preserve">
+    <value>Riadenie ukazovateľov výkonnosti</value>
+  </data>
+  <data name="RES_features.kpi.name.rotext" xml:space="preserve">
+    <value>Ukazovatele výkonnosti</value>
+  </data>
+  <data name="RES_features.labagree.accrualrules.definition.description.rotext" xml:space="preserve">
+    <value>Konfigurácia pravidiel dohody: napr. prenos zostatku nevyčerpanej dovolenky z jedného roka do ďalšieho, úprava nadbytočných hodín na štvrťročnej báze,...</value>
+  </data>
+  <data name="RES_features.labagree.accrualrules.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.labagree.accrualrules.description.rotext" xml:space="preserve">
+    <value>Riadenie pravidiel, ktorými sa riadia jednotlivé dohovory</value>
+  </data>
+  <data name="RES_features.labagree.accrualrules.name.rotext" xml:space="preserve">
+    <value>Pravidlá dohody</value>
+  </data>
+  <data name="RES_features.labagree.definition.description.rotext" xml:space="preserve">
+    <value>Konfigurácia konvencií: priradenie počiatočných hodnôt, maximálnych hodnôt a pravidiel konvencií</value>
+  </data>
+  <data name="RES_features.labagree.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.labagree.description.rotext" xml:space="preserve">
+    <value>Riadenie pracovných zmlúv</value>
+  </data>
+  <data name="RES_features.labagree.employeeassign.description.rotext" xml:space="preserve">
+    <value>Umožňuje priradenie už vytvorenej zmluvy používateľovi</value>
+  </data>
+  <data name="RES_features.labagree.employeeassign.name.rotext" xml:space="preserve">
+    <value>Priradenie používateľom</value>
+  </data>
+  <data name="RES_features.labagree.name.rotext" xml:space="preserve">
+    <value>Dohody</value>
+  </data>
+  <data name="RES_features.labagree.startupvalues.definition.description.rotext" xml:space="preserve">
+    <value>Nastavenie počiatočných hodnôt a maximálnych hodnôt: napr. počiatočná hodnota 22 dní dovolenky, maximálna hodnota 16:00 hodín všeobecného lekára,... ***initial *** ***</value>
+  </data>
+  <data name="RES_features.labagree.startupvalues.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.labagree.startupvalues.description.rotext" xml:space="preserve">
+    <value>Správa počiatočných hodnôt a maximálnych hodnôt, ktorými sa riadia rôzne dohody</value>
+  </data>
+  <data name="RES_features.labagree.startupvalues.name.rotext" xml:space="preserve">
+    <value>Počiatočné hodnoty</value>
+  </data>
+  <data name="RES_features.productiveunit.definition.description.rotext" xml:space="preserve">
+    <value>Konfigurácia výrobných jednotiek a ich spôsobov práce</value>
+  </data>
+  <data name="RES_features.productiveunit.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.productiveunit.description.rotext" xml:space="preserve">
+    <value>riadenie výrobných jednotiek</value>
+  </data>
+  <data name="RES_features.productiveunit.name.rotext" xml:space="preserve">
+    <value>Výrobné jednotky</value>
+  </data>
+  <data name="RES_features.reports.description.rotext" xml:space="preserve">
+    <value>Prístup k pokročilým funkciám reportovania</value>
+  </data>
+  <data name="RES_features.reports.name.rotext" xml:space="preserve">
+    <value>Pokročilé vykazovanie</value>
+  </data>
+  <data name="RES_features.shifts.definition.description.rotext" xml:space="preserve">
+    <value>Konfigurácia parametrov, ktoré tvoria rozvrh: teoretické hodiny, časy začiatku a konca, prestávky, časové pásma, pravidlá odôvodnenia,...</value>
+  </data>
+  <data name="RES_features.shifts.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.shifts.description.rotext" xml:space="preserve">
+    <value>Správa zoznamu skupín rozvrhov a rozvrhov zapojených do správy rozvrhov používateľov</value>
+  </data>
+  <data name="RES_features.shifts.name.rotext" xml:space="preserve">
+    <value>cestovné poriadky</value>
+  </data>
+  <data name="RES_features.tasks.analytics.description.rotext" xml:space="preserve">
+    <value>Analytická kontrola údajov súvisiacich s úlohami</value>
+  </data>
+  <data name="RES_features.tasks.analytics.name.rotext" xml:space="preserve">
+    <value>Analýza úloh</value>
+  </data>
+  <data name="RES_features.tasks.businesscenters.description.rotext" xml:space="preserve">
+    <value>Správa nákladových stredísk: konfigurácia, úpravy atď.</value>
+  </data>
+  <data name="RES_features.tasks.businesscenters.name.rotext" xml:space="preserve">
+    <value>Nákladové strediská</value>
+  </data>
+  <data name="RES_features.tasks.datalink.description.rotext" xml:space="preserve">
+    <value>Dátové prepojenia dostupné na obrazovke dátových prepojení</value>
+  </data>
+  <data name="RES_features.tasks.datalink.exports.advtasks.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na spustenie rozšíreného exportu úloh</value>
+  </data>
+  <data name="RES_features.tasks.datalink.exports.advtasks.name.rotext" xml:space="preserve">
+    <value>Pokročilý export úloh</value>
+  </data>
+  <data name="RES_features.tasks.datalink.exports.description.rotext" xml:space="preserve">
+    <value>Exporty dostupné na obrazovke dátového prepojenia</value>
+  </data>
+  <data name="RES_features.tasks.datalink.exports.name.rotext" xml:space="preserve">
+    <value>Vývoz</value>
+  </data>
+  <data name="RES_features.tasks.datalink.exports.tasks.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na vykonanie exportu úlohy</value>
+  </data>
+  <data name="RES_features.tasks.datalink.exports.tasks.name.rotext" xml:space="preserve">
+    <value>Exportovanie úloh</value>
+  </data>
+  <data name="RES_features.tasks.datalink.imports.description.rotext" xml:space="preserve">
+    <value>Importy dostupné na obrazovke dátového prepojenia</value>
+  </data>
+  <data name="RES_features.tasks.datalink.imports.name.rotext" xml:space="preserve">
+    <value>Dovoz</value>
+  </data>
+  <data name="RES_features.tasks.datalink.imports.tasks.description.rotext" xml:space="preserve">
+    <value>Oprávnenia na vykonávanie importu úloh</value>
+  </data>
+  <data name="RES_features.tasks.datalink.imports.tasks.name.rotext" xml:space="preserve">
+    <value>Importovanie úloh</value>
+  </data>
+  <data name="RES_features.tasks.datalink.name.rotext" xml:space="preserve">
+    <value>Dátové spojenie</value>
+  </data>
+  <data name="RES_features.tasks.definition.description.rotext" xml:space="preserve">
+    <value>Definujte úlohy</value>
+  </data>
+  <data name="RES_features.tasks.definition.name.rotext" xml:space="preserve">
+    <value>Definovať úlohy</value>
+  </data>
+  <data name="RES_features.tasks.description.rotext" xml:space="preserve">
+    <value>úlohy</value>
+  </data>
+  <data name="RES_features.tasks.fieldsdefinition.description.rotext" xml:space="preserve">
+    <value>Definícia atribútov úlohy</value>
+  </data>
+  <data name="RES_features.tasks.fieldsdefinition.name.rotext" xml:space="preserve">
+    <value>Definícia atribútov</value>
+  </data>
+  <data name="RES_features.tasks.name.rotext" xml:space="preserve">
+    <value>úlohy</value>
+  </data>
+  <data name="RES_features.tasks.punches.description.rotext" xml:space="preserve">
+    <value>Správa dierovania: oprava zabudnutých dierok, akceptácia dierok zadaných ručne používateľom,...</value>
+  </data>
+  <data name="RES_features.tasks.punches.name.rotext" xml:space="preserve">
+    <value>Úprava podpisov</value>
+  </data>
+  <data name="RES_features.tasks.requests.description.rotext" xml:space="preserve">
+    <value>Používateľ môže zadávať požiadavky na taktovanie úloh</value>
+  </data>
+  <data name="RES_features.tasks.requests.forgotten.description.rotext" xml:space="preserve">
+    <value>Správa zabudnutých žiadostí o prihlásenie</value>
+  </data>
+  <data name="RES_features.tasks.requests.forgotten.name.rotext" xml:space="preserve">
+    <value>Zabudnuté podpisy</value>
+  </data>
+  <data name="RES_features.tasks.requests.name.rotext" xml:space="preserve">
+    <value>žiadosti</value>
+  </data>
+  <data name="RES_features.tasks.tasktemplates.definition.description.rotext" xml:space="preserve">
+    <value>Definícia šablón úloh</value>
+  </data>
+  <data name="RES_features.tasks.tasktemplates.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.tasks.tasktemplates.description.rotext" xml:space="preserve">
+    <value>Správa šablón úloh</value>
+  </data>
+  <data name="RES_features.tasks.tasktemplates.name.rotext" xml:space="preserve">
+    <value>Šablóny úloh</value>
+  </data>
+  <data name="RES_features.tasks.templatesdefinition.description.rotext" xml:space="preserve">
+    <value>Definícia šablón úloh</value>
+  </data>
+  <data name="RES_features.tasks.templatesdefinition.name.rotext" xml:space="preserve">
+    <value>Definícia šablón</value>
+  </data>
+  <data name="RES_features.terminals.definition.description.rotext" xml:space="preserve">
+    <value>Konfigurácia terminálu: IP, časové pásmo, zachytenie alebo nezachytenie obrazu pri prihlasovaní, správanie čítačky, sirény,...</value>
+  </data>
+  <data name="RES_features.terminals.definition.name.rotext" xml:space="preserve">
+    <value>definícia</value>
+  </data>
+  <data name="RES_features.terminals.description.rotext" xml:space="preserve">
+    <value>Správa terminálov. DÔLEŽITÉ: Konfiguráciu terminálov vykonajú technici spoločnosti Cegid. Údaje zobrazené na príslušných obrazovkách sa v žiadnom prípade nesmú meniť bez dohľadu pracovníkov spoločnosti Cegid.</value>
+  </data>
+  <data name="RES_features.terminals.name.rotext" xml:space="preserve">
+    <value>terminály</value>
+  </data>
+  <data name="RES_features.terminals.statusinfo.description.rotext" xml:space="preserve">
+    <value>Vizualizácia terminálov nainštalovaných v spoločnosti a ich stav</value>
+  </data>
+  <data name="RES_features.terminals.statusinfo.name.rotext" xml:space="preserve">
+    <value>Informácie o stave</value>
+  </data>
+  <data name="RES_features.visits.create.description.rotext" xml:space="preserve">
+    <value>Vytváranie návštev v službe LiveVisits</value>
+  </data>
+  <data name="RES_features.visits.create.name.rotext" xml:space="preserve">
+    <value>Vytváranie návštev</value>
+  </data>
+  <data name="RES_features.visits.description.rotext" xml:space="preserve">
+    <value>Správa návštevníkov a návštevníkov.</value>
+  </data>
+  <data name="RES_features.visits.manage.description.rotext" xml:space="preserve">
+    <value>Správa návštevníkov v službe LiveVisits</value>
+  </data>
+  <data name="RES_features.visits.manage.name.rotext" xml:space="preserve">
+    <value>Správa návštevníkov</value>
+  </data>
+  <data name="RES_features.visits.name.rotext" xml:space="preserve">
+    <value>Navštívte stránku</value>
+  </data>
+  <data name="RES_features.visits.userfields.description.rotext" xml:space="preserve">
+    <value>Profil návštevníka LiveVisits</value>
+  </data>
+  <data name="RES_features.visits.userfields.name.rotext" xml:space="preserve">
+    <value>Súbor návštevníka</value>
+  </data>
+  <data name="RES_features.administration.alerts.user.name.rotext" xml:space="preserve">
+    <value>používateľ</value>
+  </data>
+  <data name="RES_features.administration.alerts.user.description.rotext" xml:space="preserve">
+    <value>Umožňuje zobraziť upozornenia týkajúce sa používateľov systému (nespoľahlivé hodiny, neprítomní používatelia atď.)</value>
+  </data>
+  <data name="RES_features.administration.alerts.documents.name.rotext" xml:space="preserve">
+    <value>Dokumentácia</value>
+  </data>
+  <data name="RES_features.administration.alerts.documents.description.rotext" xml:space="preserve">
+    <value>Umožňuje zobrazenie upozornení týkajúcich sa správcu dokumentácie (čakajúce dokumenty, nepotvrdené dokumenty atď.)</value>
+  </data>
+  <data name="RES_features.administration.alerts.system.name.rotext" xml:space="preserve">
+    <value>Systém</value>
+  </data>
+  <data name="RES_features.administration.alerts.system.description.rotext" xml:space="preserve">
+    <value>Umožňuje zobraziť upozornenia týkajúce sa systému (odpojené terminály, nepriradené dierovanie kariet atď.)</value>
+  </data>
+  <data name="RES_features.administration.punches.user.name.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.administration.punches.user.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.administration.punches.documents.name.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.administration.punches.documents.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.administration.punches.system.name.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.administration.punches.system.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_features.supervisors.datalink.imports.supervisor.name.rotext" xml:space="preserve">
+    <value>Dovoz vedúcich pracovníkov</value>
+  </data>
+  <data name="RES_features.supervisors.datalink.imports.supervisor.description.rotext" xml:space="preserve">
+    <value>Dovoz dozorných pracovníkov z VT</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.sagemurano.name.rotext" xml:space="preserve">
+    <value>Import zo spoločnosti SAGE Murano</value>
+  </data>
+  <data name="RES_features.employees.datalink.imports.sagemurano.description.rotext" xml:space="preserve">
+    <value>Import zo spoločnosti SAGE Murano</value>
+  </data>
+  <data name="RES_features.administration.exportguidestemplates.name.rotext" xml:space="preserve">
+    <value>Šablóny na export</value>
+  </data>
+  <data name="RES_features.administration.exportguidestemplates.description.rotext" xml:space="preserve">
+    <value>Konfigurácia šablón exportu</value>
+  </data>
+</root>

@@ -1,0 +1,105 @@
+<div data-options="dxView : { name: 'forgottenPunch', title: 'forgottenPunch', disableCache: true } " >
+   
+       
+        <!--<div class="layout-header dx-toolbar-background" data-options="dxContentPlaceholder : { name: 'header', animation: 'view-header-toolbar' }">
+            <div data-bind="dxToolbar: { items: [ { text: title, location: 'center' }, {
+                locateInMenu: 'always',
+                text: i18nextko.t('roLogout'),
+                onClick: function() {
+                     new WebServiceRobotics(function (result) {
+                window.VTPortalUtils.utils.onLogoutSuccessFunc(result);
+            }).logout();
+                }
+            },
+             {
+                locateInMenu: 'always',
+                text: i18nextko.t('roAbout'),
+                onClick: function() {
+                    DevExpress.ui.notify('VisualTime Portal ' + VTPortal.roApp.infoVersion, 'info', 3000);
+                }
+            }] }" data-options="dxCommandContainer : { id: 'ios-header-toolbar' }"></div>
+        </div>-->
+        <!--ko with: subscribeBlock-->
+        <div class="bigProfile" data-options="dxViewPlaceholder: { viewName: 'bigUserInfo' }"></div>
+        <!-- /ko-->
+
+        <div style="clear:both" data-bind="dxScrollView: scrollContent">
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <span data-bind="text: lblInitialDate"></span>
+                    <div class="dx-field-value" data-bind="dxDateBox: beginDate"></div>
+                </div>
+                <div class="dx-field">
+                    <span data-bind="text: lblForgottenPunchType"></span>
+                    <div class="dx-field-value" data-bind="dxSelectBox: cmbforgottenPunchType"></div>
+                </div>
+
+                <!-- ko if: forgottenPunchType() == 1 -->
+                <div class="dx-field">
+                    <span data-bind="text: lblRequestValue1"></span>
+                    <div class="dx-field-value" data-bind="dxSelectBox: cmbRequestValue1"></div>
+                </div>
+                <!-- /ko-->
+                <!-- ko if: forgottenPunchType() == 1 && tcEnabled() == 1 && reqValue1() == 'E'-->
+                <div class="dx-field">
+                    <span data-bind="text: lblTC"></span>
+                    <div class="dx-field-value" data-bind="dxSelectBox: cmbTCType"></div>
+                </div>
+                <!-- /ko-->
+
+                <div class="dx-field">
+                    <span data-bind="text: lblRequestValue2"></span>
+                    <div class="dx-field-value" data-bind="dxSelectBox: cmbRequestValue2"></div>
+                </div>
+
+                <!-- ko if: forgottenPunchType() == 2 -->
+                <div class="dx-field">
+                    <div class="dx-field-value" data-bind="dxCheckBox: ckCustomizeFinish"></div>
+                </div>
+
+                <!-- ko if: finishVisible() == true -->
+                <div class="completeInfo">
+                    <div class="dx-field">
+                        <span data-bind="text: lblEndTaskHour"></span>
+                        <div class="dx-field-value" data-bind="dxDateBox: endTaskHour"></div>
+                    </div>
+                    <div class="dx-field">
+                        <div class="dx-field-value" data-bind="dxCheckBox: ckCompleteTask"></div>
+                    </div>
+                    <div class="dx-field">
+                        <span data-bind="text: lblContinueWith"></span>
+                        <div class="dx-field-value" data-bind="dxSelectBox: cmbContinueWith"></div>
+                    </div>
+
+                    <!--ko with: taskFieldsBlock-->
+                    <div data-options="dxViewPlaceholder: { viewName: 'taskFieldsInput' }"></div>
+                    <!-- /ko-->
+                </div>
+                <!-- /ko-->
+                <!-- /ko-->
+
+
+                <div class="dx-field">
+                    <span data-bind="text: lblRemarks"></span>
+                    <div class="dx-field-value" data-bind="dxTextArea: remarks"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="approvalPopup" data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:true, visible: popupVisible, height: 'auto'}">
+            <!--ko with: myApprovalsBlock-->
+            <div data-options="dxViewPlaceholder: { viewName: 'approvalHistory' } "></div>
+            <!-- /ko-->
+        </div>
+
+        <div class="fixedMenuButton">
+            <div class="actionButton mainMenuButton" data-bind="dxButton: btnApprove"></div>
+            <div class="actionButton mainMenuButton" data-bind="dxButton: btnRefuse"></div>
+            <div class="actionButton mainMenuButton" data-bind="dxButton: btnHistory"></div>
+            <div class="actionButton mainMenuButton" data-bind="dxButton: btnDelete"></div>
+            <div class="actionButton mainMenuButton" data-bind="dxButton: btnSave"></div>
+        </div>
+
+        <div data-bind="dxLoadPanel: loadingPanel"> </div>
+   
+</div>

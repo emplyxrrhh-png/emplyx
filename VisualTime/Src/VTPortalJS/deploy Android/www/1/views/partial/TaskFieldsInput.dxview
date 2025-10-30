@@ -1,0 +1,53 @@
+<div data-options="dxView : { name: 'taskFieldsInput', disableCache: true } " >
+    <div data-bind="if: divTitile">
+        <div class="taskFieldTitle">
+            <span data-bind="text: lblTaskTitle"></span>
+        </div>
+    </div>
+    <div class="dx-fieldset">
+        <div data-bind="if: divTaskField1">
+            <div class="dx-field">
+                <span data-bind="text: lblTaskField1"></span>
+                <div class="dx-field-value" data-bind="dxTextBox: txtTaskField1"></div>
+                <div class="dx-field-value" data-bind="dxSelectBox: cmbTaskField1 "></div>
+            </div>
+        </div>
+        <div data-bind="if: divTaskField2">
+            <div class="dx-field">
+                <span data-bind="text: lblTaskField2"></span>
+                <div class="dx-field-value" data-bind="dxTextBox: txtTaskField2 "></div>
+                <div class="dx-field-value" data-bind="dxSelectBox: cmbTaskField2 "></div>
+            </div>
+        </div>
+        <div data-bind="if: divTaskField3">
+            <div class="dx-field">
+                <span data-bind="text: lblTaskField3"></span>
+                <div class="dx-field-value" data-bind="dxTextBox: txtTaskField3 "></div>
+                <div class="dx-field-value" data-bind="dxSelectBox: cmbTaskField3 "></div>
+            </div>
+
+        </div>
+        <div data-bind="if: divTaskField4">
+            <div class="dx-field">
+                <span data-bind="text: lblTaskField4"></span>
+                <div class="dx-field-value" data-bind="dxNumberBox: txtTaskField4"></div>
+                <div class="dx-field-value" data-bind="dxSelectBox: cmbTaskField4 "></div>
+            </div>
+
+        </div>
+        <div data-bind="if: divTaskField5">
+            <div class="dx-field">
+                <span data-bind="text: lblTaskField5"></span>
+                <div class="dx-field-value" data-bind="dxNumberBox: txtTaskField5 "></div>
+                <div class="dx-field-value" data-bind="dxSelectBox: cmbTaskField5 "></div>
+            </div>
+        </div>
+        <div data-bind="if: divTaskField6">
+            <div class="dx-field">
+                <span data-bind="text: lblTaskField6"></span>
+                <div class="dx-field-value" data-bind="dxNumberBox: txtTaskField6 "></div>
+                <div class="dx-field-value" data-bind="dxSelectBox: cmbTaskField6 "></div>
+            </div>
+        </div>
+    </div>
+</div>

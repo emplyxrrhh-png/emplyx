@@ -1,0 +1,32 @@
+<div data-options="dxView : { name: 'scheduler', title: 'scheduler', disableCache: true  } ">
+
+	<div id="smallUserInfo"></div>
+
+    <div data-bind="dxTabs: tabPanelOptions" class="innerTabPanelList">
+        <div data-options="dxTemplate : { name: 'title' } ">
+            <div data-bind="css: $data.cssClass, attr:{title:$data.hint}"></div>
+        </div>
+    </div>
+    <div id="panelsContent" style="height:92%">
+        <!-- ko if: selectedView() == 1 -->
+        <!--ko with: myCalendarBlock-->
+        <div data-options="dxViewPlaceholder: { viewName: 'myCalendar' } "></div>
+        <!-- /ko-->
+        <!-- /ko -->
+        <!-- ko if: selectedView() == 2 -->
+        <!--ko with: myAccrualsBlock-->
+        <div data-options="dxViewPlaceholder: { viewName: 'myAccruals' } "></div>
+        <!-- /ko-->
+        <!-- /ko -->
+        <!-- ko if: selectedView() == 3 -->
+        <!--ko with: myAuthorizationsBlock-->
+        <div data-options="dxViewPlaceholder: { viewName: 'myAuthorizations' } "></div>
+        <!-- /ko-->
+        <!-- /ko -->
+        <!-- ko if: selectedView() == 4 -->
+        <!--ko with: myRequestsBlock-->
+        <div data-options="dxViewPlaceholder: { viewName: 'myRequests' } "></div>
+        <!-- /ko-->
+        <!-- /ko -->
+    </div>
+</div>

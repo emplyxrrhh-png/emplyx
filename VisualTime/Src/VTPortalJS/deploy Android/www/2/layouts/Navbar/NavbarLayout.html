@@ -1,0 +1,193 @@
+<div class="navbar-layout" data-options="dxLayout : { name: 'navbar' } ">
+    <div class="layout-header dx-toolbar-background" id="navbarLayout" data-options="dxContentPlaceholder : { name: 'header', animation: 'view-header-toolbar' }">
+        <div data-bind="dxToolbar: { 
+             items: [
+                {
+                    location: 'before',
+                    template: $('#hamburgerMenu')
+                    
+                },
+                {
+                     location: 'after' ,
+                     widget: 'dxButton' ,
+                     visible: (!VTPortal.roApp.isOnline()),
+                     locateInMenu: 'auto' ,
+                     options: {
+                     icon: 'warning' ,
+                     onClick: function() {
+                        DevExpress.ui.notify(i18nextko.t('roNoConnectionAvailable'), 'warning', 3000);
+                     }
+                }
+                },
+                {
+                    location: 'center',
+                    template: $('#individualItemTemplate'),
+                    onClick: function() {
+                        if (VTPortal.roApp.db.settings.onlySupervisor && VTPortal.roApp.impersonatedIDEmployee == -1) {
+                            VTPortal.app.navigate('myTeamEmployees', { root: true });
+                        }else{
+                            VTPortal.app.navigate('home', { root: true });
+                        }
+                    }
+                },
+                {
+                     location: 'after' ,
+                     widget: 'dxButton' ,
+                     visible: (VTPortal.roApp.nfcEnabled()),
+                     locateInMenu: 'auto' ,
+                     options: {
+                         icon: 'Images/Common/nfc.png' ,
+                         onClick: function() {
+                            DevExpress.ui.notify(i18nextko.t('roNfcEnabled'), 'info', 3000);
+                         }
+                     }
+                },
+                {
+                     location: 'after' ,
+                     widget: 'dxButton' ,
+                     visible: (VTPortal.roApp.syncing()),
+                     locateInMenu: 'auto' ,
+                     options: {
+                         icon: 'refresh' ,
+                         onClick: function() {
+                              DevExpress.ui.notify(i18nextko.t('roSyncing'), 'info', 3000);
+                         }
+                     }
+                }
+             ] }" data-options="dxCommandContainer : { id: 'ios-header-toolbar' }"></div>
+    </div>
+
+    <div class="layout-content" data-options="dxContentPlaceholder : { name: 'content', animation: 'view-content-change' }">
+    </div>
+
+    <div class="layout-footer" style="visibility:hidden; height:0px !important">
+        <div class="navbar-container" data-bind="dxNavBar: { }" data-options="dxCommandContainer: { id: 'global-navigation' }" style="padding-top:5px;">
+        </div>
+    </div>
+
+    <div class="view-footer" data-options="dxContent : { targetPlaceholder: 'view-footer' } ">
+        <div class="view-toolbar-bottom" data-bind="dxToolbar: { visible: false }" data-options="dxCommandContainer : { id: 'ios-view-footer' } ">
+        </div>
+    </div>
+</div>
+
+<script id="individualItemTemplate" type="text/html">
+    <div>
+        <div style="display:inline-block; color: #0046FE">
+            <b>cegid</b>
+        </div>
+        <div style="display:inline-block; color: #6D7B89">
+            Visualtime Portal
+        </div>
+    </div>
+</script>
+
+<script id="hamburgerMenu" type="text/html">
+    
+    <div style="position:relative;" data-bind="visible: VTPortal.roApp.showHamburgerMenu">
+        <div id="tabMain" data-bind="dxMenu: VTPortal.roApp.hamburgerMenu" class="tabLayout">
+            <div data-options="dxTemplate : { name: 'title' } " style="padding-right: 50px;">
+                <div data-bind="css: $data.Class"></div>
+                <!-- ko if: $data.Class.includes("iconImpersonate") --><span data-bind="text: $data.Name" class="hamburgerMenuItem" style="opacity: 0; color:#ff5c35 !important"></span><!-- /ko-->
+                <!-- ko if: !$data.Class.includes("iconImpersonate") --><span data-bind="text: $data.Name" class="hamburgerMenuItem" style="opacity: 0;"></span><!-- /ko-->
+                <!--ko if: $data.badge--><span data-bind="text: $data.badge" class="badgeMenuIcon"></span>
+                <style>
+                    #badgeMainMenu {
+                        display: block !important;
+                    }
+                </style><!-- /ko-->
+            </div>
+        </div>
+        <span id="badgeMainMenu" class="badgeMenuIcon" style="position: absolute;bottom: 2px;right: -1px;border-radius: 50px;display: none;">!</span>
+    </div>
+    <script>
+        VTPortal.app.on("viewShowing", function (e) {
+            var backArrow = e.viewInfo.commands.find(function (item) {
+                return item.option("type") === "back";
+            });
+            //Ocultamos el menú hamburgesa si existe la flecha de volver atrás
+            VTPortal.roApp.showHamburgerMenu(backArrow ? false : true);
+        });  
+    </script>
+</script>
+
+<!--{
+      location: 'center' ,
+      widget: 'dxButton' ,
+      locateInMenu: 'auto' ,
+      options: {
+      icon: 'Images/Common/logocegid.png',
+      onClick: function() {
+                 }
+             }
+         },-->
+<!--{
+      locateInMenu: 'always',
+      text: i18nextko.t('roHelp'),
+      onClick: function() {
+           VTPortal.roApp.showPopover(true);
+      }
+  }-->
+<!--<div class="navbar-layout" data-options="dxLayout : { name: 'navbar', platform: 'android' } ">
+
+    <div class="layout-header">
+        <div class="navbar-container dx-navbar-layout-header" data-bind="dxNavBar: {}" data-options="dxCommandContainer: { id: 'global-navigation' }">
+        </div>
+    </div>
+
+    <div class="layout-content" data-options="dxContentPlaceholder : { name: 'content', animation: 'view-content-change' }">
+    </div>
+
+    <div class="layout-footer" data-options="dxContentPlaceholder: { name: 'footer' } ">
+        <div data-bind="dxToolbar: { visible: false }" data-options="dxCommandContainer : { id: 'android-footer-toolbar' } "></div>
+    </div>
+</div>
+
+<div class="navbar-layout" data-options="dxLayout : { name: 'navbar', platform: 'generic' } ">
+
+    <div class="layout-header dx-toolbar-background" data-options="dxContentPlaceholder : { name: 'header', animation: 'view-header-toolbar' }">
+        <div data-bind="dxToolbar: { items: [{ text: title, location: 'center' }] }" data-options="dxCommandContainer : { id: 'generic-header-toolbar' }">
+        </div>
+    </div>
+
+    <div class="layout-content" data-options="dxContentPlaceholder : { name: 'content', animation: 'view-content-change' }">
+    </div>
+
+    <div class="layout-footer">
+        <div class="navbar-container" data-bind="dxNavBar: {}" data-options="dxCommandContainer: { id: 'global-navigation' }">
+        </div>
+    </div>
+
+    <div class="view-footer" data-options="dxContent : { targetPlaceholder: 'view-footer' } ">
+        <div class="view-toolbar-bottom" data-bind="dxToolbar: { visible: false }" data-options="dxCommandContainer : { id: 'generic-view-footer' } ">
+        </div>
+    </div>
+</div>
+
+<div class="navbar-layout-tablet" data-options="dxLayout : { name: 'navbar', platform: 'win', phone: false }">
+    <div class="layout-header">
+        <div data-options="dxContentPlaceholder : { name: 'header', contentCssPosition: 'static' }">
+            <h1 class="view-title" data-bind="text: title"></h1>
+        </div>
+        <div class="navbar-container" data-bind="dxNavBar: { selectionMode: 'none' }" data-options="dxCommandContainer : { id: 'global-navigation' }"></div>
+    </div>
+    <div class="layout-content-wrapper">
+        <div class="layout-content" data-options="dxContentPlaceholder : { name: 'content', contentCssPosition: 'static' }">
+        </div>
+    </div>
+</div>
+
+<div class="navbar-layout" data-options="dxLayout : { name: 'navbar', platform: 'win', phone: true } ">
+
+    <div class="layout-header">
+        <div class="navbar-container dx-navbar-layout-header" data-bind="dxNavBar: {}" data-options="dxCommandContainer: { id: 'global-navigation' }">
+        </div>
+    </div>
+
+    <div class="layout-content" data-options="dxContentPlaceholder : { name: 'content', animation: 'view-content-change' }">
+    </div>
+
+    <div class="layout-footer" data-options="dxContentPlaceholder : { name: 'footer' }">
+        <div class="layout-toolbar-bottom" data-bind="dxToolbar: { items: [], renderAs: 'bottomToolbar', visible: false }" data-options="dxCommandContainer : { id: 'win10-phone-appbar' } "></div>
+    </div>
+</div>-->

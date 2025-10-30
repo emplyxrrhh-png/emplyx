@@ -1,0 +1,37 @@
+﻿.dailyRecord_container {
+    width: fit-content;
+    padding: 2rem;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+}
+
+.dailyRecord_pair {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    gap: 5px;
+    align-items: center;
+}
+
+.dailyRecord_container > .btnFlat {
+    margin-right: 34px;
+}
+
+.dailyRecord_pair .dx-link-delete {
+    font-size: 18px;
+    color: #ff5c35;
+    margin-left: 8px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dailyRecord_container .dayChanged {
+    margin-right: 34px;
+    text-align: center;
+    color: #ff5c35;
+    font-weight: bold;
+    margin-top: 5px;
+    display: none;
+}

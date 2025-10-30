@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D82FCAEF-9F70-4477-9A76-BA620F9BEF95}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Robotics.Web.Base</RootNamespace>
+    <AssemblyName>VTBaseWeb</AssemblyName>
+    <MyType>Windows</MyType>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/BaseWeb/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\CommonBin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\CommonBin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Multitennant|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\CommonBin\</OutputPath>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Office.v23.1.Core, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Common\devexpress\DevExpress.Office.v23.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v23.1.Core, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Common\devexpress\DevExpress.RichEdit.v23.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Common\devexpress\DevExpress.Web.v23.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Services3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Common\Microsoft.Web.Services3.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\AssemblyVersionInfo.vb">
+      <Link>AssemblyVersionInfo.vb</Link>
+    </Compile>
+    <Compile Include="Configuration.vb" />
+    <Compile Include="Context.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContextMenu.vb" />
+    <Compile Include="handlerBase.vb" />
+    <Compile Include="LiveCommon\KeepAliveProcess.vb" />
+    <Compile Include="LiveCommon\MyLog.vb" />
+    <Compile Include="LiveCommon\PredicateBuilder.vb" />
+    <Compile Include="LiveCommon\ReadOnlyTemplate.vb" />
+    <Compile Include="LiveCommon\roAlertsCommon.vb" />
+    <Compile Include="LiveCommon\roTools.vb" />
+    <Content Include="LiveCommon\TaskFieldTemplateStructField.vb" />
+    <Compile Include="NoCachePageBase.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SessionManagement\roWsUserManagement.vb" />
+    <Compile Include="SessionManagement\roWsUserObject.vb" />
+    <Compile Include="SessionManagement\roBackend.vb" />
+    <Compile Include="SessionManagement\WebServicesStates.vb" />
+    <Compile Include="SrvPageBase.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HelperSession.vb" />
+    <Compile Include="MasterPageBase.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageBasePortal.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Json\JSONComboFieldItem.vb" />
+    <Compile Include="Json\JSONControls.vb" />
+    <Compile Include="Json\JSONFieldItem.vb" />
+    <Compile Include="Json\JSONMessage.vb" />
+    <Compile Include="roCachePhotoManager.vb" />
+    <Compile Include="Json\roJSON.vb" />
+    <Compile Include="roQueryStringState.vb" />
+    <Compile Include="roTreeState.vb" />
+    <Compile Include="roTreeV3Item.vb" />
+    <Compile Include="WebServiceHelper.vb" />
+    <Compile Include="WebServicesMethods\RulesServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\CollectiveServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\BotsServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\DiagMTServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\GeniusServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\CommuniqueServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\DataLinkGuideServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\LogBookServiceMehods.vb" />
+    <Compile Include="WebServicesMethods\ScheduleRulesServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\AssignmentServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\AuditServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\CausesServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\CommonServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\ConceptsServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\ConnectorServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\ContractsServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\CaptureServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\AccessGroupServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\AccessMoveServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\AccessPeriodServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\CameraServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\CalendarServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\AISchedulingServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\DocumentsServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\SDKServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\ProgrammedOvertimesServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\ProgrammedHolidaysServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\SecurityChartServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\EventSchedulerServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\LiveTasksServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\DocumentsAbsencesServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\SecurityOptionsServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\SecurityV2ServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\SecurityV3ServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\ChannelsServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\WebLinksServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\TaskTemplatesServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\DiningRoomServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\IndicatorsServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\NotificationServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\ProgrammedCausesServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\PunchServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\RequestServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\LabAgreeServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\CostCenterServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\DataLinkServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\EmployeeGroupsServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\EmployeeServiceMethods.vb" />
+    <Compile Include="HelperWeb.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PageBase.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="roLanguageWeb.vb" />
+    <Compile Include="UserControlBase.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SessionManagement\roWebServices.vb" />
+    <Compile Include="WebServicesMethods\IncidenceServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\LicenseServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\MoveServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\PortalServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\ProgrammedAbsencesServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\ReportServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\SchedulerServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\SecurityServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\ShiftServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\TasksServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\TerminalServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\SurveyServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\ToDoListServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\UserAdminServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\UserFieldServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\UserTaskServiceMethods.vb" />
+    <Compile Include="WebServicesMethods\ZoneServiceMethods.vb" />
+    <Compile Include="WLHelperWeb.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataLayer\DataLayer.vbproj">
+      <Project>{a68015f9-a070-4ab5-941e-c922fbc5ff30}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DTOs.VTPortal\DTOs.VTPortal.vbproj">
+      <Project>{38052328-369e-4e56-a112-1a03362207e1}</Project>
+      <Name>DTOs.VTPortal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DTOs\DTOs\DTOs.vbproj">
+      <Project>{00be6247-e1ed-4e0a-bd02-8dbb4e00ffe1}</Project>
+      <Name>DTOs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Portal\Business\Portal.Business.vbproj">
+      <Project>{214273a6-17c9-449f-9516-6f14ded3466d}</Project>
+      <Name>Portal.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SecurityLayer\SecurityLayer.vbproj">
+      <Project>{e712f6a2-5e54-4731-9b11-af80242a246c}</Project>
+      <Name>SecurityLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UsersAdmin\UsersAdmin.vbproj">
+      <Project>{8f4edbff-73d3-4e8a-9079-b6065a62858d}</Project>
+      <Name>UsersAdmin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTAnalytics\VTAnalytics.vbproj">
+      <Project>{8a7a2750-c9b8-45d0-b84d-0aea19444adb}</Project>
+      <Name>VTAnalytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTAzure\VTAzure.vbproj">
+      <Project>{c4ad9d15-4368-4343-b1e1-263abf0e8ab0}</Project>
+      <Name>VTAzure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTBase.Extensions\VTBase.Extensions.vbproj">
+      <Project>{d99ce0c2-ad93-4f3d-a35b-c97749de1bde}</Project>
+      <Name>VTBase.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTBase.Security\VTBase.Security.vbproj">
+      <Project>{c1b73385-8dff-40b0-8c3b-d2e0ded2621e}</Project>
+      <Name>VTBase.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTBase\VTBase.vbproj">
+      <Project>{f1d0ec70-d874-4eed-8ab9-f28fcda2b7f0}</Project>
+      <Name>VTBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTBots\VTBots.vbproj">
+      <Project>{9bc1b59b-8af4-4524-95f8-e15c58f5648e}</Project>
+      <Name>VTBots</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTBudgets\VTBudgets.vbproj">
+      <Project>{2b96654b-c13c-4403-bc75-8cda26cdcfb7}</Project>
+      <Name>VTBudgets</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTBusinessBase\VTBusiness.Common.vbproj">
+      <Project>{97d87ef7-2b41-4216-a6d2-fa9e3c1bc570}</Project>
+      <Name>VTBusiness.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTBusiness\VTBusiness.vbproj">
+      <Project>{19563cd9-657e-48a8-9b7e-c8b7b23af403}</Project>
+      <Name>VTBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTChannels\VTChannels.vbproj">
+      <Project>{df7b157f-567b-45e2-a1fa-d273f2db15fb}</Project>
+      <Name>VTChannels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTCollectives\VTCollectives.vbproj">
+      <Project>{92afb31a-3ed4-4366-a6c0-3f0bf9e48141}</Project>
+      <Name>VTCollectives</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTCommuniques\VTCommuniques.vbproj">
+      <Project>{1003317b-2084-42b8-91c0-d78addb1ea1e}</Project>
+      <Name>VTCommuniques</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTDatalink\VTDataLink.vbproj">
+      <Project>{4ae013f7-3cdd-44e7-9a30-2138bc4ee051}</Project>
+      <Name>VTDataLink</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTDiagCore\VTDiagCore\VTDiagCore.vbproj">
+      <Project>{5ec8be3b-05d3-4954-9c5f-52cd757b4eb4}</Project>
+      <Name>VTDiagCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTEmployees\VTEmployees.vbproj">
+      <Project>{c0e7da43-d1b9-4427-b147-47a269b8706f}</Project>
+      <Name>VTEmployees</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTLiveApiBase\VTLiveApiBase.vbproj">
+      <Project>{46200707-6117-4aac-abc3-31bfbb16990f}</Project>
+      <Name>VTLiveApiBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTNotifications\VTNotifications.vbproj">
+      <Project>{fa9a3bba-e4f3-40ad-bde3-84639db5c522}</Project>
+      <Name>VTNotifications</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTRequests\VTRequests.vbproj">
+      <Project>{0b351286-98d3-4974-90d0-8348a40bea7c}</Project>
+      <Name>VTRequests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTRules\VTRules.vbproj">
+      <Project>{ebeae817-6e4b-4412-9992-95d8733a4c51}</Project>
+      <Name>VTRules</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTScheduler\VTCalendar.vbproj">
+      <Project>{b0555c2c-7794-40d1-bd31-6af0978048cb}</Project>
+      <Name>VTCalendar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTSelector\VTUniversalSelector.vbproj">
+      <Project>{F0ABF7A8-2200-49F1-B657-ADB9BE5B7B77}</Project>
+      <Name>VTUniversalSelector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTSurvey\VTSurvey.vbproj">
+      <Project>{377d60e5-384e-4488-92e3-919d0562114b}</Project>
+      <Name>VTSurvey</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTToDoList\VTToDoList.vbproj">
+      <Project>{7cb1463e-f69e-4317-9c4e-725690229289}</Project>
+      <Name>VTToDoList</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTUserFields\VTUserFields.vbproj">
+      <Project>{7085e89b-7690-480f-b8d4-e356e1365048}</Project>
+      <Name>VTUserFields</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VTWebLinks\VTWebLinks.vbproj">
+      <Project>{77b7bcb4-0f7a-4fea-899a-883a8e19fe4a}</Project>
+      <Name>VTWebLinks</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,22 @@
+<div data-options="dxView : { name: 'punchManagement', title: 'punchManagement', disableCache: true } " >
+	<div id="smallUserInfo"></div>
+
+    <div data-bind="dxTabs: tabPanelOptions" class="innerTabPanelList">
+        <div data-options="dxTemplate : { name: 'title' } ">
+            <div data-bind="css: $data.cssClass "></div>
+        </div>
+    </div>
+
+    <div id="panelsContent" style="height:92%">
+        <!-- ko if: selectedView() == 1 -->
+        <!--ko with: myPunchesBlock-->
+        <div data-options="dxViewPlaceholder: { viewName: 'myPunches' } "></div>
+        <!-- /ko-->
+        <!-- /ko -->
+        <!-- ko if: selectedView() == 2 -->
+        <!--ko with: myPunchRequestsBlock-->
+        <div data-options="dxViewPlaceholder: { viewName: 'myPunchRequests' } "></div>
+        <!-- /ko-->
+        <!-- /ko -->
+    </div>
+</div>

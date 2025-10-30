@@ -1,0 +1,21 @@
+trigger:
+  paths:
+    include:
+    - docs
+ 
+pool:
+  vmImage: windows-latest
+ 
+resources:
+  repositories:
+  - repository: devops-templates
+    type: git
+    name: iberia.delivery-excellence/devops-pipelines-templates
+    ref: main
+
+extends:
+  template: /azure-devops/pipelines/devops-mkdocs/azure-pipelines-v2.yml@devops-templates
+  parameters:
+    docs-area: 'ila'
+    production-approval: false
+    deployment-group-name: 'visualtime-docs-deployment'

@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_frmconsole.caption.rotext" xml:space="preserve">
+    <value>Visualtime kontsola</value>
+  </data>
+  <data name="RES_frmconsole.cmdclearerrorflag.caption.rotext" xml:space="preserve">
+    <value>&amp;Garbitu errore-marka</value>
+  </data>
+  <data name="RES_frmconsole.cmdclearerrorflag.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.cmdok.caption.rotext" xml:space="preserve">
+    <value>&amp;Onartu</value>
+  </data>
+  <data name="RES_frmconsole.cmdok.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.cmdrefreshlog.caption.rotext" xml:space="preserve">
+    <value>Eguneratu erregistroa</value>
+  </data>
+  <data name="RES_frmconsole.cmdrefreshlog.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.cmdstopserver.caption.rotext" xml:space="preserve">
+    <value>&amp;Geditu zerbitzaria</value>
+  </data>
+  <data name="RES_frmconsole.cmdstopserver.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.framain.0.caption.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.framain.0.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.framain.1.caption.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.framain.1.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.framain.2.caption.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.framain.2.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.imgalerts.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.imgconfigureserver.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.imglog.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.imgnoalerts.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.imgstopserver.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.imgusertasks.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.lblalerts.caption.rotext" xml:space="preserve">
+    <value>Arazoren bat dago sisteman. Ikusi gertaeren ikuslea informazio gehiago lortzeko.</value>
+  </data>
+  <data name="RES_frmconsole.lblalerts.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.lblconfigureserverdesc.caption.rotext" xml:space="preserve">
+    <value>Visualtime parametroak konfiguratzea edozein Visualtime arakatzailetan administratzaile gisa saioa hasita egiten da.</value>
+  </data>
+  <data name="RES_frmconsole.lblconfigureserverdesc.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.lblconfigureservertitle.caption.rotext" xml:space="preserve">
+    <value>Zerbitzariaren konfigurazioa:</value>
+  </data>
+  <data name="RES_frmconsole.lblconfigureservertitle.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.lbllogheader.caption.rotext" xml:space="preserve">
+    <value>Hau zerbitzariaren gertaeren erregistroa da. Informazio hau Visualtime laguntza teknikoko langileentzat bakarrik da erabilgarria.</value>
+  </data>
+  <data name="RES_frmconsole.lbllogheader.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.lblnoalerts.caption.rotext" xml:space="preserve">
+    <value>Zerbitzaria behar bezala dabil.</value>
+  </data>
+  <data name="RES_frmconsole.lblnoalerts.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.lblserverstatus.caption.rotext" xml:space="preserve">
+    <value>Prest.</value>
+  </data>
+  <data name="RES_frmconsole.lblserverstatus.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.lblserverstatusheader.caption.rotext" xml:space="preserve">
+    <value>Xehetasunak:</value>
+  </data>
+  <data name="RES_frmconsole.lblserverstatusheader.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.lblstatustitle.caption.rotext" xml:space="preserve">
+    <value>Uneko zerbitzariaren egoera:</value>
+  </data>
+  <data name="RES_frmconsole.lblstatustitle.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.lblstopserver.caption.rotext" xml:space="preserve">
+    <value>Gogoratu Visualtime zerbitzaria ixten duzunean, lanean ari den edozein bezero automatikoki deskonektatuko dela (daturik galdu gabe).</value>
+  </data>
+  <data name="RES_frmconsole.lblstopserver.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.lblstopservertitle.caption.rotext" xml:space="preserve">
+    <value>Gelditu zerbitzaria:</value>
+  </data>
+  <data name="RES_frmconsole.lblstopservertitle.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.lblusertasksheader.caption.rotext" xml:space="preserve">
+    <value>Hauek dira Visualtime zerbitzariak eskuz zuzentzea espero dituen zereginak edo oharrak.</value>
+  </data>
+  <data name="RES_frmconsole.lblusertasksheader.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.lvlog.headers.message.caption.rotext" xml:space="preserve">
+    <value>Mezua</value>
+  </data>
+  <data name="RES_frmconsole.lvlog.headers.process.caption.rotext" xml:space="preserve">
+    <value>Prozesua</value>
+  </data>
+  <data name="RES_frmconsole.lvlog.headers.station.caption.rotext" xml:space="preserve">
+    <value>Denboraldia</value>
+  </data>
+  <data name="RES_frmconsole.lvlog.headers.time.caption.rotext" xml:space="preserve">
+    <value>Ordua</value>
+  </data>
+  <data name="RES_frmconsole.lvlog.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.lvusertasks.headers.completed.caption.rotext" xml:space="preserve">
+    <value>Bete</value>
+  </data>
+  <data name="RES_frmconsole.lvusertasks.headers.created.caption.rotext" xml:space="preserve">
+    <value>Sortu</value>
+  </data>
+  <data name="RES_frmconsole.lvusertasks.headers.message.caption.rotext" xml:space="preserve">
+    <value>Mezua</value>
+  </data>
+  <data name="RES_frmconsole.lvusertasks.headers.origin.caption.rotext" xml:space="preserve">
+    <value>Jatorria</value>
+  </data>
+  <data name="RES_frmconsole.lvusertasks.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmconsole.mnuseparator.caption.rotext" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="RES_frmconsole.mnusystray.caption.rotext" xml:space="preserve">
+    <value>Kontsolaren menua</value>
+  </data>
+  <data name="RES_frmconsole.mnusystrayclose.caption.rotext" xml:space="preserve">
+    <value>&amp;Irten (utzi zerbitzaria martxan)</value>
+  </data>
+  <data name="RES_frmconsole.mnusystrayopen.caption.rotext" xml:space="preserve">
+    <value>Ireki &amp;kontsola</value>
+  </data>
+  <data name="RES_frmconsole.mnusystraystopserver.caption.rotext" xml:space="preserve">
+    <value>&amp;Geditu zerbitzaria eta irten</value>
+  </data>
+  <data name="RES_frmconsole.mnusystrayterminals.caption.rotext" xml:space="preserve">
+    <value>Ireki kontsola eta terminalak</value>
+  </data>
+  <data name="RES_frmconsole.msg.noserverfound.message.rotext" xml:space="preserve">
+    <value>Ez da zerbitzaririk aurkitu: Egiaztatu zerbitzaria funtzionatzen ari dela eta ez dagoela sareko arazorik.</value>
+  </data>
+  <data name="RES_frmconsole.msg.noserverfound.title.rotext" xml:space="preserve">
+    <value>Ez da zerbitzaria aurkitu</value>
+  </data>
+  <data name="RES_frmconsole.msg.shutdownerror.message.rotext" xml:space="preserve">
+    <value>Komunikazio-errore bat dago zerbitzariarekin. Saiatu kontsola hau ixten eta beste bat ireki zerbitzaria ixteko aukerara sartzeko.</value>
+  </data>
+  <data name="RES_frmconsole.msg.shutdownerror.title.rotext" xml:space="preserve">
+    <value>Zerbitzariarekin komunikazio-errorea</value>
+  </data>
+  <data name="RES_frmconsole.tbmain.tabs.1.caption.rotext" xml:space="preserve">
+    <value>Orokorra</value>
+  </data>
+  <data name="RES_frmconsole.tbmain.tabs.2.caption.rotext" xml:space="preserve">
+    <value>Gertaeren ikuslea</value>
+  </data>
+  <data name="RES_frmconsole.tbmain.tabs.3.caption.rotext" xml:space="preserve">
+    <value>Zain dauden zereginak</value>
+  </data>
+  <data name="RES_frmconsole.tbmain.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_server.frmconsole.mnusystray.tip.rotext" xml:space="preserve">
+    <value>Visualtime kontsola</value>
+  </data>
+  <data name="RES_serverstatus.accruals.text.rotext" xml:space="preserve">
+    <value>Balantze-denborak eguneratzen...</value>
+  </data>
+  <data name="RES_serverstatus.broadcaster.text.rotext" xml:space="preserve">
+    <value>Sarbide-konfigurazioa eguneratzen</value>
+  </data>
+  <data name="RES_serverstatus.causes.text.rotext" xml:space="preserve">
+    <value>Justifikazio-arauak aplikatzea...</value>
+  </data>
+  <data name="RES_serverstatus.detector.text.rotext" xml:space="preserve">
+    <value>Ordutegiak detektatzen…</value>
+  </data>
+  <data name="RES_serverstatus.idle.text.rotext" xml:space="preserve">
+    <value>Prest.</value>
+  </data>
+  <data name="RES_serverstatus.incidences.text.rotext" xml:space="preserve">
+    <value>Gorabeherak sortzen...</value>
+  </data>
+  <data name="RES_serverstatus.jobaccruals.text.rotext" xml:space="preserve">
+    <value>Ekoizpen balantzeak eguneratzen...</value>
+  </data>
+  <data name="RES_serverstatus.jobmachineaccruals.text.rotext" xml:space="preserve">
+    <value>Makinen orduak eguneratzen...</value>
+  </data>
+  <data name="RES_serverstatus.jobmoves.text.rotext" xml:space="preserve">
+    <value>Filmak eguneratzen ekoizpena...</value>
+  </data>
+  <data name="RES_serverstatus.jobpieces.text.rotext" xml:space="preserve">
+    <value>Piezak banatzen...</value>
+  </data>
+  <data name="RES_serverstatus.jobtime.text.rotext" xml:space="preserve">
+    <value>Erabiltzaileen orduak eguneratzen...</value>
+  </data>
+  <data name="RES_serverstatus.movements.text.rotext" xml:space="preserve">
+    <value>Bat datozen fitxaketak...</value>
+  </data>
+  <data name="RES_serverstatus.reportserver.text.rotext" xml:space="preserve">
+    <value>Txostenak prozesatzen...</value>
+  </data>
+  <data name="RES_serverstatus.shutdown.text.rotext" xml:space="preserve">
+    <value>Itxiera...</value>
+  </data>
+  <data name="RES_serverstatus.taskaccruals.text.rotext" xml:space="preserve">
+    <value>&lt;SARRERA&gt;</value>
+  </data>
+  <data name="RES_statusbar.manyprocessrunning.caption.rotext" xml:space="preserve">
+    <value>Datuak prozesatzen...</value>
+  </data>
+</root>

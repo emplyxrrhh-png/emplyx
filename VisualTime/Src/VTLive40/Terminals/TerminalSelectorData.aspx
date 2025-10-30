@@ -1,0 +1,1 @@
+﻿<%@ Page Language="VB" AutoEventWireup="false" Inherits="VTLive40.TerminalSelectorData" CodeBehind="TerminalSelectorData.aspx.vb" %>

@@ -1,0 +1,1 @@
+﻿<div style="display: flex;justify-content: center;margin-top: 10%;">@*<img src="~/Base/Images/PortalRequests/nosession.png"*@</div>

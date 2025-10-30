@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Robotics.ExternalSystems.DataLink.RoboticsExternAccess" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Robotics.ExternalSystems.DataLink.RoboticsExternAccess" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://vtliveapidev-idi01.azurewebsites.net/datalink/ExternalApi.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="https://vtliveapidev-idi01.azurewebsites.net/datalink/ExternalApi.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Robotics.ExternalSystems.DataLink" />
+  <xs:import schemaLocation="https://vtliveapidev-idi01.azurewebsites.net/datalink/ExternalApi.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Robotics.Base.DTOs" />
+  <xs:complexType name="roDatalinkStandarEmployee">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ActiveAuthorizations" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="CardNumber" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Robotics.ExternalSystems.DataLink" minOccurs="0" name="CompositeContractType" type="q2:roDataLinkImport.eCompositeContractType" />
+      <xs:element minOccurs="0" name="EndContractDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IDContract" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LabAgreeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MobilityDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NifCopyPlan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NifEmpleado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nivel0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nivel1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nivel10" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nivel2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nivel3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nivel4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nivel5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nivel6" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nivel7" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nivel8" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nivel9" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreEmpleado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Period" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartContractDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SupervisorGroup" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UniqueEmployeeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserFields" nillable="true" type="tns:ArrayOfroDatalinkEmployeeUserFieldValue" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkCenter" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="roDatalinkStandarEmployee" nillable="true" type="tns:roDatalinkStandarEmployee" />
+  <xs:complexType name="ArrayOfroDatalinkEmployeeUserFieldValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="roDatalinkEmployeeUserFieldValue" nillable="true" type="tns:roDatalinkEmployeeUserFieldValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfroDatalinkEmployeeUserFieldValue" nillable="true" type="tns:ArrayOfroDatalinkEmployeeUserFieldValue" />
+  <xs:complexType name="roDatalinkEmployeeUserFieldValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UserFieldName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserFieldValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserFieldValueDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="roDatalinkEmployeeUserFieldValue" nillable="true" type="tns:roDatalinkEmployeeUserFieldValue" />
+  <xs:complexType name="roDatalinkStandardDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocumentData" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentExtension" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentRemarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NifEmpleado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UniqueEmployeeID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="roDatalinkStandardDocument" nillable="true" type="tns:roDatalinkStandardDocument" />
+  <xs:complexType name="roDatalinkStandarDocumentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ResultCode" type="xs:int" />
+      <xs:element minOccurs="0" name="ResultDetails" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="roDatalinkStandarDocumentResponse" nillable="true" type="tns:roDatalinkStandarDocumentResponse" />
+  <xs:complexType name="roDatalinkStandarAccrualCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AtDateAccrual" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EndAccrualPeriod" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NifEmpleado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NifLetter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartAccrualPeriod" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UniqueEmployeeID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="roDatalinkStandarAccrualCriteria" nillable="true" type="tns:roDatalinkStandarAccrualCriteria" />
+  <xs:complexType name="roDatalinkStandarAccrualResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accruals" nillable="true" type="tns:ArrayOfroDatalinkStandarAccrual" />
+      <xs:element minOccurs="0" name="ResultCode" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="roDatalinkStandarAccrualResponse" nillable="true" type="tns:roDatalinkStandarAccrualResponse" />
+  <xs:complexType name="ArrayOfroDatalinkStandarAccrual">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="roDatalinkStandarAccrual" nillable="true" type="tns:roDatalinkStandarAccrual" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfroDatalinkStandarAccrual" nillable="true" type="tns:ArrayOfroDatalinkStandarAccrual" />
+  <xs:complexType name="roDatalinkStandarAccrual">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccrualDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="AccrualExportKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AccrualShortName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AccrualValue" type="xs:double" />
+      <xs:element minOccurs="0" name="NifEmpleado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NifLetter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UniqueEmployeeID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="roDatalinkStandarAccrual" nillable="true" type="tns:roDatalinkStandarAccrual" />
+  <xs:complexType name="roDatalinkStandarAbsenceCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EndAbsencePeriod" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NifEmpleado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NifLetter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShowChangesInPeriod" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StartAbsencePeriod" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UniqueEmployeeID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="roDatalinkStandarAbsenceCriteria" nillable="true" type="tns:roDatalinkStandarAbsenceCriteria" />
+  <xs:complexType name="roDatalinkStandarAbsenceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Absences" nillable="true" type="tns:ArrayOfroDatalinkStandarAbsence" />
+      <xs:element minOccurs="0" name="ResultCode" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="roDatalinkStandarAbsenceResponse" nillable="true" type="tns:roDatalinkStandarAbsenceResponse" />
+  <xs:complexType name="ArrayOfroDatalinkStandarAbsence">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="roDatalinkStandarAbsence" nillable="true" type="tns:roDatalinkStandarAbsence" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfroDatalinkStandarAbsence" nillable="true" type="tns:ArrayOfroDatalinkStandarAbsence" />
+  <xs:complexType name="roDatalinkStandarAbsence">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AbsenceId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Action" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BeginHour" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CauseExportKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CauseName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CauseShortName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Duration" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EndAbsenceDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EndHour" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MaxDays" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NifEmpleado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NifLetter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartAbsenceDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TimeStamp" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UniqueEmployeeID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="roDatalinkStandarAbsence" nillable="true" type="tns:roDatalinkStandarAbsence" />
+  <xs:complexType name="roDatalinkStandarCalendar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CanTelecommute" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NifEmpleado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NifLetter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlanDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ShiftKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShiftLayerDefinition" nillable="true" type="tns:ArrayOfroShiftLayerDefinition" />
+      <xs:element minOccurs="0" name="TelecommuteForced" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TelecommutingStatus" type="tns:TelecommutingType_Enum" />
+      <xs:element minOccurs="0" name="UniqueEmployeeID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="roDatalinkStandarCalendar" nillable="true" type="tns:roDatalinkStandarCalendar" />
+  <xs:complexType name="ArrayOfroShiftLayerDefinition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="roShiftLayerDefinition" nillable="true" type="tns:roShiftLayerDefinition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfroShiftLayerDefinition" nillable="true" type="tns:ArrayOfroShiftLayerDefinition" />
+  <xs:complexType name="roShiftLayerDefinition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ComplemntaryHours" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrdinaryHours" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDay" type="tns:roDayInfo" />
+      <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="roShiftLayerDefinition" nillable="true" type="tns:roShiftLayerDefinition" />
+  <xs:simpleType name="roDayInfo">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:element name="roDayInfo" nillable="true" type="tns:roDayInfo" />
+  <xs:simpleType name="TelecommutingType_Enum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Presence" />
+      <xs:enumeration value="Telecommuting" />
+      <xs:enumeration value="TelecommutingOptional" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TelecommutingType_Enum" nillable="true" type="tns:TelecommutingType_Enum" />
+  <xs:complexType name="roDatalinkStandarHolidays">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Action" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NifEmpleado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NifLetter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlanDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ShiftKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UniqueEmployeeID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="roDatalinkStandarHolidays" nillable="true" type="tns:roDatalinkStandarHolidays" />
+  <xs:complexType name="roDatalinkStandardPunchResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Punches" nillable="true" type="tns:ArrayOfroDatalinkStandardPunch" />
+      <xs:element minOccurs="0" name="PunchesListError" nillable="true" type="tns:ArrayOfroDatalinkStandardPunch" />
+      <xs:element minOccurs="0" name="ResultCode" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="roDatalinkStandardPunchResponse" nillable="true" type="tns:roDatalinkStandardPunchResponse" />
+  <xs:complexType name="ArrayOfroDatalinkStandardPunch">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="roDatalinkStandardPunch" nillable="true" type="tns:roDatalinkStandardPunch" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfroDatalinkStandardPunch" nillable="true" type="tns:ArrayOfroDatalinkStandardPunch" />
+  <xs:complexType name="roDatalinkStandardPunch">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Robotics.Base.DTOs" minOccurs="0" name="ActualType" type="q3:PunchTypeEnum" />
+      <xs:element minOccurs="0" name="DateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Field1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Field2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Field3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Field4" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Field5" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Field6" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="GPS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDTerminal" type="xs:int" />
+      <xs:element minOccurs="0" name="NifEmpleado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NifLetter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResultCode" type="xs:int" />
+      <xs:element minOccurs="0" name="ResultDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Timestamp" type="xs:dateTime" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Robotics.Base.DTOs" minOccurs="0" name="Type" type="q4:PunchTypeEnum" />
+      <xs:element minOccurs="0" name="TypeData" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UniqueEmployeeID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="roDatalinkStandardPunch" nillable="true" type="tns:roDatalinkStandardPunch" />
+</xs:schema>

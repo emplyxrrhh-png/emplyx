@@ -1,0 +1,27 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- none
+
+pool:
+  name: Private VS2022
+
+variables:
+  - name: solution
+    value: './Src/VisualTime Full MT.sln'
+  - name: testProjects
+    value: './Tests/**/*.csproj'
+  - name: buildConfiguration
+    value: 'Multitennant'
+  - name: attachArtifactsToPipeline
+    value: false
+  - name: forceGenerateLang
+    value: false
+
+stages:
+  - template: Templates/CheckFileEncoding.yml
+  - template: Templates/Testing.yml
+  

@@ -1,0 +1,42 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+#name: Cegid VTI-$(VTI.Version)-$(Date:yyyyMMdd)$(Rev:.r)
+name: Cegid VTI-$(Date:yyyyMMdd)$(Rev:.r)
+
+trigger:
+- none
+
+pool:
+  vmImage: windows-latest
+
+
+stages:
+  - stage: GenerateApps
+    condition: succeeded()
+    jobs:
+    - job: Compile
+      displayName: "Generate apk/ipa artifacts into pipeline"
+      steps:
+      - task: NuGetToolInstaller@1
+        displayName: "Setup- Prepare environment"
+        enabled: true
+      - powershell: .\uploadAppsToVoltBuild.ps1
+        displayName: 'Prebuild- Generando artefactos de aplicaciones'
+        workingDirectory: './Src/Utils/UtilScripts/Scripts/ProductionScripts/v2022/'
+      - task: PublishPipelineArtifact@1
+        inputs:
+          targetPath: 'c:\temp\'
+          archiveFilePatterns: '**/*.apk'
+          artifact: 'Applications'
+          publishLocation: 'pipeline'
+        displayName: 'CompileWeb- Attach apk to applications'
+      - task: PublishPipelineArtifact@1
+        inputs:
+          targetPath: 'c:\temp\'
+          archiveFilePatterns: '**/*.ipa'
+          artifact: 'Applications'
+          publishLocation: 'pipeline'
+        displayName: 'CompileWeb- Attach ipa to applications'

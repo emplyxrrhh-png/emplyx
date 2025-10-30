@@ -1,0 +1,43 @@
+﻿<div data-options="dxView : { name: 'myChannels', title: 'myChannels', disableCache: true, width:'100%' } " >
+
+	<div id="smallUserInfo"></div>
+
+	<div id="scrollview" style="clear:both" data-bind="dxScrollView: { height:'90%' }">
+		<div id="list" class="list-container list-container-withAlerts" data-bind="if: channelsDS().length > 0">
+			<div data-bind="dxList: listChannels">
+				<div data-options="dxTemplate: {name: 'AlertItem'}">
+					<div class="listMenuItem">
+						<div data-bind="css: $data.cssClass" class="listMenuItemIcon"></div>
+						<div class="listMenuItemContent">
+							<div data-bind="text: $data.Title"></div>
+							<div class="smallTextDescription" data-bind="text: $data.MessagesInfo"></div>
+						</div>
+
+						<div data-bind="if: $data.NewMessages > 0">  
+							<div style=" justify-content:flex-end; display:flex;height: 30px;padding: 7px;">
+								<div id="spinright-button" class="alertHome">
+									<div class="dx-button-content">
+										<span class="dx-button-text" data-bind="text: $data.NewMessages"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div data-bind="if: $data.NewMessages == 0">
+							<div style=" justify-content:flex-end; display:flex;height: 30px;padding: 7px;">
+								<div id="spinright-button" class="list-item-arrow"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div data-bind="if: channelsDS().length == 0">
+			<div class="noDataCssClass"></div>
+		</div>
+	</div>	
+
+  <div data-bind="dxLoadPanel: loadingPanel"> </div>
+   
+</div>

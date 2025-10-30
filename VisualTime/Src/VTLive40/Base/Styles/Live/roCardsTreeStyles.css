@@ -1,0 +1,436 @@
+﻿@font-face {
+    font-family: "Robotics";
+    src: local("Poppins"),local("Poppins-Regular"),url(../fonts/Poppins-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Robotics";
+    src: url(../fonts/Poppins-Bold.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    font-family: "Robotics";
+    font-size: 12px;
+}
+
+td, tr {
+    border: inherit;
+    height: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0
+}
+
+.twoWindowsFlexLayout {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+}
+
+.threeWindowsFlex {
+    display: flex;
+}
+
+.twoWindowsSidePanel {
+    flex-grow: 1;
+    max-width: 340px;
+    min-width: 340px;
+    border-right: solid 1px #d8d8d8;
+}
+
+.twoWindowsSidePanelGeneric {
+    width: 340px;
+    border-right: solid 1px #d8d8d8;
+    padding: 10px 10px 0px 10px;
+    border-radius: 5px;
+}
+
+.twoWindowsSidePanel .treeCaption {
+    height: 35px;
+    background-color: #0046FE;
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.twoWindowsSidePanelGeneric .treeCaption {
+    height: 35px;
+    background-color: #0046FE;
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    position: relative;
+}
+
+#customSearchBar {
+    border: none !important;
+    width: 100%;
+}
+
+.dxcvControl, .dxcvSearchPanel {
+    border: none !important;
+    background-color: transparent;
+}
+
+.dxcvCard {
+    height: inherit;
+}
+
+.dxcvControl table {
+    margin: auto;
+    overflow: hidden;
+}
+
+#CardView_DXSearchPanel {
+    border: none !important;
+    padding: 11px;
+    display: none;
+}
+
+#customSearchPanel {
+    border: none !important;
+    padding: 11px;
+}
+
+.dxcvCSD::-webkit-scrollbar {
+    display: none;
+}
+
+.dxcvCSD {
+    position: relative;
+    height: 97% !important;
+}
+
+table#CardView > tbody > tr > td {
+    vertical-align: baseline
+}
+
+.scrollPanelLayer {
+    position: absolute;
+    background: linear-gradient(0deg, white, transparent);
+    width: 100%;
+    height: 15%;
+    bottom: 0px;
+    pointer-events: none;
+}
+
+#customSearchPanel > table {
+    font-size: 1.5rem;
+    border: none !important;
+    width: 100%;
+    background-color: transparent;
+    margin: 0px 8px;
+}
+
+    #customSearchPanel > table table {
+        border: none;
+        background-color: white;
+        border-collapse: collapse !important;
+    }
+
+.dxeButtonEditButton.dxeButtonEditClearButton {
+    width: 0;
+}
+
+.dxcvSeparator {
+    display: block;
+    height: 0 !important;
+}
+
+#CardView_DXSearchPanel > table input[type="text"] {
+    background-color: transparent;
+}
+
+#CardView_DXSE > tbody > tr {
+    background-color: white;
+}
+
+#CardView_DXSE > tbody {
+    background-color: white;
+}
+
+#CardView_DXMainTable {
+    padding: 0;
+}
+
+#createNewReportInnerScope {
+}
+
+#createNewReportInnerScope, #hitSearchInnerScope {
+    text-align: center;
+}
+
+#hitSearchBtn {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #0046FE;
+    border-radius: 100%;
+    padding: 0 5px 2px 5px;
+}
+
+.dx-treelist-headers.dx-treelist-nowrap {
+    display: none;
+}
+
+.menuCategories.menuCategoriesDisplayed {
+    max-height: 650px;
+    padding: 10px;
+}
+
+.CardsTree-card {
+    width: 250px !important;
+    height: unset !important;
+    padding-bottom: 0 !important;
+    background: white !important;
+    border: none !important;
+    border-bottom: 0.5px solid #0046FE !important;
+    border-left: 5px solid transparent !important;
+    cursor: pointer;
+}
+
+    .CardsTree-card > [id^=CardView_tccv] {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        width: 95%;
+    }
+
+    .CardsTree-card > div {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        width: 90%;
+        justify-content: space-between;
+        margin-left: 5px;
+    }
+
+    .CardsTree-card:hover {
+        border-color: #0046FE;
+    }
+
+.CardsTree-cardClicked {
+    border-left: solid 5px #ff5c35 !important;
+    background-color: #e5ecff !important;
+}
+
+.mainActionBtn, .mainActionBtn > a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.CardsTree-card .reportButton:hover {
+    border: 1px solid #ff5c35;
+    border-radius: 5px;
+    background-color: #ff5c35;
+    color: white;
+    padding: 5px 10px;
+}
+
+.CardsTree-card .cardsTree-CardInfo {
+    margin-left: 10px;
+    width: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.dxcvCard .cardsTree-CardInfo .cardsTree-Description span.cardsTree-DescriptionText {
+    width: 190px;
+    white-space: nowrap;
+    font-style: italic;
+    max-height: 15px;
+}
+
+.CardsTree-card .cardsTree-CardIcon {
+    width: 30px;
+    height: 30px;
+    color: #0046FE;
+    font-size: x-large;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+}
+
+.CardsTree-card .cardsTree-CardIcon {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+.CardsTree-card .CardsTree-CardInfo > div {
+    overflow: hidden
+}
+
+    .CardsTree-card .CardsTree-CardInfo > div.cardsTree-Description {
+    }
+
+.CardsTree-card .CardsTree-CardInfo .cardsTree-Description span.cardsTree-DescriptionText {
+    display: inline-block;
+    width: 190px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    font-style: italic;
+    max-height: 15px;
+}
+
+.CardsTree-card .CardsTree-CardInfo h3 {
+    margin: 0;
+}
+
+.CardsTree-card .cardsTree-Historic {
+    list-style: none;
+    padding-left: 5px;
+    text-align: right;
+}
+
+ul.cardsTree-Historic {
+    list-style: none;
+    margin: auto;
+    padding: 0;
+    max-height: 300px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.CardsTree-card .reportExecution.executiuonIsFine {
+    color: inherit;
+}
+
+    .CardsTree-card .reportExecution.executiuonIsFine > i {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+.cardsTree-Historic .reportExecution i {
+    display: inline-block;
+    width: 15px;
+    margin: 3px 3px 3px 5px;
+    color: #0046FE;
+}
+
+.reportCategories {
+    list-style: none;
+    padding: 0;
+}
+
+    .reportCategories > span#categoriesLabel {
+        background-color: #ff5c35;
+        color: white;
+        padding: 0 5px;
+        min-width: 110px;
+        text-overflow: ellipsis;
+    }
+
+.categoryText .targetCategory {
+    color: #ff5c35 !important;
+}
+
+.reportCategories > .categoryText {
+    padding: 2px;
+    color: #0046FE;
+}
+
+.categoryCellClicked {
+    background: #ff5c35 !important;
+    color: white !important;
+    font-weight: bold !important;
+}
+
+#CardView_DXMainTable .reportCategories > .categoryText, #reportConfigContainer .reportCategories > .categoryText {
+    display: inline-block;
+}
+
+.menuCategories {
+    max-height: 0;
+    max-width: 400px;
+    overflow: hidden;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    position: absolute;
+    background-color: #F2F2F2;
+    -webkit-box-shadow: 11px 15px 18px -1px rgba(0,0,0,0.16);
+    -moz-box-shadow: 11px 15px 18px -1px rgba(0,0,0,0.16);
+    box-shadow: 11px 15px 18px -1px rgba(0,0,0,0.16);
+    left: 16px;
+    z-index: 99;
+}
+
+    .menuCategories #clearCategoriesBtn {
+        float: right;
+        padding: 5px;
+        cursor: pointer;
+        color: #0046FE;
+        font-size: 1.2rem;
+    }
+
+.treeCaption-refreshBtn {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    background-image: url(../Images/txtFilter/refresh_white_24x24.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    float: right;
+    margin-top: -5px;
+}
+
+.treeCaption-hideBtn {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    background-image: url(../Images/txtFilter/keyboard_arrow_left_white_24x24.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    float: right;
+    margin-top: -5px;
+}
+
+.treeCaption-unhideBtn {
+    background-color: #ff5c35;
+    height: 35px;
+    width: 35px;
+    border-radius: 5px;
+    background-image: url(../Images/txtFilter/keyboard_arrow_left_white_24x24.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    top: 0px;
+    right: -56px;
+}
+
+.cardName {
+    font-size: 1.2rem;
+}
+
+.dx-drawer-panel-content.dx-drawer-panel-content-initial {
+    display: none !important;
+}
+
+.cardViewFilterButton {
+    background-color: #85a6ff;
+    color: #fff;
+    height: 30px;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 6px;
+}

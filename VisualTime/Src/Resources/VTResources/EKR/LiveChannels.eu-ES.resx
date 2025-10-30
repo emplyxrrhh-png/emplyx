@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_channels.complaint1.rotext" xml:space="preserve">
+    <value>Erreklamazio-bidea aktibatzear da &amp;quot;Informatzaileak modu eraginkorrean babesteari buruzko 2/2023 Legearen arabera&amp;quot; gure aplikazioaren bidez. Garrantzitsua da jakitea kanal hau aktibatu ondoren ezin duzula desaktibatu. Gure plataforma Visualtimen erregistratuta dauden zure erakundeko langile guztiei langileen atariaren bidez eskaintzeko diseinatuta dago, behar izanez gero txostenak egiteko aukera emanez.</value>
+  </data>
+  <data name="RES_channels.complaint2.rotext" xml:space="preserve">
+    <value>Nabarmendu nahi dugu zure langileek gure plataformaren bidez bidalitako mezuak nahi izanez gero anonimoak gera daitezkeela. Konfiantzazko ingurune bat sustatzeko helburuarekin egiten da, non langileak eroso sentituko diren euren kezkak partekatzeko.</value>
+  </data>
+  <data name="RES_channels.complaint3.rotext" xml:space="preserve">
+    <value>Kontuan izan gure plataformaren bidez egindako mezu eta kexa guztiak grabatuko direla eta ezin direla ezabatu. Honek gure kexa-prozesuaren gardentasuna eta osotasuna bermatzen du eta salatutako edozein gairen ikerketa errazten du.</value>
+  </data>
+  <data name="RES_channels.complaint4.rotext" xml:space="preserve">
+    <value>Salaketa-kanal hau aktibatzeari buruzko galdera edo kezka gehigarririk baduzu, ez izan zalantzarik gure laguntza-taldearekin harremanetan jarri. Hemen gaude beharrezko laguntza eskaintzeko eta zure erakundeak osotasuna eta gardentasuna mantentzeko tresna eraginkor bat duela ziurtatzeko.</value>
+  </data>
+  <data name="RES_channels.complaint5.rotext" xml:space="preserve">
+    <value>Eskertzen dugu gure softwarean duzun konfiantza eta zure erakundeari jakinarazpen prozesua modu eraginkorrean kudeatzen laguntzeko dugun gaitasuna.</value>
+  </data>
+  <data name="RES_channels.rochanneladvanced.rotext" xml:space="preserve">
+    <value>Aurreratua</value>
+  </data>
+  <data name="RES_channels.rochannelanonymous.rotext" xml:space="preserve">
+    <value>Elkarrizketa anonimoak baimendu?</value>
+  </data>
+  <data name="RES_channels.rochannelcancel.rotext" xml:space="preserve">
+    <value>Utzi</value>
+  </data>
+  <data name="RES_channels.rochannelcancelpublish.rotext" xml:space="preserve">
+    <value>Utzi</value>
+  </data>
+  <data name="RES_channels.rochannelchart.rotext" xml:space="preserve">
+    <value>Grafikoak</value>
+  </data>
+  <data name="RES_channels.rochannelcomplete.rotext" xml:space="preserve">
+    <value>Osatu orain</value>
+  </data>
+  <data name="RES_channels.rochannelconfiguration.rotext" xml:space="preserve">
+    <value>Ezarpena</value>
+  </data>
+  <data name="RES_channels.rochannelconversations.rotext" xml:space="preserve">
+    <value>Elkarrizketak</value>
+  </data>
+  <data name="RES_channels.rochannelcreatedon.rotext" xml:space="preserve">
+    <value>Sortu du</value>
+  </data>
+  <data name="RES_channels.rochanneldelete.rotext" xml:space="preserve">
+    <value>Kanal hau eta bere elkarrizketa guztiak ezabatu nahi dituzu?</value>
+  </data>
+  <data name="RES_channels.rochanneldeletetitle.rotext" xml:space="preserve">
+    <value>Ezabatu</value>
+  </data>
+  <data name="RES_channels.rochanneldesign.rotext" xml:space="preserve">
+    <value>Diseinua</value>
+  </data>
+  <data name="RES_channels.rochanneldestination.rotext" xml:space="preserve">
+    <value>Zein langilek bidali ditzakete mezuak?</value>
+  </data>
+  <data name="RES_channels.rochanneldestinationdesc.rotext" xml:space="preserve">
+    <value>Hautatu hartzaileak</value>
+  </data>
+  <data name="RES_channels.rochanneldexaccept.rotext" xml:space="preserve">
+    <value>Onartu</value>
+  </data>
+  <data name="RES_channels.rochannelforgroups.rotext" xml:space="preserve">
+    <value>Taldeei</value>
+  </data>
+  <data name="RES_channels.rochannelforusers.rotext" xml:space="preserve">
+    <value>Erabiltzaileei</value>
+  </data>
+  <data name="RES_channels.rochannelgeneral.rotext" xml:space="preserve">
+    <value>Definitu zure kanala</value>
+  </data>
+  <data name="RES_channels.rochannelinfo.rotext" xml:space="preserve">
+    <value>Igo ezazu zure barne-komunikazioaren eraginkortasuna gure interakzio-kanal sendoak erabiliz. Aurki itzazu zure taldeak benetan zer pentsatzen duen zuretzat gehien axola zaizkizun gaiei buruz eta hartu erabaki informatuak zure negozioa aurrera ateratzeko.</value>
+  </data>
+  <data name="RES_channels.rochannelloading.rotext" xml:space="preserve">
+    <value>Kargatzen...</value>
+  </data>
+  <data name="RES_channels.rochannelname.rotext" xml:space="preserve">
+    <value>Kanalaren izena</value>
+  </data>
+  <data name="RES_channels.rochannelnew.rotext" xml:space="preserve">
+    <value>Sortu kanal berri bat</value>
+  </data>
+  <data name="RES_channels.rochannelnewmessages.rotext" xml:space="preserve">
+    <value>Mezu berriak</value>
+  </data>
+  <data name="RES_channels.rochannelno.rotext" xml:space="preserve">
+    <value>Ez</value>
+  </data>
+  <data name="RES_channels.rochannelpendingconversations.rotext" xml:space="preserve">
+    <value>Elkarrizketa irekiak</value>
+  </data>
+  <data name="RES_channels.rochannelpublished.rotext" xml:space="preserve">
+    <value>Partekatu</value>
+  </data>
+  <data name="RES_channels.rochannelreceiptaknowledgment.rotext" xml:space="preserve">
+    <value>Bidalketa berrespena bidali nahi diozu langileari?</value>
+  </data>
+  <data name="RES_channels.rochannelsave.rotext" xml:space="preserve">
+    <value>Gorde</value>
+  </data>
+  <data name="RES_channels.rochannelsend.rotext" xml:space="preserve">
+    <value>Bidali</value>
+  </data>
+  <data name="RES_channels.rochannelsimple.rotext" xml:space="preserve">
+    <value>Sinplea</value>
+  </data>
+  <data name="RES_channels.rochannelstatus.rotext" xml:space="preserve">
+    <value>Estatu</value>
+  </data>
+  <data name="RES_channels.rochannelstatusresume.rotext" xml:space="preserve">
+    <value>Komunikazio bideak</value>
+  </data>
+  <data name="RES_channels.rochannelstitle.rotext" xml:space="preserve">
+    <value>nire kanalak</value>
+  </data>
+  <data name="RES_channels.rochannelsupervisors.rotext" xml:space="preserve">
+    <value>Zein arduradunek erantzun diezaiekete mezuei?</value>
+  </data>
+  <data name="RES_channels.rochannelsupervisorsdesc.rotext" xml:space="preserve">
+    <value>Hautatu kanaleko elkarrizketetan mezuei erantzuteko gai izango diren begiraleak</value>
+  </data>
+  <data name="RES_channels.rochanneltable.rotext" xml:space="preserve">
+    <value>Kontseilua</value>
+  </data>
+  <data name="RES_channels.rochanneltitle.rotext" xml:space="preserve">
+    <value>Komunikazio bideak</value>
+  </data>
+  <data name="RES_channels.rochanneltitledesc.rotext" xml:space="preserve">
+    <value>Titulazioa</value>
+  </data>
+  <data name="RES_channels.rochannelyes.rotext" xml:space="preserve">
+    <value>Bai</value>
+  </data>
+  <data name="RES_channels.ronodata.rotext" xml:space="preserve">
+    <value>Ez dago daturik bistaratzeko</value>
+  </data>
+  <data name="RES_channels.rorestrictchannel.rotext" xml:space="preserve">
+    <value>Murriztu</value>
+  </data>
+  <data name="RES_channels.title.rotext" xml:space="preserve">
+    <value>Komunikazio bideak</value>
+  </data>
+  <data name="RES_channels.title.search.rotext" xml:space="preserve">
+    <value>Komunikazio bideak</value>
+  </data>
+  <data name="RES_channels.titledesc.rotext" xml:space="preserve">
+    <value>Igo ezazu zure barne-komunikazioaren eraginkortasuna gure interakzio-kanal sendoak erabiliz. Aurki itzazu zure taldeak benetan zer pentsatzen duen zuretzat gehien axola zaizkizun gaiei buruz eta hartu erabaki informatuak zure negozioa aurrera ateratzeko.</value>
+  </data>
+  <data name="RES_channels.validatecomplainttitle.rotext" xml:space="preserve">
+    <value>Aktibatu kexak kanala</value>
+  </data>
+  <data name="RES_conversations.emptylist.rotext" xml:space="preserve">
+    <value>Hautatu elkarrizketa bat alboko menutik mezuak ikusteko</value>
+  </data>
+  <data name="RES_conversations.rocomplaintid.rotext" xml:space="preserve">
+    <value>Kexaren identifikatzailea</value>
+  </data>
+  <data name="RES_conversations.rocomplaintiddesc.rotext" xml:space="preserve">
+    <value>Kexaren identifikatzailea</value>
+  </data>
+  <data name="RES_conversations.rologbookinfo.rotext" xml:space="preserve">
+    <value>Kontsultatu kexen erregistro-liburua</value>
+  </data>
+  <data name="RES_conversations.rologbooktitle.rotex.rotext" xml:space="preserve">
+    <value>Egunkaria</value>
+  </data>
+  <data name="RES_conversations.rologbooktitle.rotext" xml:space="preserve">
+    <value>Egunkaria</value>
+  </data>
+  <data name="RES_conversations.roprintcomplaint.rotext" xml:space="preserve">
+    <value>Inprimatu</value>
+  </data>
+  <data name="RES_conversations.roshowcomplaint.rotext" xml:space="preserve">
+    <value>Kontsultatu</value>
+  </data>
+  <data name="RES_conversations.searchtext.rotext" xml:space="preserve">
+    <value>Idatzi testua bilatzeko...</value>
+  </data>
+  <data name="RES_conversations.title.rotext" xml:space="preserve">
+    <value>Egunkaria</value>
+  </data>
+  <data name="RES_conversations.treecaption.rotext" xml:space="preserve">
+    <value>Elkarrizketak</value>
+  </data>
+  <data name="RES_dex.acceptprivacypopup.rotext" xml:space="preserve">
+    <value>Onartu</value>
+  </data>
+  <data name="RES_dex.alreadyloggedin.rotext" xml:space="preserve">
+    <value>Kanpoko txostenarekin jarraitzeko, lehenik saioa amaitu behar duzu Visualtime-n.</value>
+  </data>
+  <data name="RES_dex.btnrecovercomplaint.rotext" xml:space="preserve">
+    <value>Berreskuratu kexa</value>
+  </data>
+  <data name="RES_dex.closedex.rotext" xml:space="preserve">
+    <value>Itxi</value>
+  </data>
+  <data name="RES_dex.closeprivacypopup.rotext" xml:space="preserve">
+    <value>Itxi</value>
+  </data>
+  <data name="RES_dex.closesessiondex.rotext" xml:space="preserve">
+    <value>Saioa itxi</value>
+  </data>
+  <data name="RES_dex.closesessionerror.rotext" xml:space="preserve">
+    <value>Errore bat gertatu da saioa amaitzean</value>
+  </data>
+  <data name="RES_dex.companylocation.rotext" xml:space="preserve">
+    <value>Enpresa</value>
+  </data>
+  <data name="RES_dex.complaintanonymous.rotext" xml:space="preserve">
+    <value>Anonimoa mantendu nahi dut</value>
+  </data>
+  <data name="RES_dex.complaintbody.rotext" xml:space="preserve">
+    <value>Azal iezaguzu zer salatu nahi duzun</value>
+  </data>
+  <data name="RES_dex.complaintemailvalidationerror.rotext" xml:space="preserve">
+    <value>Adierazitako mezu elektronikoak ez du balio.</value>
+  </data>
+  <data name="RES_dex.complaintguidcopied.rotext" xml:space="preserve">
+    <value>Identifikatzailea arbelean kopiatu da</value>
+  </data>
+  <data name="RES_dex.complaintguiddesc.rotext" xml:space="preserve">
+    <value>Gorde identifikatzaile hau txostena atzitu eta jarraipena egin dezazun</value>
+  </data>
+  <data name="RES_dex.complaintguidnotcopied.rotext" xml:space="preserve">
+    <value>Ezin izan da kopiatu identifikatzailea. Ziurtatu eskuz kopiatu duzula, gal ez dezazun.</value>
+  </data>
+  <data name="RES_dex.complaintidentified.rotext" xml:space="preserve">
+    <value>Nire informazioa eman nahi dut</value>
+  </data>
+  <data name="RES_dex.complaintmsgsaveerror.rotext" xml:space="preserve">
+    <value>Ezin izan da txostena sortu. Saiatu berriro geroago.</value>
+  </data>
+  <data name="RES_dex.complaintphonevalidationerror.rotext" xml:space="preserve">
+    <value>Adierazitako telefono zenbakiak ez du balio.</value>
+  </data>
+  <data name="RES_dex.complaintprivacyrequiered.rotext" xml:space="preserve">
+    <value>Pribatutasun politika irakurri eta onartzea beharrezkoa da.</value>
+  </data>
+  <data name="RES_dex.complaintpwdrepeaterror.rotext" xml:space="preserve">
+    <value>Sartutako pasahitzak ez datoz bat.</value>
+  </data>
+  <data name="RES_dex.complaintpwdvalidationerror.rotext" xml:space="preserve">
+    <value>Pasahitzak ez du behar den konplexutasuna betetzen.</value>
+  </data>
+  <data name="RES_dex.complaintresponse.rotext" xml:space="preserve">
+    <value>Eskerrik asko kexa bidaltzeagatik</value>
+  </data>
+  <data name="RES_dex.complaintresponsedesc.rotext" xml:space="preserve">
+    <value>Zure kexa aztertzen ari da, laster izango duzu gure berri.</value>
+  </data>
+  <data name="RES_dex.complainttitle.rotext" xml:space="preserve">
+    <value>Afera</value>
+  </data>
+  <data name="RES_dex.complaintvalidationerror.rotext" xml:space="preserve">
+    <value>Kexaren izenburua eta edukia adierazi behar dituzu</value>
+  </data>
+  <data name="RES_dex.copyguid.rotext" xml:space="preserve">
+    <value>Kopiatu identifikatzailea</value>
+  </data>
+  <data name="RES_dex.dexsessionexpired.rotext" xml:space="preserve">
+    <value>Saioa iraungi da. Mesedez, idatzi berriro kexaren xehetasunak.</value>
+  </data>
+  <data name="RES_dex.gotohome.rotext" xml:space="preserve">
+    <value>itzuli hasierako orrialdera</value>
+  </data>
+  <data name="RES_dex.identificationbtnnext.rotext" xml:space="preserve">
+    <value>Jarraian</value>
+  </data>
+  <data name="RES_dex.identificationcompany.rotext" xml:space="preserve">
+    <value>Enpresa</value>
+  </data>
+  <data name="RES_dex.identificationmail.rotext" xml:space="preserve">
+    <value>Posta elektronikoa</value>
+  </data>
+  <data name="RES_dex.identificationname.rotext" xml:space="preserve">
+    <value>Izena eta abizenak</value>
+  </data>
+  <data name="RES_dex.identificationphone.rotext" xml:space="preserve">
+    <value>Telefono mugikorra</value>
+  </data>
+  <data name="RES_dex.identificationpwd.rotext" xml:space="preserve">
+    <value>Pasahitza</value>
+  </data>
+  <data name="RES_dex.identificationrepeatpwd.rotext" xml:space="preserve">
+    <value>Errepikatu pasahitza</value>
+  </data>
+  <data name="RES_dex.identificationtitle.rotext" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RES_dex.lostdatawarning.rotext" xml:space="preserve">
+    <value>Alerta: zenbaki hau edo pasahitza galtzen baduzu, ez duzu txostenera sartzeko modurik izango. Ezin da pasahitza edo identifikatzailea berreskuratu.</value>
+  </data>
+  <data name="RES_dex.messagetoolarge.rotext" xml:space="preserve">
+    <value>Mezuak 6000 karaktere baino gutxiago izan behar ditu</value>
+  </data>
+  <data name="RES_dex.missingmandatorydata.rotext" xml:space="preserve">
+    <value>Beharrezko datu guztiak sartu behar dituzu. Mesedez, idatzi berriro kexaren xehetasunak.</value>
+  </data>
+  <data name="RES_dex.nolicense.rotext" xml:space="preserve">
+    <value>Ez du kexa-biderik edo lizentziarik.</value>
+  </data>
+  <data name="RES_dex.passwordinfo.rotext" xml:space="preserve">
+    <value>Pasahitz hau erabiliko duzu identifikatzailea erabiliz zure kexa atzitu ahal izateko. Horrela jarraipena egin, informazio gehiago erantsi eta laburpena esportatu dezakezu gorde edo inprimatzeko.</value>
+  </data>
+  <data name="RES_dex.passwordinfodesc.rotext" xml:space="preserve">
+    <value>Pasahitzak gutxienez 10 karaktere izan behar ditu, gutxienez letra larria, zenbaki bat eta ikur bat.</value>
+  </data>
+  <data name="RES_dex.recovercomplaint.rotext" xml:space="preserve">
+    <value>Erreklamazio bat berreskuratu</value>
+  </data>
+  <data name="RES_dex.recovercomplaintdesc.rotext" xml:space="preserve">
+    <value>Sartu txostenaren IDa eta pasahitza zure txostenaren egoera ikusteko.</value>
+  </data>
+  <data name="RES_dex.recovercomplaintid.rotext" xml:space="preserve">
+    <value>Kexaren identifikatzailea</value>
+  </data>
+  <data name="RES_dex.recovercomplaintinforequiered.rotext" xml:space="preserve">
+    <value>Erreklamazioaren erreferentzia eta pasahitza adierazi behar dituzu</value>
+  </data>
+  <data name="RES_dex.roprintcomplaintmessages.rotext" xml:space="preserve">
+    <value>Inprimatu</value>
+  </data>
+  <data name="RES_dex.sendcomplaint.rotext" xml:space="preserve">
+    <value>Bidali kexa bat</value>
+  </data>
+  <data name="RES_dex.sendcomplaintdesc.rotext" xml:space="preserve">
+    <value>Inprimaki honen bidez isilpeko txosten bat bidal dezakezu.&lt;br /&gt;Bidali duzun informazioa konpainiak izendatutako kanal-administratzaileak bakarrik irakur dezake.</value>
+  </data>
+  <data name="RES_dex.title.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_dex.title.search.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_dex.titledesc.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_messages.at.rotext" xml:space="preserve">
+    <value>berak</value>
+  </data>
+  <data name="RES_messages.by.rotext" xml:space="preserve">
+    <value>arabera</value>
+  </data>
+  <data name="RES_messages.closed.rotext" xml:space="preserve">
+    <value>Itxi elkarrizketa</value>
+  </data>
+  <data name="RES_messages.conversationcomplexity.rotext" xml:space="preserve">
+    <value>Konplexutasun handia</value>
+  </data>
+  <data name="RES_messages.conversationstatus.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_messages.dismissed.rotext" xml:space="preserve">
+    <value>Baztertu elkarrizketa</value>
+  </data>
+  <data name="RES_messages.emptylist.rotext" xml:space="preserve">
+    <value>Ez dago argitalpenik bistaratzeko</value>
+  </data>
+  <data name="RES_messages.highcomplexity.rotext" xml:space="preserve">
+    <value>altua</value>
+  </data>
+  <data name="RES_messages.lowcomplexity.rotext" xml:space="preserve">
+    <value>Normala</value>
+  </data>
+  <data name="RES_messages.ongoing.rotext" xml:space="preserve">
+    <value>Itxi</value>
+  </data>
+  <data name="RES_messages.roprintcomplaint.rotext" xml:space="preserve">
+    <value>Inprimatu</value>
+  </data>
+  <data name="RES_messages.sendbutton.rotext" xml:space="preserve">
+    <value>Bidali</value>
+  </data>
+  <data name="RES_messages.sendedat.rotext" xml:space="preserve">
+    <value>Bidali</value>
+  </data>
+  <data name="RES_messages.sendplaceholder.rotext" xml:space="preserve">
+    <value>Idatzi zure mezua hemen...</value>
+  </data>
+  <data name="RES_messages.stateclosed.rotext" xml:space="preserve">
+    <value>itxita</value>
+  </data>
+  <data name="RES_messages.statedismissed.rotext" xml:space="preserve">
+    <value>baztertua</value>
+  </data>
+  <data name="RES_messages.stateongoing.rotext" xml:space="preserve">
+    <value>abian</value>
+  </data>
+  <data name="RES_messages.statepending.rotext" xml:space="preserve">
+    <value>belarritakoa</value>
+  </data>
+  <data name="RES_dex.readandaccept.rotext" xml:space="preserve">
+    <value>Irakurri eta onartzen dut</value>
+  </data>
+  <data name="RES_dex.privacypolicycta.rotext" xml:space="preserve">
+    <value> pribatutasun politika</value>
+  </data>
+  <data name="RES_dex.privacypolicyctaempty.rotext" xml:space="preserve">
+    <value> pribatutasun politika</value>
+  </data>
+</root>

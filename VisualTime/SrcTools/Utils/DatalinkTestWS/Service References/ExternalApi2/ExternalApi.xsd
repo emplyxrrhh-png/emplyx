@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Robotics.ExternalSystems.DataLink" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Robotics.ExternalSystems.DataLink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="roDataLinkImport.eCompositeContractType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="ContractAndDate" />
+      <xs:enumeration value="CompanyContractAndDate" />
+      <xs:enumeration value="ContractAndPeriod" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="roDataLinkImport.eCompositeContractType" nillable="true" type="tns:roDataLinkImport.eCompositeContractType" />
+</xs:schema>

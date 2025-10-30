@@ -1,0 +1,33 @@
+<div data-options="dxView : { name: 'taskSelector', disableCache: true } ">
+
+
+	<div id="smallUserInfo"></div>
+	<div class="dx-searchbar" style="text-align: center !important">
+		<div data-bind="dxTextBox: searchOptions"></div>
+		<div style="border-radius: 10px !important;margin-top: 1vw; width:unset !important" class="get-to-work-orange" data-bind="dxButton: btnAcceptText"></div>
+	</div>
+
+	<div data-bind="dxList: listOptions">
+
+		<div data-options="dxTemplate: {name: 'item'}">
+			<div class="listMenuItem">
+				<div class="TextDescription" data-bind="text: $data.FieldName"></div>
+				<div class="smallTextDescription" data-bind="text: $data.RelatedInfo"></div>
+				<div class="list-item-arrow"></div>
+			</div>
+		</div>
+
+	</div>
+
+	<div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false,closeOnBackButton:false, visible: taskFieldsVisible, height: 'auto'}">
+		<!--ko with: taskFieldsBlock-->
+		<div data-options="dxViewPlaceholder: { viewName: 'taskFieldsInput' }"></div>
+		<!-- /ko-->
+
+		<div style="padding-top:5px">
+			<div style="float:left;width:50%" class="get-to-work-blue" data-bind="dxButton: btnCancelTaskFields"></div>
+			<div style="float:right;width:50%" class="get-to-work-orange" data-bind="dxButton: btnAcceptUserFields"></div>
+		</div>
+
+	</div>
+</div>

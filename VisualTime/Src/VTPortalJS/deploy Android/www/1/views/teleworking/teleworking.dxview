@@ -1,0 +1,28 @@
+<div data-options="dxView : { name: 'teleworking', title: 'teleworking', disableCache: true } ">
+    <!--ko with: subscribeBlock-->
+    <div class="bigProfile" data-options="dxViewPlaceholder: { viewName: 'bigUserInfo' }"></div>
+    <!-- /ko-->
+    <div data-bind="dxLoadPanel: loadingPanel"> </div>
+    <div data-bind="dxTabs: tabPanelOptions" class="innerTabPanelList">
+        <div data-options="dxTemplate : { name: 'title' } ">
+            <div data-bind="css: $data.cssClass "></div>
+        </div>
+    </div>
+    <div id="panelsContent" style="height:66%">
+        <!-- ko if: selectedView() == 1 -->
+        <!--ko with: myWorkBlock-->
+        <div data-options="dxViewPlaceholder: { viewName: 'myWork' } "></div>
+        <!-- /ko-->
+        <!-- /ko -->
+        <!-- ko if: selectedView() == 2 -->
+        <!--ko with: myWorkDailyBlock-->
+        <div data-options="dxViewPlaceholder: { viewName: 'myWorkDaily' } "></div>
+        <!-- /ko-->
+        <!-- /ko -->
+        <!-- ko if: selectedView() == 3 -->
+        <!--ko with: myWorkRequestsBlock-->
+        <div data-options="dxViewPlaceholder: { viewName: 'myWorkRequests' } "></div>
+        <!-- /ko-->
+        <!-- /ko -->
+    </div>
+</div>

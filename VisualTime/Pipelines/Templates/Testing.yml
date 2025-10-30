@@ -1,0 +1,35 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+stages:
+  - stage: Test
+    jobs:
+    - job: Testing
+      displayName: "Run Visualtime solution test suite"
+      steps:
+        - task: NuGetToolInstaller@1
+          displayName: "Setup- Download environment"
+          enabled: true
+        - task: NuGetCommand@2
+          inputs:
+            restoreSolution: '$(solution)'
+          displayName: "Setup- Prepare environment"
+          enabled: true
+        - task: VSBuild@1
+          inputs:
+            solution: '$(solution)'
+          displayName: "Setup- Compiling entiere solution"
+          enabled: true
+        - task: VSTest@2
+          inputs:
+            testSelector: 'testAssemblies'
+            testAssemblyVer2: |
+              **\*tests.dll
+              !**\*TestsAdapter.dll
+              !**\obj\**
+              !**\bin\**\ref\**
+            searchFolder: '$(System.DefaultWorkingDirectory)/Src'
+          displayName: "Test- Run solution test"
+          enabled: true

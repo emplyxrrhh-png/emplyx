@@ -1,0 +1,39 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+stages:
+  - stage: PostmanIntegration
+    jobs:
+    - job: IntegrationTest
+      displayName: "Postman Integrate all integration test"
+      steps:
+      - task: Bash@3
+        displayName: "Install newman"
+        inputs:
+          workingDirectory: ./Src/Tests/PostmanTest
+          targetType: 'inline'
+          script: 'npm install newman -g'
+      - task: Bash@3
+        displayName: "Run HAapi collection"
+        inputs:
+          workingDirectory: ./Src/Tests/PostmanTest
+          targetType: 'inline'
+          script: 'newman run SecureConnect.test.json -e qa.postman_environment.json --reporters cli,junit --reporter-junit-export test-results/sc.output.xml'
+      - task: Bash@3
+        displayName: "Run VTLiveApi collection"
+        inputs:
+          workingDirectory: ./Src/Tests/PostmanTest
+          targetType: 'inline'
+          script: 'newman run vtliveapi.test.json -e qa.postman_environment.json --reporters cli,junit --reporter-junit-export test-results/vtliveapi.output.xml'
+      - task: PublishTestResults@2
+        displayName: "Export test results"
+        inputs:
+          testResultsFormat: 'JUnit'
+          testResultsFiles: |
+            **/**/**/*.output.xml
+            **/**/*.output.xml
+            **/*.output.xml
+            *.output.xml
+      

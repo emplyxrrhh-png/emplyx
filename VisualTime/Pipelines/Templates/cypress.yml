@@ -1,0 +1,38 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+stages:
+  - stage: CypressIntegration
+    jobs:
+    - job: CypressTest
+      displayName: "Cypress e2e test"
+      pool:
+       vmImage: 'ubuntu-latest'
+
+      steps:
+      - task: NodeTool@0
+        inputs:
+          versionSpec: '20.x'
+          displayName: 'Install Node.js'
+
+      - script:  npm install --force
+        workingDirectory: $(Build.SourcesDirectory)/Src/Tests/CypressTest/ 
+        displayName: 'Install npm dependencies'
+
+      - script: npm run cy:run:all
+        timeoutInMinutes: 60
+        workingDirectory: $(Build.SourcesDirectory)/Src/Tests/CypressTest/ 
+        displayName: 'Run Cypress Tests'
+        continueOnError: true
+
+      - task: PublishTestResults@2
+        inputs:
+          testResultsFormat: 'JUnit'
+          testResultsFiles: $(System.DefaultWorkingDirectory)/Src/Tests/CypressTest/junit/cypress_junit_e2e_*.xml
+          searchFolder: '$(System.DefaultWorkingDirectory)/Src/Tests/CypressTest/junit'
+          mergeTestResults: true
+          failTaskOnFailedTests: true
+          testRunTitle: 'End-to-End Tests Visualtime'
+      

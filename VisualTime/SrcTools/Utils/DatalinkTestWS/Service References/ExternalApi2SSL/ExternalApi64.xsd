@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Robotics.Base.DTOs" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Robotics.Base.DTOs" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="PunchTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="_NOTDEFINDED" />
+      <xs:enumeration value="_IN" />
+      <xs:enumeration value="_OUT" />
+      <xs:enumeration value="_AUTO" />
+      <xs:enumeration value="_TASK" />
+      <xs:enumeration value="_AV" />
+      <xs:enumeration value="_AI" />
+      <xs:enumeration value="_L" />
+      <xs:enumeration value="_INI" />
+      <xs:enumeration value="_OUTI" />
+      <xs:enumeration value="_DR" />
+      <xs:enumeration value="_AEV" />
+      <xs:enumeration value="_AEI" />
+      <xs:enumeration value="_CENTER" />
+      <xs:enumeration value="_RPTIN" />
+      <xs:enumeration value="_RPTOUT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PunchTypeEnum" nillable="true" type="tns:PunchTypeEnum" />
+</xs:schema>

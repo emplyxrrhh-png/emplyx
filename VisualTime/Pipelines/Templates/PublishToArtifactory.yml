@@ -1,0 +1,73 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+parameters:
+  - name: artifactoryService
+    type: string
+    default: ""
+  - name: artifactoryTargetName
+    type: string
+    default: ""
+  - name: artifactoryBuildName
+    type: string
+    default: ""
+  - name: artifacts
+    type: object
+    default: ""
+      
+
+stages:
+  - stage: PublishToArtifactory
+    displayName: "Publish To Artifactory"
+    condition: succeeded()
+    dependsOn: 'Build'
+    jobs:
+    - job: Publish 
+      variables:
+        artifactoryBuildNumber: $[ stageDependencies.Build.Compile.outputs['buildVersion.BuildNumber'] ]
+        artifactorySubfolderName: $[ stageDependencies.Build.Compile.outputs['buildVersion.BuildVersion'] ]
+      displayName: "Publish artifacts To Artifactory"
+      steps:
+      - checkout: none
+      - task: JFrogToolsInstaller@1
+        inputs:
+          artifactoryConnection: ${{ parameters.artifactoryService }}
+          cliInstallationRepo: 'jfrog-cliV2'
+      #Upload all artifacts to artifactory
+      - ${{ each vtartifact in parameters.artifacts }}:
+        - ${{ if eq(vtartifact.enabled, true) }} :
+          - task: DownloadBuildArtifacts@1
+            inputs:
+              buildType: 'current'
+              downloadType: 'single'
+              artifactName: '${{ vtartifact.name }}'
+              downloadPath: '$(System.ArtifactsDirectory)'
+            displayName: 'Download - "${{ vtartifact.name }}"'
+          - task: JFrogGenericArtifacts@1
+            displayName: 'Upload artifact'
+            inputs:
+              command: 'Upload'
+              connection: ${{ parameters.artifactoryService }}
+              specSource: 'taskConfiguration'
+              collectBuildInfo: true
+              includeEnvVars: false
+              buildName: '${{ parameters.artifactoryBuildName }}-${{ vtartifact.artifactoryFolderName }}'
+              buildNumber: $(artifactoryBuildNumber) 
+              fileSpec: |
+                {
+                  "files": [
+                    {
+                      "pattern": "$(System.ArtifactsDirectory)\${{ vtartifact.zip }}",
+                      "target": "${{ parameters.artifactoryTargetName }}/${{ vtartifact.artifactoryFolderName }}/$(artifactorySubfolderName)/"
+                    }
+                  ]
+                }
+          - task: JFrogPublishBuildInfo@1
+            displayName: 'Publish Build Info'
+            inputs:
+              artifactoryConnection: ${{ parameters.artifactoryService }}
+              buildName: '${{ parameters.artifactoryBuildName }}-${{ vtartifact.artifactoryFolderName }}'
+              buildNumber: $(artifactoryBuildNumber)
+          

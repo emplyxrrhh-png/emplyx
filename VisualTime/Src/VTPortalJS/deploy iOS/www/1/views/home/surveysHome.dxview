@@ -1,0 +1,29 @@
+<div data-options="dxView : { name: 'surveysHome', title: 'surveysHome',  disableCache: true } ">
+
+    <div style="width:20%; float:left; justify-content:center; display:flex;">
+    
+        <div id="remove-button" data-bind="dxButton: iconSurveys"></div>
+      
+    </div>
+
+    <div style="float:left; width: 80%; justify-content:space-between; display:flex;">
+        <div data-bind="click: goToSurveys">
+            <div class="employeeCenter" style="float:left;">
+
+                <div>
+
+                    <div id="notiTitle" data-bind="css: hasSurveysTitle"><span data-bind="text:surveysTitle"></span></div>
+                </div>
+
+                <div class="productivTaskText"><span data-bind="text: lblSurveysDesc"></span></div>
+                <p></p>
+              
+            </div>
+        </div>
+        <div style=" justify-content:flex-end; display:flex;height: 30px;padding: 7px;">
+
+            <div id="spinright-button" data-bind="dxButton: btnGo" class="alertHome"></div>
+        
+        </div>
+
+        </div><div style="clear:both;"></div>

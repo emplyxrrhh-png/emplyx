@@ -1,0 +1,777 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_aischeduler.reports.title.rotext" xml:space="preserve">
+    <value>Informes</value>
+  </data>
+  <data name="RES_aischeduler.summary.pusummaryname.rotext" xml:space="preserve">
+    <value>Total de días planificados</value>
+  </data>
+  <data name="RES_aischeduler.tabgeneral.rotext" xml:space="preserve">
+    <value>Definición</value>
+  </data>
+  <data name="RES_aischeduler.tabresume.rotext" xml:space="preserve">
+    <value>Resumen</value>
+  </data>
+  <data name="RES_aischeduler.tbaddnewproductiveunit.rotext" xml:space="preserve">
+    <value>Nueva unidad productiva</value>
+  </data>
+  <data name="RES_aischeduler.tbdelproductiveunit.rotext" xml:space="preserve">
+    <value>Borrar unidad productiva</value>
+  </data>
+  <data name="RES_aischeduler.tbshowreports.rotext" xml:space="preserve">
+    <value>Visor de informes</value>
+  </data>
+  <data name="RES_budget.addproductiveunit.rotext" xml:space="preserve">
+    <value>Añadir unidad productiva</value>
+  </data>
+  <data name="RES_budget.afreecalendar.rotext" xml:space="preserve">
+    <value>Libre</value>
+  </data>
+  <data name="RES_budget.amonthcalendar.rotext" xml:space="preserve">
+    <value>Mensual</value>
+  </data>
+  <data name="RES_budget.anextperiod.rotext" xml:space="preserve">
+    <value>Siguiente</value>
+  </data>
+  <data name="RES_budget.aonedaycalendar.rotext" xml:space="preserve">
+    <value>Día</value>
+  </data>
+  <data name="RES_budget.aoneweekcalendar.rotext" xml:space="preserve">
+    <value>Semanal</value>
+  </data>
+  <data name="RES_budget.apreviousperiod.rotext" xml:space="preserve">
+    <value>Anterior</value>
+  </data>
+  <data name="RES_budget.aspxcallbackpanelbarbuttons.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.aspxloadingpopup.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.aspxloadingpopup.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.aspxproductiveunitselector.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.atwoweekcalendar.rotext" xml:space="preserve">
+    <value>Quincenal</value>
+  </data>
+  <data name="RES_budget.btncalendar.rotext" xml:space="preserve">
+    <value>Calendario</value>
+  </data>
+  <data name="RES_budget.btnplanification.rotext" xml:space="preserve">
+    <value>Planificación</value>
+  </data>
+  <data name="RES_budget.btnreview.rotext" xml:space="preserve">
+    <value>Definición</value>
+  </data>
+  <data name="RES_budget.budget.rotext" xml:space="preserve">
+    <value>Presupuesto</value>
+  </data>
+  <data name="RES_budget.budget.selectbudgtrow.rotext" xml:space="preserve">
+    <value>(seleccione una unidad productiva para ver los modos disponibles)</value>
+  </data>
+  <data name="RES_budget.budget.selectrow.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.captchaobjectpopup.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.captchaobjectpopup.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.cmbproductiveunits.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.cmbproductiveunits.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.ddd.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.ddd.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.dxpwmb-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.hdncalendarconfig.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.i.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.i.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.l.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.lbladdposition.text.rotext" xml:space="preserve">
+    <value>Posiciones</value>
+  </data>
+  <data name="RES_budget.lbladdposition.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.lblgroupshifts.text.rotext" xml:space="preserve">
+    <value>Unidad productiva:</value>
+  </data>
+  <data name="RES_budget.lblgroupshifts.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.lblmodestitle.text.rotext" xml:space="preserve">
+    <value>Modos</value>
+  </data>
+  <data name="RES_budget.lblmodestitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.lblproductiveunitname.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.lblproductiveunitname.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.lblteam.text.rotext" xml:space="preserve">
+    <value>Equipo</value>
+  </data>
+  <data name="RES_budget.lblteam.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.lblunitmodegeneral.text.rotext" xml:space="preserve">
+    <value>Detalle</value>
+  </data>
+  <data name="RES_budget.lblunitmodegeneral.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.lblunitmodegeneraldesc.text.rotext" xml:space="preserve">
+    <value>En este formulario se asignan usuarios a cada una de las posiciones del modo de la unidad productiva.</value>
+  </data>
+  <data name="RES_budget.lblunitmodegeneraldesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.msghaschanges.rotext" xml:space="preserve">
+    <value>Se han encontrado cambios en la definición del presupuesto</value>
+  </data>
+  <data name="RES_budget.msghaserrors.rotext" xml:space="preserve">
+    <value>Se han encontrado errores al guardar el presupuesto</value>
+  </data>
+  <data name="RES_budget.msgsavechangesbar.rotext" xml:space="preserve">
+    <value>Guardar cambios</value>
+  </data>
+  <data name="RES_budget.msgundochangesbar.rotext" xml:space="preserve">
+    <value>Deshacer cambios</value>
+  </data>
+  <data name="RES_budget.orgchart.noselection.rotext" xml:space="preserve">
+    <value>(sin selección)</value>
+  </data>
+  <data name="RES_budget.panelbarbuttons.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.panelcontent2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.pw-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.removeproductiveunit.rotext" xml:space="preserve">
+    <value>Eliminar unidad productiva</value>
+  </data>
+  <data name="RES_budget.reports.title.rotext" xml:space="preserve">
+    <value>Presupuesto</value>
+  </data>
+  <data name="RES_budget.reportstitlereads.rotext" xml:space="preserve">
+    <value>Definición</value>
+  </data>
+  <data name="RES_budget.reportstitleshifts.rotext" xml:space="preserve">
+    <value>Planificación</value>
+  </data>
+  <data name="RES_budget.selectbudgtrow.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.selectrow.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.showreports.rotext" xml:space="preserve">
+    <value>Visor de informes</value>
+  </data>
+  <data name="RES_budget.stylesheetscontainer.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.tbassignaischedule.rotext" xml:space="preserve">
+    <value>Planificación inteligente</value>
+  </data>
+  <data name="RES_budget.title.rotext" xml:space="preserve">
+    <value>Presupuestos</value>
+  </data>
+  <data name="RES_budget.tl.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.tl.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.txtdaterange.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.txtdaterange.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_budget.vi.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.aspxcallbackpanelcontenido.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.b.text.rotext" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="RES_productiveunit.b.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.bi.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.btaddposition.text.rotext" xml:space="preserve">
+    <value>Añadir</value>
+  </data>
+  <data name="RES_productiveunit.btaddposition.tooltip.rotext" xml:space="preserve">
+    <value>Añadir nueva posición</value>
+  </data>
+  <data name="RES_productiveunit.btnaddnewmode.text.rotext" xml:space="preserve">
+    <value>Añadir</value>
+  </data>
+  <data name="RES_productiveunit.btnaddnewmode.tooltip.rotext" xml:space="preserve">
+    <value>Añadir nuevo modo</value>
+  </data>
+  <data name="RES_productiveunit.ca.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.cc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.ccb.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.checkpermission.denied.message.rotext" xml:space="preserve">
+    <value>No tiene permisos para realizar cambios</value>
+  </data>
+  <data name="RES_productiveunit.ci.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.cmbcostcenter.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.cmbcostcenter.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.cmbsummaryperiod.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.cmbsummaryperiod.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.cnc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.cp.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.cs.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.ct.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.cts.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.ddd.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.ddd.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.dxcolor.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.dxcolor.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.dxpwmb-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.g.text.rotext" xml:space="preserve">
+    <value>G</value>
+  </data>
+  <data name="RES_productiveunit.g.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.gi.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.ha.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.i.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.i.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.l.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.label2lblemployeesummarydesc.text.rotext" xml:space="preserve">
+    <value>Puede consultar el uso de los distintos modos de la unidad productiva.</value>
+  </data>
+  <data name="RES_productiveunit.label2lblemployeesummarydesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lbladdposition.text.rotext" xml:space="preserve">
+    <value>Posiciones</value>
+  </data>
+  <data name="RES_productiveunit.lbladdposition.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblemployesummaryperiod.text.rotext" xml:space="preserve">
+    <value>Periodo:</value>
+  </data>
+  <data name="RES_productiveunit.lblemployesummaryperiod.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblname.text.rotext" xml:space="preserve">
+    <value>Nombre:</value>
+  </data>
+  <data name="RES_productiveunit.lblname.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblnamedescription.text.rotext" xml:space="preserve">
+    <value>Nombre identificativo de la unidad productiva</value>
+  </data>
+  <data name="RES_productiveunit.lblnamedescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblproductiveunitcolordesc.text.rotext" xml:space="preserve">
+    <value>Color identificativo de la unidad productiva utilizado en los presupuestos</value>
+  </data>
+  <data name="RES_productiveunit.lblproductiveunitcolordesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblproductiveunitcolorname.text.rotext" xml:space="preserve">
+    <value>Color identificativo:</value>
+  </data>
+  <data name="RES_productiveunit.lblproductiveunitcolorname.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblproductiveunitdescription2.text.rotext" xml:space="preserve">
+    <value>Descripción:</value>
+  </data>
+  <data name="RES_productiveunit.lblproductiveunitdescription2.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblproductiveunitdescription2desc.text.rotext" xml:space="preserve">
+    <value>Texto explicativo de la unidad productiva</value>
+  </data>
+  <data name="RES_productiveunit.lblproductiveunitdescription2desc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblproductiveunitgeneral.text.rotext" xml:space="preserve">
+    <value>Configuración</value>
+  </data>
+  <data name="RES_productiveunit.lblproductiveunitgeneral.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblproductiveunitgeneraldesc.text.rotext" xml:space="preserve">
+    <value>Datos especificos de la unidad productiva.</value>
+  </data>
+  <data name="RES_productiveunit.lblproductiveunitgeneraldesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblproductiveunitshortnamedesc.text.rotext" xml:space="preserve">
+    <value>Nombre abreviado:</value>
+  </data>
+  <data name="RES_productiveunit.lblproductiveunitshortnamedesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblproductiveunitshortnamedescription.text.rotext" xml:space="preserve">
+    <value>Nombre abreviado utilizado como referencia de la unidad productiva</value>
+  </data>
+  <data name="RES_productiveunit.lblproductiveunitshortnamedescription.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblpumodesummary.text.rotext" xml:space="preserve">
+    <value>Modos</value>
+  </data>
+  <data name="RES_productiveunit.lblpumodesummary.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblpusummary.text.rotext" xml:space="preserve">
+    <value>Resumen / Gráficos</value>
+  </data>
+  <data name="RES_productiveunit.lblpusummary.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblsummarynodata.text.rotext" xml:space="preserve">
+    <value>No hay datos en el periodo seleccionado o no dispone de permisos para consultarlos.</value>
+  </data>
+  <data name="RES_productiveunit.lblsummarynodata.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblteam.text.rotext" xml:space="preserve">
+    <value>Equipo</value>
+  </data>
+  <data name="RES_productiveunit.lblteam.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblunitmodecolordesc.text.rotext" xml:space="preserve">
+    <value>Color identificativo del modo de la unidad productiva</value>
+  </data>
+  <data name="RES_productiveunit.lblunitmodecolordesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblunitmodecolortitle.text.rotext" xml:space="preserve">
+    <value>Color identificativo:</value>
+  </data>
+  <data name="RES_productiveunit.lblunitmodecolortitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblunitmodedescdesc.text.rotext" xml:space="preserve">
+    <value>Texto explicativo del modo de la unidad productiva</value>
+  </data>
+  <data name="RES_productiveunit.lblunitmodedescdesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblunitmodedesctitle.text.rotext" xml:space="preserve">
+    <value>Descripción:</value>
+  </data>
+  <data name="RES_productiveunit.lblunitmodedesctitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblunitmodegeneral.text.rotext" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="RES_productiveunit.lblunitmodegeneral.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblunitmodegeneraldesc.text.rotext" xml:space="preserve">
+    <value>En esta sección se define el modo de la unidad productiva, indicando los datos generales, el equipo necesario y el coste diario por no cubrir las necesidades del modo.</value>
+  </data>
+  <data name="RES_productiveunit.lblunitmodegeneraldesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblunitmodenamedesc.text.rotext" xml:space="preserve">
+    <value>Nombre identificativo del modo</value>
+  </data>
+  <data name="RES_productiveunit.lblunitmodenamedesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblunitmodenametitle.text.rotext" xml:space="preserve">
+    <value>Nombre:</value>
+  </data>
+  <data name="RES_productiveunit.lblunitmodenametitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblunitmodes.text.rotext" xml:space="preserve">
+    <value>Modos</value>
+  </data>
+  <data name="RES_productiveunit.lblunitmodes.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblunitmodesdesc.text.rotext" xml:space="preserve">
+    <value>En esta sección se definen todos los modos en los que se puede trabajar sobre la unidad productiva. Estos modos serán los utilizados en el momento de planificar diariamente las unidades productivas de los presupuestos</value>
+  </data>
+  <data name="RES_productiveunit.lblunitmodesdesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblunitmodeshortcostdesc.text.rotext" xml:space="preserve">
+    <value>Coste del modo si no se cubren sus necesidades</value>
+  </data>
+  <data name="RES_productiveunit.lblunitmodeshortcostdesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblunitmodeshortcosttitle.text.rotext" xml:space="preserve">
+    <value>Coste de interrupción:</value>
+  </data>
+  <data name="RES_productiveunit.lblunitmodeshortcosttitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblunitmodeshortnamedesc.text.rotext" xml:space="preserve">
+    <value>Nombre abreviado utilizado como referencia del modo</value>
+  </data>
+  <data name="RES_productiveunit.lblunitmodeshortnamedesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblunitmodeshortnametitle.text.rotext" xml:space="preserve">
+    <value>Nombre abreviado:</value>
+  </data>
+  <data name="RES_productiveunit.lblunitmodeshortnametitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lblunitmodestitle.text.rotext" xml:space="preserve">
+    <value>Modos definidos para la unidad productiva</value>
+  </data>
+  <data name="RES_productiveunit.lblunitmodestitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lclcostcenterdesc.text.rotext" xml:space="preserve">
+    <value>Centro de coste al que se asignan las incidencias de los usuarios planificados en la unidad productiva</value>
+  </data>
+  <data name="RES_productiveunit.lclcostcenterdesc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.lclcostcentertitle.text.rotext" xml:space="preserve">
+    <value>Centro de coste:</value>
+  </data>
+  <data name="RES_productiveunit.lclcostcentertitle.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.message.unknowerror.rotext" xml:space="preserve">
+    <value>Error desconocido grabando la unidad productiva</value>
+  </data>
+  <data name="RES_productiveunit.msghaschanges.rotext" xml:space="preserve">
+    <value>Se han encontrado cambios en la definición de la unidad productiva</value>
+  </data>
+  <data name="RES_productiveunit.msghaserrors.rotext" xml:space="preserve">
+    <value>Se han encontrado errores en la definición de la unidad productiva</value>
+  </data>
+  <data name="RES_productiveunit.msgsavechangesbar.rotext" xml:space="preserve">
+    <value>Guardar cambios</value>
+  </data>
+  <data name="RES_productiveunit.msgundochangesbar.rotext" xml:space="preserve">
+    <value>Deshacer cambios</value>
+  </data>
+  <data name="RES_productiveunit.newobjectpopup.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.newobjectpopup.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.panelcontent1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.productiveunit.nocostcenter.rotext" xml:space="preserve">
+    <value>(ninguno)</value>
+  </data>
+  <data name="RES_productiveunit.pw-1.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.r.text.rotext" xml:space="preserve">
+    <value>R</value>
+  </data>
+  <data name="RES_productiveunit.r.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.ri.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.sc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.stylesheetscontainer.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.summarydaterange.anual.rotext" xml:space="preserve">
+    <value>Anual</value>
+  </data>
+  <data name="RES_productiveunit.summarydaterange.daily.rotext" xml:space="preserve">
+    <value>Diario</value>
+  </data>
+  <data name="RES_productiveunit.summarydaterange.mensual.rotext" xml:space="preserve">
+    <value>Mensual</value>
+  </data>
+  <data name="RES_productiveunit.summarydaterange.semanal.rotext" xml:space="preserve">
+    <value>Semanal</value>
+  </data>
+  <data name="RES_productiveunit.title.rotext" xml:space="preserve">
+    <value>Unidad productiva</value>
+  </data>
+  <data name="RES_productiveunit.tl.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.tl.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.treecaptionproductiveunit.rotext" xml:space="preserve">
+    <value>Unidades productivas</value>
+  </data>
+  <data name="RES_productiveunit.txtunitmodecolor.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.txtunitmodecolor.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.uct.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.vi.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_productiveunit.wc.tooltip.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxaischeduler.calendar.client.noshiftselected.rotext" xml:space="preserve">
+    <value>No se ha seleccionado ningún horario</value>
+  </data>
+  <data name="RES_srvmsgboxaischeduler.deleteproductiveunit.description.rotext" xml:space="preserve">
+    <value>¿Está seguro?</value>
+  </data>
+  <data name="RES_srvmsgboxaischeduler.deleteproductiveunit.option1description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxaischeduler.deleteproductiveunit.option1text.rotext" xml:space="preserve">
+    <value>Eliminar la unidad productiva seleccionada.</value>
+  </data>
+  <data name="RES_srvmsgboxaischeduler.deleteproductiveunit.option2description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxaischeduler.deleteproductiveunit.option2text.rotext" xml:space="preserve">
+    <value>No eliminar la unidad productiva seleccionada.</value>
+  </data>
+  <data name="RES_srvmsgboxaischeduler.deleteproductiveunit.title.rotext" xml:space="preserve">
+    <value>Va a eliminar la unidad productiva seleccionada</value>
+  </data>
+  <data name="RES_srvmsgboxaischeduler.error.ok.rotext" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="RES_srvmsgboxaischeduler.error.okdesc.rotext" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="RES_srvmsgboxaischeduler.error.title.rotext" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="RES_srvmsgboxaischeduler.error.title.text.rotext" xml:space="preserve">
+    <value>Datos incorrectos</value>
+  </data>
+  <data name="RES_srvmsgboxaischeduler.error.validationfieldsfailed.rotext" xml:space="preserve">
+    <value>No se han introducido todos los campos necesarios</value>
+  </data>
+  <data name="RES_srvmsgboxaischeduler.error.validationtitle.rotext" xml:space="preserve">
+    <value>Datos incorrectos</value>
+  </data>
+  <data name="RES_srvmsgboxaischeduler.savename.error.option1description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_srvmsgboxaischeduler.savename.error.option1text.rotext" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
+  <data name="RES_srvmsgboxaischeduler.savename.error.text.rotext" xml:space="preserve">
+    <value>El nombre no puede estar en blanco</value>
+  </data>
+</root>

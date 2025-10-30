@@ -1,0 +1,32 @@
+<div data-options="dxView : { name: 'myLeaves', title: 'myLeaves' } " >
+    <div data-bind="if: hasPermission() == true">
+        <div data-bind="if: leavesDS().length > 0 ">
+            <div id="scrollview" style="clear:both" data-bind="dxScrollView: { }">
+                <div data-bind="dxList: listLeaves">
+                    <div data-options="dxTemplate: {name: 'item'}">
+                        <div class="listMenuItem">
+                            <div data-bind="css: $data.cssClass" class="listMenuItemIcon"></div>
+                            <div class="listMenuItemContent">
+                                <div data-bind="text: $data.Description"></div>
+                                <div class="smallTextDescription" data-bind="text: $data.AlertDescription"></div>
+                            </div>
+
+                            <div data-bind="if: $data.hasAction == true"><div class="list-item-arrow"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-bind="if: leavesDS().length <= 0">
+            <div class="noDataCssClass"></div>
+        </div>
+
+        <div id="btnActionMenuPopover" class="actionButton fixedButton" data-bind="dxButton: newRequest"></div>
+    </div>
+    
+    <div data-bind="if: hasPermission() == false">
+        <div class="noPermissionCssClass"></div>
+    </div>
+
+    <div data-bind="dxLoadPanel: loadingPanel"> </div>
+</div>

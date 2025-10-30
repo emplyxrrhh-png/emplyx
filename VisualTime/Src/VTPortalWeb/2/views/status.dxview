@@ -1,0 +1,95 @@
+<div data-options="dxView : {name: 'status', disableCache: true} " >
+    <div class="home-view dx-content-background" data-options="dxContent : { targetPlaceholder: 'content' } ">
+		<div id="smallUserInfo" style="margin-bottom: 15px;"></div>
+        <!--style="padding-bottom:5px;"-->
+        <div style="height:98% !important; ">
+            <div id="panelsContent" style="" data-bind="dxScrollView: homeContent">
+
+				<!-- ko if: DailyRecordHomeEnabled() -->
+				<!--ko with: dailyRecordHome-->
+				<div data-options="dxViewPlaceholder: { viewName: 'dailyRecordHome' } " style="  padding-bottom:4px; padding-top:9px;"></div>
+				<div class="h-divider" >
+					<div class="shadow2"></div>
+				</div>
+				<!-- /ko-->
+				<!-- /ko-->
+                <!-- ko if: ApiVersion() > 10 -->
+				<!-- ko if: VTPortal.roApp.isCegidHub() == false && VTPortal.roApp.isCommuniquesEnabled() == true -->
+                <!--ko with: communiquesHome-->
+                <div data-options="dxViewPlaceholder: { viewName: 'communiquesHome' } " style="  padding-bottom:4px; padding-top:4px;"></div>
+				<div class="h-divider" >
+					<div class="shadow2"></div>
+				</div>
+				<!-- /ko-->
+				<!-- /ko-->
+                <!-- /ko-->
+				<!-- ko if: ApiVersion() > 10 -->
+				<!-- ko if: VTPortal.roApp.isChannelsEnabled() == true && VTPortal.roApp.impersonatedIDEmployee == -1 -->
+				<!--ko with: channelsHome-->
+				<div data-options="dxViewPlaceholder: { viewName: 'channelsHome' } " style="  padding-bottom:4px; padding-top:4px;"></div>
+				<div class="h-divider" >
+					<div class="shadow2"></div>
+				</div>
+				<!-- /ko-->
+				<!-- /ko-->
+				<!-- /ko-->
+				<!-- ko if: VTPortal.roApp.isCegidHub() == false -->
+                <!-- ko if: HasSurveys() -->
+                <!--ko with: surveysHome-->
+                <div data-options="dxViewPlaceholder: { viewName: 'surveysHome' } " style="  padding-bottom:4px; padding-top:4px;"></div>
+				<div class="h-divider" >
+					<div class="shadow2"></div>
+				</div>
+				<!-- /ko-->
+				<!-- /ko-->
+                <!-- /ko-->
+                <!--ko with: notificationsHome-->
+                <div data-options="dxViewPlaceholder: { viewName: 'notificationsHome' } " style=" "></div>
+				<div class="h-divider" >
+					<div class="shadow2"></div>
+				</div>
+				<!-- /ko-->
+                <!--ko with: accrualsHome-->
+                <div data-options="dxViewPlaceholder: { viewName: 'accrualsHome' } " style="  padding-top:4px;"></div>
+                <!-- /ko-->
+                <!--ko with: emptyHome-->
+                <div data-options="dxViewPlaceholder: { viewName: 'emptyHome' } "></div>
+
+                <!-- /ko-->
+            </div>
+        </div>
+
+        <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false,closeOnBackButton:false, visible: showPopupCommuniques, height: 'auto'}">
+            <div id="mandatoryCommuniques" class="dx-fieldset" sstyle="font-weight:900 !important;">
+                <div class="dx-field" style="text-align: center;vertical-align: middle;">
+                    <span data-bind="text: lblmandatoryCommuniques"></span>
+                </div>
+            </div>
+            <div class="get-to-work-orange" data-bind="dxButton: btnMandatoryCommunique"></div>
+        </div>
+		
+        <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false,closeOnBackButton:false, visible: showPopupSurveys, height: 'auto'}">
+            <div id="mandatorySurveys" class="dx-fieldset" sstyle="font-weight:900 !important;">
+                <div class="dx-field" style="text-align: center;vertical-align: middle;">
+                    <span data-bind="text: lblmandatorySurveys"></span>
+                </div>
+            </div>
+            <div class="get-to-work-orange" data-bind="dxButton: btnMandatorySurvey"></div>
+            <div class="get-to-work-orange" data-bind="dxButton: btnAnswerLaterSurvey"></div>
+        </div>
+		
+        <div data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:false,closeOnBackButton:false, visible: showPopupAnswer, height: 'auto'}">
+            <div id="mandatoryAnswer" class="dx-fieldset" sstyle="font-weight:900 !important;">
+                <div class="dx-field" style="text-align: center;vertical-align: middle;">
+                    <span data-bind="text: lblmandatoryAnswer"></span>
+                </div>
+            </div>
+            <div class="get-to-work-orange" data-bind="dxButton: btnMandatoryCommunique"></div>
+            <div style="display:none" class="get-to-work-orange" data-bind="dxButton: btnAnswerLater"></div>
+        </div>
+
+		
+        <div data-bind="dxLoadPanel: loadingPanel"> </div>
+    </div>
+
+</div>

@@ -1,0 +1,7 @@
+﻿@Code
+    Dim ReportController As VTLive40.ReportController = New VTLive40.ReportController()
+End Code
+
+<span class="schedulerTxt monthlyOpt1">@ReportController.GetServerLanguage().Translate("roReportSchedulerTheDay", "ReportsDX") </span><span class="opt1 monthlyOpt1" style="width: 80px"></span><span class="schedulerTxt monthlyOpt1"> @ReportController.GetServerLanguage().Translate("roReportSchedulerOf", "ReportsDX") @ReportController.GetServerLanguage().Translate("roReportSchedulerEach", "ReportsDX") @ReportController.GetServerLanguage().Translate("roReportSchedulerMonth", "ReportsDX")</span><div style="width: 100%"></div>
+<span class="schedulerTxt monthlyOpt2" style="text-transform:capitalize">@ReportController.GetServerLanguage().Translate("roReportSchedulerThe", "ReportsDX") </span><span class="opt2 monthlyOpt2" style="width: 90px;"></span><span class="opt3 monthlyOpt2" style="width: 110px"></span><span class="schedulerTxt monthlyOpt2"> @ReportController.GetServerLanguage().Translate("roReportSchedulerOf", "ReportsDX") @ReportController.GetServerLanguage().Translate("roReportSchedulerEach", "ReportsDX") @ReportController.GetServerLanguage().Translate("roReportSchedulerMonth", "ReportsDX")</span><div style="width: 100%"></div>
+<span class="schedulerTxt">@ReportController.GetServerLanguage().Translate("roReportSchedulerAt", "ReportsDX") </span><span class="opt4" style="width: 135px"></span>

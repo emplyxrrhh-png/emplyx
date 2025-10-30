@@ -1,0 +1,47 @@
+<div data-options="dxView : { name: 'communiqueDetail', title: 'Comunicados', disableCache: true} " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+		<div id="smallUserInfo"></div>
+
+        <div id="scrollview" class="communiqueTop" style="clear:both" data-bind="dxScrollView: { height:'80%' }">
+            <div>
+                <div class="employeeOpacity">
+                    <div id="employeePhotoDiv" class="centerCom">
+                        <div class="communiquePhoto" data-bind="style: { background: empImage }"></div>
+                    </div>
+                    <div class="employeeInfo" style="width: 65%;">
+                        <div class="employeeCenter">
+                            <div class="subjectText"><span data-bind="text: lblSubject"></span></div>
+                            <div class="commDate">
+                                <span data-bind="text: lblCommuniqueDate"></span>
+                            </div>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <div class="employeeOpacity" style="padding-top:20px !important">
+                    <div class="employeeInfo" style="padding-top:10px !important; padding: 1%;">
+                        <div class="employeeCenter">
+                            <div class="commMessage"><span data-bind="html: lblMessage"></span></div>
+                            <br />
+
+                        </div>
+                    </div>
+                    <!-- ko if: hasDocuments() == true -->
+                    <div data-bind="dxButton: buttonDocuments" class="documentButton"></div>
+                    <div data-bind="dxActionSheet: checkDocuments"></div>
+                    <br />
+                    <!-- /ko-->
+                    <!-- ko if: allowExtraResponse() == true -->
+                    <div data-bind="dxButton: buttonOptions" class="voteButton"></div>
+                    <div data-bind="dxActionSheet: voteOptions"></div>
+                    <!-- /ko-->
+                    <!-- ko if: allowExtraResponse() == false -->
+                    <div data-bind="dxButton: buttonMyResponse" class="voteButtonAnswer"></div>
+                    <!-- /ko-->
+                </div>
+            </div>
+
+        </div>
+        <div data-bind="dxLoadPanel: loadingPanel"> </div>
+    </div>
+</div>

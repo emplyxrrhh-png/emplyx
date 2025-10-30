@@ -1,0 +1,29 @@
+<div data-options="dxView : { name: 'myWebLinks', title: 'myWebLinks', disableCache: true, width:'100%' } " >
+	<div id="smallUserInfo"></div>
+
+	<div id="scrollview" style="clear:both" data-bind="dxScrollView: { height:'100%' }">
+		<div id="list" class="list-container list-container-withAlerts" data-bind="if: webLinksDS().length > 0">
+			<div data-bind="dxList: listOptions">
+				<div data-options="dxTemplate: {name: 'item'}">
+					<div class="listMenuItem">
+						<div data-bind="css: $data.cssClass" class="listMenuItemIcon"></div>
+						<div class="listMenuItemContent">
+							<div data-bind="text: $data.Name"></div>
+							<div class="smallTextDescription" data-bind="text: $data.Value"></div>
+						</div>
+
+						<div style="justify-content:flex-end; display:flex;height: 30px;padding: 7px;">
+							<div id="spinright-button" class="list-item-arrow"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div data-bind="if: webLinksDS().length == 0">
+			<div class="noDataCssClass"></div>
+		</div>
+	</div>
+
+	<div data-bind="dxLoadPanel: loadingPanel"></div>
+</div>

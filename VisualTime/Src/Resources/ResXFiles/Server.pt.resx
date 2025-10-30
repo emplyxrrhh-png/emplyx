@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_frmqueryservicedata.caption.rotext" xml:space="preserve">
+    <value>Instalação do servidor do Visualtime</value>
+  </data>
+  <data name="RES_frmqueryservicedata.cmdfinish.caption.rotext" xml:space="preserve">
+    <value>&amp;Concluir</value>
+  </data>
+  <data name="RES_frmqueryservicedata.cmdfinish.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.cmdnext.caption.rotext" xml:space="preserve">
+    <value>&amp;seguinte &gt;</value>
+  </data>
+  <data name="RES_frmqueryservicedata.cmdnext.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.cmdprevious.caption.rotext" xml:space="preserve">
+    <value>&lt; &amp;Anterior</value>
+  </data>
+  <data name="RES_frmqueryservicedata.cmdprevious.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.framain.0.caption.rotext" xml:space="preserve">
+    <value>Configuração do início do servidor:</value>
+  </data>
+  <data name="RES_frmqueryservicedata.framain.0.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.framain.1.caption.rotext" xml:space="preserve">
+    <value>Configuração do serviço do Windows:</value>
+  </data>
+  <data name="RES_frmqueryservicedata.framain.1.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.imgaccountdata.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.imgruntype.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.lblaccount.caption.rotext" xml:space="preserve">
+    <value>Conta do Windows:</value>
+  </data>
+  <data name="RES_frmqueryservicedata.lblaccount.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.lblaccountdata.caption.rotext" xml:space="preserve">
+    <value>Indique a conta do Windows que será utilizada para iniciar o servidor do Visualtime.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.lblaccountdata.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.lblaccountdatadesc.caption.rotext" xml:space="preserve">
+    <value>Tenha em atenção que a conta que indicar deve ter privilégios suficientes para aceder a todos os recursos de que o Visualtime necessita. Recomenda-se que crie um utilizador administrador do Visualtime ou utilize o Administrador do seu computador ou diretório.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.lblaccountdatadesc.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.lblaccounthelp.caption.rotext" xml:space="preserve">
+    <value>(Indique o nome completo, incluindo o domínio ou o diretório)</value>
+  </data>
+  <data name="RES_frmqueryservicedata.lblaccounthelp.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.lblpassword.caption.rotext" xml:space="preserve">
+    <value>Palavra-passe:</value>
+  </data>
+  <data name="RES_frmqueryservicedata.lblpassword.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.lblretypepassword.caption.rotext" xml:space="preserve">
+    <value>Repetir palavra-passe:</value>
+  </data>
+  <data name="RES_frmqueryservicedata.lblretypepassword.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.lblruntype.caption.rotext" xml:space="preserve">
+    <value>O servidor do Visualtime pode ser executado de duas formas neste equipamento. Indique a que pretende utilizar:</value>
+  </data>
+  <data name="RES_frmqueryservicedata.lblruntype.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.msg.accountdenied.answer.localaccount.description.rotext" xml:space="preserve">
+    <value>O serviço será instalado de modo a que se inicie como conta do sistema local</value>
+  </data>
+  <data name="RES_frmqueryservicedata.msg.accountdenied.answer.localaccount.title.rotext" xml:space="preserve">
+    <value>Instalar como conta do sistema local</value>
+  </data>
+  <data name="RES_frmqueryservicedata.msg.accountdenied.answer.retry.description.rotext" xml:space="preserve">
+    <value>Serão pedidas novamente as credenciais da conta com que pretende iniciar sessão no serviço</value>
+  </data>
+  <data name="RES_frmqueryservicedata.msg.accountdenied.answer.retry.title.rotext" xml:space="preserve">
+    <value>Voltar a tentar</value>
+  </data>
+  <data name="RES_frmqueryservicedata.msg.accountdenied.caption.rotext" xml:space="preserve">
+    <value>Ocorreu um erro ao tentar instalar o serviço. É possível que as credenciais indicadas sejam incorretas.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.msg.accountdenied.question.title.rotext" xml:space="preserve">
+    <value>Ocorreu um erro ao tentar instalar o serviço. Provavelmente as credenciais indicadas são incorretas.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.msg.accountdenied.title.rotext" xml:space="preserve">
+    <value>Erro ao instalar o servidor</value>
+  </data>
+  <data name="RES_frmqueryservicedata.msg.installedaslocalaccount.caption.rotext" xml:space="preserve">
+    <value>IMPORTANTE: Lembre-se de que deve configurar a conta do Windows com a qual se iniciará o serviço do Visualtime Server.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.msg.installedaslocalaccount.title.rotext" xml:space="preserve">
+    <value>Servidor instalado</value>
+  </data>
+  <data name="RES_frmqueryservicedata.msg.invalidaccount.caption.rotext" xml:space="preserve">
+    <value>Deve indicar a conta e palavra-passe do Windows.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.msg.invalidaccount.title.rotext" xml:space="preserve">
+    <value>Conta ou palavra-passe incorreta</value>
+  </data>
+  <data name="RES_frmqueryservicedata.msg.invalidpassword.caption.rotext" xml:space="preserve">
+    <value>As palavras-passe introduzidas não coincidem.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.msg.invalidpassword.title.rotext" xml:space="preserve">
+    <value>Palavra-passe incorreta</value>
+  </data>
+  <data name="RES_frmqueryservicedata.optruntype.0.buttoncaption.rotext" xml:space="preserve">
+    <value>Instalar como programa padrão</value>
+  </data>
+  <data name="RES_frmqueryservicedata.optruntype.0.labelcaption.rotext" xml:space="preserve">
+    <value>O servidor do Visualtime iniciar-se-á cada vez que inicie uma sessão no Windows ou quando executar o programa a partir do respetivo ícone. Recomendado se o Visualtime for executado apenas a partir deste equipamento e se pretender executá-lo apenas algumas horas por dia.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.optruntype.0.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.optruntype.1.buttoncaption.rotext" xml:space="preserve">
+    <value>Instalar como serviço do Windows (avançado)</value>
+  </data>
+  <data name="RES_frmqueryservicedata.optruntype.1.labelcaption.rotext" xml:space="preserve">
+    <value>O servidor do Visualtime estará a funcionar sempre que o computador estiver ligado, mesmo quando não se inicia uma sessão no Windows. Não é necessário iniciar uma sessão ou executar nenhum programa manualmente. Recomendado se este equipamento for um servidor do Visualtime ou se pretender que o Visualtime esteja sempre a ser executado.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.optruntype.1.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.setdcomwarning.message.rotext" xml:space="preserve">
+    <value>Lembre-se de que se instalar o servidor do Visualtime como serviço do Windows, deve configurar manualmente as autorizações de DCOM.</value>
+  </data>
+  <data name="RES_frmqueryservicedata.setdcomwarning.title.rotext" xml:space="preserve">
+    <value>Aviso importante</value>
+  </data>
+  <data name="RES_frmqueryservicedata.txtaccount.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.txtaccount.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.txtpassword.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.txtpassword.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.txtretypepassword.text.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_frmqueryservicedata.txtretypepassword.tooltiptext.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_server.close.question.confirmclose.answer.close.caption.rotext" xml:space="preserve">
+    <value>F&amp;echar</value>
+  </data>
+  <data name="RES_server.close.question.confirmclose.answer.close.description.rotext" xml:space="preserve">
+    <value>Parar o servidor. Os clientes atuais serão desligados.</value>
+  </data>
+  <data name="RES_server.close.question.confirmclose.answer.dontclose.caption.rotext" xml:space="preserve">
+    <value>&amp;Anular</value>
+  </data>
+  <data name="RES_server.close.question.confirmclose.answer.dontclose.description.rotext" xml:space="preserve">
+    <value>Deixar o servidor a funcionar (o servidor será desligado automaticamente ao encerrar o equipamento).</value>
+  </data>
+  <data name="RES_server.close.question.confirmclose.caption.rotext" xml:space="preserve">
+    <value>Está prestes a encerrar o servidor do Visualtime.</value>
+  </data>
+  <data name="RES_server.close.question.usersconnected.answer.close.caption.rotext" xml:space="preserve">
+    <value>F&amp;echar</value>
+  </data>
+  <data name="RES_server.close.question.usersconnected.answer.close.description.rotext" xml:space="preserve">
+    <value>Os clientes serão desligados e não poderão continuar a funcionar corretamente.</value>
+  </data>
+  <data name="RES_server.close.question.usersconnected.answer.close.rotext" xml:space="preserve">
+    <value>Fechar</value>
+  </data>
+  <data name="RES_server.close.question.usersconnected.answer.dontclose.caption.rotext" xml:space="preserve">
+    <value>&amp;Anular</value>
+  </data>
+  <data name="RES_server.close.question.usersconnected.answer.dontclose.description.rotext" xml:space="preserve">
+    <value>Deixar o servidor a funcionar (o servidor será desligado automaticamente ao encerrar o equipamento).</value>
+  </data>
+  <data name="RES_server.close.question.usersconnected.caption.rotext" xml:space="preserve">
+    <value>Há utilizadores ligados ao servidor. Se encerrar o servidor serão desligados.</value>
+  </data>
+  <data name="RES_server.frmconsole.mnusystray.tip.initializing.rotext" xml:space="preserve">
+    <value>Servidor do Visualtime (a arrancar)</value>
+  </data>
+  <data name="RES_server.initialize.msg.errorinopensession.message.rotext" xml:space="preserve">
+    <value>Não foi possível iniciar a sessão de sistema no servidor. Verifique se os parâmetros de ligação à base de dados estão corretos.</value>
+  </data>
+  <data name="RES_server.initialize.msg.errorinstartdbengine.message.rotext" xml:space="preserve">
+    <value>O motor de bases de dados SQL Server não está disponível. Não é possível iniciar o servidor do Visualtime.</value>
+  </data>
+  <data name="RES_server.initialize.msg.invaliddb.message.rotext" xml:space="preserve">
+    <value>A base de dados está corrompida ou não é do Visualtime.</value>
+  </data>
+  <data name="RES_server.initialize.msg.invaliddb.title.rotext" xml:space="preserve">
+    <value>Base de dados inválida</value>
+  </data>
+  <data name="RES_server.initialize.msg.invaliddbversion.message.rotext" xml:space="preserve">
+    <value>A versão da base de dados atual não é compatível com esta versão do programa. Atualize a base de dados ou o programa. Em caso de dúvida, contacte o administrador do sistema. $CRMais detalhes:$CR   Versão da base de dados: ${1}$CR   Versões suportadas: ${2} a ${3}</value>
+  </data>
+  <data name="RES_server.initialize.msg.invalidmigrationdb.message.rotext" xml:space="preserve">
+    <value>A versão da base de dados atual encontra-se em processo de migração. O Visualtime não pode iniciar o serviço com esta base de dados. Em caso de dúvida, contate o seu administrador de sistema.</value>
+  </data>
+  <data name="RES_server.initialize.msg.invalidmigrationdb.title.rotext" xml:space="preserve">
+    <value>A versão da base de dados encontra-se em processo de migração.</value>
+  </data>
+  <data name="RES_server.opensession.databaseconnection.error.rotext" xml:space="preserve">
+    <value>Ocorreu um erro ao efetuar a ligação à base de dados. Se o problema persistir, contacte o seu administrador do sistema.</value>
+  </data>
+  <data name="RES_server.opensession.requestdenied.invalidserverlogin.rotext" xml:space="preserve">
+    <value>O nome de utilizador ou a palavra-passe indicados para a sessão do servidor estão incorretos.</value>
+  </data>
+  <data name="RES_server.servershutdown.title.rotext" xml:space="preserve">
+    <value>A encerrar o servidor do Visualtime</value>
+  </data>
+  <data name="RES_server.servershutdownstep.1.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_server.servershutdownstep.2.description.rotext" xml:space="preserve">
+    <value>A notificar conclusão aos clientes...</value>
+  </data>
+  <data name="RES_server.servershutdownstep.3.description.rotext" xml:space="preserve">
+    <value>A interromper o scheduler...</value>
+  </data>
+  <data name="RES_server.servershutdownstep.4.description.rotext" xml:space="preserve">
+    <value>A encerrar as sessões ativas...</value>
+  </data>
+  <data name="RES_server.servershutdownstep.5.description.rotext" xml:space="preserve">
+    <value>A interromper os processos ativos...</value>
+  </data>
+  <data name="RES_server.servershutdownstep.6.description.rotext" xml:space="preserve">
+    <value>A eliminar as referências...</value>
+  </data>
+  <data name="RES_server.servershutdownstep.7.description.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_server.updatingdb.description.rotext" xml:space="preserve">
+    <value>Aguarde enquanto se atualiza a base de dados...</value>
+  </data>
+  <data name="RES_server.updatingdb.title.rotext" xml:space="preserve">
+    <value>A atualizar a base de dados</value>
+  </data>
+  <data name="RES_serverstatus.idle.text.rotext" xml:space="preserve">
+    <value>Pronto.</value>
+  </data>
+  <data name="RES_serverstatus.shutdown.text.rotext" xml:space="preserve">
+    <value>A encerrar...</value>
+  </data>
+  <data name="RES_serverstatus.unknownprocess.text.rotext" xml:space="preserve">
+    <value>A processar dados...</value>
+  </data>
+</root>

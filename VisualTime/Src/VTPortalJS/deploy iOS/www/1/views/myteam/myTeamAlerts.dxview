@@ -1,0 +1,34 @@
+<div data-options="dxView : { name: 'myTeamAlerts', title: 'Alertas Equipo', disableCache: true  } ">
+
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <!--ko with: subscribeBlock-->
+        <div class="bigProfile" data-options="dxViewPlaceholder: { viewName: 'bigUserInfo' }"></div>
+        <!-- /ko-->
+
+        <div id="scrollview" style="clear:both" data-bind="dxScrollView: { height:'76%' }">
+            <div id="list" class="list-container" data-bind="if: mtalertDS().length > 0">
+                <div data-bind="dxList: listAlerts">
+                    <div data-options="dxTemplate: {name: 'AlertItem'}">
+                        <div class="listMenuItem">
+                            <div data-bind="css: $data.cssClass" class="listMenuItemIcon"></div>
+                            <div class="listMenuItemContent">
+                                <div data-bind="text: $data.name"></div>
+                                <div class="smallTextDescription" data-bind="html: $data.description"></div>
+                            </div>
+
+                            <div data-bind="if: $data.hasAction == true"><div class="list-item-arrow"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-bind="if: mtalertDS().length <= 0">
+                <div class="noDataCssClass"></div>
+            </div>
+        </div>
+
+        <div id="btnActionMenuPopover" class="actionButton fixedButton" data-bind="dxButton: btnRefresh"></div>
+        <div data-bind="dxLoadPanel: loadingPanel"> </div>
+
+    </div>
+</div>

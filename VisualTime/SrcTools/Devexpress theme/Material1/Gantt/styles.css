@@ -1,0 +1,486 @@
+/* used as a border of large controls (like grids, diagram) */
+/* used as a background below a page in richedit/diagram */
+/* used as a border of large controls (like grids, diagram) */
+/* used as a background below a page in richedit/diagram */
+/* used as a border of large controls (like grids, diagram) */
+/* used as a background below a page in richedit/diagram */
+/* Gantt Core */
+.dxgtControl_Material1
+{
+    /*summary tasks*/
+}
+.dxgtControl_Material1 .dx-gantt-header
+{
+    /* scale */
+    background-color: White;
+}
+.dxgtControl_Material1 .dx-gantt-header .dx-gantt-tsac,
+.dxgtControl_Material1 .dx-gantt-header .dx-gantt-tsa,
+.dxgtControl_Material1 .dx-gantt-header .dx-gantt-hb,
+.dxgtControl_Material1 .dx-gantt-header .dx-gantt-vb
+{
+    border-color: #dedede;
+}
+.dxgtControl_Material1 .dx-gantt-tsa
+{
+    /* time scale area */
+    border-right: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+}
+.dxgtControl_Material1 .dx-gantt-tsac
+{
+    /*border-top: 1px solid $gantt-core-BorderColor;*/
+    border-bottom: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+    background-color: White;
+}
+.dxgtControl_Material1 .dx-gantt-hb
+{
+    /* horizontal border */
+    border-top: 1px solid #dedede;
+}
+.dxgtControl_Material1 .dx-gantt-vb
+{
+    /* vertical border */
+    border-left: 1px solid #dedede;
+}
+.dxgtControl_Material1 .dx-gantt-si
+{
+    /* time scale item */
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.8rem;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: #484848;
+    font-weight: 600;
+}
+.dxgtControl_Material1 .dx-gantt-taskWrapper
+{
+    padding-top: 0px;
+}
+.dxgtControl_Material1 .dx-gantt-task
+{
+    /*background-color: rgba(29,177,246,0.35);*/
+    background-color: #009688;
+}
+.dxgtControl_Material1 .dx-gantt-task,
+.dxgtControl_Material1 .dx-gantt-task .dx-gantt-tPrg
+{
+    border-radius: 0px;
+}
+.dxgtControl_Material1 .dx-gantt-task.dx-gantt-smallTask .dx-gantt-titleIn
+{
+    padding: 0.175rem 0.35rem;
+}
+.dxgtControl_Material1 .dxgtControl .dx-gantt-task.dx-gantt-parent .dx-gantt-titleIn
+{
+    padding: .1rem .75rem;
+}
+.dxgtControl_Material1 .dx-gantt-task,
+.dxgtControl_Material1 .dx-gantt-titleOut,
+.dxgtControl_Material1 .dx-gantt-taskRes
+{
+    padding-top: 0px;
+}
+.dxgtControl_Material1 .dx-gantt-tPrg
+{
+    /* task progress */
+    /*background-color: rgba(29,177,246,1);*/
+    background-color: rgba(255,255,255,0.25);
+    border-radius: 0px;
+}
+.dxgtControl_Material1 .dx-gantt-taskTitle,
+.dxgtControl_Material1 .dx-gantt-taskRes
+{
+    font-size: 0.8rem;
+    padding: 0.175rem 0.75rem;
+}
+.dxgtControl_Material1 .dx-gantt-titleIn
+{
+    color: White;
+}
+.dxgtControl_Material1 .dx-gantt-titleOut
+{
+    padding-right: 20px;
+}
+.dxgtControl_Material1 .dx-gantt-taskRes
+{
+    /* task-resource */
+    background-color: #999;
+    border-radius: 0px;
+    margin-left: 21px;
+    padding-left: 4px;
+    padding-right: 4px;
+    color: White;
+}
+.dxgtControl_Material1 .dx-gantt-sel
+{
+    /* row-selection */
+    background-color: #EAEAEA;
+}
+.dxgtControl_Material1 .dx-gantt-task.dx-gantt-milestone
+{
+    background-color: #666666;
+    width: 12px !important;
+    height: 12px !important;
+}
+.dxgtControl_Material1 .dx-gantt-conn-v
+{
+    /* connector-vertical */
+    border-left: 1px solid #666666;
+}
+.dxgtControl_Material1 .dx-gantt-conn-h
+{
+    /* connector-horizontal */
+    border-top: 1px solid #666666;
+}
+.dxgtControl_Material1 .dx-gantt-arrow
+{
+    /* connector-arrow */
+    border: 5.5px solid #666666;
+}
+.dxgtControl_Material1 .dx-gantt-nwi
+{
+    /* column-holiday */
+    background-color: rgba(0,0,0,0.08);
+}
+.dxgtControl_Material1 .dx-gantt-si.dx-gantt-holiday-scaleItem
+{
+    background-color: rgba(0,0,0,0.08);
+}
+.dxgtControl_Material1 .dx-gantt-altRow
+{
+    background-color: rgba(0,0,0,0.06);
+}
+.dxgtControl_Material1 .dx-gantt-task-edit-wrapper, .dxgtControl_Material1 .dx-gantt-task-edit-wrapper-successor
+{
+    padding-top: 0px;
+}
+.dxgtControl_Material1 .dx-gantt-task-edit-frame
+{
+    border-color: rgba(0,0,0,0.5) !important;
+}
+.dxgtControl_Material1 .dx-gantt-task-edit-dependency-r, .dxgtControl_Material1 .dx-gantt-task-edit-successor-dependency-r,
+.dxgtControl_Material1 .dx-gantt-task-edit-dependency-l, .dxgtControl_Material1 .dx-gantt-task-edit-successor-dependency-l
+{
+    border-color: rgba(0,0,0,0.5) !important;
+    top: 5px !important;
+}
+.dxgtControl_Material1 .dx-gantt-task-edit-dependency-r.dx-gantt-edit-touch, .dxgtControl_Material1 .dx-gantt-task-edit-successor-dependency-r.dx-gantt-edit-touch,
+.dxgtControl_Material1 .dx-gantt-task-edit-dependency-l.dx-gantt-edit-touch, .dxgtControl_Material1 .dx-gantt-task-edit-successor-dependency-l.dx-gantt-edit-touch
+{
+    top: 4px !important;
+}
+.dxgtControl_Material1 .dx-gantt-task-edit-dependency-line
+{
+    background-color: rgba(0,0,0,0.5) !important;
+}
+.dxgtControl_Material1 .dx-gantt-task-edit-progress
+{
+    border-color: transparent transparent rgba(0,0,0,0.5) transparent !important;
+}
+.dxgtControl_Material1 .dx-gantt-task-edit-progress:before
+{
+    border-color: rgba(0,0,0,0.5) !important;
+}
+.dxgtControl_Material1 .dx-gantt-task-edit-frame
+{
+    /*height: $gantt-task-edit-frame-height !important;*/
+    border-radius: 3px;
+}
+.dxgtControl_Material1 .dxgt-dialog .dxgt-dialogContentGroup,
+.dxgtControl_Material1 .dxgt-dialog .dxgt-dialogFooter
+{
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+.dxgtControl_Material1 .dxgt-dialog .dxgt-dialogFooter
+{
+    background-color: #ffffff;
+    border-top: solid 1px #DFDFDF;
+}
+.dxgtControl_Material1 .dxgt-dialog .dxgt-dialogFooter td
+{
+    padding-right: 12px;
+}
+.dxgtControl_Material1 .dx-gantt-task.dx-gantt-parent
+{
+    background-color: #2196f3;
+    border-right-color: #2196f3;
+    border-left-color: #2196f3;
+    border-top-color: #2196f3;
+}
+.dxgtControl_Material1 .dx-gantt-task.dx-gantt-parent .dx-gantt-titleIn
+{
+    padding: 0.1rem 0.75rem;
+}
+.dxgtControl_Material1 .dx-gantt-parent:not(.dx-gantt-smallTask)::before,
+.dxgtControl_Material1 .dx-gantt-parent:not(.dx-gantt-smallTask)::after,
+.dxgtControl_Material1 .dx-gantt-parent:not(.dx-gantt-smallTask):not(.dx-gantt-noPrg) .dx-gantt-tPrg::before,
+.dxgtControl_Material1 .dx-gantt-parent:not(.dx-gantt-smallTask).dx-gantt-cmpl .dx-gantt-tPrg::after
+{
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    border-width: 0.25rem;
+    border-style: solid;
+}
+.dxgtControl_Material1 .dx-gantt-parent::before,
+.dxgtControl_Material1 .dx-gantt-parent:not(.dx-gantt-noPrg) .dx-gantt-tPrg::before
+{
+    left: 0;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+.dxgtControl_Material1 .dx-gantt-parent:not(.dx-gantt-noPrg) .dx-gantt-tPrg:before
+{
+    border-left-color: rgba(255,255,255,0.25);
+    border-top-color: rgba(255,255,255,0.25);
+}
+.dxgtControl_Material1 .dx-gantt-parent:after,
+.dxgtControl_Material1 .dx-gantt-parent.dx-gantt-cmpl .dx-gantt-tPrg:after
+{
+    right: 0;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+.dxgtControl_Material1 .dx-gantt-parent.dx-gantt-cmpl:after
+{
+    border-right-color: rgba(255,255,255,0.25);
+    border-top-color: rgba(255,255,255,0.25);
+}
+.dxgtControl_Material1 .dx-gantt-parent.dx-gantt-cmpl .dx-gantt-tPrg::after
+{
+    border-right-color: #2196f3;
+    border-top-color: #2196f3;
+}
+.dx-gantt-tm
+{
+    border-left: 1px dashed #009688;
+}
+.dx-gantt-ti
+{
+    border-left: 1px dashed #009688;
+    border-right: 1px dashed #009688;
+    background-color: rgba(0,150,136,0.15);
+}
+.dx-gantt-tc
+{
+    border-left: 1px solid #009688;
+}
+.dxgtControl_Material1
+{
+    cursor: default;
+    font-size: 0.8rem;
+    font-family: "Segoe UI", Helvetica, "Droid Sans", Tahoma, Geneva, sans-serif;
+    color: black;
+    border: 1px solid #DCDCDC;
+    /* Tree-lines cells */
+}
+.dxgtControl_Material1 .dxtlControl_Material1
+{
+    cursor: default;
+    font: 0.8rem;
+    font-family: "Segoe UI", Helvetica, "Droid Sans", Tahoma, Geneva, sans-serif;
+    color: black;
+    letter-spacing: 0.4px;
+}
+.dxgtControl_Material1 .dxtlHeader_Material1
+{
+    background: White;
+    border-color: #dedede;
+    box-sizing: border-box;
+    color: #484848;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: "Segoe UI", Helvetica, "Droid Sans", Tahoma, Geneva, sans-serif;
+    height: 47px;
+    padding-bottom: 11px;
+    padding-top: 13px;
+}
+.dxgtControl_Material1 .dxgtNHC .dxtl:not(.dxtlBatchEditModifiedCell_Material1),
+.dxgtControl_Material1 .dxgtNHC .dxtl__IM,
+.dxgtControl_Material1 .dxgtNHC .dxtlCommandCell_Material1
+{
+    background-color: rgba(0,0,0,0.06);
+}
+.dxgtControl_Material1 .dxtlFocusedNode_Material1
+{
+    background: none;
+}
+.dxgtControl_Material1 .dxtlFocusedNode_Material1 .dxtl:not(.dxtlBatchEditModifiedCell_Material1),
+.dxgtControl_Material1 .dxtlFocusedNode_Material1 .dxtl__IM,
+.dxgtControl_Material1 .dxtlFocusedNode_Material1 .dxtlCommandCell_Material1
+{
+    background: #EAEAEA;
+}
+.dxgtControl_Material1 .dxtlFocusedNode_Material1 .dxtlCommandCell_Material1 a
+{
+    color: #484848 !important;
+}
+.dxgtControl_Material1 .dxtlFocusedCell_Material1
+{
+    box-shadow: inset 2px 2px 0 #DCDCDC, inset -2px -2px 0 #DCDCDC;
+    -webkit-box-shadow: inset 2px 2px 0 #DCDCDC, inset -2px -2px 0 #DCDCDC;
+    -moz-box-shadow: inset 2px 2px 0 #DCDCDC, inset -2px -2px 0 #DCDCDC;
+}
+.dxgtControl_Material1 .dxtlIndent_Material1
+{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.dxgtControl_Material1 .dxtlIndentWithButton_Material1
+{
+    padding: 0 1px 0 6px;
+    vertical-align: middle;
+}
+.dxgtControl_Material1 .dxtlIndent_Material1,
+.dxgtControl_Material1 .dxtlIndentWithButton_Material1
+{
+    border: 1px solid #dedede;
+}
+.dxgtControl_Material1 .dxgtGCC
+{
+    border-left: 2px solid #dedede;
+}
+.dxgtControl_Material1 .dxgtSPB
+{
+    box-shadow: 0 0 3px 2px #dedede;
+}
+.dxgtControl_Material1 .dxgtSPB > div
+{
+    background-color: #009688;
+}
+.dxgtControl_Material1 .dxm-item .dxm-content.dxalink:focus
+{
+    outline: none;
+}
+.dxgtControl_Material1 .dxtlFocusedNode_Material1 .dxtlBatchEditModifiedCell_Material1
+{
+    color: black;
+}
+.dxgtControl_Material1 .dxtlNode_Material1 td.dxtl,
+.dxgtControl_Material1 .dxtlAltNode_Material1 td.dxtl,
+.dxgtControl_Material1 .dxtlFocusedNode_Material1 td.dxtl,
+.dxgtControl_Material1 .dxtlCommandCell_Material1
+{
+    border-color: #dedede;
+    padding: .5rem .5rem;
+}
+.dxgtControl_Material1 .dxtlControl_Material1 td.dxtlBatchEditCell_Material1:not(.dxBatchEditCheckBoxCell)
+{
+    padding: 0 2px;
+}
+.dxgtControl_Material1 .dxgtGMC
+{
+    border-bottom: 1px solid #DCDCDC;
+    background-color: white;
+}
+.dxgtControl_Material1 .dxgtGMC .dxm-main.dxm-horizontal.dxmtb
+{
+    padding: 0;
+}
+.dxgtControl_Material1 .dxgtGMC .dxm-main.dxm-horizontal.dxmtb .dxm-item
+{
+    margin: 4px 0px 4px 4px;
+    border-radius: 3px;
+}
+.dxgtControl_Material1 .dxgtGMC .dxm-main.dxm-horizontal.dxmtb .dxm-item:last-of-type
+{
+    margin-right: 4px;
+}
+.dxgtControl_Material1 .dxgtGMC .dxm-main.dxm-horizontal.dxmtb .dxm-item .dxm-content
+{
+    padding: 8px;
+}
+.dxgtControl_Material1 .dxgtGMC .dxm-main.dxm-horizontal.dxmtb .dxm-item.dxm-checked
+{
+    background: #EAEAEA;
+    color: black;
+    border-color: #DCDCDC;
+}
+.dxgtControl_Material1 .dxgtGMC .dxm-main.dxm-horizontal.dxmtb .dxm-item.dxm-hovered
+{
+    background: rgba(0,0,0,0.1);
+    color: black;
+    border-color: #DCDCDC;
+}
+.dxgtControl_Material1 .dxgtGMC .dxm-main.dxm-horizontal.dxmtb .dxm-spacing
+{
+    width: 0;
+    min-width: 0;
+}
+.dxgtControl_Material1 .dxgtGMC .dxm-main.dxm-horizontal.dxmtb .dxm-separator
+{
+    margin-left: 4px;
+    margin-right: 0;
+    margin-top: 4px;
+    padding: 0;
+}
+.dxgtControl_Material1 .dxgtGMC .dxm-main.dxm-horizontal.dxmtb .dxm-separator b
+{
+    background-color: #DCDCDC;
+}
+.dxgtControl_Material1 .dxgtDialog .dxlpLoadingPanel_Material1
+{
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.dxgtControl_Material1 .dxtlLineRoot_Material1
+{
+    background-image: none;
+}
+.dxgtControl_Material1 .dxtlLineFirst_Material1
+{
+    background-image: none;
+}
+.dxgtControl_Material1 .dxtlLineMiddle_Material1
+{
+    background-image: none;
+}
+.dxgtControl_Material1 .dxtlLineLast_Material1
+{
+    background-image: none;
+}
+.dxgtControl_Material1 .dxtlLineFirstRtl_Material1
+{
+    background-image: none;
+}
+.dxgtControl_Material1 .dxtlLineMiddleRtl_Material1
+{
+    background-image: none;
+}
+.dxgtControl_Material1 .dxtlLineLastRtl_Material1
+{
+    background-image: none;
+}
+.dxgtControl_Material1 .dxtlHSDC,
+.dxgtControl_Material1 .dxtlCSD,
+.dxgtControl_Material1 .dxtlCSD .dxtlDataTable
+{
+    border: none !important;
+    border-radius: 0;
+}
+.dxgtControl_Material1 .dxtlFocusedNode_Material1 .dxtl:not(.dxtlBatchEditModifiedCell_Material1),
+.dxgtControl_Material1 .dxtlFocusedNode_Material1 .dxtl__IM,
+.dxgtControl_Material1 .dxtlFocusedNode_Material1 .dxtlCommandCell_Material1
+{
+    color: #666666;
+}
+.dxgtControl_Material1 .dxtlCommandCell_Material1 a,
+.dxgtControl_Material1 .dxtlFocusedNode_Material1 a,
+.dxgtControl_Material1 .dxtlFocusedNode_Material1 a:hover
+{
+    color: #484848 !important;
+}
+.dxgtControl_Material1 .dxtlHSDC .dxtlDataTable .dxtlHeader_Material1
+{
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+}
+.dxgtControl_Material1 .dxgtGMC .dxm-item span.dx-vam
+{
+    padding: 2px 0 0 0;
+}

@@ -1,0 +1,1221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_allalertsok.rotext" xml:space="preserve">
+    <value>Muito bem! Não tem alertas pendentes</value>
+  </data>
+  <data name="RES_allrequestsok.rotext" xml:space="preserve">
+    <value>Muito bem! Não tem pedidos pendentes</value>
+  </data>
+  <data name="RES_goodevening.rotext" xml:space="preserve">
+    <value>Boa tarde</value>
+  </data>
+  <data name="RES_goodmorning.rotext" xml:space="preserve">
+    <value>Bom dia</value>
+  </data>
+  <data name="RES_goodnight.rotext" xml:space="preserve">
+    <value>Boa noite</value>
+  </data>
+  <data name="RES_gui.access.rotext" xml:space="preserve">
+    <value>Acessos</value>
+  </data>
+  <data name="RES_gui.accessanalytics.rotext" xml:space="preserve">
+    <value>Análise de acessos</value>
+  </data>
+  <data name="RES_gui.accessgroups.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_gui.accessgroupsperiods.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_gui.accessperiods.rotext" xml:space="preserve">
+    <value>Períodos</value>
+  </data>
+  <data name="RES_gui.accessreports.rotext" xml:space="preserve">
+    <value>Relatórios</value>
+  </data>
+  <data name="RES_gui.accessstatus.rotext" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="RES_gui.accesszones.rotext" xml:space="preserve">
+    <value>Zonas</value>
+  </data>
+  <data name="RES_gui.accruals.rotext" xml:space="preserve">
+    <value>${Saldos}</value>
+  </data>
+  <data name="RES_gui.activities.rotext" xml:space="preserve">
+    <value>Atividades PRL</value>
+  </data>
+  <data name="RES_gui.advancedsecurity.rotext" xml:space="preserve">
+    <value>Segurança avançada</value>
+  </data>
+  <data name="RES_gui.advreport.rotext" xml:space="preserve">
+    <value>Relatórios</value>
+  </data>
+  <data name="RES_gui.alerts.rotext" xml:space="preserve">
+    <value>Alertas</value>
+  </data>
+  <data name="RES_gui.analytics.rotext" xml:space="preserve">
+    <value>Análise de dados</value>
+  </data>
+  <data name="RES_gui.analyticscheduler.rotext" xml:space="preserve">
+    <value>Análises planeadas</value>
+  </data>
+  <data name="RES_gui.assignments.rotext" xml:space="preserve">
+    <value>Postos</value>
+  </data>
+  <data name="RES_gui.attendance.rotext" xml:space="preserve">
+    <value>Presença</value>
+  </data>
+  <data name="RES_gui.attendancemaintenances.rotext" xml:space="preserve">
+    <value>Mantimentos</value>
+  </data>
+  <data name="RES_gui.attendanceoptions.rotext" xml:space="preserve">
+    <value>Opções de presença</value>
+  </data>
+  <data name="RES_gui.audit.rotext" xml:space="preserve">
+    <value>Auditoria</value>
+  </data>
+  <data name="RES_gui.bots.rotext" xml:space="preserve">
+    <value>Bots</value>
+  </data>
+  <data name="RES_gui.businesscenters.rotext" xml:space="preserve">
+    <value>Centros de custos</value>
+  </data>
+  <data name="RES_gui.calendaranalytics.rotext" xml:space="preserve">
+    <value>Análise de calendário</value>
+  </data>
+  <data name="RES_gui.cameras.rotext" xml:space="preserve">
+    <value>Câmaras</value>
+  </data>
+  <data name="RES_gui.cancelbutton.rotext" xml:space="preserve">
+    <value>Anular</value>
+  </data>
+  <data name="RES_gui.cancelbuttondescription.rotext" xml:space="preserve">
+    <value>Não sair do formulário</value>
+  </data>
+  <data name="RES_gui.causes.rotext" xml:space="preserve">
+    <value>Justificações</value>
+  </data>
+  <data name="RES_gui.channels.rotext" xml:space="preserve">
+    <value>Canais</value>
+  </data>
+  <data name="RES_gui.communications.rotext" xml:space="preserve">
+    <value>Comunicações</value>
+  </data>
+  <data name="RES_gui.communiques.rotext" xml:space="preserve">
+    <value>Comunicados</value>
+  </data>
+  <data name="RES_gui.company.rotext" xml:space="preserve">
+    <value>Organização</value>
+  </data>
+  <data name="RES_gui.concepts.rotext" xml:space="preserve">
+    <value>Saldos</value>
+  </data>
+  <data name="RES_gui.configuration.rotext" xml:space="preserve">
+    <value>Configuração</value>
+  </data>
+  <data name="RES_gui.configurationoptions.rotext" xml:space="preserve">
+    <value>Visualtime</value>
+  </data>
+  <data name="RES_gui.costcontrol.rotext" xml:space="preserve">
+    <value>RealCost</value>
+  </data>
+  <data name="RES_gui.costcontrolanalytics.rotext" xml:space="preserve">
+    <value>Análise de custos</value>
+  </data>
+  <data name="RES_gui.datalink.rotext" xml:space="preserve">
+    <value>Ligação de dados</value>
+  </data>
+  <data name="RES_gui.datalinkbusiness.rotext" xml:space="preserve">
+    <value>Importar/Exportar</value>
+  </data>
+  <data name="RES_gui.diningroom.rotext" xml:space="preserve">
+    <value>Refeitório</value>
+  </data>
+  <data name="RES_gui.documentarymanagement.rotext" xml:space="preserve">
+    <value>Gestor documental</value>
+  </data>
+  <data name="RES_gui.documents.rotext" xml:space="preserve">
+    <value>Documentos</value>
+  </data>
+  <data name="RES_gui.documentsabsences.rotext" xml:space="preserve">
+    <value>Documentos</value>
+  </data>
+  <data name="RES_gui.emergencyreport.rotext" xml:space="preserve">
+    <value>Relatório de emergência</value>
+  </data>
+  <data name="RES_gui.employees.rotext" xml:space="preserve">
+    <value>Utilizadores</value>
+  </data>
+  <data name="RES_gui.events.rotext" xml:space="preserve">
+    <value>Eventos planeados</value>
+  </data>
+  <data name="RES_gui.general.rotext" xml:space="preserve">
+    <value>Global</value>
+  </data>
+  <data name="RES_gui.generalmanagement.rotext" xml:space="preserve">
+    <value>Configuração Global</value>
+  </data>
+  <data name="RES_gui.genius.rotext" xml:space="preserve">
+    <value>Analytics by Genius</value>
+  </data>
+  <data name="RES_gui.gui.absences.rotext" xml:space="preserve">
+    <value>Estado do absentismo</value>
+  </data>
+  <data name="RES_gui.gui.absencesdocuments.rotext" xml:space="preserve">
+    <value>Documentos de absentismo</value>
+  </data>
+  <data name="RES_gui.gui.accessanalytics.rotext" xml:space="preserve">
+    <value>Análise de acessos</value>
+  </data>
+  <data name="RES_gui.gui.accessgroups.rotext" xml:space="preserve">
+    <value>Autorizações</value>
+  </data>
+  <data name="RES_gui.gui.accessmanagement.rotext" xml:space="preserve">
+    <value>Configuração de acessos</value>
+  </data>
+  <data name="RES_gui.gui.accessperiods.rotext" xml:space="preserve">
+    <value>Períodos</value>
+  </data>
+  <data name="RES_gui.gui.accessstatus.rotext" xml:space="preserve">
+    <value>Estado atual</value>
+  </data>
+  <data name="RES_gui.gui.accesszones.rotext" xml:space="preserve">
+    <value>Zonas</value>
+  </data>
+  <data name="RES_gui.gui.accruals.rotext" xml:space="preserve">
+    <value>Saldos</value>
+  </data>
+  <data name="RES_gui.gui.analytics.rotext" xml:space="preserve">
+    <value>Análise de dados</value>
+  </data>
+  <data name="RES_gui.gui.budget.rotext" xml:space="preserve">
+    <value>Orçamentos</value>
+  </data>
+  <data name="RES_gui.gui.calendaranalytics.rotext" xml:space="preserve">
+    <value>Análise de calendário</value>
+  </data>
+  <data name="RES_gui.gui.causes.rotext" xml:space="preserve">
+    <value>Justificações</value>
+  </data>
+  <data name="RES_gui.gui.channels.rotext" xml:space="preserve">
+    <value>meus canais</value>
+  </data>
+  <data name="RES_gui.gui.channelsgeneral.rotext" xml:space="preserve">
+    <value>Canais de comunicação</value>
+  </data>
+  <data name="RES_gui.gui.company.rotext" xml:space="preserve">
+    <value>Organização</value>
+  </data>
+  <data name="RES_gui.gui.diagnostics.rotext" xml:space="preserve">
+    <value>Diagnósticos</value>
+  </data>
+  <data name="RES_gui.gui.general.employees.rotext" xml:space="preserve">
+    <value>Utilizadores</value>
+  </data>
+  <data name="RES_gui.gui.groups.rotext" xml:space="preserve">
+    <value>Grupos</value>
+  </data>
+  <data name="RES_gui.gui.license.rotext" xml:space="preserve">
+    <value>Licença</value>
+  </data>
+  <data name="RES_gui.gui.lockdb.rotext" xml:space="preserve">
+    <value>Data de conclusão</value>
+  </data>
+  <data name="RES_gui.gui.logbook.rotext" xml:space="preserve">
+    <value>Diário de bordo</value>
+  </data>
+  <data name="RES_gui.gui.ohpstatecontrol.rotext" xml:space="preserve">
+    <value>Estado atual</value>
+  </data>
+  <data name="RES_gui.gui.onboarding.rotext" xml:space="preserve">
+    <value>Onboarding</value>
+  </data>
+  <data name="RES_gui.gui.passports.rotext" xml:space="preserve">
+    <value>Utilizadores</value>
+  </data>
+  <data name="RES_gui.gui.productiveunit.rotext" xml:space="preserve">
+    <value>Unidades de produção</value>
+  </data>
+  <data name="RES_gui.gui.saasadministration.rotext" xml:space="preserve">
+    <value>Administração SaaS</value>
+  </data>
+  <data name="RES_gui.gui.scheduler.rotext" xml:space="preserve">
+    <value>Calendário</value>
+  </data>
+  <data name="RES_gui.gui.sdk.rotext" xml:space="preserve">
+    <value>SDK picagens</value>
+  </data>
+  <data name="RES_gui.gui.securitychart.rotext" xml:space="preserve">
+    <value>Fluxo de autorizações</value>
+  </data>
+  <data name="RES_gui.gui.securityfunctions.rotext" xml:space="preserve">
+    <value>Perfis</value>
+  </data>
+  <data name="RES_gui.gui.shiftcontrol.rotext" xml:space="preserve">
+    <value>Gestão de Tempo</value>
+  </data>
+  <data name="RES_gui.gui.shiftmanagement.rotext" xml:space="preserve">
+    <value>Configuração gestão de tempo</value>
+  </data>
+  <data name="RES_gui.gui.shifts.rotext" xml:space="preserve">
+    <value>Horários</value>
+  </data>
+  <data name="RES_gui.gui.statecontrol.rotext" xml:space="preserve">
+    <value>Estado atual</value>
+  </data>
+  <data name="RES_gui.gui.supervisors.rotext" xml:space="preserve">
+    <value>Supervisores</value>
+  </data>
+  <data name="RES_gui.gui.surveys.rotext" xml:space="preserve">
+    <value>Os meus inquéritos</value>
+  </data>
+  <data name="RES_gui.gui.surveysgeneral.rotext" xml:space="preserve">
+    <value>Inquéritos de RH</value>
+  </data>
+  <data name="RES_gui.gui.taskanalytics.rotext" xml:space="preserve">
+    <value>Análise de tarefas</value>
+  </data>
+  <data name="RES_gui.gui.zones.rotext" xml:space="preserve">
+    <value>Zonas</value>
+  </data>
+  <data name="RES_gui.gui.zonesstatus.rotext" xml:space="preserve">
+    <value>Estado das Zonas</value>
+  </data>
+  <data name="RES_gui.home.rotext" xml:space="preserve">
+    <value>Início</value>
+  </data>
+  <data name="RES_gui.infoemployees.rotext" xml:space="preserve">
+    <value>Utilizadores</value>
+  </data>
+  <data name="RES_gui.jobincidences.rotext" xml:space="preserve">
+    <value>Incidências</value>
+  </data>
+  <data name="RES_gui.jobmaintenances.rotext" xml:space="preserve">
+    <value>Mantimentos</value>
+  </data>
+  <data name="RES_gui.joboptions.rotext" xml:space="preserve">
+    <value>Opções gerais</value>
+  </data>
+  <data name="RES_gui.jobreports.rotext" xml:space="preserve">
+    <value>Relatórios</value>
+  </data>
+  <data name="RES_gui.jobslive.rotext" xml:space="preserve">
+    <value>Estado da unidade de produção</value>
+  </data>
+  <data name="RES_gui.jobstatus.rotext" xml:space="preserve">
+    <value>Estado dos trabalhos</value>
+  </data>
+  <data name="RES_gui.jobtab.rotext" xml:space="preserve">
+    <value>Produção</value>
+  </data>
+  <data name="RES_gui.jobtemplates.rotext" xml:space="preserve">
+    <value>Ordens teóricas</value>
+  </data>
+  <data name="RES_gui.kpi.rotext" xml:space="preserve">
+    <value>Indicadores</value>
+  </data>
+  <data name="RES_gui.labagree.rotext" xml:space="preserve">
+    <value>Acordos</value>
+  </data>
+  <data name="RES_gui.labagreerules.rotext" xml:space="preserve">
+    <value>Regras de acordos</value>
+  </data>
+  <data name="RES_gui.liveportal.ccmoves.rotext" xml:space="preserve">
+    <value>Picagens</value>
+  </data>
+  <data name="RES_gui.liveportal.cdp.rotext" xml:space="preserve">
+    <value>CDP</value>
+  </data>
+  <data name="RES_gui.liveportal.cdpmoves.rotext" xml:space="preserve">
+    <value>Picagens</value>
+  </data>
+  <data name="RES_gui.liveportal.costcontrol.rotext" xml:space="preserve">
+    <value>Centro de custo</value>
+  </data>
+  <data name="RES_gui.liveportal.myaccruals.rotext" xml:space="preserve">
+    <value>Os meus saldos</value>
+  </data>
+  <data name="RES_gui.liveportal.mycalendar.rotext" xml:space="preserve">
+    <value>O meu calendário</value>
+  </data>
+  <data name="RES_gui.liveportal.myentrybox.rotext" xml:space="preserve">
+    <value>Caixa de entrada</value>
+  </data>
+  <data name="RES_gui.liveportal.mylist.rotext" xml:space="preserve">
+    <value>A Minha Lista</value>
+  </data>
+  <data name="RES_gui.liveportal.mypunches.rotext" xml:space="preserve">
+    <value>As minhas picagens</value>
+  </data>
+  <data name="RES_gui.liveportal.myrequests.rotext" xml:space="preserve">
+    <value>Os meus pedidos</value>
+  </data>
+  <data name="RES_gui.liveportal.mytask.rotext" xml:space="preserve">
+    <value>Estado atual</value>
+  </data>
+  <data name="RES_gui.liveportal.myuserfields.rotext" xml:space="preserve">
+    <value>A minha ficha</value>
+  </data>
+  <data name="RES_gui.liveportal.taskaccruals.rotext" xml:space="preserve">
+    <value>Os meus saldos</value>
+  </data>
+  <data name="RES_gui.liveportal.taskpunches.rotext" xml:space="preserve">
+    <value>As minhas picagens</value>
+  </data>
+  <data name="RES_gui.liveportal.tasks.rotext" xml:space="preserve">
+    <value>As minhas tarefas</value>
+  </data>
+  <data name="RES_gui.liveportal.timecontrol.rotext" xml:space="preserve">
+    <value>Controlo horário</value>
+  </data>
+  <data name="RES_gui.logbook.rotext" xml:space="preserve">
+    <value>Diário de bordo</value>
+  </data>
+  <data name="RES_gui.machines.rotext" xml:space="preserve">
+    <value>Máquinas</value>
+  </data>
+  <data name="RES_gui.manage tasks.rotext" xml:space="preserve">
+    <value>Gestão de tarefas</value>
+  </data>
+  <data name="RES_gui.myrequests.rotext" xml:space="preserve">
+    <value>Os meus pedidos</value>
+  </data>
+  <data name="RES_gui.myuserfields.rotext" xml:space="preserve">
+    <value>A minha ficha</value>
+  </data>
+  <data name="RES_gui.nosavechangesbutton.rotext" xml:space="preserve">
+    <value>Não gravar</value>
+  </data>
+  <data name="RES_gui.nosavechangesbuttondescription.rotext" xml:space="preserve">
+    <value>Sair da manutenção sem guardar as alterações.</value>
+  </data>
+  <data name="RES_gui.notifications.rotext" xml:space="preserve">
+    <value>Notificações</value>
+  </data>
+  <data name="RES_gui.ohp.rotext" xml:space="preserve">
+    <value>Prevenção de Riscos Laborais</value>
+  </data>
+  <data name="RES_gui.passports.rotext" xml:space="preserve">
+    <value>Utilizadores</value>
+  </data>
+  <data name="RES_gui.portalconfiguration.rotext" xml:space="preserve">
+    <value>Configuração do Portal</value>
+  </data>
+  <data name="RES_gui.productiv.rotext" xml:space="preserve">
+    <value>ProductiV</value>
+  </data>
+  <data name="RES_gui.punches.rotext" xml:space="preserve">
+    <value>Picagens</value>
+  </data>
+  <data name="RES_gui.reports.rotext" xml:space="preserve">
+    <value>Análises, relatórios e dados</value>
+  </data>
+  <data name="RES_gui.reportscheduler.rotext" xml:space="preserve">
+    <value>Relatórios planeados</value>
+  </data>
+  <data name="RES_gui.reportscr.rotext" xml:space="preserve">
+    <value>Relatórios</value>
+  </data>
+  <data name="RES_gui.reviewbusinesscenters.rotext" xml:space="preserve">
+    <value>Atribuição de centros</value>
+  </data>
+  <data name="RES_gui.routes.rotext" xml:space="preserve">
+    <value>Caminhos e destinos</value>
+  </data>
+  <data name="RES_gui.rrhh.rotext" xml:space="preserve">
+    <value>Dossier de RH</value>
+  </data>
+  <data name="RES_gui.savechanges.rotext" xml:space="preserve">
+    <value>Fez alterações nos dados do formulário, deseja guardá-los antes de sair?</value>
+  </data>
+  <data name="RES_gui.savechangesbutton.rotext" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="RES_gui.savechangesbuttondescription.rotext" xml:space="preserve">
+    <value>Guardar as alterações e sair da manutenção.</value>
+  </data>
+  <data name="RES_gui.savechangesdescription.rotext" xml:space="preserve">
+    <value>Foram efetuadas alterações aos dados do formulário, deseja guardá-los?</value>
+  </data>
+  <data name="RES_gui.scheduler.rotext" xml:space="preserve">
+    <value>Calendário</value>
+  </data>
+  <data name="RES_gui.security.rotext" xml:space="preserve">
+    <value>Segurança e auditoria</value>
+  </data>
+  <data name="RES_gui.securityoptions.rotext" xml:space="preserve">
+    <value>Palavra-passe</value>
+  </data>
+  <data name="RES_gui.separator.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_gui.shifts.rotext" xml:space="preserve">
+    <value>Horários</value>
+  </data>
+  <data name="RES_gui.sso.rotext" xml:space="preserve">
+    <value>Login integrado</value>
+  </data>
+  <data name="RES_gui.startupvalues.rotext" xml:space="preserve">
+    <value>Valores iniciais</value>
+  </data>
+  <data name="RES_gui.supervisor.requests.rotext" xml:space="preserve">
+    <value>Pedidos</value>
+  </data>
+  <data name="RES_gui.task.rotext" xml:space="preserve">
+    <value>Tarefas</value>
+  </data>
+  <data name="RES_gui.task.status.rotext" xml:space="preserve">
+    <value>Estado das tarefas</value>
+  </data>
+  <data name="RES_gui.taskanalytics.rotext" xml:space="preserve">
+    <value>Análise de tarefas</value>
+  </data>
+  <data name="RES_gui.tasks.rotext" xml:space="preserve">
+    <value>Tarefas</value>
+  </data>
+  <data name="RES_gui.tasksqueue.rotext" xml:space="preserve">
+    <value>Relatórios pedidos</value>
+  </data>
+  <data name="RES_gui.tasktemplates.rotext" xml:space="preserve">
+    <value>Modelos</value>
+  </data>
+  <data name="RES_gui.teams.rotext" xml:space="preserve">
+    <value>Equipas</value>
+  </data>
+  <data name="RES_gui.terminals.rotext" xml:space="preserve">
+    <value>Terminais</value>
+  </data>
+  <data name="RES_gui.userfields.rotext" xml:space="preserve">
+    <value>Ficha</value>
+  </data>
+  <data name="RES_gui.users and permissions.rotext" xml:space="preserve">
+    <value>Utilizadores e Autorizações</value>
+  </data>
+  <data name="RES_gui.zones.rotext" xml:space="preserve">
+    <value>Zonas</value>
+  </data>
+  <data name="RES_gui.zonesstatus.rotext" xml:space="preserve">
+    <value>Estado das Zonas</value>
+  </data>
+  <data name="RES_lastloginmessage.rotext" xml:space="preserve">
+    <value>Não se esqueça de cumprir as políticas de segurança e as condições de utilização. O seu último início de sessão foi no dia</value>
+  </data>
+  <data name="RES_lastloginmessage2.rotext" xml:space="preserve">
+    <value>às</value>
+  </data>
+  <data name="RES_livegui.roabsent.rotext" xml:space="preserve">
+    <value>Última hora</value>
+  </data>
+  <data name="RES_livegui.rocapacity.rotext" xml:space="preserve">
+    <value>Lotação:</value>
+  </data>
+  <data name="RES_livegui.rohaspassed.rotext" xml:space="preserve">
+    <value>Há</value>
+  </data>
+  <data name="RES_livegui.ronocapacity.rotext" xml:space="preserve">
+    <value>Lotação: N/A</value>
+  </data>
+  <data name="RES_livegui.ropresent.rotext" xml:space="preserve">
+    <value>Presentes</value>
+  </data>
+  <data name="RES_onboarding.ronodata.rotext" xml:space="preserve">
+    <value>Ainda não existem tarefas criadas</value>
+  </data>
+  <data name="RES_onboarding.roonboardingcomments.rotext" xml:space="preserve">
+    <value>Comentários</value>
+  </data>
+  <data name="RES_onboarding.roonboardingcopy.rotext" xml:space="preserve">
+    <value>A copiar as tarefas de</value>
+  </data>
+  <data name="RES_onboarding.roonboardingday.rotext" xml:space="preserve">
+    <value>Entra no dia</value>
+  </data>
+  <data name="RES_onboarding.roonboardingdelete.rotext" xml:space="preserve">
+    <value>De certeza que deseja eliminar o Onboarding?</value>
+  </data>
+  <data name="RES_onboarding.roonboardingdeletetask.rotext" xml:space="preserve">
+    <value>De certeza que deseja eliminar a tarefa?</value>
+  </data>
+  <data name="RES_onboarding.roonboardingdeletetitle.rotext" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="RES_onboarding.roonboardingfor.rotext" xml:space="preserve">
+    <value>Para o utilizador</value>
+  </data>
+  <data name="RES_onboarding.roonboardinggroup.rotext" xml:space="preserve">
+    <value>Grupo</value>
+  </data>
+  <data name="RES_onboarding.roonboardinginfo.rotext" xml:space="preserve">
+    <value>Após a contratação, os esforços devem centrar-se na fidelização desse talento. Realizar um bom Onboarding é essencial. O Visualtime ajuda-lhe a facilitar as novas contratações e a ter todo o processo de onboarding sob controlo e centralizado. </value>
+  </data>
+  <data name="RES_onboarding.roonboardingloading.rotext" xml:space="preserve">
+    <value>A carregar...</value>
+  </data>
+  <data name="RES_onboarding.roonboardingnew.rotext" xml:space="preserve">
+    <value>Cria um novo Onboarding</value>
+  </data>
+  <data name="RES_onboarding.roonboardingnewtask.rotext" xml:space="preserve">
+    <value>Nova tarefa</value>
+  </data>
+  <data name="RES_onboarding.roonboardingoptional.rotext" xml:space="preserve">
+    <value>Deseja copiar a checklist de outro utilizador?</value>
+  </data>
+  <data name="RES_onboarding.roonboardingstartdate.rotext" xml:space="preserve">
+    <value>Entra no dia</value>
+  </data>
+  <data name="RES_onboarding.roonboardingstatus.rotext" xml:space="preserve">
+    <value>Tarefas dos utilizadores</value>
+  </data>
+  <data name="RES_onboarding.roonboardingtasks.rotext" xml:space="preserve">
+    <value>Lista de tarefas</value>
+  </data>
+  <data name="RES_onboarding.roonboardingtaskscopy.rotext" xml:space="preserve">
+    <value>Copiar tarefas de outro utilizador</value>
+  </data>
+  <data name="RES_onboarding.roonboardinguser.rotext" xml:space="preserve">
+    <value>Utilizador</value>
+  </data>
+  <data name="RES_portalconfiguration.dxcolorpicker.acceptbutton.rotext" xml:space="preserve">
+    <value>Aceitar</value>
+  </data>
+  <data name="RES_portalconfiguration.dxcolorpicker.cancelbutton.rotext" xml:space="preserve">
+    <value>Anular</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalconfigurationclick.rotext" xml:space="preserve">
+    <value>...ou clique aqui para procurá-la no seu computador</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalconfigurationdefault.rotext" xml:space="preserve">
+    <value>Restaurar a configuração por defeito</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalconfigurationdrag.rotext" xml:space="preserve">
+    <value>Arraste uma imagem para aqui</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalconfigurationextensions.rotext" xml:space="preserve">
+    <value>Formatos permitidos: </value>
+  </data>
+  <data name="RES_portalconfiguration.roportalconfigurationheader.rotext" xml:space="preserve">
+    <value>Cabeçalho do Portal</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalconfigurationimage.rotext" xml:space="preserve">
+    <value>Imagem do cabeçalho</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalconfigurationinfo.rotext" xml:space="preserve">
+    <value>Nesta secção poderá personalizar diversos aspetos do Portal do Colaborador do Visualtime para adaptá-lo às suas necessidades</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalconfigurationleftcolor.rotext" xml:space="preserve">
+    <value>Cor inicial do fundo</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalconfigurationopacity.rotext" xml:space="preserve">
+    <value>Opacidade da imagem</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalconfigurationposition.rotext" xml:space="preserve">
+    <value>Posição da imagem</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalconfigurationpreview.rotext" xml:space="preserve">
+    <value>Pré-visualização</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalconfigurationrightcolor.rotext" xml:space="preserve">
+    <value>Cor final do fundo</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalconfigurationtitle.rotext" xml:space="preserve">
+    <value>Configuração do Portal</value>
+  </data>
+  <data name="RES_portalconfiguration.roportaldrconfigurationtitle.rotext" xml:space="preserve">
+    <value>Declaração de jornada</value>
+  </data>
+  <data name="RES_portalconfiguration.roportaldrconfiguration.rotext" xml:space="preserve">
+    <value>Configuração da declaração de jornada</value>
+  </data>
+  <data name="RES_portalconfiguration.roportaldr.rotext" xml:space="preserve">
+    <value>Deseja propor ao utilizador o padrão de picagens definido no horário?</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalyes.rotext" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalno.rotext" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="RES_portalconfiguration.roportaldrdesc.rotext" xml:space="preserve">
+    <value>O VTPortal sugerirá de forma automática a sequência de picagens previamente definida no horário do dia</value>
+  </data>
+  <data name="RES_portalconfiguration.limitmaxdrdaysonpast.rotext" xml:space="preserve">
+    <value>Pretende limitar o número de dias anteriores em que é permitido fazer uma declaração de jornada?</value>
+  </data>
+  <data name="RES_portalconfiguration.limitmaxdrdaysonpastdesc.rotext" xml:space="preserve">
+    <value>Se ativar esta opção, não será possível fazer declarações de jornada após ultrapassar o número indicado de dias consecutivos (0 para obrigar a fazer a declaração de jornada no mesmo dia)</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalgeneralconfiguration.rotext" xml:space="preserve">
+    <value>Geral</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalgeolocalizationconfiguration.rotext" xml:space="preserve">
+    <value>Configuração de geolocalização</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalgeolocalizationconfigurationdescription.rotext" xml:space="preserve">
+    <value>Deseja geolocalizar o utilizador quando efetuar uma picagem?</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalgeolocalizationconfigurationtitle.rotext" xml:space="preserve">
+    <value>Geolocalização</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalgeolocalizationconfigurationuser.rotext" xml:space="preserve">
+    <value>Definir para cada utilizador</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalgeolocalizationconfigurationwith.rotext" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalgeolocalizationconfigurationwithout.rotext" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalgeolocalizationdesc.rotext" xml:space="preserve">
+    <value>As opções Sim e Não aparecerão previamente à configuração de utilizador</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalpunchesoptions.rotext" xml:space="preserve">
+    <value>Opções de picagens</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalpunchzonerequired.rotext" xml:space="preserve">
+    <value>Deseja solicitar uma zona nos picagens sem geolocalização?</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalpunchzonerequireddesc.rotext" xml:space="preserve">
+    <value>É necessário que todas as picagens estejam vinculados a uma zona para que o Relatório de Emergência seja correto</value>
+  </data>
+  <data name="RES_roalertcom.rotext" xml:space="preserve">
+    <value>Documentação da empresa</value>
+  </data>
+  <data name="RES_roalertdoc.rotext" xml:space="preserve">
+    <value>Documentação do utilizador</value>
+  </data>
+  <data name="RES_roalertsys.rotext" xml:space="preserve">
+    <value>Sistema</value>
+  </data>
+  <data name="RES_roalertuser.rotext" xml:space="preserve">
+    <value>Utilizador</value>
+  </data>
+  <data name="RES_roccchange.rotext" xml:space="preserve">
+    <value>Alteração de CC</value>
+  </data>
+  <data name="RES_rodinner.rotext" xml:space="preserve">
+    <value>Refeitório</value>
+  </data>
+  <data name="RES_rodirectsupervisedemployees.rotext" xml:space="preserve">
+    <value>Supervisão direta</value>
+  </data>
+  <data name="RES_rohaspassed.rotext" xml:space="preserve">
+    <value>Há</value>
+  </data>
+  <data name="RES_roholidays.rotext" xml:space="preserve">
+    <value>Férias</value>
+  </data>
+  <data name="RES_roothers.rotext" xml:space="preserve">
+    <value>Outros motivos</value>
+  </data>
+  <data name="RES_roportalconfigurationcenter.rotext" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="RES_roportalconfigurationcover.rotext" xml:space="preserve">
+    <value>Todo o cabeçalho</value>
+  </data>
+  <data name="RES_roportalconfigurationleft.rotext" xml:space="preserve">
+    <value>Esquerda</value>
+  </data>
+  <data name="RES_roportalconfigurationright.rotext" xml:space="preserve">
+    <value>Direita</value>
+  </data>
+  <data name="RES_rotaskchange.rotext" xml:space="preserve">
+    <value>Alteração de tarefa</value>
+  </data>
+  <data name="RES_roteamavailable.rotext" xml:space="preserve">
+    <value>Presentes</value>
+  </data>
+  <data name="RES_roteaminhome.rotext" xml:space="preserve">
+    <value>Em teletrabalho</value>
+  </data>
+  <data name="RES_roteaminoffice.rotext" xml:space="preserve">
+    <value>Presencialmente</value>
+  </data>
+  <data name="RES_roteamnotavailable.rotext" xml:space="preserve">
+    <value>Ausentes</value>
+  </data>
+  <data name="RES_start.roabsenceteam.rotext" xml:space="preserve">
+    <value>Ausências previstas</value>
+  </data>
+  <data name="RES_start.roaccept.rotext" xml:space="preserve">
+    <value>Aceitar</value>
+  </data>
+  <data name="RES_start.romyteam.rotext" xml:space="preserve">
+    <value>A minha equipa</value>
+  </data>
+  <data name="RES_start.romyteamtc.rotext" xml:space="preserve">
+    <value>Estado do teletrabalho</value>
+  </data>
+  <data name="RES_start.ronodata.rotext" xml:space="preserve">
+    <value>Não existem dados para mostrar</value>
+  </data>
+  <data name="RES_start.roselectuser.rotext" xml:space="preserve">
+    <value>Selecionar utilizador...</value>
+  </data>
+  <data name="RES_start.rostartabsence.rotext" xml:space="preserve">
+    <value>Ausência</value>
+  </data>
+  <data name="RES_start.rostartacademy.rotext" xml:space="preserve">
+    <value>Aula virtual para que esteja sempre atualizado. Ficará a par de todas as novidades que afetam a gestão do tempo dos utilizadores, normas, funcionalidades do Visualtime e muito mais.</value>
+  </data>
+  <data name="RES_start.rostartana.rotext" xml:space="preserve">
+    <value>Análise de calendário</value>
+  </data>
+  <data name="RES_start.rostartapuntate.rotext" xml:space="preserve">
+    <value>Inscreva-se!</value>
+  </data>
+  <data name="RES_start.rostartavailable.rotext" xml:space="preserve">
+    <value>Disponibilidade</value>
+  </data>
+  <data name="RES_start.rostartcal.rotext" xml:space="preserve">
+    <value>Calendário</value>
+  </data>
+  <data name="RES_start.rostartcc.rotext" xml:space="preserve">
+    <value>Centro de custos</value>
+  </data>
+  <data name="RES_start.rostartcontact.rotext" xml:space="preserve">
+    <value>Contacto</value>
+  </data>
+  <data name="RES_start.rostartdetails.rotext" xml:space="preserve">
+    <value>Detalhes</value>
+  </data>
+  <data name="RES_start.rostartemp.rotext" xml:space="preserve">
+    <value>Utilizadores</value>
+  </data>
+  <data name="RES_start.rostartemployeesstatus.rotext" xml:space="preserve">
+    <value>Estado das minhas equipas</value>
+  </data>
+  <data name="RES_start.rostarthour.rotext" xml:space="preserve">
+    <value>Últ. Ação</value>
+  </data>
+  <data name="RES_start.rostartloading.rotext" xml:space="preserve">
+    <value>A carregar...</value>
+  </data>
+  <data name="RES_start.rostartlocalization.rotext" xml:space="preserve">
+    <value>Localização</value>
+  </data>
+  <data name="RES_start.rostartmyalerts.rotext" xml:space="preserve">
+    <value>Os meus alertas pendentes</value>
+  </data>
+  <data name="RES_start.rostartmyrequests.rotext" xml:space="preserve">
+    <value>Pedidos pendentes da minha equipa</value>
+  </data>
+  <data name="RES_start.rostartnews.rotext" xml:space="preserve">
+    <value>Notícias</value>
+  </data>
+  <data name="RES_start.rostartnews1.rotext" xml:space="preserve">
+    <value>O dashboard foi reorganizado para facilitar o seu trabalho!</value>
+  </data>
+  <data name="RES_start.rostartnews2.rotext" xml:space="preserve">
+    <value>Agora, pode filtrar os utilizadores para cada um dos seus equipamentos através deste seletor</value>
+  </data>
+  <data name="RES_start.rostartnews3.rotext" xml:space="preserve">
+    <value>Use estes filtros para visualizar rapidamente o estado dos utilizadores!</value>
+  </data>
+  <data name="RES_start.rostartnewsok.rotext" xml:space="preserve">
+    <value>Perfeito! Feche a janela de ajuda e comece a trabalhar com o Visualtime</value>
+  </data>
+  <data name="RES_start.rostartnogroupselected.rotext" xml:space="preserve">
+    <value>Selecione um grupo para ver o estado dos seus utilizadores</value>
+  </data>
+  <data name="RES_start.rostartorg.rotext" xml:space="preserve">
+    <value>Organização</value>
+  </data>
+  <data name="RES_start.rostartshift.rotext" xml:space="preserve">
+    <value>Horário</value>
+  </data>
+  <data name="RES_start.rostartsoporte.rotext" xml:space="preserve">
+    <value>Suporte</value>
+  </data>
+  <data name="RES_start.rostartsoportedesc.rotext" xml:space="preserve">
+    <value>Através do nosso serviço de assistência exclusivo para clientes do Cegid Visualtime, pode solicitar ajuda ou aconselhamento personalizado.</value>
+  </data>
+  <data name="RES_start.rostarttask.rotext" xml:space="preserve">
+    <value>Tarefa</value>
+  </data>
+  <data name="RES_start.rostarttelecommute.rotext" xml:space="preserve">
+    <value>Teletrabalho</value>
+  </data>
+  <data name="RES_start.rostarttype.rotext" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="RES_start.rostartuser.rotext" xml:space="preserve">
+    <value>Utilizador</value>
+  </data>
+  <data name="RES_start.rostartzone.rotext" xml:space="preserve">
+    <value>Zona</value>
+  </data>
+  <data name="RES_start.rowarningpopup.rotext" xml:space="preserve">
+    <value>Cuidado: tenha em conta que o tempo de espera pode aumentar caso carregue todos os grupos ao mesmo tempo.</value>
+  </data>
+  <data name="RES_survey.rosurveyadvanced.rotext" xml:space="preserve">
+    <value>Avançado</value>
+  </data>
+  <data name="RES_survey.rosurveyanonymous.rotext" xml:space="preserve">
+    <value>É anónima?</value>
+  </data>
+  <data name="RES_survey.rosurveycancel.rotext" xml:space="preserve">
+    <value>Anular</value>
+  </data>
+  <data name="RES_survey.rosurveychart.rotext" xml:space="preserve">
+    <value>Gráficos</value>
+  </data>
+  <data name="RES_survey.rosurveycomplete.rotext" xml:space="preserve">
+    <value>Completar agora</value>
+  </data>
+  <data name="RES_survey.rosurveyconfiguration.rotext" xml:space="preserve">
+    <value>Configuração</value>
+  </data>
+  <data name="RES_survey.rosurveycreatedon.rotext" xml:space="preserve">
+    <value>Criado a</value>
+  </data>
+  <data name="RES_survey.rosurveydelete.rotext" xml:space="preserve">
+    <value>Deseja eliminar este inquérito e todas as suas respostas?</value>
+  </data>
+  <data name="RES_survey.rosurveydeletetitle.rotext" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="RES_survey.rosurveydesign.rotext" xml:space="preserve">
+    <value>Desenho</value>
+  </data>
+  <data name="RES_survey.rosurveydestination.rotext" xml:space="preserve">
+    <value>A quem se destina?</value>
+  </data>
+  <data name="RES_survey.rosurveydestinationdesc.rotext" xml:space="preserve">
+    <value>Selecione destinatários</value>
+  </data>
+  <data name="RES_survey.rosurveyexpiration.rotext" xml:space="preserve">
+    <value>Avançado</value>
+  </data>
+  <data name="RES_survey.rosurveyexpiredateinfo.rotext" xml:space="preserve">
+    <value>Será encerrado a</value>
+  </data>
+  <data name="RES_survey.rosurveyexpiredbydate.rotext" xml:space="preserve">
+    <value>Por data</value>
+  </data>
+  <data name="RES_survey.rosurveyexpiredbypercentage.rotext" xml:space="preserve">
+    <value>Por percentagem de respostas</value>
+  </data>
+  <data name="RES_survey.rosurveyexpireon.rotext" xml:space="preserve">
+    <value>Expira a</value>
+  </data>
+  <data name="RES_survey.rosurveyforgroups.rotext" xml:space="preserve">
+    <value>Aos grupos</value>
+  </data>
+  <data name="RES_survey.rosurveyforusers.rotext" xml:space="preserve">
+    <value>Os utilizadores</value>
+  </data>
+  <data name="RES_survey.rosurveygeneral.rotext" xml:space="preserve">
+    <value>Defina o seu inquérito</value>
+  </data>
+  <data name="RES_survey.rosurveyinfo.rotext" xml:space="preserve">
+    <value>Envie inquéritos para conhecer de perto como progride a experiência dos seus utilizadores e avalie a eficácia das suas políticas de RH.</value>
+  </data>
+  <data name="RES_survey.rosurveymandatory.rotext" xml:space="preserve">
+    <value>É obrigatório responder ao mesmo?</value>
+  </data>
+  <data name="RES_survey.rosurveyname.rotext" xml:space="preserve">
+    <value>Como se chama?</value>
+  </data>
+  <data name="RES_survey.rosurveynew.rotext" xml:space="preserve">
+    <value>Crie um novo inquérito</value>
+  </data>
+  <data name="RES_survey.rosurveyno.rotext" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="RES_survey.rosurveypercentage.rotext" xml:space="preserve">
+    <value>Progresso</value>
+  </data>
+  <data name="RES_survey.rosurveypercentageinfo.rotext" xml:space="preserve">
+    <value>O inquérito será automaticamente encerrado quando % dos utilizadores responderem</value>
+  </data>
+  <data name="RES_survey.rosurveyresults.rotext" xml:space="preserve">
+    <value>Resultados</value>
+  </data>
+  <data name="RES_survey.rosurveysave.rotext" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="RES_survey.rosurveysend.rotext" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="RES_survey.rosurveysimple.rotext" xml:space="preserve">
+    <value>Simples</value>
+  </data>
+  <data name="RES_survey.rosurveystatus.rotext" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="RES_survey.rosurveystitle.rotext" xml:space="preserve">
+    <value>Os meus inquéritos</value>
+  </data>
+  <data name="RES_survey.rosurveytable.rotext" xml:space="preserve">
+    <value>Tabela</value>
+  </data>
+  <data name="RES_survey.rosurveytitle.rotext" xml:space="preserve">
+    <value>Inquéritos</value>
+  </data>
+  <data name="RES_survey.rosurveytitledesc.rotext" xml:space="preserve">
+    <value>Qualificação</value>
+  </data>
+  <data name="RES_survey.rosurveyyes.rotext" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="RES_todayis.rotext" xml:space="preserve">
+    <value>Hoje é</value>
+  </data>
+  <data name="RES_worldzone.rotext" xml:space="preserve">
+    <value>zona mundial</value>
+  </data>
+  <data name="RES_zone.rocurrentzone.rotext" xml:space="preserve">
+    <value>Estado da zona</value>
+  </data>
+  <data name="RES_zone.ronodata.rotext" xml:space="preserve">
+    <value>Sem dados</value>
+  </data>
+  <data name="RES_zone.rostartcc.rotext" xml:space="preserve">
+    <value>Centro de custos</value>
+  </data>
+  <data name="RES_zone.rostartdetails.rotext" xml:space="preserve">
+    <value>Detalhes</value>
+  </data>
+  <data name="RES_zone.rostarthour.rotext" xml:space="preserve">
+    <value>Últ. picagem</value>
+  </data>
+  <data name="RES_zone.rostartloading.rotext" xml:space="preserve">
+    <value>A carregar utilizadores da zona</value>
+  </data>
+  <data name="RES_zone.rostarttask.rotext" xml:space="preserve">
+    <value>Tarefa</value>
+  </data>
+  <data name="RES_zone.rostarttelecommute.rotext" xml:space="preserve">
+    <value>Teletrabalho</value>
+  </data>
+  <data name="RES_zone.rostartuser.rotext" xml:space="preserve">
+    <value>Utilizador</value>
+  </data>
+  <data name="RES_zone.rozoneinfo.rotext" xml:space="preserve">
+    <value>Neste ecrã pode comprovar o estado em tempo real de cada uma das zonas definidas no Visualtime: os utilizadores que estão atualmente nelas, assim como a lotação das mesmas.</value>
+  </data>
+  <data name="RES_zone.rozonename.rotext" xml:space="preserve">
+    <value>Nome da zona de acesso</value>
+  </data>
+  <data name="RES_zone.rozonestatus.rotext" xml:space="preserve">
+    <value>Estado atual</value>
+  </data>
+  <data name="RES_zone.rozonestatuslasthour.rotext" xml:space="preserve">
+    <value>Estiveram durante a última hora</value>
+  </data>
+  <data name="RES_zone.rozonestatusnowpresent.rotext" xml:space="preserve">
+    <value>Presentes agora</value>
+  </data>
+  <data name="RES_zone.rozonestitle.rotext" xml:space="preserve">
+    <value>Estado das zonas</value>
+  </data>
+  <data name="RES_zones.title.rotext" xml:space="preserve">
+    <value>Zonas</value>
+  </data>
+  <data name="RES_zones.title.search.rotext" xml:space="preserve">
+    <value>Pesquisar</value>
+  </data>
+  <data name="RES_zones.titledesc.rotext" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RES_portalconfiguration.roportalgeneralconfigurationheader.rotext" xml:space="preserve">
+    <value>Geral</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalactivateimpersonalizationlbl.rotext" xml:space="preserve">
+    <value>Pretende ativar a impessoalização?</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalactivateimpersonalizationdesc.rotext" xml:space="preserve">
+    <value>Quando ativado, o supervisor é autorizado a agir em nome do colaborador.</value>
+  </data>
+  <data name="RES_portalconfiguration.roportalconfignotallowed.rotext" xml:space="preserve">
+    <value>Não é possível configurar a geolocalização do portal se a configuração de localização através de IP nas zonas estiver ativada</value>
+  </data>
+  <data name="RES_portalconfiguration.roclearimage.rotext" xml:space="preserve">
+    <value>Eliminar imagen</value>
+  </data>
+  <data name="RES_graphic.rosurveyconfiguration.rotext" xml:space="preserve">
+    <value>Gráficos</value>
+  </data>
+  <data name="RES_table.rosurveyconfiguration.rotext" xml:space="preserve">
+    <value>Tabela</value>
+  </data>
+  <data name="RES_showresponsesof.rosurveyconfiguration.rotext" xml:space="preserve">
+    <value>Ver respostas de...</value>
+  </data>
+  <data name="RES_portalconfiguration.rotimegatetitle.rotext" xml:space="preserve">
+    <value>Porta do tempo</value>
+  </data>
+  <data name="RES_portalconfiguration.rotimegateconfiguration.rotext" xml:space="preserve">
+    <value> Identificação do utilizador</value>
+  </data>
+  <data name="RES_portalconfiguration.rotimegateusescustomid.rotext" xml:space="preserve">
+    <value> Utilizar como identificador de utilizador um campo do ficheiro HR</value>
+  </data>
+  <data name="RES_portalconfiguration.rotimegatewarning1.rotext" xml:space="preserve">
+    <value>Ao ativar esta opção, o valor do campo da ficha que se encontra no Ficheiro de RH será utilizado como identificador no Time Gate.</value>
+  </data>
+  <data name="RES_portalconfiguration.rotimegatewarning2.rotext" xml:space="preserve">
+    <value>Se o campo da ficha não tiver valor ou tiver um valor de 0, o utilizador não poderá aceder ao Time Gate.</value>
+  </data>
+  <data name="RES_portalconfiguration.rotimegatewarning3.rotext" xml:space="preserve">
+    <value>Os campos disponíveis são aqueles que são de tipo numérico ou de texto e têm a restrição de valor único activada.</value>
+  </data>
+  <data name="RES_timegateconfiguration.noneligibleuniqueuserfield.rotext" xml:space="preserve">
+    <value>O campo selecionado não pode ser utilizado como um identificador, porque contém atualmente valores duplicados no separador de vários utilizadores. Remova os valores duplicados ou selecione outro campo</value>
+  </data>
+  <data name="RES_portalconfiguration.rotimegatebackground.rotext" xml:space="preserve">
+    <value>Imagem de fundo do portal do tempo</value>
+  </data>
+  <data name="RES_portalconfiguration.rotimegateimage.rotext" xml:space="preserve">
+    <value>Imagem de fundo</value>
+  </data>
+  <data name="RES_portalconfiguration.rotimegatebackgroundpreview.rotext" xml:space="preserve">
+    <value>Imagem de fundo</value>
+  </data>
+  <data name="RES_portalconfiguration.rotgbackgroundopacity.rotext" xml:space="preserve">
+    <value>Opacidade da imagem</value>
+  </data>
+  <data name="RES_gui.partestrabajo.rotext" xml:space="preserve">
+    <value>Registos de trabalho</value>
+  </data>
+  <data name="RES_gui.gui.collectives.rotext" xml:space="preserve">
+    <value>Coletivos</value>
+  </data>
+  <data name="RES_gui.gui.rules.rotext" xml:space="preserve">
+    <value>Regras</value>
+  </data>
+  <data name="RES_start.roversionupdatedtitle.rotext" xml:space="preserve">
+    <value>VERSÃO ATUALIZADA</value>
+  </data>
+  <data name="RES_start.roversionupdatedmessage.rotext" xml:space="preserve">
+    <value>Atualizado para a versão</value>
+  </data>
+  <data name="RES_start.roviewversionchanges.rotext" xml:space="preserve">
+    <value>Ver alterações da versão</value>
+  </data>
+  <data name="RES_start.rodontshowagain.rotext" xml:space="preserve">
+    <value>Não voltar a mostrar esta mensagem</value>
+  </data>
+  <data name="RES_start.roacceptbutton.rotext" xml:space="preserve">
+    <value>Aceitar</value>
+  </data>
+</root>

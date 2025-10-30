@@ -1,0 +1,26 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxTreeList" Assembly="DevExpress.Web.ASPxTreeList.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxTreeList runat="server" CssFilePath="{0}/styles.css" CssPostfix="Material1">
+    <Settings ShowTreeLines="False" SuppressOuterGridLines="True" />
+    <SettingsPager CurrentPageNumberFormat="{0}">
+        <PageSizeItemSettings ShowPopupShadow="True" />
+    </SettingsPager>
+    <Images SpriteCssFilePath="{0}/sprite.css"  />
+    <Styles CssPostfix="Material1" CssFilePath="{0}/styles.css" />
+    <StylesPager>
+        <Pager ItemSpacing="1px" Spacing="1px" />
+    </StylesPager>
+    <StylesEditors>
+        <Calendar>
+            <Border BorderColor="Silver" BorderStyle="Solid" BorderWidth="1px" />
+        </Calendar>
+    </StylesEditors>
+    <SettingsCustomizationWindow PopupWidth="220px" PopupHeight="245px" />
+    <SettingsPopup>
+        <HeaderFilter MinWidth="230px" MinHeight="150px" />
+        <CustomizationWindow MinWidth="240px" MinHeight="350px"  />
+    </SettingsPopup>
+</dx:ASPxTreeList>
+
+

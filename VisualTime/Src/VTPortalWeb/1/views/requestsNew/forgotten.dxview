@@ -1,0 +1,115 @@
+<div data-options="dxView : { name: 'forgotten', title: 'forgotten', disableCache: true } " >
+
+        <!--ko with: subscribeBlock-->
+         <div class="bigProfile" data-options="dxViewPlaceholder: { viewName: 'bigUserInfo' }"></div>
+        <!-- /ko-->
+
+	<div  style="height:76%">
+		<div style="clear:both;border-radius: 25px;height: calc(100% - 2rem);" class="card card-one" data-bind="dxScrollView: scrollContent">
+			<!-- ko if: requestMainDivVisible() -->
+			<div id="divEmployeeInfo">
+				<header>
+					<div class="avatar">
+						<div style="width:100px; height:100px;background-size: contain !important; " data-bind="style: { backgroundImage: empImage }"></div>
+					</div>
+				</header>
+
+				<h3>
+					<span data-bind="text: lblEmployee"></span>
+					<div class="descGroup">
+						<span data-bind="text: lblGroupName"></span>
+					</div>
+				</h3>
+				<div id="divPunchInfo">
+					<div class="desc">
+						<div data-bind="html: lblPunchInfo">
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- /ko-->
+			<!-- ko if: loadingDivVisible() -->
+			<div id="divLoadingInfo">
+				<header>
+					<div class="avatar">
+						<div style="width:100px; height:100px;background-size: contain !important; " data-bind="style: { backgroundImage: empImage }"></div>
+					</div>
+				</header>
+				<div class="desc">
+					<div style="margin-top: 100px;"  data-bind="text: lblLoading"></div>
+				</div>
+			</div>
+			<!-- /ko-->
+			
+			<!-- ko if: infoDivVisible() -->
+			<div id="divRequestInfo">
+				<h4>
+					<span data-bind="text: lblRequestInfo"></span>
+				</h4>
+				<div class="h-divider">
+					<div class="shadow"></div>
+				</div>
+				
+			</div>
+			<!-- /ko-->
+
+			<!-- ko if: remarksDivVisible() -->
+			<div id="divRequestInfo">
+				<h4>
+					<span data-bind="text: lblRemarks"></span>
+				</h4>
+				<div class="h-divider">
+					<div class="shadow"></div>
+				</div>
+				<div class="desc">
+					<div data-bind="text: remarks"></div>
+				</div>
+			</div>
+			<!-- /ko-->
+
+			<!-- ko if: currentPunchesDivVisible() -->
+			<div id="divCurrentPunches">
+				<h4>
+					<span data-bind="text: lblCurrentPunches"></span>
+				</h4>
+				<div class="h-divider">
+					<div class="shadow"></div>
+				</div>
+				<div style="padding-top:5px;margin: auto;width: 80%;">
+					<div id="list" class="list-container" data-bind="if: punchesDS().length > 0">
+						<div id="punchesList" data-bind="dxList: listCurrentPunches" style="font-size:12px !important">
+							<div data-options="dxTemplate: {name: 'item'}" style="padding:0px !important">
+								<div class="listMenuItem" style="height:auto !important">
+									<div data-bind="css: $data.cssClass" class="listMenuItemIcon" style="height:20px !important; width:20px !important"></div>
+									<div class="listMenuItemContent">
+										<div data-bind="text: $data.Name"></div>
+										<div class="smallTextDescription" data-bind="text: $data.Value"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /ko-->
+			<div></div>
+			<br></br>
+			
+		</div>
+	</div>
+	<div class="approvalPopup" data-bind="dxPopup: {showTitle: false, closeOnOutsideClick:true, visible: popupVisible, height: 'auto'}">
+		<!--ko with: myApprovalsBlock-->
+		<div data-options="dxViewPlaceholder: { viewName: 'approvalHistory' } "></div>
+		<!-- /ko-->
+	</div>
+
+	<div class="fixedMenuButton2">
+		<div class="actionButton mainMenuButton" data-bind="dxButton: btnApprove"></div>
+		<div class="actionButton mainMenuButton" data-bind="dxButton: btnRefuse"></div>
+		<div class="actionButton mainMenuButton" data-bind="dxButton: btnHistory"></div>
+	</div>
+
+	<div data-bind="dxLoadPanel: loadingPanel"> </div>
+   
+</div>

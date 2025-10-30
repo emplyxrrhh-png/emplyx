@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{DE1FA30B-E243-4FCC-8382-E9D9DE78B353}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>VTLiveApi</RootNamespace>
+    <AssemblyName>VTLiveApi</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>54365</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <Use64BitIISExpress />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Afk.ZoneInfo">
+      <HintPath>..\..\Common\Afk.ZoneInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Bson, Version=1.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.Bson.1.0.3\lib\net45\Newtonsoft.Json.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="SwaggerWcf, Version=0.2.15.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SwaggerWcf.0.2.15\lib\net45\SwaggerWcf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.6.0\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.6.0\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.6.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.6.0\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.1.0\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.6.0\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.3.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.3.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="api\AbsencesService.svc" />
+    <Content Include="api\AccrualsService.svc" />
+    <Content Include="api\DocumentsService.svc" />
+    <Content Include="api\PunchesService.svc" />
+    <Content Include="api\ScheduleService.svc" />
+    <Content Include="api\EmployeeService.svc" />
+    <Content Include="api\GroupService.svc" />
+    <Content Include="api\v2\AccessService.svc" />
+    <Content Include="api\v2\AbsencesService.svc" />
+    <Content Include="api\v2\RequestsService.svc" />
+    <Content Include="api\v2\SupervisorsService.svc" />
+    <Content Include="api\v2\TasksService.svc" />
+    <Content Include="api\v2\AccrualsService.svc" />
+    <Content Include="api\v2\DocumentsService.svc" />
+    <Content Include="api\v2\EmployeeService.svc" />
+    <Content Include="api\v2\GroupService.svc" />
+    <Content Include="api\v2\PunchesService.svc" />
+    <Content Include="api\v2\ScheduleService.svc" />
+    <Content Include="api\v2\DailyCausesService.svc" />
+    <Content Include="Datalink\ExternalApi.svc" />
+    <Content Include="Global.asax" />
+    <Content Include="Portal\PortalSvcx.svc" />
+    <Content Include="Resources\backgroundDefault.png" />
+    <Content Include="Resources\backgroundEmployee.png" />
+    <Content Include="Resources\BackgroundPlus.png" />
+    <Content Include="Resources\dynamicView.js" />
+    <Content Include="Resources\dynamicView.txt" />
+    <Content Include="Resources\logovtl_bar.png" />
+    <Content Include="Resources\Q1-1.jpg" />
+    <Content Include="Resources\Q1-2.jpg" />
+    <Content Include="Resources\Q1-3.jpg" />
+    <Content Include="Resources\Q1-4.jpg" />
+    <Content Include="Resources\Q1-5.jpg" />
+    <Content Include="Resources\Q1-6.jpg" />
+    <Content Include="Resources\Q2-1.jpg" />
+    <Content Include="Resources\Q2-2.jpg" />
+    <Content Include="Resources\Q2-3.jpg" />
+    <Content Include="Resources\Q2-4.jpg" />
+    <Content Include="Resources\Q2-5.jpg" />
+    <Content Include="Resources\Q2-6.jpg" />
+    <Content Include="Resources\Q3-1.jpg" />
+    <Content Include="Resources\Q3-2.jpg" />
+    <Content Include="Resources\Q3-3.jpg" />
+    <Content Include="Resources\Q3-4.jpg" />
+    <Content Include="Resources\Q3-5.jpg" />
+    <Content Include="Resources\Q3-6.jpg" />
+    <Content Include="Resources\Q4-1.jpg" />
+    <Content Include="Resources\Q4-2.jpg" />
+    <Content Include="Resources\Q4-3.jpg" />
+    <Content Include="Resources\Q4-4.jpg" />
+    <Content Include="Resources\Q4-5.jpg" />
+    <Content Include="Resources\Q4-6.jpg" />
+    <Content Include="Resources\userDefault.png" />
+    <Content Include="Terminal\TerminalSvcx.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AssemblyVersionInfo.vb">
+      <Link>AssemblyVersionInfo.vb</Link>
+    </Compile>
+    <Compile Include="api\AbsencesService.svc.vb">
+      <DependentUpon>AbsencesService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="api\AccrualsService.svc.vb">
+      <DependentUpon>AccrualsService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="api\IAccrualsService.vb" />
+    <Compile Include="api\IDocumentsService.vb" />
+    <Compile Include="api\IPunchesService.vb" />
+    <Compile Include="api\DocumentsService.svc.vb">
+      <DependentUpon>DocumentsService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="api\PunchesService.svc.vb">
+      <DependentUpon>PunchesService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="api\IScheduleService.vb" />
+    <Compile Include="api\ScheduleService.svc.vb">
+      <DependentUpon>ScheduleService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="api\EmployeeService.svc.vb">
+      <DependentUpon>EmployeeService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="api\GroupService.svc.vb">
+      <DependentUpon>GroupService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="api\IAbsencesService.vb" />
+    <Compile Include="api\IEmployeesService.vb" />
+    <Compile Include="api\IGroupsService.vb" />
+    <Compile Include="api\v2\AccessService.svc.vb">
+      <DependentUpon>AccessService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="api\v2\AbsencesService.svc.vb">
+      <DependentUpon>AbsencesService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="api\v2\Interfaces\IAccessService.vb" />
+    <Compile Include="api\v2\Interfaces\IRequestsService.vb" />
+    <Compile Include="api\v2\Interfaces\ISupervisorsService.vb" />
+    <Compile Include="api\v2\Interfaces\ITasksService.vb" />
+    <Compile Include="api\v2\Interfaces\IDailyCausesService.vb" />
+    <Compile Include="api\v2\RequestsService.svc.vb">
+      <DependentUpon>RequestsService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="api\v2\SupervisorsService.svc.vb">
+      <DependentUpon>SupervisorsService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="api\v2\TasksService.svc.vb">
+      <DependentUpon>TasksService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="api\v2\AccrualsService.svc.vb">
+      <DependentUpon>AccrualsService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="api\v2\DocumentsService.svc.vb">
+      <DependentUpon>DocumentsService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="api\v2\EmployeeService.svc.vb">
+      <DependentUpon>EmployeeService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="api\v2\GroupService.svc.vb">
+      <DependentUpon>GroupService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="api\v2\DailyCausesService.svc.vb">
+      <DependentUpon>DailyCausesService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="api\v2\Interfaces\IAbsencesService.vb" />
+    <Compile Include="api\v2\Interfaces\IAccrualsService.vb" />
+    <Compile Include="api\v2\Interfaces\IDocumentsService.vb" />
+    <Compile Include="api\v2\Interfaces\IEmployeesService.vb" />
+    <Compile Include="api\v2\Interfaces\IGroupsService.vb" />
+    <Compile Include="api\v2\Interfaces\IPunchesService.vb" />
+    <Compile Include="api\v2\Interfaces\IScheduleService.vb" />
+    <Compile Include="api\v2\PunchesService.svc.vb">
+      <DependentUpon>PunchesService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="api\v2\ScheduleService.svc.vb">
+      <DependentUpon>ScheduleService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Base\CustomError.vb" />
+    <Compile Include="Base\CustomErrorAttribute.vb" />
+    <Compile Include="CorsSupport.vb" />
+    <Compile Include="Datalink\ExternalApi.svc.vb">
+      <DependentUpon>ExternalApi.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Datalink\IExternalApi.vb" />
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="JSONHelper.vb" />
+    <Compile Include="JSONPSupportBehaviour.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Portal\PortalSvcx.svc.vb">
+      <DependentUpon>PortalSvcx.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Terminal\TerminalSvcx.svc.vb">
+      <DependentUpon>TerminalSvcx.svc</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\VisualTimeMTDeploy.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Resources\swagger-ui.zip" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Multitennant.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\DataLayer\DataLayer.vbproj">
+      <Project>{a68015f9-a070-4ab5-941e-c922fbc5ff30}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\DTOs.VTPortal\DTOs.VTPortal.vbproj">
+      <Project>{38052328-369e-4e56-a112-1a03362207e1}</Project>
+      <Name>DTOs.VTPortal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\DTOs\DTOs\DTOs.vbproj">
+      <Project>{00be6247-e1ed-4e0a-bd02-8dbb4e00ffe1}</Project>
+      <Name>DTOs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\ExternalSystems\ExternalSystems.vbproj">
+      <Project>{79f01f32-9c83-43a5-8923-13ce43b05d2c}</Project>
+      <Name>ExternalSystems</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\SecurityLayer\SecurityLayer.vbproj">
+      <Project>{e712f6a2-5e54-4731-9b11-af80242a246c}</Project>
+      <Name>SecurityLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\UsersAdmin\UsersAdmin.vbproj">
+      <Project>{8f4edbff-73d3-4e8a-9079-b6065a62858d}</Project>
+      <Name>UsersAdmin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTAzure\VTAzure.vbproj">
+      <Project>{c4ad9d15-4368-4343-b1e1-263abf0e8ab0}</Project>
+      <Name>VTAzure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTBase.Extensions\VTBase.Extensions.vbproj">
+      <Project>{d99ce0c2-ad93-4f3d-a35b-c97749de1bde}</Project>
+      <Name>VTBase.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTBase.Security\VTBase.Security.vbproj">
+      <Project>{c1b73385-8dff-40b0-8c3b-d2e0ded2621e}</Project>
+      <Name>VTBase.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTBase\VTBase.vbproj">
+      <Project>{f1d0ec70-d874-4eed-8ab9-f28fcda2b7f0}</Project>
+      <Name>VTBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTBusinessBase\VTBusiness.Common.vbproj">
+      <Project>{97d87ef7-2b41-4216-a6d2-fa9e3c1bc570}</Project>
+      <Name>VTBusiness.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTBusiness\VTBusiness.vbproj">
+      <Project>{19563cd9-657e-48a8-9b7e-c8b7b23af403}</Project>
+      <Name>VTBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTLiveApiBase\VTLiveApiBase.vbproj">
+      <Project>{46200707-6117-4aac-abc3-31bfbb16990f}</Project>
+      <Name>VTLiveApiBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTPortalBusiness\VTPortal.vbproj">
+      <Project>{636a00a2-2a32-460b-b2dc-437d56148683}</Project>
+      <Name>VTPortal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\VTTerminals\VTTerminals.vbproj">
+      <Project>{c2c99a9a-f600-45fc-82c5-b0d1454f85e9}</Project>
+      <Name>VTTerminals</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Multitennant|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>8031</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8031/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>@if "%25TF_BUILD%25"=="" (
+    
+  echo "$(ProjectName) OK"
+
+) else (
+   rmdir /s /q "$(ProjectDir)obj"
+)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
