@@ -1,0 +1,196 @@
+.top-row {
+    display: flex;
+    align-items: center;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    height: 3.5rem;
+    background: transparent;
+}
+
+.top-row .spacer {
+    flex: 1;
+}
+
+.hamburger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    /* más espacio entre el menú hamburguesa y el resto */
+    margin-right: 16px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.hamburger .bi-list {
+    /* 20% más grande que antes (1.2rem -> 1.44rem) */
+    font-size: 1.44rem;
+    line-height: 1;
+    color: #ffffffcc;
+}
+
+.nav-scrollable {
+    display: block;
+    padding-top: 0.25rem;
+}
+
+/* Company dropdown full-width with small side margins */
+.company-dropdown {
+    margin: 6px 0;
+    position: relative;
+}
+
+.company-dropdown .dropdown-toggle {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    padding: 6px 10px 6px 8px;
+}
+
+.company-dropdown .dropdown-menu {
+    display: none;
+    position: static; /* occupy full width below button */
+    width: 100%;
+    margin-top: 4px;
+}
+
+.company-dropdown .dropdown-menu.show {
+    display: block;
+}
+
+/* Nav items layout */
+.nav-item {
+    /* sin margen izquierdo; alineamos con el padding del botón hamburguesa */
+    margin: 4px 0;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px 8px 8px;
+    border-radius: 8px;
+    font-size: 0.875rem; /* textos más pequeños */
+    color: #ffffff; /* texto claro */
+}
+
+.nav-link:hover {
+    background-color: rgba(0,0,0,0.15);
+    color: #ffffff;
+}
+
+.nav-link.active {
+    background-color: rgba(0,0,0,0.22); /* activo visible */
+    color: #ffffff;
+}
+
+.label {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.icon::before {
+    display: inline-block;
+    color: inherit;
+    /* todos los iconos 20% más grandes que el texto adyacente */
+    font-size: 1.2em;
+}
+
+.bi-house-door-fill-nav-menu::before {
+    content: "\f425";
+}
+
+.bi-plus-square-fill-nav-menu::before {
+    content: "\f521";
+}
+
+.bi-list-nested-nav-menu::before {
+    content: "\f47d";
+}
+
+/* Collapsed sidebar: center icons when labels hidden */
+.sidebar.collapsed .nav-link {
+    justify-content: center;
+}
+
+.sidebar.collapsed .company-dropdown .dropdown-toggle {
+    justify-content: center;
+    padding: 8px 10px;
+}
+
+.sidebar.collapsed .company-dropdown .dropdown-toggle::after {
+    display: none; /* oculta caret en colapsado */
+}
+
+/* Root container layout to allow sticky bottom menu */
+.nav-root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: #ffffff; /* color de texto por defecto */
+}
+
+.nav-bottom {
+    margin-top: auto;
+    padding: 6px 0 8px 0;
+}
+
+/* Move caret to the far right */
+.company-dropdown .dropdown-toggle::after {
+    margin-left: auto;
+}
+
+/* Marca y botón dentro del top del sidebar */
+.top-row .navbar-brand {
+    color: #e5e7eb;
+}
+
+.top-row .navbar-brand:hover {
+    color: #ffffff;
+}
+
+/* Botón empresa y menú desplegable en tema oscuro */
+.company-dropdown .btn {
+    background-color: rgba(0,0,0,0.12);
+    border-color: rgba(0,0,0,0.15);
+    color: #ffffff;
+}
+
+.company-dropdown .btn:hover {
+    background-color: rgba(0,0,0,0.18);
+    color: #ffffff;
+}
+
+.company-dropdown .dropdown-menu {
+    background-color: #2f6c94;
+    border-color: rgba(0,0,0,0.25);
+}
+
+.company-dropdown .dropdown-item {
+    color: #ffffff;
+}
+
+.company-dropdown .dropdown-item:hover,
+.company-dropdown .dropdown-item:focus {
+    background-color: rgba(0,0,0,0.20);
+    color: #ffffff;
+}
+
+/* Forzar que desaparezcan todos los textos en colapsado */
+.sidebar.collapsed .label { display: none !important; }
+
+/* Al colapsar, ocultar la marca Emplyx del encabezado del sidebar */
+.sidebar.collapsed .navbar-brand { display: none !important; }
+
+/* Extra icons for new entries */
+.bi-columns-gap::before { content: "\f3e8"; }
+.bi-gear::before { content: "\f3e5"; }
+.bi-building::before { content: "\f1ad"; }
+
+.sidebar.collapsed .label { display: none !important; }
+

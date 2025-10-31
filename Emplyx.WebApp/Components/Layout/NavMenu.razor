@@ -1,54 +1,77 @@
-<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">Emplyx</a>
+<div class="nav-root d-flex flex-column @(SidebarCollapsed ? "collapsed" : "expanded")">
+  <div class="top-row navbar navbar-dark px-2">
+    <a class="nav-link nav-link-icon" role="button" title="Menú" aria-label="Menú"
+       data-bs-toggle="collapse" data-bs-target=".sidebar-collapse"
+       aria-expanded="@(SidebarCollapsed ? "false" : "true")"
+       @onclick="OnToggleSidebarCallback">
+      <span class="menu-icon bi bi-list" aria-hidden="true"></span>
+      <span class="menu-label sidebar-collapse collapse collapse-horizontal @(SidebarCollapsed ? string.Empty : "show")">Menú</span>
+    </a>
+  </div>
+
+  <div class="px-2">
+    <div class="dropdown company-dropdown @(companyDropdownVisible ? "show" : string.Empty)">
+      <button class="w-100 d-flex align-items-center dropdown-toggle sidebar-link" type="button"
+              @onclick="ToggleCompanyDropdown" title="@selectedCompany">
+        <span class="menu-icon bi bi-house" aria-hidden="true"></span>
+        <span class="menu-label sidebar-collapse collapse collapse-horizontal @(SidebarCollapsed ? string.Empty : "show")">@selectedCompany</span>
+      </button>
+      <ul class="dropdown-menu @(companyDropdownVisible ? "show" : string.Empty)">
+        <li><a class="dropdown-item" @onclick='@(() => SelectCompany("Empresa 1"))'><span class="bi bi-house me-2" aria-hidden="true"></span> Empresa 1</a></li>
+        <li><a class="dropdown-item" @onclick='@(() => SelectCompany("Empresa 2"))'><span class="bi bi-house me-2" aria-hidden="true"></span> Empresa 2</a></li>
+      </ul>
     </div>
-</div>
+  </div>
 
-<input type="checkbox" title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu" />
+  <hr class="my-2 sidebar-collapse collapse collapse-horizontal @(SidebarCollapsed ? string.Empty : "show")" />
 
-<div class="nav-scrollable" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" @onclick="ToggleCompanyDropdown">
-                    @selectedCompany
-                </button>
-                <div class="dropdown-menu @(companyDropdownVisible ? "show" : "")">
-                    <a class="dropdown-item" @onclick='@(() => SelectCompany("Empresa 1"))'>Empresa 1</a>
-                    <a class="dropdown-item" @onclick='@(() => SelectCompany("Empresa 2"))'>Empresa 2</a>
-                </div>
-            </div>
-        </div>
+  <ul class="nav nav-pills flex-column mb-auto px-2">
+    <li class="nav-item">
+      <NavLink class="nav-link d-flex align-items-center gap-2" href="" Match="NavLinkMatch.All" title="Home" data-bs-toggle="tooltip" data-bs-placement="right">
+        <span class="menu-icon bi bi-house-door" aria-hidden="true"></span>
+        <span class="menu-label sidebar-collapse collapse collapse-horizontal @(SidebarCollapsed ? string.Empty : "show")">Home</span>
+      </NavLink>
+    </li>
+    <li>
+      <NavLink class="nav-link d-flex align-items-center gap-2" href="counter" title="Counter" data-bs-toggle="tooltip" data-bs-placement="right">
+        <span class="menu-icon bi bi-plus-square" aria-hidden="true"></span>
+        <span class="menu-label sidebar-collapse collapse collapse-horizontal @(SidebarCollapsed ? string.Empty : "show")">Counter</span>
+      </NavLink>
+    </li>
+    <li>
+      <NavLink class="nav-link d-flex align-items-center gap-2" href="weather" title="Weather" data-bs-toggle="tooltip" data-bs-placement="right">
+        <span class="menu-icon bi bi-list-nested" aria-hidden="true"></span>
+        <span class="menu-label sidebar-collapse collapse collapse-horizontal @(SidebarCollapsed ? string.Empty : "show")">Weather</span>
+      </NavLink>
+    </li>
+  </ul>
 
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
-        </div>
-    </nav>
+  <div class="mt-auto px-2">
+    <ul class="nav nav-pills flex-column">
+      <li>
+        <NavLink class="nav-link d-flex align-items-center gap-2" href="plataforma" title="Plataforma" data-bs-toggle="tooltip" data-bs-placement="right">
+          <span class="menu-icon bi bi-columns-gap" aria-hidden="true"></span>
+          <span class="menu-label sidebar-collapse collapse collapse-horizontal @(SidebarCollapsed ? string.Empty : "show")">Plataforma</span>
+        </NavLink>
+      </li>
+      <li>
+        <NavLink class="nav-link d-flex align-items-center gap-2" href="configuracion" title="Configuración" data-bs-toggle="tooltip" data-bs-placement="right">
+          <span class="menu-icon bi bi-gear" aria-hidden="true"></span>
+          <span class="menu-label sidebar-collapse collapse collapse-horizontal @(SidebarCollapsed ? string.Empty : "show")">Configuración</span>
+        </NavLink>
+      </li>
+    </ul>
+  </div>
 </div>
 
 @code {
-    private bool navMenuOpened = false;
-    private bool companyDropdownVisible = false;
-    private string selectedCompany = "Empresa 1";
+    [Parameter] public EventCallback OnToggleSidebar { get; set; }
+    [Parameter] public bool SidebarCollapsed { get; set; }
 
-    private void ToggleNavMenu()
-    {
-        navMenuOpened = !navMenuOpened;
-    }
+    private bool companyDropdownVisible = false;
+    private string selectedCompany = "Empresa 2";
+
+    private Task OnToggleSidebarCallback() => OnToggleSidebar.HasDelegate ? OnToggleSidebar.InvokeAsync() : Task.CompletedTask;
 
     private void ToggleCompanyDropdown()
     {
