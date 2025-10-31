@@ -1,7 +1,7 @@
 .page {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 main {
@@ -9,13 +9,13 @@ main {
 }
 
 .sidebar {
-    background-color: #001F3F;
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
 }
 
 .top-row {
-    background-color: #007BFF;
-    border-bottom: 1px solid #0056b3;
-    justify-content: space-between;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
     height: 3.5rem;
     display: flex;
     align-items: center;
@@ -25,7 +25,6 @@ main {
         white-space: nowrap;
         margin-left: 1.5rem;
         text-decoration: none;
-        color: white;
     }
 
     .top-row ::deep a:hover, .top-row ::deep .btn-link:hover {
@@ -57,7 +56,6 @@ main {
         height: 100vh;
         position: sticky;
         top: 0;
-        transition: width 0.2s ease-in-out;
     }
 
     .top-row {
@@ -66,24 +64,19 @@ main {
         z-index: 1;
     }
 
-    .top-row.auth ::deep a:first-child {
-        flex: 1;
-        text-align: right;
-        width: 0;
+    .top-row.auth {
+        justify-content: space-between;
     }
 
-    .top-row, article {
-        padding-left: 2rem !important;
-        padding-right: 1.5rem !important;
+    .top-row {
+        justify-content: flex-end;
     }
 }
 
 #blazor-error-ui {
-    color-scheme: light only;
     background: lightyellow;
     bottom: 0;
     box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
     display: none;
     left: 0;
     padding: 0.6rem 1.25rem 0.7rem 1.25rem;
@@ -98,44 +91,3 @@ main {
         right: 0.75rem;
         top: 0.5rem;
     }
-
-.sidebar.collapsed {
-    width: 60px;
-}
-
-.sidebar.collapsed ::deep .nav-scrollable {
-    overflow: visible;
-}
-
-.sidebar.collapsed ::deep .nav-item {
-    padding: 0;
-}
-
-.sidebar.collapsed ::deep .nav-item a {
-    justify-content: center;
-}
-
-.sidebar.collapsed ::deep .navbar-brand {
-    display: none;
-}
-
-.navbar-toggler {
-    cursor: pointer;
-    width: 3.5rem;
-    height: 2.5rem;
-    background: none;
-    border: none;
-    color: white;
-    padding: 0;
-}
-
-.navbar-toggler-icon {
-    display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
-    vertical-align: middle;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-}

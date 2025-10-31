@@ -1,11 +1,63 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">Emplyx.WebApp</a>
+        <a class="navbar-brand" href="">Emplyx</a>
     </div>
 </div>
 
-<div class="nav-scrollable">
-    <nav class="nav flex-column">
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu" />
+
+<div class="nav-scrollable" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" @onclick="ToggleCompanyDropdown">
+                    @selectedCompany
+                </button>
+                <div class="dropdown-menu @(companyDropdownVisible ? "show" : "")">
+                    <a class="dropdown-item" @onclick='@(() => SelectCompany("Empresa 1"))'>Empresa 1</a>
+                    <a class="dropdown-item" @onclick='@(() => SelectCompany("Empresa 2"))'>Empresa 2</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="counter">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="weather">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
+            </NavLink>
+        </div>
     </nav>
 </div>
 
+@code {
+    private bool navMenuOpened = false;
+    private bool companyDropdownVisible = false;
+    private string selectedCompany = "Empresa 1";
+
+    private void ToggleNavMenu()
+    {
+        navMenuOpened = !navMenuOpened;
+    }
+
+    private void ToggleCompanyDropdown()
+    {
+        companyDropdownVisible = !companyDropdownVisible;
+    }
+
+    private void SelectCompany(string company)
+    {
+        selectedCompany = company;
+        companyDropdownVisible = false;
+    }
+}
