@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Emplyx.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f82766eedb9642a7927f9343849d51072ab16e1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d925b53261942293eae7a204d2e4c64c86f4c8e4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Emplyx.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Emplyx.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
