@@ -1,0 +1,101 @@
+*** Update File: Emplyx.Infrastructure/Persistence/Seed/SeedData.cs
+@@
+-        modelBuilder.Entity<Clearance>().HasData(
+-            new
+-            {
+-                Id = ClearancePublicaId,
+-                Nombre = "P�blico",
+-                Nivel = 1,
+-                Descripcion = "Acceso general sin restricciones.",
+-                IsActive = true,
+-                CreatedAtUtc = SeedTimestamp,
+-                UpdatedAtUtc = SeedTimestamp
+-            },
+-            new
+-            {
+-                Id = ClearanceInternaId,
+-                Nombre = "Interno",
+-                Nivel = 2,
+-                Descripcion = "Acceso para personal interno y socios de confianza.",
+-                IsActive = true,
+-                CreatedAtUtc = SeedTimestamp,
+-                UpdatedAtUtc = SeedTimestamp
+-            },
+-            new
+-            {
+-                Id = ClearanceRestringidaId,
+-                Nombre = "Restringido",
+-                Nivel = 3,
+-                Descripcion = "Acceso reservado a datos confidenciales y cr�ticos.",
+-                IsActive = true,
+-                CreatedAtUtc = SeedTimestamp,
+-                UpdatedAtUtc = SeedTimestamp
+-            });
+-
+-        modelBuilder.Entity<Licencia>().HasData(
++        modelBuilder.Entity<Clearance>().HasData(
++            new
++            {
++                Id = ClearancePublicaId,
++                Nombre = "Publico",
++                Nivel = 1,
++                Descripcion = "Acceso general sin restricciones.",
++                IsActive = true,
++                CreatedAtUtc = SeedTimestamp,
++                UpdatedAtUtc = SeedTimestamp
++            },
++            new
++            {
++                Id = ClearanceInternaId,
++                Nombre = "Interno",
++                Nivel = 2,
++                Descripcion = "Acceso para personal interno y socios de confianza.",
++                IsActive = true,
++                CreatedAtUtc = SeedTimestamp,
++                UpdatedAtUtc = SeedTimestamp
++            },
++            new
++            {
++                Id = ClearanceRestringidaId,
++                Nombre = "Restringido",
++                Nivel = 3,
++                Descripcion = "Acceso reservado a datos confidenciales y criticos.",
++                IsActive = true,
++                CreatedAtUtc = SeedTimestamp,
++                UpdatedAtUtc = SeedTimestamp
++            });
++
++        modelBuilder.Entity<Modulo>().HasData(
++            new
++            {
++                Id = ModuloSeguridadId,
++                Codigo = "SEGURIDAD",
++                Nombre = "Seguridad",
++                Descripcion = "Gestion de usuarios, roles y permisos.",
++                EsCritico = true,
++                CreatedAtUtc = SeedTimestamp,
++                UpdatedAtUtc = SeedTimestamp
++            },
++            new
++            {
++                Id = ModuloOperacionesId,
++                Codigo = "OPERACIONES",
++                Nombre = "Operaciones",
++                Descripcion = "Operativa diaria y contextos de trabajo.",
++                EsCritico = true,
++                CreatedAtUtc = SeedTimestamp,
++                UpdatedAtUtc = SeedTimestamp
++            },
++            new
++            {
++                Id = ModuloLicenciamientoId,
++                Codigo = "LICENCIAS",
++                Nombre = "Licenciamiento",
++                Descripcion = "Administracion de licencias y modulos contratados.",
++                EsCritico = false,
++                CreatedAtUtc = SeedTimestamp,
++                UpdatedAtUtc = SeedTimestamp
++            });
++
++        modelBuilder.Entity<Licencia>().HasData(
+*** End Patch
