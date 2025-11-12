@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "resourceGroupName": {
+      "value": "emplyx"
+    },
+    "location": {
+      "value": "westeurope"
+    },
+    "environment": {
+      "value": "dev"
+    },
+    "sqlAdministratorLogin": {
+      "value": "emplyxadmin"
+    },
+    "sqlAdministratorPassword": {
+      "value": "REPLACE_WITH_STRONG_PASSWORD"
+    },
+    "appServicePlanSku": {
+      "value": "P1v3"
+    },
+    "sqlSkuName": {
+      "value": "S2"
+    },
+    "cosmosAutoscaleMaxThroughput": {
+      "value": 4000
+    },
+    "b2cTenant": {
+      "value": "changeme.onmicrosoft.com"
+    },
+    "b2cClientId": {
+      "value": "00000000-0000-0000-0000-000000000000"
+    },
+    "b2cClientSecret": {
+      "value": "REPLACE_WITH_B2C_SECRET"
+    },
+    "cegidIdAuthority": {
+      "value": "https://login.cegidid.com"
+    }
+  }
+}

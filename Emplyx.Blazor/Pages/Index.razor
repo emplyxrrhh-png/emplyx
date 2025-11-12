@@ -1,0 +1,117 @@
+@page "/"
+
+<PageTitle>Emplyx UI</PageTitle>
+
+<h1>Emplyx UI · Iteracion 0</h1>
+<p>
+    Esta vista resume los pilares iniciales de la migracion descrita en <code>docs/Migracion Emplyx 4.0.md</code>.
+    Avanzamos sobre la infraestructura, el tema visual y la definicion de adaptadores antes de abordar pantallas.
+</p>
+
+<div class="dashboard-grid">
+    <section class="dashboard-card">
+        <h3>Fundacion UI (P0)</h3>
+        <ul>
+            <li>Emplyx.Blazor listo con Bootstrap 5 + Icons.</li>
+            <li>Layout base (topbar + sidebar + breadcrumbs).</li>
+            <li>ContextService multi-tenant expuesto por DI.</li>
+        </ul>
+    </section>
+    <section class="dashboard-card">
+        <h3>Adaptadores (P0)</h3>
+        <ul>
+            <li>ApiAdapterClient con envelope {ok,data,meta,error}.</li>
+            <li>Headers multi-tenant automáticos (tenant/company/unit/culture/timezone).</li>
+            <li>Configuracion via <code>ApiAdapter</code> en appsettings.</li>
+        </ul>
+    </section>
+    <section class="dashboard-card">
+        <h3>Backlog inmediato</h3>
+        <ul>
+            <li>Seleccion de DataGrid (BlazorBootstrap vs Blazorise).</li>
+            <li>Componentes AppMessageBox/AppToast unificados.</li>
+            <li>Mapeo de Employees y Access para primer sprint.</li>
+        </ul>
+    </section>
+</div>
+
+<div class="mt-4">
+    <AppDataGrid TItem="SampleEmployeeRow"
+                 Title="Prioridad - Employees"
+                 SubTitle="Datos simulados con AppDataGrid server-ready"
+                 OnRead="LoadEmployees"
+                 PageSize="4"
+                 EnableSearch="true">
+        <HeaderTemplate Context="sort">
+            <tr>
+                <th>
+                    <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(SampleEmployeeRow.Name))">
+                        Nombre @SortIcon(sort, nameof(SampleEmployeeRow.Name))
+                    </button>
+                </th>
+                <th>
+                    <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(SampleEmployeeRow.Module))">
+                        Modulo @SortIcon(sort, nameof(SampleEmployeeRow.Module))
+                    </button>
+                </th>
+                <th>
+                    <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(SampleEmployeeRow.Status))">
+                        Estado @SortIcon(sort, nameof(SampleEmployeeRow.Status))
+                    </button>
+                </th>
+                <th>Rol</th>
+            </tr>
+        </HeaderTemplate>
+        <RowTemplate Context="row">
+            <td>@row.Name</td>
+            <td>@row.Module</td>
+            <td><span class="badge bg-secondary">@row.Status</span></td>
+            <td>@row.Role</td>
+        </RowTemplate>
+    </AppDataGrid>
+</div>
+
+<div class="mt-3 d-flex gap-2 flex-wrap">
+    <button class="btn btn-primary" @onclick="ShowConfirm">
+        Probar ConfirmDialog
+    </button>
+    <button class="btn btn-outline-primary" @onclick="ShowToast">
+        Probar Toast
+    </button>
+</div>
+
+@code {
+    [Inject] private AppUiMessagingService MessagingService { get; set; } = default!;
+    [Inject] private SampleEmployeesDataService EmployeesData { get; set; } = default!;
+
+    private async Task ShowConfirm()
+    {
+        await MessagingService.ShowConfirmationAsync(
+            "Confirmar accion",
+            "Este es un ejemplo de AppMessageBox/ConfirmDialog. ¿Continuar?",
+            "Si, continuar",
+            "Cancelar");
+    }
+
+    private void ShowToast()
+    {
+        MessagingService.ShowToast(new AppToastOptions(
+            "Toast de ejemplo",
+            "Esta notificacion demuestra AppToast reutilizable.",
+            UiNotificationLevel.Success));
+    }
+
+    private Task<DataGridResult<SampleEmployeeRow>> LoadEmployees(DataGridCriteria criteria) =>
+        EmployeesData.GetEmployeesAsync(criteria);
+
+    private static MarkupString SortIcon(DataGridSortState sort, string field)
+    {
+        if (sort.Field != field)
+        {
+            return new MarkupString(string.Empty);
+        }
+
+        var icon = sort.Descending ? "bi-caret-down-fill" : "bi-caret-up-fill";
+        return new MarkupString($"<i class=\"bi {icon} ms-1\"></i>");
+    }
+}

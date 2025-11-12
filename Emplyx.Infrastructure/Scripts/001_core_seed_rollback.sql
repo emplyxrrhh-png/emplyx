@@ -1,4 +1,4 @@
--- Rollback para el seed CoreAuthorizationSeed versión 1
+-- Rollback para el seed CoreAuthorizationSeed version 1
 SET XACT_ABORT ON;
 BEGIN TRANSACTION;
 
@@ -20,12 +20,6 @@ BEGIN
         'a43b4a24-9d24-4c51-94f0-d5e8b9d7eaf4',
         'a9d6d2dc-136f-42e4-9b77-75568128ed5f');
 
-    DELETE FROM [Roles]
-    WHERE [Id] IN (
-        '3fbdede0-0773-4cb6-9881-9350d0f4955e',
-        'a43b4a24-9d24-4c51-94f0-d5e8b9d7eaf4',
-        'a9d6d2dc-136f-42e4-9b77-75568128ed5f');
-
     DELETE FROM [Permisos]
     WHERE [Id] IN (
         'f1d2c6fe-39f8-4832-9e2d-468f4bea7c31',
@@ -34,6 +28,15 @@ BEGIN
         'd854df08-26d2-4af7-98d3-49816d23c01f',
         'dc6c8079-0af4-4a35-86d6-c9f6a4541bc9',
         'c5e0a3ea-4fe8-4f8c-a2a0-3cfc4fb28eb1');
+
+    DELETE FROM [Roles]
+    WHERE [Id] IN (
+        '3fbdede0-0773-4cb6-9881-9350d0f4955e',
+        'a43b4a24-9d24-4c51-94f0-d5e8b9d7eaf4',
+        'a9d6d2dc-136f-42e4-9b77-75568128ed5f');
+
+    DELETE FROM [ContextoModulos]
+    WHERE [ContextoId] = 'caa6d616-f237-4d2b-a3f1-bf54cd508c35';
 
     DELETE FROM [Contextos]
     WHERE [Id] = 'caa6d616-f237-4d2b-a3f1-bf54cd508c35';
@@ -44,8 +47,17 @@ BEGIN
         'e4d8d94a-9084-46c3-99c1-1b4ef76e6a19',
         '8f9033a5-436b-4e1f-9d05-21c27c6c3bf2');
 
+    DELETE FROM [LicenciaModulos]
+    WHERE [LicenciaId] = 'b7d6c9b1-08a1-4c9a-8ba7-824b6e7f8c29';
+
     DELETE FROM [Licencias]
     WHERE [Id] = 'b7d6c9b1-08a1-4c9a-8ba7-824b6e7f8c29';
+
+    DELETE FROM [Modulos]
+    WHERE [Id] IN (
+        '6f09c219-4c23-4c89-bf13-4f08bc3d24a0',
+        'ab42ec2a-6e5b-4d81-9edc-0c5acb4fd4f5',
+        '3a6f9950-9e50-4a22-b417-7fb7a57de5fe');
 
     DELETE FROM [Clearances]
     WHERE [Id] IN (

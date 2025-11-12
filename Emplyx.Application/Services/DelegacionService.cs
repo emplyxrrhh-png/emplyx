@@ -85,7 +85,7 @@ internal sealed class DelegacionService : IDelegacionService
 
     private async Task SyncRolesAsync(Delegacion delegacion, IEnumerable<Guid> roles, CancellationToken cancellationToken)
     {
-        var desired = roles.Distinct().ToHashSet();
+        var desired = (roles ?? Array.Empty<Guid>()).Distinct().ToHashSet();
         var current = delegacion.Roles.Select(r => r.RolId).ToHashSet();
 
         foreach (var toRemove in current.Except(desired).ToArray())

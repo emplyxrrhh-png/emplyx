@@ -1,0 +1,59 @@
+@inherits LayoutComponentBase
+@inject Emplyx.Blazor.Services.TenantContextState TenantContextState
+
+<PageTitle>Emplyx UI</PageTitle>
+
+<div class="app-shell">
+    <header class="app-shell__topbar">
+        <div class="tenant-bar">
+            <span class="tenant-bar__title">@TenantContextState.Current.TenantId</span>
+            <span class="tenant-bar__meta">@GetContextLabel()</span>
+        </div>
+        <div class="topbar-actions">
+            <button class="btn btn-sm btn-light" @onclick="OpenFeedback">
+                <i class="bi bi-chat-dots"></i> Feedback
+            </button>
+            <button class="btn btn-sm btn-outline-light" @onclick="RefreshContext">
+                <i class="bi bi-arrow-repeat"></i> Sincronizar
+            </button>
+        </div>
+    </header>
+
+    <div class="app-shell__body">
+        <aside class="app-shell__sidebar">
+            <NavMenu />
+        </aside>
+        <section class="app-shell__content">
+            <div class="breadcrumbs">Contexto · @TenantContextState.Current.Culture · @TenantContextState.Current.TimeZone</div>
+            <div class="app-shell__content-card">
+                @Body
+            </div>
+        </section>
+    </div>
+</div>
+
+<AppUiMessagingHost />
+
+@code {
+    private string GetContextLabel()
+    {
+        var context = TenantContextState.Current;
+        var segments = new List<string?> { context.CompanyId, context.UnitId }
+            .Where(s => !string.IsNullOrWhiteSpace(s));
+        return string.Join(" · ", segments.DefaultIfEmpty("Sin compania"));
+    }
+
+    private Task OpenFeedback()
+    {
+        // TODO: conectar con AppMessageBox / System.Notifications
+        Console.WriteLine("Feedback button clicked");
+        return Task.CompletedTask;
+    }
+
+    private async Task RefreshContext()
+    {
+        var current = TenantContextState.Current;
+        var refreshed = current with { TimeZone = TimeZoneInfo.Local.Id };
+        await TenantContextState.SetAsync(refreshed);
+    }
+}

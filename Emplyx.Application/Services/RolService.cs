@@ -82,7 +82,7 @@ internal sealed class RolService : IRolService
 
     private async Task AttachPermisosAsync(Rol rol, IEnumerable<Guid> permisos, CancellationToken cancellationToken)
     {
-        foreach (var permisoId in permisos.Distinct())
+        foreach (var permisoId in (permisos ?? Array.Empty<Guid>()).Distinct())
         {
             var permiso = await _permisoRepository.GetByIdAsync(permisoId, cancellationToken);
             if (permiso is null)
@@ -96,7 +96,7 @@ internal sealed class RolService : IRolService
 
     private async Task SyncPermisosAsync(Rol rol, IEnumerable<Guid> permisos, CancellationToken cancellationToken)
     {
-        var desired = permisos.Distinct().ToHashSet();
+        var desired = (permisos ?? Array.Empty<Guid>()).Distinct().ToHashSet();
         var current = rol.Permisos.Select(p => p.PermisoId).ToHashSet();
 
         foreach (var toRemove in current.Except(desired).ToArray())

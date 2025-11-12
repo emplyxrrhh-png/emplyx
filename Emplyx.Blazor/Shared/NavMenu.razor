@@ -1,0 +1,34 @@
+<nav>
+    <ul class="nav-menu">
+        @foreach (var item in _items)
+        {
+            <li>
+                <NavLink class="nav-link" href="@item.Href" Match="item.Match">
+                    <i class="bi @item.Icon"></i>
+                    <span>@item.Label</span>
+                    @if (!string.IsNullOrWhiteSpace(item.Badge))
+                    {
+                        <span class="badge bg-primary">@item.Badge</span>
+                    }
+                </NavLink>
+            </li>
+        }
+    </ul>
+</nav>
+
+@code {
+    private readonly IReadOnlyList<NavItem> _items = new List<NavItem>
+    {
+        new("/", "bi-grid", "Panel", NavLinkMatch.All),
+        new("/employees", "bi-people", "Employees"),
+        new("/access", "bi-shield-lock", "Access"),
+        new("/scheduler", "bi-calendar3", "Scheduler"),
+        new("/alerts", "bi-bell", "Alerts"),
+        new("/security", "bi-key", "Security"),
+        new("/terminals", "bi-hdd-network", "Terminals"),
+        new("/tasks", "bi-check2-square", "Tasks"),
+        new("/documents", "bi-files", "Documents")
+    };
+
+    private sealed record NavItem(string Href, string Icon, string Label, NavLinkMatch Match = NavLinkMatch.Prefix, string? Badge = null);
+}

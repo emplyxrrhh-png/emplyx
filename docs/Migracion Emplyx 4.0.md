@@ -1,0 +1,2 @@
+- AppUiMessaging (MessageBox/ConfirmDialog/Toast) y AppDataGrid (base server-ready) agregados como componentes reutilizables en `Emplyx.Blazor`.
+- AppDataGrid ahora soporta sort/busqueda server-side mediante `SampleEmployeesDataService` (OnRead con `DataGridCriteria`/`DataGridResult`).

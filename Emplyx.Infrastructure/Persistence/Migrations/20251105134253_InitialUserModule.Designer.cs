@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Emplyx.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(EmplyxDbContext))]
-    [Migration("20251105082608_InitialAuthorizationModel")]
-    partial class InitialAuthorizationModel
+    [Migration("20251105134253_InitialUserModule")]
+    partial class InitialUserModule
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -69,7 +69,7 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                             Descripcion = "Acceso general sin restricciones.",
                             IsActive = true,
                             Nivel = 1,
-                            Nombre = "Público",
+                            Nombre = "Publico",
                             UpdatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
                         },
                         new
@@ -86,7 +86,7 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                         {
                             Id = new Guid("5d7a9d25-c4b2-4b93-93c6-a39c47da1f40"),
                             CreatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Descripcion = "Acceso reservado a datos confidenciales y críticos.",
+                            Descripcion = "Acceso reservado a datos confidenciales y criticos.",
                             IsActive = true,
                             Nivel = 3,
                             Nombre = "Restringido",
@@ -163,6 +163,47 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Emplyx.Domain.Entities.Contextos.ContextoModulo", b =>
+                {
+                    b.Property<Guid>("ContextoId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ModuloId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("HabilitadoDesdeUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("HabilitadoHastaUtc")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("ContextoId", "ModuloId");
+
+                    b.HasIndex("ModuloId");
+
+                    b.ToTable("ContextoModulos", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            ContextoId = new Guid("caa6d616-f237-4d2b-a3f1-bf54cd508c35"),
+                            ModuloId = new Guid("6f09c219-4c23-4c89-bf13-4f08bc3d24a0"),
+                            HabilitadoDesdeUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            ContextoId = new Guid("caa6d616-f237-4d2b-a3f1-bf54cd508c35"),
+                            ModuloId = new Guid("ab42ec2a-6e5b-4d81-9edc-0c5acb4fd4f5"),
+                            HabilitadoDesdeUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            ContextoId = new Guid("caa6d616-f237-4d2b-a3f1-bf54cd508c35"),
+                            ModuloId = new Guid("3a6f9950-9e50-4a22-b417-7fb7a57de5fe"),
+                            HabilitadoDesdeUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        });
+                });
+
             modelBuilder.Entity("Emplyx.Domain.Entities.Delegaciones.Delegacion", b =>
                 {
                     b.Property<Guid>("Id")
@@ -214,7 +255,7 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                             CreatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Descripcion = "Sede central corporativa.",
                             IsActive = true,
-                            Nombre = "Delegación Central",
+                            Nombre = "Delegacion Central",
                             UpdatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
                         },
                         new
@@ -224,7 +265,7 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                             CreatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Descripcion = "Operaciones regionales zona norte.",
                             IsActive = true,
-                            Nombre = "Delegación Regional Norte",
+                            Nombre = "Delegacion Regional Norte",
                             ParentId = new Guid("8f9033a5-436b-4e1f-9d05-21c27c6c3bf2"),
                             UpdatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
                         },
@@ -235,7 +276,7 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                             CreatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Descripcion = "Operaciones regionales zona sur.",
                             IsActive = true,
-                            Nombre = "Delegación Regional Sur",
+                            Nombre = "Delegacion Regional Sur",
                             ParentId = new Guid("8f9033a5-436b-4e1f-9d05-21c27c6c3bf2"),
                             UpdatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
                         });
@@ -303,6 +344,75 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Emplyx.Domain.Entities.DelegacionesTemporales.DelegacionTemporal", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("AplicaTodosLosRoles")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("AprobadaMfa")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<DateTime>("CreatedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("DelegadoId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("DeleganteId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Estado")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("ExpiradaUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("FinUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("InicioUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("MetodoMfa")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime?>("RevocadaUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("UpdatedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DelegadoId", "Estado");
+
+                    b.HasIndex("DeleganteId", "Estado");
+
+                    b.ToTable("DelegacionesTemporales", (string)null);
+                });
+
+            modelBuilder.Entity("Emplyx.Domain.Entities.DelegacionesTemporales.DelegacionTemporalRol", b =>
+                {
+                    b.Property<Guid>("DelegacionTemporalId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("RolId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("DelegacionTemporalId", "RolId");
+
+                    b.HasIndex("RolId");
+
+                    b.ToTable("DelegacionTemporalRoles", (string)null);
+                });
+
             modelBuilder.Entity("Emplyx.Domain.Entities.Licencias.Licencia", b =>
                 {
                     b.Property<Guid>("Id")
@@ -367,6 +477,115 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Emplyx.Domain.Entities.Licencias.LicenciaModulo", b =>
+                {
+                    b.Property<Guid>("LicenciaId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ModuloId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("LinkedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("LicenciaId", "ModuloId");
+
+                    b.HasIndex("ModuloId");
+
+                    b.ToTable("LicenciaModulos", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            LicenciaId = new Guid("b7d6c9b1-08a1-4c9a-8ba7-824b6e7f8c29"),
+                            ModuloId = new Guid("6f09c219-4c23-4c89-bf13-4f08bc3d24a0"),
+                            LinkedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            LicenciaId = new Guid("b7d6c9b1-08a1-4c9a-8ba7-824b6e7f8c29"),
+                            ModuloId = new Guid("ab42ec2a-6e5b-4d81-9edc-0c5acb4fd4f5"),
+                            LinkedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            LicenciaId = new Guid("b7d6c9b1-08a1-4c9a-8ba7-824b6e7f8c29"),
+                            ModuloId = new Guid("3a6f9950-9e50-4a22-b417-7fb7a57de5fe"),
+                            LinkedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        });
+                });
+
+            modelBuilder.Entity("Emplyx.Domain.Entities.Modulos.Modulo", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Codigo")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime>("CreatedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Descripcion")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<bool>("EsCritico")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime>("UpdatedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Codigo")
+                        .IsUnique();
+
+                    b.ToTable("Modulos", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("6f09c219-4c23-4c89-bf13-4f08bc3d24a0"),
+                            Codigo = "SEGURIDAD",
+                            CreatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Descripcion = "Gestion de usuarios, roles y permisos.",
+                            EsCritico = true,
+                            Nombre = "Seguridad",
+                            UpdatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = new Guid("ab42ec2a-6e5b-4d81-9edc-0c5acb4fd4f5"),
+                            Codigo = "OPERACIONES",
+                            CreatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Descripcion = "Operativa diaria y contextos de trabajo.",
+                            EsCritico = true,
+                            Nombre = "Operaciones",
+                            UpdatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = new Guid("3a6f9950-9e50-4a22-b417-7fb7a57de5fe"),
+                            Codigo = "LICENCIAS",
+                            CreatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Descripcion = "Administracion de licencias y modulos contratados.",
+                            EsCritico = false,
+                            Nombre = "Licenciamiento",
+                            UpdatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        });
+                });
+
             modelBuilder.Entity("Emplyx.Domain.Entities.Permisos.Permiso", b =>
                 {
                     b.Property<Guid>("Id")
@@ -390,10 +609,8 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                         .HasColumnType("bit")
                         .HasDefaultValue(false);
 
-                    b.Property<string>("Modulo")
-                        .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                    b.Property<Guid>("ModuloId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
@@ -408,7 +625,7 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                     b.HasIndex("Codigo")
                         .IsUnique();
 
-                    b.HasIndex("Modulo");
+                    b.HasIndex("ModuloId");
 
                     b.ToTable("Permisos", (string)null);
 
@@ -420,7 +637,7 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                             Codigo = "SEGURIDAD.USUARIOS.GESTIONAR",
                             CreatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             EsCritico = true,
-                            Modulo = "Seguridad",
+                            ModuloId = new Guid("6f09c219-4c23-4c89-bf13-4f08bc3d24a0"),
                             Nombre = "Gestionar usuarios",
                             UpdatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
                         },
@@ -431,7 +648,7 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                             Codigo = "SEGURIDAD.USUARIOS.VER",
                             CreatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             EsCritico = false,
-                            Modulo = "Seguridad",
+                            ModuloId = new Guid("6f09c219-4c23-4c89-bf13-4f08bc3d24a0"),
                             Nombre = "Ver usuarios",
                             UpdatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
                         },
@@ -442,7 +659,7 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                             Codigo = "SEGURIDAD.ROLES.GESTIONAR",
                             CreatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             EsCritico = true,
-                            Modulo = "Seguridad",
+                            ModuloId = new Guid("6f09c219-4c23-4c89-bf13-4f08bc3d24a0"),
                             Nombre = "Gestionar roles",
                             UpdatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
                         },
@@ -453,7 +670,7 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                             Codigo = "OPERACIONES.CONTEXTOS.GESTIONAR",
                             CreatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             EsCritico = true,
-                            Modulo = "Operaciones",
+                            ModuloId = new Guid("ab42ec2a-6e5b-4d81-9edc-0c5acb4fd4f5"),
                             Nombre = "Gestionar contextos",
                             UpdatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
                         },
@@ -464,7 +681,7 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                             Codigo = "OPERACIONES.CONTEXTOS.VER",
                             CreatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             EsCritico = false,
-                            Modulo = "Operaciones",
+                            ModuloId = new Guid("ab42ec2a-6e5b-4d81-9edc-0c5acb4fd4f5"),
                             Nombre = "Ver contextos",
                             UpdatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
                         },
@@ -472,10 +689,10 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                         {
                             Id = new Guid("c5e0a3ea-4fe8-4f8c-a2a0-3cfc4fb28eb1"),
                             Categoria = "Licencias",
-                            Codigo = "OPERACIONES.LICENCIAS.GESTIONAR",
+                            Codigo = "LICENCIAS.MAESTRO.GESTIONAR",
                             CreatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             EsCritico = true,
-                            Modulo = "Operaciones",
+                            ModuloId = new Guid("3a6f9950-9e50-4a22-b417-7fb7a57de5fe"),
                             Nombre = "Gestionar licencias",
                             UpdatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
                         });
@@ -485,6 +702,9 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("ClearanceId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedAtUtc")
@@ -507,6 +727,8 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ClearanceId");
+
                     b.HasIndex("Nombre")
                         .IsUnique();
 
@@ -516,6 +738,7 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                         new
                         {
                             Id = new Guid("3fbdede0-0773-4cb6-9881-9350d0f4955e"),
+                            ClearanceId = new Guid("5d7a9d25-c4b2-4b93-93c6-a39c47da1f40"),
                             CreatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Descripcion = "Acceso total a la plataforma.",
                             IsSystem = true,
@@ -525,15 +748,17 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                         new
                         {
                             Id = new Guid("a43b4a24-9d24-4c51-94f0-d5e8b9d7eaf4"),
+                            ClearanceId = new Guid("25dfbb4d-8f45-4a54-958f-07daa4619052"),
                             CreatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Descripcion = "Gestiona recursos dentro de su delegación.",
+                            Descripcion = "Gestiona recursos dentro de su delegacion.",
                             IsSystem = false,
-                            Nombre = "Gestor de Delegación",
+                            Nombre = "Gestor de Delegacion",
                             UpdatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
                         },
                         new
                         {
                             Id = new Guid("a9d6d2dc-136f-42e4-9b77-75568128ed5f"),
+                            ClearanceId = new Guid("0ad1bc87-5e61-4258-8f51-2305b7c5401d"),
                             CreatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Descripcion = "Operativa diaria de la plataforma.",
                             IsSystem = false,
@@ -650,6 +875,10 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                         .HasMaxLength(320)
                         .HasColumnType("nvarchar(320)");
 
+                    b.Property<string>("ExternalIdentityId")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
                     b.Property<bool>("IsActive")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
@@ -657,6 +886,16 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
 
                     b.Property<DateTime?>("LastLoginAtUtc")
                         .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("LastPasswordChangeAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PasswordHash")
+                        .HasMaxLength(512)
+                        .HasColumnType("nvarchar(512)");
+
+                    b.Property<Guid?>("PreferredContextoId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("UpdatedAtUtc")
                         .HasColumnType("datetime2");
@@ -704,6 +943,24 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                     b.ToTable("UsuarioContextos", (string)null);
                 });
 
+            modelBuilder.Entity("Emplyx.Domain.Entities.Usuarios.UsuarioLicencia", b =>
+                {
+                    b.Property<Guid>("UsuarioId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("LicenciaId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("AssignedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("UsuarioId", "LicenciaId");
+
+                    b.HasIndex("LicenciaId");
+
+                    b.ToTable("UsuarioLicencias", (string)null);
+                });
+
             modelBuilder.Entity("Emplyx.Domain.Entities.Usuarios.UsuarioRol", b =>
                 {
                     b.Property<Guid>("UsuarioId")
@@ -720,6 +977,43 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                     b.HasIndex("RolId");
 
                     b.ToTable("UsuarioRoles", (string)null);
+                });
+
+            modelBuilder.Entity("Emplyx.Domain.Entities.Usuarios.UsuarioSesion", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("ClosedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("CreatedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Device")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime>("ExpiresAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("IpAddress")
+                        .HasMaxLength(45)
+                        .HasColumnType("nvarchar(45)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("UsuarioId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioId", "IsActive");
+
+                    b.ToTable("UsuarioSesiones", (string)null);
                 });
 
             modelBuilder.Entity("Emplyx.Infrastructure.Persistence.Seed.SeedVersion", b =>
@@ -775,6 +1069,21 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                         .OnDelete(DeleteBehavior.SetNull);
                 });
 
+            modelBuilder.Entity("Emplyx.Domain.Entities.Contextos.ContextoModulo", b =>
+                {
+                    b.HasOne("Emplyx.Domain.Entities.Contextos.Contexto", null)
+                        .WithMany("Modulos")
+                        .HasForeignKey("ContextoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Emplyx.Domain.Entities.Modulos.Modulo", null)
+                        .WithMany()
+                        .HasForeignKey("ModuloId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Emplyx.Domain.Entities.Delegaciones.Delegacion", b =>
                 {
                     b.HasOne("Emplyx.Domain.Entities.Delegaciones.Delegacion", null)
@@ -798,6 +1107,68 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Emplyx.Domain.Entities.DelegacionesTemporales.DelegacionTemporal", b =>
+                {
+                    b.HasOne("Emplyx.Domain.Entities.Usuarios.Usuario", null)
+                        .WithMany()
+                        .HasForeignKey("DelegadoId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Emplyx.Domain.Entities.Usuarios.Usuario", null)
+                        .WithMany()
+                        .HasForeignKey("DeleganteId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Emplyx.Domain.Entities.DelegacionesTemporales.DelegacionTemporalRol", b =>
+                {
+                    b.HasOne("Emplyx.Domain.Entities.DelegacionesTemporales.DelegacionTemporal", null)
+                        .WithMany("Roles")
+                        .HasForeignKey("DelegacionTemporalId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Emplyx.Domain.Entities.Roles.Rol", null)
+                        .WithMany()
+                        .HasForeignKey("RolId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Emplyx.Domain.Entities.Licencias.LicenciaModulo", b =>
+                {
+                    b.HasOne("Emplyx.Domain.Entities.Licencias.Licencia", null)
+                        .WithMany("Modulos")
+                        .HasForeignKey("LicenciaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Emplyx.Domain.Entities.Modulos.Modulo", null)
+                        .WithMany()
+                        .HasForeignKey("ModuloId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Emplyx.Domain.Entities.Permisos.Permiso", b =>
+                {
+                    b.HasOne("Emplyx.Domain.Entities.Modulos.Modulo", null)
+                        .WithMany()
+                        .HasForeignKey("ModuloId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Emplyx.Domain.Entities.Roles.Rol", b =>
+                {
+                    b.HasOne("Emplyx.Domain.Entities.Clearances.Clearance", null)
+                        .WithMany()
+                        .HasForeignKey("ClearanceId")
+                        .OnDelete(DeleteBehavior.SetNull);
+                });
+
             modelBuilder.Entity("Emplyx.Domain.Entities.Roles.RolPermiso", b =>
                 {
                     b.HasOne("Emplyx.Domain.Entities.Permisos.Permiso", null)
@@ -813,6 +1184,50 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Emplyx.Domain.Entities.Usuarios.Usuario", b =>
+                {
+                    b.OwnsOne("Emplyx.Domain.Entities.Usuarios.UsuarioPerfil", "Perfil", b1 =>
+                        {
+                            b1.Property<Guid>("UsuarioId")
+                                .HasColumnType("uniqueidentifier");
+
+                            b1.Property<string>("Apellidos")
+                                .HasMaxLength(200)
+                                .HasColumnType("nvarchar(200)")
+                                .HasColumnName("PerfilApellidos");
+
+                            b1.Property<string>("Cargo")
+                                .HasMaxLength(150)
+                                .HasColumnType("nvarchar(150)")
+                                .HasColumnName("PerfilCargo");
+
+                            b1.Property<string>("Departamento")
+                                .HasMaxLength(150)
+                                .HasColumnType("nvarchar(150)")
+                                .HasColumnName("PerfilDepartamento");
+
+                            b1.Property<string>("Nombres")
+                                .HasMaxLength(200)
+                                .HasColumnType("nvarchar(200)")
+                                .HasColumnName("PerfilNombres");
+
+                            b1.Property<string>("Telefono")
+                                .HasMaxLength(50)
+                                .HasColumnType("nvarchar(50)")
+                                .HasColumnName("PerfilTelefono");
+
+                            b1.HasKey("UsuarioId");
+
+                            b1.ToTable("Usuarios");
+
+                            b1.WithOwner()
+                                .HasForeignKey("UsuarioId");
+                        });
+
+                    b.Navigation("Perfil")
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Emplyx.Domain.Entities.Usuarios.UsuarioContexto", b =>
                 {
                     b.HasOne("Emplyx.Domain.Entities.Contextos.Contexto", null)
@@ -823,6 +1238,21 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
 
                     b.HasOne("Emplyx.Domain.Entities.Usuarios.Usuario", null)
                         .WithMany("Contextos")
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Emplyx.Domain.Entities.Usuarios.UsuarioLicencia", b =>
+                {
+                    b.HasOne("Emplyx.Domain.Entities.Licencias.Licencia", null)
+                        .WithMany()
+                        .HasForeignKey("LicenciaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Emplyx.Domain.Entities.Usuarios.Usuario", null)
+                        .WithMany("Licencias")
                         .HasForeignKey("UsuarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -843,9 +1273,33 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Emplyx.Domain.Entities.Usuarios.UsuarioSesion", b =>
+                {
+                    b.HasOne("Emplyx.Domain.Entities.Usuarios.Usuario", null)
+                        .WithMany("Sesiones")
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Emplyx.Domain.Entities.Contextos.Contexto", b =>
+                {
+                    b.Navigation("Modulos");
+                });
+
             modelBuilder.Entity("Emplyx.Domain.Entities.Delegaciones.Delegacion", b =>
                 {
                     b.Navigation("Roles");
+                });
+
+            modelBuilder.Entity("Emplyx.Domain.Entities.DelegacionesTemporales.DelegacionTemporal", b =>
+                {
+                    b.Navigation("Roles");
+                });
+
+            modelBuilder.Entity("Emplyx.Domain.Entities.Licencias.Licencia", b =>
+                {
+                    b.Navigation("Modulos");
                 });
 
             modelBuilder.Entity("Emplyx.Domain.Entities.Roles.Rol", b =>
@@ -859,7 +1313,11 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                 {
                     b.Navigation("Contextos");
 
+                    b.Navigation("Licencias");
+
                     b.Navigation("Roles");
+
+                    b.Navigation("Sesiones");
                 });
 #pragma warning restore 612, 618
         }

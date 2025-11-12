@@ -9,6 +9,7 @@
       "Emplyx.Application/1.0.0": {
         "dependencies": {
           "Emplyx.Domain": "1.0.0",
+          "Emplyx.Shared": "1.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0"
         },
         "runtime": {
@@ -30,6 +31,14 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "Emplyx.Shared/1.0.0": {
+        "runtime": {
+          "Emplyx.Shared.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -47,6 +56,11 @@
       "hashPath": "microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512"
     },
     "Emplyx.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Emplyx.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

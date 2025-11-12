@@ -19,6 +19,7 @@
 - [13) Checklist de paridad con VT](#13-checklist-de-paridad-con-vt)
 - [14) Preguntas abiertas iniciales](#14-preguntas-abiertas-iniciales)
 - [15) Decisiones confirmadas (30/10/2025)](#15-decisiones-confirmadas-30102025)
+- [16) UI multi-plataforma: contexto activo y delegación](#16-ui-multi-plataforma-contexto-activo-y-delegación)
 
 ---
 
@@ -273,3 +274,132 @@
 - **Migración desde VT:** por API de VT (API base + Token); importación integral.  
 - **Modelo de datos:** **BD única multi‑tenant (shared)** con **RLS** y particionamiento por *tenant + fecha*.  
 - **SSO empresarial:** conexión con **AD/ADFS/Entra ID** incluida en **planes superiores** (SAML/OIDC/OAuth2, MFA, SCIM opcional).
+
+---
+
+## 16) UI multi-plataforma: contexto activo y delegación
+**Objetivo:** disponer de componentes coherentes en Blazor y .NET MAUI que permitan alternar contextos (tenant/corporación/empresa/proyecto) y gestionar delegaciones con MFA, actualizando tokens, vistas y auditoría en tiempo real sin interrumpir la sesión.
+
+### 16.1 Selector de contexto activo
+**Requisitos comunes**
+- Fuente de datos: servicio `IContextDirectoryService` (cacheado por usuario) que expone los contextos habilitados, metadatos visuales (logo, color, slogan) y flags de permisos.  
+- Contexto seleccionado se almacena en `ContextState` (Scoped en Blazor, Singleton Observable en MAUI) con eventos (`ContextChanging`, `ContextChanged`) para refrescar vistas.  
+- Al cambiar, se invoca `ContextSessionService.SwitchAsync(contextId)` → API `POST /api/context/switch` que devuelve token JWT renovado/claims vía SignalR (fallback polling).  
+- Cambio exitoso dispara: refresco de menús, filtros, dashboards, caches por contexto y log `AuditContextChanged`.
+
+#### Blazor (Emplyx.WebApp)
+- Componente `ContextSelector.razor` ubicado en la barra superior; muestra etiqueta/empresa actual, logo miniatura y botón desplegable accesible (`aria-haspopup="listbox"`).  
+- Dropdown con búsqueda incremental, favoritos y agrupaciones (Corporación → Empresa → Proyecto). Opción “Administrar contextos” linkea a pantalla de configuración.  
+- Uso de `HeadlessUI`/componentes propios para soportar teclado (`Alt+K`), lector de pantalla y tema oscuro.  
+- Estado de carga: shimmer + mensaje si no hay contextos habilitados. Errores muestran banner no modal con opción retry.
+
+#### .NET MAUI (Emplyx.App)
+- `ContextPickerView` reutiliza ViewModel compartido (`ContextSelectorViewModel`). Disponible como picker en el `Shell` superior y en Ajustes.  
+- En Windows/macOS: menú contextual en barra superior + `Ctrl+Alt+K`. En iOS/Android: sheet modal deslizable con buscador y badges.  
+- Permite modo offline restringido: si no hay red, se limita a los contextos cacheados y se marca “(sincronizar al reconectar)”.  
+- Animaciones livianas (Entry/Exit) y compatibilidad con lector de pantalla (`SemanticProperties.Description`).
+
+#### Flujo completo
+1. Usuario abre selector → se carga lista (cache + refresh background).  
+2. Selecciona nuevo contexto → UI lanza diálogo de confirmación si el cambio implica pérdida de formularios no guardados.  
+3. `ContextSessionService` envía solicitud, recibe token actualizado y notifica a `AuthStateProvider` (Blazor) o `SecureStorage` (MAUI).  
+4. SignalR `ContextHub` emite evento `ContextChanged` para tabs abiertas; componentes escuchan y rehidratan datos.  
+5. Se registra auditoría con `tenant_from`, `tenant_to`, `device_id`, `mfa_result` (si aplica) y timestamp.  
+6. Registro se envía a Azure Functions (`fn-audit-context`) para persistir y emitir métricas (`ContextSwitchLatency`).
+
+### 16.2 Activación de delegación (MFA + auditoría)
+**Escenarios:** configuración por delegante, activación por delegado y finalización manual/automática, siempre con MFA contextual (Azure AD B2C, OTP vía Azure Function o proveedor externo).
+
+#### Configuración por delegante
+- Accesible desde perfil/ajustes (`/account/delegations`). Tabla con delegaciones activas, programadas y revocadas.  
+- Flujo UI: seleccionar destinatario (picker filtrado por organización), definir rango fechas/horas, seleccionar permisos (roles completos por defecto, granular via toggles) y opcional nota.  
+- Al confirmar, se abre modal MFA (código 2FA, push o WebAuthn). UI muestra contador y reenvío tras 30s.  
+- Exitoso → banner “Delegación activada”, notificación al destinatario (Toast + email/Push). También se ofrece acción rápida para revocar.  
+- Revocación anticipada requiere MFA corta (solo confirmación) y deja registro `AuditDelegationRevoked`.
+
+#### Activación por delegado
+- Aviso persistente (“Tienes una delegación disponible de Juan Pérez”) en el header y en bandeja de notificaciones.  
+- Botón “Actuar como …” abre modal/resumen con alcance, caducidad y auditoría esperada. Se puede rechazar.  
+- MFA opcional configurable por política (recomendado cuando la delegación otorga permisos > propios).  
+- Tras confirmación se solicita token delegado (`POST /api/delegations/activate`), se añade claim `delegator_id` y se cambia el branding a color distintivo + banda superior “Actuando como …”.  
+- Acción “Finalizar delegación” disponible en el banner; al salir se restaura el token original y se refresca el contexto.
+
+#### Estados y mensajes comunes
+- **Indicadores visibles:** icono de identidades superpuestas en el header, tooltip con delegado, contador regresivo de expiración.  
+- **Conflictos:** si existen formularios sin guardar al cambiar de delegación/contexto, se ofrece guardar borrador o cancelar.  
+- **Expiraciones automáticas:** notificación 5 min antes y al expirar, con revalidación forzada de token.  
+- **Errores MFA:** mostrar número de intentos restantes y ruta a soporte sin revelar información sensible.
+
+### 16.3 Integraciones técnicas
+- Servicios compartidos (`Emplyx.Shared`) expondrán `IContextSessionService`, `IDelegationService`, `IMfaChallengeService` y `IAuditClient`.  
+- SignalR Hubs: `ContextHub` (broadcast de cambios de contexto) y `DelegationHub` (activaciones/revocaciones). Ambos autenticados y con reintentos exponenciales.  
+- Compatibilidad con JS interop en Blazor para integración con portales externos (ej. abrir selector desde shell corporativo).  
+- MAUI usa `MessagingCenter`/`WeakReferenceMessenger` para notificar a páginas abiertas y `SecureStorage` para tokens (con `Platform-protected storage` en iOS/Android).  
+- Telemetría: eventos `ContextSwitchRequested`, `ContextSwitchCompleted`, `DelegationActivated`, `DelegationRejected`, `DelegationEnded` con atributos (tenant, roles, MFA type, latency).
+
+### 16.4 Auditoría y cumplimiento
+- Todas las operaciones generan entrada estructurada (`category=context|delegation`, `actor`, `acted_as`, `mfa`, `device`, `ip`, `correlation_id`).  
+- Azure Function `fn-audit-context` y `fn-audit-delegation` persisten en Cosmos DB/Log Analytics y publican eventos para BI.  
+- Registro de delegación incluye vínculo al MFA (ID de desafío) para trazabilidad y evidencia ante auditorías.  
+- Políticas de retención alineadas con sección 2 (cumplimiento) y exportables por tenant.  
+- Dashboards de administración muestran historial + filtros por usuario, contexto, resultado MFA y dispositivo.
+
+---
+
+## 17) Gestión de usuarios, roles y permisos en caliente
+**Objetivo:** proveer una consola de administración segura (solo rol `Administrador` o equivalentes con `SEGURIDAD.USUARIOS.GESTIONAR`) que permita crear/editar usuarios, asignar roles/permisos y forzar la actualización inmediata de sesiones en Blazor y .NET MAUI sin pedir un re-login manual.
+
+### 17.1 Alcance, actores y servicios base
+- **Servicios/contratos:** `IUsuarioService`, `IRolService`, `IPermisoService`, `ILicenciaService` y `IAuditoriaService` exponen CRUD + búsqueda (`SearchUsuariosRequest`, `UpsertRolRequest`, etc.).  
+- **Datasets cacheables:** catálogos de roles, permisos y contextos se sirven vía `SecurityDirectoryCache` (per-user, 5 min) para minimizar round-trips en filtros.  
+- **Autorización UI:** sección visible solo si el usuario tiene claim `security:admin=true`; de lo contrario, la ruta devuelve 404. Operaciones sensibles (reset password, borrar sesión) solicitan MFA corto.  
+- **Ámbitos:** cambios aplican al tenant/corporación actual respetando herencias; un admin puede ver usuarios de empresas hijas siempre que tenga `SEGURIDAD.USUARIOS.VER`.  
+- **Auditoría obligatoria:** cada acción UI invoca `IAuditoriaService.LogAsync` con `category=security.user|security.role`, detalle, `before/after` y `correlation_id` (GUID por interacción).
+
+### 17.2 Administración de usuarios (Blazor Web)
+- **Disposición:** página `/admin/usuarios` contiene cabecera con KPIs (totales activos/inactivos, pendientes de invitación), filtro avanzado colapsable y layout Master/Detail (lista izquierda 35%, detalle derecha).  
+- **Tabla/lista:** componente `UsuarioDataGrid` (hereda de `QuickDataGrid`) soporta búsqueda incremental (nombre, email, rol, contexto, estado), columnas configurables, badges de estado e iconos para MFA habilitado / delegando / bloqueado. Paginación server-side (lazy) y export a CSV (según permiso).  
+- **Acciones en lista:** selección múltiple para activar/desactivar, asignar roles masivos o reenviar invitación; cada acción muestra confirmación y resumen del impacto.  
+- **Detalle/Edición:** `UsuarioDetailPanel` se abre al seleccionar o al pulsar "Nuevo usuario". Tabs: Perfil, Seguridad, Roles, Contextos/Licencias, Sesiones activas. Campos soportan validaciones instantáneas con `FluentValidation`.  
+- **Perfil básico:** nombres, apellidos, cargo, contacto, `PreferredContexto`, `Clearance`. Campos sensibles muestran tooltips de ayuda.  
+- **Seguridad:** toggles "Usuario activo", "Forzar cambio de contraseña", "Requerir MFA". Botones `Reset password`, `Invitar usuario`, `Cerrar todas las sesiones`.  
+- **Roles:** panel lateral tipo dual-list (`Roles disponibles` vs `Roles asignados`) con búsqueda, descripciones descriptivas ("Supervisor RRHH") y tooltips con permisos clave. Cambios se aplican en memoria y muestran diff (`+3 / -1`).  
+- **Contextos/Licencias:** pickers multiselección con badges. Contexto principal obliga a elegir solo uno; se valida que exista al menos un contexto asignado.  
+- **Sesiones activas:** lista de dispositivos/IP, última actividad y botón para revocar sesión individual (SignalR notificará al cliente).  
+- **Persistencia:** botón Guardar invoca `PATCH /api/usuarios/{id}` (o `POST` si nuevo). Tras éxito, se muestra toast, se resalta el usuario actualizado y se dispara evento `UsuarioUpdated` al hub en tiempo real.
+
+### 17.3 Gestión de roles y permisos
+- **Ruta dedicada:** `/admin/roles` comparte layout. Lista con tarjetas/resumen (usuarios asignados, permisos críticos) y tabla detallada con sorting.  
+- **Creación/Edición:** `RolDetailDrawer` permite cambiar nombre, descripción, clearance y permisos (agrupados por módulo/categoría). Inspirado en mejores prácticas de `permit.io`: vista jerárquica plegable, buscador por código y toggle "Marcar permiso como crítico" que exige MFA.  
+- **Permisos por rol:** al marcar/desmarcar items, se muestra impacto ("14 usuarios perderán acceso a Reportes"). Confirmación requiere escribir el nombre del rol si implica quitar permisos críticos.  
+- **Versionado:** al guardar, se incrementa `RoleVersion` en `Rol` y se registra `RolPermisosChangedEvent` para recalcular permisos efectivos de usuarios asociados.  
+- **Dependencias:** si un rol requiere otro (roles compuestos), la UI muestra advertencia y ofrece asignarlo en cascada.  
+- **Acciones adicionales:** duplicar rol, exportar definición (JSON) y adjuntar notas internas (almacenadas en `RolMetadata`). Eliminación bloqueada para roles `IsSystem=true`.
+
+### 17.4 Hot reload de autorización y control de sesiones
+- **Modelo de versiones:** tabla `Usuarios` añade campos `SecurityVersion` y `LastSecurityUpdateUtc`; `Roles` mantiene `RoleVersion`. Cada JWT incluye claim `token_version` (hash de `SecurityVersion` + `RoleVersion` agregada).  
+- **Proceso cuando un admin edita usuarios/roles:**  
+  1. API aplica cambios (transacción) y actualiza `SecurityVersion=SecurityVersion+1`.  
+  2. Se persiste en `UsuarioEventos` (`UsuarioPermisosActualizadosDomainEvent`).  
+  3. Worker `SecurityInvalidationProcessor` publica mensaje en `security-session-invalidation` (Service Bus) y avisa al `SecurityNotificationsHub` (SignalR) usando el `userId` como grupo.  
+  4. Clientes Blazor/MAUI, suscritos al hub `NotificacionesSeguridad`, reciben `PermissionsUpdated` con payload (`reason`, `required_claims`, `issued_at`).  
+  5. Cliente ejecuta `TokenRefreshService.RefreshAsync` (llama a `/api/auth/refresh-token`), reemplaza el JWT y vuelve a consultar permisos/menús; se muestra banner "Tus permisos han cambiado, refrescando..." o botón manual si falla.  
+- **Proceso cuando el propio usuario cambia contexto/delegación/licencia activa:** la UI sabe que se requiere nuevo token y llama directamente a `RefreshAsync` sin esperar notificación externa; aun así registra `SecurityVersion` para mantener consistencia.  
+- **Expiración corta:** tokens de acceso duran 5 minutos; el refresh token incluye `security_version_at_issue`. Si el servidor detecta versión diferente, responde 409 + payload `needs_refresh=true`.  
+- **Fallback:** si SignalR no conecta, un `SecurityVersionPoller` (timer 60 s) consulta `/api/auth/version` para detectar diferencias.  
+- **Sesiones forzadas:** al revocar sesiones desde la UI, se insertan registros en `UsuarioSesiones` con `IsActive=false`, se emite `SessionRevoked` y el cliente muestra modal "Tu sesión fue cerrada por seguridad".
+
+### 17.5 Experiencia MAUI y accesibilidad
+- **MAUI admin:** se replica funcionalidad esencial (lista de usuarios con CollectionView virtualizada, detalle en página independiente). Rol assignment usa `BindableLayout` con chips y bottom sheet para permisos. Gestos adaptados (swipe para acciones rápidas).  
+- **Sincronización compartida:** ViewModels reutilizan servicios compartidos; `SecurityNotificationsHub` usa `SignalR.Client` con reconexión automática y notificaciones locales cuando el app está en background.  
+- **Accesibilidad/UX:** se usan labels descriptivos, atajos (`Ctrl+K` para buscar, `/` para foco en buscador), tooltips/semántica y confirmaciones claras ("¿Seguro que deseas remover el rol Supervisor RRHH?"). Estados largos muestran skeletons y mensajes amistosos.  
+- **Invitación de usuarios:** botón "Invitar" abre wizard (datos mínimos + rol/contexto). Tras guardar, se envía email con link de activación; UI monitorea estado "Pendiente" y ofrece reenviar.  
+- **Auditoría y reporting:** panel lateral con bitácora contextual (últimos cambios sobre el usuario/rol seleccionado) y acceso a export JSON/CSV para cumplimiento. Métricas (latencia de guardado, ratio de éxito de refresh) alimentan dashboards de seguridad.
+
+### 17.6 Observabilidad y pruebas
+- **Telemetría:** eventos `UserAdmin.Search`, `UserAdmin.Save`, `RoleAdmin.Save`, `PermissionsHotReload.Success|Failure`, `SessionRevoked`. Incluyen tenant, duración, volumen afectado y `result`.  
+- **Alertas:** si más del 2% de los refresh fallan en 5 min, se genera alerta (posible caída del hub o API).  
+- **Pruebas recomendadas:** tests UI bUnit/Playwright para tabla/panel, pruebas de integración para `SecurityInvalidationProcessor`, pruebas de carga sobre SignalR (escenarios con miles de usuarios conectados) y validaciones de accesibilidad (axe).  
+- **Hardening:** fuzzing de API (códigos maliciosos en emails/nombres), verificación de límites (paginación, bulk actions) y pruebas de regresión para garantizar que usuarios sin permisos no ven la sección.
+
+---

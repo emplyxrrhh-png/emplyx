@@ -124,7 +124,8 @@ internal sealed class UsuarioService : IUsuarioService
 
     private async Task AttachRolesAsync(Usuario usuario, IEnumerable<Guid> roles, CancellationToken cancellationToken)
     {
-        foreach (var rolId in roles.Distinct())
+        var distinctRoles = (roles ?? Array.Empty<Guid>()).Distinct();
+        foreach (var rolId in distinctRoles)
         {
             var rol = await _rolRepository.GetByIdAsync(rolId, cancellationToken);
             if (rol is null)
@@ -138,7 +139,8 @@ internal sealed class UsuarioService : IUsuarioService
 
     private async Task AttachContextosAsync(Usuario usuario, IEnumerable<UsuarioContextoAssignmentDto> contextos, CancellationToken cancellationToken)
     {
-        foreach (var assignment in contextos.DistinctBy(c => c.ContextoId))
+        var distinctContextos = (contextos ?? Array.Empty<UsuarioContextoAssignmentDto>()).DistinctBy(c => c.ContextoId);
+        foreach (var assignment in distinctContextos)
         {
             var contexto = await _contextoRepository.GetByIdAsync(assignment.ContextoId, cancellationToken);
             if (contexto is null)
@@ -157,7 +159,8 @@ internal sealed class UsuarioService : IUsuarioService
 
     private async Task AttachLicenciasAsync(Usuario usuario, IEnumerable<Guid> licencias, CancellationToken cancellationToken)
     {
-        foreach (var licenciaId in licencias.Distinct())
+        var distinctLicencias = (licencias ?? Array.Empty<Guid>()).Distinct();
+        foreach (var licenciaId in distinctLicencias)
         {
             var licencia = await _licenciaRepository.GetByIdAsync(licenciaId, cancellationToken);
             if (licencia is null)
@@ -171,7 +174,7 @@ internal sealed class UsuarioService : IUsuarioService
 
     private async Task SyncRolesAsync(Usuario usuario, IEnumerable<Guid> roles, CancellationToken cancellationToken)
     {
-        var desiredRoleIds = roles.Distinct().ToHashSet();
+        var desiredRoleIds = (roles ?? Array.Empty<Guid>()).Distinct().ToHashSet();
         var currentRoleIds = usuario.Roles.Select(r => r.RolId).ToHashSet();
 
         foreach (var toRemove in currentRoleIds.Except(desiredRoleIds).ToArray())
@@ -193,7 +196,7 @@ internal sealed class UsuarioService : IUsuarioService
 
     private async Task SyncContextosAsync(Usuario usuario, IEnumerable<UsuarioContextoAssignmentDto> contextos, CancellationToken cancellationToken)
     {
-        var desired = contextos.DistinctBy(c => c.ContextoId).ToArray();
+        var desired = (contextos ?? Array.Empty<UsuarioContextoAssignmentDto>()).DistinctBy(c => c.ContextoId).ToArray();
         var desiredIds = desired.Select(c => c.ContextoId).ToHashSet();
         var currentIds = usuario.Contextos.Select(c => c.ContextoId).ToHashSet();
 
@@ -222,7 +225,7 @@ internal sealed class UsuarioService : IUsuarioService
 
     private async Task SyncLicenciasAsync(Usuario usuario, IEnumerable<Guid> licencias, CancellationToken cancellationToken)
     {
-        var desired = licencias.Distinct().ToHashSet();
+        var desired = (licencias ?? Array.Empty<Guid>()).Distinct().ToHashSet();
         var current = usuario.Licencias.Select(l => l.LicenciaId).ToHashSet();
 
         foreach (var toRemove in current.Except(desired).ToArray())

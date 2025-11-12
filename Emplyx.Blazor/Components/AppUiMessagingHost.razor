@@ -1,0 +1,124 @@
+@using Emplyx.Blazor.Services
+@using Emplyx.Shared.UI.Notifications
+@implements IDisposable
+@inject AppUiMessagingService MessagingService
+
+<div class="app-modal-backdrop @(IsModalVisible ? "show" : null)"></div>
+
+@if (_activeTicket is not null)
+{
+    <div class="app-modal show" role="dialog" aria-modal="true">
+        <div class="app-modal__card @GetLevelClass(_activeTicket.Options.Level)">
+            <header>
+                <h2>@_activeTicket.Options.Title</h2>
+            </header>
+            <p>@_activeTicket.Options.Message</p>
+            <footer>
+                @if (!string.IsNullOrWhiteSpace(_activeTicket.Options.CancelText))
+                {
+                    <button class="btn btn-outline-secondary" @onclick="CancelAsync">
+                        @_activeTicket.Options.CancelText
+                    </button>
+                }
+                <button class="btn btn-primary" @onclick="ConfirmAsync">
+                    @_activeTicket.Options.ConfirmText
+                </button>
+            </footer>
+        </div>
+    </div>
+}
+
+<div class="app-toast-stack">
+    @foreach (var toast in _toasts)
+    {
+        <div class="app-toast @GetLevelClass(toast.Options.Level)">
+            <div class="app-toast__header">
+                <strong>@toast.Options.Title</strong>
+                <button class="btn btn-link btn-sm" title="Cerrar" @onclick="() => DismissToast(toast.Id)">×</button>
+            </div>
+            <div>@toast.Options.Message</div>
+        </div>
+    }
+</div>
+
+@code {
+    private sealed record ToastEntry(Guid Id, AppToastOptions Options);
+
+    private AppUiMessagingService.AppMessageTicket? _activeTicket;
+    private readonly List<ToastEntry> _toasts = new();
+
+    private bool IsModalVisible => _activeTicket is not null;
+
+    protected override void OnInitialized()
+    {
+        MessagingService.MessageRequested += OnMessageRequested;
+        MessagingService.ToastRequested += OnToastRequested;
+    }
+
+    private void OnMessageRequested(AppUiMessagingService.AppMessageTicket ticket)
+    {
+        _activeTicket = ticket;
+        InvokeAsync(StateHasChanged);
+    }
+
+    private void OnToastRequested(AppToastOptions options)
+    {
+        var entry = new ToastEntry(Guid.NewGuid(), options);
+        _toasts.Add(entry);
+        InvokeAsync(StateHasChanged);
+        _ = AutoDismissAsync(entry);
+    }
+
+    private async Task AutoDismissAsync(ToastEntry entry)
+    {
+        var delay = Math.Clamp(entry.Options.DurationMs, 1500, 10000);
+        await Task.Delay(delay);
+        await InvokeAsync(() =>
+        {
+            _ = _toasts.Remove(entry);
+            StateHasChanged();
+        });
+    }
+
+    private string GetLevelClass(UiNotificationLevel level) => level switch
+    {
+        UiNotificationLevel.Success => "is-success",
+        UiNotificationLevel.Warning => "is-warning",
+        UiNotificationLevel.Danger => "is-danger",
+        _ => "is-info"
+    };
+
+    private async Task ConfirmAsync()
+    {
+        var ticket = _activeTicket;
+        _activeTicket = null;
+        ticket?.Complete(true);
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private async Task CancelAsync()
+    {
+        var ticket = _activeTicket;
+        _activeTicket = null;
+        ticket?.Complete(false);
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private void DismissToast(Guid id)
+    {
+        var entry = _toasts.FirstOrDefault(t => t.Id == id);
+        if (entry is null)
+        {
+            return;
+        }
+
+        _toasts.Remove(entry);
+        StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        MessagingService.MessageRequested -= OnMessageRequested;
+        MessagingService.ToastRequested -= OnToastRequested;
+    }
+}
