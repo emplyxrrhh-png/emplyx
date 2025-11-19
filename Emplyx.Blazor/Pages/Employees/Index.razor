@@ -4,10 +4,12 @@
 @using Emplyx.Shared.UI.DataGrid
 @using Emplyx.Shared.UI.Selectors
 @using Emplyx.Shared.UI.Tasks
+@using Emplyx.Shared.UI.Telemetry
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Emplyx.Blazor.Resources.SharedResources> L
 @inject IEmployeesDataSource EmployeesData
 @inject SampleTasksQueueService TasksQueueService
 @inject AppUiMessagingService MessagingService
+@inject UiTelemetry Telemetry
 
 <PageTitle>@L["Employees.Title"]</PageTitle>
 
@@ -27,8 +29,8 @@
 </div>
 
 <AppDataGrid TItem="EmployeeListItem"
-             Title="@L[\"Employees.Grid.Title\"]"
-             SubTitle="@L[\"Employees.Grid.SubTitle\"]"
+             Title='@L["Employees.Grid.Title"]'
+             SubTitle='@L["Employees.Grid.SubTitle"]'
              OnRead="LoadEmployees"
              PageSize="10"
              EnableSearch="true"
@@ -105,27 +107,43 @@
 </div>
 
 @code {
-    private readonly IReadOnlyList<DataGridFilterDefinition> _filters =
-        new List<DataGridFilterDefinition>
+    private List<DataGridFilterDefinition> _filters = new();
+    private IReadOnlyList<TaskQueueItem> _tasks = Array.Empty<TaskQueueItem>();
+    private string _viewCorrelationId = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _viewCorrelationId = Telemetry.NewCorrelationId();
+        Telemetry.TrackViewOpened("/employees", _viewCorrelationId);
+        _tasks = await TasksQueueService.GetQueueAsync();
+        _filters = new List<DataGridFilterDefinition>
         {
             new("module", L["Employees.Filter.Module"], "Ej.: Scheduler, Access"),
             new("status", L["Employees.Filter.Status"], "Activo, Inactivo, Suspendido"),
             new("group", L["Employees.Filter.Group"], "GRP-HQ, Operaciones..."),
             new("forgotten", L["Employees.Filter.Forgotten"], "si/no")
         };
-
-    private IReadOnlyList<TaskQueueItem> _tasks = Array.Empty<TaskQueueItem>();
-
-    protected override async Task OnInitializedAsync()
-    {
-        _tasks = await TasksQueueService.GetQueueAsync();
     }
 
     private async Task<DataGridResult<EmployeeListItem>> LoadEmployees(DataGridCriteria criteria)
     {
-        var request = BuildRequest(criteria);
-        var response = await EmployeesData.GetAsync(request);
-        return new DataGridResult<EmployeeListItem>(response.Items, response.TotalCount);
+        var loadCorrelation = Telemetry.NewCorrelationId();
+        Telemetry.TrackDataLoadStarted("employees", "/employees", loadCorrelation);
+        var sw = System.Diagnostics.Stopwatch.StartNew();
+        try
+        {
+            var request = BuildRequest(criteria);
+            var response = await EmployeesData.GetAsync(request);
+            sw.Stop();
+            Telemetry.TrackDataLoadCompleted("employees", "/employees", true, sw.ElapsedMilliseconds, loadCorrelation);
+            return new DataGridResult<EmployeeListItem>(response.Items, response.TotalCount);
+        }
+        catch (Exception ex)
+        {
+            sw.Stop();
+            Telemetry.TrackDataLoadCompleted("employees", "/employees", false, sw.ElapsedMilliseconds, loadCorrelation, ex.GetType().Name);
+            throw;
+        }
     }
 
     private Task<IReadOnlyList<EmployeeLookupItem>> SearchEmployees(string? term, CancellationToken token) =>
@@ -166,6 +184,7 @@
             "Detalle",
             $"Abrir detalle para {row.DisplayName} ({row.Code}).",
             UiNotificationLevel.Info));
+        Telemetry.TrackActionClicked("view.details", "/employees", _viewCorrelationId);
     }
 
     private async Task AskDelete(EmployeeListItem row)
@@ -182,6 +201,11 @@
                 L["Employees.Delete.Done.Title"],
                 string.Format(L["Employees.Delete.Done.Message"], row.DisplayName),
                 UiNotificationLevel.Warning));
+            Telemetry.TrackDeleteConfirmed("employee", row.Id.ToString(), "/employees", _viewCorrelationId);
+        }
+        else
+        {
+            Telemetry.TrackActionClicked("delete.cancelled", "/employees", _viewCorrelationId, ok: true);
         }
     }
 
@@ -191,6 +215,7 @@
             "Reintento programado",
             $"Se volvio a ejecutar la tarea {item.Id}.",
             UiNotificationLevel.Info));
+        Telemetry.TrackActionClicked("task.retry", "/employees", _viewCorrelationId);
         await Task.CompletedTask;
     }
 
@@ -200,6 +225,7 @@
             "Nuevo empleado",
             "Abrir formulario de creacion (pendiente AppForm/AppField).",
             UiNotificationLevel.Success));
+        Telemetry.TrackActionClicked("employee.create.new", "/employees", _viewCorrelationId);
     }
 
     private static MarkupString SortIcon(DataGridSortState sort, string field)

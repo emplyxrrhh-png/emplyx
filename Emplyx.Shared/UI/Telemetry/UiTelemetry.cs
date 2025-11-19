@@ -1,10 +1,11 @@
 using Microsoft.ApplicationInsights;
 using Microsoft.ApplicationInsights.DataContracts;
+using System.Diagnostics; // added
 
 namespace Emplyx.Shared.UI.Telemetry;
 
 /// <summary>
-/// Servicio mínimo para registrar eventos de interacción UI (v0). Se ampliará con correlación y métricas.
+/// Servicio mínimo para registrar eventos de interacción UI (v0.1). Ampliado con correlación y métricas adicionales.
 /// </summary>
 public sealed class UiTelemetry
 {
@@ -14,6 +15,8 @@ public sealed class UiTelemetry
     {
         _client = client;
     }
+
+    public string NewCorrelationId() => Guid.NewGuid().ToString("N");
 
     public void TrackViewOpened(string page, string? correlationId = null)
         => TrackEvent("view.opened", page, correlationId);
@@ -26,10 +29,40 @@ public sealed class UiTelemetry
             ["errorCode"] = errorCode ?? string.Empty
         });
 
-    public void TrackDataLoad(string entity, string page, bool ok, long? durationMs = null, string? correlationId = null, string? errorCode = null)
-        => TrackEvent("data.load", page, correlationId, new Dictionary<string,string>
+    public void TrackDataLoadStarted(string entity, string page, string? correlationId = null)
+        => TrackEvent("data.load.started", page, correlationId, new Dictionary<string,string>
+        {
+            ["entity"] = entity
+        });
+
+    public void TrackDataLoadCompleted(string entity, string page, bool ok, long? durationMs, string? correlationId = null, string? errorCode = null)
+        => TrackEvent("data.load.completed", page, correlationId, new Dictionary<string,string>
         {
             ["entity"] = entity,
+            ["ok"] = ok.ToString(),
+            ["durationMs"] = durationMs?.ToString() ?? string.Empty,
+            ["errorCode"] = errorCode ?? string.Empty
+        });
+
+    public void TrackDeleteConfirmed(string entity, string id, string page, string? correlationId = null)
+        => TrackEvent("delete.confirmed", page, correlationId, new Dictionary<string,string>
+        {
+            ["entity"] = entity,
+            ["id"] = id
+        });
+
+    public void TrackDownloadStarted(string entity, string id, string page, string? correlationId = null)
+        => TrackEvent("download.started", page, correlationId, new Dictionary<string,string>
+        {
+            ["entity"] = entity,
+            ["id"] = id
+        });
+
+    public void TrackDownloadCompleted(string entity, string id, string page, bool ok, long? durationMs, string? correlationId = null, string? errorCode = null)
+        => TrackEvent("download.completed", page, correlationId, new Dictionary<string,string>
+        {
+            ["entity"] = entity,
+            ["id"] = id,
             ["ok"] = ok.ToString(),
             ["durationMs"] = durationMs?.ToString() ?? string.Empty,
             ["errorCode"] = errorCode ?? string.Empty
