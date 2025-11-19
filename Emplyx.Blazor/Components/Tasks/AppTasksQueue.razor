@@ -1,0 +1,105 @@
+@using System.Linq
+@using Emplyx.Shared.UI.Tasks
+
+<div class="app-tasksqueue card">
+    <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3">
+        <div>
+            <h5 class="mb-0">@Title</h5>
+            <p class="text-muted mb-0">@SubTitle</p>
+        </div>
+        @if (ShowStatusSummary)
+        {
+            <div class="d-flex gap-3">
+                @foreach (var summary in StatusSummary)
+                {
+                    <div class="text-center">
+                        <div class="fw-bold">@summary.Count</div>
+                        <small class="text-muted text-uppercase">@summary.Status</small>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+    <div class="table-responsive">
+        <table class="table align-middle mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th>#</th>
+                    <th>Tipo</th>
+                    <th>Estado</th>
+                    <th>Progreso</th>
+                    <th>Inicio</th>
+                    <th>Fin</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Items?.Any() != true)
+                {
+                    <tr>
+                        <td colspan="7" class="text-center text-muted">@EmptyText</td>
+                    </tr>
+                }
+                else
+                {
+                    @foreach (var item in Items!)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Type</td>
+                            <td>
+                                <span class="badge @GetStatusClass(item.Status)">@item.Status</span>
+                            </td>
+                            <td style="min-width: 160px;">
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar" role="progressbar" style="width:@item.Progress%" aria-valuenow="@item.Progress" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </td>
+                            <td>@item.StartedAt.ToLocalTime().ToString("g")</td>
+                            <td>@(item.FinishedAt?.ToLocalTime().ToString("g") ?? "-")</td>
+                            <td class="text-end">
+                                @if (ShowRetry && item.Status.Equals("failed", StringComparison.OrdinalIgnoreCase))
+                                {
+                                    <button class="btn btn-sm btn-outline-danger" @onclick="() => OnRetry.InvokeAsync(item)">Reintentar</button>
+                                }
+                                else if (ActionsTemplate is not null)
+                                {
+                                    @ActionsTemplate(item)
+                                }
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@code {
+    [Parameter] public IReadOnlyList<TaskQueueItem>? Items { get; set; }
+    [Parameter] public string Title { get; set; } = "Tasks Queue";
+    [Parameter] public string? SubTitle { get; set; }
+    [Parameter] public bool ShowStatusSummary { get; set; } = true;
+    [Parameter] public bool ShowRetry { get; set; } = true;
+    [Parameter] public string EmptyText { get; set; } = "Sin tareas registradas";
+    [Parameter] public EventCallback<TaskQueueItem> OnRetry { get; set; }
+    [Parameter] public RenderFragment<TaskQueueItem>? ActionsTemplate { get; set; }
+
+    private IEnumerable<StatusSummaryItem> StatusSummary =>
+        Items?.GroupBy(x => x.Status)
+              .Select(g => new StatusSummaryItem(g.Key, g.Count()))
+              .OrderByDescending(g => g.Count)
+              ?? Enumerable.Empty<StatusSummaryItem>();
+
+    private string GetStatusClass(string status) =>
+        status.ToLowerInvariant() switch
+        {
+            "running" => "bg-info",
+            "pending" => "bg-secondary",
+            "completed" => "bg-success",
+            "failed" => "bg-danger",
+            _ => "bg-light text-dark"
+        };
+
+    private sealed record StatusSummaryItem(string Status, int Count);
+}

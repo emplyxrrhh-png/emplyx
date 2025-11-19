@@ -1,0 +1,154 @@
+@page "/access/periods"
+
+@inject IAccessPeriodsDataSource AccessPeriodsData
+@inject AppUiMessagingService Messaging
+
+<PageTitle>Access Periods</PageTitle>
+
+<div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
+    <div>
+        <h1 class="h3 mb-0">Access Periods</h1>
+        <p class="text-muted mb-0">Reemplazo de Access/AccessPeriods.aspx con filtros y validaciones.</p>
+    </div>
+    <div class="d-flex gap-2">
+        <button class="btn btn-primary btn-sm" @onclick="CreatePeriod">
+            <i class="bi bi-plus-circle"></i> Nuevo periodo
+        </button>
+        <button class="btn btn-outline-secondary btn-sm" @onclick="ReloadAsync">
+            <i class="bi bi-arrow-repeat"></i> Actualizar
+        </button>
+    </div>
+</div>
+
+<AppDataGrid TItem="AccessPeriodListItem"
+             Title="Periodos de acceso"
+             SubTitle="Basado en contratos v0.1 /access/periods"
+             OnRead="LoadPeriods"
+             PageSize="10"
+             EnableSearch="true"
+             FilterDefinitions="@_filters">
+    <HeaderTemplate Context="sort">
+        <tr>
+            <th>
+                <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(AccessPeriodListItem.Name))">
+                    Nombre @SortIcon(sort, nameof(AccessPeriodListItem.Name))
+                </button>
+            </th>
+            <th>
+                <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(AccessPeriodListItem.Status))">
+                    Estado @SortIcon(sort, nameof(AccessPeriodListItem.Status))
+                </button>
+            </th>
+            <th>Semana</th>
+            <th>Rango</th>
+            <th>Mes</th>
+            <th>
+                <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(AccessPeriodListItem.UpdatedAt))">
+                    Actualizado @SortIcon(sort, nameof(AccessPeriodListItem.UpdatedAt))
+                </button>
+            </th>
+            <th></th>
+        </tr>
+    </HeaderTemplate>
+    <RowTemplate Context="row">
+        <td>
+            <div class="fw-semibold">@row.Name</div>
+            <small class="text-muted">@row.Description</small>
+        </td>
+        <td>
+            <span class="badge @(row.Status.Equals("Activo", StringComparison.OrdinalIgnoreCase) ? "bg-success-subtle text-success" : "bg-secondary")">@row.Status</span>
+            @if (row.IsSpecialPeriod)
+            {
+                <span class="badge bg-warning-subtle text-warning ms-1">Especial</span>
+            }
+        </td>
+        <td>@row.WeekDayLabel</td>
+        <td>@row.FromTime - @row.ToTime</td>
+        <td>@row.MonthLabel</td>
+        <td>@row.UpdatedAt.ToLocalTime().ToString("g")</td>
+    </RowTemplate>
+    <RowActionsTemplate Context="row">
+        <div class="btn-group btn-group-sm">
+            <button class="btn btn-outline-primary" @onclick="() => ViewPeriod(row)">Ver</button>
+            <button class="btn btn-outline-danger" @onclick="() => DeletePeriod(row)">Borrar</button>
+        </div>
+    </RowActionsTemplate>
+</AppDataGrid>
+
+@code {
+    private readonly IReadOnlyList<DataGridFilterDefinition> _filters =
+        new List<DataGridFilterDefinition>
+        {
+            new("status", "Estado", "Activo/Suspendido"),
+            new("weekday", "Dia de semana", "L-V, S-D, Todos"),
+            new("month", "Mes/Periodo", "Ej.: Primer lunes"),
+            new("special", "Especial", "si/no")
+        };
+
+    private async Task<DataGridResult<AccessPeriodListItem>> LoadPeriods(DataGridCriteria criteria)
+    {
+        var request = BuildRequest(criteria);
+        var response = await AccessPeriodsData.GetAsync(request);
+        return new DataGridResult<AccessPeriodListItem>(response.Items, response.TotalCount);
+    }
+
+    private AccessPeriodListRequest BuildRequest(DataGridCriteria criteria)
+    {
+        string? status = null;
+        string? weekDay = null;
+        string? month = null;
+        bool? special = null;
+
+        if (criteria.Filters is not null)
+        {
+            criteria.Filters.TryGetValue("status", out status);
+            criteria.Filters.TryGetValue("weekday", out weekDay);
+            criteria.Filters.TryGetValue("month", out month);
+            if (criteria.Filters.TryGetValue("special", out var specialValue) && !string.IsNullOrWhiteSpace(specialValue))
+            {
+                var normalized = specialValue.Trim().ToLowerInvariant();
+                special = normalized switch
+                {
+                    "si" or "true" or "1" => true,
+                    "no" or "false" or "0" => false,
+                    _ => null
+                };
+            }
+        }
+
+        return AccessPeriodListRequest.FromCriteria(criteria, weekDay, month, status, special);
+    }
+
+    private async Task ReloadAsync() => await InvokeAsync(StateHasChanged);
+
+    private void ViewPeriod(AccessPeriodListItem period) =>
+        Messaging.ShowToast(new AppToastOptions("Detalle", $"Abrir tabs de {period.Name}.", UiNotificationLevel.Info));
+
+    private async Task DeletePeriod(AccessPeriodListItem period)
+    {
+        var confirm = await Messaging.ShowConfirmationAsync(
+            "Borrar periodo",
+            $"Eliminar periodo {period.Name}? (DELETE /access/periods/{period.Id})",
+            "Si, borrar",
+            "Cancelar");
+
+        if (confirm is true)
+        {
+            Messaging.ShowToast(new AppToastOptions("Eliminado", $"{period.Name} se marcó para borrado.", UiNotificationLevel.Warning));
+        }
+    }
+
+    private void CreatePeriod() =>
+        Messaging.ShowToast(new AppToastOptions("Nuevo periodo", "Abrir wizard AccessPeriods/New.", UiNotificationLevel.Success));
+
+    private static MarkupString SortIcon(DataGridSortState sort, string field)
+    {
+        if (sort.Field != field)
+        {
+            return new MarkupString(string.Empty);
+        }
+
+        var icon = sort.Descending ? "bi-caret-down-fill" : "bi-caret-up-fill";
+        return new MarkupString($"<i class=\"bi {icon} ms-1\"></i>");
+    }
+}

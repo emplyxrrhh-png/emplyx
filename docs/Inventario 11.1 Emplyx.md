@@ -222,6 +222,16 @@ Pendientes:
 
 - [ ] Extraer parámetros exactos por cada acción desde JS para afinar contratos.
 - [ ] Mapear validaciones en formularios (required/rangos) visibles por pantalla.
+- [x] (P0 | En curso | Codex 2025-11-12) Prototipo `/employees` en Emplyx.Blazor/Pages/Employees/Index.razor cubre listado + filtros + selector + tareas usando `EmployeesMockDataSource` como adaptador temporal.
+- [x] (P0 | En curso | Codex 2025-11-12) Prototipo `/access/groups` en Emplyx.Blazor/Pages/Access/Groups.razor cubre listado, filtros status/zone/period/pending y acciones copy/delete/empty usando `AccessGroupsMockDataSource`.
+- [x] (P0 | En curso | Codex 2025-11-12) Prototipo `/access/periods` en Emplyx.Blazor/Pages/Access/Periods.razor implementa filtros status/weekDay/month/special y acciones delete mock usando `AccessPeriodsMockDataSource`.
+- [x] (P0 | En curso | Codex 2025-11-12) Prototipo `/access/status` en Emplyx.Blazor/Pages/Access/Status.razor cubre monitor (filtros group/zone/severity/attention) y acciones detail/block contra `AccessStatusMockDataSource`.
+- [x] (P0 | En curso | Codex 2025-11-12) Prototipo `/access/zones` en Emplyx.Blazor/Pages/Access/Zones.razor cubre listado y filtros type/parent/critical con acciones view/delete usando `AccessZonesMockDataSource`.
+- [x] (P0 | En curso | Codex 2025-11-12) Prototipo `/access/events` en Emplyx.Blazor/Pages/Access/Events.razor cubre EventScheduler (filtros zone/group/status) y acciones copy/delete usando `AccessEventsMockDataSource`.
+- [x] (P0 | En curso | Codex 2025-11-12) Prototipo `/scheduler/units` en Emplyx.Blazor/Pages/Scheduler/ProductiveUnits.razor cubre AIScheduler/ProductiveUnit.aspx (filtros plant/status/manager) usando `ProductiveUnitsMockDataSource`.
+- [x] (P0 | En curso | Codex 2025-11-12) Prototipo `/scheduler/budgets` en Emplyx.Blazor/Pages/Scheduler/Budgets.razor cubre AIScheduler/Budget.aspx (filtros unit/period/status) usando `BudgetsMockDataSource`.
+- [x] (P0 | En curso | Codex 2025-11-12) Prototipo `/scheduler/moves` en Emplyx.Blazor/Pages/Scheduler/Moves.razor cubre Scheduler/MovesDetail.aspx (filtros employee/terminal/type/status) usando `MovesMockDataSource`.
+- [x] (P0 | En curso | Codex 2025-11-12) Prototipo `/scheduler/coverage` en Emplyx.Blazor/Pages/Scheduler/Coverage.razor replica CalendarV2 (rango fechas + status) usando `CoverageSummaryMockDataSource`.
 
 Parametros detectados por accion (desde JS):
 

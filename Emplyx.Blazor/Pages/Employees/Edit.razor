@@ -1,0 +1,95 @@
+@page "/employees/edit"
+@using System.ComponentModel.DataAnnotations
+
+<PageTitle>Employees · Edit</PageTitle>
+
+<h1 class="h4 mb-3">Editar empleado (mock)</h1>
+<p class="text-muted">Esta vista reemplaza Employees/EditProgrammed*.aspx utilizando AppForm/AppField.</p>
+
+<AppForm TModel="EmployeeEditModel"
+         Model="_model"
+         OnValidSubmit="SaveAsync"
+         IsBusy="@_isSaving">
+    <div class="row">
+        <div class="col-md-6">
+            <AppField Label="Nombre completo"
+                      For="() => _model.Name"
+                      @bind-Value="_model.Name" />
+        </div>
+        <div class="col-md-3">
+            <AppField Label="Idioma"
+                      InputType="select"
+                      For="() => _model.Language"
+                      @bind-Value="_model.Language">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+            </AppField>
+        </div>
+        <div class="col-md-3">
+            <AppField Label="Estado"
+                      InputType="select"
+                      For="() => _model.Status"
+                      @bind-Value="_model.Status">
+                <option value="active">Activo</option>
+                <option value="inactive">Inactivo</option>
+            </AppField>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <AppField Label="Notas"
+                      InputType="textarea"
+                      For="() => _model.Notes"
+                      @bind-Value="_model.Notes" />
+        </div>
+    </div>
+    <div class="form-check mb-3">
+        <InputCheckbox class="form-check-input" @bind-Value="_model.HasForgottenRight" />
+        <label class="form-check-label">Has Forgotten Right</label>
+    </div>
+
+    <div class="d-flex gap-2">
+        <button type="submit" class="btn btn-primary" disabled="@_isSaving">
+            @( _isSaving ? "Guardando..." : "Guardar cambios")
+        </button>
+        <a class="btn btn-secondary" href="/employees">Cancelar</a>
+    </div>
+</AppForm>
+
+@code {
+    private readonly EmployeeEditModel _model = new()
+    {
+        Name = "Alice Smith",
+        Language = "es",
+        Status = "active",
+        Notes = "Migración en progreso"
+    };
+
+    private bool _isSaving;
+
+    private async Task SaveAsync(EmployeeEditModel model)
+    {
+        _isSaving = true;
+        await Task.Delay(750);
+        _isSaving = false;
+        // En la versión final se llamará al ApiAdapter.
+    }
+
+    private sealed class EmployeeEditModel
+    {
+        [Required, StringLength(120)]
+        public string Name { get; set; } = string.Empty;
+
+        [Required]
+        public string Language { get; set; } = "es";
+
+        [Required]
+        public string Status { get; set; } = "active";
+
+        [StringLength(400)]
+        public string? Notes { get; set; }
+
+        public bool HasForgottenRight { get; set; }
+    }
+}

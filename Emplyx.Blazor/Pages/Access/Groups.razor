@@ -1,0 +1,210 @@
+@page "/access"
+@page "/access/groups"
+@using Emplyx.Blazor.Services.Access
+
+<PageTitle>Access Groups</PageTitle>
+
+<div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
+    <div>
+        <h1 class="h3 mb-0">Access Groups</h1>
+        <p class="text-muted mb-0">Reemplazo de Access/AccessGroups.aspx con filtros server-side.</p>
+    </div>
+    <div class="d-flex gap-2">
+        <button class="btn btn-primary btn-sm" @onclick="CreateGroup">
+            <i class="bi bi-plus-circle"></i> Nuevo grupo
+        </button>
+        <button class="btn btn-outline-secondary btn-sm" @onclick="ReloadAsync">
+            <i class="bi bi-arrow-repeat"></i> Actualizar
+        </button>
+    </div>
+</div>
+
+<AppDataGrid TItem="AccessGroupListItem"
+             Title="Grupos de acceso"
+             SubTitle="Basado en contratos v0.1 /access/groups"
+             OnRead="LoadGroups"
+             PageSize="8"
+             EnableSearch="true"
+             FilterDefinitions="@_filters">
+    <HeaderTemplate Context="sort">
+        <tr>
+            <th>
+                <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(AccessGroupListItem.Name))">
+                    Grupo @SortIcon(sort, nameof(AccessGroupListItem.Name))
+                </button>
+            </th>
+            <th>
+                <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(AccessGroupListItem.Status))">
+                    Estado @SortIcon(sort, nameof(AccessGroupListItem.Status))
+                </button>
+            </th>
+            <th>
+                <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(AccessGroupListItem.ZonesCount))">
+                    Zonas @SortIcon(sort, nameof(AccessGroupListItem.ZonesCount))
+                </button>
+            </th>
+            <th>
+                <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(AccessGroupListItem.PeriodsCount))">
+                    Periodos @SortIcon(sort, nameof(AccessGroupListItem.PeriodsCount))
+                </button>
+            </th>
+            <th>
+                <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(AccessGroupListItem.EmployeesCount))">
+                    Empleados @SortIcon(sort, nameof(AccessGroupListItem.EmployeesCount))
+                </button>
+            </th>
+            <th>
+                <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(AccessGroupListItem.UpdatedAt))">
+                    Actualizado @SortIcon(sort, nameof(AccessGroupListItem.UpdatedAt))
+                </button>
+            </th>
+            <th></th>
+        </tr>
+    </HeaderTemplate>
+    <RowTemplate Context="row">
+        <td>
+            <div class="fw-semibold">@row.Name</div>
+            <small class="text-muted">@row.Description</small>
+        </td>
+        <td>
+            <span class="badge @(row.Status.Equals("Activo", StringComparison.OrdinalIgnoreCase) ? "bg-success-subtle text-success" : "bg-secondary")">
+                @row.Status
+            </span>
+            @if (row.HasPendingChanges)
+            {
+                <span class="badge bg-warning-subtle text-warning ms-1">Pendiente</span>
+            }
+        </td>
+        <td>@row.ZonesCount</td>
+        <td>@row.PeriodsCount</td>
+        <td>@row.EmployeesCount</td>
+        <td>
+            <div>@row.UpdatedAt.ToLocalTime().ToString("g")</div>
+            <small class="text-muted">UTC @row.UpdatedAt.ToString("HH:mm")</small>
+        </td>
+    </RowTemplate>
+    <RowActionsTemplate Context="row">
+        <div class="btn-group btn-group-sm">
+            <button class="btn btn-outline-primary" @onclick="() => ViewGroup(row)">Ver</button>
+            <button class="btn btn-outline-secondary" @onclick="() => CopyGroup(row)">Copiar</button>
+            <button class="btn btn-outline-danger" @onclick="() => DeleteGroup(row)">Borrar</button>
+        </div>
+    </RowActionsTemplate>
+</AppDataGrid>
+
+<div class="row mt-4 g-3">
+    <div class="col-12 col-lg-6">
+        <AppSelector TValue="AccessGroupLookupItem"
+                     Label="Buscar grupo para asignar empleados"
+                     Placeholder="Nombre del grupo"
+                     Provider="SearchGroups"
+                     LabelSelector="@(item => $"{item.Name} · {item.Status}")" />
+    </div>
+    <div class="col-12 col-lg-6">
+        <AppTasksQueue Title="Tareas Access"
+                       SubTitle="emptyEmployees/delete/copy (mock)"
+                       Items="@_tasks"
+                       OnRetry="RetryTask" />
+    </div>
+</div>
+
+@code {
+    [Inject] private IAccessGroupsDataSource AccessGroupsData { get; set; } = default!;
+    [Inject] private SampleTasksQueueService TasksQueueService { get; set; } = default!;
+    [Inject] private AppUiMessagingService Messaging { get; set; } = default!;
+
+    private readonly IReadOnlyList<DataGridFilterDefinition> _filters =
+        new List<DataGridFilterDefinition>
+        {
+            new("status", "Estado", "Activo/Inactivo/Suspendido"),
+            new("zone", "Zona", "HQ, Dock, etc."),
+            new("period", "Periodo", "Nocturno/Diurno"),
+            new("pending", "Pendientes", "si/no")
+        };
+
+    private IReadOnlyList<TaskQueueItem> _tasks = Array.Empty<TaskQueueItem>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _tasks = await TasksQueueService.GetQueueAsync();
+    }
+
+    private async Task<DataGridResult<AccessGroupListItem>> LoadGroups(DataGridCriteria criteria)
+    {
+        var request = BuildRequest(criteria);
+        var response = await AccessGroupsData.GetAsync(request);
+        return new DataGridResult<AccessGroupListItem>(response.Items, response.TotalCount);
+    }
+
+    private Task<IReadOnlyList<AccessGroupLookupItem>> SearchGroups(string? term, CancellationToken token) =>
+        AccessGroupsData.SearchAsync(term, token);
+
+    private AccessGroupListRequest BuildRequest(DataGridCriteria criteria)
+    {
+        string? status = null;
+        string? zone = null;
+        string? period = null;
+        bool? pending = null;
+
+        if (criteria.Filters is not null)
+        {
+            criteria.Filters.TryGetValue("status", out status);
+            criteria.Filters.TryGetValue("zone", out zone);
+            criteria.Filters.TryGetValue("period", out period);
+            if (criteria.Filters.TryGetValue("pending", out var pendingValue) && !string.IsNullOrWhiteSpace(pendingValue))
+            {
+                var normalized = pendingValue.Trim().ToLowerInvariant();
+                pending = normalized switch
+                {
+                    "si" or "true" or "1" => true,
+                    "no" or "false" or "0" => false,
+                    _ => null
+                };
+            }
+        }
+
+        return AccessGroupListRequest.FromCriteria(criteria, zone, period, status, pending);
+    }
+
+    private async Task ReloadAsync() => await InvokeAsync(StateHasChanged);
+
+    private void ViewGroup(AccessGroupListItem group) =>
+        Messaging.ShowToast(new AppToastOptions("Detalle", $"Abrir tabs para {group.Name}.", UiNotificationLevel.Info));
+
+    private void CopyGroup(AccessGroupListItem group) =>
+        Messaging.ShowToast(new AppToastOptions("Copiar grupo", $"Simula POST /access/groups/{group.Id}:copy.", UiNotificationLevel.Success));
+
+    private async Task DeleteGroup(AccessGroupListItem group)
+    {
+        var confirm = await Messaging.ShowConfirmationAsync(
+            "Borrar grupo",
+            $"Confirma eliminar {group.Name}? Esta accion simula DELETE /access/groups/{group.Id}.",
+            "Si, borrar",
+            "Cancelar");
+
+        if (confirm is true)
+        {
+            Messaging.ShowToast(new AppToastOptions("Eliminado", $"{group.Name} se marcara para borrado.", UiNotificationLevel.Warning));
+        }
+    }
+
+    private void CreateGroup() =>
+        Messaging.ShowToast(new AppToastOptions("Nuevo grupo", "Abrir wizard AccessGroups/New.", UiNotificationLevel.Success));
+
+    private async Task RetryTask(TaskQueueItem task)
+    {
+        Messaging.ShowToast(new AppToastOptions("Reintento", $"Se reintento la tarea {task.Id}.", UiNotificationLevel.Info));
+        await Task.CompletedTask;
+    }
+
+    private static MarkupString SortIcon(DataGridSortState sort, string field)
+    {
+        if (sort.Field != field)
+        {
+            return new MarkupString(string.Empty);
+        }
+
+        var icon = sort.Descending ? "bi-caret-down-fill" : "bi-caret-up-fill";
+        return new MarkupString($"<i class=\"bi {icon} ms-1\"></i>");
+    }
+}

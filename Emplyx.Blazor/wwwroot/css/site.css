@@ -185,3 +185,63 @@ nav .nav-menu {
     padding-left: 1.25rem;
     margin: 0;
 }
+
+.app-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.app-selector__input {
+    position: relative;
+}
+
+.app-selector__input input {
+    padding-right: 2.5rem;
+}
+
+.app-selector__input .spinner-border {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.app-selector__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 999px;
+    background-color: rgba(var(--emplyx-primary-rgb), 0.08);
+    color: var(--emplyx-primary);
+    font-size: 0.85rem;
+}
+
+.app-selector__dropdown {
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.app-selector__dropdown .list-group-item {
+    cursor: pointer;
+}
+
+.app-selector__dropdown .list-group-item.active {
+    background-color: rgba(var(--emplyx-primary-rgb), 0.1);
+    color: var(--emplyx-primary);
+    border-color: transparent;
+}
+
+.app-field {
+    margin-bottom: 1rem;
+}
+
+.app-field .form-label {
+    font-weight: 600;
+}
+
+.app-field .validation-message {
+    color: #dc2626;
+    font-size: 0.85rem;
+}

@@ -249,10 +249,10 @@ Actualizado por Codex el 2025-11-12.
 - [ ] (P0 | En curso | Codex 2025-11-12) Seleccionar DataGrid (Blazorise/BootstrapBlazor/BlazorBootstrap) y estandarizar API de columnas/eventos. (Evaluar libreria; sin paquete disponible en feed actual, se usa Bootstrap nativo hasta seleccionar DataGrid definitivo).
 - [x] (P0 | Completado | Codex 2025-11-12) Implementar AppLayout (Sidebar/Topbar/Breadcrumbs/Content) accesible y responsive.
 - [x] (P0 | Completado | Codex 2025-11-12) Implementar AppMessageBox y ConfirmDialog (i18n, focus trap, variantes) y AppToast.
-- [ ] (P0 | En curso | Codex 2025-11-12) Implementar AppDataGrid (server-side) con onPage/onSort/onFilter/onRowAction y estados vacio/error/cargando (onPage + busqueda + sort listos; pendiente filtros y acciones por fila).
-- [ ] (P1 | Pendiente | Codex 2025-11-12) Implementar AppSelector generico (debounce, multi, etiquetas) para reemplazar *SelectorData.aspx.
-- [ ] (P1 | Pendiente | Codex 2025-11-12) Implementar AppForm/AppField (EditForm + DataAnnotations + validadores custom) y AppDateRangePicker (from = to; min 2 fechas cuando aplique).
-- [ ] (P1 | Pendiente | Codex 2025-11-12) Implementar AppTasksQueue (id,type,status,progress,startedAt,finishedAt) reutilizable (Alerts/DataLink/Broadcasts).
+- [x] (P0 | Completado | Codex 2025-11-12) Implementar AppDataGrid (server-side) con onPage/onSort/onFilter/onRowAction y estados vacio/error/cargando (Filtros básicos + acciones por fila integradas en Emplyx.Blazor/Pages/Index.razor).
+- [x] (P0 | Completado | Codex 2025-11-12) Implementar AppSelector generico (debounce, multi, etiquetas) para reemplazar *SelectorData.aspx (AppSelector + EmployeesMockDataSource.SearchAsync).
+- [x] (P0 | Completado | Codex 2025-11-12) Implementar AppForm/AppField (EditForm + DataAnnotations + validadores custom) y AppDateRangePicker (from ≤ to; min 2 fechas cuando aplique). AppForm ahora admite Model o EditContext externo, validators adicionales y manejo de estados `IsBusy`; AppDateRangePicker agrega clamps min/max, `MinimumSpanDays`, `RangeChanged` y `ValidationMessage` por campo/gap.
+- [x] (P0 | Completado | Codex 2025-11-12) Implementar AppTasksQueue (id,type,status,progress,startedAt,finishedAt) reutilizable (Alerts/DataLink/Broadcasts) con AppTasksQueue + SampleTasksQueueService.
 - [ ] Definir Contexto multi-tenant: TenantBar + ContextService (tenant/company/unit, culture, timeZone) via DI/CascadingValue.
 - [x] (P0 | Completado | Codex 2025-11-12) Definir Contexto multi-tenant: TenantBar + ContextService (tenant/company/unit, culture, timeZone) via DI/CascadingValue.
 - [ ] (P1 | Pendiente | Codex 2025-11-12) Gating por licencia: condiciones centralizadas (feature flags/ediciones) que controlan visibilidad/estado de componentes.
@@ -269,8 +269,22 @@ Actualizado por Codex el 2025-11-12.
 - Emplyx.Blazor (Blazor Server .NET 9) y Emplyx.ApiAdapter añadidos a la solucion (`Emplyx.sln`), manteniendo `Emplyx.Shared` como nucleo compartido.
 - Bootstrap 5 + Bootstrap Icons integrados; `wwwroot/css/site.css` define tokens iniciales, layout y componentes visuales alineados con el lineamiento 11.2.
 - AppLayout implementado (topbar + sidebar + breadcrumbs) consumiendo `TenantContextState` para multi-tenant, con NavMenu priorizado segun 11.4.
-- AppUiMessaging (MessageBox/ConfirmDialog/Toast) y AppDataGrid (base server-ready) agregados como componentes reutilizables en `Emplyx.Blazor`.
-- AppDataGrid ahora soporta sort/busqueda server-side mediante `SampleEmployeesDataService` (OnRead con `DataGridCriteria`/`DataGridResult`).
+- AppUiMessaging (MessageBox/ConfirmDialog/Toast), AppDataGrid (onPage/busqueda/sort) y AppSelector (debounce + multi-select) agregados como componentes reutilizables en `Emplyx.Blazor`.
+- AppDataGrid y AppSelector utilizan `EmployeesMockDataSource` como provider `GetAsync/SearchAsync`, demostrando interaccion server-side y busqueda con debounce.
+- AppTasksQueue disponible con `SampleTasksQueueService` para monitorear estados (pending/running/completed/failed) y reintentos; módulo Employees ya cuenta con un prototipo en `Emplyx.Blazor/Pages/Employees/Index.razor` + `Pages/Employees/Edit.razor` usando AppForm/AppField iniciales.
+- AppTasksQueue disponible con `SampleTasksQueueService` para monitorear estados (pending/running/completed/failed) y reintentos.
+- AppField refactorizado (Emplyx.Blazor/Components/Forms/AppField.razor) para soportar `TValue` generico (text/select/number) con validacion de tipos y `ValueChanged` consistente; `dotnet build Emplyx.sln` vuelve a compilar sin errores.
+- Vista `/employees` consume `EmployeesMockDataSource` + AppDataGrid/AppSelector/AppTasksQueue con filtros status/module/group/forgotten-right y acciones mock para delete/get; `Pages/Employees/Index.razor` refleja contratos GET /employees del inventario 11.1.
+- Vista `/access/groups` consume `AccessGroupsMockDataSource` + AppDataGrid/AppSelector con filtros status/zone/period/pending y acciones mock copy/delete/emptyEmployees; cubre AccessGroups.aspx (srvAccessGroups.ashx) dentro de 11.1.
+- Vista `/access/periods` consume `AccessPeriodsMockDataSource` + AppDataGrid con filtros status/weekDay/month/special y acciones mock delete/get, alineado a AccessPeriods.aspx (srvAccessPeriods.ashx).
+- Vista `/access/status` consume `AccessStatusMockDataSource` + AppDataGrid con filtros group/zone/severity/attention y acciones detail/block, reemplazando AccessStatusMonitor.aspx (srvAccessStatus.ashx).
+- Vista `/access/zones` consume `AccessZonesMockDataSource` + AppDataGrid con filtros type/parent/critical y acciones detail/delete, sustituyendo AccessZones.aspx (srvAccessZones.ashx).
+- Vista `/access/events` consume `AccessEventsMockDataSource` + AppDataGrid con filtros zone/group/status y acciones copy/delete, cubriendo EventScheduler.aspx.
+- Vista `/scheduler/units` consume `ProductiveUnitsMockDataSource` + AppDataGrid con filtros plant/status/manager y acciones detail/delete, equivalente a AIScheduler/ProductiveUnit.aspx.
+- Vista `/scheduler/budgets` consume `BudgetsMockDataSource` + AppDataGrid con filtros unit/period/status y acciones detail/delete, reproduciendo AIScheduler/Budget.aspx.
+- Vista `/scheduler/moves` consume `MovesMockDataSource` + AppDataGrid con filtros employee/terminal/type/status y acciones detail/delete, reemplazando Scheduler/MovesDetail.aspx.
+- Vista `/scheduler/coverage` consume `CoverageSummaryMockDataSource` + AppDateRangePicker/cards para mostrar coverage/incidents, replicando CalendarV2.
+- AppForm (Emplyx.Blazor/Components/Forms/AppForm.razor) soporta `EditContext` externo, registro de validadores personalizados, `IsBusy` y cascada de modelos; AppDateRangePicker aplica `MinimumSpanDays`, clamps Min/Max e invoca `RangeChanged`/`ValidationMessage` por campo.
 - ApiAdapterClient con envelope `{ok,data,meta,error}` y headers multi-tenant; configuracion `ApiAdapter` en `appsettings*.json`.
 - ContextService (`TenantContextState` + `TenantContextProvider`) disponible via DI/CascadingValue para Blazor y adaptadores.
 
@@ -282,8 +296,19 @@ Comentario importante:
 ### 11.1 Relevamiento e inventario
 - Estado: cobertura completa (v0). Inventario: `docs/Inventario 11.1 Emplyx.md`.
 - Enlaces rapidos: Detalle Employees y Access en `docs/Inventario 11.1 Emplyx.md` (secciones "Detalle - Employees (v0)" y "Detalle - Access (v0)").
+- [x] (P0 | En curso | Codex 2025-11-12) Vista `/employees` en Emplyx.Blazor implementa listado, filtros (status/module/group/forgotten-right) y selector multi, siguiendo contratos GET /employees y SearchEmployees v0.1.
+- [x] (P0 | En curso | Codex 2025-11-12) Vista `/access/groups` replica AccessGroups.aspx con AppDataGrid + filtros (status/zone/period/pending), selector y acciones mock (copy/delete/empty) apoyadas en `AccessGroupsMockDataSource`.
+- [x] (P0 | En curso | Codex 2025-11-12) Vista `/access/periods` cubre AccessPeriods.aspx (filtros status/weekDay/month/special) con AppDataGrid y contratos compartidos (`AccessPeriodList*` + `AccessPeriodsMockDataSource`).
+- [x] (P0 | En curso | Codex 2025-11-12) Vista `/access/status` cubre AccessStatusMonitor.aspx (filtros group/zone/severity/attention) con AppDataGrid y `AccessStatusMockDataSource`.
+- [x] (P0 | En curso | Codex 2025-11-12) Vista `/access/zones` cubre AccessZones.aspx (filtros type/parent/critical) con AppDataGrid y `AccessZonesMockDataSource`.
+- [x] (P0 | En curso | Codex 2025-11-12) Vista `/access/events` replica srvEventsScheduler (copy/delete + filtros zone/group/status) con `AccessEventsMockDataSource`.
+- [x] (P0 | En curso | Codex 2025-11-12) Vista `/scheduler/units` replica AIScheduler/ProductiveUnit.aspx (filtros plant/status/manager) con `ProductiveUnitsMockDataSource`.
+- [x] (P0 | En curso | Codex 2025-11-12) Vista `/scheduler/budgets` replica AIScheduler/Budget.aspx (filtros unit/period/status) con `BudgetsMockDataSource`.
+- [x] (P0 | En curso | Codex 2025-11-12) Vista `/scheduler/moves` replica Scheduler/MovesDetail.aspx (filtros employee/terminal/type/status) con `MovesMockDataSource`.
+- [x] (P0 | En curso | Codex 2025-11-12) Vista `/scheduler/coverage` replica CalendarV2 (rango fechas + status) con `CoverageSummaryMockDataSource`.
 - Avance: parametros por accion extraidos y contratos v0.1 propuestos (Employees/Access/Scheduler/Security) con ejemplos.
 - Nuevos: Terminals, Tasks y TaskTemplates inventariados con endpoints, parametros y contratos v0.1 sugeridos.
+- Progreso reciente (Employees): listado migrado a `Emplyx.Blazor/Pages/Employees/Index.razor` utilizando AppDataGrid/AppSelector/AppTasksQueue como base para futuras pantallas del modulo.
 
 Estado de cobertura (inventario 11.1):
 - [x] VTLogin/Auth
@@ -387,3 +412,12 @@ Notas: Este inventario es preliminar y se ampliara con el relevamiento detallado
 ---
 
 Fin del documento (borrador v0.2).
+
+
+
+
+
+
+
+
+

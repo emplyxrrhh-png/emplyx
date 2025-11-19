@@ -14,6 +14,12 @@
             }
         </div>
         <div class="app-datagrid__actions">
+            @if (FilterDefinitions?.Any() == true)
+            {
+                <button class="btn btn-outline-secondary btn-sm" @onclick="ToggleFilters">
+                    <i class="bi bi-funnel"></i> Filtros
+                </button>
+            }
             @if (EnableSearch && IsServerMode)
             {
                 <input class="form-control form-control-sm"
@@ -26,6 +32,25 @@
             </button>
         </div>
     </div>
+
+    @if (_showFilters && FilterDefinitions?.Any() == true)
+    {
+        <div class="app-datagrid__filters">
+            @foreach (var filter in FilterDefinitions)
+            {
+                <div>
+                    <label class="form-label">@filter.Label</label>
+                    <input class="form-control form-control-sm"
+                           placeholder="@filter.Placeholder"
+                           value="@GetFilterValue(filter.Field)"
+                           @onchange="args => OnFilterChanged(filter.Field, args.Value?.ToString())" />
+                </div>
+            }
+            <div class="d-flex align-items-end">
+                <button class="btn btn-sm btn-primary" @onclick="ApplyFiltersAsync">Aplicar</button>
+            </div>
+        </div>
+    }
 
     <div class="app-datagrid__toolbar">
         @Toolbar
@@ -63,6 +88,12 @@
                     {
                         <tr>
                             @RowTemplate!(item)
+                            @if (RowActionsTemplate is not null)
+                            {
+                                <td class="text-end">
+                                    @RowActionsTemplate(item)
+                                </td>
+                            }
                         </tr>
                     }
                 }
@@ -103,18 +134,22 @@
     private string? _searchText;
     private int _maxPage;
     private DataGridCriteria _criteria = new(0, 10);
+    private readonly Dictionary<string, string?> _filterValues = new(StringComparer.OrdinalIgnoreCase);
+    private bool _showFilters;
 
     [Parameter] public string? Title { get; set; }
     [Parameter] public string? SubTitle { get; set; }
     [Parameter] public RenderFragment? Toolbar { get; set; }
     [Parameter] public RenderFragment<DataGridSortState>? HeaderTemplate { get; set; }
     [Parameter] public RenderFragment<TItem>? RowTemplate { get; set; }
+    [Parameter] public RenderFragment<TItem>? RowActionsTemplate { get; set; }
     [Parameter] public IEnumerable<TItem>? Items { get; set; }
     [Parameter] public Func<DataGridCriteria, Task<DataGridResult<TItem>>>? OnRead { get; set; }
     [Parameter] public int PageSize { get; set; } = 10;
     [Parameter] public bool AutoLoad { get; set; } = true;
     [Parameter] public string EmptyText { get; set; } = "Sin registros";
     [Parameter] public bool EnableSearch { get; set; } = true;
+    [Parameter] public IReadOnlyList<DataGridFilterDefinition>? FilterDefinitions { get; set; }
 
     private bool IsServerMode => OnRead is not null;
 
@@ -133,6 +168,17 @@
 
     protected override void OnParametersSet()
     {
+        if (FilterDefinitions is not null)
+        {
+            foreach (var def in FilterDefinitions)
+            {
+                if (!_filterValues.ContainsKey(def.Field))
+                {
+                    _filterValues[def.Field] = null;
+                }
+            }
+        }
+
         if (!IsServerMode)
         {
             LoadFromParameters();
@@ -241,6 +287,29 @@
             filtered = SortEnumerable(filtered, _criteria.SortField!, _criteria.SortDescending).ToList();
         }
 
+        if (_criteria.Filters is not null && _criteria.Filters.Count > 0)
+        {
+            foreach (var filter in _criteria.Filters)
+            {
+                if (string.IsNullOrWhiteSpace(filter.Value))
+                {
+                    continue;
+                }
+
+                var prop = typeof(TItem).GetProperty(filter.Key);
+                if (prop is null)
+                {
+                    continue;
+                }
+
+                filtered = filtered.Where(item =>
+                {
+                    var val = prop.GetValue(item)?.ToString();
+                    return val?.Contains(filter.Value, StringComparison.OrdinalIgnoreCase) ?? false;
+                }).ToList();
+            }
+        }
+
         return filtered
             .Skip(_criteria.PageIndex * PageSize)
             .Take(PageSize)
@@ -258,5 +327,38 @@
         return descending
             ? source.OrderByDescending(x => prop.GetValue(x, null))
             : source.OrderBy(x => prop.GetValue(x, null));
+    }
+
+    private void ToggleFilters() => _showFilters = !_showFilters;
+
+    private string? GetFilterValue(string field) =>
+        _filterValues.TryGetValue(field, out var value) ? value : null;
+
+    private void OnFilterChanged(string field, string? value)
+    {
+        _filterValues[field] = value;
+    }
+
+    private async Task ApplyFiltersAsync()
+    {
+        var filters = _filterValues
+            .Where(kv => !string.IsNullOrWhiteSpace(kv.Value))
+            .ToDictionary(kv => kv.Key, kv => kv.Value, StringComparer.OrdinalIgnoreCase);
+
+        _criteria = _criteria with
+        {
+            PageIndex = 0,
+            Filters = filters.Count == 0 ? null : filters
+        };
+
+        if (IsServerMode)
+        {
+            await ReloadAsync();
+        }
+        else
+        {
+            _items = ApplyLocalTransformations(_sourceItems);
+            StateHasChanged();
+        }
     }
 }

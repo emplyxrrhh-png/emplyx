@@ -6,27 +6,27 @@
       "command": "dotnet",
       "type": "process",
       "args": [
-        "build",
-        "${workspaceFolder}/Emplyx.WebApp/Emplyx.WebApp.csproj",
-        "-c",
-        "Debug"
-      ],
-      "problemMatcher": ["$msCompile"],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      }
-    },
-    {
-      "label": "kill-port-5001",
-      "type": "shell",
-      "command": "powershell",
-      "args": [
-        "-NoProfile",
-        "-ExecutionPolicy",
-        "Bypass",
-        "-Command",
-        "$pids = (netstat -ano | Select-String ':5001 ' | ForEach-Object { ($_ -split '\\s+')[-1] } | Sort-Object -Unique); if ($pids) { $pids | ForEach-Object { Try { Stop-Process -Id $_ -Force -ErrorAction SilentlyContinue; Write-Output \"Killed PID $_\" } Catch { Write-Output \"Could not kill PID $_\" } } } else { Write-Output 'No process listening on :5001' }"
+        },
+        {
+          "label": "run-emplyx-https",
+          "type": "process",
+          "command": "dotnet",
+          "args": [
+            "run",
+            "--project",
+            "${workspaceFolder}/Emplyx.WebApp/Emplyx.WebApp.csproj",
+            "-c",
+            "Debug",
+            "--urls",
+            "https://localhost:5001"
+          ],
+          "dependsOn": ["kill-port-5001"],
+          "presentation": {
+            "echo": true,
+            "reveal": "always",
+            "panel": "new"
+          }
+        }
       ],
       "presentation": {
         "echo": true,
@@ -41,7 +41,7 @@
       "args": [
         "run",
         "--project",
-        "${workspaceFolder}/Emplyx.WebApp/Emplyx.WebApp.csproj",
+        "${workspaceFolder}/Emplyx.Blazor/Emplyx.Blazor.csproj",
         "-c",
         "Debug",
         "--urls",

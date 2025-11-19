@@ -1,11 +1,15 @@
 @page "/"
+@using Emplyx.Blazor.Services.Employees
+@using Emplyx.Shared.Employees
+@using Emplyx.Shared.UI.DataGrid
 
 <PageTitle>Emplyx UI</PageTitle>
 
-<h1>Emplyx UI · Iteracion 0</h1>
+<h1>Emplyx UI - Iteracion 0</h1>
 <p>
     Esta vista resume los pilares iniciales de la migracion descrita en <code>docs/Migracion Emplyx 4.0.md</code>.
     Avanzamos sobre la infraestructura, el tema visual y la definicion de adaptadores antes de abordar pantallas.
+    El bloque inferior ya consume los contratos v0.1 para Employees definidos en el inventario 11.1.
 </p>
 
 <div class="dashboard-grid">
@@ -21,7 +25,7 @@
         <h3>Adaptadores (P0)</h3>
         <ul>
             <li>ApiAdapterClient con envelope {ok,data,meta,error}.</li>
-            <li>Headers multi-tenant automáticos (tenant/company/unit/culture/timezone).</li>
+            <li>Headers multi-tenant automaticos (tenant/company/unit/culture/timezone).</li>
             <li>Configuracion via <code>ApiAdapter</code> en appsettings.</li>
         </ul>
     </section>
@@ -36,39 +40,70 @@
 </div>
 
 <div class="mt-4">
-    <AppDataGrid TItem="SampleEmployeeRow"
+    <AppDataGrid TItem="EmployeeListItem"
                  Title="Prioridad - Employees"
-                 SubTitle="Datos simulados con AppDataGrid server-ready"
+                 SubTitle="Datos obtenidos desde EmployeesMockDataSource (contratos v0.1)"
                  OnRead="LoadEmployees"
                  PageSize="4"
-                 EnableSearch="true">
+                 EnableSearch="true"
+                 FilterDefinitions="@_employeeFilters">
         <HeaderTemplate Context="sort">
             <tr>
                 <th>
-                    <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(SampleEmployeeRow.Name))">
-                        Nombre @SortIcon(sort, nameof(SampleEmployeeRow.Name))
+                    <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(EmployeeListItem.DisplayName))">
+                        Nombre @SortIcon(sort, nameof(EmployeeListItem.DisplayName))
                     </button>
                 </th>
                 <th>
-                    <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(SampleEmployeeRow.Module))">
-                        Modulo @SortIcon(sort, nameof(SampleEmployeeRow.Module))
+                    <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(EmployeeListItem.PrimaryRole))">
+                        Rol @SortIcon(sort, nameof(EmployeeListItem.PrimaryRole))
                     </button>
                 </th>
                 <th>
-                    <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(SampleEmployeeRow.Status))">
-                        Estado @SortIcon(sort, nameof(SampleEmployeeRow.Status))
+                    <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(EmployeeListItem.Status))">
+                        Estado @SortIcon(sort, nameof(EmployeeListItem.Status))
                     </button>
                 </th>
-                <th>Rol</th>
+                <th>Codigo</th>
+                <th></th>
             </tr>
         </HeaderTemplate>
         <RowTemplate Context="row">
-            <td>@row.Name</td>
-            <td>@row.Module</td>
-            <td><span class="badge bg-secondary">@row.Status</span></td>
-            <td>@row.Role</td>
+            <td>
+                <div class="fw-semibold">@row.DisplayName</div>
+                <div class="text-muted small">
+                    @foreach (var group in row.Groups)
+                    {
+                        <span class="badge rounded-pill text-bg-light me-1 mb-1">@group.Name</span>
+                    }
+                </div>
+            </td>
+            <td>@row.PrimaryRole</td>
+            <td>
+                <span class="badge @(row.Enabled ? "bg-success-subtle text-success" : "bg-secondary")">@row.Status</span>
+                @if (row.HasForgottenRight)
+                {
+                    <span class="badge bg-warning-subtle text-warning ms-1">Forgotten right</span>
+                }
+            </td>
+            <td>
+                <div>@row.Code</div>
+                <small class="text-muted text-uppercase">@row.Language</small>
+            </td>
         </RowTemplate>
+        <RowActionsTemplate Context="row">
+            <button class="btn btn-sm btn-outline-primary" @onclick="() => ShowEmployeeToast(row)">Accion</button>
+        </RowActionsTemplate>
     </AppDataGrid>
+</div>
+
+<div class="mt-4">
+    <AppSelector TValue="EmployeeLookupItem"
+                 Label="Selector de empleados (multi)"
+                 Placeholder="Buscar empleado"
+                 IsMulti="true"
+                 Provider="LoadEmployeeSelector"
+                 LabelSelector="@(item => item.DisplayName)" />
 </div>
 
 <div class="mt-3 d-flex gap-2 flex-wrap">
@@ -80,15 +115,77 @@
     </button>
 </div>
 
+<div class="mt-4">
+    <AppTasksQueue Title="Cola de tareas"
+                   SubTitle="Datos simulados"
+                   Items="@_taskQueue"
+                   OnRetry="RetryTask" />
+</div>
+
 @code {
     [Inject] private AppUiMessagingService MessagingService { get; set; } = default!;
-    [Inject] private SampleEmployeesDataService EmployeesData { get; set; } = default!;
+    [Inject] private IEmployeesDataSource EmployeesData { get; set; } = default!;
+    [Inject] private SampleTasksQueueService TasksQueueService { get; set; } = default!;
+
+    private readonly IReadOnlyList<DataGridFilterDefinition> _employeeFilters =
+        new List<DataGridFilterDefinition>
+        {
+            new("module", "Dominio/Rol", "Ej.: Scheduler, Security"),
+            new("status", "Estado", "Activo, Inactivo, Suspendido"),
+            new("group", "Grupo", "GRP-HQ, Operaciones..."),
+            new("forgotten", "Forgotten right", "si/no")
+        };
+
+    private IReadOnlyList<TaskQueueItem> _taskQueue = Array.Empty<TaskQueueItem>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _taskQueue = await TasksQueueService.GetQueueAsync();
+    }
+
+    private async Task<DataGridResult<EmployeeListItem>> LoadEmployees(DataGridCriteria criteria)
+    {
+        var request = BuildRequest(criteria);
+        var response = await EmployeesData.GetAsync(request);
+        return new DataGridResult<EmployeeListItem>(response.Items, response.TotalCount);
+    }
+
+    private Task<IReadOnlyList<EmployeeLookupItem>> LoadEmployeeSelector(string? term, CancellationToken token) =>
+        EmployeesData.SearchAsync(term, token);
+
+    private EmployeeListRequest BuildRequest(DataGridCriteria criteria)
+    {
+        string? status = null;
+        string? module = null;
+        string? group = null;
+        bool? hasForgotten = null;
+
+        if (criteria.Filters is not null)
+        {
+            criteria.Filters.TryGetValue("status", out status);
+            criteria.Filters.TryGetValue("module", out module);
+            criteria.Filters.TryGetValue("group", out group);
+
+            if (criteria.Filters.TryGetValue("forgotten", out var forgotten) && !string.IsNullOrWhiteSpace(forgotten))
+            {
+                var normalized = forgotten.Trim().ToLowerInvariant();
+                hasForgotten = normalized switch
+                {
+                    "si" or "true" or "1" => true,
+                    "no" or "false" or "0" => false,
+                    _ => null
+                };
+            }
+        }
+
+        return EmployeeListRequest.FromCriteria(criteria, status, group, module, hasForgotten);
+    }
 
     private async Task ShowConfirm()
     {
         await MessagingService.ShowConfirmationAsync(
             "Confirmar accion",
-            "Este es un ejemplo de AppMessageBox/ConfirmDialog. ¿Continuar?",
+            "Este es un ejemplo de AppMessageBox/ConfirmDialog. Continuar?",
             "Si, continuar",
             "Cancelar");
     }
@@ -101,8 +198,22 @@
             UiNotificationLevel.Success));
     }
 
-    private Task<DataGridResult<SampleEmployeeRow>> LoadEmployees(DataGridCriteria criteria) =>
-        EmployeesData.GetEmployeesAsync(criteria);
+    private Task RetryTask(TaskQueueItem item)
+    {
+        MessagingService.ShowToast(new AppToastOptions(
+            "Reintento programado",
+            $"Se reintento la tarea {item.Id}.",
+            UiNotificationLevel.Info));
+        return Task.CompletedTask;
+    }
+
+    private void ShowEmployeeToast(EmployeeListItem row)
+    {
+        MessagingService.ShowToast(new AppToastOptions(
+            "Accion ejecutada",
+            $"Se accedio al empleado {row.DisplayName} ({row.Code}).",
+            UiNotificationLevel.Success));
+    }
 
     private static MarkupString SortIcon(DataGridSortState sort, string field)
     {

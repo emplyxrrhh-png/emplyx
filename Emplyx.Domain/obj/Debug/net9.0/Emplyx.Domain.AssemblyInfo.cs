@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Emplyx.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+625259834ae2dd9c7356bdd042930069f09838bd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11fae774a82bc593dde6dfea80f1728b256076f6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Emplyx.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Emplyx.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

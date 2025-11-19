@@ -1,0 +1,134 @@
+@page "/access/events"
+
+@inject IAccessEventsDataSource AccessEventsData
+@inject AppUiMessagingService Messaging
+
+<PageTitle>Access Events</PageTitle>
+
+<div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
+    <div>
+        <h1 class="h3 mb-0">Access Events</h1>
+        <p class="text-muted mb-0">Replica srEventsScheduler (copy/delete) con filtros.</p>
+    </div>
+    <div class="d-flex gap-2">
+        <button class="btn btn-outline-secondary btn-sm" @onclick="ReloadAsync">
+            <i class="bi bi-arrow-repeat"></i> Actualizar
+        </button>
+    </div>
+</div>
+
+<AppDataGrid TItem="AccessEventListItem"
+             Title="Eventos programados"
+             SubTitle="Datos mock basados en srvEventsScheduler.ashx"
+             OnRead="LoadEvents"
+             PageSize="10"
+             EnableSearch="true"
+             FilterDefinitions="@_filters">
+    <HeaderTemplate Context="sort">
+        <tr>
+            <th>
+                <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(AccessEventListItem.Name))">
+                    Evento @SortIcon(sort, nameof(AccessEventListItem.Name))
+                </button>
+            </th>
+            <th>Zona</th>
+            <th>Grupo</th>
+            <th>
+                <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(AccessEventListItem.ScheduledDate))">
+                    Fecha @SortIcon(sort, nameof(AccessEventListItem.ScheduledDate))
+                </button>
+            </th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+    </HeaderTemplate>
+    <RowTemplate Context="row">
+        <td>@row.Name</td>
+        <td>@row.ZoneName</td>
+        <td>@row.GroupName</td>
+        <td>@row.ScheduledDate.ToLocalTime().ToString("g")</td>
+        <td>
+            <span class="badge bg-secondary">@row.Status</span>
+        </td>
+    </RowTemplate>
+    <RowActionsTemplate Context="row">
+        <div class="btn-group btn-group-sm">
+            <button class="btn btn-outline-primary" @onclick="() => CopyEvent(row)" disabled="@(row.AllowsCopy is false)">Copiar</button>
+            <button class="btn btn-outline-danger" @onclick="() => DeleteEvent(row)" disabled="@(row.AllowsDelete is false)">Borrar</button>
+        </div>
+    </RowActionsTemplate>
+</AppDataGrid>
+
+@code {
+    private readonly IReadOnlyList<DataGridFilterDefinition> _filters =
+        new List<DataGridFilterDefinition>
+        {
+            new("zone", "Zona", "Lobby, Dock, etc."),
+            new("group", "Grupo", "HQ, Operaciones"),
+            new("status", "Estado", "Programado/Finalizado")
+        };
+
+    private async Task<DataGridResult<AccessEventListItem>> LoadEvents(DataGridCriteria criteria)
+    {
+        var request = BuildRequest(criteria);
+        var response = await AccessEventsData.GetAsync(request);
+        return new DataGridResult<AccessEventListItem>(response.Items, response.TotalCount);
+    }
+
+    private AccessEventListRequest BuildRequest(DataGridCriteria criteria)
+    {
+        string? zone = null;
+        string? group = null;
+        string? status = null;
+
+        if (criteria.Filters is not null)
+        {
+            criteria.Filters.TryGetValue("zone", out zone);
+            criteria.Filters.TryGetValue("group", out group);
+            criteria.Filters.TryGetValue("status", out status);
+        }
+
+        return AccessEventListRequest.FromCriteria(criteria, zone, group, status);
+    }
+
+    private async Task ReloadAsync() => await InvokeAsync(StateHasChanged);
+
+    private async Task CopyEvent(AccessEventListItem row)
+    {
+        var confirm = await Messaging.ShowConfirmationAsync(
+            "Copiar evento",
+            $"Copiar {row.Name}? (POST /access/events/{row.Id}:copy)",
+            "Si, copiar",
+            "Cancelar");
+
+        if (confirm is true)
+        {
+            Messaging.ShowToast(new AppToastOptions("Copiado", $"{row.Name} duplicado.", UiNotificationLevel.Success));
+        }
+    }
+
+    private async Task DeleteEvent(AccessEventListItem row)
+    {
+        var confirm = await Messaging.ShowConfirmationAsync(
+            "Borrar evento",
+            $"Eliminar {row.Name}? (POST /access/events/{row.Id}:delete)",
+            "Si, borrar",
+            "Cancelar");
+
+        if (confirm is true)
+        {
+            Messaging.ShowToast(new AppToastOptions("Eliminado", $"{row.Name} eliminado.", UiNotificationLevel.Warning));
+        }
+    }
+
+    private static MarkupString SortIcon(DataGridSortState sort, string field)
+    {
+        if (sort.Field != field)
+        {
+            return new MarkupString(string.Empty);
+        }
+
+        var icon = sort.Descending ? "bi-caret-down-fill" : "bi-caret-up-fill";
+        return new MarkupString($"<i class=\"bi {icon} ms-1\"></i>");
+    }
+}
