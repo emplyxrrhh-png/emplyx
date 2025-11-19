@@ -5,14 +5,24 @@ using Emplyx.Blazor.Services.Access;
 using Emplyx.Blazor.Services.Scheduler;
 using Emplyx.Shared.UI;
 using Microsoft.ApplicationInsights.Extensibility;
+using Microsoft.Extensions.Options;
+using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddLocalization();
+// Localization configuration
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+builder.Services.AddApplicationInsightsTelemetry(); // instrumentation key via configuration
+var supportedCultures = new[] { new CultureInfo("es-ES"), new CultureInfo("en-US") };
+builder.Services.Configure<RequestLocalizationOptions>(opts =>
+{
+    opts.DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture("es-ES");
+    opts.SupportedCultures = supportedCultures;
+    opts.SupportedUICultures = supportedCultures;
+});
 
-builder.Services.AddApplicationInsightsTelemetry();
 builder.Services.AddScoped<TenantContextState>();
 builder.Services.AddScoped<ITenantContextAccessor>(sp => sp.GetRequiredService<TenantContextState>());
 builder.Services.AddScoped<AppUiMessagingService>();
@@ -36,14 +46,13 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+// Localization middleware
+app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
 
 app.UseHttpsRedirection();
-
 app.UseStaticFiles();
-
 app.UseRouting();
 
 app.MapBlazorHub();
