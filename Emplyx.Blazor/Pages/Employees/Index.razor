@@ -4,31 +4,31 @@
 @using Emplyx.Shared.UI.DataGrid
 @using Emplyx.Shared.UI.Selectors
 @using Emplyx.Shared.UI.Tasks
-
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Emplyx.Blazor.Resources.SharedResources> L
 @inject IEmployeesDataSource EmployeesData
 @inject SampleTasksQueueService TasksQueueService
 @inject AppUiMessagingService MessagingService
 
-<PageTitle>Employees</PageTitle>
+<PageTitle>@L["Employees.Title"]</PageTitle>
 
 <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
     <div>
-        <h1 class="h3 mb-0">Employees</h1>
+        <h1 class="h3 mb-0">@L["Employees.Title"]</h1>
         <p class="text-muted mb-0">Listado migrado desde Employees/Employees.aspx con filtros server-side.</p>
     </div>
     <div class="d-flex gap-2">
         <button class="btn btn-primary btn-sm" @onclick="ShowCreateToast">
-            <i class="bi bi-plus-circle"></i> Nuevo empleado
+            <i class="bi bi-plus-circle"></i> @L["Employees.New"]
         </button>
         <button class="btn btn-outline-secondary btn-sm" @onclick="ReloadAsync">
-            <i class="bi bi-arrow-repeat"></i> Actualizar
+            <i class="bi bi-arrow-repeat"></i> @L["Employees.Refresh"]
         </button>
     </div>
 </div>
 
 <AppDataGrid TItem="EmployeeListItem"
-             Title="Empleados"
-             SubTitle="Contratos v0.1 (GET /employees)"
+             Title="@L[\"Employees.Grid.Title\"]"
+             SubTitle="@L[\"Employees.Grid.SubTitle\"]"
              OnRead="LoadEmployees"
              PageSize="10"
              EnableSearch="true"
@@ -37,16 +37,16 @@
         <tr>
             <th>
                 <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(EmployeeListItem.DisplayName))">
-                    Nombre @SortIcon(sort, nameof(EmployeeListItem.DisplayName))
+                    @L["Employees.Grid.Column.Name"] @SortIcon(sort, nameof(EmployeeListItem.DisplayName))
                 </button>
             </th>
             <th>
                 <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(EmployeeListItem.PrimaryRole))">
-                    Dominio/Rol @SortIcon(sort, nameof(EmployeeListItem.PrimaryRole))
+                    @L["Employees.Grid.Column.Role"] @SortIcon(sort, nameof(EmployeeListItem.PrimaryRole))
                 </button>
             </th>
-            <th>Estado</th>
-            <th>Codigo</th>
+            <th>@L["Employees.Grid.Column.Status"]</th>
+            <th>@L["Employees.Grid.Column.Code"]</th>
             <th></th>
         </tr>
     </HeaderTemplate>
@@ -56,7 +56,7 @@
             <div class="text-muted small">
                 @if (row.Groups.Count == 0)
                 {
-                    <span class="badge rounded-pill text-bg-light">Sin grupo</span>
+                    <span class="badge rounded-pill text-bg-light">@L["Employees.EmptyGroup"]</span>
                 }
                 else
                 {
@@ -108,10 +108,10 @@
     private readonly IReadOnlyList<DataGridFilterDefinition> _filters =
         new List<DataGridFilterDefinition>
         {
-            new("module", "Dominio/Rol", "Ej.: Scheduler, Access"),
-            new("status", "Estado", "Activo, Inactivo, Suspendido"),
-            new("group", "Grupo", "GRP-HQ, Operaciones..."),
-            new("forgotten", "Forgotten right", "si/no")
+            new("module", L["Employees.Filter.Module"], "Ej.: Scheduler, Access"),
+            new("status", L["Employees.Filter.Status"], "Activo, Inactivo, Suspendido"),
+            new("group", L["Employees.Filter.Group"], "GRP-HQ, Operaciones..."),
+            new("forgotten", L["Employees.Filter.Forgotten"], "si/no")
         };
 
     private IReadOnlyList<TaskQueueItem> _tasks = Array.Empty<TaskQueueItem>();
@@ -171,16 +171,16 @@
     private async Task AskDelete(EmployeeListItem row)
     {
         var confirmed = await MessagingService.ShowConfirmationAsync(
-            "Confirmar borrado",
-            $"Borrar al empleado {row.DisplayName}? Esta accion simula DELETE /employees/{row.Id}.",
-            "Si, borrar",
-            "Cancelar");
+            L["Employees.Delete.Confirm.Title"],
+            string.Format(L["Employees.Delete.Confirm.Message"], row.DisplayName, row.Id),
+            L["Employees.Delete.Confirm.Accept"],
+            L["Employees.Delete.Confirm.Cancel"]);
 
         if (confirmed is true)
         {
             MessagingService.ShowToast(new AppToastOptions(
-                "Eliminado (simulado)",
-                $"{row.DisplayName} fue eliminado.",
+                L["Employees.Delete.Done.Title"],
+                string.Format(L["Employees.Delete.Done.Message"], row.DisplayName),
                 UiNotificationLevel.Warning));
         }
     }
