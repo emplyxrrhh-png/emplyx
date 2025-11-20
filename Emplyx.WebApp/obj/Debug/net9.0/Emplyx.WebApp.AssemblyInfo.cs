@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Emplyx.WebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65ca1e2e09115a102b4c6061ea73a366be47c700")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1907f51b5382e5cc881d8f2a910b1dfdff4c503c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Emplyx.WebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Emplyx.WebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
