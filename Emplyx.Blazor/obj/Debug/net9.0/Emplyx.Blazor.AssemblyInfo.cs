@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Emplyx.Blazor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ae1c666c2167399ab857b8c49d3aa8d5037861f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e5f37ae946af87b7df283b828999ccd74a5bb92")]
 [assembly: System.Reflection.AssemblyProductAttribute("Emplyx.Blazor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Emplyx.Blazor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

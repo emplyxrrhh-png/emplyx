@@ -1,6 +1,8 @@
 @page "/access"
 @page "/access/groups"
 @using Emplyx.Blazor.Services.Access
+@using Emplyx.Shared.UI.Telemetry
+@inject UiTelemetry Telemetry
 
 <PageTitle>Access Groups</PageTitle>
 
@@ -123,17 +125,34 @@
         };
 
     private IReadOnlyList<TaskQueueItem> _tasks = Array.Empty<TaskQueueItem>();
+    private string _viewCorrelationId = string.Empty;
 
     protected override async Task OnInitializedAsync()
     {
+        _viewCorrelationId = Telemetry.NewCorrelationId();
+        Telemetry.TrackViewOpened("/access/groups", _viewCorrelationId);
         _tasks = await TasksQueueService.GetQueueAsync();
     }
 
     private async Task<DataGridResult<AccessGroupListItem>> LoadGroups(DataGridCriteria criteria)
     {
-        var request = BuildRequest(criteria);
-        var response = await AccessGroupsData.GetAsync(request);
-        return new DataGridResult<AccessGroupListItem>(response.Items, response.TotalCount);
+        var correlation = Telemetry.NewCorrelationId();
+        Telemetry.TrackDataLoadStarted("access_groups", "/access/groups", correlation);
+        var sw = System.Diagnostics.Stopwatch.StartNew();
+        try
+        {
+            var request = BuildRequest(criteria);
+            var response = await AccessGroupsData.GetAsync(request);
+            sw.Stop();
+            Telemetry.TrackDataLoadCompleted("access_groups", "/access/groups", true, sw.ElapsedMilliseconds, correlation);
+            return new DataGridResult<AccessGroupListItem>(response.Items, response.TotalCount);
+        }
+        catch (Exception ex)
+        {
+            sw.Stop();
+            Telemetry.TrackDataLoadCompleted("access_groups", "/access/groups", false, sw.ElapsedMilliseconds, correlation, ex.GetType().Name);
+            throw;
+        }
     }
 
     private Task<IReadOnlyList<AccessGroupLookupItem>> SearchGroups(string? term, CancellationToken token) =>
@@ -166,13 +185,23 @@
         return AccessGroupListRequest.FromCriteria(criteria, zone, period, status, pending);
     }
 
-    private async Task ReloadAsync() => await InvokeAsync(StateHasChanged);
+    private async Task ReloadAsync()
+    {
+        Telemetry.TrackActionClicked("groups.reload", "/access/groups", _viewCorrelationId);
+        await InvokeAsync(StateHasChanged);
+    }
 
-    private void ViewGroup(AccessGroupListItem group) =>
+    private void ViewGroup(AccessGroupListItem group)
+    {
         Messaging.ShowToast(new AppToastOptions("Detalle", $"Abrir tabs para {group.Name}.", UiNotificationLevel.Info));
+        Telemetry.TrackActionClicked("group.view", "/access/groups", _viewCorrelationId);
+    }
 
-    private void CopyGroup(AccessGroupListItem group) =>
+    private void CopyGroup(AccessGroupListItem group)
+    {
         Messaging.ShowToast(new AppToastOptions("Copiar grupo", $"Simula POST /access/groups/{group.Id}:copy.", UiNotificationLevel.Success));
+        Telemetry.TrackActionClicked("group.copy", "/access/groups", _viewCorrelationId);
+    }
 
     private async Task DeleteGroup(AccessGroupListItem group)
     {
@@ -185,15 +214,24 @@
         if (confirm is true)
         {
             Messaging.ShowToast(new AppToastOptions("Eliminado", $"{group.Name} se marcara para borrado.", UiNotificationLevel.Warning));
+            Telemetry.TrackDeleteConfirmed("access_group", group.Id.ToString(), "/access/groups", _viewCorrelationId);
+        }
+        else
+        {
+            Telemetry.TrackActionClicked("group.delete.cancel", "/access/groups", _viewCorrelationId);
         }
     }
 
-    private void CreateGroup() =>
+    private void CreateGroup()
+    {
         Messaging.ShowToast(new AppToastOptions("Nuevo grupo", "Abrir wizard AccessGroups/New.", UiNotificationLevel.Success));
+        Telemetry.TrackActionClicked("group.create", "/access/groups", _viewCorrelationId);
+    }
 
     private async Task RetryTask(TaskQueueItem task)
     {
         Messaging.ShowToast(new AppToastOptions("Reintento", $"Se reintento la tarea {task.Id}.", UiNotificationLevel.Info));
+        Telemetry.TrackActionClicked("task.retry", "/access/groups", _viewCorrelationId);
         await Task.CompletedTask;
     }
 

@@ -1,0 +1,72 @@
+@using Emplyx.Blazor.Services
+@using Emplyx.Shared.UI.Telemetry
+@inject DownloadClient Downloader
+@inject UiTelemetry Telemetry
+
+<button class="btn btn-outline-secondary btn-sm" disabled="@IsBusy" @onclick="OnClickAsync">
+    @if (IsBusy)
+    {
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        <span class="ms-1">Descargando...</span>
+    }
+    else if (ErrorCode is not null)
+    {
+        <i class="bi bi-exclamation-triangle"></i>@: Reintentar
+    }
+    else
+    {
+        <i class="bi bi-download"></i> @Label
+    }
+</button>
+@if (ErrorCode is not null)
+{
+    <div class="text-danger small mt-1">Error: @ErrorCode</div>
+}
+
+@code {
+    [Parameter] public string Endpoint { get; set; } = string.Empty;
+    [Parameter] public string Label { get; set; } = "Descargar";
+    [Parameter] public EventCallback<DownloadClient.DownloadResult> OnCompleted { get; set; }
+
+    private bool IsBusy { get; set; }
+    private string? ErrorCode { get; set; }
+
+    private async Task OnClickAsync()
+    {
+        if (IsBusy || string.IsNullOrWhiteSpace(Endpoint)) return;
+        IsBusy = true;
+        ErrorCode = null;
+        StateHasChanged();
+
+        DownloadClient.DownloadResult result;
+        if (Endpoint.Equals("employees/export/mock", StringComparison.OrdinalIgnoreCase))
+        {
+            // local mock CSV without server call
+            var correlation = Telemetry.NewCorrelationId();
+            var csv = "Id,Name,Code\n1,Ana,EMP-001\n2,Carlos,EMP-002";
+            var bytes = System.Text.Encoding.UTF8.GetBytes(csv);
+            result = new DownloadClient.DownloadResult(true, "employees.csv", "text/csv", bytes, null, correlation);
+        }
+        else
+        {
+            result = await Downloader.DownloadAsync(Endpoint);
+        }
+
+        IsBusy = false;
+        ErrorCode = result.Ok ? null : result.ErrorCode;
+        if (result.Ok && result.Bytes is not null)
+        {
+            await TriggerBrowserDownloadAsync(result.FileName ?? "download.bin", result.ContentType ?? "application/octet-stream", result.Bytes);
+        }
+        await OnCompleted.InvokeAsync(result);
+        StateHasChanged();
+    }
+
+    [Inject] private IJSRuntime JS { get; set; } = default!;
+
+    private async Task TriggerBrowserDownloadAsync(string fileName, string contentType, byte[] bytes)
+    {
+        var base64 = Convert.ToBase64String(bytes);
+        await JS.InvokeVoidAsync("(function(n,c,b){const a=document.createElement('a');a.download=n;a.href=`data:${c};base64,${b}`;document.body.appendChild(a);a.click();a.remove();})(arguments[0],arguments[1],arguments[2])", fileName, contentType, base64);
+    }
+}

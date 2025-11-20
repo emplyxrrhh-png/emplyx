@@ -1,6 +1,8 @@
 @page "/scheduler/coverage"
 
 @inject ICoverageSummaryDataSource CoverageData
+@using Emplyx.Shared.UI.Telemetry
+@inject UiTelemetry Telemetry
 
 <PageTitle>Scheduler - Coverage</PageTitle>
 
@@ -62,8 +64,14 @@ else
     private string? _unitFilter;
     private string? _statusFilter;
     private IReadOnlyList<CoverageSummaryItem> _items = Array.Empty<CoverageSummaryItem>();
+    private string _viewCorrelationId = string.Empty;
 
-    protected override async Task OnInitializedAsync() => await LoadAsync();
+    protected override async Task OnInitializedAsync()
+    {
+        _viewCorrelationId = Telemetry.NewCorrelationId();
+        Telemetry.TrackViewOpened("/scheduler/coverage", _viewCorrelationId);
+        await LoadAsync();
+    }
 
     private Task OnFromChanged(DateTime? value)
     {
@@ -85,16 +93,30 @@ else
 
     private async Task LoadAsync()
     {
-        _items = await CoverageData.GetAsync(new CoverageSummaryRequest(_from, _to, _unitFilter, _statusFilter));
+        var correlation = Telemetry.NewCorrelationId();
+        Telemetry.TrackDataLoadStarted("coverage_summary", "/scheduler/coverage", correlation);
+        var sw = System.Diagnostics.Stopwatch.StartNew();
+        try
+        {
+            _items = await CoverageData.GetAsync(new CoverageSummaryRequest(_from, _to, _unitFilter, _statusFilter));
+            sw.Stop();
+            Telemetry.TrackDataLoadCompleted("coverage_summary", "/scheduler/coverage", true, sw.ElapsedMilliseconds, correlation);
+        }
+        catch (Exception ex)
+        {
+            sw.Stop();
+            Telemetry.TrackDataLoadCompleted("coverage_summary", "/scheduler/coverage", false, sw.ElapsedMilliseconds, correlation, ex.GetType().Name);
+        }
     }
 
-    private Task ResetFilters()
+    private async Task ResetFilters()
     {
         _from = DateOnly.FromDateTime(DateTime.Today);
         _to = DateOnly.FromDateTime(DateTime.Today);
         _unitFilter = null;
         _statusFilter = null;
-        return LoadAsync();
+        Telemetry.TrackActionClicked("coverage.reset", "/scheduler/coverage", _viewCorrelationId);
+        await LoadAsync();
     }
 
     private static string StatusBadge(string status) => status.ToLowerInvariant() switch

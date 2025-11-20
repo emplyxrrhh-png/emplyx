@@ -1,5 +1,7 @@
+@attribute [Emplyx.Blazor.Services.Security.RequirePermission("employees.view")]
 @page "/employees"
 @using Emplyx.Blazor.Services.Employees
+@using Emplyx.Blazor.Services
 @using Emplyx.Shared.Employees
 @using Emplyx.Shared.UI.DataGrid
 @using Emplyx.Shared.UI.Selectors
@@ -10,23 +12,38 @@
 @inject SampleTasksQueueService TasksQueueService
 @inject AppUiMessagingService MessagingService
 @inject UiTelemetry Telemetry
+@inject Emplyx.Blazor.Services.Security.IPermissionService Permissions
 
 <PageTitle>@L["Employees.Title"]</PageTitle>
 
 <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
     <div>
         <h1 class="h3 mb-0">@L["Employees.Title"]</h1>
-        <p class="text-muted mb-0">Listado migrado desde Employees/Employees.aspx con filtros server-side.</p>
+        <p class="text-muted mb-0">@L["Employees.Grid.Description"]</p>
     </div>
     <div class="d-flex gap-2">
-        <button class="btn btn-primary btn-sm" @onclick="ShowCreateToast">
+        <button class="btn btn-primary btn-sm" @onclick="ToggleCreate">
             <i class="bi bi-plus-circle"></i> @L["Employees.New"]
         </button>
         <button class="btn btn-outline-secondary btn-sm" @onclick="ReloadAsync">
             <i class="bi bi-arrow-repeat"></i> @L["Employees.Refresh"]
         </button>
+        @if (Permissions.Has("employees.export"))
+        {
+            <AppDownloadButton Endpoint="employees/export/mock" Label="@L["Employees.Export"]" OnCompleted="OnExportCompleted" />
+        }
     </div>
 </div>
+
+@if (_showCreate)
+{
+    <div class="card mb-4">
+        <div class="card-body">
+            <h2 class="h5 mb-3">@L["Employees.Form.Title"]</h2>
+            <EmployeeForm OnSaved="OnEmployeeSaved" OnCancelled="OnEmployeeCancelled" />
+        </div>
+    </div>
+}
 
 <AppDataGrid TItem="EmployeeListItem"
              Title='@L["Employees.Grid.Title"]'
@@ -74,7 +91,7 @@
             <span class="badge @(row.Enabled ? "bg-success-subtle text-success" : "bg-secondary")">@row.Status</span>
             @if (row.HasForgottenRight)
             {
-                <span class="badge bg-warning-subtle text-warning ms-1">Forgotten</span>
+                <span class="badge bg-warning-subtle text-warning ms-1">@L["Employees.Badge.Forgotten"]</span>
             }
         </td>
         <td>
@@ -84,8 +101,8 @@
     </RowTemplate>
     <RowActionsTemplate Context="row">
         <div class="btn-group btn-group-sm">
-            <button class="btn btn-outline-primary" @onclick="() => ShowEmployeeToast(row)">Ver</button>
-            <button class="btn btn-outline-danger" @onclick="() => AskDelete(row)">Borrar</button>
+            <button class="btn btn-outline-primary" @onclick="() => ShowEmployeeToast(row)">@L["Employees.Action.View"]</button>
+            <button class="btn btn-outline-danger" @onclick="() => AskDelete(row)">@L["Employees.Action.Delete"]</button>
         </div>
     </RowActionsTemplate>
 </AppDataGrid>
@@ -93,14 +110,14 @@
 <div class="mt-4 row g-3">
     <div class="col-12 col-lg-6">
         <AppSelector TValue="EmployeeLookupItem"
-                     Label="Asignar a grupo"
-                     Placeholder="Buscar empleado"
+                     Label="@L["Employees.AssignGroup"]"
+                     Placeholder="@L["Employees.SearchEmployee"]"
                      Provider="SearchEmployees"
                      LabelSelector="@(item => item.DisplayName)" />
     </div>
     <div class="col-12 col-lg-6">
-        <AppTasksQueue Title="Tareas recientes"
-                       SubTitle="Simulacion de procesos Employees"
+        <AppTasksQueue Title="@L["Employees.Tasks.Title"]"
+                       SubTitle="@L["Employees.Tasks.SubTitle"]"
                        Items="@_tasks"
                        OnRetry="RetryTask" />
     </div>
@@ -110,6 +127,7 @@
     private List<DataGridFilterDefinition> _filters = new();
     private IReadOnlyList<TaskQueueItem> _tasks = Array.Empty<TaskQueueItem>();
     private string _viewCorrelationId = string.Empty;
+    private bool _showCreate = false;
 
     protected override async Task OnInitializedAsync()
     {
@@ -181,8 +199,8 @@
     private void ShowEmployeeToast(EmployeeListItem row)
     {
         MessagingService.ShowToast(new AppToastOptions(
-            "Detalle",
-            $"Abrir detalle para {row.DisplayName} ({row.Code}).",
+            L["Employees.Detail.Title"],
+            string.Format(L["Employees.Detail.Message"], row.DisplayName, row.Code),
             UiNotificationLevel.Info));
         Telemetry.TrackActionClicked("view.details", "/employees", _viewCorrelationId);
     }
@@ -212,20 +230,63 @@
     private async Task RetryTask(TaskQueueItem item)
     {
         MessagingService.ShowToast(new AppToastOptions(
-            "Reintento programado",
-            $"Se volvio a ejecutar la tarea {item.Id}.",
+            L["Employees.Tasks.Retry"],
+            string.Format(L["Employees.Tasks.Retry.Message"], item.Id),
             UiNotificationLevel.Info));
         Telemetry.TrackActionClicked("task.retry", "/employees", _viewCorrelationId);
         await Task.CompletedTask;
     }
 
+    private void ToggleCreate()
+    {
+        _showCreate = !_showCreate;
+        if (_showCreate)
+        {
+            Telemetry.TrackActionClicked("employee.create.show", "/employees", _viewCorrelationId);
+        }
+        else
+        {
+            Telemetry.TrackActionClicked("employee.create.cancel", "/employees", _viewCorrelationId, ok: true);
+        }
+    }
+
+    private async Task OnEmployeeSaved()
+    {
+        MessagingService.ShowToast(new AppToastOptions(
+            L["Employees.Save.Done.Title"],
+            L["Employees.Save.Done.Message"],
+            UiNotificationLevel.Success));
+        Telemetry.TrackActionClicked("employee.created", "/employees", _viewCorrelationId);
+        _showCreate = false;
+        await ReloadAsync();
+    }
+
     private void ShowCreateToast()
     {
         MessagingService.ShowToast(new AppToastOptions(
-            "Nuevo empleado",
-            "Abrir formulario de creacion (pendiente AppForm/AppField).",
+            L["Employees.Create.Title"],
+            L["Employees.Create.Message"],
             UiNotificationLevel.Success));
         Telemetry.TrackActionClicked("employee.create.new", "/employees", _viewCorrelationId);
+    }
+
+    private async Task OnExportCompleted(DownloadClient.DownloadResult result)
+    {
+        Telemetry.TrackDownloadCompleted("employees_export", "mock", "/employees", result.Ok, null, result.CorrelationId, result.ErrorCode);
+        if (result.Ok)
+        {
+            MessagingService.ShowToast(new AppToastOptions(
+                L["Employees.Export.Done.Title"],
+                L["Employees.Export.Done.Message"],
+                UiNotificationLevel.Success));
+        }
+        else
+        {
+            MessagingService.ShowToast(new AppToastOptions(
+                L["Employees.Export.Error.Title"],
+                string.Format(L["Employees.Export.Error.Message"], result.ErrorCode),
+                UiNotificationLevel.Danger));
+        }
     }
 
     private static MarkupString SortIcon(DataGridSortState sort, string field)

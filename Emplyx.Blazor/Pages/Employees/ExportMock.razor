@@ -1,0 +1,21 @@
+@page "/employees/export/mock"
+@inject NavigationManager Nav
+@inject Emplyx.Blazor.Services.DownloadClient Downloader
+@inject Emplyx.Shared.UI.Telemetry.UiTelemetry Telemetry
+@inject Emplyx.Blazor.Services.AppUiMessagingService Messaging
+
+@code {
+    protected override Task OnInitializedAsync()
+    {
+        var correlation = Telemetry.NewCorrelationId();
+        var csv = "Id,Name,Code\n1,Ana,EMP-001\n2,Carlos,EMP-002";
+        // Show toast then navigate back
+        Messaging.ShowToast(new Emplyx.Shared.UI.Notifications.AppToastOptions(
+            "Export listo",
+            "CSV generado localmente.",
+            Emplyx.Shared.UI.Notifications.UiNotificationLevel.Success,
+            3000));
+        Nav.NavigateTo("/employees");
+        return Task.CompletedTask;
+    }
+}

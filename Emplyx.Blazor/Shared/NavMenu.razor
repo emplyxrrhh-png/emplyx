@@ -1,11 +1,14 @@
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Emplyx.Blazor.Resources.SharedResources> T
+@inject Emplyx.Blazor.Services.Features.IFeatureFlags Flags
 <nav>
     <ul class="nav-menu">
         @foreach (var item in _items)
         {
+            if (!IsVisible(item)) { continue; }
             <li>
                 <NavLink class="nav-link" href="@item.Href" Match="item.Match">
                     <i class="bi @item.Icon"></i>
-                    <span>@L[item.Label]</span>
+                    <span>@T[item.Label]</span>
                     @if (!string.IsNullOrWhiteSpace(item.Badge))
                     {
                         <span class="badge bg-primary">@item.Badge</span>
@@ -21,8 +24,8 @@
     {
         new("/", "bi-grid", "Nav.Panel", NavLinkMatch.All),
         new("/employees", "bi-people", "Nav.Employees"),
-        new("/access", "bi-shield-lock", "Nav.Access"),
-        new("/scheduler", "bi-calendar3", "Nav.Scheduler"),
+        new("/access/groups", "bi-shield-lock", "Nav.Access"),
+        new("/scheduler/coverage", "bi-calendar3", "Nav.Scheduler"),
         new("/alerts", "bi-bell", "Nav.Alerts"),
         new("/security", "bi-key", "Nav.Security"),
         new("/terminals", "bi-hdd-network", "Nav.Terminals"),
@@ -31,4 +34,14 @@
     };
 
     private sealed record NavItem(string Href, string Icon, string Label, NavLinkMatch Match = NavLinkMatch.Prefix, string? Badge = null);
+
+    private bool IsVisible(NavItem item)
+    {
+        if (item.Href.StartsWith("/employees") && !Flags.Employees) return false;
+        if (item.Href.StartsWith("/access") && !Flags.Access) return false;
+        if (item.Href.StartsWith("/scheduler") && !Flags.Scheduler) return false;
+        if (item.Href.StartsWith("/alerts") && !Flags.Alerts) return false;
+        if (item.Href.StartsWith("/security") && !Flags.Security) return false;
+        return true;
+    }
 }

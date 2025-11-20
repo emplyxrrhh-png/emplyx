@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Emplyx.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65ca1e2e09115a102b4c6061ea73a366be47c700")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e5f37ae946af87b7df283b828999ccd74a5bb92")]
 [assembly: System.Reflection.AssemblyProductAttribute("Emplyx.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Emplyx.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
