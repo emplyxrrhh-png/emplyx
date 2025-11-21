@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Emplyx.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+646b9d83ea87976fe7a472802458d8f2f3b222b4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b535d0db9e720da01f0bea955e98e9c92423814")]
 [assembly: System.Reflection.AssemblyProductAttribute("Emplyx.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Emplyx.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
