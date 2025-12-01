@@ -6,9 +6,15 @@
       "command": "dotnet",
       "type": "process",
       "args": [
-        },
-        {
-          "label": "run-emplyx-https",
+        "build",
+        "${workspaceFolder}/Emplyx.Blazor/Emplyx.Blazor.csproj",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "run-emplyx-https",
           "type": "process",
           "command": "dotnet",
           "args": [

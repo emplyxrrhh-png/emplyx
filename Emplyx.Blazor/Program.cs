@@ -11,13 +11,20 @@ using Microsoft.ApplicationInsights.Extensibility;
 using Microsoft.Extensions.Options;
 using System.Globalization;
 
-var builder = WebApplication.CreateBuilder(args);
+try
+{
+    var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
+    // Add logging
+    builder.Logging.ClearProviders();
+    builder.Logging.AddConsole();
+    builder.Logging.AddDebug();
+
+    builder.Services.AddRazorPages();
+    builder.Services.AddServerSideBlazor();
 // Localization configuration
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
-builder.Services.AddApplicationInsightsTelemetry(); // instrumentation key via configuración
+builder.Services.AddApplicationInsightsTelemetry(); // instrumentation key via configuraciï¿½n
 var supportedCultures = new[] { new CultureInfo("es-ES"), new CultureInfo("en-US") };
 builder.Services.Configure<RequestLocalizationOptions>(opts =>
 {
@@ -62,7 +69,7 @@ if (!app.Environment.IsDevelopment())
 // Localization middleware
 app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
@@ -70,4 +77,12 @@ app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
 app.Run();
+}
+catch (Exception ex)
+{
+    var msg = $"[{DateTime.Now}] Critical startup error: {ex}";
+    Console.WriteLine(msg);
+    File.AppendAllText("startup_error.log", msg + Environment.NewLine);
+    throw;
+}
 

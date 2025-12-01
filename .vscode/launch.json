@@ -12,27 +12,12 @@
       "stopAtEntry": false,
       "env": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "ASPNETCORE_URLS": "https://localhost:5001"
-      },
-      "launchBrowser": {
-        "enabled": true,
-        "windows": {
-          "command": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
-          "args": "--new-window https://localhost:5001"
-        },
-        "osx": {
-          "command": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-          "args": "--new-window https://localhost:5001"
-        },
-        "linux": {
-          "command": "google-chrome",
-          "args": "--new-window https://localhost:5001"
-        }
+        "ASPNETCORE_URLS": "http://localhost:5169"
       },
       "serverReadyAction": {
-        "pattern": "Now listening on:\\s+(https?://\\S+)",
-        "uriFormat": "%s",
-        "action": "openExternally"
+        "action": "debugWithChrome",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+        "uriFormat": "%s"
       },
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
