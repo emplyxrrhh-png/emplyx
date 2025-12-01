@@ -5,11 +5,7 @@
 
 <div class="app-shell">
     <header class="app-shell__topbar">
-        <div class="tenant-bar">
-            <span class="tenant-bar__title">@TenantContextState.Current.TenantId</span>
-            <span class="tenant-bar__meta">@GetContextLabel()</span>
-        </div>
-        <div class="topbar-actions">
+        <div class="topbar-actions" style="margin-left: auto;">
             <button class="btn btn-sm btn-light" @onclick="OpenFeedback">
                 <i class="bi bi-chat-dots"></i> Feedback
             </button>
@@ -20,7 +16,7 @@
     </header>
 
     <div class="app-shell__body">
-        <aside class="app-shell__sidebar">
+        <aside class="app-shell__sidebar" style="padding: 0;">
             <NavMenu />
         </aside>
         <section class="app-shell__content">

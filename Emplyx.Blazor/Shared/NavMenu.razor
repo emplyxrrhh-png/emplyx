@@ -1,37 +1,145 @@
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Emplyx.Blazor.Resources.SharedResources> T
 @inject Emplyx.Blazor.Services.Features.IFeatureFlags Flags
-<nav>
-    <ul class="nav-menu">
-        @foreach (var item in _items)
+@inject Emplyx.Blazor.Services.TenantContextState TenantContextState
+
+<div class="nav-layout">
+    <div class="company-section">
+        <div class="company-card" role="button" @onclick="ToggleCompanyDropdown">
+            <div class="company-avatar">
+                <i class="bi bi-building"></i>
+            </div>
+            <div class="company-info">
+                <span class="company-name">@_currentCompany.Name</span>
+                <span class="company-plan">@_currentCompany.Plan</span>
+            </div>
+            <i class="bi bi-chevron-expand company-selector-icon"></i>
+        </div>
+
+        @if (_isCompanyDropdownOpen)
         {
-            if (!IsVisible(item)) { continue; }
-            <li>
-                <NavLink class="nav-link" href="@item.Href" Match="item.Match">
-                    <i class="bi @item.Icon"></i>
-                    <span>@T[item.Label]</span>
-                    @if (!string.IsNullOrWhiteSpace(item.Badge))
-                    {
-                        <span class="badge bg-primary">@item.Badge</span>
-                    }
-                </NavLink>
-            </li>
+            <div class="company-dropdown">
+                @foreach (var company in _availableCompanies)
+                {
+                    <div class="company-dropdown-item" @onclick="() => SelectCompany(company)">
+                        <div class="company-avatar small">
+                            <i class="bi bi-building"></i>
+                        </div>
+                        <div class="company-info">
+                            <span class="company-name">@company.Name</span>
+                            <span class="company-plan">@company.Plan</span>
+                        </div>
+                        @if (company.Id == _currentCompany.Id)
+                        {
+                            <i class="bi bi-check2 text-primary"></i>
+                        }
+                    </div>
+                }
+            </div>
         }
-    </ul>
-</nav>
+    </div>
+
+    <nav class="nav-scroll">
+        <ul class="nav-list">
+            @foreach (var item in _mainItems)
+            {
+                if (!IsVisible(item)) { continue; }
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="@item.Href" Match="item.Match">
+                        <span class="nav-icon">
+                            <i class="bi @item.Icon"></i>
+                        </span>
+                        <span class="nav-text">@T[item.Label]</span>
+                        @if (!string.IsNullOrWhiteSpace(item.Badge))
+                        {
+                            <span class="nav-badge">@item.Badge</span>
+                        }
+                    </NavLink>
+                </li>
+            }
+        </ul>
+
+        <div class="nav-divider"></div>
+
+        <div class="nav-section-header">
+            <span>Configuración</span>
+        </div>
+        <ul class="nav-list">
+            @foreach (var item in _configItems)
+            {
+                if (!IsVisible(item)) { continue; }
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="@item.Href" Match="item.Match">
+                        <span class="nav-icon">
+                            <i class="bi @item.Icon"></i>
+                        </span>
+                        <span class="nav-text">@T[item.Label]</span>
+                    </NavLink>
+                </li>
+            }
+        </ul>
+    </nav>
+
+    <div class="user-section">
+        <div class="user-card">
+            <div class="user-avatar">
+                <span>U</span>
+            </div>
+            <div class="user-info">
+                <span class="user-name">Usuario</span>
+                <span class="user-role">Admin</span>
+            </div>
+            <button class="btn-logout" title="Cerrar sesión">
+                <i class="bi bi-box-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+</div>
 
 @code {
-    private readonly IReadOnlyList<NavItem> _items = new List<NavItem>
+    private readonly IReadOnlyList<NavItem> _mainItems = new List<NavItem>
     {
-        new("/", "bi-grid", "Nav.Panel", NavLinkMatch.All),
-        new("/employees", "bi-people", "Nav.Employees"),
-        new("/access/groups", "bi-shield-lock", "Nav.Access"),
-        new("/scheduler/coverage", "bi-calendar3", "Nav.Scheduler"),
-        new("/alerts", "bi-bell", "Nav.Alerts"),
-        new("/security", "bi-key", "Nav.Security"),
-        new("/terminals", "bi-hdd-network", "Nav.Terminals"),
-        new("/tasks", "bi-check2-square", "Nav.Tasks"),
-        new("/documents", "bi-files", "Nav.Documents")
+        new("/", "bi-house-door", "Inicio", NavLinkMatch.All),
+        new("/organization", "bi-building", "Organización"),
+        new("/employees", "bi-people", "Usuarios"),
+        new("/scheduler/coverage", "bi-calendar-week", "Gestión Horaria"),
+        new("/documents", "bi-folder2-open", "Gestor documental"),
+        new("/zones", "bi-geo-alt", "Estado de las Zonas"),
+        new("/communications", "bi-chat-left-text", "Comunicaciones"),
+        new("/bots", "bi-robot", "Bots"),
+        new("/reports", "bi-graph-up", "Análisis, informes y datos"),
+        new("/realcost", "bi-cash-stack", "RealCost"),
+        new("/alerts", "bi-bell", "Alertas"),
+        new("/security", "bi-shield-check", "Seguridad y auditoría"),
     };
+
+    private readonly IReadOnlyList<NavItem> _configItems = new List<NavItem>
+    {
+        new("/settings", "bi-gear", "Configuración"),
+        new("/settings/time", "bi-gear-fill", "Configuración gestión horaria"),
+    };
+
+    private bool _isCompanyDropdownOpen = false;
+
+    private record CompanyInfo(string Id, string Name, string Plan);
+
+    private readonly List<CompanyInfo> _availableCompanies = new()
+    {
+        new("1", "Emplyx S.L.", "Enterprise"),
+        new("2", "StartUp Innovadora", "Basic")
+    };
+
+    private CompanyInfo _currentCompany = new("1", "Emplyx S.L.", "Enterprise");
+
+    private void ToggleCompanyDropdown()
+    {
+        _isCompanyDropdownOpen = !_isCompanyDropdownOpen;
+    }
+
+    private void SelectCompany(CompanyInfo company)
+    {
+        _currentCompany = company;
+        _isCompanyDropdownOpen = false;
+    }
 
     private sealed record NavItem(string Href, string Icon, string Label, NavLinkMatch Match = NavLinkMatch.Prefix, string? Badge = null);
 

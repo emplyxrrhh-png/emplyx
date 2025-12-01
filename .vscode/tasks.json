@@ -15,34 +15,7 @@
     },
     {
       "label": "run-emplyx-https",
-          "type": "process",
-          "command": "dotnet",
-          "args": [
-            "run",
-            "--project",
-            "${workspaceFolder}/Emplyx.WebApp/Emplyx.WebApp.csproj",
-            "-c",
-            "Debug",
-            "--urls",
-            "https://localhost:5001"
-          ],
-          "dependsOn": ["kill-port-5001"],
-          "presentation": {
-            "echo": true,
-            "reveal": "always",
-            "panel": "new"
-          }
-        }
-      ],
-      "presentation": {
-        "echo": true,
-        "reveal": "always",
-        "panel": "shared"
-      }
-    },
-    {
-      "label": "run-emplyx-https",
-      "type": "shell",
+      "type": "process",
       "command": "dotnet",
       "args": [
         "run",
@@ -53,7 +26,6 @@
         "--urls",
         "https://localhost:5001"
       ],
-      "dependsOn": ["kill-port-5001"],
       "presentation": {
         "echo": true,
         "reveal": "always",

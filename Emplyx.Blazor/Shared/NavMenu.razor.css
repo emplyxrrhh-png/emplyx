@@ -1,9 +1,237 @@
-.nav-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.nav-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #f8fafc; /* Very light gray/blueish */
+    border-right: 1px solid #e2e8f0;
 }
 
-.nav-link .badge {
-    margin-left: auto;
+/* Company Switcher */
+.company-section {
+    padding: 1rem;
+    position: relative;
+    /* border-bottom: 1px solid #e2e8f0; Optional, maybe cleaner without */
+}
+
+.company-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.company-card:hover {
+    background-color: #e2e8f0;
+}
+
+.company-dropdown {
+    position: absolute;
+    top: calc(100% - 0.5rem);
+    left: 1rem;
+    right: 1rem;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    z-index: 50;
+    padding: 0.5rem;
+}
+
+.company-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.company-dropdown-item:hover {
+    background-color: #f1f5f9;
+}
+
+.company-dropdown-item .company-avatar.small {
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
+}
+
+.company-avatar {
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #475569;
+}
+
+.company-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.company-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #0f172a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.company-plan {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+.company-selector-icon {
+    color: #94a3b8;
+    font-size: 0.8rem;
+}
+
+/* Navigation List */
+.nav-scroll {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.5rem 0.75rem;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 0.75rem;
+    border-radius: 8px;
+    color: #475569;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    background-color: #e2e8f0;
+    color: #0f172a;
+    text-decoration: none;
+}
+
+.nav-link.active {
+    background-color: #eff6ff; /* Light blue */
+    color: #2563eb; /* Blue 600 */
+}
+
+.nav-icon {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+}
+
+.nav-text {
+    flex: 1;
+}
+
+.nav-badge {
+    background-color: #ef4444;
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+/* Divider & Section Header */
+.nav-divider {
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 1rem 0;
+}
+
+.nav-section-header {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #94a3b8;
+    letter-spacing: 0.05em;
+}
+
+/* User Profile */
+.user-section {
+    padding: 1rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.user-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.user-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #0f172a;
+}
+
+.user-role {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+.btn-logout {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 4px;
+    transition: color 0.2s;
+}
+
+.btn-logout:hover {
+    color: #ef4444;
+    background-color: #fee2e2;
 }
