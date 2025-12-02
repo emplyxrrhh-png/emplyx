@@ -2,6 +2,7 @@
 @page "/employees"
 @using Emplyx.Blazor.Services.Employees
 @using Emplyx.Blazor.Services
+@using Emplyx.Blazor.Components.Employees
 @using Emplyx.Shared.Employees
 @using Emplyx.Shared.UI.DataGrid
 @using Emplyx.Shared.UI.Selectors
@@ -250,8 +251,15 @@
         }
     }
 
-    private async Task OnEmployeeSaved()
+    private void OnEmployeeCancelled()
     {
+        _showCreate = false;
+        Telemetry.TrackActionClicked("employee.create.cancel", "/employees", _viewCorrelationId, ok: true);
+    }
+
+    private async Task OnEmployeeSaved(EmployeeEditModel model)
+    {
+        await EmployeesData.CreateAsync(model);
         MessagingService.ShowToast(new AppToastOptions(
             L["Employees.Save.Done.Title"],
             L["Employees.Save.Done.Message"],

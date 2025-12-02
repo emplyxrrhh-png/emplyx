@@ -3,34 +3,56 @@
 
 <PageTitle>Emplyx UI</PageTitle>
 
-<div class="app-shell">
-    <header class="app-shell__topbar">
-        <div class="topbar-actions" style="margin-left: auto;">
-            <button class="btn btn-sm btn-light" @onclick="OpenFeedback">
-                <i class="bi bi-chat-dots"></i> Feedback
-            </button>
-            <button class="btn btn-sm btn-outline-light" @onclick="RefreshContext">
-                <i class="bi bi-arrow-repeat"></i> Sincronizar
-            </button>
-        </div>
-    </header>
+<div class="app-shell @(_sidebarCollapsed ? "sidebar-collapsed" : "")">
+    <aside class="app-shell__sidebar">
+        <NavMenu Collapsed="_sidebarCollapsed" />
+    </aside>
 
-    <div class="app-shell__body">
-        <aside class="app-shell__sidebar" style="padding: 0;">
-            <NavMenu />
-        </aside>
-        <section class="app-shell__content">
-            <div class="breadcrumbs">Contexto · @TenantContextState.Current.Culture · @TenantContextState.Current.TimeZone</div>
-            <div class="app-shell__content-card">
-                @Body
+    <main class="app-shell__main">
+        <header class="app-shell__topbar">
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-link text-dark p-0 border-0 me-2" @onclick="ToggleSidebar">
+                    <i class="bi bi-list fs-4"></i>
+                </button>
+
+                <div class="breadcrumbs mb-0">
+                    <i class="bi bi-geo-alt"></i>
+                    <span>@TenantContextState.Current.Culture</span>
+                    <span class="text-muted mx-1">/</span>
+                    <span>@TenantContextState.Current.TimeZone</span>
+                </div>
             </div>
+
+            <div class="topbar-actions d-flex gap-2">
+                <button class="btn btn-sm btn-outline-secondary" @onclick="OpenFeedback" title="Enviar feedback">
+                    <i class="bi bi-chat-dots"></i>
+                </button>
+                <button class="btn btn-sm btn-outline-secondary" @onclick="RefreshContext" title="Sincronizar contexto">
+                    <i class="bi bi-arrow-repeat"></i>
+                </button>
+                <div class="vr mx-1"></div>
+                <button class="btn btn-sm btn-primary">
+                    <i class="bi bi-plus-lg"></i> <span class="d-none d-md-inline ms-1">Crear</span>
+                </button>
+            </div>
+        </header>
+
+        <section class="app-shell__content">
+            @Body
         </section>
-    </div>
+    </main>
 </div>
 
 <AppUiMessagingHost />
 
 @code {
+    private bool _sidebarCollapsed = false;
+
+    private void ToggleSidebar()
+    {
+        _sidebarCollapsed = !_sidebarCollapsed;
+    }
+
     private string GetContextLabel()
     {
         var context = TenantContextState.Current;

@@ -24,6 +24,19 @@
       "sourceFileMap": {
         "${workspaceFolder}": "${workspaceFolder}"
       }
+    },
+    {
+      "name": "Emplyx.React",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/Emplyx.React/src",
+      "preLaunchTask": "npm: dev - Emplyx.React",
+      "presentation": {
+        "hidden": false,
+        "group": "",
+        "order": 1
+      }
     }
   ]
 }

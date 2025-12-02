@@ -1,16 +1,12 @@
 .topbar-actions {
     display: flex;
-    gap: 0.5rem;
+    align-items: center;
 }
 
 .topbar-actions .btn {
-    border-radius: 999px;
+    /* Inherit from global .btn but ensure alignment */
     display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
-    font-weight: 600;
+    justify-content: center;
 }
 
-.topbar-actions .btn i {
-    font-size: 1rem;
-}

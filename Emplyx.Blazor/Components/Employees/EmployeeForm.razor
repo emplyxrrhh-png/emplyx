@@ -21,6 +21,21 @@
             <InputText class="form-control" @bind-Value="_model.Code" />
             <ValidationMessage For="() => _model.Code" />
         </div>
+        <div class="col-12 col-md-6">
+            <label class="form-label">Email</label>
+            <InputText class="form-control" @bind-Value="_model.Email" />
+            <ValidationMessage For="() => _model.Email" />
+        </div>
+        <div class="col-12 col-md-6">
+            <label class="form-label">Cargo / Puesto</label>
+            <InputText class="form-control" @bind-Value="_model.JobTitle" />
+            <ValidationMessage For="() => _model.JobTitle" />
+        </div>
+        <div class="col-12 col-md-6">
+            <label class="form-label">Fecha de Alta</label>
+            <InputDate class="form-control" @bind-Value="_model.StartDate" />
+            <ValidationMessage For="() => _model.StartDate" />
+        </div>
         <div class="col-12">
             <div class="form-check">
                 <InputCheckbox class="form-check-input" @bind-Value="_model.ForgottenRight" />

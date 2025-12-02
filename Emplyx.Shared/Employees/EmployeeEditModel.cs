@@ -20,5 +20,12 @@ public sealed class EmployeeEditModel
     [StringLength(10, ErrorMessage = "Employees.Form.Error.CodeLength")]
     public string? Code { get; set; }
 
+    [EmailAddress(ErrorMessage = "Employees.Form.Error.EmailInvalid")]
+    public string? Email { get; set; }
+
+    public string? JobTitle { get; set; }
+
+    public DateTime? StartDate { get; set; } = DateTime.Today;
+
     public bool ForgottenRight { get; set; }
 }

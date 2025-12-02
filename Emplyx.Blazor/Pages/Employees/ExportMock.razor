@@ -8,7 +8,7 @@
     protected override Task OnInitializedAsync()
     {
         var correlation = Telemetry.NewCorrelationId();
-        var csv = "Id,Name,Code\n1,Ana,EMP-001\n2,Carlos,EMP-002";
+        // var csv = "Id,Name,Code\n1,Ana,EMP-001\n2,Carlos,EMP-002";
         // Show toast then navigate back
         Messaging.ShowToast(new Emplyx.Shared.UI.Notifications.AppToastOptions(
             "Export listo",

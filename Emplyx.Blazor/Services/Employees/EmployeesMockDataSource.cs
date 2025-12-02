@@ -106,9 +106,11 @@ public sealed class EmployeesMockDataSource : IEmployeesDataSource
             Enabled: true)
     ];
 
+    private static readonly List<EmployeeListItem> _items = new(Seed);
+
     public Task<EmployeeListResponse> GetAsync(EmployeeListRequest request, CancellationToken cancellationToken = default)
     {
-        IEnumerable<EmployeeListItem> query = Seed;
+        IEnumerable<EmployeeListItem> query = _items;
 
         if (!string.IsNullOrWhiteSpace(request.Search))
         {
@@ -157,7 +159,7 @@ public sealed class EmployeesMockDataSource : IEmployeesDataSource
 
     public Task<IReadOnlyList<EmployeeLookupItem>> SearchAsync(string? term, CancellationToken cancellationToken = default)
     {
-        var query = Seed.Select(item => new EmployeeLookupItem(
+        var query = _items.Select(item => new EmployeeLookupItem(
             Id: item.Id,
             Code: item.Code,
             DisplayName: $"{item.DisplayName} · {item.PrimaryRole}",
@@ -183,5 +185,23 @@ public sealed class EmployeesMockDataSource : IEmployeesDataSource
             "primaryrole" => descending ? source.OrderByDescending(x => x.PrimaryRole) : source.OrderBy(x => x.PrimaryRole),
             _ => descending ? source.OrderByDescending(x => x.DisplayName) : source.OrderBy(x => x.DisplayName)
         };
+    }
+
+    public Task CreateAsync(EmployeeEditModel model, CancellationToken cancellationToken = default)
+    {
+        var newItem = new EmployeeListItem(
+            Id: Guid.NewGuid().ToString(),
+            Code: model.Code ?? "N/A",
+            DisplayName: model.DisplayName ?? "Unknown",
+            Status: "Activo",
+            PrimaryRole: model.JobTitle ?? "Employee",
+            Groups: Array.Empty<EmployeeGroupReference>(),
+            HasForgottenRight: model.ForgottenRight,
+            Language: model.Language ?? "es-ES",
+            Enabled: true
+        );
+
+        _items.Insert(0, newItem);
+        return Task.CompletedTask;
     }
 }

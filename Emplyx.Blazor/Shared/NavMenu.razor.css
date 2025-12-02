@@ -2,15 +2,36 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    background-color: #f8fafc; /* Very light gray/blueish */
-    border-right: 1px solid #e2e8f0;
+    background-color: var(--emplyx-bg-app);
+    /* border-right handled by parent container */
+    overflow-x: hidden; /* Hide content when collapsing */
+}
+
+.nav-layout.collapsed .company-card {
+    justify-content: center;
+    padding: 0.5rem 0;
+}
+
+.nav-layout.collapsed .nav-group-header,
+.nav-layout.collapsed .nav-link {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.nav-layout.collapsed .nav-icon {
+    margin-right: 0;
+}
+
+.nav-layout.collapsed .user-card {
+    justify-content: center;
+    padding: 0.5rem 0;
 }
 
 /* Company Switcher */
 .company-section {
     padding: 1rem;
     position: relative;
-    /* border-bottom: 1px solid #e2e8f0; Optional, maybe cleaner without */
 }
 
 .company-card {
@@ -18,13 +39,13 @@
     align-items: center;
     gap: 0.75rem;
     padding: 0.5rem;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     cursor: pointer;
     transition: background-color 0.2s;
 }
 
 .company-card:hover {
-    background-color: #e2e8f0;
+    background-color: var(--emplyx-border);
 }
 
 .company-dropdown {
@@ -32,10 +53,10 @@
     top: calc(100% - 0.5rem);
     left: 1rem;
     right: 1rem;
-    background-color: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    background-color: var(--emplyx-bg-surface);
+    border: 1px solid var(--emplyx-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
     z-index: 50;
     padding: 0.5rem;
 }
@@ -45,13 +66,13 @@
     align-items: center;
     gap: 0.75rem;
     padding: 0.5rem;
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     cursor: pointer;
     transition: background-color 0.2s;
 }
 
 .company-dropdown-item:hover {
-    background-color: #f1f5f9;
+    background-color: var(--emplyx-border-subtle);
 }
 
 .company-dropdown-item .company-avatar.small {
@@ -63,13 +84,13 @@
 .company-avatar {
     width: 32px;
     height: 32px;
-    background-color: #fff;
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
+    background-color: var(--emplyx-bg-surface);
+    border: 1px solid var(--emplyx-border);
+    border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #475569;
+    color: var(--emplyx-text-secondary);
 }
 
 .company-info {
@@ -82,7 +103,7 @@
 .company-name {
     font-weight: 600;
     font-size: 0.9rem;
-    color: #0f172a;
+    color: var(--emplyx-text);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -90,11 +111,11 @@
 
 .company-plan {
     font-size: 0.75rem;
-    color: #64748b;
+    color: var(--emplyx-text-muted);
 }
 
 .company-selector-icon {
-    color: #94a3b8;
+    color: var(--emplyx-text-muted);
     font-size: 0.8rem;
 }
 
@@ -123,8 +144,8 @@
     align-items: center;
     gap: 0.75rem;
     padding: 0.6rem 0.75rem;
-    border-radius: 8px;
-    color: #475569;
+    border-radius: var(--radius-md);
+    color: var(--emplyx-text-secondary);
     font-weight: 500;
     font-size: 0.9rem;
     transition: all 0.2s;
@@ -132,14 +153,14 @@
 }
 
 .nav-link:hover {
-    background-color: #e2e8f0;
-    color: #0f172a;
+    background-color: var(--emplyx-border);
+    color: var(--emplyx-text);
     text-decoration: none;
 }
 
 .nav-link.active {
-    background-color: #eff6ff; /* Light blue */
-    color: #2563eb; /* Blue 600 */
+    background-color: rgba(var(--emplyx-primary-rgb), 0.1);
+    color: var(--emplyx-primary);
 }
 
 .nav-icon {
@@ -155,7 +176,7 @@
 }
 
 .nav-badge {
-    background-color: #ef4444;
+    background-color: var(--emplyx-danger);
     color: white;
     font-size: 0.7rem;
     padding: 0.1rem 0.4rem;
@@ -166,7 +187,7 @@
 /* Divider & Section Header */
 .nav-divider {
     height: 1px;
-    background-color: #e2e8f0;
+    background-color: var(--emplyx-border);
     margin: 1rem 0;
 }
 
@@ -175,14 +196,14 @@
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
-    color: #94a3b8;
+    color: var(--emplyx-text-muted);
     letter-spacing: 0.05em;
 }
 
 /* User Profile */
 .user-section {
     padding: 1rem;
-    border-top: 1px solid #e2e8f0;
+    border-top: 1px solid var(--emplyx-border);
 }
 
 .user-card {
@@ -194,7 +215,7 @@
 .user-avatar {
     width: 36px;
     height: 36px;
-    background-color: #2563eb;
+    background-color: var(--emplyx-primary);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -213,18 +234,18 @@
 .user-name {
     font-weight: 600;
     font-size: 0.9rem;
-    color: #0f172a;
+    color: var(--emplyx-text);
 }
 
 .user-role {
     font-size: 0.75rem;
-    color: #64748b;
+    color: var(--emplyx-text-muted);
 }
 
 .btn-logout {
     background: none;
     border: none;
-    color: #94a3b8;
+    color: var(--emplyx-text-muted);
     cursor: pointer;
     padding: 0.25rem;
     border-radius: 4px;
@@ -232,6 +253,61 @@
 }
 
 .btn-logout:hover {
-    color: #ef4444;
+    color: var(--emplyx-danger);
     background-color: #fee2e2;
+}
+
+/* Group Styles */
+.nav-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.nav-group-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 0.75rem;
+    border-radius: var(--radius-md);
+    color: var(--emplyx-text);
+    font-weight: 600;
+    font-size: 0.9rem;
+    /* background-color: var(--emplyx-border-subtle); Optional: subtle bg for headers */
+}
+
+.nav-group-header:hover {
+    background-color: var(--emplyx-border);
+    cursor: pointer;
+}
+
+.nav-group-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-left: 1.5rem; /* Indentation */
+    position: relative;
+}
+
+.nav-group:hover .nav-group-items {
+    display: flex; /* Show on hover */
+}
+
+/* Optional: Add a vertical line for hierarchy */
+.nav-group-items::before {
+    content: '';
+    position: absolute;
+    left: 1.1rem;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: var(--emplyx-border);
+}
+
+.nav-group-items .nav-link {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
 }
