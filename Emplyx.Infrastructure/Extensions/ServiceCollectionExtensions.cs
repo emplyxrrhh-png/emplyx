@@ -39,6 +39,8 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IClearanceRepository, ClearanceRepository>();
         services.AddScoped<IModuloRepository, ModuloRepository>();
         services.AddScoped<IDelegacionTemporalRepository, DelegacionTemporalRepository>();
+        services.AddScoped<IEmpresaRepository, EmpresaRepository>();
+        services.AddScoped<ITenantRepository, TenantRepository>();
 
         return services;
     }

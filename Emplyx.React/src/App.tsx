@@ -1,8 +1,11 @@
-import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { MainLayout } from './layouts/MainLayout';
 import { Construction } from 'lucide-react';
 import { MENU_ITEMS, CONFIG_ITEMS, NavItemData } from './data/menuItems';
+import EmpresasPage from './pages/configuracion/organizacion/EmpresasPage';
+import EmpresaFormPage from './pages/configuracion/organizacion/EmpresaFormPage';
+import TenantsPage from './pages/configuracion/organizacion/TenantsPage';
+import TenantFormPage from './pages/configuracion/organizacion/TenantFormPage';
 
 const UnderConstruction = ({ title }: { title: string }) => (
   <div className="flex flex-col items-center justify-center h-[60vh] text-center">
@@ -56,13 +59,29 @@ function App() {
     <Routes>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Dashboard />} />
-        {allRoutes.map((route) => (
-          <Route 
-            key={route.path} 
-            path={route.path} 
-            element={<UnderConstruction title={route.title} />} 
-          />
-        ))}
+        
+        {/* Rutas implementadas manualmente */}
+        <Route path="/configuracion/organizacion/empresas" element={<EmpresasPage />} />
+        <Route path="/configuracion/organizacion/empresas/nueva" element={<EmpresaFormPage />} />
+        <Route path="/configuracion/organizacion/empresas/editar/:id" element={<EmpresaFormPage />} />
+
+        <Route path="/configuracion/organizacion/tenant" element={<TenantsPage />} />
+        <Route path="/configuracion/organizacion/tenant/nuevo" element={<TenantFormPage />} />
+        <Route path="/configuracion/organizacion/tenant/editar/:id" element={<TenantFormPage />} />
+
+        {allRoutes.map((route) => {
+          // Excluir rutas que ya tienen implementación específica
+          if (route.path === '/configuracion/organizacion/empresas') return null;
+          if (route.path === '/configuracion/organizacion/tenant') return null;
+          
+          return (
+            <Route 
+              key={route.path} 
+              path={route.path} 
+              element={<UnderConstruction title={route.title} />} 
+            />
+          );
+        })}
         <Route path="*" element={<UnderConstruction title="Página no encontrada" />} />
       </Route>
     </Routes>

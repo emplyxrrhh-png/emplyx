@@ -7,7 +7,7 @@
       "type": "process",
       "args": [
         "build",
-        "${workspaceFolder}/Emplyx.Blazor/Emplyx.Blazor.csproj",
+        "${workspaceFolder}/Emplyx.WebApp/Emplyx.WebApp.csproj",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],
@@ -20,11 +20,11 @@
       "args": [
         "run",
         "--project",
-        "${workspaceFolder}/Emplyx.Blazor/Emplyx.Blazor.csproj",
+        "${workspaceFolder}/Emplyx.WebApp/Emplyx.WebApp.csproj",
         "-c",
         "Debug",
-        "--urls",
-        "https://localhost:5001"
+        "--launch-profile",
+        "https"
       ],
       "presentation": {
         "echo": true,

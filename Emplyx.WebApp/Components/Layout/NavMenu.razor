@@ -63,8 +63,14 @@
 
   else if (isConfiguracion)
   {
-      <!-- Menu Configuracion (vacio de momento) -->
+      <!-- Menu Configuracion -->
       <ul class="nav nav-pills flex-column mb-auto px-2">
+        <li class="nav-item">
+          <NavLink class="nav-link d-flex align-items-center gap-2" ActiveClass="active bg-primary text-white" href="configuracion/organizacion/empresas" title="Empresas" data-bs-toggle="tooltip" data-bs-placement="right">
+            <span class="menu-icon bi bi-building" aria-hidden="true"></span>
+            <span class="menu-label sidebar-collapse collapse collapse-horizontal @(SidebarCollapsed ? string.Empty : "show")">Empresas</span>
+          </NavLink>
+        </li>
       </ul>
   }
 

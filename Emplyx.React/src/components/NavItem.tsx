@@ -61,9 +61,6 @@ export const NavItem: React.FC<NavItemProps> = ({ label, icon: Icon, href, child
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <div className="px-4 py-2 border-b border-gray-50 mb-1">
-            <span className="font-semibold text-gray-800 text-sm">{label}</span>
-          </div>
           {children.map((child, index) => (
             <Link
               key={index}

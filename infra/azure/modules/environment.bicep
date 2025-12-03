@@ -63,6 +63,7 @@ var sqlDatabaseName = 'emplyx'
 var appServicePlanName = 'asp-${envLower}-emplyx'
 var autoscaleName = 'asp-${envLower}-autoscale'
 var webAppName = 'app-${envLower}-emplyx'
+var staticWebAppName = 'stapp-${envLower}-emplyx'
 var slotName = 'staging'
 var functionPlanName = 'func-${envLower}-plan'
 var functionAppName = 'func-${envLower}-worker'
@@ -791,9 +792,24 @@ resource functionKeyVaultAccess 'Microsoft.Authorization/roleAssignments@2022-04
   }
 }
 
+resource staticWebApp 'Microsoft.Web/staticSites@2022-09-01' = {
+  name: staticWebAppName
+  location: location
+  tags: tags
+  sku: {
+    name: 'Free'
+    tier: 'Free'
+  }
+  properties: {
+    provider: 'Custom'
+  }
+}
+
 output webAppName string = webApp.name
 output functionAppName string = functionApp.name
 output sqlServerFqdn string = sqlServerFqdn
 output serviceBusNamespace string = serviceBusNamespace.name
 output keyVaultName string = keyVault.name
 output cosmosAccountName string = cosmosAccount.name
+output staticWebAppName string = staticWebApp.name
+output staticWebAppDefaultHostname string = staticWebApp.properties.defaultHostname

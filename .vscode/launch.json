@@ -2,30 +2,6 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch Emplyx.Blazor (net9.0)",
-      "type": "coreclr",
-      "request": "launch",
-      "preLaunchTask": "build",
-      "program": "${workspaceFolder}/Emplyx.Blazor/bin/Debug/net9.0/Emplyx.Blazor.dll",
-      "args": [],
-      "cwd": "${workspaceFolder}/Emplyx.Blazor",
-      "stopAtEntry": false,
-      "env": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "ASPNETCORE_URLS": "http://localhost:5169"
-      },
-      "serverReadyAction": {
-        "action": "openExternally",
-        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
-        "uriFormat": "%s"
-      },
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "sourceFileMap": {
-        "${workspaceFolder}": "${workspaceFolder}"
-      }
-    },
-    {
       "name": "Emplyx.React",
       "type": "pwa-chrome",
       "request": "launch",

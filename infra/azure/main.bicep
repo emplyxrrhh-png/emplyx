@@ -81,3 +81,5 @@ output sqlServerFqdn string = core.outputs.sqlServerFqdn
 output serviceBusNamespace string = core.outputs.serviceBusNamespace
 output keyVaultName string = core.outputs.keyVaultName
 output cosmosAccountName string = core.outputs.cosmosAccountName
+output staticWebAppName string = core.outputs.staticWebAppName
+output staticWebAppDefaultHostname string = core.outputs.staticWebAppDefaultHostname

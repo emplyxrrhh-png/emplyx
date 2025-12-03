@@ -1,7 +1,7 @@
 import { 
   Home, Building2, Users, Calendar, FileText, Map, MessageSquare, 
   Bot, BarChart3, Euro, Bell, Shield, Settings, Sliders, LucideIcon,
-  Clock, Monitor
+  Clock, Monitor, Database, FileBarChart
 } from 'lucide-react';
 
 export interface NavItemData {
@@ -13,7 +13,6 @@ export interface NavItemData {
 
 export const MENU_ITEMS: NavItemData[] = [
   { label: "Inicio", icon: Home, href: "/" },
-  { label: "Organización", icon: Building2, href: "/organizacion" },
   {
     label: "Usuarios",
     icon: Users,
@@ -25,12 +24,12 @@ export const MENU_ITEMS: NavItemData[] = [
       { label: "Encuestas de RRHH", icon: Users, href: "/usuarios/encuestas" }
     ]
   },
+  { label: "Calendario", icon: Calendar, href: "/gestion-horaria/calendario" },
   {
     label: "Gestión Horaria",
     icon: Calendar,
     href: "/gestion-horaria",
     children: [
-      { label: "Calendario", icon: Calendar, href: "/gestion-horaria/calendario" },
       { label: "Estado del absentismo", icon: Calendar, href: "/gestion-horaria/absentismo" }
     ]
   },
@@ -44,50 +43,33 @@ export const MENU_ITEMS: NavItemData[] = [
       { label: "Comunicados", icon: MessageSquare, href: "/comunicaciones/comunicados" }
     ]
   },
-  { label: "Bots", icon: Bot, href: "/bots" },
+  { label: "Reglas", icon: Bot, href: "/reglas" },
   {
-    label: "Análisis, informes y datos",
+    label: "Análisis",
     icon: BarChart3,
     href: "/analisis",
     children: [
-      { label: "Analytics by Genius", icon: BarChart3, href: "/analisis/genius" },
-      { label: "Informes", icon: BarChart3, href: "/analisis/informes" },
-      { label: "Informes solicitados", icon: BarChart3, href: "/analisis/solicitados" },
-      { label: "Importar/Exportar", icon: BarChart3, href: "/analisis/importar-exportar" }
+      { label: "Analytics by Genius", icon: BarChart3, href: "/analisis/genius" }
     ]
   },
   {
-    label: "RealCost",
+    label: "Informes",
+    icon: FileBarChart,
+    href: "/informes",
+    children: [
+      { label: "Informes", icon: FileText, href: "/informes/lista" },
+      { label: "Informes solicitados", icon: FileText, href: "/informes/solicitados" }
+    ]
+  },
+  {
+    label: "Control de Costes",
     icon: Euro,
     href: "/realcost",
     children: [
       { label: "Centros de coste", icon: Euro, href: "/realcost/centros-coste" }
     ]
   },
-  { label: "Alertas", icon: Bell, href: "/alertas" },
-  {
-    label: "Seguridad y auditoría",
-    icon: Shield,
-    href: "/seguridad",
-    children: [
-      { label: "Auditoría", icon: Shield, href: "/seguridad/auditoria" },
-      { label: "Licencia", icon: Shield, href: "/seguridad/licencia" },
-      { label: "Fecha de cierre", icon: Shield, href: "/seguridad/fecha-cierre" },
-      { label: "Seguridad avanzada", icon: Shield, href: "/seguridad/avanzada" }
-    ]
-  },
-  {
-    label: "Configuración gestión horaria",
-    icon: Sliders,
-    href: "/config-horaria",
-    children: [
-      { label: "Convenios", icon: Sliders, href: "/config-horaria/convenios" },
-      { label: "Horarios", icon: Sliders, href: "/config-horaria/horarios" },
-      { label: "Justificaciones", icon: Sliders, href: "/config-horaria/justificaciones" },
-      { label: "Saldos", icon: Sliders, href: "/config-horaria/saldos" },
-      { label: "Indicadores", icon: Sliders, href: "/config-horaria/indicadores" }
-    ]
-  }
+  { label: "Alertas", icon: Bell, href: "/alertas" }
 ];
 
 export const CONFIG_ITEMS: NavItemData = {
@@ -95,6 +77,23 @@ export const CONFIG_ITEMS: NavItemData = {
   icon: Settings,
   href: "/configuracion",
   children: [
+    {
+      label: "General",
+      icon: Sliders,
+      href: "/configuracion/general",
+      children: [
+        { label: "Fecha Cierre", icon: Calendar, href: "/configuracion/general/fecha-cierre" }
+      ]
+    },
+    {
+      label: "Organización",
+      icon: Building2,
+      href: "/configuracion/organizacion",
+      children: [
+        { label: "Datos Generales", icon: FileText, href: "/configuracion/organizacion/tenant" },
+        { label: "Empresas", icon: Building2, href: "/configuracion/organizacion/empresas" }
+      ]
+    },
     {
       label: "Usuarios",
       icon: Users,
@@ -126,7 +125,14 @@ export const CONFIG_ITEMS: NavItemData = {
       href: "/configuracion/seguridad",
       children: [
         { label: "Auditoria", icon: FileText, href: "/configuracion/seguridad/auditoria" },
-        { label: "Cierre Contable", icon: Euro, href: "/configuracion/seguridad/cierre-contable" },
+      ]
+    },
+    {
+      label: "Enlaces de Datos",
+      icon: Database,
+      href: "/configuracion/datos",
+      children: [
+        { label: "Importar/Exportar", icon: Database, href: "/configuracion/datos/importar-exportar" }
       ]
     }
   ]

@@ -11,6 +11,8 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IUsuarioService, UsuarioService>();
         services.AddScoped<IRolService, RolService>();
         services.AddScoped<IDelegacionService, DelegacionService>();
+        services.AddScoped<IEmpresaService, EmpresaService>();
+        services.AddScoped<ITenantService, TenantService>();
 
         return services;
     }

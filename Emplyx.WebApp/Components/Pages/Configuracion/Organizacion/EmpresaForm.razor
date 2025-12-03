@@ -1,0 +1,140 @@
+@page "/configuracion/organizacion/empresas/nueva"
+@page "/configuracion/organizacion/empresas/editar/{Id:guid}"
+@using Emplyx.Application.Abstractions
+@using Emplyx.Shared.Contracts.Empresas
+@using System.ComponentModel.DataAnnotations
+@inject IEmpresaService EmpresaService
+@inject NavigationManager NavigationManager
+@rendermode InteractiveServer
+
+<h3>@(Id == null ? "Nueva Empresa" : "Editar Empresa")</h3>
+
+<EditForm Model="@model" OnValidSubmit="HandleValidSubmit" FormName="EmpresaForm">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <InputText id="nombre" class="form-control" @bind-Value="model.Nombre" />
+    </div>
+
+    <div class="mb-3">
+        <label for="razonSocial" class="form-label">Razón Social</label>
+        <InputText id="razonSocial" class="form-control" @bind-Value="model.RazonSocial" />
+    </div>
+
+    <div class="mb-3">
+        <label for="cif" class="form-label">CIF / VAT</label>
+        <InputText id="cif" class="form-control" @bind-Value="model.CIF" />
+    </div>
+
+    <div class="mb-3">
+        <label for="direccion" class="form-label">Dirección</label>
+        <InputText id="direccion" class="form-control" @bind-Value="model.Direccion" />
+    </div>
+
+    <div class="mb-3">
+        <label for="telefono" class="form-label">Teléfono</label>
+        <InputText id="telefono" class="form-control" @bind-Value="model.Telefono" />
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <InputText id="email" class="form-control" @bind-Value="model.Email" />
+    </div>
+
+    <div class="mb-3">
+        <label for="web" class="form-label">Web</label>
+        <InputText id="web" class="form-control" @bind-Value="model.Web" />
+    </div>
+
+    <div class="mb-3">
+        <label for="pais" class="form-label">País</label>
+        <InputText id="pais" class="form-control" @bind-Value="model.Pais" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <button type="button" class="btn btn-secondary" @onclick="Cancel">Cancelar</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public Guid? Id { get; set; }
+
+    [SupplyParameterFromForm]
+    private EmpresaModel model { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (Id.HasValue)
+        {
+            var empresa = await EmpresaService.GetByIdAsync(Id.Value);
+            if (empresa != null)
+            {
+                model = new EmpresaModel
+                {
+                    Nombre = empresa.Nombre,
+                    RazonSocial = empresa.RazonSocial,
+                    CIF = empresa.CIF,
+                    Direccion = empresa.Direccion,
+                    Telefono = empresa.Telefono,
+                    Email = empresa.Email,
+                    Web = empresa.Web,
+                    Pais = empresa.Pais
+                };
+            }
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        if (Id.HasValue)
+        {
+            var request = new UpdateEmpresaRequest(
+                model.Nombre,
+                model.RazonSocial,
+                model.CIF,
+                model.Direccion,
+                model.Telefono,
+                model.Email,
+                model.Web,
+                model.Pais);
+            await EmpresaService.UpdateAsync(Id.Value, request);
+        }
+        else
+        {
+            var request = new CreateEmpresaRequest(
+                model.Nombre,
+                model.RazonSocial,
+                model.CIF,
+                model.Direccion,
+                model.Telefono,
+                model.Email,
+                model.Web,
+                model.Pais);
+            await EmpresaService.CreateAsync(request);
+        }
+
+        NavigationManager.NavigateTo("/configuracion/organizacion/empresas");
+    }
+
+    private void Cancel()
+    {
+        NavigationManager.NavigateTo("/configuracion/organizacion/empresas");
+    }
+
+    public class EmpresaModel
+    {
+        [Required]
+        public string Nombre { get; set; } = string.Empty;
+        [Required]
+        public string RazonSocial { get; set; } = string.Empty;
+        [Required]
+        public string CIF { get; set; } = string.Empty;
+        public string? Direccion { get; set; }
+        public string? Telefono { get; set; }
+        public string? Email { get; set; }
+        public string? Web { get; set; }
+        public string? Pais { get; set; }
+    }
+}

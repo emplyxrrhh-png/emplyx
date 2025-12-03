@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Menu, ArrowLeft } from 'lucide-react';
+import { Menu, ArrowLeft, ChevronDown, Building, Check } from 'lucide-react';
 import { NavItem } from './NavItem';
 import { MENU_ITEMS, CONFIG_ITEMS } from '../data/menuItems';
 import clsx from 'clsx';
 
 export const Sidebar: React.FC = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
+  const [selectedCompany, setSelectedCompany] = useState("TechSolutions S.L.");
+  const [isCompanyMenuOpen, setIsCompanyMenuOpen] = useState(false);
   const location = useLocation();
   const isConfigMode = location.pathname.startsWith('/configuracion');
 
   const navItems = isConfigMode ? (CONFIG_ITEMS.children || []) : MENU_ITEMS;
+  
+  const companies = ["TechSolutions S.L.", "Global Services S.A."];
 
   return (
     <aside 
@@ -19,7 +23,7 @@ export const Sidebar: React.FC = () => {
         isCollapsed ? "w-20" : "w-72"
       )}
     >
-      {/* Company Selector */}
+      {/* App Header */}
       <div className="h-16 flex items-center px-4 border-b border-gray-100 relative">
         <div className={clsx("flex items-center gap-3 w-full", isCollapsed ? "justify-center" : "justify-between")}>
           <div className="w-10 h-10 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold shrink-0 cursor-pointer" onClick={() => setIsCollapsed(!isCollapsed)}>
@@ -27,8 +31,7 @@ export const Sidebar: React.FC = () => {
           </div>
           {!isCollapsed && (
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-semibold text-gray-900 truncate">Emplyx Corp</p>
-              <p className="text-xs text-gray-500 truncate">Enterprise Plan</p>
+              <p className="text-lg font-bold text-gray-900 truncate">Emplyx</p>
             </div>
           )}
           {!isCollapsed && (
@@ -38,6 +41,44 @@ export const Sidebar: React.FC = () => {
           )}
         </div>
       </div>
+
+      {/* Company Switcher */}
+      {!isCollapsed && (
+        <div className="px-4 py-4 border-b border-gray-100">
+          <div className="relative">
+            <button 
+              onClick={() => setIsCompanyMenuOpen(!isCompanyMenuOpen)}
+              className="w-full flex items-center justify-between p-2 bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-200 transition-colors"
+            >
+              <div className="flex items-center gap-2 min-w-0">
+                <div className="p-1 bg-white rounded border border-gray-200">
+                  <Building size={14} className="text-indigo-600" />
+                </div>
+                <span className="text-sm font-medium text-gray-700 truncate">{selectedCompany}</span>
+              </div>
+              <ChevronDown size={14} className="text-gray-500" />
+            </button>
+
+            {isCompanyMenuOpen && (
+              <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-100 rounded-lg shadow-lg z-50 py-1">
+                {companies.map((company) => (
+                  <button
+                    key={company}
+                    onClick={() => {
+                      setSelectedCompany(company);
+                      setIsCompanyMenuOpen(false);
+                    }}
+                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-gray-600 hover:bg-indigo-50 hover:text-indigo-600"
+                  >
+                    <span className="truncate">{company}</span>
+                    {selectedCompany === company && <Check size={14} />}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* Navigation */}
       <div className="flex-1 overflow-y-auto py-4 scrollbar-hide">
