@@ -59,6 +59,36 @@
           "endsPattern": "Local:"
         }
       }
+    },
+    {
+      "label": "npm: dev - Emplyx.Site",
+      "type": "process",
+      "command": "C:\\Users\\ezemi\\scoop\\apps\\nodejs-lts\\current\\node.exe",
+      "args": [
+        "node_modules/vite/bin/vite.js",
+        "--port",
+        "5175"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/Emplyx.Site"
+      },
+      "isBackground": true,
+      "presentation": {
+        "group": "group",
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "problemMatcher": {
+        "owner": "custom",
+        "pattern": {
+          "regexp": "^$"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "VITE",
+          "endsPattern": "Local:"
+        }
+      }
     }
   ]
 }

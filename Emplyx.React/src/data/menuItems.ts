@@ -1,7 +1,7 @@
 import { 
   Home, Building2, Users, Calendar, FileText, Map, MessageSquare, 
   Bot, BarChart3, Euro, Bell, Shield, Settings, Sliders, LucideIcon,
-  Clock, Monitor, Database, FileBarChart
+  Clock, Monitor, Database, FileBarChart, MapPin
 } from 'lucide-react';
 
 export interface NavItemData {
@@ -90,8 +90,9 @@ export const CONFIG_ITEMS: NavItemData = {
       icon: Building2,
       href: "/configuracion/organizacion",
       children: [
-        { label: "Datos Generales", icon: FileText, href: "/configuracion/organizacion/tenant" },
-        { label: "Empresas", icon: Building2, href: "/configuracion/organizacion/empresas" }
+        { label: "Grupo de Empresas", icon: FileText, href: "/configuracion/organizacion/tenant" },
+        { label: "Empresas", icon: Building2, href: "/configuracion/organizacion/empresas" },
+        { label: "Centros de Trabajo", icon: MapPin, href: "/configuracion/organizacion/centros-trabajo" }
       ]
     },
     {

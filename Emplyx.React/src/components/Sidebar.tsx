@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Menu, ArrowLeft, ChevronDown, Building, Check } from 'lucide-react';
+import { Menu, ArrowLeft, ChevronDown, Building, Building2 } from 'lucide-react';
 import { NavItem } from './NavItem';
 import { MENU_ITEMS, CONFIG_ITEMS } from '../data/menuItems';
+import { useOrganization } from '../context/OrganizationContext';
 import clsx from 'clsx';
 
 export const Sidebar: React.FC = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
-  const [selectedCompany, setSelectedCompany] = useState("TechSolutions S.L.");
   const [isCompanyMenuOpen, setIsCompanyMenuOpen] = useState(false);
+  const { selectedCompany, setSelectedCompany, organizations } = useOrganization();
   const location = useLocation();
   const isConfigMode = location.pathname.startsWith('/configuracion');
 
   const navItems = isConfigMode ? (CONFIG_ITEMS.children || []) : MENU_ITEMS;
-  
-  const companies = ["TechSolutions S.L.", "Global Services S.A."];
 
   return (
     <aside 
@@ -51,29 +50,48 @@ export const Sidebar: React.FC = () => {
               className="w-full flex items-center justify-between p-2 bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-200 transition-colors"
             >
               <div className="flex items-center gap-2 min-w-0">
-                <div className="p-1 bg-white rounded border border-gray-200">
-                  <Building size={14} className="text-indigo-600" />
+                <div className={clsx(
+                  "p-1 rounded border border-gray-200",
+                  selectedCompany?.type === 'tenant' ? "bg-purple-50" : "bg-white"
+                )}>
+                  {selectedCompany?.type === 'tenant' ? (
+                    <Building2 size={14} className="text-purple-600" />
+                  ) : (
+                    <Building size={14} className="text-indigo-600" />
+                  )}
                 </div>
-                <span className="text-sm font-medium text-gray-700 truncate">{selectedCompany}</span>
+                <span className="text-sm font-medium text-gray-700 truncate">
+                  {selectedCompany?.name || "Seleccionar..."}
+                </span>
               </div>
               <ChevronDown size={14} className="text-gray-500" />
             </button>
 
             {isCompanyMenuOpen && (
-              <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-100 rounded-lg shadow-lg z-50 py-1">
-                {companies.map((company) => (
+              <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-100 rounded-lg shadow-lg z-50 py-1 max-h-60 overflow-y-auto">
+                {organizations.map((org) => (
                   <button
-                    key={company}
+                    key={`${org.type}-${org.id}`}
                     onClick={() => {
-                      setSelectedCompany(company);
+                      setSelectedCompany(org);
                       setIsCompanyMenuOpen(false);
                     }}
-                    className="w-full flex items-center justify-between px-3 py-2 text-sm text-gray-600 hover:bg-indigo-50 hover:text-indigo-600"
+                    className={clsx(
+                      "w-full flex items-center justify-between px-3 py-2 text-sm transition-colors",
+                      selectedCompany?.id === org.id && selectedCompany?.type === org.type
+                        ? "bg-indigo-50 text-indigo-700"
+                        : "text-gray-600 hover:bg-gray-50"
+                    )}
                   >
-                    <span className="truncate">{company}</span>
-                    {selectedCompany === company && <Check size={14} />}
+                    <div className="flex items-center gap-2 truncate">
+                      {org.type === 'tenant' ? <Building2 size={14} className="text-purple-500" /> : <Building size={14} />}
+                      <span className="truncate">{org.name}</span>
+                    </div>
                   </button>
                 ))}
+                {organizations.length === 0 && (
+                  <div className="px-3 py-2 text-sm text-gray-400 text-center">No hay organizaciones</div>
+                )}
               </div>
             )}
           </div>

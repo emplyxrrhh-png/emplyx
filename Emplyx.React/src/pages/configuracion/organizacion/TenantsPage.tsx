@@ -53,7 +53,7 @@ const TenantsPage = () => {
         <div>
           <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
             <Building2 className="h-8 w-8 text-indigo-600" />
-            Datos Generales (Tenant)
+            Grupo de Empresas
           </h1>
           <p className="text-gray-500 mt-1">Gestiona la entidad principal de la organización</p>
         </div>

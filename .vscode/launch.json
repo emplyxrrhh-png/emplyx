@@ -2,6 +2,28 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Launch Emplyx.WebApp",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/Emplyx.WebApp/bin/Debug/net9.0/Emplyx.WebApp.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/Emplyx.WebApp",
+      "stopAtEntry": false,
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+        "uriFormat": "%s/swagger"
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "https://localhost:5001;http://localhost:5000"
+      },
+      "sourceFileMap": {
+        "${workspaceFolder}": "${workspaceFolder}"
+      }
+    },
+    {
       "name": "Emplyx.React",
       "type": "pwa-chrome",
       "request": "launch",
@@ -13,6 +35,25 @@
         "group": "",
         "order": 1
       }
+    },
+    {
+      "name": "Emplyx.Site",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "url": "http://localhost:5175",
+      "webRoot": "${workspaceFolder}/Emplyx.Site/src",
+      "preLaunchTask": "npm: dev - Emplyx.Site",
+      "presentation": {
+        "hidden": false,
+        "group": "",
+        "order": 2
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Full Stack (Site + API)",
+      "configurations": ["Launch Emplyx.WebApp", "Emplyx.Site"]
     }
   ]
 }

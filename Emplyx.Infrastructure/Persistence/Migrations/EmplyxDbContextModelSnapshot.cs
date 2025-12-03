@@ -416,49 +416,149 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("CIF")
+                    b.Property<string>("BillingEmail")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("BillingNotes")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<string>("CommercialRegister")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("CompanyType")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<string>("CountryOfConstitution")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
                     b.Property<DateTime>("CreatedAtUtc")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Direccion")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                    b.Property<decimal?>("CreditLimit")
+                        .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("Email")
+                    b.Property<string>("Currency")
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<DateTime?>("DateOfConstitution")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("GeneralEmail")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("GeneralPhone")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("IRPFRegime")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<bool>("InheritAccess")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("InheritAddresses")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("InheritBank")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("InheritContact")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("InheritFiscal")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("InternalId")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("InternalNotes")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<string>("IntraCommunityVAT")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("InvoiceDeliveryMethod")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<bool>("IsActive")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
                         .HasDefaultValue(true);
 
-                    b.Property<string>("Nombre")
+                    b.Property<string>("Language")
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("LegalName")
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
-                    b.Property<string>("Pais")
+                    b.Property<bool>("PORequired")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("PaymentMethod")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("PaymentTerm")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<bool>("PortalAccess")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ProvinceOfRegister")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("RazonSocial")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                    b.Property<string>("RegisterDetails")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
-                    b.Property<string>("Telefono")
+                    b.Property<string>("SocialMedia")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<string>("Tags")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("TaxId")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("TimeZone")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("TradeName")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<DateTime>("UpdatedAtUtc")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Web")
+                    b.Property<string>("VATRegime")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Website")
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
@@ -1401,6 +1501,229 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                         .WithMany()
                         .HasForeignKey("RolId")
                         .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Emplyx.Domain.Entities.Empresas.Empresa", b =>
+                {
+                    b.OwnsOne("Emplyx.Domain.Entities.Empresas.AdminUser", "AdminUser", b1 =>
+                        {
+                            b1.Property<Guid>("EmpresaId")
+                                .HasColumnType("uniqueidentifier");
+
+                            b1.Property<string>("Email")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)")
+                                .HasColumnName("AdminUser_Email");
+
+                            b1.Property<string>("Name")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)")
+                                .HasColumnName("AdminUser_Name");
+
+                            b1.Property<string>("Phone")
+                                .IsRequired()
+                                .HasMaxLength(50)
+                                .HasColumnType("nvarchar(50)")
+                                .HasColumnName("AdminUser_Phone");
+
+                            b1.HasKey("EmpresaId");
+
+                            b1.ToTable("Empresas");
+
+                            b1.WithOwner()
+                                .HasForeignKey("EmpresaId");
+                        });
+
+                    b.OwnsOne("Emplyx.Domain.Entities.Empresas.BankAccount", "BankAccount", b1 =>
+                        {
+                            b1.Property<Guid>("EmpresaId")
+                                .HasColumnType("uniqueidentifier");
+
+                            b1.Property<string>("AccountHolder")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)")
+                                .HasColumnName("BankAccount_AccountHolder");
+
+                            b1.Property<string>("BIC")
+                                .IsRequired()
+                                .HasMaxLength(20)
+                                .HasColumnType("nvarchar(20)")
+                                .HasColumnName("BankAccount_BIC");
+
+                            b1.Property<string>("BankName")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)")
+                                .HasColumnName("BankAccount_BankName");
+
+                            b1.Property<string>("IBAN")
+                                .IsRequired()
+                                .HasMaxLength(50)
+                                .HasColumnType("nvarchar(50)")
+                                .HasColumnName("BankAccount_IBAN");
+
+                            b1.Property<bool>("SEPAAuth")
+                                .HasColumnType("bit");
+
+                            b1.Property<DateTime?>("SEPAAuthDate")
+                                .HasColumnType("datetime2");
+
+                            b1.Property<string>("SEPAReference")
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)")
+                                .HasColumnName("BankAccount_SEPAReference");
+
+                            b1.HasKey("EmpresaId");
+
+                            b1.ToTable("Empresas");
+
+                            b1.WithOwner()
+                                .HasForeignKey("EmpresaId");
+                        });
+
+                    b.OwnsOne("Emplyx.Domain.Entities.Empresas.ContactPerson", "MainContact", b1 =>
+                        {
+                            b1.Property<Guid>("EmpresaId")
+                                .HasColumnType("uniqueidentifier");
+
+                            b1.Property<string>("Email")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)")
+                                .HasColumnName("MainContact_Email");
+
+                            b1.Property<string>("JobTitle")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)")
+                                .HasColumnName("MainContact_JobTitle");
+
+                            b1.Property<string>("Mobile")
+                                .IsRequired()
+                                .HasMaxLength(50)
+                                .HasColumnType("nvarchar(50)")
+                                .HasColumnName("MainContact_Mobile");
+
+                            b1.Property<string>("Name")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)")
+                                .HasColumnName("MainContact_Name");
+
+                            b1.Property<string>("Phone")
+                                .IsRequired()
+                                .HasMaxLength(50)
+                                .HasColumnType("nvarchar(50)")
+                                .HasColumnName("MainContact_Phone");
+
+                            b1.HasKey("EmpresaId");
+
+                            b1.ToTable("Empresas");
+
+                            b1.WithOwner()
+                                .HasForeignKey("EmpresaId");
+                        });
+
+                    b.OwnsOne("Emplyx.Domain.Entities.Empresas.Address", "FiscalAddress", b1 =>
+                        {
+                            b1.Property<Guid>("EmpresaId")
+                                .HasColumnType("uniqueidentifier");
+
+                            b1.Property<string>("City")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)")
+                                .HasColumnName("FiscalAddress_City");
+
+                            b1.Property<string>("Country")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)")
+                                .HasColumnName("FiscalAddress_Country");
+
+                            b1.Property<string>("Province")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)")
+                                .HasColumnName("FiscalAddress_Province");
+
+                            b1.Property<string>("Street")
+                                .IsRequired()
+                                .HasMaxLength(200)
+                                .HasColumnType("nvarchar(200)")
+                                .HasColumnName("FiscalAddress_Street");
+
+                            b1.Property<string>("ZipCode")
+                                .IsRequired()
+                                .HasMaxLength(20)
+                                .HasColumnType("nvarchar(20)")
+                                .HasColumnName("FiscalAddress_ZipCode");
+
+                            b1.HasKey("EmpresaId");
+
+                            b1.ToTable("Empresas");
+
+                            b1.WithOwner()
+                                .HasForeignKey("EmpresaId");
+                        });
+
+                    b.OwnsOne("Emplyx.Domain.Entities.Empresas.Address", "LegalAddress", b1 =>
+                        {
+                            b1.Property<Guid>("EmpresaId")
+                                .HasColumnType("uniqueidentifier");
+
+                            b1.Property<string>("City")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)")
+                                .HasColumnName("LegalAddress_City");
+
+                            b1.Property<string>("Country")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)")
+                                .HasColumnName("LegalAddress_Country");
+
+                            b1.Property<string>("Province")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)")
+                                .HasColumnName("LegalAddress_Province");
+
+                            b1.Property<string>("Street")
+                                .IsRequired()
+                                .HasMaxLength(200)
+                                .HasColumnType("nvarchar(200)")
+                                .HasColumnName("LegalAddress_Street");
+
+                            b1.Property<string>("ZipCode")
+                                .IsRequired()
+                                .HasMaxLength(20)
+                                .HasColumnType("nvarchar(20)")
+                                .HasColumnName("LegalAddress_ZipCode");
+
+                            b1.HasKey("EmpresaId");
+
+                            b1.ToTable("Empresas");
+
+                            b1.WithOwner()
+                                .HasForeignKey("EmpresaId");
+                        });
+
+                    b.Navigation("AdminUser");
+
+                    b.Navigation("BankAccount");
+
+                    b.Navigation("FiscalAddress");
+
+                    b.Navigation("LegalAddress")
+                        .IsRequired();
+
+                    b.Navigation("MainContact")
                         .IsRequired();
                 });
 

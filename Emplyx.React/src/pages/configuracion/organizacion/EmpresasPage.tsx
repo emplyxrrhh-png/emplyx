@@ -4,11 +4,21 @@ import { Plus, Edit, Trash2, Building2 } from 'lucide-react';
 
 interface Empresa {
   id: string;
-  nombre: string;
-  razonSocial: string;
-  cif: string;
-  pais: string;
-  isActive: boolean;
+  tradeName?: string;
+  TradeName?: string;
+  legalName?: string;
+  LegalName?: string;
+  taxId?: string;
+  TaxId?: string;
+  countryOfConstitution?: string;
+  CountryOfConstitution?: string;
+  isActive?: boolean;
+  IsActive?: boolean;
+  // Fallback for older API versions
+  nombre?: string;
+  razonSocial?: string;
+  cif?: string;
+  pais?: string;
 }
 
 const EmpresasPage = () => {
@@ -86,19 +96,26 @@ const EmpresasPage = () => {
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
-              {empresas.map((empresa) => (
+              {empresas.map((empresa) => {
+                const name = empresa.tradeName || empresa.TradeName || empresa.legalName || empresa.LegalName || empresa.nombre || '';
+                const legalName = empresa.legalName || empresa.LegalName || empresa.razonSocial || '';
+                const taxId = empresa.taxId || empresa.TaxId || empresa.cif || '';
+                const country = empresa.countryOfConstitution || empresa.CountryOfConstitution || empresa.pais || '';
+                const active = empresa.isActive ?? empresa.IsActive ?? false;
+
+                return (
                 <tr key={empresa.id} className="hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-4 text-gray-900 font-medium">{empresa.nombre}</td>
-                  <td className="px-6 py-4 text-gray-600">{empresa.razonSocial}</td>
-                  <td className="px-6 py-4 text-gray-600 font-mono text-sm">{empresa.cif}</td>
-                  <td className="px-6 py-4 text-gray-600">{empresa.pais}</td>
+                  <td className="px-6 py-4 text-gray-900 font-medium">{name}</td>
+                  <td className="px-6 py-4 text-gray-600">{legalName}</td>
+                  <td className="px-6 py-4 text-gray-600 font-mono text-sm">{taxId}</td>
+                  <td className="px-6 py-4 text-gray-600">{country}</td>
                   <td className="px-6 py-4">
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                      empresa.isActive 
+                      active 
                         ? 'bg-green-100 text-green-700' 
                         : 'bg-gray-100 text-gray-700'
                     }`}>
-                      {empresa.isActive ? 'Activa' : 'Inactiva'}
+                      {active ? 'Activa' : 'Inactiva'}
                     </span>
                   </td>
                   <td className="px-6 py-4 text-right">
@@ -120,7 +137,8 @@ const EmpresasPage = () => {
                     </div>
                   </td>
                 </tr>
-              ))}
+                );
+              })}
               {empresas.length === 0 && (
                 <tr>
                   <td colSpan={6} className="px-6 py-10 text-center text-gray-500">

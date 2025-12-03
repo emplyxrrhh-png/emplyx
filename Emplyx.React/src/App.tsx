@@ -6,6 +6,9 @@ import EmpresasPage from './pages/configuracion/organizacion/EmpresasPage';
 import EmpresaFormPage from './pages/configuracion/organizacion/EmpresaFormPage';
 import TenantsPage from './pages/configuracion/organizacion/TenantsPage';
 import TenantFormPage from './pages/configuracion/organizacion/TenantFormPage';
+import CentrosTrabajoPage from './pages/configuracion/organizacion/CentrosTrabajoPage';
+import CentroTrabajoFormPage from './pages/configuracion/organizacion/CentroTrabajoFormPage';
+import { OrganizationProvider } from './context/OrganizationContext';
 
 const UnderConstruction = ({ title }: { title: string }) => (
   <div className="flex flex-col items-center justify-center h-[60vh] text-center">
@@ -56,35 +59,42 @@ function App() {
   ];
 
   return (
-    <Routes>
-      <Route path="/" element={<MainLayout />}>
-        <Route index element={<Dashboard />} />
-        
-        {/* Rutas implementadas manualmente */}
-        <Route path="/configuracion/organizacion/empresas" element={<EmpresasPage />} />
-        <Route path="/configuracion/organizacion/empresas/nueva" element={<EmpresaFormPage />} />
-        <Route path="/configuracion/organizacion/empresas/editar/:id" element={<EmpresaFormPage />} />
-
-        <Route path="/configuracion/organizacion/tenant" element={<TenantsPage />} />
-        <Route path="/configuracion/organizacion/tenant/nuevo" element={<TenantFormPage />} />
-        <Route path="/configuracion/organizacion/tenant/editar/:id" element={<TenantFormPage />} />
-
-        {allRoutes.map((route) => {
-          // Excluir rutas que ya tienen implementación específica
-          if (route.path === '/configuracion/organizacion/empresas') return null;
-          if (route.path === '/configuracion/organizacion/tenant') return null;
+    <OrganizationProvider>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Dashboard />} />
           
-          return (
-            <Route 
-              key={route.path} 
-              path={route.path} 
-              element={<UnderConstruction title={route.title} />} 
-            />
-          );
-        })}
-        <Route path="*" element={<UnderConstruction title="Página no encontrada" />} />
-      </Route>
-    </Routes>
+          {/* Rutas implementadas manualmente */}
+          <Route path="/configuracion/organizacion/empresas" element={<EmpresasPage />} />
+          <Route path="/configuracion/organizacion/empresas/nueva" element={<EmpresaFormPage />} />
+          <Route path="/configuracion/organizacion/empresas/editar/:id" element={<EmpresaFormPage />} />
+
+          <Route path="/configuracion/organizacion/tenant" element={<TenantsPage />} />
+          <Route path="/configuracion/organizacion/tenant/nuevo" element={<TenantFormPage />} />
+          <Route path="/configuracion/organizacion/tenant/editar/:id" element={<TenantFormPage />} />
+
+          <Route path="/configuracion/organizacion/centros-trabajo" element={<CentrosTrabajoPage />} />
+          <Route path="/configuracion/organizacion/centros-trabajo/nuevo" element={<CentroTrabajoFormPage />} />
+          <Route path="/configuracion/organizacion/centros-trabajo/editar/:id" element={<CentroTrabajoFormPage />} />
+
+          {allRoutes.map((route) => {
+            // Excluir rutas que ya tienen implementación específica
+            if (route.path === '/configuracion/organizacion/empresas') return null;
+            if (route.path === '/configuracion/organizacion/tenant') return null;
+            if (route.path === '/configuracion/organizacion/centros-trabajo') return null;
+            
+            return (
+              <Route 
+                key={route.path} 
+                path={route.path} 
+                element={<UnderConstruction title={route.title} />} 
+              />
+            );
+          })}
+          <Route path="*" element={<UnderConstruction title="Página no encontrada" />} />
+        </Route>
+      </Routes>
+    </OrganizationProvider>
   );
 }
 
