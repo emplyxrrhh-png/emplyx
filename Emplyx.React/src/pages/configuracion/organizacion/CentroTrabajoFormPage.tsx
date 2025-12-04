@@ -86,31 +86,56 @@ const CentroTrabajoFormPage = () => {
   const { id } = useParams();
   const { selectedCompany } = useOrganization();
   const [formData, setFormData] = useState(initialData);
+  const [empresas, setEmpresas] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchEmpresas = async () => {
+      if (selectedCompany?.type === 'tenant') {
+        try {
+          const response = await fetch(`https://localhost:5001/api/empresas?tenantId=${selectedCompany.id}`);
+          if (response.ok) {
+            const data = await response.json();
+            setEmpresas(data);
+          }
+        } catch (e) {
+          console.error("Error fetching empresas", e);
+        }
+      }
+    };
+    fetchEmpresas();
+  }, [selectedCompany]);
   
   useEffect(() => {
     if (selectedCompany && !id) {
-        setFormData(prev => ({
-            ...prev,
-            empresaId: selectedCompany.id
-        }));
+        if (selectedCompany.type === 'empresa') {
+            setFormData(prev => ({
+                ...prev,
+                empresaId: selectedCompany.id
+            }));
+        }
     }
 
     if (id) {
-      // Fetch existing data if editing
-      // Mock data
-      if (id === '1') {
-          setFormData({
-              ...initialData,
-              nombre: 'Oficina Central',
-              empresaId: '1',
-              address: { street: 'Calle Mayor 1', zipCode: '28001', city: 'Madrid', province: 'Madrid', country: 'España' },
-              contact: { name: 'Juan Pérez', phone: '912345678', email: 'juan@emplyx.com' },
-              timeZone: 'Europe/Madrid',
-              language: 'es'
-          });
-      }
+      const fetchCentro = async () => {
+        try {
+          const response = await fetch(`https://localhost:5001/api/centros-trabajo/${id}`);
+          if (response.ok) {
+            const data = await response.json();
+            setFormData(data);
+          } else {
+            console.error('Error fetching centro');
+            alert('No se pudo cargar el centro de trabajo');
+            navigate('/configuracion/organizacion/centros-trabajo');
+          }
+        } catch (error) {
+          console.error('Error fetching centro', error);
+          alert('Error de conexión');
+          navigate('/configuracion/organizacion/centros-trabajo');
+        }
+      };
+      fetchCentro();
     }
-  }, [id, selectedCompany]);
+  }, [id, selectedCompany, navigate]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
@@ -154,14 +179,11 @@ const CentroTrabajoFormPage = () => {
         navigate('/configuracion/organizacion/centros-trabajo');
       } else {
         console.error('Error saving centro trabajo');
-        // Fallback for demo purposes if backend is not ready
-        console.log('Backend not ready, simulating save');
-        navigate('/configuracion/organizacion/centros-trabajo');
+        alert('Error al guardar. Asegúrese de que el servidor está funcionando y la base de datos está actualizada.');
       }
     } catch (error) {
       console.error('Error saving centro trabajo', error);
-      // Fallback for demo purposes
-      navigate('/configuracion/organizacion/centros-trabajo');
+      alert('Error de conexión al guardar.');
     }
   };
 
@@ -205,15 +227,32 @@ const CentroTrabajoFormPage = () => {
               
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Empresa
+                  Empresa {selectedCompany?.type === 'tenant' && <span className="text-red-500">*</span>}
                 </label>
-                <input
-                  type="text"
-                  value={selectedCompany?.name || ''}
-                  disabled
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-500 cursor-not-allowed"
-                />
-                <input type="hidden" name="empresaId" value={formData.empresaId} />
+                {selectedCompany?.type === 'tenant' ? (
+                    <select
+                        name="empresaId"
+                        value={formData.empresaId}
+                        onChange={handleChange}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                        required
+                    >
+                        <option value="">Seleccionar Empresa...</option>
+                        {empresas.map((e: any) => (
+                            <option key={e.id} value={e.id}>{e.tradeName || e.legalName || e.nombre}</option>
+                        ))}
+                    </select>
+                ) : (
+                    <>
+                        <input
+                        type="text"
+                        value={selectedCompany?.name || ''}
+                        disabled
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-500 cursor-not-allowed"
+                        />
+                        <input type="hidden" name="empresaId" value={formData.empresaId} />
+                    </>
+                )}
               </div>
 
               <div className="flex items-center mt-6">

@@ -20,28 +20,27 @@ const CentrosTrabajoPage = () => {
 
   useEffect(() => {
     fetchCentros();
-  }, []);
+  }, [selectedCompany]);
 
   const fetchCentros = async () => {
+    if (!selectedCompany) return;
+    
     try {
-      const response = await fetch('https://localhost:5001/api/centros-trabajo');
+      const queryParam = selectedCompany.type === 'tenant' 
+        ? `tenantId=${selectedCompany.id}` 
+        : `empresaId=${selectedCompany.id}`;
+
+      const response = await fetch(`https://localhost:5001/api/centros-trabajo?${queryParam}`);
       if (response.ok) {
         const data = await response.json();
         setCentros(data);
       } else {
-        // Fallback mock data
-        setCentros([
-          { id: '1', nombre: 'Oficina Central', empresaNombre: 'Emplyx S.L.', ciudad: 'Madrid', pais: 'España', isActive: true },
-          { id: '2', nombre: 'Almacén Norte', empresaNombre: 'Emplyx S.L.', ciudad: 'Barcelona', pais: 'España', isActive: true }
-        ]);
+        console.error('Error fetching centros:', response.statusText);
+        setCentros([]);
       }
     } catch (error) {
       console.error('Error fetching centros', error);
-      // Fallback mock data
-      setCentros([
-        { id: '1', nombre: 'Oficina Central', empresaNombre: 'Emplyx S.L.', ciudad: 'Madrid', pais: 'España', isActive: true },
-        { id: '2', nombre: 'Almacén Norte', empresaNombre: 'Emplyx S.L.', ciudad: 'Barcelona', pais: 'España', isActive: true }
-      ]);
+      setCentros([]);
     } finally {
       setLoading(false);
     }
@@ -56,13 +55,11 @@ const CentrosTrabajoPage = () => {
         if (response.ok) {
           fetchCentros();
         } else {
-           // Mock delete
-           setCentros(centros.filter(c => c.id !== id));
+          alert('Error al eliminar el centro de trabajo');
         }
       } catch (error) {
         console.error('Error deleting centro', error);
-        // Mock delete
-        setCentros(centros.filter(c => c.id !== id));
+        alert('Error al eliminar el centro de trabajo');
       }
     }
   };

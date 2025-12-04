@@ -178,6 +178,9 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
+              "D:\\Proyects\\emplyx\\Emplyx.Application\\Emplyx.Application.csproj": {
+                "projectPath": "D:\\Proyects\\emplyx\\Emplyx.Application\\Emplyx.Application.csproj"
+              },
               "D:\\Proyects\\emplyx\\Emplyx.Domain\\Emplyx.Domain.csproj": {
                 "projectPath": "D:\\Proyects\\emplyx\\Emplyx.Domain\\Emplyx.Domain.csproj"
               }
@@ -200,6 +203,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.26.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.10, )"

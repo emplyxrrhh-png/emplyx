@@ -1,4 +1,5 @@
 using Emplyx.Domain.Entities.Empresas;
+using Emplyx.Domain.Entities.Tenants;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -11,6 +12,14 @@ public class EmpresaConfiguration : IEntityTypeConfiguration<Empresa>
         builder.ToTable("Empresas");
 
         builder.HasKey(e => e.Id);
+
+        builder.Property(e => e.TenantId)
+            .IsRequired();
+
+        builder.HasOne<Tenant>()
+            .WithMany()
+            .HasForeignKey(e => e.TenantId)
+            .OnDelete(DeleteBehavior.Restrict);
 
         builder.Property(e => e.InternalId).HasMaxLength(50).IsRequired();
         builder.Property(e => e.CompanyType).HasMaxLength(50).IsRequired();

@@ -21,7 +21,10 @@ builder.Services.AddInfrastructure(builder.Configuration);
 
 // Add Swagger
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.CustomSchemaIds(type => type.ToString());
+});
 
 var app = builder.Build();
 
@@ -42,8 +45,17 @@ using (var scope = app.Services.CreateScope())
 }
 
 // Configure the HTTP request pipeline.
+Console.WriteLine($"Environment: {app.Environment.EnvironmentName}");
+
+app.Use(async (context, next) =>
+{
+    Console.WriteLine($"Incoming Request: {context.Request.Method} {context.Request.Path}");
+    await next();
+});
+
 if (app.Environment.IsDevelopment())
 {
+    Console.WriteLine("Enabling Swagger");
     app.UseSwagger();
     app.UseSwaggerUI();
 }

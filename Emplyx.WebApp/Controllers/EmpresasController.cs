@@ -1,3 +1,4 @@
+using System;
 using Emplyx.Application.Abstractions;
 using Emplyx.Shared.Contracts.Empresas;
 using Microsoft.AspNetCore.Mvc;
@@ -16,9 +17,12 @@ public class EmpresasController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<EmpresaResponse>>> GetAll(CancellationToken cancellationToken)
+    public async Task<ActionResult<List<EmpresaResponse>>> GetAll([FromQuery] Guid? tenantId, CancellationToken cancellationToken)
     {
-        var empresas = await _empresaService.GetAllAsync(cancellationToken);
+        var empresas = tenantId.HasValue
+            ? await _empresaService.GetByTenantIdAsync(tenantId.Value, cancellationToken)
+            : await _empresaService.GetAllAsync(cancellationToken);
+
         return Ok(empresas);
     }
 

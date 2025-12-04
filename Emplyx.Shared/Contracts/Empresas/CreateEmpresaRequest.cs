@@ -3,6 +3,7 @@ using Emplyx.Shared.Contracts.Tenants;
 namespace Emplyx.Shared.Contracts.Empresas;
 
 public record CreateEmpresaRequest(
+    Guid TenantId,
     bool InheritAddresses,
     bool InheritContact,
     bool InheritFiscal,

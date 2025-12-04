@@ -2,6 +2,8 @@ using Emplyx.Domain.Repositories;
 using Emplyx.Domain.UnitOfWork;
 using Emplyx.Infrastructure.Persistence;
 using Emplyx.Infrastructure.Repositories;
+using Emplyx.Infrastructure.Services;
+using Emplyx.Application.Abstractions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -41,6 +43,10 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IDelegacionTemporalRepository, DelegacionTemporalRepository>();
         services.AddScoped<IEmpresaRepository, EmpresaRepository>();
         services.AddScoped<ITenantRepository, TenantRepository>();
+        services.AddScoped<ICentroTrabajoRepository, CentroTrabajoRepository>();
+        services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+
+        services.AddSingleton<IFileStorageService, AzureBlobStorageService>();
 
         return services;
     }

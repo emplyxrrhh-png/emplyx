@@ -1,7 +1,7 @@
 import { 
   Home, Building2, Users, Calendar, FileText, Map, MessageSquare, 
   Bot, BarChart3, Euro, Bell, Shield, Settings, Sliders, LucideIcon,
-  Clock, Monitor, Database, FileBarChart, MapPin
+  Clock, Monitor, Database, FileBarChart, MapPin, Network
 } from 'lucide-react';
 
 export interface NavItemData {
@@ -13,11 +13,13 @@ export interface NavItemData {
 
 export const MENU_ITEMS: NavItemData[] = [
   { label: "Inicio", icon: Home, href: "/" },
-  {
-    label: "Usuarios",
-    icon: Users,
-    href: "/usuarios",
+  { 
+    label: "Empleados", 
+    icon: Users, 
+    href: "/empleados",
     children: [
+      { label: "Lista", icon: Users, href: "/empleados" },
+      { label: "Árbol", icon: Network, href: "/empleados/arbol" },
       { label: "Expediente de RRHH", icon: Users, href: "/usuarios/expediente" },
       { label: "OnBoarding", icon: Users, href: "/usuarios/onboarding" },
       { label: "Solicitudes", icon: Users, href: "/usuarios/solicitudes" },
@@ -78,38 +80,20 @@ export const CONFIG_ITEMS: NavItemData = {
   href: "/configuracion",
   children: [
     {
-      label: "General",
-      icon: Sliders,
-      href: "/configuracion/general",
-      children: [
-        { label: "Fecha Cierre", icon: Calendar, href: "/configuracion/general/fecha-cierre" }
-      ]
-    },
-    {
       label: "Organización",
       icon: Building2,
       href: "/configuracion/organizacion",
       children: [
         { label: "Grupo de Empresas", icon: FileText, href: "/configuracion/organizacion/tenant" },
         { label: "Empresas", icon: Building2, href: "/configuracion/organizacion/empresas" },
-        { label: "Centros de Trabajo", icon: MapPin, href: "/configuracion/organizacion/centros-trabajo" }
-      ]
-    },
-    {
-      label: "Usuarios",
-      icon: Users,
-      href: "/configuracion/usuarios",
-      children: [
-        { label: "Ficha", icon: FileText, href: "/configuracion/usuarios/ficha" },
+        { label: "Centros de Trabajo", icon: MapPin, href: "/configuracion/organizacion/centros-trabajo" },
+        { label: "Expediente", icon: FileText, href: "/configuracion/usuarios/ficha" },
         { label: "Grupos", icon: Users, href: "/configuracion/usuarios/grupos" },
-        { label: "Roles", icon: Shield, href: "/configuracion/usuarios/roles" },
+        { label: "Roles", icon: Shield, href: "/configuracion/usuarios/roles" }
       ]
     },
-    { label: "Zonas", icon: Map, href: "/configuracion/zonas" },
-    { label: "Notificaciones", icon: Bell, href: "/configuracion/notificaciones" },
-    { label: "Terminales", icon: Monitor, href: "/configuracion/terminales" },
     {
-      label: "Horaria",
+      label: "Horarios",
       icon: Clock,
       href: "/configuracion/horaria",
       children: [
@@ -120,6 +104,8 @@ export const CONFIG_ITEMS: NavItemData = {
         { label: "Metricas", icon: BarChart3, href: "/configuracion/horaria/metricas" },
       ]
     },
+    { label: "Notificaciones", icon: Bell, href: "/configuracion/notificaciones" },
+    { label: "Zonas", icon: Map, href: "/configuracion/zonas" },
     {
       label: "Seguridad",
       icon: Shield,
@@ -135,6 +121,15 @@ export const CONFIG_ITEMS: NavItemData = {
       children: [
         { label: "Importar/Exportar", icon: Database, href: "/configuracion/datos/importar-exportar" }
       ]
-    }
+    },
+    {
+      label: "General",
+      icon: Sliders,
+      href: "/configuracion/general",
+      children: [
+        { label: "Fecha Cierre", icon: Calendar, href: "/configuracion/general/fecha-cierre" }
+      ]
+    },
+    { label: "Terminales", icon: Monitor, href: "/configuracion/terminales" }
   ]
 };

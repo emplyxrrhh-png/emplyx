@@ -89,6 +89,17 @@
           "endsPattern": "Local:"
         }
       }
+    },
+    {
+      "label": "kill-all",
+      "type": "shell",
+      "command": "Stop-Process -Name 'node', 'dotnet' -Force -ErrorAction SilentlyContinue",
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared",
+        "close": true
+      },
+      "problemMatcher": []
     }
   ]
 }

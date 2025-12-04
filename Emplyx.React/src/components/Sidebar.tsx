@@ -7,13 +7,47 @@ import { useOrganization } from '../context/OrganizationContext';
 import clsx from 'clsx';
 
 export const Sidebar: React.FC = () => {
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(() => {
+    const match = document.cookie.match(new RegExp('(^| )sidebar_collapsed=([^;]+)'));
+    return match ? match[2] === 'true' : true;
+  });
+  
+  const setCollapsedState = (state: boolean) => {
+    setIsCollapsed(state);
+    document.cookie = `sidebar_collapsed=${state}; path=/; max-age=31536000; SameSite=Strict; Secure`;
+  };
+
   const [isCompanyMenuOpen, setIsCompanyMenuOpen] = useState(false);
   const { selectedCompany, setSelectedCompany, organizations } = useOrganization();
   const location = useLocation();
   const isConfigMode = location.pathname.startsWith('/configuracion');
 
-  const navItems = isConfigMode ? (CONFIG_ITEMS.children || []) : MENU_ITEMS;
+  const getFilteredConfigItems = () => {
+    if (!isConfigMode || !CONFIG_ITEMS.children) return MENU_ITEMS;
+
+    const configChildren = CONFIG_ITEMS.children.map(section => {
+      if (section.label === "Organización" && section.children) {
+        return {
+          ...section,
+          children: section.children.filter(item => {
+            if (selectedCompany?.type === 'tenant') {
+              // If Tenant is selected: Show Empresas, Hide Centros de Trabajo
+              return item.label !== "Centros de Trabajo";
+            } else if (selectedCompany?.type === 'empresa') {
+              // If Empresa is selected: Hide Empresas, Show Centros de Trabajo
+              return item.label !== "Empresas" && item.label !== "Grupo de Empresas";
+            }
+            return true;
+          })
+        };
+      }
+      return section;
+    });
+
+    return configChildren;
+  };
+
+  const navItems = isConfigMode ? getFilteredConfigItems() : MENU_ITEMS;
 
   return (
     <aside 
@@ -25,7 +59,7 @@ export const Sidebar: React.FC = () => {
       {/* App Header */}
       <div className="h-16 flex items-center px-4 border-b border-gray-100 relative">
         <div className={clsx("flex items-center gap-3 w-full", isCollapsed ? "justify-center" : "justify-between")}>
-          <div className="w-10 h-10 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold shrink-0 cursor-pointer" onClick={() => setIsCollapsed(!isCollapsed)}>
+          <div className="w-10 h-10 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold shrink-0 cursor-pointer" onClick={() => setCollapsedState(!isCollapsed)}>
             E
           </div>
           {!isCollapsed && (
@@ -34,7 +68,7 @@ export const Sidebar: React.FC = () => {
             </div>
           )}
           {!isCollapsed && (
-            <button onClick={() => setIsCollapsed(true)} className="p-1 hover:bg-gray-100 rounded">
+            <button onClick={() => setCollapsedState(true)} className="p-1 hover:bg-gray-100 rounded">
               <Menu size={16} className="text-gray-400" />
             </button>
           )}

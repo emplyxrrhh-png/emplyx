@@ -4,6 +4,7 @@ namespace Emplyx.Shared.Contracts.Empresas;
 
 public record EmpresaResponse(
     Guid Id,
+    Guid TenantId,
     bool InheritAddresses,
     bool InheritContact,
     bool InheritFiscal,

@@ -1,3 +1,4 @@
+using System;
 using Emplyx.Application.Abstractions;
 using Emplyx.Domain.Entities.Empresas;
 using Emplyx.Domain.Repositories;
@@ -24,6 +25,17 @@ internal sealed class EmpresaService : IEmpresaService
         return empresas.Select(MapToResponse).ToList();
     }
 
+    public async Task<List<EmpresaResponse>> GetByTenantIdAsync(Guid tenantId, CancellationToken cancellationToken = default)
+    {
+        if (tenantId == Guid.Empty)
+        {
+            throw new ArgumentException("TenantId is required", nameof(tenantId));
+        }
+
+        var empresas = await _empresaRepository.GetByTenantIdAsync(tenantId, cancellationToken);
+        return empresas.Select(MapToResponse).ToList();
+    }
+
     public async Task<EmpresaResponse?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
     {
         var empresa = await _empresaRepository.GetByIdAsync(id, cancellationToken);
@@ -32,8 +44,14 @@ internal sealed class EmpresaService : IEmpresaService
 
     public async Task<EmpresaResponse> CreateAsync(CreateEmpresaRequest request, CancellationToken cancellationToken = default)
     {
+        if (request.TenantId == Guid.Empty)
+        {
+            throw new ArgumentException("TenantId is required", nameof(request.TenantId));
+        }
+
         var empresa = new Empresa(
             Guid.NewGuid(),
+            request.TenantId,
             request.InternalId,
             request.CompanyType,
             request.LegalName,
@@ -98,6 +116,7 @@ internal sealed class EmpresaService : IEmpresaService
     {
         return new EmpresaResponse(
             e.Id,
+            e.TenantId,
             e.InheritAddresses,
             e.InheritContact,
             e.InheritFiscal,

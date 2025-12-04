@@ -22,6 +22,49 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Emplyx.Domain.Entities.CentrosTrabajo.CentroTrabajo", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("EmpresaId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("InternalId")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Language")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("TimeZone")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime>("UpdatedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CentrosTrabajo", (string)null);
+                });
+
             modelBuilder.Entity("Emplyx.Domain.Entities.Clearances.Clearance", b =>
                 {
                     b.Property<Guid>("Id")
@@ -410,6 +453,141 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                     b.ToTable("DelegacionTemporalRoles", (string)null);
                 });
 
+            modelBuilder.Entity("Emplyx.Domain.Entities.Employees.Employee", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("AccControlled")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("ActiveDirectory")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Alias")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Apellidos")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<bool>("AttControlled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("BiometricID")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<Guid?>("CentroTrabajoId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ContractType")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("CreatedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("EmpresaId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("ExtControlled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("GroupName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("IDAccessGroup")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Idioma")
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("Image")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<bool>("JobControlled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("Notes")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<bool>("RemoteWork")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("RiskControlled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("UpdatedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("WebLogin")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("WebPassword")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Employees", (string)null);
+                });
+
+            modelBuilder.Entity("Emplyx.Domain.Entities.Employees.EmployeeUserField", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("EmployeeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("FieldDefinitionId")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasMaxLength(4000)
+                        .HasColumnType("nvarchar(4000)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EmployeeId");
+
+                    b.ToTable("EmployeeUserFields", (string)null);
+                });
+
             modelBuilder.Entity("Emplyx.Domain.Entities.Empresas.Empresa", b =>
                 {
                     b.Property<Guid>("Id")
@@ -543,6 +721,9 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("TimeZone")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
@@ -563,6 +744,8 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                         .HasColumnType("nvarchar(200)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("TenantId");
 
                     b.ToTable("Empresas", (string)null);
                 });
@@ -1417,6 +1600,89 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Emplyx.Domain.Entities.CentrosTrabajo.CentroTrabajo", b =>
+                {
+                    b.OwnsOne("Emplyx.Domain.Entities.CentrosTrabajo.Address", "Address", b1 =>
+                        {
+                            b1.Property<Guid>("CentroTrabajoId")
+                                .HasColumnType("uniqueidentifier");
+
+                            b1.Property<string>("City")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)")
+                                .HasColumnName("Address_City");
+
+                            b1.Property<string>("Country")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)")
+                                .HasColumnName("Address_Country");
+
+                            b1.Property<string>("Province")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)")
+                                .HasColumnName("Address_Province");
+
+                            b1.Property<string>("Street")
+                                .IsRequired()
+                                .HasMaxLength(200)
+                                .HasColumnType("nvarchar(200)")
+                                .HasColumnName("Address_Street");
+
+                            b1.Property<string>("ZipCode")
+                                .IsRequired()
+                                .HasMaxLength(20)
+                                .HasColumnType("nvarchar(20)")
+                                .HasColumnName("Address_ZipCode");
+
+                            b1.HasKey("CentroTrabajoId");
+
+                            b1.ToTable("CentrosTrabajo");
+
+                            b1.WithOwner()
+                                .HasForeignKey("CentroTrabajoId");
+                        });
+
+                    b.OwnsOne("Emplyx.Domain.Entities.CentrosTrabajo.Contact", "Contact", b1 =>
+                        {
+                            b1.Property<Guid>("CentroTrabajoId")
+                                .HasColumnType("uniqueidentifier");
+
+                            b1.Property<string>("Email")
+                                .IsRequired()
+                                .HasMaxLength(200)
+                                .HasColumnType("nvarchar(200)")
+                                .HasColumnName("Contact_Email");
+
+                            b1.Property<string>("Name")
+                                .IsRequired()
+                                .HasMaxLength(200)
+                                .HasColumnType("nvarchar(200)")
+                                .HasColumnName("Contact_Name");
+
+                            b1.Property<string>("Phone")
+                                .IsRequired()
+                                .HasMaxLength(50)
+                                .HasColumnType("nvarchar(50)")
+                                .HasColumnName("Contact_Phone");
+
+                            b1.HasKey("CentroTrabajoId");
+
+                            b1.ToTable("CentrosTrabajo");
+
+                            b1.WithOwner()
+                                .HasForeignKey("CentroTrabajoId");
+                        });
+
+                    b.Navigation("Address")
+                        .IsRequired();
+
+                    b.Navigation("Contact")
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Emplyx.Domain.Entities.Contextos.Contexto", b =>
                 {
                     b.HasOne("Emplyx.Domain.Entities.Clearances.Clearance", null)
@@ -1504,8 +1770,23 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Emplyx.Domain.Entities.Employees.EmployeeUserField", b =>
+                {
+                    b.HasOne("Emplyx.Domain.Entities.Employees.Employee", null)
+                        .WithMany("UserFields")
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Emplyx.Domain.Entities.Empresas.Empresa", b =>
                 {
+                    b.HasOne("Emplyx.Domain.Entities.Tenants.Tenant", null)
+                        .WithMany()
+                        .HasForeignKey("TenantId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.OwnsOne("Emplyx.Domain.Entities.Empresas.AdminUser", "AdminUser", b1 =>
                         {
                             b1.Property<Guid>("EmpresaId")
@@ -2108,6 +2389,11 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
             modelBuilder.Entity("Emplyx.Domain.Entities.DelegacionesTemporales.DelegacionTemporal", b =>
                 {
                     b.Navigation("Roles");
+                });
+
+            modelBuilder.Entity("Emplyx.Domain.Entities.Employees.Employee", b =>
+                {
+                    b.Navigation("UserFields");
                 });
 
             modelBuilder.Entity("Emplyx.Domain.Entities.Licencias.Licencia", b =>

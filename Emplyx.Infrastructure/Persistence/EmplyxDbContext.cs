@@ -9,6 +9,8 @@ using Emplyx.Domain.Entities.Permisos;
 using Emplyx.Domain.Entities.Roles;
 using Emplyx.Domain.Entities.Usuarios;
 using Emplyx.Domain.Entities.Tenants;
+using Emplyx.Domain.Entities.CentrosTrabajo;
+using Emplyx.Domain.Entities.Employees;
 using Emplyx.Domain.UnitOfWork;
 using Emplyx.Infrastructure.Persistence.Seed;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +24,11 @@ public sealed class EmplyxDbContext : DbContext, IUnitOfWork
         : base(options)
     {
     }
+
+    public DbSet<CentroTrabajo> CentrosTrabajo => Set<CentroTrabajo>();
+
+    public DbSet<Employee> Employees => Set<Employee>();
+    public DbSet<EmployeeUserField> EmployeeUserFields => Set<EmployeeUserField>();
 
     public DbSet<Usuario> Usuarios => Set<Usuario>();
 

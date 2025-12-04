@@ -12,6 +12,8 @@ public class Empresa : Entity, IAggregateRoot
     public bool InheritAccess { get; private set; }
 
     // 1. Datos identificativos
+    public Guid TenantId { get; private set; }
+
     public string InternalId { get; private set; }
     public string CompanyType { get; private set; }
     public string LegalName { get; private set; }
@@ -75,6 +77,7 @@ public class Empresa : Entity, IAggregateRoot
 
     public Empresa(
         Guid id,
+        Guid tenantId,
         string internalId,
         string companyType,
         string legalName,
@@ -83,6 +86,12 @@ public class Empresa : Entity, IAggregateRoot
         ContactPerson mainContact)
         : base(id)
     {
+        if (tenantId == Guid.Empty)
+        {
+            throw new ArgumentException("Tenant id must be provided.", nameof(tenantId));
+        }
+
+        TenantId = tenantId;
         InternalId = internalId;
         CompanyType = companyType;
         LegalName = legalName;
@@ -155,6 +164,17 @@ public class Empresa : Entity, IAggregateRoot
     public void Activate()
     {
         IsActive = true;
+        UpdatedAtUtc = DateTime.UtcNow;
+    }
+
+    public void AssignTenant(Guid tenantId)
+    {
+        if (tenantId == Guid.Empty)
+        {
+            throw new ArgumentException("Tenant id must be provided.", nameof(tenantId));
+        }
+
+        TenantId = tenantId;
         UpdatedAtUtc = DateTime.UtcNow;
     }
 }

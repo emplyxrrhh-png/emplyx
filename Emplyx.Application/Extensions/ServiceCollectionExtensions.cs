@@ -13,6 +13,8 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IDelegacionService, DelegacionService>();
         services.AddScoped<IEmpresaService, EmpresaService>();
         services.AddScoped<ITenantService, TenantService>();
+        services.AddScoped<ICentroTrabajoService, CentroTrabajoService>();
+        services.AddScoped<IEmployeeService, EmployeeService>();
 
         return services;
     }

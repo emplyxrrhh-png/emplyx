@@ -8,6 +8,9 @@ import TenantsPage from './pages/configuracion/organizacion/TenantsPage';
 import TenantFormPage from './pages/configuracion/organizacion/TenantFormPage';
 import CentrosTrabajoPage from './pages/configuracion/organizacion/CentrosTrabajoPage';
 import CentroTrabajoFormPage from './pages/configuracion/organizacion/CentroTrabajoFormPage';
+import EmployeesPage from './pages/configuracion/organizacion/EmployeesPage';
+import EmployeeFormPage from './pages/configuracion/organizacion/EmployeeFormPage';
+import EmployeesTreePage from './pages/configuracion/organizacion/EmployeesTreePage';
 import { OrganizationProvider } from './context/OrganizationContext';
 
 const UnderConstruction = ({ title }: { title: string }) => (
@@ -77,11 +80,17 @@ function App() {
           <Route path="/configuracion/organizacion/centros-trabajo/nuevo" element={<CentroTrabajoFormPage />} />
           <Route path="/configuracion/organizacion/centros-trabajo/editar/:id" element={<CentroTrabajoFormPage />} />
 
+          <Route path="/empleados" element={<EmployeesPage />} />
+          <Route path="/empleados/arbol" element={<EmployeesTreePage />} />
+          <Route path="/empleados/nuevo" element={<EmployeeFormPage />} />
+          <Route path="/empleados/editar/:id" element={<EmployeeFormPage />} />
+
           {allRoutes.map((route) => {
             // Excluir rutas que ya tienen implementación específica
             if (route.path === '/configuracion/organizacion/empresas') return null;
             if (route.path === '/configuracion/organizacion/tenant') return null;
             if (route.path === '/configuracion/organizacion/centros-trabajo') return null;
+            if (route.path === '/empleados') return null;
             
             return (
               <Route 
