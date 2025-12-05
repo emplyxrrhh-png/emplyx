@@ -1,5 +1,3 @@
-using Emplyx.Domain.Entities.Permisos;
-using Emplyx.Domain.Entities.Roles;
 using Emplyx.Domain.Entities.Usuarios;
 using Emplyx.Domain.Repositories;
 using Emplyx.Infrastructure.Persistence;
@@ -75,21 +73,5 @@ internal sealed class UsuarioRepository : RepositoryBase<Usuario>, IUsuarioRepos
             .Include(u => u.Licencias)
             .AsNoTracking()
             .ToListAsync(cancellationToken);
-    }
-
-    public async Task<bool> HasPermissionAsync(Guid usuarioId, string permission, Guid? contextoId, CancellationToken cancellationToken = default)
-    {
-        return await Context.Set<UsuarioRol>()
-            .Where(ur => ur.UsuarioId == usuarioId && 
-                         (ur.ContextoId == Guid.Empty || (contextoId.HasValue && ur.ContextoId == contextoId.Value)))
-            .Join(Context.Set<RolPermiso>(),
-                ur => ur.RolId,
-                rp => rp.RolId,
-                (ur, rp) => rp)
-            .Join(Context.Set<Permiso>(),
-                rp => rp.PermisoId,
-                p => p.Id,
-                (rp, p) => p)
-            .AnyAsync(p => p.Codigo == permission, cancellationToken);
     }
 }

@@ -2,15 +2,11 @@ using Emplyx.Domain.Entities.Clearances;
 using Emplyx.Domain.Entities.Contextos;
 using Emplyx.Domain.Entities.Delegaciones;
 using Emplyx.Domain.Entities.DelegacionesTemporales;
-using Emplyx.Domain.Entities.Empresas;
 using Emplyx.Domain.Entities.Licencias;
 using Emplyx.Domain.Entities.Modulos;
 using Emplyx.Domain.Entities.Permisos;
 using Emplyx.Domain.Entities.Roles;
 using Emplyx.Domain.Entities.Usuarios;
-using Emplyx.Domain.Entities.Tenants;
-using Emplyx.Domain.Entities.CentrosTrabajo;
-using Emplyx.Domain.Entities.Employees;
 using Emplyx.Domain.UnitOfWork;
 using Emplyx.Infrastructure.Persistence.Seed;
 using Microsoft.EntityFrameworkCore;
@@ -24,11 +20,6 @@ public sealed class EmplyxDbContext : DbContext, IUnitOfWork
         : base(options)
     {
     }
-
-    public DbSet<CentroTrabajo> CentrosTrabajo => Set<CentroTrabajo>();
-
-    public DbSet<Employee> Employees => Set<Employee>();
-    public DbSet<EmployeeUserField> EmployeeUserFields => Set<EmployeeUserField>();
 
     public DbSet<Usuario> Usuarios => Set<Usuario>();
 
@@ -57,10 +48,6 @@ public sealed class EmplyxDbContext : DbContext, IUnitOfWork
     public DbSet<DelegacionTemporalRol> DelegacionTemporalRoles => Set<DelegacionTemporalRol>();
 
     public DbSet<Contexto> Contextos => Set<Contexto>();
-
-    public DbSet<Empresa> Empresas => Set<Empresa>();
-
-    public DbSet<Tenant> Tenants => Set<Tenant>();
 
     public DbSet<ContextoModulo> ContextoModulos => Set<ContextoModulo>();
 

@@ -26,15 +26,13 @@ public sealed record UsuarioPerfilDto(
     string? Cargo,
     string? Telefono);
 
-public sealed record UsuarioRolDto(Guid RolId, Guid? ContextoId, DateTime AssignedAtUtc);
+public sealed record UsuarioRolDto(Guid RolId, DateTime AssignedAtUtc);
 
 public sealed record UsuarioContextoDto(Guid ContextoId, bool IsPrimary, DateTime LinkedAtUtc);
 
 public sealed record UsuarioLicenciaDto(Guid LicenciaId, DateTime AssignedAtUtc);
 
 public sealed record UsuarioSesionDto(Guid Id, string Device, string? IpAddress, DateTime CreatedAtUtc, DateTime ExpiresAtUtc, bool IsActive, DateTime? ClosedAtUtc);
-
-public sealed record UsuarioRolAssignmentDto(Guid RolId, Guid? ContextoId);
 
 public sealed record CreateUsuarioRequest(
     string UserName,
@@ -45,7 +43,7 @@ public sealed record CreateUsuarioRequest(
     Guid? ClearanceId,
     Guid? PreferredContextoId,
     UsuarioPerfilDto Perfil,
-    IReadOnlyCollection<UsuarioRolAssignmentDto> Roles,
+    IReadOnlyCollection<Guid> Roles,
     IReadOnlyCollection<UsuarioContextoAssignmentDto> Contextos,
     IReadOnlyCollection<Guid> Licencias);
 
@@ -59,7 +57,7 @@ public sealed record UpdateUsuarioRequest(
     string? ExternalIdentityId,
     Guid? PreferredContextoId,
     UsuarioPerfilDto Perfil,
-    IReadOnlyCollection<UsuarioRolAssignmentDto> Roles,
+    IReadOnlyCollection<Guid> Roles,
     IReadOnlyCollection<UsuarioContextoAssignmentDto> Contextos,
     IReadOnlyCollection<Guid> Licencias);
 
@@ -67,7 +65,5 @@ public sealed record SearchUsuariosRequest(
     string? UserNameOrEmail,
     Guid? ContextoId,
     Guid? RolId);
-
-public sealed record LoginRequest(string UserNameOrEmail, string Password);
 
 public sealed record UsuarioContextoAssignmentDto(Guid ContextoId, bool IsPrimary);
