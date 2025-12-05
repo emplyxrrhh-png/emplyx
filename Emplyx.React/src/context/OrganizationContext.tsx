@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { API_BASE_URL } from '../config';
 
 export interface OrganizationItem {
   id: string;
@@ -24,8 +25,8 @@ export const OrganizationProvider: React.FC<{ children: ReactNode }> = ({ childr
     const fetchData = async () => {
       try {
         const [tenantsRes, empresasRes] = await Promise.all([
-          fetch('https://localhost:5001/api/tenants'),
-          fetch('https://localhost:5001/api/empresas')
+          fetch(`${API_BASE_URL}/tenants`),
+          fetch(`${API_BASE_URL}/empresas`)
         ]);
 
         const tenants = tenantsRes.ok ? await tenantsRes.json() : [];

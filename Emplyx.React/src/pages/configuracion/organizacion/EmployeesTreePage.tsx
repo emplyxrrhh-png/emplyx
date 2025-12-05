@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ChevronRight, ChevronDown, Building2, Building, Users, User } from 'lucide-react';
 import { useOrganization } from '../../../context/OrganizationContext';
 import { Employee } from '../../../types/employee';
+import { API_BASE_URL } from '../../../config';
 
 interface TreeNode {
   id: string;
@@ -34,7 +35,7 @@ const EmployeesTreePage = () => {
 
     setIsLoading(true);
     try {
-      const response = await fetch(`https://localhost:5001/api/employees?empresaId=${empresaId}`);
+      const response = await fetch(`${API_BASE_URL}/employees?empresaId=${empresaId}`);
       if (response.ok) {
         const employees: Employee[] = await response.json();
         const filtered = employees.filter(e => e.groupName === groupName);

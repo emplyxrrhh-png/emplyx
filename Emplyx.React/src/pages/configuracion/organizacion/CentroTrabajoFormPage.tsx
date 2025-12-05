@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { ArrowLeft, Save, MapPin } from 'lucide-react';
 import { AccordionSection } from '../../../components/AccordionSection';
 import { useOrganization } from '../../../context/OrganizationContext';
+import { API_BASE_URL } from '../../../config';
 
 const initialData = {
   internalId: '',
@@ -92,7 +93,7 @@ const CentroTrabajoFormPage = () => {
     const fetchEmpresas = async () => {
       if (selectedCompany?.type === 'tenant') {
         try {
-          const response = await fetch(`https://localhost:5001/api/empresas?tenantId=${selectedCompany.id}`);
+          const response = await fetch(`${API_BASE_URL}/empresas?tenantId=${selectedCompany.id}`);
           if (response.ok) {
             const data = await response.json();
             setEmpresas(data);
@@ -118,7 +119,7 @@ const CentroTrabajoFormPage = () => {
     if (id) {
       const fetchCentro = async () => {
         try {
-          const response = await fetch(`https://localhost:5001/api/centros-trabajo/${id}`);
+          const response = await fetch(`${API_BASE_URL}/centros-trabajo/${id}`);
           if (response.ok) {
             const data = await response.json();
             setFormData(data);
@@ -162,8 +163,8 @@ const CentroTrabajoFormPage = () => {
     
     try {
       const url = id 
-        ? `https://localhost:5001/api/centros-trabajo/${id}`
-        : 'https://localhost:5001/api/centros-trabajo';
+        ? `${API_BASE_URL}/centros-trabajo/${id}`
+        : `${API_BASE_URL}/centros-trabajo`;
       
       const method = id ? 'PUT' : 'POST';
       

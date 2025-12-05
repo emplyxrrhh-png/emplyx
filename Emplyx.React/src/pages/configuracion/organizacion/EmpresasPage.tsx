@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Plus, Edit, Trash2, Building2 } from 'lucide-react';
+import { API_BASE_URL } from '../../../config';
 
 interface Empresa {
   id: string;
@@ -32,7 +33,7 @@ const EmpresasPage = () => {
 
   const fetchEmpresas = async () => {
     try {
-      const response = await fetch('https://localhost:5001/api/empresas');
+      const response = await fetch(`${API_BASE_URL}/empresas`);
       if (response.ok) {
         const data = await response.json();
         setEmpresas(data);
@@ -49,7 +50,7 @@ const EmpresasPage = () => {
   const handleDelete = async (id: string) => {
     if (window.confirm('¿Estás seguro de que quieres eliminar esta empresa?')) {
       try {
-        const response = await fetch(`https://localhost:5001/api/empresas/${id}`, {
+        const response = await fetch(`${API_BASE_URL}/empresas/${id}`, {
           method: 'DELETE',
         });
         if (response.ok) {

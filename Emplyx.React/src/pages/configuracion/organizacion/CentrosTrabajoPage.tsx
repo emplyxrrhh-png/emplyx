@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Plus, Edit, Trash2, MapPin } from 'lucide-react';
 import { useOrganization } from '../../../context/OrganizationContext';
+import { API_BASE_URL } from '../../../config';
 
 interface CentroTrabajo {
   id: string;
@@ -30,7 +31,7 @@ const CentrosTrabajoPage = () => {
         ? `tenantId=${selectedCompany.id}` 
         : `empresaId=${selectedCompany.id}`;
 
-      const response = await fetch(`https://localhost:5001/api/centros-trabajo?${queryParam}`);
+      const response = await fetch(`${API_BASE_URL}/centros-trabajo?${queryParam}`);
       if (response.ok) {
         const data = await response.json();
         setCentros(data);
@@ -49,7 +50,7 @@ const CentrosTrabajoPage = () => {
   const handleDelete = async (id: string) => {
     if (window.confirm('¿Estás seguro de que quieres eliminar este centro de trabajo?')) {
       try {
-        const response = await fetch(`https://localhost:5001/api/centros-trabajo/${id}`, {
+        const response = await fetch(`${API_BASE_URL}/centros-trabajo/${id}`, {
           method: 'DELETE',
         });
         if (response.ok) {

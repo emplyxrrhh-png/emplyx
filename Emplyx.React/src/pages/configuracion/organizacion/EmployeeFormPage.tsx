@@ -4,6 +4,7 @@ import { ArrowLeft, Save, ChevronDown, ChevronUp, Shield, CheckCircle, XCircle, 
 import { useOrganization } from '../../../context/OrganizationContext';
 import { CreateEmployeeRequest, Employee, UpdateEmployeeRequest, UserRole } from '../../../types/employee';
 import { Role } from '../../../types/role';
+import { API_BASE_URL } from '../../../config';
 
 const EmployeeFormPage = () => {
   const navigate = useNavigate();
@@ -66,7 +67,7 @@ const EmployeeFormPage = () => {
   const fetchEmployee = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch(`https://localhost:5001/api/employees/${id}`);
+      const response = await fetch(`${API_BASE_URL}/employees/${id}`);
       if (response.ok) {
         const data = await response.json();
         setFormData(data);
@@ -110,7 +111,7 @@ const EmployeeFormPage = () => {
       const formDataUpload = new FormData();
       formDataUpload.append('file', file);
 
-      const response = await fetch('https://localhost:5001/api/employees/upload-image', {
+      const response = await fetch(`${API_BASE_URL}/employees/upload-image`, {
         method: 'POST',
         body: formDataUpload,
       });
@@ -137,8 +138,8 @@ const EmployeeFormPage = () => {
     setIsLoading(true);
     try {
       const url = id 
-        ? `https://localhost:5001/api/employees/${id}`
-        : 'https://localhost:5001/api/employees';
+        ? `${API_BASE_URL}/employees/${id}`
+        : `${API_BASE_URL}/employees`;
       
       const method = id ? 'PUT' : 'POST';
       

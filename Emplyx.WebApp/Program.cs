@@ -19,10 +19,16 @@ builder.Services.AddControllers();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp",
-        builder => builder
-            .WithOrigins("http://localhost:5173", "http://localhost:5175")
+        policy => policy
+            .WithOrigins(
+                "http://localhost:5173", 
+                "http://localhost:5175",
+                "https://emplyx.azurewebsites.net",
+                "https://emplyxsite.azurewebsites.net"
+            )
             .AllowAnyMethod()
-            .AllowAnyHeader());
+            .AllowAnyHeader()
+            .AllowCredentials());
 });
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
@@ -58,7 +64,9 @@ Console.WriteLine($"Environment: {app.Environment.EnvironmentName}");
 app.Use(async (context, next) =>
 {
     Console.WriteLine($"Incoming Request: {context.Request.Method} {context.Request.Path}");
+    Console.WriteLine($"Origin: {context.Request.Headers["Origin"]}");
     await next();
+    Console.WriteLine($"Response Status: {context.Response.StatusCode}");
 });
 
 if (app.Environment.IsDevelopment())
@@ -66,6 +74,7 @@ if (app.Environment.IsDevelopment())
     Console.WriteLine("Enabling Swagger");
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.MapGet("/", () => Results.Redirect("/swagger"));
 }
 
 if (!app.Environment.IsDevelopment())
@@ -75,9 +84,10 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
-
+// CORS debe ir antes de UseHttpsRedirection y UseAuthorization
 app.UseCors("AllowReactApp");
+
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

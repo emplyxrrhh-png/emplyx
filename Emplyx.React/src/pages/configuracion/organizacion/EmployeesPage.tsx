@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Plus, Search, Edit, Trash2, ChevronRight, ChevronDown, Users, Building } from 'lucide-react';
 import { useOrganization } from '../../../context/OrganizationContext';
 import { Employee } from '../../../types/employee';
+import { API_BASE_URL } from '../../../config';
 
 const EmployeesPage = () => {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ const EmployeesPage = () => {
     
     setIsLoading(true);
     try {
-      let url = `https://localhost:5001/api/employees?`;
+      let url = `${API_BASE_URL}/employees?`;
       if (selectedCompany.type === 'empresa') {
           url += `empresaId=${selectedCompany.id}`;
       } else {
@@ -49,7 +50,7 @@ const EmployeesPage = () => {
     if (!confirm('¿Estás seguro de que deseas eliminar este empleado?')) return;
 
     try {
-      const response = await fetch(`https://localhost:5001/api/employees/${id}`, {
+      const response = await fetch(`${API_BASE_URL}/employees/${id}`, {
         method: 'DELETE',
       });
 

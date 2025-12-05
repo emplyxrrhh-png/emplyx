@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { Sidebar } from '../components/Sidebar';
 import { Header } from '../components/Header';
 import { WifiOff } from 'lucide-react';
+import { API_BASE_URL } from '../config';
 
 export const MainLayout: React.FC = () => {
   const [isOffline, setIsOffline] = useState(false);
@@ -13,7 +14,7 @@ export const MainLayout: React.FC = () => {
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), 5000);
         
-        await fetch('https://localhost:5001/api/tenants', { 
+        await fetch(`${API_BASE_URL}/tenants`, { 
             method: 'GET',
             signal: controller.signal
         });
