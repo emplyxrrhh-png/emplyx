@@ -1,0 +1,145 @@
+@using System.Timers
+@typeparam TValue
+
+<div class="app-selector">
+    <label>@Label</label>
+    <div class="app-selector__input">
+        <input class="form-control"
+               placeholder="@Placeholder"
+               value="@_search"
+               @oninput="HandleInput" />
+        @if (_isLoading)
+        {
+            <div class="spinner-border spinner-border-sm text-primary" role="status"></div>
+        }
+    </div>
+
+    @if (IsMulti && _selectedItems.Count > 0)
+    {
+        <div class="d-flex flex-wrap gap-2">
+            @foreach (var item in _selectedItems)
+            {
+                <span class="app-selector__pill">
+                    @GetLabel(item)
+                    <button type="button" class="btn btn-link btn-sm p-0" @onclick="() => RemoveItem(item)">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </span>
+            }
+        </div>
+    }
+
+    @if (_options.Count > 0)
+    {
+        <div class="list-group app-selector__dropdown">
+            @foreach (var option in _options)
+            {
+                var isActive = _selectedItems.Contains(option);
+                <button type="button"
+                        class="list-group-item list-group-item-action @(isActive ? "active" : string.Empty)"
+                        @onclick="() => ToggleItem(option)">
+                    @GetLabel(option)
+                </button>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter] public Func<string?, CancellationToken, Task<IReadOnlyList<TValue>>>? Provider { get; set; }
+    [Parameter] public Func<TValue, string>? LabelSelector { get; set; }
+    [Parameter] public EventCallback<IReadOnlyList<TValue>> OnChange { get; set; }
+    [Parameter] public string Label { get; set; } = "Selector";
+    [Parameter] public string Placeholder { get; set; } = "Escribe para buscar";
+    [Parameter] public bool IsMulti { get; set; } = true;
+    [Parameter] public IReadOnlyList<TValue>? Value { get; set; }
+
+    private readonly List<TValue> _options = new();
+    private readonly List<TValue> _selectedItems = new();
+    private string? _search;
+    private bool _isLoading;
+    private readonly System.Timers.Timer _debounceTimer = new(450) { AutoReset = false };
+
+    protected override void OnInitialized()
+    {
+        _debounceTimer.Elapsed += async (_, _) =>
+        {
+            await InvokeAsync(async () =>
+            {
+                await LoadOptionsAsync(_search);
+                StateHasChanged();
+            });
+        };
+
+        if (Value is not null)
+        {
+            _selectedItems.AddRange(Value);
+        }
+    }
+
+    private async Task LoadOptionsAsync(string? term)
+    {
+        if (Provider is null)
+        {
+            return;
+        }
+
+        _isLoading = true;
+        _options.Clear();
+        try
+        {
+            using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(5));
+            var result = await Provider.Invoke(term, cts.Token);
+            _options.AddRange(result);
+        }
+        finally
+        {
+            _isLoading = false;
+        }
+    }
+
+    private void HandleInput(ChangeEventArgs args)
+    {
+        _search = args.Value?.ToString();
+        _debounceTimer.Stop();
+        _debounceTimer.Start();
+    }
+
+    private void ToggleItem(TValue option)
+    {
+        if (IsMulti)
+        {
+            if (_selectedItems.Contains(option))
+            {
+                _selectedItems.Remove(option);
+            }
+            else
+            {
+                _selectedItems.Add(option);
+            }
+        }
+        else
+        {
+            _selectedItems.Clear();
+            _selectedItems.Add(option);
+        }
+
+        OnChange.InvokeAsync(_selectedItems.ToList());
+    }
+
+    private void RemoveItem(TValue option)
+    {
+        if (_selectedItems.Remove(option))
+        {
+            OnChange.InvokeAsync(_selectedItems.ToList());
+        }
+    }
+
+    private string GetLabel(TValue value) =>
+        LabelSelector?.Invoke(value) ?? value?.ToString() ?? string.Empty;
+
+    public void Dispose()
+    {
+        _debounceTimer.Dispose();
+    }
+}

@@ -1,0 +1,30 @@
+@using Emplyx.Shared.UI
+@inject Emplyx.Blazor.Services.TenantContextState TenantContextState
+@implements IDisposable
+
+<CascadingValue Value="_context">
+    @ChildContent
+</CascadingValue>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+
+    private TenantContext _context = TenantContext.Default;
+
+    protected override void OnInitialized()
+    {
+        _context = TenantContextState.Current;
+        TenantContextState.ContextChanged += HandleContextChanged;
+    }
+
+    private void HandleContextChanged(TenantContext context)
+    {
+        _context = context;
+        InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        TenantContextState.ContextChanged -= HandleContextChanged;
+    }
+}

@@ -19,6 +19,7 @@ public static class ServiceCollectionExtensions
             {
                 client.BaseAddress = baseAddress;
             }
+
             client.Timeout = options.ResolveTimeout();
         });
 

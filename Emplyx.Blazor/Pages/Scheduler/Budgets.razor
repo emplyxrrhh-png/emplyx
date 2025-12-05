@@ -1,0 +1,133 @@
+@page "/scheduler/budgets"
+
+@inject IBudgetsDataSource BudgetsData
+@inject AppUiMessagingService Messaging
+
+<PageTitle>Scheduler - Budgets</PageTitle>
+
+<div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
+    <div>
+        <h1 class="h3 mb-0">Budgets</h1>
+        <p class="text-muted mb-0">Replica AIScheduler/Budget.aspx (filtros por unidad, periodo, estado).</p>
+    </div>
+    <div class="d-flex gap-2">
+        <button class="btn btn-outline-secondary btn-sm" @onclick="ReloadAsync">
+            <i class="bi bi-arrow-repeat"></i> Actualizar
+        </button>
+    </div>
+</div>
+
+<AppDataGrid TItem="BudgetListItem"
+             Title="Budgets por unidad"
+             SubTitle="Datos mock srvProductiveUnit Budget"
+             OnRead="LoadBudgets"
+             PageSize="10"
+             EnableSearch="true"
+             FilterDefinitions="@_filters">
+    <HeaderTemplate Context="sort">
+        <tr>
+            <th>
+                <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(BudgetListItem.UnitName))">
+                    Unidad @SortIcon(sort, nameof(BudgetListItem.UnitName))
+                </button>
+            </th>
+            <th>
+                <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(BudgetListItem.PeriodLabel))">
+                    Periodo @SortIcon(sort, nameof(BudgetListItem.PeriodLabel))
+                </button>
+            </th>
+            <th>
+                <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(BudgetListItem.Status))">
+                    Estado @SortIcon(sort, nameof(BudgetListItem.Status))
+                </button>
+            </th>
+            <th>Planeado</th>
+            <th>Ejecutado</th>
+            <th>
+                <button class="btn btn-link btn-sm p-0" @onclick="() => sort.SortAsync(nameof(BudgetListItem.UpdatedAt))">
+                    Actualizado @SortIcon(sort, nameof(BudgetListItem.UpdatedAt))
+                </button>
+            </th>
+            <th></th>
+        </tr>
+    </HeaderTemplate>
+    <RowTemplate Context="row">
+        <td>@row.UnitName</td>
+        <td>@row.PeriodLabel</td>
+        <td>
+            <span class="badge @(row.Status.Equals("Aprobado", StringComparison.OrdinalIgnoreCase) ? "bg-success-subtle text-success" : "bg-secondary")">@row.Status</span>
+        </td>
+        <td>@row.PlannedHours.ToString("N0") h</td>
+        <td>@row.ActualHours.ToString("N0") h</td>
+        <td>@row.UpdatedAt.ToLocalTime().ToString("g")</td>
+    </RowTemplate>
+    <RowActionsTemplate Context="row">
+        <div class="btn-group btn-group-sm">
+            <button class="btn btn-outline-primary" @onclick="() => ViewBudget(row)">Detalle</button>
+            <button class="btn btn-outline-danger" @onclick="() => DeleteBudget(row)">Borrar</button>
+        </div>
+    </RowActionsTemplate>
+</AppDataGrid>
+
+@code {
+    private readonly IReadOnlyList<DataGridFilterDefinition> _filters =
+        new List<DataGridFilterDefinition>
+        {
+            new("unit", "Unidad", "Nombre parcial"),
+            new("period", "Periodo", "Q1 2025, etc."),
+            new("status", "Estado", "Aprobado/Pendiente/Borrador")
+        };
+
+    private async Task<DataGridResult<BudgetListItem>> LoadBudgets(DataGridCriteria criteria)
+    {
+        var request = BuildRequest(criteria);
+        var response = await BudgetsData.GetAsync(request);
+        return new DataGridResult<BudgetListItem>(response.Items, response.TotalCount);
+    }
+
+    private BudgetListRequest BuildRequest(DataGridCriteria criteria)
+    {
+        string? unit = null;
+        string? status = null;
+        string? period = null;
+
+        if (criteria.Filters is not null)
+        {
+            criteria.Filters.TryGetValue("unit", out unit);
+            criteria.Filters.TryGetValue("status", out status);
+            criteria.Filters.TryGetValue("period", out period);
+        }
+
+        return BudgetListRequest.FromCriteria(criteria, unit, status, period);
+    }
+
+    private async Task ReloadAsync() => await InvokeAsync(StateHasChanged);
+
+    private void ViewBudget(BudgetListItem item) =>
+        Messaging.ShowToast(new AppToastOptions("Detalle budget", $"Abrir tabs para {item.UnitName} - {item.PeriodLabel}.", UiNotificationLevel.Info));
+
+    private async Task DeleteBudget(BudgetListItem item)
+    {
+        var confirm = await Messaging.ShowConfirmationAsync(
+            "Borrar budget",
+            $"Eliminar budget {item.UnitName} / {item.PeriodLabel}? (DELETE /scheduler/budgets/{item.Id})",
+            "Si, borrar",
+            "Cancelar");
+
+        if (confirm is true)
+        {
+            Messaging.ShowToast(new AppToastOptions("Eliminado", $"Budget {item.UnitName} se marcó para borrado.", UiNotificationLevel.Warning));
+        }
+    }
+
+    private static MarkupString SortIcon(DataGridSortState sort, string field)
+    {
+        if (sort.Field != field)
+        {
+            return new MarkupString(string.Empty);
+        }
+
+        var icon = sort.Descending ? "bi-caret-down-fill" : "bi-caret-up-fill";
+        return new MarkupString($"<i class=\"bi {icon} ms-1\"></i>");
+    }
+}

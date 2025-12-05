@@ -6,100 +6,53 @@
       "command": "dotnet",
       "type": "process",
       "args": [
-        "build",
-        "${workspaceFolder}/Emplyx.WebApp/Emplyx.WebApp.csproj",
-        "/property:GenerateFullPaths=true",
-        "/consoleloggerparameters:NoSummary"
+        },
+        {
+          "label": "run-emplyx-https",
+          "type": "process",
+          "command": "dotnet",
+          "args": [
+            "run",
+            "--project",
+            "${workspaceFolder}/Emplyx.WebApp/Emplyx.WebApp.csproj",
+            "-c",
+            "Debug",
+            "--urls",
+            "https://localhost:5001"
+          ],
+          "dependsOn": ["kill-port-5001"],
+          "presentation": {
+            "echo": true,
+            "reveal": "always",
+            "panel": "new"
+          }
+        }
       ],
-      "problemMatcher": "$msCompile"
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "panel": "shared"
+      }
     },
     {
       "label": "run-emplyx-https",
-      "type": "process",
+      "type": "shell",
       "command": "dotnet",
       "args": [
         "run",
         "--project",
-        "${workspaceFolder}/Emplyx.WebApp/Emplyx.WebApp.csproj",
+        "${workspaceFolder}/Emplyx.Blazor/Emplyx.Blazor.csproj",
         "-c",
         "Debug",
-        "--launch-profile",
-        "https"
+        "--urls",
+        "https://localhost:5001"
       ],
+      "dependsOn": ["kill-port-5001"],
       "presentation": {
         "echo": true,
         "reveal": "always",
         "panel": "new"
       }
-    },
-    {
-      "label": "npm: dev - Emplyx.React",
-      "type": "process",
-      "command": "C:\\Users\\ezemi\\scoop\\apps\\nodejs-lts\\current\\node.exe",
-      "args": [
-        "node_modules/vite/bin/vite.js"
-      ],
-      "options": {
-        "cwd": "${workspaceFolder}/Emplyx.React"
-      },
-      "isBackground": true,
-      "presentation": {
-        "group": "group",
-        "reveal": "always",
-        "panel": "dedicated"
-      },
-      "problemMatcher": {
-        "owner": "custom",
-        "pattern": {
-          "regexp": "^$"
-        },
-        "background": {
-          "activeOnStart": true,
-          "beginsPattern": "VITE",
-          "endsPattern": "Local:"
-        }
-      }
-    },
-    {
-      "label": "npm: dev - Emplyx.Site",
-      "type": "process",
-      "command": "C:\\Users\\ezemi\\scoop\\apps\\nodejs-lts\\current\\node.exe",
-      "args": [
-        "node_modules/vite/bin/vite.js",
-        "--port",
-        "5175"
-      ],
-      "options": {
-        "cwd": "${workspaceFolder}/Emplyx.Site"
-      },
-      "isBackground": true,
-      "presentation": {
-        "group": "group",
-        "reveal": "always",
-        "panel": "dedicated"
-      },
-      "problemMatcher": {
-        "owner": "custom",
-        "pattern": {
-          "regexp": "^$"
-        },
-        "background": {
-          "activeOnStart": true,
-          "beginsPattern": "VITE",
-          "endsPattern": "Local:"
-        }
-      }
-    },
-    {
-      "label": "kill-all",
-      "type": "shell",
-      "command": "Stop-Process -Name 'node', 'dotnet' -Force -ErrorAction SilentlyContinue",
-      "presentation": {
-        "reveal": "silent",
-        "panel": "shared",
-        "close": true
-      },
-      "problemMatcher": []
     }
   ]
 }

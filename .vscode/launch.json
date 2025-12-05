@@ -2,60 +2,43 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch Emplyx.WebApp",
+      "name": "Launch Emplyx.Blazor (net9.0)",
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/Emplyx.WebApp/bin/Debug/net9.0/Emplyx.WebApp.dll",
+      "program": "${workspaceFolder}/Emplyx.Blazor/bin/Debug/net9.0/Emplyx.Blazor.dll",
       "args": [],
-      "cwd": "${workspaceFolder}/Emplyx.WebApp",
+      "cwd": "${workspaceFolder}/Emplyx.Blazor",
       "stopAtEntry": false,
-      "serverReadyAction": {
-        "action": "openExternally",
-        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
-        "uriFormat": "%s/swagger"
-      },
       "env": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "ASPNETCORE_URLS": "https://localhost:5001;http://localhost:5000"
+        "ASPNETCORE_URLS": "https://localhost:5001"
       },
+      "launchBrowser": {
+        "enabled": true,
+        "windows": {
+          "command": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "args": "--new-window https://localhost:5001"
+        },
+        "osx": {
+          "command": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+          "args": "--new-window https://localhost:5001"
+        },
+        "linux": {
+          "command": "google-chrome",
+          "args": "--new-window https://localhost:5001"
+        }
+      },
+      "serverReadyAction": {
+        "pattern": "Now listening on:\\s+(https?://\\S+)",
+        "uriFormat": "%s",
+        "action": "openExternally"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
       "sourceFileMap": {
         "${workspaceFolder}": "${workspaceFolder}"
       }
-    },
-    {
-      "name": "Emplyx.React",
-      "type": "pwa-chrome",
-      "request": "launch",
-      "url": "http://localhost:5173",
-      "webRoot": "${workspaceFolder}/Emplyx.React/src",
-      "preLaunchTask": "npm: dev - Emplyx.React",
-      "userDataDir": "${workspaceFolder}/.vscode/chrome-react",
-      "presentation": {
-        "hidden": false,
-        "group": "",
-        "order": 1
-      }
-    },
-    {
-      "name": "Emplyx.Site",
-      "type": "pwa-chrome",
-      "request": "launch",
-      "url": "http://localhost:5175",
-      "webRoot": "${workspaceFolder}/Emplyx.Site/src",
-      "preLaunchTask": "npm: dev - Emplyx.Site",
-      "userDataDir": "${workspaceFolder}/.vscode/chrome-site",
-      "presentation": {
-        "hidden": false,
-        "group": "",
-        "order": 2
-      }
-    }
-  ],
-  "compounds": [
-    {
-      "name": "Full Stack (Site + API)",
-      "configurations": ["Launch Emplyx.WebApp", "Emplyx.Site"]
     }
   ]
 }

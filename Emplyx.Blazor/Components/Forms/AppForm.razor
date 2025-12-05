@@ -1,0 +1,80 @@
+@typeparam TModel
+
+@if (CurrentEditContext is null)
+{
+    <div class="alert alert-danger">
+        AppForm requiere un `Model` no nulo o un `EditContext` existente.
+    </div>
+}
+else
+{
+    <EditForm EditContext="CurrentEditContext"
+              OnValidSubmit="HandleValidSubmit"
+              OnInvalidSubmit="HandleInvalidSubmit">
+        <DataAnnotationsValidator />
+        @AdditionalValidators
+
+        @if (ShowSummary)
+        {
+            <ValidationSummary />
+        }
+
+        <fieldset disabled="@IsBusy">
+            <CascadingValue Value="CurrentModel" IsFixed="false">
+                @ChildContent
+            </CascadingValue>
+        </fieldset>
+    </EditForm>
+}
+
+@code {
+    [Parameter] public TModel? Model { get; set; }
+    [Parameter] public EditContext? EditContext { get; set; }
+    [Parameter] public bool ShowSummary { get; set; } = true;
+    [Parameter] public bool IsBusy { get; set; }
+    [Parameter] public RenderFragment? AdditionalValidators { get; set; }
+    [Parameter] public EventCallback<TModel> OnValidSubmit { get; set; }
+    [Parameter] public EventCallback<EditContext> OnInvalidSubmit { get; set; }
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+
+    private EditContext? _internalEditContext;
+
+    private EditContext? CurrentEditContext => EditContext ?? _internalEditContext;
+    private TModel CurrentModel => (TModel)(CurrentEditContext?.Model ?? throw new InvalidOperationException("El EditContext no contiene un modelo del tipo esperado."));
+
+    protected override void OnParametersSet()
+    {
+        if (EditContext is not null)
+        {
+            _internalEditContext = null;
+            return;
+        }
+
+        if (Model is null)
+        {
+            _internalEditContext = null;
+            return;
+        }
+
+        if (_internalEditContext is null || !ReferenceEquals(_internalEditContext.Model, Model))
+        {
+            _internalEditContext = new EditContext(Model);
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        if (OnValidSubmit.HasDelegate)
+        {
+            await OnValidSubmit.InvokeAsync(CurrentModel);
+        }
+    }
+
+    private async Task HandleInvalidSubmit(EditContext editContext)
+    {
+        if (OnInvalidSubmit.HasDelegate)
+        {
+            await OnInvalidSubmit.InvokeAsync(editContext);
+        }
+    }
+}

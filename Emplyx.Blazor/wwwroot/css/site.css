@@ -1,0 +1,247 @@
+:root {
+    color-scheme: light dark;
+    --emplyx-primary: #0052cc;
+    --emplyx-primary-rgb: 0, 82, 204;
+    --emplyx-surface: #0d1b2a;
+    --emplyx-muted: #f4f6fb;
+    --emplyx-border: #d7dce5;
+    --emplyx-text: #192038;
+    --emplyx-text-muted: #5b6275;
+    --emplyx-success: #139b60;
+    --sidebar-width: 250px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    background-color: var(--emplyx-muted);
+    color: var(--emplyx-text);
+}
+
+a {
+    color: var(--emplyx-primary);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.app-shell {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-shell__topbar {
+    background: linear-gradient(90deg, var(--emplyx-surface) 0%, #142840 60%, #1f3a5f 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.4);
+}
+
+.app-shell__body {
+    flex: 1;
+    display: flex;
+    min-height: 0;
+}
+
+.app-shell__sidebar {
+    width: var(--sidebar-width);
+    background-color: #ffffff;
+    border-right: 1px solid var(--emplyx-border);
+    padding: 1rem 0.75rem;
+}
+
+.app-shell__content {
+    flex: 1;
+    padding: 1.5rem;
+    min-width: 0;
+}
+
+.app-shell__content-card {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.18);
+}
+
+.tenant-bar {
+    display: flex;
+    flex-direction: column;
+}
+
+.tenant-bar__title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.tenant-bar__meta {
+    font-size: 0.85rem;
+    color: #d2d8e6;
+}
+
+nav .nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 0.85rem;
+    border-radius: 10px;
+    color: var(--emplyx-text);
+    font-weight: 500;
+}
+
+.nav-link i {
+    font-size: 1.1rem;
+    color: #8a93a8;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: rgba(var(--emplyx-primary-rgb), 0.08);
+    color: var(--emplyx-primary);
+}
+
+.nav-link:hover i,
+.nav-link.active i {
+    color: var(--emplyx-primary);
+}
+
+.breadcrumbs {
+    font-size: 0.85rem;
+    color: var(--emplyx-text-muted);
+    margin-bottom: 0.5rem;
+}
+
+#blazor-error-ui {
+    background: #fde047;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0,0,0,0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+    .app-shell__sidebar {
+        display: none;
+    }
+
+    .app-shell__content {
+        padding: 1rem;
+    }
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.dashboard-card {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1.25rem;
+    border: 1px solid var(--emplyx-border);
+}
+
+.dashboard-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.dashboard-card ul {
+    padding-left: 1.25rem;
+    margin: 0;
+}
+
+.app-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.app-selector__input {
+    position: relative;
+}
+
+.app-selector__input input {
+    padding-right: 2.5rem;
+}
+
+.app-selector__input .spinner-border {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.app-selector__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 999px;
+    background-color: rgba(var(--emplyx-primary-rgb), 0.08);
+    color: var(--emplyx-primary);
+    font-size: 0.85rem;
+}
+
+.app-selector__dropdown {
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.app-selector__dropdown .list-group-item {
+    cursor: pointer;
+}
+
+.app-selector__dropdown .list-group-item.active {
+    background-color: rgba(var(--emplyx-primary-rgb), 0.1);
+    color: var(--emplyx-primary);
+    border-color: transparent;
+}
+
+.app-field {
+    margin-bottom: 1rem;
+}
+
+.app-field .form-label {
+    font-weight: 600;
+}
+
+.app-field .validation-message {
+    color: #dc2626;
+    font-size: 0.85rem;
+}
