@@ -89,7 +89,8 @@ export const CONFIG_ITEMS: NavItemData = {
         { label: "Centros de Trabajo", icon: MapPin, href: "/configuracion/organizacion/centros-trabajo" },
         { label: "Expediente", icon: FileText, href: "/configuracion/usuarios/ficha" },
         { label: "Grupos", icon: Users, href: "/configuracion/usuarios/grupos" },
-        { label: "Roles", icon: Shield, href: "/configuracion/usuarios/roles" }
+        { label: "Roles", icon: Shield, href: "/configuracion/usuarios/roles" },
+        { label: "Convenios", icon: FileText, href: "/configuracion/horaria/convenios" }
       ]
     },
     {
@@ -97,7 +98,6 @@ export const CONFIG_ITEMS: NavItemData = {
       icon: Clock,
       href: "/configuracion/horaria",
       children: [
-        { label: "Convenios", icon: FileText, href: "/configuracion/horaria/convenios" },
         { label: "Definición", icon: Sliders, href: "/configuracion/horaria/definicion" },
         { label: "Justificaciones", icon: MessageSquare, href: "/configuracion/horaria/justificaciones" },
         { label: "Saldos", icon: BarChart3, href: "/configuracion/horaria/saldos" },

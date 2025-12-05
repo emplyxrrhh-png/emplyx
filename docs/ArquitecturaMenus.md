@@ -47,7 +47,13 @@ A continuación se detalla la jerarquía funcional adaptada al nuevo diseño.
 ```json
 [
   { "label": "Inicio", "icon": "Home" },
-  { "label": "Organización", "icon": "Business" },
+  {
+    "label": "Organización",
+    "icon": "Business",
+    "children": [
+      { "label": "Convenios" }
+    ]
+  },
   {
     "label": "Usuarios",
     "icon": "People",
@@ -108,7 +114,6 @@ A continuación se detalla la jerarquía funcional adaptada al nuevo diseño.
     "label": "Configuración gestión horaria",
     "icon": "Tune",
     "children": [
-      { "label": "Convenios" },
       { "label": "Horarios" },
       { "label": "Justificaciones" },
       { "label": "Saldos" },

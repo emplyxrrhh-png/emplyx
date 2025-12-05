@@ -6,7 +6,7 @@ public sealed class UsuarioRol
     {
     }
 
-    internal UsuarioRol(Guid usuarioId, Guid rolId, DateTime assignedAtUtc)
+    internal UsuarioRol(Guid usuarioId, Guid rolId, Guid contextoId, DateTime assignedAtUtc)
     {
         if (usuarioId == Guid.Empty)
         {
@@ -20,12 +20,15 @@ public sealed class UsuarioRol
 
         UsuarioId = usuarioId;
         RolId = rolId;
+        ContextoId = contextoId;
         AssignedAtUtc = assignedAtUtc;
     }
 
     public Guid UsuarioId { get; private set; }
 
     public Guid RolId { get; private set; }
+
+    public Guid ContextoId { get; private set; }
 
     public DateTime AssignedAtUtc { get; private set; }
 }

@@ -178,26 +178,29 @@ public sealed class Usuario : Entity, IAggregateRoot
         Touch();
     }
 
-    public bool AssignRol(Guid rolId)
+    public bool AssignRol(Guid rolId, Guid? contextoId = null)
     {
         if (rolId == Guid.Empty)
         {
             throw new ArgumentException("Role id must be provided.", nameof(rolId));
         }
 
-        if (_roles.Any(r => r.RolId == rolId))
+        var targetContextId = contextoId ?? Guid.Empty;
+
+        if (_roles.Any(r => r.RolId == rolId && r.ContextoId == targetContextId))
         {
             return false;
         }
 
-        _roles.Add(new UsuarioRol(Id, rolId, DateTime.UtcNow));
+        _roles.Add(new UsuarioRol(Id, rolId, targetContextId, DateTime.UtcNow));
         Touch();
         return true;
     }
 
-    public bool RemoveRol(Guid rolId)
+    public bool RemoveRol(Guid rolId, Guid? contextoId = null)
     {
-        var rol = _roles.SingleOrDefault(r => r.RolId == rolId);
+        var targetContextId = contextoId ?? Guid.Empty;
+        var rol = _roles.SingleOrDefault(r => r.RolId == rolId && r.ContextoId == targetContextId);
         if (rol is null)
         {
             return false;

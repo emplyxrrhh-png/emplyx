@@ -26,7 +26,7 @@ public sealed record UsuarioPerfilDto(
     string? Cargo,
     string? Telefono);
 
-public sealed record UsuarioRolDto(Guid RolId, DateTime AssignedAtUtc);
+public sealed record UsuarioRolDto(Guid RolId, Guid? ContextoId, DateTime AssignedAtUtc);
 
 public sealed record UsuarioContextoDto(Guid ContextoId, bool IsPrimary, DateTime LinkedAtUtc);
 
