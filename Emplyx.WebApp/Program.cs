@@ -7,11 +7,19 @@ using Azure.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
-if (builder.Environment.IsProduction())
+// Siempre intentar cargar Key Vault si existe, independiente del environment
+try
 {
     var keyVaultName = "emplyx";
     var keyVaultUri = new Uri($"https://{keyVaultName}.vault.azure.net/");
+    Console.WriteLine($"Intentando conectar a Key Vault: {keyVaultUri}");
     builder.Configuration.AddAzureKeyVault(keyVaultUri, new DefaultAzureCredential());
+    Console.WriteLine("Key Vault cargado exitosamente");
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Advertencia: No se pudo cargar Key Vault: {ex.Message}");
+    Console.WriteLine("Continuando con configuración local...");
 }
 
 // Add services to the container.
@@ -69,7 +77,7 @@ app.Use(async (context, next) =>
     Console.WriteLine($"Response Status: {context.Response.StatusCode}");
 });
 
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment() || app.Configuration.GetValue<bool>("ENABLE_SWAGGER"))
 {
     Console.WriteLine("Enabling Swagger");
     app.UseSwagger();
