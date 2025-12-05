@@ -13,6 +13,8 @@ import EmployeeFormPage from './pages/configuracion/organizacion/EmployeeFormPag
 import EmployeesTreePage from './pages/configuracion/organizacion/EmployeesTreePage';
 import RolesPage from './pages/configuracion/usuarios/RolesPage';
 import RoleFormPage from './pages/configuracion/usuarios/RoleFormPage';
+import UsersPage from './pages/configuracion/usuarios/UsersPage';
+import UserFormPage from './pages/configuracion/usuarios/UserFormPage';
 import { OrganizationProvider } from './context/OrganizationContext';
 
 const UnderConstruction = ({ title }: { title: string }) => (
@@ -91,6 +93,10 @@ function App() {
           <Route path="/configuracion/usuarios/roles/nuevo" element={<RoleFormPage />} />
           <Route path="/configuracion/usuarios/roles/editar/:id" element={<RoleFormPage />} />
 
+          <Route path="/configuracion/usuarios" element={<UsersPage />} />
+          <Route path="/configuracion/usuarios/nuevo" element={<UserFormPage />} />
+          <Route path="/configuracion/usuarios/editar/:id" element={<UserFormPage />} />
+
           {allRoutes.map((route) => {
             // Excluir rutas que ya tienen implementación específica
             if (route.path === '/configuracion/organizacion/empresas') return null;
@@ -98,6 +104,7 @@ function App() {
             if (route.path === '/configuracion/organizacion/centros-trabajo') return null;
             if (route.path === '/empleados') return null;
             if (route.path === '/configuracion/usuarios/roles') return null;
+            if (route.path === '/configuracion/usuarios') return null;
             
             return (
               <Route 

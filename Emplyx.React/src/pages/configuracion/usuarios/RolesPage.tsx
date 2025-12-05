@@ -42,7 +42,7 @@ const RolesPage = () => {
       <div className="flex justify-between items-center mb-6">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Roles y Permisos</h1>
-          <p className="text-gray-500">Gestiona los roles de usuario y sus niveles de acceso</p>
+          <p className="text-gray-500">Gestiona los roles de suscripción y sus niveles de acceso</p>
         </div>
         <button
           onClick={() => navigate('/configuracion/usuarios/roles/nuevo')}

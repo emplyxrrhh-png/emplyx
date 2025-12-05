@@ -52,7 +52,7 @@ export const Sidebar: React.FC = () => {
   return (
     <aside 
       className={clsx(
-        "flex flex-col h-screen bg-white border-r border-gray-200 transition-all duration-300 ease-in-out z-40",
+        "flex flex-col h-full bg-white border-r border-gray-200 transition-all duration-300 ease-in-out z-40",
         isCollapsed ? "w-20" : "w-72"
       )}
     >

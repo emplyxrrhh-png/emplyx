@@ -14,7 +14,7 @@ export interface NavItemData {
 export const MENU_ITEMS: NavItemData[] = [
   { label: "Inicio", icon: Home, href: "/" },
   { 
-    label: "Empleados", 
+    label: "Usuarios", 
     icon: Users, 
     href: "/empleados",
     children: [
@@ -87,7 +87,7 @@ export const CONFIG_ITEMS: NavItemData = {
         { label: "Grupo de Empresas", icon: FileText, href: "/configuracion/organizacion/tenant" },
         { label: "Empresas", icon: Building2, href: "/configuracion/organizacion/empresas" },
         { label: "Roles", icon: Shield, href: "/configuracion/usuarios/roles" },
-        { label: "Usuarios", icon: Users, href: "/configuracion/usuarios" },
+        { label: "Suscripción", icon: Users, href: "/configuracion/usuarios" },
         { label: "Centros de Trabajo", icon: MapPin, href: "/configuracion/organizacion/centros-trabajo" },
         { label: "Expediente", icon: FileText, href: "/configuracion/usuarios/ficha" },
         { label: "Grupos", icon: Users, href: "/configuracion/usuarios/grupos" },

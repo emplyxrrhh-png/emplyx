@@ -4,6 +4,7 @@ export interface Role {
   description: string;
   isSystem: boolean;
   permissions: string[];
+  isCommon?: boolean;
 }
 
 export interface CreateRoleRequest {
