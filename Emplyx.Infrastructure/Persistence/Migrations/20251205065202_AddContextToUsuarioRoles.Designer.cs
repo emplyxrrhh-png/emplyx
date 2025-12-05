@@ -4,6 +4,7 @@ using Emplyx.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Emplyx.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(EmplyxDbContext))]
-    partial class EmplyxDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251205065202_AddContextToUsuarioRoles")]
+    partial class AddContextToUsuarioRoles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

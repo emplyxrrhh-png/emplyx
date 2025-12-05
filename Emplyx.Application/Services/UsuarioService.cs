@@ -122,18 +122,18 @@ internal sealed class UsuarioService : IUsuarioService
         }
     }
 
-    private async Task AttachRolesAsync(Usuario usuario, IEnumerable<Guid> roles, CancellationToken cancellationToken)
+    private async Task AttachRolesAsync(Usuario usuario, IEnumerable<UsuarioRolAssignmentDto> roles, CancellationToken cancellationToken)
     {
-        var distinctRoles = (roles ?? Array.Empty<Guid>()).Distinct();
-        foreach (var rolId in distinctRoles)
+        var distinctRoles = (roles ?? Array.Empty<UsuarioRolAssignmentDto>()).DistinctBy(r => new { r.RolId, r.ContextoId });
+        foreach (var assignment in distinctRoles)
         {
-            var rol = await _rolRepository.GetByIdAsync(rolId, cancellationToken);
+            var rol = await _rolRepository.GetByIdAsync(assignment.RolId, cancellationToken);
             if (rol is null)
             {
-                throw new InvalidOperationException($"El rol {rolId} no existe.");
+                throw new InvalidOperationException($"El rol {assignment.RolId} no existe.");
             }
 
-            usuario.AssignRol(rolId);
+            usuario.AssignRol(assignment.RolId, assignment.ContextoId);
         }
     }
 
@@ -172,25 +172,33 @@ internal sealed class UsuarioService : IUsuarioService
         }
     }
 
-    private async Task SyncRolesAsync(Usuario usuario, IEnumerable<Guid> roles, CancellationToken cancellationToken)
+    private async Task SyncRolesAsync(Usuario usuario, IEnumerable<UsuarioRolAssignmentDto> roles, CancellationToken cancellationToken)
     {
-        var desiredRoleIds = (roles ?? Array.Empty<Guid>()).Distinct().ToHashSet();
-        var currentRoleIds = usuario.Roles.Select(r => r.RolId).ToHashSet();
-
-        foreach (var toRemove in currentRoleIds.Except(desiredRoleIds).ToArray())
+        var desiredRoles = (roles ?? Array.Empty<UsuarioRolAssignmentDto>()).DistinctBy(r => new { r.RolId, r.ContextoId }).ToList();
+        
+        // Remove roles that are not in the desired list
+        var currentRoles = usuario.Roles.ToList();
+        foreach (var current in currentRoles)
         {
-            usuario.RemoveRol(toRemove);
+            if (!desiredRoles.Any(d => d.RolId == current.RolId && d.ContextoId == current.ContextoId))
+            {
+                usuario.RemoveRol(current.RolId, current.ContextoId);
+            }
         }
 
-        foreach (var toAdd in desiredRoleIds.Except(currentRoleIds))
+        // Add new roles
+        foreach (var desired in desiredRoles)
         {
-            var rol = await _rolRepository.GetByIdAsync(toAdd, cancellationToken);
-            if (rol is null)
+            if (!usuario.Roles.Any(r => r.RolId == desired.RolId && r.ContextoId == (desired.ContextoId ?? Guid.Empty)))
             {
-                throw new InvalidOperationException($"El rol {toAdd} no existe.");
-            }
+                var rol = await _rolRepository.GetByIdAsync(desired.RolId, cancellationToken);
+                if (rol is null)
+                {
+                    throw new InvalidOperationException($"El rol {desired.RolId} no existe.");
+                }
 
-            usuario.AssignRol(toAdd);
+                usuario.AssignRol(desired.RolId, desired.ContextoId);
+            }
         }
     }
 

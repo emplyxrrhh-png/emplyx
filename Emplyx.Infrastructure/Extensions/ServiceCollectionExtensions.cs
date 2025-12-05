@@ -3,7 +3,9 @@ using Emplyx.Domain.UnitOfWork;
 using Emplyx.Infrastructure.Persistence;
 using Emplyx.Infrastructure.Repositories;
 using Emplyx.Infrastructure.Services;
+using Emplyx.Infrastructure.Security;
 using Emplyx.Application.Abstractions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,21 +34,25 @@ public static class ServiceCollectionExtensions
 
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<EmplyxDbContext>());
 
-        services.AddScoped<IUsuarioRepository, UsuarioRepository>();
-        services.AddScoped<IRolRepository, RolRepository>();
-        services.AddScoped<IPermisoRepository, PermisoRepository>();
-        services.AddScoped<IDelegacionRepository, DelegacionRepository>();
-        services.AddScoped<IContextoRepository, ContextoRepository>();
-        services.AddScoped<ILicenciaRepository, LicenciaRepository>();
-        services.AddScoped<IClearanceRepository, ClearanceRepository>();
-        services.AddScoped<IModuloRepository, ModuloRepository>();
-        services.AddScoped<IDelegacionTemporalRepository, DelegacionTemporalRepository>();
-        services.AddScoped<IEmpresaRepository, EmpresaRepository>();
-        services.AddScoped<ITenantRepository, TenantRepository>();
         services.AddScoped<ICentroTrabajoRepository, CentroTrabajoRepository>();
+        services.AddScoped<IClearanceRepository, ClearanceRepository>();
+        services.AddScoped<IContextoRepository, ContextoRepository>();
+        services.AddScoped<IDelegacionRepository, DelegacionRepository>();
+        services.AddScoped<IDelegacionTemporalRepository, DelegacionTemporalRepository>();
         services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+        services.AddScoped<IEmpresaRepository, EmpresaRepository>();
+        services.AddScoped<ILicenciaRepository, LicenciaRepository>();
+        services.AddScoped<IModuloRepository, ModuloRepository>();
+        services.AddScoped<IPermisoRepository, PermisoRepository>();
+        services.AddScoped<IRolRepository, RolRepository>();
+        services.AddScoped<ITenantRepository, TenantRepository>();
+        services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
         services.AddSingleton<IFileStorageService, AzureBlobStorageService>();
+        
+        services.AddHttpContextAccessor();
+        services.AddScoped<IAuthorizationHandler, PermissionAuthorizationHandler>();
+        services.AddSingleton<IAuthorizationPolicyProvider, PermissionPolicyProvider>();
 
         return services;
     }

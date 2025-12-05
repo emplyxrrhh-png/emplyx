@@ -13,4 +13,6 @@ public interface IUsuarioRepository : IRepository<Usuario>
         Guid? contextoId,
         Guid? rolId,
         CancellationToken cancellationToken = default);
+
+    Task<bool> HasPermissionAsync(Guid usuarioId, string permission, Guid? contextoId, CancellationToken cancellationToken = default);
 }

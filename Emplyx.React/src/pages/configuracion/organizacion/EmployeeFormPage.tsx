@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { ArrowLeft, Save, ChevronDown, ChevronUp, Trash2 } from 'lucide-react';
+import { ArrowLeft, Save, ChevronDown, ChevronUp, Trash2, Shield, Plus, X } from 'lucide-react';
 import { useOrganization } from '../../../context/OrganizationContext';
-import { CreateEmployeeRequest, Employee, UpdateEmployeeRequest } from '../../../types/employee';
+import { CreateEmployeeRequest, Employee, UpdateEmployeeRequest, UserRole } from '../../../types/employee';
 
 const EmployeeFormPage = () => {
   const navigate = useNavigate();
@@ -10,6 +10,14 @@ const EmployeeFormPage = () => {
   const { selectedCompany } = useOrganization();
   const [isLoading, setIsLoading] = useState(false);
   const [activeSection, setActiveSection] = useState<string | null>('general');
+  
+  // Role Modal State
+  const [isRoleModalOpen, setIsRoleModalOpen] = useState(false);
+  const [newRoleData, setNewRoleData] = useState<{rolId: string, contextType: 'Global' | 'Empresa' | 'Grupo', contextId: string}>({
+    rolId: '',
+    contextType: 'Global',
+    contextId: ''
+  });
 
   const [formData, setFormData] = useState<Partial<Employee>>({
     nombre: '',
@@ -456,7 +464,91 @@ const EmployeeFormPage = () => {
           )}
         </div>
 
-        {/* Section 4: Custom Fields */}
+        {/* Section 4: Roles & Permissions */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+          <button
+            type="button"
+            onClick={() => toggleSection('roles')}
+            className="w-full flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 transition-colors"
+          >
+            <span className="font-semibold text-gray-900">Roles y Permisos</span>
+            {activeSection === 'roles' ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+          </button>
+          
+          {activeSection === 'roles' && (
+            <div className="p-6 space-y-4">
+              <div className="flex justify-end">
+                <button
+                  type="button"
+                  onClick={() => setIsRoleModalOpen(true)}
+                  className="flex items-center gap-2 text-sm text-indigo-600 hover:text-indigo-700 font-medium"
+                >
+                  <Plus size={16} />
+                  Asignar Rol
+                </button>
+              </div>
+
+              <div className="overflow-hidden border border-gray-200 rounded-lg">
+                <table className="min-w-full divide-y divide-gray-200">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Rol</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Alcance (Contexto)</th>
+                      <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white divide-y divide-gray-200">
+                    {formData.roles && formData.roles.length > 0 ? (
+                      formData.roles.map((role, index) => (
+                        <tr key={index}>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="flex items-center gap-2">
+                              <Shield size={16} className="text-indigo-600" />
+                              <span className="text-sm font-medium text-gray-900">{role.rolName}</span>
+                            </div>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                              role.contextoTipo === 'Global' ? 'bg-purple-100 text-purple-800' :
+                              role.contextoTipo === 'Empresa' ? 'bg-blue-100 text-blue-800' :
+                              'bg-green-100 text-green-800'
+                            }`}>
+                              {role.contextoTipo || 'Global'}
+                            </span>
+                            {role.contextoNombre && (
+                              <span className="ml-2 text-sm text-gray-500">: {role.contextoNombre}</span>
+                            )}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                            <button
+                              type="button"
+                              onClick={() => {
+                                const newRoles = [...(formData.roles || [])];
+                                newRoles.splice(index, 1);
+                                setFormData({ ...formData, roles: newRoles });
+                              }}
+                              className="text-red-600 hover:text-red-900"
+                            >
+                              <Trash2 size={16} />
+                            </button>
+                          </td>
+                        </tr>
+                      ))
+                    ) : (
+                      <tr>
+                        <td colSpan={3} className="px-6 py-4 text-center text-sm text-gray-500">
+                          No hay roles asignados a este usuario.
+                        </td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Section 5: Custom Fields */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
           <button
             type="button"
@@ -541,6 +633,113 @@ const EmployeeFormPage = () => {
         </div>
 
       </form>
+
+      {/* Role Assignment Modal */}
+      {isRoleModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl shadow-xl w-full max-w-md p-6">
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-lg font-semibold text-gray-900">Asignar Rol</h3>
+              <button onClick={() => setIsRoleModalOpen(false)} className="text-gray-400 hover:text-gray-600">
+                <X size={20} />
+              </button>
+            </div>
+            
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Rol</label>
+                <select
+                  value={newRoleData.rolId}
+                  onChange={e => setNewRoleData({ ...newRoleData, rolId: e.target.value })}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
+                >
+                  <option value="">Seleccionar Rol...</option>
+                  <option value="1">Administrador</option>
+                  <option value="2">RRHH</option>
+                  <option value="3">Supervisor</option>
+                  <option value="4">Empleado</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Tipo de Contexto</label>
+                <select
+                  value={newRoleData.contextType}
+                  onChange={e => setNewRoleData({ ...newRoleData, contextType: e.target.value as any, contextId: '' })}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
+                >
+                  <option value="Global">Global (Tenant)</option>
+                  <option value="Empresa">Empresa</option>
+                  <option value="Grupo">Grupo</option>
+                </select>
+              </div>
+
+              {newRoleData.contextType !== 'Global' && (
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    {newRoleData.contextType === 'Empresa' ? 'Seleccionar Empresa' : 'Seleccionar Grupo'}
+                  </label>
+                  <select
+                    value={newRoleData.contextId}
+                    onChange={e => setNewRoleData({ ...newRoleData, contextId: e.target.value })}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
+                  >
+                    <option value="">Seleccionar...</option>
+                    {newRoleData.contextType === 'Empresa' ? (
+                      <>
+                        <option value="emp1">Acme Corp</option>
+                        <option value="emp2">Globex Inc</option>
+                      </>
+                    ) : (
+                      <>
+                        <option value="grp1">Desarrollo</option>
+                        <option value="grp2">Ventas</option>
+                        <option value="grp3">RRHH</option>
+                      </>
+                    )}
+                  </select>
+                </div>
+              )}
+
+              <div className="flex justify-end gap-3 mt-6">
+                <button
+                  onClick={() => setIsRoleModalOpen(false)}
+                  className="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+                >
+                  Cancelar
+                </button>
+                <button
+                  onClick={() => {
+                    if (!newRoleData.rolId) return;
+                    if (newRoleData.contextType !== 'Global' && !newRoleData.contextId) return;
+
+                    const roleNameMap: Record<string, string> = { '1': 'Administrador', '2': 'RRHH', '3': 'Supervisor', '4': 'Empleado' };
+                    const contextNameMap: Record<string, string> = { 'emp1': 'Acme Corp', 'emp2': 'Globex Inc', 'grp1': 'Desarrollo', 'grp2': 'Ventas', 'grp3': 'RRHH' };
+
+                    const newRole: UserRole = {
+                      rolId: newRoleData.rolId,
+                      rolName: roleNameMap[newRoleData.rolId],
+                      contextoTipo: newRoleData.contextType,
+                      contextoId: newRoleData.contextId || undefined,
+                      contextoNombre: newRoleData.contextId ? contextNameMap[newRoleData.contextId] : undefined
+                    };
+
+                    setFormData({
+                      ...formData,
+                      roles: [...(formData.roles || []), newRole]
+                    });
+                    setIsRoleModalOpen(false);
+                    setNewRoleData({ rolId: '', contextType: 'Global', contextId: '' });
+                  }}
+                  className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+                >
+                  Asignar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

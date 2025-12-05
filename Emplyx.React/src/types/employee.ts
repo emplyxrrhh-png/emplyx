@@ -33,6 +33,17 @@ export interface Employee {
 
     // Dynamic Custom Fields (Key-Value)
     userFields?: Record<string, string>;
+
+    // Roles
+    roles?: UserRole[];
+}
+
+export interface UserRole {
+    rolId: string;
+    rolName: string;
+    contextoId?: string;
+    contextoNombre?: string;
+    contextoTipo?: 'Global' | 'Empresa' | 'Grupo';
 }
 
 export interface CreateEmployeeRequest extends Omit<Employee, 'id'> {}

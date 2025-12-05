@@ -176,12 +176,12 @@ El sistema permite a los administradores definir nuevos roles componiendo permis
 ## 7. Roadmap de Desarrollo (TODOs)
 
 ### Backend
-- [ ] **Base de Datos**: Generar y aplicar migración EF Core para reflejar los cambios en `UsuarioRoles` (PK compuesta + columna `ContextoId`).
-- [ ] **API**: Actualizar endpoints de asignación de roles (ej. `POST /api/users/{id}/roles`) para aceptar `ContextoId` opcional en el cuerpo de la petición.
+- [x] **Base de Datos**: Generar y aplicar migración EF Core para reflejar los cambios en `UsuarioRoles` (PK compuesta + columna `ContextoId`).
+- [x] **API**: Actualizar endpoints de asignación de roles (ej. `POST /api/users/{id}/roles`) para aceptar `ContextoId` opcional en el cuerpo de la petición.
 - [ ] **Seguridad**: Implementar o actualizar el `AuthorizationHandler` para que sea "Context-Aware". Debe verificar que el usuario tenga el permiso requerido **Y** que el contexto actual coincida con el alcance del rol asignado.
 - [ ] **Tests**: Crear pruebas unitarias para `Usuario.AssignRol` verificando la unicidad de la terna Usuario-Rol-Contexto.
 
 ### Frontend
-- [ ] **UI de Asignación**: Actualizar el modal de asignación de roles para incluir un selector de Contexto (Empresa/Grupo) opcional.
-- [ ] **Visualización**: En la lista de roles del usuario, mostrar una columna o etiqueta con el alcance (ej. "Global" o "Grupo IT").
-- [ ] **Gestión de Roles**: Implementar la pantalla de "Crear Rol" con el selector de permisos (Permission Picker).
+- [x] **UI de Asignación**: Actualizar el modal de asignación de roles para incluir un selector de Contexto (Empresa/Grupo) opcional.
+- [x] **Visualización**: En la lista de roles del usuario, mostrar una columna o etiqueta con el alcance (ej. "Global" o "Grupo IT").
+- [x] **Gestión de Roles**: Implementar la pantalla de "Crear Rol" con el selector de permisos (Permission Picker).
