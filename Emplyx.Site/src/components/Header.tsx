@@ -1,31 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import { Bell, Search, WifiOff } from 'lucide-react';
+import { Bell, Search, LogOut } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export const Header: React.FC = () => {
-  const [isOffline, setIsOffline] = useState(false);
+  const navigate = useNavigate();
+  const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
-    const checkStatus = async () => {
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
       try {
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 10000);
-        
-        await fetch('https://localhost:5001/api/tenants', { 
-            method: 'GET',
-            signal: controller.signal
-        });
-        clearTimeout(timeoutId);
-        setIsOffline(false);
-      } catch (error) {
-        setIsOffline(true);
+        setUser(JSON.parse(storedUser));
+      } catch (e) {
+        console.error('Error parsing user from local storage', e);
       }
-    };
-
-    checkStatus();
-    const interval = setInterval(checkStatus, 5000);
-
-    return () => clearInterval(interval);
+    }
   }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    navigate('/login');
+  };
 
   return (
     <header className="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-6 z-30">
@@ -43,13 +38,6 @@ export const Header: React.FC = () => {
 
       {/* Right: User Profile & Actions */}
       <div className="flex items-center gap-6">
-        {isOffline && (
-          <div className="flex items-center gap-2 px-3 py-1 bg-red-100 text-red-700 rounded-md border border-red-200 animate-pulse">
-            <WifiOff size={14} />
-            <span className="text-xs font-medium">Offline</span>
-          </div>
-        )}
-
         <button className="relative p-2 text-gray-500 hover:bg-gray-100 rounded-full transition-colors">
           <Bell size={20} />
           <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
@@ -57,16 +45,27 @@ export const Header: React.FC = () => {
 
         <div className="flex items-center gap-3 pl-6 border-l border-gray-200">
           <div className="text-right hidden md:block">
-            <p className="text-sm font-semibold text-gray-900">Ana García</p>
-            <p className="text-xs text-gray-500">HR Manager</p>
+            <p className="text-sm font-semibold text-gray-900">{user?.displayName || 'Usuario'}</p>
+            <p className="text-xs text-gray-500">{user?.email || ''}</p>
           </div>
-          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 p-[2px]">
+          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 p-[2px] cursor-pointer group relative">
             <div className="w-full h-full rounded-full bg-white p-[2px]">
               <img 
-                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ana" 
+                src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${user?.userName || 'User'}`} 
                 alt="User" 
                 className="w-full h-full rounded-full object-cover"
               />
+            </div>
+            
+            {/* Dropdown simple para logout */}
+            <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-1 hidden group-hover:block">
+              <button 
+                onClick={handleLogout}
+                className="w-full px-4 py-2 text-left text-sm text-red-600 hover:bg-red-50 flex items-center gap-2"
+              >
+                <LogOut size={16} />
+                Cerrar Sesión
+              </button>
             </div>
           </div>
         </div>

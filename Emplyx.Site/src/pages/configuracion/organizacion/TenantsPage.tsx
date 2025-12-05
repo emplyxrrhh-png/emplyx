@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Building2, Plus, Edit, Trash2 } from 'lucide-react';
+import { API_BASE_URL } from '../../../../config';
 
 interface Tenant {
   id: string;
@@ -24,7 +25,7 @@ const TenantsPage = () => {
 
   const fetchTenants = async () => {
     try {
-      const response = await fetch('https://localhost:5001/api/tenants');
+      const response = await fetch(`${API_BASE_URL}/tenants`);
       if (response.ok) {
         const data = await response.json();
         setTenants(data);
@@ -39,7 +40,7 @@ const TenantsPage = () => {
   const handleDelete = async (id: string) => {
     if (window.confirm('¿Estás seguro de que quieres eliminar este tenant?')) {
       try {
-        await fetch(`https://localhost:5001/api/tenants/${id}`, { method: 'DELETE' });
+        await fetch(`${API_BASE_URL}/tenants/${id}`, { method: 'DELETE' });
         fetchTenants();
       } catch (error) {
         console.error('Error deleting tenant', error);

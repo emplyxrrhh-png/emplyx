@@ -68,4 +68,6 @@ public sealed record SearchUsuariosRequest(
     Guid? ContextoId,
     Guid? RolId);
 
+public sealed record LoginRequest(string UserNameOrEmail, string Password);
+
 public sealed record UsuarioContextoAssignmentDto(Guid ContextoId, bool IsPrimary);

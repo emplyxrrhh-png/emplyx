@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { ArrowLeft, Save, Building2 } from 'lucide-react';
 import { AccordionSection } from '../../../components/AccordionSection';
+import { API_BASE_URL } from '../../../../config';
 
 // Define the full interface based on the backend DTO
 // For brevity, I'll use 'any' for some nested objects or define them loosely
@@ -150,7 +151,7 @@ const EmpresaFormPage = () => {
 
   const fetchEmpresa = async (empresaId: string) => {
     try {
-      const response = await fetch(`https://localhost:5001/api/empresas/${empresaId}`);
+      const response = await fetch(`${API_BASE_URL}/empresas/${empresaId}`);
       if (response.ok) {
         const data = await response.json();
         // Ensure nested objects are not null
@@ -182,7 +183,7 @@ const EmpresaFormPage = () => {
     try {
       // Validation: Check for duplicate NIF/CIF
       try {
-        const checkResponse = await fetch('https://localhost:5001/api/empresas');
+        const checkResponse = await fetch(`${API_BASE_URL}/empresas`);
         if (checkResponse.ok) {
           const companies = await checkResponse.json();
           // Check if any other company has the same taxId
@@ -204,8 +205,8 @@ const EmpresaFormPage = () => {
       }
 
       const url = id 
-        ? `https://localhost:5001/api/empresas/${id}`
-        : 'https://localhost:5001/api/empresas';
+        ? `${API_BASE_URL}/empresas/${id}`
+        : `${API_BASE_URL}/empresas`;
       
       const method = id ? 'PUT' : 'POST';
 

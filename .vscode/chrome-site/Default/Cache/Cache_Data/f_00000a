@@ -1,0 +1,288 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/pages/configuracion/organizacion/TenantsPage.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=46037ee7"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+import __vite__cjsImport3_react from "/node_modules/.vite/deps/react.js?v=46037ee7"; const useEffect = __vite__cjsImport3_react["useEffect"]; const useState = __vite__cjsImport3_react["useState"];
+import { useNavigate } from "/node_modules/.vite/deps/react-router-dom.js?v=46037ee7";
+import { Building2, Plus, Edit, Trash2 } from "/node_modules/.vite/deps/lucide-react.js?v=46037ee7";
+const TenantsPage = () => {
+  _s();
+  const navigate = useNavigate();
+  const [tenants, setTenants] = useState([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    fetchTenants();
+  }, []);
+  const fetchTenants = async () => {
+    try {
+      const response = await fetch("https://localhost:5001/api/tenants");
+      if (response.ok) {
+        const data = await response.json();
+        setTenants(data);
+      }
+    } catch (error) {
+      console.error("Error fetching tenants", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+  const handleDelete = async (id) => {
+    if (window.confirm("¿Estás seguro de que quieres eliminar este tenant?")) {
+      try {
+        await fetch(`https://localhost:5001/api/tenants/${id}`, { method: "DELETE" });
+        fetchTenants();
+      } catch (error) {
+        console.error("Error deleting tenant", error);
+      }
+    }
+  };
+  return /* @__PURE__ */ jsxDEV("div", { className: "p-6", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "flex justify-between items-center mb-6", children: [
+      /* @__PURE__ */ jsxDEV("div", { children: [
+        /* @__PURE__ */ jsxDEV("h1", { className: "text-2xl font-bold text-gray-900 flex items-center gap-2", children: [
+          /* @__PURE__ */ jsxDEV(Building2, { className: "h-8 w-8 text-indigo-600" }, void 0, false, {
+            fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+            lineNumber: 74,
+            columnNumber: 13
+          }, this),
+          "Tenants"
+        ] }, void 0, true, {
+          fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+          lineNumber: 73,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("p", { className: "text-gray-500 mt-1", children: "Gestiona la entidad principal de la organización" }, void 0, false, {
+          fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+          lineNumber: 77,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+        lineNumber: 72,
+        columnNumber: 9
+      }, this),
+      tenants.length === 0 && /* @__PURE__ */ jsxDEV(
+        "button",
+        {
+          onClick: () => navigate("/tenants/nuevo"),
+          className: "bg-indigo-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-indigo-700 transition-colors",
+          children: [
+            /* @__PURE__ */ jsxDEV(Plus, { size: 20 }, void 0, false, {
+              fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+              lineNumber: 84,
+              columnNumber: 13
+            }, this),
+            "Nuevo Tenant"
+          ]
+        },
+        void 0,
+        true,
+        {
+          fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+          lineNumber: 80,
+          columnNumber: 9
+        },
+        this
+      )
+    ] }, void 0, true, {
+      fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+      lineNumber: 71,
+      columnNumber: 7
+    }, this),
+    loading ? /* @__PURE__ */ jsxDEV("div", { className: "text-center py-10", children: "Cargando..." }, void 0, false, {
+      fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+      lineNumber: 91,
+      columnNumber: 7
+    }, this) : /* @__PURE__ */ jsxDEV("div", { className: "bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden", children: /* @__PURE__ */ jsxDEV("table", { className: "w-full text-left", children: [
+      /* @__PURE__ */ jsxDEV("thead", { className: "bg-gray-50 border-b border-gray-100", children: /* @__PURE__ */ jsxDEV("tr", { children: [
+        /* @__PURE__ */ jsxDEV("th", { className: "px-6 py-4 font-semibold text-gray-700", children: "Razón Social" }, void 0, false, {
+          fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+          lineNumber: 97,
+          columnNumber: 17
+        }, this),
+        /* @__PURE__ */ jsxDEV("th", { className: "px-6 py-4 font-semibold text-gray-700", children: "NIF/CIF" }, void 0, false, {
+          fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+          lineNumber: 98,
+          columnNumber: 17
+        }, this),
+        /* @__PURE__ */ jsxDEV("th", { className: "px-6 py-4 font-semibold text-gray-700", children: "Tipo" }, void 0, false, {
+          fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+          lineNumber: 99,
+          columnNumber: 17
+        }, this),
+        /* @__PURE__ */ jsxDEV("th", { className: "px-6 py-4 font-semibold text-gray-700", children: "Contacto" }, void 0, false, {
+          fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+          lineNumber: 100,
+          columnNumber: 17
+        }, this),
+        /* @__PURE__ */ jsxDEV("th", { className: "px-6 py-4 font-semibold text-gray-700 text-right", children: "Acciones" }, void 0, false, {
+          fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+          lineNumber: 101,
+          columnNumber: 17
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+        lineNumber: 96,
+        columnNumber: 15
+      }, this) }, void 0, false, {
+        fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+        lineNumber: 95,
+        columnNumber: 13
+      }, this),
+      /* @__PURE__ */ jsxDEV("tbody", { className: "divide-y divide-gray-100", children: [
+        tenants.map(
+          (tenant) => /* @__PURE__ */ jsxDEV("tr", { className: "hover:bg-gray-50 transition-colors", children: [
+            /* @__PURE__ */ jsxDEV("td", { className: "px-6 py-4 text-gray-900 font-medium", children: tenant.legalName }, void 0, false, {
+              fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+              lineNumber: 107,
+              columnNumber: 19
+            }, this),
+            /* @__PURE__ */ jsxDEV("td", { className: "px-6 py-4 text-gray-600 font-mono text-sm", children: tenant.taxId }, void 0, false, {
+              fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+              lineNumber: 108,
+              columnNumber: 19
+            }, this),
+            /* @__PURE__ */ jsxDEV("td", { className: "px-6 py-4 text-gray-600", children: tenant.companyType }, void 0, false, {
+              fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+              lineNumber: 109,
+              columnNumber: 19
+            }, this),
+            /* @__PURE__ */ jsxDEV("td", { className: "px-6 py-4 text-gray-600", children: [
+              /* @__PURE__ */ jsxDEV("div", { className: "text-sm font-medium", children: tenant.mainContact.name }, void 0, false, {
+                fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+                lineNumber: 111,
+                columnNumber: 21
+              }, this),
+              /* @__PURE__ */ jsxDEV("div", { className: "text-xs text-gray-500", children: tenant.mainContact.email }, void 0, false, {
+                fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+                lineNumber: 112,
+                columnNumber: 21
+              }, this)
+            ] }, void 0, true, {
+              fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+              lineNumber: 110,
+              columnNumber: 19
+            }, this),
+            /* @__PURE__ */ jsxDEV("td", { className: "px-6 py-4 text-right", children: /* @__PURE__ */ jsxDEV("div", { className: "flex justify-end gap-2", children: [
+              /* @__PURE__ */ jsxDEV(
+                "button",
+                {
+                  onClick: () => navigate(`/tenants/editar/${tenant.id}`),
+                  className: "p-2 text-gray-400 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors",
+                  title: "Editar",
+                  children: /* @__PURE__ */ jsxDEV(Edit, { size: 18 }, void 0, false, {
+                    fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+                    lineNumber: 121,
+                    columnNumber: 25
+                  }, this)
+                },
+                void 0,
+                false,
+                {
+                  fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+                  lineNumber: 116,
+                  columnNumber: 23
+                },
+                this
+              ),
+              /* @__PURE__ */ jsxDEV(
+                "button",
+                {
+                  onClick: () => handleDelete(tenant.id),
+                  className: "p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors",
+                  title: "Eliminar",
+                  children: /* @__PURE__ */ jsxDEV(Trash2, { size: 18 }, void 0, false, {
+                    fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+                    lineNumber: 128,
+                    columnNumber: 25
+                  }, this)
+                },
+                void 0,
+                false,
+                {
+                  fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+                  lineNumber: 123,
+                  columnNumber: 23
+                },
+                this
+              )
+            ] }, void 0, true, {
+              fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+              lineNumber: 115,
+              columnNumber: 21
+            }, this) }, void 0, false, {
+              fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+              lineNumber: 114,
+              columnNumber: 19
+            }, this)
+          ] }, tenant.id, true, {
+            fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+            lineNumber: 106,
+            columnNumber: 13
+          }, this)
+        ),
+        tenants.length === 0 && /* @__PURE__ */ jsxDEV("tr", { children: /* @__PURE__ */ jsxDEV("td", { colSpan: 5, className: "px-6 py-10 text-center text-gray-500", children: "No hay datos registrados." }, void 0, false, {
+          fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+          lineNumber: 136,
+          columnNumber: 19
+        }, this) }, void 0, false, {
+          fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+          lineNumber: 135,
+          columnNumber: 13
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+        lineNumber: 104,
+        columnNumber: 13
+      }, this)
+    ] }, void 0, true, {
+      fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+      lineNumber: 94,
+      columnNumber: 11
+    }, this) }, void 0, false, {
+      fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+      lineNumber: 93,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx",
+    lineNumber: 70,
+    columnNumber: 5
+  }, this);
+};
+_s(TenantsPage, "xa2nrg5hpLnr4CDAlkps8Prbd+c=", false, function() {
+  return [useNavigate];
+});
+_c = TenantsPage;
+export default TenantsPage;
+var _c;
+$RefreshReg$(_c, "TenantsPage");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("D:/Proyects/emplyx/Emplyx.Site/src/pages/configuracion/organizacion/TenantsPage.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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TGpCO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxjQU1BO0FBQUEsY0FDQTtBQUFBLGdCQUFDO0FBQUE7QUFBQSxrQkFDQyxTQUFTLE1BQU1ELGFBQWFPLE9BQU9OLEVBQUU7QUFBQSxrQkFDckMsV0FBVTtBQUFBLGtCQUNWLE9BQU07QUFBQSxrQkFFTixpQ0FBQyxVQUFPLE1BQU0sTUFBZDtBQUFBO0FBQUE7QUFBQTtBQUFBLHlCQUFpQjtBQUFBO0FBQUEsZ0JBTG5CO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxjQU1BO0FBQUEsaUJBZEY7QUFBQTtBQUFBO0FBQUE7QUFBQSxtQkFlQSxLQWhCRjtBQUFBO0FBQUE7QUFBQTtBQUFBLG1CQWlCQTtBQUFBLGVBekJPTSxPQUFPTixJQUFoQjtBQUFBO0FBQUE7QUFBQTtBQUFBLGlCQTBCQTtBQUFBLFFBQ0Q7QUFBQSxRQUNBYixRQUFRaUIsV0FBVyxLQUNsQix1QkFBQyxRQUNDLGlDQUFDLFFBQUcsU0FBUyxHQUFHLFdBQVUsd0NBQXVDLHlDQUFqRTtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBRUEsS0FIRjtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBSUE7QUFBQSxXQW5DSjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBcUNBO0FBQUEsU0EvQ0Y7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQWdEQSxLQWpERjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBa0RBO0FBQUEsT0F6RUo7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQTJFQTtBQUVKO0FBQUVuQixHQWhISUQsYUFBVztBQUFBLFVBQ0VMLFdBQVc7QUFBQTtBQUFBa0MsS0FEeEI3QjtBQWtITixlQUFlQTtBQUFZLElBQUE2QjtBQUFBQyxhQUFBRCxJQUFBIiwibmFtZXMiOlsidXNlRWZmZWN0IiwidXNlU3RhdGUiLCJ1c2VOYXZpZ2F0ZSIsIkJ1aWxkaW5nMiIsIlBsdXMiLCJFZGl0IiwiVHJhc2gyIiwiVGVuYW50c1BhZ2UiLCJfcyIsIm5hdmlnYXRlIiwidGVuYW50cyIsInNldFRlbmFudHMiLCJsb2FkaW5nIiwic2V0TG9hZGluZyIsImZldGNoVGVuYW50cyIsInJlc3BvbnNlIiwiZmV0Y2giLCJvayIsImRhdGEiLCJqc29uIiwiZXJyb3IiLCJjb25zb2xlIiwiaGFuZGxlRGVsZXRlIiwiaWQiLCJ3aW5kb3ciLCJjb25maXJtIiwibWV0aG9kIiwibGVuZ3RoIiwibWFwIiwidGVuYW50IiwibGVnYWxOYW1lIiwidGF4SWQiLCJjb21wYW55VHlwZSIsIm1haW5Db250YWN0IiwibmFtZSIsImVtYWlsIiwiX2MiLCIkUmVmcmVzaFJlZyQiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiVGVuYW50c1BhZ2UudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHVzZUVmZmVjdCwgdXNlU3RhdGUgfSBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCB7IHVzZU5hdmlnYXRlIH0gZnJvbSAncmVhY3Qtcm91dGVyLWRvbSc7XHJcbmltcG9ydCB7IEJ1aWxkaW5nMiwgUGx1cywgRWRpdCwgVHJhc2gyIH0gZnJvbSAnbHVjaWRlLXJlYWN0JztcclxuXHJcbmludGVyZmFjZSBUZW5hbnQge1xyXG4gIGlkOiBzdHJpbmc7XHJcbiAgbGVnYWxOYW1lOiBzdHJpbmc7XHJcbiAgdGF4SWQ6IHN0cmluZztcclxuICBjb21wYW55VHlwZTogc3RyaW5nO1xyXG4gIG1haW5Db250YWN0OiB7XHJcbiAgICBuYW1lOiBzdHJpbmc7XHJcbiAgICBlbWFpbDogc3RyaW5nO1xyXG4gIH07XHJcbn1cclxuXHJcbmNvbnN0IFRlbmFudHNQYWdlID0gKCkgPT4ge1xyXG4gIGNvbnN0IG5hdmlnYXRlID0gdXNlTmF2aWdhdGUoKTtcclxuICBjb25zdCBbdGVuYW50cywgc2V0VGVuYW50c10gPSB1c2VTdGF0ZTxUZW5hbnRbXT4oW10pO1xyXG4gIGNvbnN0IFtsb2FkaW5nLCBzZXRMb2FkaW5nXSA9IHVzZVN0YXRlKHRydWUpO1xyXG5cclxuICB1c2VFZmZlY3QoKCkgPT4ge1xyXG4gICAgZmV0Y2hUZW5hbnRzKCk7XHJcbiAgfSwgW10pO1xyXG5cclxuICBjb25zdCBmZXRjaFRlbmFudHMgPSBhc3luYyAoKSA9PiB7XHJcbiAgICB0cnkge1xyXG4gICAgICBjb25zdCByZXNwb25zZSA9IGF3YWl0IGZldGNoKCdodHRwczovL2xvY2FsaG9zdDo1MDAxL2FwaS90ZW5hbnRzJyk7XHJcbiAgICAgIGlmIChyZXNwb25zZS5vaykge1xyXG4gICAgICAgIGNvbnN0IGRhdGEgPSBhd2FpdCByZXNwb25zZS5qc29uKCk7XHJcbiAgICAgICAgc2V0VGVuYW50cyhkYXRhKTtcclxuICAgICAgfVxyXG4gICAgfSBjYXRjaCAoZXJyb3IpIHtcclxuICAgICAgY29uc29sZS5lcnJvcignRXJyb3IgZmV0Y2hpbmcgdGVuYW50cycsIGVycm9yKTtcclxuICAgIH0gZmluYWxseSB7XHJcbiAgICAgIHNldExvYWRpbmcoZmFsc2UpO1xyXG4gICAgfVxyXG4gIH07XHJcblxyXG4gIGNvbnN0IGhhbmRsZURlbGV0ZSA9IGFzeW5jIChpZDogc3RyaW5nKSA9PiB7XHJcbiAgICBpZiAod2luZG93LmNvbmZpcm0oJ8K/RXN0w6FzIHNlZ3VybyBkZSBxdWUgcXVpZXJlcyBlbGltaW5hciBlc3RlIHRlbmFudD8nKSkge1xyXG4gICAgICB0cnkge1xyXG4gICAgICAgIGF3YWl0IGZldGNoKGBodHRwczovL2xvY2FsaG9zdDo1MDAxL2FwaS90ZW5hbnRzLyR7aWR9YCwgeyBtZXRob2Q6ICdERUxFVEUnIH0pO1xyXG4gICAgICAgIGZldGNoVGVuYW50cygpO1xyXG4gICAgICB9IGNhdGNoIChlcnJvcikge1xyXG4gICAgICAgIGNvbnNvbGUuZXJyb3IoJ0Vycm9yIGRlbGV0aW5nIHRlbmFudCcsIGVycm9yKTtcclxuICAgICAgfVxyXG4gICAgfVxyXG4gIH07XHJcblxyXG4gIHJldHVybiAoXHJcbiAgICA8ZGl2IGNsYXNzTmFtZT1cInAtNlwiPlxyXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXgganVzdGlmeS1iZXR3ZWVuIGl0ZW1zLWNlbnRlciBtYi02XCI+XHJcbiAgICAgICAgPGRpdj5cclxuICAgICAgICAgIDxoMSBjbGFzc05hbWU9XCJ0ZXh0LTJ4bCBmb250LWJvbGQgdGV4dC1ncmF5LTkwMCBmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMlwiPlxyXG4gICAgICAgICAgICA8QnVpbGRpbmcyIGNsYXNzTmFtZT1cImgtOCB3LTggdGV4dC1pbmRpZ28tNjAwXCIgLz5cclxuICAgICAgICAgICAgVGVuYW50c1xyXG4gICAgICAgICAgPC9oMT5cclxuICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtZ3JheS01MDAgbXQtMVwiPkdlc3Rpb25hIGxhIGVudGlkYWQgcHJpbmNpcGFsIGRlIGxhIG9yZ2FuaXphY2nDs248L3A+XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICAgICAge3RlbmFudHMubGVuZ3RoID09PSAwICYmIChcclxuICAgICAgICAgIDxidXR0b25cclxuICAgICAgICAgICAgb25DbGljaz17KCkgPT4gbmF2aWdhdGUoJy90ZW5hbnRzL251ZXZvJyl9XHJcbiAgICAgICAgICAgIGNsYXNzTmFtZT1cImJnLWluZGlnby02MDAgdGV4dC13aGl0ZSBweC00IHB5LTIgcm91bmRlZC1sZyBmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMiBob3ZlcjpiZy1pbmRpZ28tNzAwIHRyYW5zaXRpb24tY29sb3JzXCJcclxuICAgICAgICAgID5cclxuICAgICAgICAgICAgPFBsdXMgc2l6ZT17MjB9IC8+XHJcbiAgICAgICAgICAgIE51ZXZvIFRlbmFudFxyXG4gICAgICAgICAgPC9idXR0b24+XHJcbiAgICAgICAgKX1cclxuICAgICAgPC9kaXY+XHJcblxyXG4gICAgICB7bG9hZGluZyA/IChcclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRleHQtY2VudGVyIHB5LTEwXCI+Q2FyZ2FuZG8uLi48L2Rpdj5cclxuICAgICAgKSA6IChcclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJnLXdoaXRlIHJvdW5kZWQteGwgc2hhZG93LXNtIGJvcmRlciBib3JkZXItZ3JheS0xMDAgb3ZlcmZsb3ctaGlkZGVuXCI+XHJcbiAgICAgICAgICA8dGFibGUgY2xhc3NOYW1lPVwidy1mdWxsIHRleHQtbGVmdFwiPlxyXG4gICAgICAgICAgICA8dGhlYWQgY2xhc3NOYW1lPVwiYmctZ3JheS01MCBib3JkZXItYiBib3JkZXItZ3JheS0xMDBcIj5cclxuICAgICAgICAgICAgICA8dHI+XHJcbiAgICAgICAgICAgICAgICA8dGggY2xhc3NOYW1lPVwicHgtNiBweS00IGZvbnQtc2VtaWJvbGQgdGV4dC1ncmF5LTcwMFwiPlJhesOzbiBTb2NpYWw8L3RoPlxyXG4gICAgICAgICAgICAgICAgPHRoIGNsYXNzTmFtZT1cInB4LTYgcHktNCBmb250LXNlbWlib2xkIHRleHQtZ3JheS03MDBcIj5OSUYvQ0lGPC90aD5cclxuICAgICAgICAgICAgICAgIDx0aCBjbGFzc05hbWU9XCJweC02IHB5LTQgZm9udC1zZW1pYm9sZCB0ZXh0LWdyYXktNzAwXCI+VGlwbzwvdGg+XHJcbiAgICAgICAgICAgICAgICA8dGggY2xhc3NOYW1lPVwicHgtNiBweS00IGZvbnQtc2VtaWJvbGQgdGV4dC1ncmF5LTcwMFwiPkNvbnRhY3RvPC90aD5cclxuICAgICAgICAgICAgICAgIDx0aCBjbGFzc05hbWU9XCJweC02IHB5LTQgZm9udC1zZW1pYm9sZCB0ZXh0LWdyYXktNzAwIHRleHQtcmlnaHRcIj5BY2Npb25lczwvdGg+XHJcbiAgICAgICAgICAgICAgPC90cj5cclxuICAgICAgICAgICAgPC90aGVhZD5cclxuICAgICAgICAgICAgPHRib2R5IGNsYXNzTmFtZT1cImRpdmlkZS15IGRpdmlkZS1ncmF5LTEwMFwiPlxyXG4gICAgICAgICAgICAgIHt0ZW5hbnRzLm1hcCgodGVuYW50KSA9PiAoXHJcbiAgICAgICAgICAgICAgICA8dHIga2V5PXt0ZW5hbnQuaWR9IGNsYXNzTmFtZT1cImhvdmVyOmJnLWdyYXktNTAgdHJhbnNpdGlvbi1jb2xvcnNcIj5cclxuICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT1cInB4LTYgcHktNCB0ZXh0LWdyYXktOTAwIGZvbnQtbWVkaXVtXCI+e3RlbmFudC5sZWdhbE5hbWV9PC90ZD5cclxuICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT1cInB4LTYgcHktNCB0ZXh0LWdyYXktNjAwIGZvbnQtbW9ubyB0ZXh0LXNtXCI+e3RlbmFudC50YXhJZH08L3RkPlxyXG4gICAgICAgICAgICAgICAgICA8dGQgY2xhc3NOYW1lPVwicHgtNiBweS00IHRleHQtZ3JheS02MDBcIj57dGVuYW50LmNvbXBhbnlUeXBlfTwvdGQ+XHJcbiAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzc05hbWU9XCJweC02IHB5LTQgdGV4dC1ncmF5LTYwMFwiPlxyXG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1zbSBmb250LW1lZGl1bVwiPnt0ZW5hbnQubWFpbkNvbnRhY3QubmFtZX08L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRleHQteHMgdGV4dC1ncmF5LTUwMFwiPnt0ZW5hbnQubWFpbkNvbnRhY3QuZW1haWx9PC9kaXY+XHJcbiAgICAgICAgICAgICAgICAgIDwvdGQ+XHJcbiAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzc05hbWU9XCJweC02IHB5LTQgdGV4dC1yaWdodFwiPlxyXG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBqdXN0aWZ5LWVuZCBnYXAtMlwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgPGJ1dHRvblxyXG4gICAgICAgICAgICAgICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBuYXZpZ2F0ZShgL3RlbmFudHMvZWRpdGFyLyR7dGVuYW50LmlkfWApfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJwLTIgdGV4dC1ncmF5LTQwMCBob3Zlcjp0ZXh0LWluZGlnby02MDAgaG92ZXI6YmctaW5kaWdvLTUwIHJvdW5kZWQtbGcgdHJhbnNpdGlvbi1jb2xvcnNcIlxyXG4gICAgICAgICAgICAgICAgICAgICAgICB0aXRsZT1cIkVkaXRhclwiXHJcbiAgICAgICAgICAgICAgICAgICAgICA+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxFZGl0IHNpemU9ezE4fSAvPlxyXG4gICAgICAgICAgICAgICAgICAgICAgPC9idXR0b24+XHJcbiAgICAgICAgICAgICAgICAgICAgICA8YnV0dG9uXHJcbiAgICAgICAgICAgICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IGhhbmRsZURlbGV0ZSh0ZW5hbnQuaWQpfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJwLTIgdGV4dC1ncmF5LTQwMCBob3Zlcjp0ZXh0LXJlZC02MDAgaG92ZXI6YmctcmVkLTUwIHJvdW5kZWQtbGcgdHJhbnNpdGlvbi1jb2xvcnNcIlxyXG4gICAgICAgICAgICAgICAgICAgICAgICB0aXRsZT1cIkVsaW1pbmFyXCJcclxuICAgICAgICAgICAgICAgICAgICAgID5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPFRyYXNoMiBzaXplPXsxOH0gLz5cclxuICAgICAgICAgICAgICAgICAgICAgIDwvYnV0dG9uPlxyXG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICA8L3RkPlxyXG4gICAgICAgICAgICAgICAgPC90cj5cclxuICAgICAgICAgICAgICApKX1cclxuICAgICAgICAgICAgICB7dGVuYW50cy5sZW5ndGggPT09IDAgJiYgKFxyXG4gICAgICAgICAgICAgICAgPHRyPlxyXG4gICAgICAgICAgICAgICAgICA8dGQgY29sU3Bhbj17NX0gY2xhc3NOYW1lPVwicHgtNiBweS0xMCB0ZXh0LWNlbnRlciB0ZXh0LWdyYXktNTAwXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgTm8gaGF5IGRhdG9zIHJlZ2lzdHJhZG9zLlxyXG4gICAgICAgICAgICAgICAgICA8L3RkPlxyXG4gICAgICAgICAgICAgICAgPC90cj5cclxuICAgICAgICAgICAgICApfVxyXG4gICAgICAgICAgICA8L3Rib2R5PlxyXG4gICAgICAgICAgPC90YWJsZT5cclxuICAgICAgICA8L2Rpdj5cclxuICAgICAgKX1cclxuICAgIDwvZGl2PlxyXG4gICk7XHJcbn07XHJcblxyXG5leHBvcnQgZGVmYXVsdCBUZW5hbnRzUGFnZTtcclxuIl0sImZpbGUiOiJEOi9Qcm95ZWN0cy9lbXBseXgvRW1wbHl4LlNpdGUvc3JjL3BhZ2VzL2NvbmZpZ3VyYWNpb24vb3JnYW5pemFjaW9uL1RlbmFudHNQYWdlLnRzeCJ9

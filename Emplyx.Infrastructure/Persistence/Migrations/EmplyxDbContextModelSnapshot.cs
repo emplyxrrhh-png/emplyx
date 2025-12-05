@@ -1464,6 +1464,21 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                         .IsUnique();
 
                     b.ToTable("Usuarios", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("e2e2e2e2-e2e2-e2e2-e2e2-e2e2e2e2e2e2"),
+                            ClearanceId = new Guid("5d7a9d25-c4b2-4b93-93c6-a39c47da1f40"),
+                            CreatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            DisplayName = "Ezequiel Mizrahi",
+                            Email = "emizrahi@emplyx.com",
+                            IsActive = true,
+                            PasswordHash = "P9cgwXEEYV832bo5ChDPcBiX1ZT6L6dTVWQRF5GG4gQ=",
+                            PreferredContextoId = new Guid("caa6d616-f237-4d2b-a3f1-bf54cd508c35"),
+                            UpdatedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            UserName = "emizrahi"
+                        });
                 });
 
             modelBuilder.Entity("Emplyx.Domain.Entities.Usuarios.UsuarioContexto", b =>
@@ -1491,6 +1506,15 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                         .HasFilter("[IsPrimary] = 1");
 
                     b.ToTable("UsuarioContextos", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            UsuarioId = new Guid("e2e2e2e2-e2e2-e2e2-e2e2-e2e2e2e2e2e2"),
+                            ContextoId = new Guid("caa6d616-f237-4d2b-a3f1-bf54cd508c35"),
+                            IsPrimary = true,
+                            LinkedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        });
                 });
 
             modelBuilder.Entity("Emplyx.Domain.Entities.Usuarios.UsuarioLicencia", b =>
@@ -1509,6 +1533,14 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                     b.HasIndex("LicenciaId");
 
                     b.ToTable("UsuarioLicencias", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            UsuarioId = new Guid("e2e2e2e2-e2e2-e2e2-e2e2-e2e2e2e2e2e2"),
+                            LicenciaId = new Guid("b7d6c9b1-08a1-4c9a-8ba7-824b6e7f8c29"),
+                            AssignedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        });
                 });
 
             modelBuilder.Entity("Emplyx.Domain.Entities.Usuarios.UsuarioRol", b =>
@@ -1530,6 +1562,15 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                     b.HasIndex("RolId");
 
                     b.ToTable("UsuarioRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            UsuarioId = new Guid("e2e2e2e2-e2e2-e2e2-e2e2-e2e2e2e2e2e2"),
+                            RolId = new Guid("3fbdede0-0773-4cb6-9881-9350d0f4955e"),
+                            ContextoId = new Guid("caa6d616-f237-4d2b-a3f1-bf54cd508c35"),
+                            AssignedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        });
                 });
 
             modelBuilder.Entity("Emplyx.Domain.Entities.Usuarios.UsuarioSesion", b =>
@@ -1599,7 +1640,7 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
                             Id = new Guid("d6e36d75-6f90-4d90-b1b4-0d423b99d8f1"),
                             AppliedAtUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Key = "CoreAuthorizationSeed",
-                            Version = 1
+                            Version = 2
                         });
                 });
 
@@ -2319,6 +2360,16 @@ namespace Emplyx.Infrastructure.Persistence.Migrations
 
                             b1.WithOwner()
                                 .HasForeignKey("UsuarioId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    UsuarioId = new Guid("e2e2e2e2-e2e2-e2e2-e2e2-e2e2e2e2e2e2"),
+                                    Apellidos = "Mizrahi",
+                                    Cargo = "Admin",
+                                    Departamento = "IT",
+                                    Nombres = "Ezequiel"
+                                });
                         });
 
                     b.Navigation("Perfil")

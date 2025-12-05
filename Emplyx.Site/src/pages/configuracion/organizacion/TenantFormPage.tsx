@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { ArrowLeft, Save, Building2 } from 'lucide-react';
 import { AccordionSection } from '../../../components/AccordionSection';
+import { API_BASE_URL } from '../../../../config';
 
 // Define the full interface based on the backend DTO
 // For brevity, I'll use 'any' for some nested objects or define them loosely
@@ -142,7 +143,7 @@ const TenantFormPage = () => {
 
   const fetchTenant = async (tenantId: string) => {
     try {
-      const response = await fetch(`https://localhost:5001/api/tenants/${tenantId}`);
+      const response = await fetch(`${API_BASE_URL}/tenants/${tenantId}`);
       if (response.ok) {
         const data = await response.json();
         // Ensure nested objects are not null
@@ -173,8 +174,8 @@ const TenantFormPage = () => {
 
     try {
       const url = id 
-        ? `https://localhost:5001/api/tenants/${id}`
-        : 'https://localhost:5001/api/tenants';
+        ? `${API_BASE_URL}/tenants/${id}`
+        : `${API_BASE_URL}/tenants`;
       
       const method = id ? 'PUT' : 'POST';
 

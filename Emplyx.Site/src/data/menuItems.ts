@@ -1,5 +1,5 @@
 import { 
-  Home, Settings, LucideIcon, Building2
+  Home, Settings, LucideIcon, Building2, Users
 } from 'lucide-react';
 
 export interface NavItemData {
@@ -14,6 +14,11 @@ export const MENU_ITEMS: NavItemData[] = [
     label: "Tenants",
     icon: Building2,
     href: "/tenants"
+  },
+  {
+    label: "Usuarios",
+    icon: Users,
+    href: "/usuarios"
   }
 ];
 

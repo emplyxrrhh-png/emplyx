@@ -57,15 +57,13 @@ const TenantsPage = () => {
           </h1>
           <p className="text-gray-500 mt-1">Gestiona la entidad principal de la organización</p>
         </div>
-        {tenants.length === 0 && (
           <button
             onClick={() => navigate('/configuracion/organizacion/tenant/nuevo')}
             className="bg-indigo-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-indigo-700 transition-colors"
           >
             <Plus size={20} />
-            Nuevo Tenant
+            Nuevo Grupo
           </button>
-        )}
       </div>
 
       {loading ? (

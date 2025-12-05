@@ -4,6 +4,7 @@ import { Menu, ArrowLeft, ChevronDown, Building, Check, Building2 } from 'lucide
 import { NavItem } from './NavItem';
 import { MENU_ITEMS, CONFIG_ITEMS } from '../data/menuItems';
 import clsx from 'clsx';
+import { API_BASE_URL } from '../config';
 
 interface OrganizationItem {
   id: string;
@@ -25,8 +26,8 @@ export const Sidebar: React.FC = () => {
     const fetchData = async () => {
       try {
         const [tenantsRes, empresasRes] = await Promise.all([
-          fetch('https://localhost:5001/api/tenants'),
-          fetch('https://localhost:5001/api/empresas')
+          fetch(`${API_BASE_URL}/tenants`),
+          fetch(`${API_BASE_URL}/empresas`)
         ]);
 
         const tenants = tenantsRes.ok ? await tenantsRes.json() : [];

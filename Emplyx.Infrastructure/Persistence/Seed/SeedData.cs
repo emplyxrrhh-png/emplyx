@@ -5,6 +5,7 @@ using Emplyx.Domain.Entities.Licencias;
 using Emplyx.Domain.Entities.Modulos;
 using Emplyx.Domain.Entities.Permisos;
 using Emplyx.Domain.Entities.Roles;
+using Emplyx.Domain.Entities.Usuarios;
 using Microsoft.EntityFrameworkCore;
 
 namespace Emplyx.Infrastructure.Persistence.Seed;
@@ -32,6 +33,8 @@ internal static class SeedData
     internal static readonly Guid RolAdminGlobalId = Guid.Parse("3fbdede0-0773-4cb6-9881-9350d0f4955e");
     internal static readonly Guid RolGestorDelegacionId = Guid.Parse("a43b4a24-9d24-4c51-94f0-d5e8b9d7eaf4");
     internal static readonly Guid RolOperadorId = Guid.Parse("a9d6d2dc-136f-42e4-9b77-75568128ed5f");
+
+    internal static readonly Guid UsuarioAdminId = Guid.Parse("e2e2e2e2-e2e2-e2e2-e2e2-e2e2e2e2e2e2");
 
     internal static readonly Guid PermisoGestionUsuariosId = Guid.Parse("f1d2c6fe-39f8-4832-9e2d-468f4bea7c31");
     internal static readonly Guid PermisoLecturaUsuariosId = Guid.Parse("8fe47fa7-0fc5-4dae-b426-2e1dd7d5e47c");
@@ -305,12 +308,47 @@ internal static class SeedData
             new { DelegacionId = DelegacionNorteId, RolId = RolOperadorId, LinkedAtUtc = SeedTimestamp },
             new { DelegacionId = DelegacionSurId, RolId = RolOperadorId, LinkedAtUtc = SeedTimestamp });
 
+        modelBuilder.Entity<Usuario>().HasData(
+            new
+            {
+                Id = UsuarioAdminId,
+                UserName = "emizrahi",
+                Email = "emizrahi@emplyx.com",
+                DisplayName = "Ezequiel Mizrahi",
+                IsActive = true,
+                ClearanceId = ClearanceRestringidaId,
+                PasswordHash = "P9cgwXEEYV832bo5ChDPcBiX1ZT6L6dTVWQRF5GG4gQ=",
+                PreferredContextoId = ContextoDefaultId,
+                CreatedAtUtc = SeedTimestamp,
+                UpdatedAtUtc = SeedTimestamp
+            });
+
+        modelBuilder.Entity<Usuario>().OwnsOne(u => u.Perfil).HasData(
+            new
+            {
+                UsuarioId = UsuarioAdminId,
+                Nombres = "Ezequiel",
+                Apellidos = "Mizrahi",
+                Departamento = "IT",
+                Cargo = "Admin",
+                Telefono = (string?)null
+            });
+
+        modelBuilder.Entity<UsuarioRol>().HasData(
+            new { UsuarioId = UsuarioAdminId, RolId = RolAdminGlobalId, ContextoId = ContextoDefaultId, AssignedAtUtc = SeedTimestamp });
+
+        modelBuilder.Entity<UsuarioContexto>().HasData(
+            new { UsuarioId = UsuarioAdminId, ContextoId = ContextoDefaultId, IsPrimary = true, LinkedAtUtc = SeedTimestamp });
+
+        modelBuilder.Entity<UsuarioLicencia>().HasData(
+            new { UsuarioId = UsuarioAdminId, LicenciaId = LicenciaBaseId, AssignedAtUtc = SeedTimestamp });
+
         modelBuilder.Entity<SeedVersion>().HasData(
             new
             {
                 Id = SeedVersionId,
                 Key = "CoreAuthorizationSeed",
-                Version = 1,
+                Version = 2,
                 AppliedAtUtc = SeedTimestamp
             });
     }

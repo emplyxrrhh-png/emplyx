@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { MainLayout } from './layouts/MainLayout';
+import { ProtectedRoute } from './components/ProtectedRoute';
 import { Construction } from 'lucide-react';
 import { MENU_ITEMS, CONFIG_ITEMS, NavItemData } from './data/menuItems';
 import EmpresasPage from './pages/configuracion/organizacion/EmpresasPage';
@@ -15,6 +16,7 @@ import RolesPage from './pages/configuracion/usuarios/RolesPage';
 import RoleFormPage from './pages/configuracion/usuarios/RoleFormPage';
 import UsersPage from './pages/configuracion/usuarios/UsersPage';
 import UserFormPage from './pages/configuracion/usuarios/UserFormPage';
+import LoginPage from './pages/LoginPage';
 import { OrganizationProvider } from './context/OrganizationContext';
 
 const UnderConstruction = ({ title }: { title: string }) => (
@@ -68,53 +70,56 @@ function App() {
   return (
     <OrganizationProvider>
       <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route index element={<Dashboard />} />
-          
-          {/* Rutas implementadas manualmente */}
-          <Route path="/configuracion/organizacion/empresas" element={<EmpresasPage />} />
-          <Route path="/configuracion/organizacion/empresas/nueva" element={<EmpresaFormPage />} />
-          <Route path="/configuracion/organizacion/empresas/editar/:id" element={<EmpresaFormPage />} />
-
-          <Route path="/configuracion/organizacion/tenant" element={<TenantsPage />} />
-          <Route path="/configuracion/organizacion/tenant/nuevo" element={<TenantFormPage />} />
-          <Route path="/configuracion/organizacion/tenant/editar/:id" element={<TenantFormPage />} />
-
-          <Route path="/configuracion/organizacion/centros-trabajo" element={<CentrosTrabajoPage />} />
-          <Route path="/configuracion/organizacion/centros-trabajo/nuevo" element={<CentroTrabajoFormPage />} />
-          <Route path="/configuracion/organizacion/centros-trabajo/editar/:id" element={<CentroTrabajoFormPage />} />
-
-          <Route path="/empleados" element={<EmployeesPage />} />
-          <Route path="/empleados/arbol" element={<EmployeesTreePage />} />
-          <Route path="/empleados/nuevo" element={<EmployeeFormPage />} />
-          <Route path="/empleados/editar/:id" element={<EmployeeFormPage />} />
-
-          <Route path="/configuracion/usuarios/roles" element={<RolesPage />} />
-          <Route path="/configuracion/usuarios/roles/nuevo" element={<RoleFormPage />} />
-          <Route path="/configuracion/usuarios/roles/editar/:id" element={<RoleFormPage />} />
-
-          <Route path="/configuracion/usuarios" element={<UsersPage />} />
-          <Route path="/configuracion/usuarios/nuevo" element={<UserFormPage />} />
-          <Route path="/configuracion/usuarios/editar/:id" element={<UserFormPage />} />
-
-          {allRoutes.map((route) => {
-            // Excluir rutas que ya tienen implementación específica
-            if (route.path === '/configuracion/organizacion/empresas') return null;
-            if (route.path === '/configuracion/organizacion/tenant') return null;
-            if (route.path === '/configuracion/organizacion/centros-trabajo') return null;
-            if (route.path === '/empleados') return null;
-            if (route.path === '/configuracion/usuarios/roles') return null;
-            if (route.path === '/configuracion/usuarios') return null;
+        <Route path="/login" element={<LoginPage />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<Dashboard />} />
             
-            return (
-              <Route 
-                key={route.path} 
-                path={route.path} 
-                element={<UnderConstruction title={route.title} />} 
-              />
-            );
-          })}
-          <Route path="*" element={<UnderConstruction title="Página no encontrada" />} />
+            {/* Rutas implementadas manualmente */}
+            <Route path="/configuracion/organizacion/empresas" element={<EmpresasPage />} />
+            <Route path="/configuracion/organizacion/empresas/nueva" element={<EmpresaFormPage />} />
+            <Route path="/configuracion/organizacion/empresas/editar/:id" element={<EmpresaFormPage />} />
+
+            <Route path="/configuracion/organizacion/tenant" element={<TenantsPage />} />
+            <Route path="/configuracion/organizacion/tenant/nuevo" element={<TenantFormPage />} />
+            <Route path="/configuracion/organizacion/tenant/editar/:id" element={<TenantFormPage />} />
+
+            <Route path="/configuracion/organizacion/centros-trabajo" element={<CentrosTrabajoPage />} />
+            <Route path="/configuracion/organizacion/centros-trabajo/nuevo" element={<CentroTrabajoFormPage />} />
+            <Route path="/configuracion/organizacion/centros-trabajo/editar/:id" element={<CentroTrabajoFormPage />} />
+
+            <Route path="/empleados" element={<EmployeesPage />} />
+            <Route path="/empleados/arbol" element={<EmployeesTreePage />} />
+            <Route path="/empleados/nuevo" element={<EmployeeFormPage />} />
+            <Route path="/empleados/editar/:id" element={<EmployeeFormPage />} />
+
+            <Route path="/configuracion/usuarios/roles" element={<RolesPage />} />
+            <Route path="/configuracion/usuarios/roles/nuevo" element={<RoleFormPage />} />
+            <Route path="/configuracion/usuarios/roles/editar/:id" element={<RoleFormPage />} />
+
+            <Route path="/configuracion/usuarios" element={<UsersPage />} />
+            <Route path="/configuracion/usuarios/nuevo" element={<UserFormPage />} />
+            <Route path="/configuracion/usuarios/editar/:id" element={<UserFormPage />} />
+
+            {allRoutes.map((route) => {
+              // Excluir rutas que ya tienen implementación específica
+              if (route.path === '/configuracion/organizacion/empresas') return null;
+              if (route.path === '/configuracion/organizacion/tenant') return null;
+              if (route.path === '/configuracion/organizacion/centros-trabajo') return null;
+              if (route.path === '/empleados') return null;
+              if (route.path === '/configuracion/usuarios/roles') return null;
+              if (route.path === '/configuracion/usuarios') return null;
+              
+              return (
+                <Route 
+                  key={route.path} 
+                  path={route.path} 
+                  element={<UnderConstruction title={route.title} />} 
+                />
+              );
+            })}
+            <Route path="*" element={<UnderConstruction title="Página no encontrada" />} />
+          </Route>
         </Route>
       </Routes>
     </OrganizationProvider>

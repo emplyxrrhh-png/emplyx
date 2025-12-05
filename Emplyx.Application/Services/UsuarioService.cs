@@ -4,6 +4,8 @@ using Emplyx.Domain.Entities.Usuarios;
 using Emplyx.Domain.Repositories;
 using Emplyx.Domain.UnitOfWork;
 using Emplyx.Shared.Contracts.Usuarios;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Emplyx.Application.Services;
 
@@ -36,7 +38,13 @@ internal sealed class UsuarioService : IUsuarioService
         var usuario = new Usuario(Guid.NewGuid(), request.UserName, request.Email, request.DisplayName, request.ClearanceId);
 
         ApplyOptionalProfileData(usuario, request.Perfil);
-        usuario.SetPasswordHash(request.PasswordHash);
+        
+        if (!string.IsNullOrWhiteSpace(request.PasswordHash))
+        {
+            var hashedPassword = ComputeHash(request.PasswordHash, usuario.Id);
+            usuario.SetPasswordHash(hashedPassword);
+        }
+
         usuario.SetExternalIdentity(request.ExternalIdentityId);
 
         await AttachRolesAsync(usuario, request.Roles, cancellationToken);
@@ -59,7 +67,12 @@ internal sealed class UsuarioService : IUsuarioService
         usuario.UpdateProfile(request.DisplayName, request.Email);
         ApplyOptionalProfileData(usuario, request.Perfil);
 
-        usuario.SetPasswordHash(request.PasswordHash);
+        if (!string.IsNullOrWhiteSpace(request.PasswordHash))
+        {
+            var hashedPassword = ComputeHash(request.PasswordHash, usuario.Id);
+            usuario.SetPasswordHash(hashedPassword);
+        }
+
         usuario.SetExternalIdentity(request.ExternalIdentityId);
 
         if (request.ClearanceId.HasValue)
@@ -96,6 +109,46 @@ internal sealed class UsuarioService : IUsuarioService
     {
         var usuario = await _usuarioRepository.GetByIdAsync(id, cancellationToken);
         return usuario?.ToDto();
+    }
+
+    public async Task<UsuarioDto?> LoginAsync(LoginRequest request, CancellationToken cancellationToken = default)
+    {
+        var usuario = await _usuarioRepository.GetByUserNameAsync(request.UserNameOrEmail, cancellationToken);
+        if (usuario is null)
+        {
+            usuario = await _usuarioRepository.GetByEmailAsync(request.UserNameOrEmail, cancellationToken);
+        }
+
+        if (usuario is null || !usuario.IsActive)
+        {
+            return null;
+        }
+
+        if (string.IsNullOrWhiteSpace(usuario.PasswordHash))
+        {
+            return null;
+        }
+
+        var computedHash = ComputeHash(request.Password, usuario.Id);
+        if (usuario.PasswordHash != computedHash)
+        {
+            // Fallback: check if the stored password is plain text (legacy/migration support)
+            if (usuario.PasswordHash == request.Password)
+            {
+                // Migrate to hash automatically
+                usuario.SetPasswordHash(computedHash);
+                usuario.RegisterLogin();
+                await _unitOfWork.SaveChangesAsync(cancellationToken);
+                return usuario.ToDto();
+            }
+
+            return null;
+        }
+
+        usuario.RegisterLogin();
+        await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+        return usuario.ToDto();
     }
 
     public async Task<IReadOnlyCollection<UsuarioDto>> SearchAsync(SearchUsuariosRequest request, CancellationToken cancellationToken = default)
@@ -257,5 +310,14 @@ internal sealed class UsuarioService : IUsuarioService
     {
         perfil ??= new UsuarioPerfilDto(null, null, null, null, null);
         usuario.UpdatePerfil(perfil.Nombres, perfil.Apellidos, perfil.Departamento, perfil.Cargo, perfil.Telefono);
+    }
+
+    private static string ComputeHash(string password, Guid salt)
+    {
+        using var sha256 = SHA256.Create();
+        var combined = $"{password}{salt}";
+        var bytes = Encoding.UTF8.GetBytes(combined);
+        var hash = sha256.ComputeHash(bytes);
+        return Convert.ToBase64String(hash);
     }
 }
