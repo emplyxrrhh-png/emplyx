@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { ArrowLeft, Save, Shield, Check, ChevronRight, ChevronDown } from 'lucide-react';
+import { ArrowLeft, Save, Shield, Check, ChevronRight, ChevronDown, Eye, List, Users, Clock, Building2 } from 'lucide-react';
 import { Role } from '../../../types/role';
 
 // Mock Permissions Tree
@@ -8,36 +8,185 @@ const PERMISSION_MODULES = [
   {
     id: 'employees',
     label: 'Empleados',
-    permissions: [
-      { id: 'Employees.Read', label: 'Ver Empleados' },
-      { id: 'Employees.Create', label: 'Crear Empleados' },
-      { id: 'Employees.Update', label: 'Editar Empleados' },
-      { id: 'Employees.Delete', label: 'Eliminar Empleados' },
+    features: [
+      {
+        id: 'employees_mgmt',
+        label: 'Gestión de Empleados',
+        description: 'Permite visualizar, editar, crear o eliminar fichas de empleados.',
+        type: 'level',
+        levels: [
+          { value: 'view', label: 'Ver', permissions: ['Employees.Read'] },
+          { value: 'edit', label: 'Editar', permissions: ['Employees.Read', 'Employees.Update'] },
+          { value: 'create', label: 'Crear', permissions: ['Employees.Read', 'Employees.Update', 'Employees.Create'] },
+          { value: 'delete', label: 'Eliminar', permissions: ['Employees.Read', 'Employees.Update', 'Employees.Create', 'Employees.Delete'] }
+        ]
+      }
     ]
   },
   {
     id: 'time',
     label: 'Gestión de Tiempos',
-    permissions: [
-      { id: 'Time.Read', label: 'Ver Registros' },
-      { id: 'Time.Approve', label: 'Aprobar Solicitudes' },
-      { id: 'Time.Edit', label: 'Editar Registros' },
+    features: [
+      {
+        id: 'time_records',
+        label: 'Gestión de Registros',
+        description: 'Control sobre los registros de jornada y fichajes de los empleados.',
+        type: 'level',
+        levels: [
+          { value: 'view', label: 'Ver', permissions: ['Time.Read'] },
+          { value: 'edit', label: 'Editar', permissions: ['Time.Read', 'Time.Edit'] }
+        ]
+      },
+      {
+        id: 'time_approval',
+        label: 'Aprobar Solicitudes',
+        description: 'Capacidad para aprobar o rechazar solicitudes de vacaciones y ausencias.',
+        type: 'boolean',
+        permission: 'Time.Approve'
+      }
     ]
   },
   {
     id: 'organization',
     label: 'Organización',
-    permissions: [
-      { id: 'Org.Read', label: 'Ver Estructura' },
-      { id: 'Org.Manage', label: 'Gestionar Estructura' },
+    features: [
+      {
+        id: 'org_structure',
+        label: 'Estructura Organizativa',
+        description: 'Gestión de la estructura organizativa, departamentos y centros de trabajo.',
+        type: 'level',
+        levels: [
+          { value: 'view', label: 'Ver', permissions: ['Org.Read'] },
+          { value: 'manage', label: 'Gestionar', permissions: ['Org.Read', 'Org.Manage'] }
+        ]
+      }
     ]
   }
 ];
+
+const getFeatureLevel = (feature: any, currentPermissions: string[] = []) => {
+  if (feature.type === 'boolean') {
+    return currentPermissions.includes(feature.permission) ? 'yes' : 'no';
+  }
+
+  for (let i = feature.levels.length - 1; i >= 0; i--) {
+    const level = feature.levels[i];
+    const hasAll = level.permissions.every((p: string) => currentPermissions.includes(p));
+    if (hasAll) return level.value;
+  }
+  
+  return 'none';
+};
+
+const getLevelColor = (level: string) => {
+  switch (level) {
+    case 'view': return 'text-blue-700 bg-blue-50 border-blue-200';
+    case 'edit': return 'text-indigo-700 bg-indigo-50 border-indigo-200';
+    case 'create': return 'text-purple-700 bg-purple-50 border-purple-200';
+    case 'delete': return 'text-red-700 bg-red-50 border-red-200';
+    case 'manage': return 'text-indigo-700 bg-indigo-50 border-indigo-200';
+    default: return 'text-gray-700 bg-gray-50 border-gray-200';
+  }
+};
+
+const getModuleIcon = (moduleId: string) => {
+  switch (moduleId) {
+    case 'employees': return Users;
+    case 'time': return Clock;
+    case 'organization': return Building2;
+    default: return Shield;
+  }
+};
+
+const FeatureRow = ({ feature, currentPermissions, onLevelChange, disabled }: { 
+  feature: any, 
+  currentPermissions: string[], 
+  onLevelChange: (feature: any, value: string) => void,
+  disabled: boolean 
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const currentValue = getFeatureLevel(feature, currentPermissions);
+  
+  const options = feature.type === 'boolean' 
+    ? [
+        { value: 'no', label: 'No', color: 'text-gray-600 bg-gray-50 border-gray-200' },
+        { value: 'yes', label: 'Sí', color: 'text-green-700 bg-green-50 border-green-200' }
+      ]
+    : [
+        { value: 'none', label: 'Sin Acceso', color: 'text-gray-600 bg-gray-50 border-gray-200' },
+        ...(feature.levels?.map((l: any) => ({ 
+            value: l.value, 
+            label: l.label,
+            color: getLevelColor(l.value) 
+        })) || [])
+      ];
+
+  const selectedOption = options.find(o => o.value === currentValue) || options[0];
+
+  return (
+    <div className="flex items-center justify-between py-2 border-b border-gray-100 last:border-0">
+        <div>
+            <span className="text-gray-700 font-medium block">{feature.label}</span>
+            {feature.description && (
+                <span className="text-sm text-gray-500 block mt-0.5">{feature.description}</span>
+            )}
+        </div>
+        
+        <div className="relative" ref={dropdownRef}>
+            <button
+                type="button"
+                onClick={() => !disabled && setIsOpen(!isOpen)}
+                disabled={disabled}
+                className={`flex items-center justify-between gap-2 px-3 py-2 text-sm font-medium rounded-lg border transition-all ${
+                    isOpen ? 'ring-2 ring-indigo-100 border-indigo-300' : 'border-transparent hover:border-gray-300'
+                } ${selectedOption.color}`}
+            >
+                <span className="whitespace-nowrap">{selectedOption.label}</span>
+                <ChevronDown size={16} className={`transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            {isOpen && (
+                <div className="absolute right-0 z-50 mt-1 min-w-full w-max bg-white rounded-lg shadow-xl border border-gray-100 py-1 animate-in fade-in zoom-in-95 duration-100">
+                    {options.map((option) => (
+                        <button
+                            key={option.value}
+                            type="button"
+                            onClick={() => {
+                                onLevelChange(feature, option.value);
+                                setIsOpen(false);
+                            }}
+                            className={`w-full text-left px-4 py-2 text-sm flex items-center justify-between gap-3 hover:bg-gray-50 transition-colors ${
+                                option.value === currentValue ? 'text-indigo-600 font-medium bg-indigo-50' : 'text-gray-700'
+                            }`}
+                        >
+                            <span className="whitespace-nowrap">{option.label}</span>
+                            {option.value === currentValue && <Check size={14} />}
+                        </button>
+                    ))}
+                </div>
+            )}
+        </div>
+    </div>
+  );
+};
 
 const RoleFormPage = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const [isLoading, setIsLoading] = useState(false);
+  const [showOnlyActive, setShowOnlyActive] = useState(false);
   const [expandedModules, setExpandedModules] = useState<string[]>(['employees', 'time', 'organization']);
   
   const [formData, setFormData] = useState<Partial<Role>>({
@@ -51,16 +200,17 @@ const RoleFormPage = () => {
     if (id) {
       // Mock fetch existing role
       setIsLoading(true);
+      // Simulating API call
       setTimeout(() => {
         setFormData({
           id: id,
-          name: 'Rol Editado',
-          description: 'Descripción del rol',
+          name: id === '1' ? 'Administrador' : (id === '2' ? 'RRHH' : 'Rol Editado'),
+          description: id === '1' ? 'Acceso total al sistema' : (id === '2' ? 'Gestión de empleados y organización' : 'Descripción del rol'),
           isSystem: false,
           permissions: ['Employees.Read', 'Time.Read']
         });
         setIsLoading(false);
-      }, 500);
+      }, 100);
     }
   }, [id]);
 
@@ -72,35 +222,38 @@ const RoleFormPage = () => {
     );
   };
 
-  const togglePermission = (permissionId: string) => {
+  const handleFeatureChange = (feature: any, value: string) => {
     setFormData(prev => {
-      const currentPermissions = prev.permissions || [];
-      const newPermissions = currentPermissions.includes(permissionId)
-        ? currentPermissions.filter(p => p !== permissionId)
-        : [...currentPermissions, permissionId];
-      
-      return { ...prev, permissions: newPermissions };
-    });
-  };
+      const current = prev.permissions || [];
+      let newPermissions = [...current];
 
-  const toggleModulePermissions = (moduleId: string, permissions: { id: string }[]) => {
-    const modulePermissionIds = permissions.map(p => p.id);
-    const currentPermissions = formData.permissions || [];
-    
-    // Check if all module permissions are currently selected
-    const allSelected = modulePermissionIds.every(id => currentPermissions.includes(id));
-    
-    let newPermissions;
-    if (allSelected) {
-      // Deselect all
-      newPermissions = currentPermissions.filter(id => !modulePermissionIds.includes(id));
-    } else {
-      // Select all (add missing ones)
-      const toAdd = modulePermissionIds.filter(id => !currentPermissions.includes(id));
-      newPermissions = [...currentPermissions, ...toAdd];
-    }
-    
-    setFormData({ ...formData, permissions: newPermissions });
+      if (feature.type === 'boolean') {
+        if (value === 'yes') {
+          if (!newPermissions.includes(feature.permission)) {
+            newPermissions.push(feature.permission);
+          }
+        } else {
+          newPermissions = newPermissions.filter(p => p !== feature.permission);
+        }
+      } else {
+        // Remove all permissions related to this feature first
+        const allFeaturePermissions = new Set<string>();
+        feature.levels.forEach((l: any) => l.permissions.forEach((p: string) => allFeaturePermissions.add(p)));
+        
+        newPermissions = newPermissions.filter(p => !allFeaturePermissions.has(p));
+
+        // Add permissions for the selected level
+        if (value !== 'none') {
+          const selectedLevel = feature.levels.find((l: any) => l.value === value);
+          if (selectedLevel) {
+            newPermissions.push(...selectedLevel.permissions);
+          }
+        }
+      }
+      
+      // Deduplicate just in case
+      return { ...prev, permissions: Array.from(new Set(newPermissions)) };
+    });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -145,7 +298,7 @@ const RoleFormPage = () => {
               <input
                 type="text"
                 required
-                value={formData.name}
+                value={formData.name || ''}
                 onChange={e => setFormData({ ...formData, name: e.target.value })}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                 placeholder="Ej. Gestor de Ausencias"
@@ -156,7 +309,7 @@ const RoleFormPage = () => {
               <label className="block text-sm font-medium text-gray-700 mb-1">Descripción</label>
               <input
                 type="text"
-                value={formData.description}
+                value={formData.description || ''}
                 onChange={e => setFormData({ ...formData, description: e.target.value })}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                 placeholder="Describe el propósito de este rol"
@@ -167,70 +320,95 @@ const RoleFormPage = () => {
 
         {/* Permissions Picker */}
         <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">Permisos del Sistema</h2>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-lg font-semibold text-gray-900">Permisos del Sistema</h2>
+            <div className="flex items-center gap-1 bg-gray-100 p-1 rounded-lg">
+              <button
+                type="button"
+                onClick={() => setShowOnlyActive(false)}
+                className={`p-1.5 rounded-md transition-all ${!showOnlyActive ? 'bg-white shadow-sm text-indigo-600' : 'text-gray-500 hover:text-gray-700'}`}
+                title="Ver todos"
+              >
+                <List size={16} />
+              </button>
+              <button
+                type="button"
+                onClick={() => setShowOnlyActive(true)}
+                className={`p-1.5 rounded-md transition-all ${showOnlyActive ? 'bg-white shadow-sm text-indigo-600' : 'text-gray-500 hover:text-gray-700'}`}
+                title="Ver solo activos"
+              >
+                <Eye size={16} />
+              </button>
+            </div>
+          </div>
           <div className="space-y-4">
             {PERMISSION_MODULES.map((module) => {
-              const modulePermissionIds = module.permissions.map(p => p.id);
-              const selectedCount = modulePermissionIds.filter(id => formData.permissions?.includes(id)).length;
-              const isAllSelected = selectedCount === module.permissions.length;
-              const isIndeterminate = selectedCount > 0 && !isAllSelected;
+              // Calculate if any permission in this module is selected
+              const allModulePermissions = new Set<string>();
+              module.features.forEach(f => {
+                if (f.type === 'level') {
+                  f.levels?.forEach(l => l.permissions.forEach(p => allModulePermissions.add(p)));
+                } else {
+                  if (f.permission) allModulePermissions.add(f.permission);
+                }
+              });
+              
+              const selectedCount = Array.from(allModulePermissions).filter(p => formData.permissions?.includes(p)).length;
+              
+              if (showOnlyActive && selectedCount === 0) return null;
+
+              const ModuleIcon = getModuleIcon(module.id);
 
               return (
-                <div key={module.id} className="border border-gray-200 rounded-lg overflow-hidden">
-                  <div className="bg-gray-50 p-3 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <button
-                        type="button"
-                        onClick={() => toggleModule(module.id)}
-                        className="p-1 hover:bg-gray-200 rounded transition-colors"
-                      >
-                        {expandedModules.includes(module.id) ? <ChevronDown size={18} /> : <ChevronRight size={18} />}
-                      </button>
-                      
-                      <div className="flex items-center gap-2">
-                        <input
-                          type="checkbox"
-                          checked={isAllSelected}
-                          ref={input => {
-                            if (input) input.indeterminate = isIndeterminate;
-                          }}
-                          onChange={() => toggleModulePermissions(module.id, module.permissions)}
-                          className="w-4 h-4 text-indigo-600 rounded focus:ring-indigo-500 border-gray-300"
-                          disabled={formData.isSystem}
-                        />
-                        <span className="font-medium text-gray-900">{module.label}</span>
+                <div key={module.id} className="border border-gray-200 rounded-lg">
+                  <div 
+                    className={`bg-gray-50 p-4 flex items-center justify-between cursor-pointer hover:bg-gray-100 transition-colors ${
+                      expandedModules.includes(module.id) ? 'rounded-t-lg' : 'rounded-lg'
+                    }`}
+                    onClick={() => toggleModule(module.id)}
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="p-2 bg-white rounded-lg border border-gray-200">
+                        <ModuleIcon size={20} className="text-indigo-600" />
+                      </div>
+                      <div>
+                        <h3 className="font-medium text-gray-900">{module.label}</h3>
+                        <p className="text-sm text-gray-500">
+                          {selectedCount > 0 
+                            ? `${selectedCount} permisos activos` 
+                            : 'Sin permisos configurados'}
+                        </p>
                       </div>
                     </div>
-                    <span className="text-xs font-medium text-gray-500 bg-white px-2 py-1 rounded border border-gray-200">
-                      {selectedCount} / {module.permissions.length} seleccionados
-                    </span>
+
+                    <button
+                      type="button"
+                      className={`p-2 rounded-lg transition-colors ${
+                        expandedModules.includes(module.id) 
+                          ? 'bg-gray-200 text-gray-700' 
+                          : 'text-gray-500'
+                      }`}
+                    >
+                      {expandedModules.includes(module.id) ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
+                    </button>
                   </div>
 
                   {expandedModules.includes(module.id) && (
-                    <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 bg-white">
-                      {module.permissions.map((permission) => (
-                        <label 
-                          key={permission.id} 
-                          className={`flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-all ${
-                            formData.permissions?.includes(permission.id)
-                              ? 'border-indigo-200 bg-indigo-50'
-                              : 'border-gray-200 hover:border-gray-300'
-                          }`}
-                        >
-                          <input
-                            type="checkbox"
-                            checked={formData.permissions?.includes(permission.id)}
-                            onChange={() => togglePermission(permission.id)}
-                            className="w-4 h-4 text-indigo-600 rounded focus:ring-indigo-500 border-gray-300"
-                            disabled={formData.isSystem}
-                          />
-                          <span className={`text-sm ${
-                            formData.permissions?.includes(permission.id) ? 'text-indigo-900 font-medium' : 'text-gray-700'
-                          }`}>
-                            {permission.label}
-                          </span>
-                        </label>
-                      ))}
+                    <div className="p-4 border-t border-gray-200 bg-white rounded-b-lg">
+                      {module.features.map((feature) => {
+                        if (showOnlyActive) {
+                           const val = getFeatureLevel(feature, formData.permissions || []);
+                           if (val === 'none' || val === 'no') return null;
+                        }
+                        return (
+                        <FeatureRow
+                          key={feature.id}
+                          feature={feature}
+                          currentPermissions={formData.permissions || []}
+                          onLevelChange={handleFeatureChange}
+                          disabled={formData.isSystem || false}
+                        />
+                      )})}
                     </div>
                   )}
                 </div>
