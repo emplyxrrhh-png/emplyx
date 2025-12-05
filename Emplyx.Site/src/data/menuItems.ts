@@ -1,5 +1,5 @@
 import { 
-  Home, Settings, LucideIcon, Building2, Users
+  Settings, LucideIcon, Building2, Users
 } from 'lucide-react';
 
 export interface NavItemData {

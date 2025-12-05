@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { ArrowLeft, Save, Building2 } from 'lucide-react';
 import { AccordionSection } from '../../../components/AccordionSection';
-import { API_BASE_URL } from '../../../../config';
+import { API_BASE_URL } from '../../../config';
 
 // Define the full interface based on the backend DTO
 // For brevity, I'll use 'any' for some nested objects or define them loosely

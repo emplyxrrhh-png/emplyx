@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Plus, Edit, Trash2, Building2 } from 'lucide-react';
-import { API_BASE_URL } from '../../../../config';
+import { API_BASE_URL } from '../../../config';
 
 interface Empresa {
   id: string;

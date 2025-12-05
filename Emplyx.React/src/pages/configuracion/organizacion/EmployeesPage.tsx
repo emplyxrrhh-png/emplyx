@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Plus, Search, Edit, Trash2, User, ChevronRight, ChevronDown, Users, Building } from 'lucide-react';
+import { Plus, Search, Edit, Trash2, ChevronRight, ChevronDown, Users, Building } from 'lucide-react';
 import { useOrganization } from '../../../context/OrganizationContext';
 import { Employee } from '../../../types/employee';
 

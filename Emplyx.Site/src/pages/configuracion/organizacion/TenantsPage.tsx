@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Building2, Plus, Edit, Trash2 } from 'lucide-react';
-import { API_BASE_URL } from '../../../../config';
+import { API_BASE_URL } from '../../../config';
 
 interface Tenant {
   id: string;

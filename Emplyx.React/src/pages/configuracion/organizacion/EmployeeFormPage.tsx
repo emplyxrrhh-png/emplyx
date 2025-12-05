@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { ArrowLeft, Save, ChevronDown, ChevronUp, Trash2, Shield, Plus, X, CheckCircle, XCircle, Search } from 'lucide-react';
+import { ArrowLeft, Save, ChevronDown, ChevronUp, Shield, CheckCircle, XCircle, Search } from 'lucide-react';
 import { useOrganization } from '../../../context/OrganizationContext';
 import { CreateEmployeeRequest, Employee, UpdateEmployeeRequest, UserRole } from '../../../types/employee';
 import { Role } from '../../../types/role';
