@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Plus, Search, Edit, Trash2, User as UserIcon, CheckCircle, XCircle } from 'lucide-react';
 import { User } from '../../../types/user';
+import { API_BASE_URL } from '../../../config';
 
 const UsersPage = () => {
   const navigate = useNavigate();
@@ -10,44 +11,26 @@ const UsersPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeTab, setActiveTab] = useState('users');
 
-  // Mock data
-  const mockUsers: User[] = [
-    { 
-      id: '1', 
-      username: 'admin', 
-      email: 'admin@emplyx.com', 
-      fullName: 'Administrador del Sistema', 
-      isActive: true, 
-      roles: ['Administrador'],
-      lastLogin: '2023-10-25T10:30:00'
-    },
-    { 
-      id: '2', 
-      username: 'jdoe', 
-      email: 'john.doe@emplyx.com', 
-      fullName: 'John Doe', 
-      isActive: true, 
-      roles: ['RRHH', 'Supervisor'],
-      lastLogin: '2023-10-24T15:45:00'
-    },
-    { 
-      id: '3', 
-      username: 'msmith', 
-      email: 'mary.smith@emplyx.com', 
-      fullName: 'Mary Smith', 
-      isActive: false, 
-      roles: ['Empleado'],
-      lastLogin: '2023-09-15T09:20:00'
-    },
-  ];
+  const fetchUsers = async () => {
+    setIsLoading(true);
+    try {
+      const response = await fetch(`${API_BASE_URL}/users?UserNameOrEmail=${searchTerm}`);
+      if (response.ok) {
+        const data = await response.json();
+        setUsers(data);
+      } else {
+        console.error('Failed to fetch users');
+      }
+    } catch (error) {
+      console.error('Error fetching users:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   useEffect(() => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setUsers(mockUsers);
-      setIsLoading(false);
-    }, 500);
-  }, []);
+    fetchUsers();
+  }, [searchTerm]);
 
   const handleDelete = async (id: string) => {
     if (!confirm('¿Estás seguro de que deseas eliminar esta suscripción?')) return;
@@ -55,7 +38,7 @@ const UsersPage = () => {
   };
 
   const filteredUsers = users.filter(user => 
-    user.fullName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    user.displayName.toLowerCase().includes(searchTerm.toLowerCase()) ||
     user.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
     user.username.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -145,7 +128,7 @@ const UsersPage = () => {
                             <UserIcon size={20} />
                           </div>
                           <div>
-                            <div className="font-medium text-gray-900">{user.fullName}</div>
+                            <div className="font-medium text-gray-900">{user.displayName}</div>
                             <div className="text-sm text-gray-500">{user.email}</div>
                           </div>
                         </div>
@@ -154,7 +137,7 @@ const UsersPage = () => {
                         <div className="flex flex-wrap gap-1">
                           {user.roles.map((role, index) => (
                             <span key={index} className="px-2 py-1 text-xs font-medium bg-gray-100 text-gray-600 rounded-full">
-                              {role}
+                              {role.rolName || role.rolId}
                             </span>
                           ))}
                         </div>

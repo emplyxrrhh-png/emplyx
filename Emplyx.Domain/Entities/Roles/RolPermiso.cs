@@ -1,3 +1,5 @@
+using Emplyx.Domain.Entities.Permisos;
+
 namespace Emplyx.Domain.Entities.Roles;
 
 public sealed class RolPermiso
@@ -26,6 +28,8 @@ public sealed class RolPermiso
     public Guid RolId { get; private set; }
 
     public Guid PermisoId { get; private set; }
+
+    public Permiso Permiso { get; private set; } = null!;
 
     public DateTime GrantedAtUtc { get; private set; }
 }

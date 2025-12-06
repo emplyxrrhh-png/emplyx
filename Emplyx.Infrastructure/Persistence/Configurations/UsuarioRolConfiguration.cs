@@ -23,7 +23,7 @@ internal sealed class UsuarioRolConfiguration : IEntityTypeConfiguration<Usuario
             .HasForeignKey(ur => ur.UsuarioId)
             .OnDelete(DeleteBehavior.Cascade);
 
-        builder.HasOne<Rol>()
+        builder.HasOne(ur => ur.Rol)
             .WithMany()
             .HasForeignKey(ur => ur.RolId)
             .OnDelete(DeleteBehavior.Cascade);

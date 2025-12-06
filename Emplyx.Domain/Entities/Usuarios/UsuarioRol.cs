@@ -1,3 +1,5 @@
+using Emplyx.Domain.Entities.Roles;
+
 namespace Emplyx.Domain.Entities.Usuarios;
 
 public sealed class UsuarioRol
@@ -26,6 +28,8 @@ public sealed class UsuarioRol
     public Guid UsuarioId { get; private set; }
 
     public Guid RolId { get; private set; }
+
+    public Rol Rol { get; private set; } = null!;
 
     public DateTime AssignedAtUtc { get; private set; }
 }

@@ -29,6 +29,36 @@ internal sealed class UsuarioService : IUsuarioService
         _unitOfWork = unitOfWork;
     }
 
+    public async Task<UsuarioDto?> LoginAsync(LoginRequest request, CancellationToken cancellationToken = default)
+    {
+        var usuario = await _usuarioRepository.GetByUserNameAsync(request.UserNameOrEmail, cancellationToken)
+                      ?? await _usuarioRepository.GetByEmailAsync(request.UserNameOrEmail, cancellationToken);
+
+        if (usuario is null)
+        {
+            return null;
+        }
+
+        // TODO: Implement proper password hashing verification
+        // For now, we assume the request sends the hash or we compare directly
+        if (usuario.PasswordHash != request.Password)
+        {
+            return null;
+        }
+
+        if (!usuario.IsActive)
+        {
+            return null;
+        }
+
+        // Update LastLogin
+        // Note: We should probably have a method in Domain to update LastLogin
+        // usuario.RecordLogin(); 
+        // await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+        return usuario.ToDto();
+    }
+
     public async Task<UsuarioDto> CreateAsync(CreateUsuarioRequest request, CancellationToken cancellationToken = default)
     {
         await EnsureUserDoesNotExist(request, cancellationToken);

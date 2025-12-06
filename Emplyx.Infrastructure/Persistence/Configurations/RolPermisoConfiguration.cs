@@ -18,7 +18,7 @@ internal sealed class RolPermisoConfiguration : IEntityTypeConfiguration<RolPerm
 
         builder.HasIndex(rp => rp.PermisoId);
 
-        builder.HasOne<Permiso>()
+        builder.HasOne(rp => rp.Permiso)
             .WithMany()
             .HasForeignKey(rp => rp.PermisoId)
             .OnDelete(DeleteBehavior.Cascade);

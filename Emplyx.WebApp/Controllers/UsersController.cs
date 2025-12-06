@@ -55,7 +55,7 @@ public class UsersController : ControllerBase
     }
 
     [HttpPost("{id}/roles")]
-    public async Task<IActionResult> AssignRoles(Guid id, [FromBody] List<UsuarioRolAssignmentDto> roles)
+    public async Task<IActionResult> AssignRoles(Guid id, [FromBody] List<Guid> roles)
     {
         // Since we don't have a specific method for just adding roles in the service, 
         // we fetch the user, add the roles to the existing ones, and call Update.
@@ -64,7 +64,7 @@ public class UsersController : ControllerBase
         var user = await _usuarioService.GetByIdAsync(id);
         if (user == null) return NotFound();
 
-        var currentRoles = user.Roles.Select(r => new UsuarioRolAssignmentDto(r.RolId, r.ContextoId)).ToList();
+        var currentRoles = user.Roles.Select(r => r.RolId).ToList();
         currentRoles.AddRange(roles);
 
         // We need to reconstruct the UpdateRequest. This is a bit clumsy but works without changing the service interface too much right now.

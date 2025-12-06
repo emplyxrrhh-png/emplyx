@@ -4,6 +4,8 @@ namespace Emplyx.Application.Abstractions;
 
 public interface IUsuarioService
 {
+    Task<UsuarioDto?> LoginAsync(LoginRequest request, CancellationToken cancellationToken = default);
+
     Task<UsuarioDto> CreateAsync(CreateUsuarioRequest request, CancellationToken cancellationToken = default);
 
     Task<UsuarioDto> UpdateAsync(UpdateUsuarioRequest request, CancellationToken cancellationToken = default);

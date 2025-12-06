@@ -8,6 +8,8 @@ public interface IUsuarioRepository : IRepository<Usuario>
 
     Task<Usuario?> GetByEmailAsync(string email, CancellationToken cancellationToken = default);
 
+    Task<bool> HasPermissionAsync(Guid userId, string permission, Guid? contextoId = null, CancellationToken cancellationToken = default);
+
     Task<IReadOnlyCollection<Usuario>> SearchAsync(
         string? userNameOrEmail,
         Guid? contextoId,

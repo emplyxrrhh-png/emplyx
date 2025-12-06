@@ -26,7 +26,7 @@ public sealed record UsuarioPerfilDto(
     string? Cargo,
     string? Telefono);
 
-public sealed record UsuarioRolDto(Guid RolId, DateTime AssignedAtUtc);
+public sealed record UsuarioRolDto(Guid RolId, string? RolName, DateTime AssignedAtUtc);
 
 public sealed record UsuarioContextoDto(Guid ContextoId, bool IsPrimary, DateTime LinkedAtUtc);
 
@@ -46,6 +46,8 @@ public sealed record CreateUsuarioRequest(
     IReadOnlyCollection<Guid> Roles,
     IReadOnlyCollection<UsuarioContextoAssignmentDto> Contextos,
     IReadOnlyCollection<Guid> Licencias);
+
+public sealed record LoginRequest(string UserNameOrEmail, string Password);
 
 public sealed record UpdateUsuarioRequest(
     Guid UsuarioId,
