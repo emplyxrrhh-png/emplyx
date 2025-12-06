@@ -4,8 +4,6 @@ using Emplyx.Domain.Entities.Usuarios;
 using Emplyx.Domain.Repositories;
 using Emplyx.Domain.UnitOfWork;
 using Emplyx.Shared.Contracts.Usuarios;
-using System.Security.Cryptography;
-using System.Text;
 
 namespace Emplyx.Application.Services;
 
@@ -38,13 +36,7 @@ internal sealed class UsuarioService : IUsuarioService
         var usuario = new Usuario(Guid.NewGuid(), request.UserName, request.Email, request.DisplayName, request.ClearanceId);
 
         ApplyOptionalProfileData(usuario, request.Perfil);
-        
-        if (!string.IsNullOrWhiteSpace(request.PasswordHash))
-        {
-            var hashedPassword = ComputeHash(request.PasswordHash, usuario.Id);
-            usuario.SetPasswordHash(hashedPassword);
-        }
-
+        usuario.SetPasswordHash(request.PasswordHash);
         usuario.SetExternalIdentity(request.ExternalIdentityId);
 
         await AttachRolesAsync(usuario, request.Roles, cancellationToken);
@@ -67,12 +59,7 @@ internal sealed class UsuarioService : IUsuarioService
         usuario.UpdateProfile(request.DisplayName, request.Email);
         ApplyOptionalProfileData(usuario, request.Perfil);
 
-        if (!string.IsNullOrWhiteSpace(request.PasswordHash))
-        {
-            var hashedPassword = ComputeHash(request.PasswordHash, usuario.Id);
-            usuario.SetPasswordHash(hashedPassword);
-        }
-
+        usuario.SetPasswordHash(request.PasswordHash);
         usuario.SetExternalIdentity(request.ExternalIdentityId);
 
         if (request.ClearanceId.HasValue)
@@ -111,46 +98,6 @@ internal sealed class UsuarioService : IUsuarioService
         return usuario?.ToDto();
     }
 
-    public async Task<UsuarioDto?> LoginAsync(LoginRequest request, CancellationToken cancellationToken = default)
-    {
-        var usuario = await _usuarioRepository.GetByUserNameAsync(request.UserNameOrEmail, cancellationToken);
-        if (usuario is null)
-        {
-            usuario = await _usuarioRepository.GetByEmailAsync(request.UserNameOrEmail, cancellationToken);
-        }
-
-        if (usuario is null || !usuario.IsActive)
-        {
-            return null;
-        }
-
-        if (string.IsNullOrWhiteSpace(usuario.PasswordHash))
-        {
-            return null;
-        }
-
-        var computedHash = ComputeHash(request.Password, usuario.Id);
-        if (usuario.PasswordHash != computedHash)
-        {
-            // Fallback: check if the stored password is plain text (legacy/migration support)
-            if (usuario.PasswordHash == request.Password)
-            {
-                // Migrate to hash automatically
-                usuario.SetPasswordHash(computedHash);
-                usuario.RegisterLogin();
-                await _unitOfWork.SaveChangesAsync(cancellationToken);
-                return usuario.ToDto();
-            }
-
-            return null;
-        }
-
-        usuario.RegisterLogin();
-        await _unitOfWork.SaveChangesAsync(cancellationToken);
-
-        return usuario.ToDto();
-    }
-
     public async Task<IReadOnlyCollection<UsuarioDto>> SearchAsync(SearchUsuariosRequest request, CancellationToken cancellationToken = default)
     {
         var usuarios = await _usuarioRepository.SearchAsync(
@@ -175,18 +122,18 @@ internal sealed class UsuarioService : IUsuarioService
         }
     }
 
-    private async Task AttachRolesAsync(Usuario usuario, IEnumerable<UsuarioRolAssignmentDto> roles, CancellationToken cancellationToken)
+    private async Task AttachRolesAsync(Usuario usuario, IEnumerable<Guid> roles, CancellationToken cancellationToken)
     {
-        var distinctRoles = (roles ?? Array.Empty<UsuarioRolAssignmentDto>()).DistinctBy(r => new { r.RolId, r.ContextoId });
-        foreach (var assignment in distinctRoles)
+        var distinctRoles = (roles ?? Array.Empty<Guid>()).Distinct();
+        foreach (var rolId in distinctRoles)
         {
-            var rol = await _rolRepository.GetByIdAsync(assignment.RolId, cancellationToken);
+            var rol = await _rolRepository.GetByIdAsync(rolId, cancellationToken);
             if (rol is null)
             {
-                throw new InvalidOperationException($"El rol {assignment.RolId} no existe.");
+                throw new InvalidOperationException($"El rol {rolId} no existe.");
             }
 
-            usuario.AssignRol(assignment.RolId, assignment.ContextoId);
+            usuario.AssignRol(rolId);
         }
     }
 
@@ -225,33 +172,25 @@ internal sealed class UsuarioService : IUsuarioService
         }
     }
 
-    private async Task SyncRolesAsync(Usuario usuario, IEnumerable<UsuarioRolAssignmentDto> roles, CancellationToken cancellationToken)
+    private async Task SyncRolesAsync(Usuario usuario, IEnumerable<Guid> roles, CancellationToken cancellationToken)
     {
-        var desiredRoles = (roles ?? Array.Empty<UsuarioRolAssignmentDto>()).DistinctBy(r => new { r.RolId, r.ContextoId }).ToList();
-        
-        // Remove roles that are not in the desired list
-        var currentRoles = usuario.Roles.ToList();
-        foreach (var current in currentRoles)
+        var desiredRoleIds = (roles ?? Array.Empty<Guid>()).Distinct().ToHashSet();
+        var currentRoleIds = usuario.Roles.Select(r => r.RolId).ToHashSet();
+
+        foreach (var toRemove in currentRoleIds.Except(desiredRoleIds).ToArray())
         {
-            if (!desiredRoles.Any(d => d.RolId == current.RolId && d.ContextoId == current.ContextoId))
-            {
-                usuario.RemoveRol(current.RolId, current.ContextoId);
-            }
+            usuario.RemoveRol(toRemove);
         }
 
-        // Add new roles
-        foreach (var desired in desiredRoles)
+        foreach (var toAdd in desiredRoleIds.Except(currentRoleIds))
         {
-            if (!usuario.Roles.Any(r => r.RolId == desired.RolId && r.ContextoId == (desired.ContextoId ?? Guid.Empty)))
+            var rol = await _rolRepository.GetByIdAsync(toAdd, cancellationToken);
+            if (rol is null)
             {
-                var rol = await _rolRepository.GetByIdAsync(desired.RolId, cancellationToken);
-                if (rol is null)
-                {
-                    throw new InvalidOperationException($"El rol {desired.RolId} no existe.");
-                }
-
-                usuario.AssignRol(desired.RolId, desired.ContextoId);
+                throw new InvalidOperationException($"El rol {toAdd} no existe.");
             }
+
+            usuario.AssignRol(toAdd);
         }
     }
 
@@ -310,14 +249,5 @@ internal sealed class UsuarioService : IUsuarioService
     {
         perfil ??= new UsuarioPerfilDto(null, null, null, null, null);
         usuario.UpdatePerfil(perfil.Nombres, perfil.Apellidos, perfil.Departamento, perfil.Cargo, perfil.Telefono);
-    }
-
-    private static string ComputeHash(string password, Guid salt)
-    {
-        using var sha256 = SHA256.Create();
-        var combined = $"{password}{salt}";
-        var bytes = Encoding.UTF8.GetBytes(combined);
-        var hash = sha256.ComputeHash(bytes);
-        return Convert.ToBase64String(hash);
     }
 }

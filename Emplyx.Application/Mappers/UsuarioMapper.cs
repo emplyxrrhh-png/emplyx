@@ -28,7 +28,7 @@ internal static class UsuarioMapper
             entity.LastLoginAtUtc,
             entity.LastPasswordChangeAtUtc,
             perfil,
-            entity.Roles.Select(r => new UsuarioRolDto(r.RolId, r.ContextoId == Guid.Empty ? null : (Guid?)r.ContextoId, r.AssignedAtUtc)).ToArray(),
+            entity.Roles.Select(r => new UsuarioRolDto(r.RolId, r.AssignedAtUtc)).ToArray(),
             entity.Contextos.Select(c => new UsuarioContextoDto(c.ContextoId, c.IsPrimary, c.LinkedAtUtc)).ToArray(),
             entity.Licencias.Select(l => new UsuarioLicenciaDto(l.LicenciaId, l.AssignedAtUtc)).ToArray(),
             entity.Sesiones.Select(s => new UsuarioSesionDto(s.Id, s.Device, s.IpAddress, s.CreatedAtUtc, s.ExpiresAtUtc, s.IsActive, s.ClosedAtUtc)).ToArray());

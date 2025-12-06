@@ -11,7 +11,7 @@ internal sealed class UsuarioRolConfiguration : IEntityTypeConfiguration<Usuario
     {
         builder.ToTable("UsuarioRoles");
 
-        builder.HasKey(ur => new { ur.UsuarioId, ur.RolId, ur.ContextoId });
+        builder.HasKey(ur => new { ur.UsuarioId, ur.RolId });
 
         builder.Property(ur => ur.AssignedAtUtc)
             .IsRequired();
